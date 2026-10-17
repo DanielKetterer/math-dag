@@ -1,0 +1,39 @@
+id: partitioning.equal-shares.area
+concept: partitioning
+facet: area
+level: 1
+type: procedure
+name: Partition a shape into equal shares
+statement: >
+  A circle or rectangle can be cut into a given number of shares that are all
+  the same size, and the shares together make up the whole shape.
+procedure:
+  - Decide how many shares are needed.
+  - Draw cuts so that every share covers the same amount of the shape.
+  - Count the shares to confirm there are exactly the number needed.
+assess: "Draw lines to split this rectangle into 3 equal shares."
+sources:
+  ccss: [1.G.A.3, 2.G.A.3]
+  learning_components:
+    - 48273ab9-36fd-51fe-857c-51c210d87b4f
+    - a2011257-deb7-5e94-90f5-6b78007bede7
+    - 8e30f23e-7d4b-52e5-a03f-597e9cbe69bd
+    - 4219c4aa-da1f-5f0f-bca8-0482f1d5a02b
+    - 88c9fab3-16ee-5778-86d1-7aceb2a13de2
+requires:
+  - clause: standard
+    all_of:
+      - node: counting.objects
+        relation: procedural
+        points_to: procedure.3
+        why: Step 3 counts the shares to check that the shape was cut into exactly the requested number.
+        evidence: [{kind: content, source: claude-draft-1}]
+      - node: comparing.area.direct
+        relation: definitional
+        points_to: statement
+        why: Equal shares means each share covers the same amount, so the learner must judge when two regions are the same size.
+        evidence: [{kind: content, source: claude-draft-1}]
+misconceptions:
+  - "When a shape is split into parts, assumes all parts are equal (Eedi construct 397)"
+  - "Does not realise they can draw additional lines on a fraction diagram to make parts equal sized (Eedi construct 397)"
+status: proposed

@@ -1,0 +1,62 @@
+id: fraction.division.symbolic
+concept: fraction
+facet: measure
+level: 3
+type: procedure
+name: Divide a fraction by a fraction
+statement: >
+  For fractions a/b and c/d with c/d not zero, (a/b) divided by (c/d) is the
+  number that, multiplied by c/d, gives a/b. It can be computed without a
+  model, by either of two routes below.
+assess: "Compute 2/3 divided by 3/4."
+sources:
+  ccss: [6.NS.A.1]
+  learning_components: [bc5dfb39-c4f5-5c20-acd5-13e303f5bace]
+  eedi: ["448"]
+requires:
+  - clause: common-denominators
+    procedure:
+      - Rewrite both fractions over a common denominator.
+      - Divide the numerators, since both fractions now count the same size of unit.
+      - Write the whole-number quotient a divided by b as the fraction a/b.
+    all_of:
+      - node: fraction.equivalent.symbolic
+        relation: procedural
+        points_to: procedure.1
+        why: Step 1 rewrites each fraction as an equivalent fraction over the common denominator.
+        evidence: [{kind: content, source: claude-draft-1}]
+      - node: division.measurement.whole-number
+        relation: procedural
+        points_to: procedure.2
+        why: Step 2 asks how many groups of b units fit into a units, which is measurement division of whole numbers.
+        evidence: [{kind: content, source: claude-draft-1}]
+      - node: fraction.as-division
+        relation: procedural
+        points_to: procedure.3
+        why: Step 3 writes the whole-number quotient a divided by b as the fraction a/b, using a fraction as a quotient.
+        evidence: [{kind: content, source: claude-draft-1}]
+  - clause: invert-and-multiply
+    note: Computes correctly without explaining why. The explanation is a level 4 justification node.
+    procedure:
+      - Replace the divisor c/d by its reciprocal d/c.
+      - Multiply the dividend by that reciprocal.
+    all_of:
+      - node: fraction.reciprocal
+        relation: procedural
+        points_to: procedure.1
+        why: Step 1 replaces the divisor with its reciprocal, so the learner must be able to form one.
+        evidence: [{kind: content, source: claude-draft-1}]
+      - node: fraction.multiplication.symbolic
+        relation: procedural
+        points_to: procedure.2
+        why: Step 2 multiplies two fractions, which is symbolic fraction multiplication carried out directly.
+        evidence: [{kind: content, source: claude-draft-1}]
+related:
+  - node: fraction.division.model
+    relation: same_idea_different_form
+    note: Level 2 version. Measure how many copies of the divisor fit in the dividend on a model.
+misconceptions:
+  - "Believes the first fraction in a division problem should be inverted instead of the second (Eedi construct 448)"
+  - "When dividing fractions, thinks you can just change the divide to a multiply without having to flip the second fraction (Eedi construct 448)"
+  - "Believes dividing by a non-unit fraction is equivalent to multiplying by its denominator (overgeneralises from unit fractions) (Eedi construct 448)"
+status: proposed

@@ -1,0 +1,34 @@
+id: fraction.unit.part-whole
+concept: fraction
+facet: part-whole
+level: 2
+type: concept
+name: Unit fraction as one of b equal parts of a whole
+statement: >
+  1/b names the quantity formed by one part when a whole is partitioned into
+  b equal parts.
+assess: "This rectangle is split into 6 equal parts and one is shaded. What fraction of the rectangle is shaded?"
+sources:
+  ccss: [3.NF.A.1, 3.G.A.2]
+  learning_components:
+    - 188fe970-4e1d-52c4-9f18-5e2fade05494
+    - 1b707b1d-ed3e-59b5-b898-8cc84451aff6
+  eedi: ["397"]
+requires:
+  - clause: standard
+    all_of:
+      - node: partitioning.equal-shares.area
+        relation: definitional
+        points_to: statement
+        why: The definition of 1/b refers to a whole partitioned into b equal parts, so equal partitioning is part of its meaning.
+        evidence: [{kind: content, source: claude-draft-1}]
+      - node: counting.objects
+        relation: definitional
+        points_to: statement
+        why: The denominator b is the number of equal parts, and that number is found by counting the parts.
+        evidence: [{kind: content, source: claude-draft-1}]
+misconceptions:
+  - "Believes the denominator represents the 'other' or 'not' parts in a fraction, rather than the total number of parts (Eedi construct 397)"
+  - "Does not understand a denominator represents equal parts (Eedi construct 397)"
+  - "Believes that fractions with larger denominators are greater in size (Eedi construct 397)"
+status: proposed
