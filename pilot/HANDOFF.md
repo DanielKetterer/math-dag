@@ -52,8 +52,8 @@ splits into one-to-one correspondence, cardinality, and the successor idea
 (K.CC.B.4.a-c), and comparing splits into attribute comparison, comparing
 groups by matching, and comparing groups by counting. The true roots would
 then be the rote number sequence, one-to-one matching, judging bigger or
-smaller by sight, and recognizing shape categories. Daniel to decide: floor at
-"what Kindergarten assumes" or "what Kindergarten teaches first".
+smaller by sight, and recognizing shape categories. Daniel decided: floor at 
+what Kindergarten assumes.
 
 ## Explorer
 
