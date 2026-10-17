@@ -93,7 +93,8 @@ def main():
                     "source": "sources/learning-commons/ccss_math_standards.jsonl",
                     "note": "Each node is placed at the earliest grade of its standards. Nodes in the same grade share a step.",
                     "steps": [{"position": g, "grade": str(g), "nodes": sorted(v)} for g, v in sorted(steps.items())],
-                    "assumes": []},
+                    # nodes below Kindergarten (no CCSS grade) are what Common Core takes as known
+                    "assumes": sorted(i for i in nodes if not any(i in v for v in steps.values()))},
                    open(os.path.join(ROOT, "pathways", "ccss-grades.yaml"), "w"), sort_keys=False, width=100)
 
     # ---- IM 360 pathway, grades 1-8
@@ -139,7 +140,10 @@ def main():
                     "note": "Each node is placed at the first IM lesson aligned to one of its standards.",
                     "steps": [{"position": p, "grade": str(v[0][1][0]), "lesson_key": list(v[0][1]),
                                "nodes": sorted(i for i, _ in v)} for p, v in sorted(by.items())],
-                    "assumes": []},
+                    # IM 360 here starts at grade 1: unplaced pre-K and Kindergarten nodes are assumed
+                    "assumes": sorted(i for i in nodes if i not in place and
+                                      min([g for g in (grade_of.get(c, grade_of.get(std4(c))) for c in codes.get(i, []))
+                                           if g is not None] or [0]) == 0)},
                    open(os.path.join(ROOT, "pathways", "im360.yaml"), "w"), sort_keys=False, width=100)
     out += ["## Pathways", "",
             f"- Common Core grade order: {sum(len(v) for v in steps.values())} of {len(nodes)} nodes placed",

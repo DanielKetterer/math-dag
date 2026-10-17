@@ -8,7 +8,9 @@ Writes nodes/<concept>/<id>.yaml for every pilot node, <dir>/dropped.json
 Verdict handling:
   necessary            kept, status proposed
   task-only            kept, scope task, points to assess, status proposed
-  route-only           kept in the route it came from, status disputed
+  route-only           kept, status disputed, in its own OR clause: each
+                       alternative route = the core edges + that route's edges
+                       (core = every kept edge that is not route-only)
   undecided            kept, status disputed
   scaffold / indirect / wrong   removed (logged in dropped.json)
   related              moved to `related`
@@ -68,6 +70,7 @@ def main(d):
     for nid, n in nodes.items():
         main_edges, alt = [], collections.OrderedDict()
         related = []
+        split_from_main = False
         for (a, t), u in union.items():
             if a != nid:
                 continue
@@ -105,6 +108,15 @@ def main(d):
             if alt_names and verdict != "necessary":
                 name, proc = alt_names[0]
                 alt.setdefault(name, {"procedure": proc, "edges": []})["edges"].append((edge, e0))
+            elif verdict == "route-only":
+                # its own alternative route; never left in the AND clause with other alternatives
+                short = t.replace("new:", "").split(".")[-1]
+                name = f"via-{short}"
+                if x.get("other_route"):
+                    edge["evidence"][-1]["note"] = (edge["evidence"][-1]["note"] + f" | other route: {x['other_route']}")[:600]
+                alt.setdefault(name, {"procedure": e0.get("route_procedure"), "edges": []})["edges"].append((edge, e0))
+                counts["route-only split into own clause"] += 1
+                split_from_main = True
             else:
                 main_edges.append((edge, e0))
 
@@ -133,8 +145,12 @@ def main(d):
                                 "status": "disputed"}, {}))
             counts["missing-prerequisite added"] += 1
         main = [fix_points(e, main_proc) for e, _ in main_edges]
-        necessary = [e for e in main if e["status"] == "proposed"]
-        if main:
+        # core: every kept edge outside the alternative routes (necessary, task, undecided,
+        # critic-missing). Each alternative route is core + its own edges.
+        necessary = list(main)
+        # The core alone is a route unless route-only edges were split out of it:
+        # then every route needs one of those alternatives (or a pass/critic route).
+        if main and not split_from_main:
             c = {"clause": "standard"}
             if main_proc:
                 c["procedure"] = main_proc
@@ -178,9 +194,12 @@ def main(d):
         src = n.get("sources") or {}
         doc["sources"] = {"ccss": [str(s) for s in src.get("ccss", [])],
                           "learning_components": [str(s) for s in src.get("lc", [])]}
+        if src.get("prek"):
+            doc["sources"]["prek"] = [str(s) for s in src["prek"]]
         doc["requires"] = requires
         if not requires:
             reasons = [passes[p].get(nid, {}).get("root_reason") for p in ("P", "Q")]
+            reasons.append(n.get("root_reason"))
             doc["root_reason"] = next((r for r in reasons if r), "Every proposed prerequisite was removed by the critic; check this node.")
         if related:
             seen = set()
