@@ -68,7 +68,7 @@ units:
   # ---------- one strand: writer, two proposers, critic ----------
   # The writer waits on Daniel's vetting. Proposers wait on the writer. The
   # critic waits on both proposers.
-  - {id: prek.writer, stage: writer, strand: prek, after: [prek.research.vetting], output: pilot/run/prek/prek.nodes.yaml, validate: writer, status: running, tokens: 0}
+  - {id: prek.writer, stage: writer, strand: prek, after: [prek.research.vetting], output: pilot/run/prek/prek.nodes.yaml, validate: writer, status: done, tokens: 157661, commit: 9492334}
   - {id: prek.proposer-a, stage: proposer-a, strand: prek, after: [prek.writer], output: pilot/run/prek/prek.pass-a.yaml, validate: proposer, status: pending, tokens: 0}
   - {id: prek.proposer-b, stage: proposer-b, strand: prek, after: [prek.writer], output: pilot/run/prek/prek.pass-b.yaml, validate: proposer, status: pending, tokens: 0}
   - {id: prek.critic, stage: critic, strand: prek, after: [prek.proposer-a, prek.proposer-b], output: pilot/run/prek/prek.critic.json, validate: critic, status: pending, tokens: 0}
