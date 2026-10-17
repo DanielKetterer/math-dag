@@ -89,8 +89,16 @@ def main():
     frag = tpl.replace("__GRAPH_DATA__", blob)
     head = ('<!doctype html>\n<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n')
+    page = head + frag
     with open(os.path.join(ROOT, "explorer", "index.html"), "w", encoding="utf-8") as f:
-        f.write(head + frag)
+        f.write(page)
+    # Keep the branch-based GitHub Pages publishing directory in sync.
+    # Configure Pages to publish main/docs, since Pages branch publishing
+    # supports the repository root or /docs, not arbitrary subdirectories.
+    docs = os.path.join(ROOT, "docs")
+    os.makedirs(docs, exist_ok=True)
+    with open(os.path.join(docs, "index.html"), "w", encoding="utf-8") as f:
+        f.write(page)
     if len(sys.argv) > 1:
         with open(sys.argv[1], "w", encoding="utf-8") as f:
             f.write(frag)
