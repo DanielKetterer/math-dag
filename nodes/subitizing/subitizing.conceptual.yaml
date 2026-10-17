@@ -1,0 +1,57 @@
+id: subitizing.conceptual
+concept: subitizing
+facet: conceptual
+level: 1
+type: concept
+name: Name a briefly shown set by seeing its parts
+statement: Name how many objects are in a briefly shown arrangement too large to recognize at once by
+  seeing it as small parts, each recognized at a glance, and knowing the whole they make.
+assess: Flash a ten-frame card with 5 dots in the top row and 2 in the bottom for about two seconds, then
+  hide it. 'How many dots? How did you see them?' Credit 7 with a description of parts such as 'five and
+  two'.
+sources:
+  ccss: []
+  learning_components: []
+  prek:
+  - cs.subitize.conceptual-5plus
+  - cs.subitize.conceptual-10
+requires:
+- clause: standard
+  all_of:
+  - node: subitizing.perceptual
+    relation: definitional
+    points_to: statement
+    why: Each part of the arrangement, such as the five and the two, must itself be named at a glance,
+      which is the perceptual skill.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.add-to.count-all
+    relation: definitional
+    points_to: statement
+    why: Knowing the whole the recognized parts make means finding the total of two sets joined together,
+      the meaning of joining and counting all.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Conceptual subitizing needs some way to get from recognized parts (5 and 2) to
+        the whole 7, but join-and-count-all is only one such means, and the point of the node is to know
+        the whole without counting it.'
+    status: disputed
+related:
+- node: number-composition.within-5
+  relation: same_idea_different_form
+  note: Number-composition within 5 is the symbolic, no-arrangement version of what conceptual subitizing
+    does with arrangements. The test uses 5 and 2 giving 7, beyond within-5, and the dependence plausibly
+    runs the other way (seeing 5 as 2 and 3 builds the fact).
+status: proposed

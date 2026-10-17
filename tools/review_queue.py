@@ -40,8 +40,14 @@ def main(d):
     impact = {i: downstream(i) for i in nodes}
     name = lambda i: nodes[i]["name"] if i in nodes else f"(outside the pilot: {i})"  # noqa: E731
 
+    # review only this run's nodes (impact is still measured on the whole map)
+    scope = set()
+    for bp in glob.glob(os.path.join(d, "batches", "*.yaml")):
+        scope |= {x["id"] for x in yaml.safe_load(open(bp, encoding="utf-8"))}
     kept, disputed = [], []
     for i, n in nodes.items():
+        if scope and i not in scope:
+            continue
         seen = set()
         for c in n["requires"]:
             for e in c["all_of"]:

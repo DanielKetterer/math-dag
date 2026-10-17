@@ -1,0 +1,75 @@
+id: comparing.count.by-counting
+concept: comparing
+facet: count
+level: 1
+type: procedure
+name: Compare two sets by counting
+statement: Decide which of two collections has more objects, or whether they have the same number, by
+  counting each collection and comparing the two counts; the one whose count comes later in the number
+  sequence has more, whatever the size or spread of the objects.
+procedure:
+- Count the first collection and remember its number.
+- Count the second collection and remember its number.
+- If the numbers are the same, the collections are equal; otherwise the collection whose number comes
+  later in the count sequence has more.
+assess: Show 6 small buttons and 4 large blocks, the blocks spread so their row is longer. 'Are there
+  more buttons or more blocks? Count to find out.' Credit 'more buttons' supported by counts of 6 and
+  4.
+sources:
+  ccss:
+  - K.CC.C.6
+  learning_components: []
+  prek:
+  - elof.p-math-4
+  - cs.compare.knows-to-count
+  - cs.compare.counting-same-size
+  - cs.compare.counting-5
+  - cs.compare.counting-comparer
+requires:
+- clause: via-successor
+  all_of:
+  - node: counting.objects
+    relation: procedural
+    points_to: procedure.1
+    why: Steps one and two count each collection to get its number, and the test problem counts six buttons
+      and four blocks.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.sequence.recite
+    relation: procedural
+    points_to: procedure.3
+    why: Step three decides which number comes later in the count sequence, which requires knowing the
+      order of the number words.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.successor
+    relation: definitional
+    points_to: statement
+    why: The collection with the later count has more only because each next number word names exactly
+      one more than the word before it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: ''Later in the count means more'' is grounded here by successor (each word is
+        one more). | other route: The same rule can be established empirically by matching sets (comparing.count.matching)
+        and noticing that the set with leftovers has the later count.'
+    status: disputed
+status: proposed

@@ -1,0 +1,48 @@
+id: shapes.corners.count
+concept: shapes
+facet: properties
+level: 1
+type: concept
+name: Identify and count the corners of a shape
+statement: A corner (vertex) of a polygon is a point where two of its sides meet, so the corners can be
+  pointed to one by one and counted.
+assess: Show a pentagon. 'Touch each corner of this shape. How many corners does it have?' Credit 5 with
+  each corner touched once.
+sources:
+  ccss:
+  - K.G.B.4
+  learning_components: []
+  prek:
+  - cs.shapes.angle-recognizer
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.sides.count
+    relation: definitional
+    points_to: statement
+    why: A corner is defined as a point where two sides meet, so the learner must already identify the
+      sides of the shape.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.objects
+    relation: definitional
+    points_to: statement
+    why: The corners are touched one at a time and counted, so the learner counts a set of points with
+      each tagged once.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

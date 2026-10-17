@@ -3,19 +3,68 @@ concept: counting
 facet: core
 level: 1
 type: procedure
-name: Count a collection of objects
-statement: >
-  Saying the number words in order while touching each object exactly once,
-  the last number word said tells how many objects are in the collection.
+name: Count a collection to find how many
+statement: Find how many objects are in a collection, whether arranged in a line, an array, a circle,
+  or scattered, by counting each object once with the number words in order and answering with the last
+  word said.
 procedure:
-  - Say the number words in order, one per object.
-  - Touch or point to each object exactly once.
-  - Report the last number word as the size of the collection.
-assess: "How many counters are on the table? (7 counters, scattered)"
+- Say the number words in order, starting at one.
+- Pair each word with exactly one object not yet counted, keeping counted and uncounted objects apart.
+- Stop when every object has been counted.
+- Answer 'how many' with the last number word said.
+assess: '''How many shells are on this tray?'' (12 shells scattered). Credit 12.'
 sources:
-  ccss: [K.CC.B.4, K.CC.B.5]
-requires: []
-root_reason: >
-  Counting objects is where this map starts. Earlier number sense
-  (subitizing, comparing collections by sight) is out of scope for now.
+  ccss:
+  - K.CC.B.5
+  learning_components: []
+  prek:
+  - elof.p-math-3
+  - cs.counting.counter-10
+  - cs.counting.counter-producer-10plus
+  - cp.gg.stable-order
+requires:
+- clause: standard
+  all_of:
+  - node: counting.sequence.recite
+    relation: procedural
+    points_to: procedure.1
+    why: Step one has the learner say the number words in order starting at one, and the tray of twelve
+      shells needs the words through twelve.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.one-to-one
+    relation: procedural
+    points_to: procedure.2
+    why: Step two pairs each word with exactly one uncounted object while keeping counted and uncounted
+      objects apart, which is the tagging skill.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.cardinal.last-word
+    relation: procedural
+    points_to: procedure.4
+    why: Step four answers how many with the last number word said, which relies on knowing the last word
+      names the whole collection.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
 status: proposed

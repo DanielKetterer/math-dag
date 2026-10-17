@@ -1,0 +1,144 @@
+id: number-composition.within-5
+concept: number-composition
+facet: part-whole
+level: 1
+type: fact
+name: Know the parts of numbers within 5
+statement: For any whole number up to 5, quickly name the missing part when the whole and one part are
+  known, or the whole when both parts are known, without counting.
+assess: Show 5 counters, then hide some under a cup so 2 remain visible. 'There were 5. How many are hiding
+  under the cup?' Credit 3 given quickly without lifting the cup.
+sources:
+  ccss:
+  - K.OA.A.3
+  - K.OA.A.5
+  learning_components: []
+  prek:
+  - cs.compose.composer-4-5
+requires:
+- clause: via-count-all
+  all_of:
+  - node: number-composition.part-whole.inexact
+    relation: definitional
+    points_to: statement
+    why: Naming a missing part or the whole depends on seeing a number as a whole made of parts, each
+      smaller than the whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.cardinal.last-word
+    relation: definitional
+    points_to: statement
+    why: The numbers two, three and five must each name an exact quantity before a learner can know which
+      two quantities make five.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.add-to.count-all
+    relation: definitional
+    points_to: statement
+    why: The whole of two known parts is the total of the two joined sets, which the join-and-count procedure
+      finds.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Joining and counting is one way a learner comes to know the whole of two parts;
+        the target is a no-counting fact. | other route: Learn the pairs by seeing small sets as arrangements
+        of parts (finger, dice or dot patterns; subitizing.conceptual).'
+    status: disputed
+- clause: via-count-remaining
+  all_of:
+  - node: number-composition.part-whole.inexact
+    relation: definitional
+    points_to: statement
+    why: Naming a missing part or the whole depends on seeing a number as a whole made of parts, each
+      smaller than the whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.cardinal.last-word
+    relation: definitional
+    points_to: statement
+    why: The numbers two, three and five must each name an exact quantity before a learner can know which
+      two quantities make five.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.take-away.count-remaining
+    relation: definitional
+    points_to: statement
+    why: The missing part when the whole and one part are known is the amount left after removing that
+      part.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Taking away and counting what is left is one way the missing part is found; the
+        node is two facts (whole from parts, part from whole), and each can be reached another way. |
+        other route: Find the missing part by thinking ''what joins with 2 to make 5'' via join-and-count-all
+        (addition.add-to.count-all), or by pattern recognition of parts.'
+    status: disputed
+- clause: critic-route-1
+  note: Learn pairs by seeing small sets as arrangements of parts (finger, dice, dot patterns), not by
+    joining or removing.
+  all_of:
+  - node: number-composition.part-whole.inexact
+    relation: definitional
+    points_to: statement
+    why: Naming a missing part or the whole depends on seeing a number as a whole made of parts, each
+      smaller than the whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.cardinal.last-word
+    relation: definitional
+    points_to: statement
+    why: The numbers two, three and five must each name an exact quantity before a learner can know which
+      two quantities make five.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subitizing.conceptual
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Learn pairs by seeing small sets as arrangements of
+      parts (finger, dice, dot patterns), not by joining or removing.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

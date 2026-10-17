@@ -1,0 +1,44 @@
+id: addition.application.add-to-story
+concept: addition
+facet: add-to
+level: 1
+type: application
+name: Solve add-to story problems with objects
+statement: A story tells of a starting amount and an amount added to it and asks for the result; the learner
+  acts the story out with objects or fingers and finds how many there are in all.
+assess: '''Mia has 2 stickers. Her friend gives her 3 more stickers. How many stickers does Mia have now?''
+  (counters available). Credit 5.'
+sources:
+  ccss:
+  - K.OA.A.2
+  learning_components: []
+  prek:
+  - elof.p-math-6
+requires:
+- clause: standard
+  all_of:
+  - node: addition.add-to.count-all
+    relation: definitional
+    points_to: statement
+    why: Acting the story out with objects to find how many in all is joining the starting amount and
+      the added amount and counting everything.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.produce-set
+    relation: definitional
+    points_to: statement
+    why: The story gives the amounts as numbers (2 stickers, 3 more), so the learner must build sets of
+      those sizes.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,67 @@
+id: counting.produce-set
+concept: counting
+facet: core
+level: 1
+type: procedure
+name: Count out a set of a given number
+statement: Given a number word, make a set of exactly that many objects from a larger supply by counting
+  objects out one at a time and stopping when the word just said is the given number.
+procedure:
+- Keep the given number word in mind.
+- Move objects from the supply one at a time, saying the number words in order from one.
+- Stop when the word just said is the given number word.
+assess: '''From this pile of 20 counters, put exactly 8 on the plate.'' Credit exactly 8 counters on the
+  plate.'
+sources:
+  ccss:
+  - K.CC.B.5
+  learning_components: []
+  prek:
+  - cs.counting.producer-small
+  - cs.counting.counter-producer-10plus
+requires:
+- clause: standard
+  all_of:
+  - node: counting.sequence.recite
+    relation: procedural
+    points_to: procedure.2
+    why: Step two says the number words in order from one as objects are moved, up to the requested number
+      such as eight.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.one-to-one
+    relation: procedural
+    points_to: procedure.2
+    why: Each object moved from the supply must receive exactly one word, so no object is moved without
+      a word or tagged twice.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.cardinal.last-word
+    relation: procedural
+    points_to: procedure.3
+    why: Step three stops when the word just said equals the given number, which works only because the
+      last word said names how many have been moved.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

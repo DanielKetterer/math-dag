@@ -1,0 +1,77 @@
+id: numeral.match-quantity
+concept: numeral
+facet: core
+level: 2
+type: representation
+name: Match a numeral to a set of objects
+statement: A written numeral stands for how many objects are in a set, so a numeral can be paired with
+  the set it describes and a set can be labeled with its numeral.
+assess: Show the card '4' and three plates holding 3, 4, and 5 apples (arranged so the plate of 4 is not
+  the longest row). 'Which plate has this many apples?' Credit the plate of 4.
+sources:
+  ccss:
+  - K.CC.A.3
+  learning_components: []
+  prek:
+  - elof.p-math-5
+requires:
+- clause: via-objects
+  all_of:
+  - node: numeral.read
+    relation: representational
+    points_to: statement
+    why: The learner must turn the card 4 into the number word four before deciding which set that word
+      describes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.objects
+    relation: definitional
+    points_to: statement
+    why: A numeral stands for how many objects are in a set, so pairing it with a set requires finding
+      how many by counting the set.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Finding which set has 4 can be done by counting, but the sets in the test (3,
+        4, 5) are small. | other route: Subitize each small set (about 5 or fewer) and compare its name
+        to the numeral, via subitizing.perceptual, with no counting.'
+    status: disputed
+- clause: critic-route-1
+  note: Subitize each small set and match its name to the numeral's word, with no counting.
+  all_of:
+  - node: numeral.read
+    relation: representational
+    points_to: statement
+    why: The learner must turn the card 4 into the number word four before deciding which set that word
+      describes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subitizing.perceptual
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Subitize each small set and match its name to the
+      numeral''s word, with no counting.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

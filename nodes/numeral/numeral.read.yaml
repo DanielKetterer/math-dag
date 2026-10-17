@@ -1,0 +1,45 @@
+id: numeral.read
+concept: numeral
+facet: core
+level: 2
+type: representation
+name: Read a written numeral
+statement: Say the number word that a written single-digit numeral stands for.
+assess: Point to numeral cards shown one at a time in mixed order (6, 2, 9, 0, 4). 'What number is this?'
+  Credit the correct number word for each.
+sources:
+  ccss: []
+  learning_components: []
+  prek:
+  - elof.p-math-5
+  - cs.counting.counter-10
+requires:
+- clause: standard
+  all_of:
+  - node: counting.sequence.recite
+    relation: representational
+    points_to: statement
+    why: Reading a numeral means saying the number word it stands for, so the learner must already know
+      the spoken number words from one to nine.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Reading a numeral needs the spoken word for each digit, but not the ordered recitation
+        of the list; the words could be learned numeral by numeral. The test also includes 0, whose word
+        is outside counting.sequence.recite (which starts at one'
+    status: disputed
+  - node: number.word.zero
+    relation: definitional
+    points_to: statement
+    why: The test includes 0, whose spoken word and meaning are not in counting.sequence.recite, which
+      starts at one.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

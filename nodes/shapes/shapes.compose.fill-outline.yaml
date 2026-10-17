@@ -1,0 +1,48 @@
+id: shapes.compose.fill-outline
+concept: shapes
+facet: composition
+level: 1
+type: procedure
+name: Fill a puzzle outline where each piece is drawn
+statement: Fill a puzzle in which the outline of every piece is drawn by choosing, for each outlined region,
+  a shape piece that fits it and placing it there, turning it as needed.
+assess: Give the child a picture of a house outlined with one square, one triangle, and two rectangles,
+  and a pile of pattern blocks. 'Fill in the picture with these shapes.' Credit every outline filled by
+  a fitting shape.
+sources:
+  ccss: []
+  learning_components: []
+  prek:
+  - cs.compshape.piece-assembler
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.match
+    relation: definitional
+    points_to: statement
+    why: Choosing a piece that fits each outlined region is picking the piece that is the same shape as
+      the region, whatever its orientation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: spatial.motion.turn-flip
+    relation: procedural
+    points_to: statement
+    why: Placing the chosen piece in its region requires turning, sliding or flipping it until it fits,
+      as the statement says.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

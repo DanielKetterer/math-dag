@@ -1,0 +1,47 @@
+id: counting.successor
+concept: counting
+facet: core
+level: 1
+type: concept
+name: Each next number word is one more
+statement: Each number word in the count sequence names a quantity exactly one greater than the word before
+  it, so adding one object to a collection of n objects makes its number the word after n.
+assess: Count 8 marbles together with the child, then drop them into an opaque cup. Drop in one more while
+  the child watches. 'How many marbles are in the cup now?' Credit 'nine' without emptying the cup to
+  recount.
+sources:
+  ccss:
+  - K.CC.B.4.c
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: counting.sequence.recite
+    relation: definitional
+    points_to: statement
+    why: The statement refers to the word after n in the count sequence, so the learner must know which
+      word follows each given word.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.cardinal.last-word
+    relation: definitional
+    points_to: statement
+    why: Adding one object makes the number the next word only if each word in the sequence names how
+      many objects have been counted.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

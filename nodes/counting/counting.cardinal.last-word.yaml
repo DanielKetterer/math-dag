@@ -1,0 +1,65 @@
+id: counting.cardinal.last-word
+concept: counting
+facet: core
+level: 1
+type: concept
+name: The last number word in a count tells how many
+statement: When a collection has been counted correctly, the last number word said names how many objects
+  are in the whole collection, not only the last object counted.
+assess: After the child finishes counting 7 blocks, cover the blocks with a cloth and ask, 'How many blocks
+  are under the cloth?' Credit 'seven' given without an attempt to recount.
+sources:
+  ccss:
+  - K.CC.B.4.b
+  learning_components: []
+  prek:
+  - cs.counting.counter-small
+  - cp.gg.cardinal
+  - elof.p-math-3
+requires:
+- clause: standard
+  all_of:
+  - node: counting.sequence.recite
+    relation: definitional
+    points_to: statement
+    why: A collection counted correctly requires the number words said in their conventional order, and
+      the last of those words is what names the total.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.one-to-one
+    relation: definitional
+    points_to: assess
+    why: The statement applies only when every object received exactly one word, since a skipped or double-tagged
+      object makes the last word the wrong total.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is conditional (''when a collection has been counted correctly'')
+        and says what the last word means; it does not require the learner to be able to execute the tagging.
+        Only the test, where the child itself counts 7 blocks, needs'
+    status: proposed
+  - node: cardinality.small-number-words
+    relation: definitional
+    points_to: statement
+    why: Saying the last word names how many only if a number word already names an exact quantity, as
+      the words one, two and three do.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

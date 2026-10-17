@@ -1,0 +1,44 @@
+id: subtraction.application.take-from-story
+concept: subtraction
+facet: take-away
+level: 1
+type: application
+name: Solve take-from story problems with objects
+statement: A story tells of a starting amount and an amount taken from it and asks how many are left;
+  the learner acts the story out with objects or fingers and finds the result.
+assess: '''There are 5 ducks in the pond. 2 ducks fly away. How many ducks are still in the pond?'' (counters
+  available). Credit 3.'
+sources:
+  ccss:
+  - K.OA.A.2
+  learning_components: []
+  prek:
+  - elof.p-math-6
+requires:
+- clause: standard
+  all_of:
+  - node: subtraction.take-away.count-remaining
+    relation: definitional
+    points_to: statement
+    why: Acting the story out with objects means removing the amount taken from the starting amount and
+      counting what is left.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.produce-set
+    relation: definitional
+    points_to: statement
+    why: The story gives the amounts as numbers (5 ducks, 2 fly away), so the learner must build a set
+      of 5 and remove exactly 2.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

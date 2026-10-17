@@ -1,0 +1,61 @@
+id: shapes.compare.same-different
+concept: shapes
+facet: core
+level: 1
+type: procedure
+name: Decide whether two shapes are the same by comparing whole shapes
+statement: Decide whether two flat shapes are exactly the same shape and size by checking that all of
+  their parts match, for example by laying one on top of the other, not by matching only one side or part.
+assess: Give the child two paper triangles that share one side length but differ in another side. 'Are
+  these the same shape and size? Show me how you know.' Credit 'no' supported by overlaying the whole
+  shapes and pointing to the part that does not match.
+sources:
+  ccss:
+  - K.G.B.4
+  learning_components: []
+  prek:
+  - cs.cmpshape.similar
+  - cs.cmpshape.part
+  - cs.cmpshape.some-attributes
+  - cs.cmpshape.most-attributes
+requires:
+- clause: via-turn-flip
+  all_of:
+  - node: shapes.sides.count
+    relation: definitional
+    points_to: statement
+    why: The test asks the child to point to the part that does not match; the idea of a side as a part
+      is assumed. Plausible, not certain.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: spatial.motion.turn-flip
+    relation: procedural
+    points_to: statement
+    why: Laying one shape on top of the other to check all parts match requires turning or flipping a
+      shape so it can be overlaid.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Overlaying needs turning or flipping, but the statement gives overlay only as
+        an example method. | other route: Check corresponding parts one at a time (count sides, compare
+        side lengths) while the shapes stay in place, via shapes.sides.count and comparing.size.direct.'
+    status: disputed
+related:
+- node: shapes.match
+  relation: contrasts_with
+  note: Shapes.match ignores size and orientation (same shape, any size); the target requires exact sameness
+    of size and every part. The tolerant concept is neither needed for nor the same as the exact one,
+    and a learner can check identical copies without it.
+- node: comparing.size.direct
+  relation: specializes
+  note: Comparing two lengths by aligning ends is the one-dimensional case of comparing by superposition,
+    which is what the target does for whole shapes. The overlay judgment (this part sticks out) does not
+    require the separate length-comparison skill.
+status: proposed

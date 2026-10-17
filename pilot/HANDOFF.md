@@ -55,27 +55,44 @@ then be the rote number sequence, one-to-one matching, judging bigger or
 smaller by sight, and recognizing shape categories. Daniel decided: floor at 
 what Kindergarten assumes.
 
-## Pre-K floor: research done, vetting closed (2026-10-17, second session)
+## Pre-K floor: run complete, awaiting Daniel's review (2026-10-17)
 
-- Sources extracted into `sources/prek/`: `elof.yaml` (Head Start ELOF,
-  primary), `clements_sarama.yaml` (Building Blocks developmental levels, the
-  authors' own document; five key levels spot-checked against [LT]2),
-  `counting_principles.yaml` (principles plus knower/successor findings; four
-  findings are from memory and marked so).
-- Daniel added `sources/LT2.pdf` ([LT]2 site export, newest and fullest; first
-  reference for level descriptions), `sources/Learning_trajectories_math.pdf`
-  (the Building Blocks document the yaml came from), and the 2004 Clements and
-  Sarama theory paper.
-- Decisions, all closed (see `sources/prek/VETTING.md` section 5): floor at the
-  preschool band; one `prek` strand; patterning out; split counting.objects in
-  the same pass.
-- Before the writer unit runs: give `writer.md` a short pre-K variant that cites
-  `sources.prek` ids instead of `lc` ids and points at LT2.pdf for level
-  descriptions. Get Daniel's go-ahead on cost first (estimate 150-300k subagent
-  tokens for the writer).
-- Edges touching the successor node wait until the successor-direction dispute
-  (VETTING.md section 2, item 3) is read.
-- `schema/node.schema.json` accepts `sources.prek: [...]`.
+- 52 pre-K and K nodes merged into `nodes/` (writer, two Sonnet proposers,
+  blinded Sonnet critic). Checker: 242 nodes, 0 errors, every node learnable.
+- Cost: writer 157,661; proposer P 117,278; proposer Q 112,638; critic
+  131,643. Total 519,220 subagent tokens. Daniel measured the writer at 2% of
+  the weekly Pro allowance (includes setup); the rest is recorded in the
+  manifest once he reads the meter.
+- Review queue: `pilot/run/prek/REVIEW.md` (86 items, scoped to pre-K nodes).
+- Issues to raise with Daniel first:
+  1. The Clements-Sarama pathway refutes `shapes.sides.count` as required for
+     `shapes.recognize`, `shapes.compare.same-different` and
+     `shapes.compose.from-sides`: children recognize non-prototype shapes a
+     level before they count sides. Likely a missing visual route.
+  2. `subitizing.perceptual` now requires `cardinality.small-number-words`.
+     Naming a set at a glance and giving N on request may be one competence
+     tested two ways (merge candidate), or the edge may run the other way.
+  3. `comparing.count.perceptual` lost its root status to a critic-proposed
+     `quantity.more-than`, which is unwritten and may be the node itself.
+  4. Cardinality's test (cover the blocks, ask how many) does not rule out
+     last-word repetition; give-a-number would, but that is
+     `counting.produce-set`.
+  5. Ten roots, not the writer's five; `counting.one-to-one` is a root only
+     because its test accepts non-conventional word order.
+- Not done: the 13 K-8 nodes that point at `counting.objects` may now want the
+  split nodes instead; check after review.
+- The C-S pathway is `pathways/clements-sarama.yaml`
+  (`tools/build_prek_pathway.py`). Common Core and IM 360 pathways now assume
+  nodes below their starting grade.
+
+## Fix #1 above is done in code, not yet applied
+
+`tools/merge_run.py` now puts each route-only edge in its own OR clause.
+A dry run on the pilot split exactly the 104 edges and passed the checker. The
+pilot nodes were NOT regenerated: rerun `python3 tools/merge_run.py pilot/run`
+together with applying Daniel's verdicts. Known limit: a single route-only
+edge whose alternative the critic described only in prose stays required; its
+evidence note carries the critic's other route.
 
 ## Running a run: manifest and run_state
 
@@ -84,7 +101,7 @@ what Kindergarten assumes.
 and what can run next; it flags partial outputs to resume rather than restart.
 Mark a unit done only through `--mark UNIT done --tokens N --commit SHA`, which
 refuses unless the unit's validator passes and its dependencies are done.
-Commit and push after every unit. Running total so far: 0 subagent tokens.
+Commit and push after every unit. Running total so far: 519,220 subagent tokens.
 
 ## Explorer
 

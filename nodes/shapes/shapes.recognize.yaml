@@ -1,0 +1,78 @@
+id: shapes.recognize
+concept: shapes
+facet: core
+level: 1
+type: concept
+name: Recognize a shape whatever its size or orientation
+statement: Recognize every example of a familiar shape class, such as triangles, squares, rectangles,
+  and circles, as that shape, whatever its size, orientation, or proportions, and reject figures that
+  only resemble it.
+assess: On a sheet with 12 figures (long thin triangles, a triangle standing on a vertex, a tilted square,
+  an oval, a triangle with a curved side, an open three-sided figure), 'Color every triangle.' Credit
+  all and only the true triangles colored.
+sources:
+  ccss:
+  - K.G.A.2
+  learning_components: []
+  prek:
+  - elof.p-math-9
+  - cs.shapes.recognizer-cst
+  - cs.shapes.recognizer-rectangles
+  - cs.shapes.recognizer
+requires:
+- clause: via-count
+  all_of:
+  - node: shapes.name.prototype
+    relation: definitional
+    points_to: statement
+    why: The test asks for all triangles, so the learner must have the shape class names, learned first
+      for typical examples.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.match
+    relation: definitional
+    points_to: statement
+    why: Recognizing every example whatever its size or orientation extends picking same-shaped figures
+      despite size and turn to a whole class of shapes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.closed-boundary
+    relation: definitional
+    points_to: statement
+    why: Rejecting the open three-sided figure requires the notion of a closed figure, which shapes.sides.count
+      (straight segments) does not cover.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: shapes.sides.count
+    relation: definitional
+    points_to: statement
+    why: Rejecting a triangle with a curved side or an open three-sided figure requires attending to whether
+      the sides are straight segments forming a closed boundary.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Rejecting a curved-sided or open lookalike can be done by attending to straight
+        sides and closure, but that is not the only way. | other route: Holistic visual comparison with
+        many varied labelled examples and non-examples (typical in curricula), without counting or attending
+        to sides.'
+    status: disputed
+status: proposed
