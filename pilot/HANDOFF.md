@@ -55,6 +55,31 @@ then be the rote number sequence, one-to-one matching, judging bigger or
 smaller by sight, and recognizing shape categories. Daniel decided: floor at 
 what Kindergarten assumes.
 
+## Pre-K floor: research step done (2026-10-17, second session)
+
+- Sources extracted into `sources/prek/`: `elof.yaml` (Head Start ELOF,
+  primary), `clements_sarama.yaml` (12 trajectories, SECONDARY reproduction),
+  `counting_principles.yaml` (principles plus knower/successor findings, some
+  from memory and marked so).
+- `sources/prek/VETTING.md` is the sheet for Daniel: what to verify, findings
+  that change the plan, a candidate inventory (~38 competencies, ~43 with
+  patterning), and five open questions (floor, strands, patterning,
+  Clements-Sarama access, whether to split counting.objects in the same pass).
+- Do not start the writer units until Daniel answers VETTING.md section 5;
+  then mark `prek.research.vetting` done.
+- `schema/node.schema.json` accepts `sources.prek: [...]`.
+- `writer.md` still expects learning-component ids; it needs a short pre-K
+  variant that cites `sources.prek` ids before the first writer unit.
+
+## Running a run: manifest and run_state
+
+`pilot/run/manifest.yaml` lists every unit (one strand through one stage).
+`python3 tools/run_state.py` prints status, the running subagent-token total,
+and what can run next; it flags partial outputs to resume rather than restart.
+Mark a unit done only through `--mark UNIT done --tokens N --commit SHA`, which
+refuses unless the unit's validator passes and its dependencies are done.
+Commit and push after every unit. Running total so far: 0 subagent tokens.
+
 ## Explorer
 
 `tools/build_explorer.py` rebuilds `explorer/index.html` from `nodes/`. Rebuild after every

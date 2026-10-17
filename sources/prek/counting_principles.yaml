@@ -1,0 +1,99 @@
+# Counting-principles literature: what counting is made of, and what studies
+# say about the order and independence of its parts.
+#
+# Retrieved: 2026-10-17
+#
+# Provenance column:
+#   fetched   - checked against a document fetched this session (URL given)
+#   secondary - reported by a fetched paper's literature review; the original
+#               was not read
+#   memory    - from Claude's background knowledge; NOT verified this session.
+#               Treat as a lead to check, never as a citation.
+#
+# Role in the map: these findings are `developmental` evidence (RULES.md 4).
+# A finding that two skills dissociate (a child shows one without the other)
+# refutes an edge or splits a node. A finding that one reliably precedes the
+# other is order evidence only; it does not pass the counterfactual test by
+# itself.
+
+source: counting-principles
+retrieved: 2026-10-17
+
+principles:
+  # Gelman and Gallistel (1978), The Child's Understanding of Number.
+  # Fetched summary: https://prek-math-te.stanford.edu/system/files/media/document/2017/The%20Principal%20Counting%20Principles.pdf
+  - id: cp.gg.one-one
+    name: One-one principle
+    claim: Each counted item receives exactly one number word, so the counter keeps track of counted and uncounted items.
+    group: how-to-count
+    provenance: fetched
+  - id: cp.gg.stable-order
+    name: Stable-order principle
+    claim: Number words are produced in the same repeatable order every count, and the list must be at least as long as the collection.
+    group: how-to-count
+    provenance: fetched
+  - id: cp.gg.cardinal
+    name: Cardinal principle
+    claim: The last number word said in a count names the number of items in the collection.
+    group: how-to-count
+    note: The source states it holds only on condition that one-one and stable order were followed. That is a logical dependency inside the principle, and it is the same dependency counting.objects already encodes.
+    provenance: fetched
+  - id: cp.gg.abstraction
+    name: Abstraction principle
+    claim: Any collection can be counted, including sounds, events, imagined items, and mixed kinds of objects.
+    group: what-to-count
+    provenance: fetched
+  - id: cp.gg.order-irrelevance
+    name: Order-irrelevance principle
+    claim: Items can be counted in any order and the result is the same, provided each is counted exactly once.
+    group: what-to-count
+    provenance: fetched
+
+findings:
+  - id: cp.bermejo-2004
+    citation: Bermejo et al. (2004)
+    finding: Children who began a count of five objects at "three" often answered "seven", so repeating the last word is not proof of cardinal understanding.
+    bears_on: assessment design for any cardinality node; the assess item must rule out last-word repetition.
+    provenance: fetched (reported in the Stanford summary above)
+
+  - id: cp.cp-age
+    citation: Carey and Barner (2019); Sarnecka and Wright (2013); Spaepen et al. (2018)
+    finding: Children become cardinal-principle (CP) knowers around ages 3.5 to 4, when they can both count a set accurately and produce a set of a requested size within their count list.
+    bears_on: places the cardinality node in the preschool band, below the K floor.
+    provenance: secondary (https://arxiv.org/html/2311.15194v2)
+
+  - id: cp.successor-lag
+    citation: Davidson, Eng and Barner (2012); Cheung, Rubenson and Barner (2017); Spaepen et al. (2018)
+    finding: CP-knowers do not automatically understand that adding one item makes the next number word correct. Cheung et al. found reliable successor knowledge only around ages 5.5 to 6, roughly two years after CP knowledge.
+    bears_on: the successor idea (K.CC.B.4.c) is a separate node from cardinality, and cardinality does not require it. This is dissociation evidence, the strong kind.
+    provenance: secondary (https://arxiv.org/html/2311.15194v2)
+
+  - id: cp.successor-direction-dispute
+    citation: Carey and Barner (2019) versus Davidson et al. (2012) and Spaepen et al. (2018)
+    finding: The secondary source reports a dispute over whether successor understanding precedes or follows CP knowledge.
+    bears_on: do not put an edge in either direction between cardinality and successor until the primary papers are read.
+    provenance: secondary; the attribution of a successor-first view to Carey and Barner (2019) looks inconsistent with the lag findings and should be checked first.
+
+  - id: cp.knower-levels
+    citation: Wynn (1990, 1992); Le Corre and Carey (2007); Sarnecka and Carey (2008)
+    finding: Before becoming CP-knowers, children learn the exact meanings of "one", "two", "three", and sometimes "four" in order, one at a time, as measured by the give-a-number task. These are the subset-knower levels.
+    bears_on: subset-knower levels differ by range, not by kind, so they collapse into one node (exact meanings of small number words) separate from the CP node.
+    provenance: memory
+
+  - id: cp.recite-before-meaning
+    citation: Fuson (1988); Wynn (1990)
+    finding: Children recite the count list well before the words carry exact quantity meaning; recitation and meaning dissociate.
+    bears_on: rote sequence is its own root node and does not require any quantity node.
+    provenance: memory
+
+  - id: cp.procedure-before-principle
+    citation: Briars and Siegler (1984); Gelman and Meck (1983)
+    finding: The principles-first versus skills-first debate. Briars and Siegler reported children counting correctly before they could judge which features of counting are essential. Gelman and Meck reported children detecting errors in a puppet's counting that they still made themselves.
+    bears_on: the procedure of counting and the justification of counting (which features are essential, order irrelevance) are separate nodes; neither direction is a prerequisite until the evidence is read.
+    provenance: memory
+
+  - id: cp.unit-task
+    citation: Sarnecka and Carey (2008)
+    finding: CP-knowers, but not subset-knowers, know that adding an item to a set changes the number word, in the right direction.
+    bears_on: tension with cp.successor-lag; the two may test different things (direction of change versus exactly the next word). Must be read before any edge touches the successor node.
+    provenance: memory
