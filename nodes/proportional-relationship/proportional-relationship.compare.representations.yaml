@@ -1,0 +1,91 @@
+id: proportional-relationship.compare.representations
+concept: proportional-relationship
+facet: core
+level: 3
+type: procedure
+name: Compare two proportional relationships given in different forms
+statement: Compare two proportional relationships given in different forms (table, graph, equation, description)
+  by finding the unit rate of each and comparing the unit rates.
+procedure:
+- Find the unit rate of the first relationship from its form.
+- Find the unit rate of the second relationship from its form, in the same units.
+- The relationship with the greater unit rate has more of y per unit of x.
+assess: Car A's distance is d = 55t. Car B's distance-time graph is a line through (0, 0) and (4, 230).
+  Which car is faster?
+sources:
+  ccss:
+  - 8.EE.B.5
+  learning_components:
+  - fbbff3cd
+requires:
+- clause: standard
+  all_of:
+  - node: proportional-relationship.constant.from-values
+    relation: procedural
+    points_to: procedure.1
+    why: Finding the unit rate from a table or a verbal description is finding the constant of proportionality
+      from values.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: proportional-relationship.constant.graph
+    relation: procedural
+    points_to: procedure.1
+    why: Finding the unit rate from a graph, such as the line through (0, 0) and (4, 230), is reading
+      k from a graph.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: proportional-relationship.constant.equation
+    relation: procedural
+    points_to: procedure.1
+    why: Finding the unit rate from an equation such as d = 55t is reading the coefficient k of y = kx.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.convert-units
+    relation: procedural
+    points_to: procedure.2
+    why: Stating both unit rates in the same units may require converting measurement units with conversion
+      factors.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Converting units is needed only if the two relationships use different units,
+        which step 2 allows but the test problem does not do.'
+    status: disputed
+  - node: decimal.compare
+    relation: procedural
+    points_to: procedure.3
+    why: Deciding which unit rate is greater, such as 55 versus 57.5, compares two decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Comparing decimal unit rates is one case; rates given as fractions are compared
+        with fraction comparison.'
+    status: disputed
+status: proposed

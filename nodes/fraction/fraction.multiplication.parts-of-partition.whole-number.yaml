@@ -1,0 +1,76 @@
+id: fraction.multiplication.parts-of-partition.whole-number
+concept: fraction
+facet: operator
+level: 2
+type: concept
+name: (a/b) x q as a parts of q split into b equal parts, q whole
+statement: For a whole number q, (a/b) x q is the amount formed by a parts when q is partitioned into
+  b equal parts.
+assess: Use a drawing to show (2/3) x 4 as parts of 4 split into 3 equal parts. What is the product?
+sources:
+  ccss:
+  - 5.NF.B.4.a
+  learning_components:
+  - 027af5d2
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: The product is formed by a parts of the equal parts, each of size 1/b of the partitioned quantity.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.partitive.meaning
+    relation: definitional
+    points_to: statement
+    why: Partitioning q into b equal parts is the sharing meaning of division, with each part the size
+      of one share.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.quotient.equal-sharing
+    relation: definitional
+    points_to: assess
+    why: When q is not a multiple of b, each of the b equal parts of q is itself a fraction of a whole.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Needed only to name the size of each part when q is not a multiple of b (4 split
+        into 3); the concept statement does not require naming that size.'
+    status: proposed
+  - node: fraction.multiply-whole.model
+    relation: procedural
+    points_to: assess
+    why: Finding the product of (2/3) x 4 from a drawing requires combining the equal parts into a total
+      with unit fractions.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Naming the product 8/3 from the drawing needs fraction-times-whole-number reasoning,
+        but the concept (a parts of q split into b equal parts) does not require computing the amount.'
+    status: proposed
+status: proposed

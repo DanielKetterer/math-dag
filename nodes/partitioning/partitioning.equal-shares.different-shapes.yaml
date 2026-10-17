@@ -1,0 +1,77 @@
+id: partitioning.equal-shares.different-shapes
+concept: partitioning
+facet: area
+level: 1
+type: concept
+name: Equal shares need not have the same shape
+statement: Shares of identical wholes are equal when they cover the same amount, even if they have different
+  shapes.
+assess: Two identical squares are each cut in half, one along a diagonal into triangles and one straight
+  down the middle into rectangles. Is a triangle half the same amount as a rectangle half?
+sources:
+  ccss:
+  - 2.G.A.3
+  learning_components:
+  - 0b131675
+requires:
+- clause: standard
+  all_of:
+  - node: partitioning.equal-shares.area
+    relation: definitional
+    points_to: statement
+    why: The statement concerns shares produced by different ways of partitioning identical wholes into
+      equal shares.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.size.direct
+    relation: definitional
+    points_to: statement
+    why: Judging that shares cover the same amount even though their shapes differ uses direct comparison
+      of amount of area.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.recognize
+    relation: definitional
+    points_to: assess
+    why: The statement contrasts shares of different shapes, such as triangles and rectangles cut from
+      identical squares.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The idea needs only perceiving that the shapes differ; naming or classifying triangles
+        and rectangles is used by the test wording.'
+    status: proposed
+  - node: partitioning.equal-shares.name
+    relation: definitional
+    points_to: assess
+    why: The test asks whether a triangle half equals a rectangle half, so the learner must know what
+      a half is.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The concept is about equal shares of identical wholes having different shapes;
+        the word ''half'' appears only in the test question.'
+    status: proposed
+status: proposed

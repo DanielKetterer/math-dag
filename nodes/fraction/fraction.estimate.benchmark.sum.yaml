@@ -1,0 +1,101 @@
+id: fraction.estimate.benchmark.sum
+concept: fraction
+facet: measure
+level: 2
+type: procedure
+name: Estimate a fraction sum with benchmarks and judge reasonableness
+statement: Estimate a sum of fractions by replacing each addend with a nearby benchmark (0, 1/2, 1, or
+  a whole number), and use the estimate to judge whether a computed sum is reasonable.
+procedure:
+- 'Replace each addend with its nearest benchmark: 0, 1/2, 1, or a whole number.'
+- Add the benchmarks to get an estimate of the sum.
+- Call a computed sum unreasonable if it is far from the estimate or is smaller than one of the addends.
+assess: Without computing exactly, decide whether 2/5 + 1/2 = 3/7 can be correct, and explain using benchmark
+  fractions.
+sources:
+  ccss:
+  - 5.NF.A.2
+  learning_components:
+  - 1f6b0f81
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.compare.reasoning-size
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 picks the nearest benchmark for each addend by reasoning about whether it is close to
+      0, 1/2, or 1.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Picking the nearest benchmark can be done by reasoning about size, but also by
+        locating each addend on a number line and reading off the nearest benchmark.'
+    status: disputed
+  - node: fraction.addition.like-denominators.model
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds benchmark fractions such as 1/2 + 1/2, which is like-denominator addition with a
+      model.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.whole-number
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds benchmark whole numbers, for example 1 + 1, to produce the estimate.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+- clause: critic-route-1
+  note: Locate each addend on a number line and read off the nearest benchmark, then add benchmark lengths.
+  all_of:
+  - node: fraction.addition.like-denominators.model
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds benchmark fractions such as 1/2 + 1/2, which is like-denominator addition with a
+      model.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.whole-number
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds benchmark whole numbers, for example 1 + 1, to produce the estimate.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.number-line
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Locate each addend on a number line and read off the
+      nearest benchmark, then add benchmark lengths.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

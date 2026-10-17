@@ -1,0 +1,69 @@
+id: fraction.mixed-number.decompose.equation
+concept: fraction
+facet: measure
+level: 2
+type: representation
+name: Record a mixed-number decomposition as an equation
+statement: A decomposition of n a/b into groups of parts of size 1/b is recorded as an equation n a/b
+  = c/b + d/b + ..., where the numerators on the right add to n x b + a.
+assess: A model shows 1 3/4 as fourths grouped into 4 fourths, 2 fourths, and 1 fourth. Write the equation.
+sources:
+  ccss:
+  - 4.NF.B.3.b
+  learning_components:
+  - 1e84f1d7
+  - d533aa7d
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.mixed-number.decompose.model
+    relation: representational
+    points_to: statement
+    why: The equation n a/b = c/b + d/b + ... records a grouping of parts that the mixed-number model
+      produces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.meaning
+    relation: representational
+    points_to: statement
+    why: The left side of the equation is written in mixed-number notation, which must be read as n +
+      a/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.decompose.equation
+    relation: representational
+    points_to: statement
+    why: The right side uses the same notation as a fraction decomposition equation, with numerators summing
+      to the total number of parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.whole-number
+    relation: definitional
+    points_to: statement
+    why: The condition that the numerators on the right add to n x b + a is a whole-number sum, as in
+      fraction.decompose.equation.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,87 @@
+id: fraction.subtraction.like-denominators
+concept: fraction
+facet: measure
+level: 3
+type: procedure
+name: Subtract fractions with like denominators symbolically
+statement: For fractions with the same denominator and c no greater than a, a/b - c/b = (a - c)/b.
+procedure:
+- Check that the denominators are the same.
+- Subtract the second numerator from the first.
+- Write the difference over the common denominator.
+assess: Compute 11/10 - 4/10.
+sources:
+  ccss:
+  - 4.NF.B.3.a
+  - 4.NF.B.3.d
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.subtraction.like-denominators.model
+    relation: representational
+    points_to: statement
+    why: The symbolic rule a/b - c/b = (a - c)/b records the result that the length model of removing
+      like parts produces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A level 3 rule need not be derived from the length model.'
+    status: disputed
+  - node: subtraction.whole-number
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts the second numerator from the first as whole numbers, possibly with several
+      digits.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+- clause: critic-route-1
+  note: Rule from the unit-sum meaning (a copies of 1/b with c removed leaves a - c copies) or direct
+    instruction.
+  all_of:
+  - node: subtraction.whole-number
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts the second numerator from the first as whole numbers, possibly with several
+      digits.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.unit-sum
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Rule from the unit-sum meaning (a copies of 1/b with
+      c removed leaves a - c copies) or direct instruction.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: fraction.subtraction.separating
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Rule from the unit-sum meaning (a copies of 1/b with
+      c removed leaves a - c copies) or direct instruction.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

@@ -1,0 +1,50 @@
+id: multiplication.scaling.explain-less-than-one
+concept: multiplication
+facet: scaling
+level: 4
+type: justification
+name: Explain why multiplying by a fraction less than 1 makes a number smaller
+statement: For a positive number q and a fraction a/b with 0 < a < b, (a/b) x q is a of the b equal parts
+  of q, fewer than all b parts, so (a/b) x q < q.
+assess: Explain why (3/4) x 12 is less than 12, and why the same reasoning works for any positive fraction
+  less than 1.
+sources:
+  ccss:
+  - 5.NF.B.5.b
+  learning_components:
+  - 5b65ffae
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.multiplication.parts-of-partition.fraction
+    relation: definitional
+    points_to: statement
+    why: The same argument is meant to work when the positive number q is a fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: partitioning.equal-shares.whole-as-shares
+    relation: justificatory
+    points_to: statement
+    why: Taking fewer than all b parts gives less than q because q itself is all b of its equal parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: fraction.multiplication.parts-of-partition.whole-number
+  relation: specializes
+  note: The whole-number case is the special case of the fraction case; parts-of-partition.fraction already
+    covers any positive q.
+status: proposed

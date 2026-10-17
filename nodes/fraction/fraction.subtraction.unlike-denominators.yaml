@@ -1,0 +1,118 @@
+id: fraction.subtraction.unlike-denominators
+concept: fraction
+facet: measure
+level: 3
+type: procedure
+name: Subtract fractions with unlike denominators
+statement: For a/b at least c/d, find a/b - c/d by rewriting both fractions over a common multiple n of
+  b and d (b x d always works), then subtracting the numerators over n.
+procedure:
+- Find a common multiple n of the denominators b and d (b x d is always one).
+- Rewrite a/b as (a x (n/b))/n and c/d as (c x (n/d))/n.
+- Subtract the second numerator from the first and write the difference over n.
+assess: Compute 7/9 - 1/6.
+sources:
+  ccss:
+  - 5.NF.A.1
+  learning_components:
+  - 089c550e
+requires:
+- clause: standard
+  all_of:
+  - node: factors-multiples.whole-number
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds a common multiple n of the two denominators b and d.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The procedure explicitly allows n = b x d, which needs no analysis of factors
+        or multiples.'
+    status: disputed
+  - node: fraction.equivalent.multiply-principle.generate
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 rewrites a/b and c/d as (a x (n/b))/n and (c x (n/d))/n, which generates equivalent fractions
+      with denominator n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.like-denominators
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 subtracts the second numerator from the first over the shared denominator n, the like-denominator
+      subtraction procedure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.multi-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 computes the multiplier n/b and n/d, which are whole-number quotients of the common multiple
+      by each denominator.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: With n = b x d the multipliers are d and b with no division.'
+    status: disputed
+- clause: critic-route-1
+  note: Take n = b x d as the common multiple, so the multipliers are d and b and no division or multiples
+    analysis is needed.
+  all_of:
+  - node: fraction.equivalent.multiply-principle.generate
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 rewrites a/b and c/d as (a x (n/b))/n and (c x (n/d))/n, which generates equivalent fractions
+      with denominator n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.like-denominators
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 subtracts the second numerator from the first over the shared denominator n, the like-denominator
+      subtraction procedure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.multi-digit
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Take n = b x d as the common multiple, so the multipliers
+      are d and b and no division or multiples analysis is needed.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

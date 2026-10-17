@@ -1,0 +1,120 @@
+id: fraction.subtraction.like-denominators.model
+concept: fraction
+facet: measure
+level: 2
+type: procedure
+name: Subtract fractions with like denominators using a model
+statement: Using fraction strips or a number line partitioned into lengths of 1/b, find a/b - c/b, with
+  c no greater than a, by removing c lengths of 1/b from a lengths and counting what remains.
+procedure:
+- Show a/b as a lengths of size 1/b.
+- Remove c of those lengths.
+- Count the remaining lengths of size 1/b and write that number over b.
+assess: Use a number line to find 7/6 - 4/6.
+sources:
+  ccss:
+  - 4.NF.B.3.a
+  - 4.NF.B.3.d
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.non-unit.number-line
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 shows a/b as a lengths of size 1/b on a partitioned number line or strip.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows fraction strips or a number line; a lengths of 1/b can be
+        shown on a strip.'
+    status: disputed
+  - node: fraction.non-unit.unit-sum
+    relation: definitional
+    points_to: procedure.1
+    why: The model of a/b as a lengths must allow a greater than b, as in the example 7/6, and write the
+      remaining count over b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.take-away.number-line
+    relation: representational
+    points_to: procedure.2
+    why: Step 2 removes c lengths by jumping back on the line, as in representing a whole-number difference
+      on a number line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Removing c lengths can be done by crossing out parts of a strip; jumping back
+        on a number line is one representation.'
+    status: disputed
+  - node: fraction.subtraction.separating
+    relation: definitional
+    points_to: statement
+    why: Removing c lengths from a lengths of the same whole is the meaning of subtracting fractions that
+      this procedure carries out.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+- clause: critic-route-1
+  note: Fraction strips with c parts crossed out, no number line.
+  all_of:
+  - node: fraction.non-unit.unit-sum
+    relation: definitional
+    points_to: procedure.1
+    why: The model of a/b as a lengths must allow a greater than b, as in the example 7/6, and write the
+      remaining count over b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.separating
+    relation: definitional
+    points_to: statement
+    why: Removing c lengths from a lengths of the same whole is the meaning of subtracting fractions that
+      this procedure carries out.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Fraction strips with c parts crossed out, no number
+      line.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

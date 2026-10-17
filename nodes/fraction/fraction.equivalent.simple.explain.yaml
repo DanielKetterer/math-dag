@@ -1,0 +1,61 @@
+id: fraction.equivalent.simple.explain
+concept: fraction
+facet: part-whole
+level: 2
+type: justification
+name: Explain why simple equivalent fractions are equal
+statement: 'For a specific pair such as 1/2 and 2/4, a model shows the two fractions cover the same amount
+  of the same whole, so they are equal.
+
+  '
+assess: Explain, with a drawing, why 1/2 = 2/4.
+sources:
+  ccss:
+  - 3.NF.A.3.b
+  learning_components:
+  - d20a384e
+  - f577262f
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.equivalent.same-size
+    relation: justificatory
+    points_to: statement
+    why: The explanation concludes that 1/2 and 2/4 are equal because the model shows the same amount
+      of the same whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: representational
+    points_to: statement
+    why: The drawing has to show 2/4 as two shaded parts out of four equal parts of the whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.simple.generate
+    relation: justificatory
+    points_to: statement
+    why: The explanation accounts for what splitting each part in the model produces, the step of generating
+      an equivalent fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The explanation can be given without splitting: draw two equal-size bars, shade
+        1/2 on one and 2/4 on the other, and show they cover the same amount using the same-size criterion.'
+    status: disputed
+status: proposed

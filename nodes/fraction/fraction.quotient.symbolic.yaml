@@ -1,0 +1,78 @@
+id: fraction.quotient.symbolic
+concept: fraction
+facet: quotient
+level: 3
+type: concept
+name: a divided by b equals a/b
+statement: For whole numbers a and b with b greater than 0, a divided by b equals the fraction a/b.
+assess: Write 7 divided by 3 as a fraction. Write 5/8 as a division of two whole numbers.
+sources:
+  ccss:
+  - 5.NF.B.3
+  learning_components:
+  - 35bc1efc
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.quotient.equal-sharing
+    relation: justificatory
+    points_to: statement
+    why: Sharing a wholes among b gives each a/b, which is why a divided by b equals the fraction a/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The equal-sharing result is the sharing route''s grounding of the statement.'
+    status: disputed
+  - node: division.partitive.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement uses a divided by b, meaning the size of each of b equal shares of a.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The meaning of a divided by b can come from sharing or from the unknown-factor
+        view; sharing is only one of the two grounding routes.'
+    status: disputed
+  - node: fraction.as-number
+    relation: definitional
+    points_to: statement
+    why: Equating the quotient of two whole numbers with a fraction presupposes that a fraction is a number.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+- clause: unknown-factor
+  all_of:
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: a divided by b is the number that multiplied by b gives a, the unknown-factor meaning of the
+      quotient.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The unknown-factor meaning grounds a divided by b = a/b by showing b x (a/b)
+        = a; this is one route, the other being sharing.'
+    status: disputed
+  - node: fraction.multiply-whole.rule
+    relation: justificatory
+    points_to: statement
+    why: Checking that b x (a/b) = (b x a)/b = a shows a/b is the unknown factor, which uses n x (a/b)
+      = (n x a)/b.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Checking b x (a/b) = a is part of the unknown-factor route only.'
+    status: disputed
+status: proposed

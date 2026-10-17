@@ -1,0 +1,1239 @@
+{
+ "pass": "P",
+ "batch": "B2",
+ "nodes": {
+  "fraction.compare.common-denominator": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors-multiples.whole-number",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds a common multiple of the two denominators, which uses the idea of multiples of a whole number."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle.generate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 rewrites each fraction over the common denominator by multiplying numerator and denominator by the same whole number."
+      },
+      {
+       "node": "fraction.compare.same-denominator",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 compares the rewritten numerators, which is exactly comparing two fractions that share a denominator."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.compare.common-numerator": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors-multiples.whole-number",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds a common multiple of the two numerators, which uses multiples of whole numbers."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle.generate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 rewrites each fraction with the common numerator by multiplying numerator and denominator by one whole number."
+      },
+      {
+       "node": "fraction.compare.same-numerator",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 compares the rewritten denominators, which is exactly comparing two fractions that share a numerator."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.compare.benchmark": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.compare.reasoning-size",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Choosing 1/2 or 1 as a benchmark makes precise the informal size reasoning of placing a fraction above or below a familiar fraction."
+      },
+      {
+       "node": "fraction.compare.common-denominator",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The test that a/b exceeds 1/2 exactly when 2 x a exceeds b compares a/b with 1/2 over the common denominator 2 x b."
+      },
+      {
+       "node": "fraction.whole-number.as-fraction",
+       "relation": "representational",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The test against the benchmark 1 writes 1 as b/b so that a/b and b/b can be compared by numerators."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.compare.unlike.justify": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.compare.justify",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The unlike-denominator justification extends the general justification of a fraction comparison by a model of the same whole."
+      },
+      {
+       "node": "fraction.compare.same-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The model must show both fractions as parts of one and the same whole or the comparison has no meaning."
+      },
+      {
+       "node": "fraction.equivalent.same-size",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Showing both fractions with parts of a common size means replacing each by an equivalent amount of the same whole."
+      },
+      {
+       "node": "fraction.equivalent.simple.generate",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Building the model with parts of a common size requires subdividing the parts of each fraction to generate equivalent fractions in the model."
+      },
+      {
+       "node": "fraction.compare.same-denominator",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Once both fractions are shown in parts of a common size, the numbers of parts are compared as with a shared denominator."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.non-unit.unit-sum": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A fraction a/b is built from a parts of size 1/b, which is what the sum of a unit fractions counts."
+      },
+      {
+       "node": "fraction.addition.joining",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sum of a copies of 1/b is the joining of equal parts of one whole into a single amount."
+      },
+      {
+       "node": "fraction.non-unit.number-line",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The assessment asks the learner to show the sum of unit fractions as a point on a number line, including past 1."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.addition.joining": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.whole-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Adding fractions as joining extends the meaning of whole-number addition as putting two amounts together."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The amounts being joined are fractions understood as numbers of equal parts of a whole."
+      },
+      {
+       "node": "fraction.compare.same-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires both fractions to refer to the same whole, which is the same-whole condition."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.subtraction.separating": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.whole-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Subtracting fractions as separating extends the meaning of whole-number subtraction as removing part of an amount."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The amounts being separated are fractions understood as numbers of equal parts of a whole."
+      },
+      {
+       "node": "fraction.compare.same-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires both fractions to refer to the same whole, which is the same-whole condition."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.addition.like-denominators.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.non-unit.number-line",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 shows a/b as a lengths of size 1/b on a partitioned number line or strip."
+      },
+      {
+       "node": "addition.add-to.number-line",
+       "relation": "representational",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 places more lengths end to end after the first lengths, as in representing a sum on a number line."
+      },
+      {
+       "node": "fraction.non-unit.unit-sum",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 counts the total lengths of size 1/b and writes that count over b, since a total of k lengths is k/b."
+      },
+      {
+       "node": "fraction.addition.joining",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Joining a lengths and c lengths of the same whole is the meaning of adding fractions that this procedure carries out."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.addition.like-denominators": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.addition.like-denominators.model",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The symbolic rule a/b + c/b = (a + c)/b records the result that the length model of adding like parts produces."
+      },
+      {
+       "node": "addition.whole-number",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds the two numerators as whole numbers, possibly with several digits."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.subtraction.like-denominators.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.non-unit.number-line",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 shows a/b as a lengths of size 1/b on a partitioned number line or strip."
+      },
+      {
+       "node": "fraction.non-unit.unit-sum",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The model of a/b as a lengths must allow a greater than b, as in the example 7/6, and write the remaining count over b."
+      },
+      {
+       "node": "subtraction.take-away.number-line",
+       "relation": "representational",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 removes c lengths by jumping back on the line, as in representing a whole-number difference on a number line."
+      },
+      {
+       "node": "fraction.subtraction.separating",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Removing c lengths from a lengths of the same whole is the meaning of subtracting fractions that this procedure carries out."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.subtraction.like-denominators": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.subtraction.like-denominators.model",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The symbolic rule a/b - c/b = (a - c)/b records the result that the length model of removing like parts produces."
+      },
+      {
+       "node": "subtraction.whole-number",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 subtracts the second numerator from the first as whole numbers, possibly with several digits."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.decompose.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.non-unit.unit-sum",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 shows a/b as a parts of size 1/b, including the case a greater than b where the amount exceeds one whole."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 names each group of k parts as k/b, using the meaning of a fraction as parts of size 1/b."
+      },
+      {
+       "node": "fraction.addition.joining",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each grouping is a sum because the groups of parts, joined back together, make the original amount."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.decompose.equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.decompose.model",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation a/b = c/b + d/b + ... records a grouping of parts that the decomposition model produces."
+      },
+      {
+       "node": "addition.whole-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The condition that the numerators on the right add to a is a whole-number sum."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.decompose.justify": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.decompose.model",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The justification uses a model of a/b as a parts of size 1/b that are split into groups."
+      },
+      {
+       "node": "fraction.decompose.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation being justified is the recorded decomposition a/b = c/b + d/b + ..., read from the model."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.mixed-number.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The fraction part a/b of the mixed number is a parts of size 1/b of one whole."
+      },
+      {
+       "node": "fraction.as-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The mixed number names the single number n + a/b, which treats a/b as a number that can be added to n."
+      },
+      {
+       "node": "fraction.non-unit.number-line",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The assessment asks the learner to mark 2 3/4 on a number line, which locates a non-unit fraction past a whole number."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.mixed-number.to-fraction": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.mixed-number.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rewriting starts from the meaning of n a/b as n + a/b."
+      },
+      {
+       "node": "fraction.whole-number.as-fraction",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes the whole number n as a fraction with denominator b, using that each whole is b/b."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle.generate",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 turns n into (n x b)/b by multiplying numerator and denominator of n/1 by the same whole number b."
+      },
+      {
+       "node": "fraction.addition.like-denominators",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds (n x b)/b and a/b by adding the numerators over the common denominator."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.mixed-number.decompose.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.mixed-number.meaning",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 shows n a/b as n wholes plus a parts of size 1/b, which is the meaning of the mixed number."
+      },
+      {
+       "node": "fraction.whole-number.as-fraction",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 partitions each whole into b parts of size 1/b, using that one whole is b/b."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 counts all n x b + a parts, which needs the product of n wholes and b parts per whole."
+      },
+      {
+       "node": "fraction.decompose.model",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 2 to 4 group the parts, name each group over b and regroup, exactly as in decomposing a fraction with a model."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.mixed-number.decompose.equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.mixed-number.decompose.model",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation n a/b = c/b + d/b + ... records a grouping of parts that the mixed-number model produces."
+      },
+      {
+       "node": "fraction.mixed-number.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The left side of the equation is written in mixed-number notation, which must be read as n + a/b."
+      },
+      {
+       "node": "fraction.decompose.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The right side uses the same notation as a fraction decomposition equation, with numerators summing to the total number of parts."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.mixed-number.decompose.justify": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.mixed-number.decompose.model",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The justification uses a model of n a/b with each whole split into parts of size 1/b."
+      },
+      {
+       "node": "fraction.mixed-number.decompose.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation being justified is the recorded decomposition n a/b = c/b + d/b + ..., read from the model."
+      },
+      {
+       "node": "fraction.decompose.justify",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The argument that the grouped parts put together are the original parts extends the justification used for a fraction decomposition."
+      },
+      {
+       "node": "fraction.mixed-number.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The justification must show the parts make exactly n wholes and a more parts, which is the meaning of the mixed number."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.mixed-number.add": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.whole-number",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 adds the whole-number parts of the two mixed numbers."
+      },
+      {
+       "node": "fraction.addition.like-denominators",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds the fractional parts by adding numerators over the common denominator b."
+      },
+      {
+       "node": "fraction.compare.same-denominator",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 decides whether the fractional sum is b/b or more by comparing it with b/b over the same denominator."
+      },
+      {
+       "node": "fraction.whole-number.as-fraction",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 renames b/b as 1 so that one whole can move to the whole-number sum."
+      },
+      {
+       "node": "fraction.decompose.equation",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 splits a fractional sum into b/b plus a remaining fraction, which is a decomposition equation."
+      },
+      {
+       "node": "fraction.mixed-number.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 writes a whole number and a fraction as one mixed number, using n a/b as n + a/b."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.mixed-number.subtract": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.compare.same-denominator",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 checks whether the first fractional part is smaller than the second by comparing fractions with the same denominator."
+      },
+      {
+       "node": "fraction.whole-number.as-fraction",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 renames one whole as b/b so that it can be joined to the first fractional part."
+      },
+      {
+       "node": "fraction.addition.like-denominators",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 adds b/b to a/b to get (a + b)/b when renaming p a/b as (p - 1) (a + b)/b."
+      },
+      {
+       "node": "fraction.subtraction.like-denominators",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 subtracts the fractional numerators over the common denominator b."
+      },
+      {
+       "node": "subtraction.whole-number",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 subtracts the whole-number part of the second number from that of the first."
+      },
+      {
+       "node": "fraction.mixed-number.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 writes the whole-number difference and the fraction as one mixed number, using n a/b as n + a/b."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.application.add-like-denominators": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.addition.joining",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story joins two fractional amounts of one whole, which is the situation that addition of fractions describes."
+      },
+      {
+       "node": "fraction.addition.like-denominators.model",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner represents the story with a number line or strip model and finds the total by counting lengths of 1/b."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.application.subtract-like-denominators": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.subtraction.separating",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story separates one fractional amount from another of the same whole, which is the situation that subtraction of fractions describes."
+      },
+      {
+       "node": "fraction.subtraction.like-denominators.model",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner represents the story with a number line or strip model and finds the difference by counting remaining lengths of 1/b."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.multiple-of-unit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.non-unit.unit-sum",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing a/b as a x (1/b) restates the sum of a copies of 1/b as a product."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The product a x (1/b) means a equal groups, each of size 1/b."
+      },
+      {
+       "node": "fraction.as-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The product multiplies a whole number by the number 1/b, so the unit fraction must be a number."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.multiply-whole.unit-fraction": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.unit.number-line",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 shows one length of size 1/b on a number line partitioned into b equal lengths."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 lays n equal copies end to end, which is n equal groups of 1/b."
+      },
+      {
+       "node": "fraction.multiple-of-unit",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 writes the count of n copies of 1/b as n/b, using that n/b equals n x (1/b)."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.multiply-whole.as-unit-multiple": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.multiple-of-unit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement rewrites a/b as a copies of 1/b inside each of the n groups."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The product n x (a/b) is read as n equal groups, each holding a/b."
+      },
+      {
+       "node": "multiplication.properties",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Regrouping n groups of a copies into (n x a) copies of 1/b uses the associative property of multiplication."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.multiply-whole.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 draws n equal groups, each showing a/b."
+      },
+      {
+       "node": "fraction.non-unit.unit-sum",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 shows each group a/b as a copies of 1/b."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 counts all the copies of 1/b in the n groups, which is the product n x a."
+      },
+      {
+       "node": "fraction.multiply-whole.unit-fraction",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 writes the total count of copies of 1/b as that count over b, as in multiplying a unit fraction by a whole number."
+      },
+      {
+       "node": "fraction.multiply-whole.as-unit-multiple",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The method rewrites n x (a/b) as (n x a) x (1/b) before counting the copies."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.multiply-whole.rule": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.multiply-whole.model",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule n x (a/b) = (n x a)/b generalizes the result of counting copies of 1/b in the model for any whole number n and fraction a/b."
+      },
+      {
+       "node": "fraction.multiply-whole.as-unit-multiple",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule is explained by rewriting n x (a/b) as (n x a) x (1/b) and reading that as (n x a)/b."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.multiply-whole.symbolic": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.multiply-whole.rule",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure of multiplying n by the numerator and keeping the denominator is the rule n x (a/b) = (n x a)/b."
+      },
+      {
+       "node": "multiplication.multi-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 multiplies the whole number n by the numerator a, which may have several digits."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.application.multiply-whole": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.situation-to-expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story gives a number of equal groups and must be turned into a multiplication expression."
+      },
+      {
+       "node": "fraction.multiply-whole.model",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner finds the total as the product of a whole number and a fraction using a model of copies of 1/b."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.application.multiply-whole.equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.situation-to-expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing n x (a/b) = t from a story is writing a multiplication expression for an equal-groups situation."
+      },
+      {
+       "node": "expressions.variables",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The unknown total t is a variable in the equation."
+      },
+      {
+       "node": "fraction.as-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The group size a/b in the expression is a fraction used as a number in a product."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.application.multiply-whole.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The picture shows n equal groups, which is the equal-groups meaning of a product."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each group is drawn as a parts of size 1/b of a whole."
+      },
+      {
+       "node": "fraction.multiply-whole.as-unit-multiple",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The model of n groups, each of a parts of size 1/b, is the representation of n x (a/b) as groups of copies of 1/b."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.tenths-to-hundredths": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.equivalent.multiply-principle.generate",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 2 multiply numerator and denominator of a/10 by the same whole number 10 to get an equivalent fraction."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.addition.tenths-hundredths": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.tenths-to-hundredths",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 rewrites the tenths fraction a/10 as (10 x a)/100."
+      },
+      {
+       "node": "fraction.addition.like-denominators",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds the numerators of the two fractions over the common denominator 100."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.tenths.notation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.base-ten",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The first place after the point is a new place-value position worth one tenth, extending base-ten place value."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The number of tenths in a/10 is a parts of size 1/10 of one whole."
+      },
+      {
+       "node": "fraction.mixed-number.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing 14/10 as 1.4 splits the amount into whole ones and remaining tenths, as in a mixed number."
+      },
+      {
+       "node": "fraction.decompose.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Seeing 14/10 as 10/10 + 4/10 is a decomposition of a fraction into like-denominator parts."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.hundredths.notation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "decimal.tenths.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The first place after the point and the whole ones before it are written as in tenths notation before a second place is added."
+      },
+      {
+       "node": "place-value.base-ten",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The second place after the point is a further place-value position worth one hundredth."
+      },
+      {
+       "node": "fraction.addition.tenths-hundredths",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Reading 62/100 as 6 tenths plus 2 hundredths rests on adding a tenths fraction to a hundredths fraction."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.number-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.unit.number-line",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 partitions the unit interval into 10 or 100 equal lengths, locating the unit fractions 1/10 and 1/100."
+      },
+      {
+       "node": "fraction.equivalent.same-point",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Partitioning each tenth into 10 equal lengths relies on 1/10 and 10/100 being the same point on the line."
+      },
+      {
+       "node": "fraction.non-unit.number-line",
+       "relation": "representational",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 counts a number of tenths or hundredths from 0, which locates a non-unit fraction."
+      },
+      {
+       "node": "decimal.tenths.notation",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 labels the endpoint with a decimal written in tenths notation."
+      },
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 labels the endpoint with a decimal written in hundredths notation."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.compare": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes each decimal with two places after the point, reading them as hundredths."
+      },
+      {
+       "node": "fraction.tenths-to-hundredths",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Appending a 0 to a decimal in tenths rewrites a number of tenths as hundredths, as in 5/10 = 50/100."
+      },
+      {
+       "node": "place-value.base-ten",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 reads a decimal such as 1.20 as a total of 120 hundredths using place value."
+      },
+      {
+       "node": "comparing.whole-numbers.symbols",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 compares the two whole numbers of hundredths."
+      },
+      {
+       "node": "fraction.compare.same-denominator",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "With both decimals as counts of hundredths, the one with more hundredths is greater, as with fractions sharing a denominator."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.compare.justify": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The model must show the decimals read as numbers of tenths and hundredths of one whole."
+      },
+      {
+       "node": "fraction.compare.same-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The grid or number line must show both decimals on the same whole to compare them."
+      },
+      {
+       "node": "fraction.compare.justify",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Justifying a decimal comparison with a model of the same whole parallels justifying a fraction comparison."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A hundredths grid shows a decimal as a number of the 100 equal parts of one whole."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

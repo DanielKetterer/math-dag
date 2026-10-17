@@ -1,0 +1,71 @@
+id: fraction.mixed-number.meaning
+concept: fraction
+facet: measure
+level: 2
+type: concept
+name: A mixed number as a whole number plus a fraction
+statement: The mixed number n a/b, with a less than b, names the number n + a/b.
+assess: Mark 2 3/4 on a number line and write it as a whole number plus a fraction.
+sources:
+  ccss:
+  - 4.NF.B.3.b
+  - 4.NF.B.3.c
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: The fraction part a/b of the mixed number is a parts of size 1/b of one whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.as-number
+    relation: definitional
+    points_to: statement
+    why: The mixed number names the single number n + a/b, which treats a/b as a number that can be added
+      to n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.number-line
+    relation: representational
+    points_to: assess
+    why: The assessment asks the learner to mark 2 3/4 on a number line, which locates a non-unit fraction
+      past a whole number.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement concerns the meaning of n a/b; placing 2 3/4 on a number line appears
+        only in the assessment.'
+    status: proposed
+  - node: fraction.addition.joining
+    relation: definitional
+    points_to: statement
+    why: The mixed number names n + a/b, which joins n wholes and a/b of the same whole.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

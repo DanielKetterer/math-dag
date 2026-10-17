@@ -1,0 +1,193 @@
+id: fraction.mixed-number.add
+concept: fraction
+facet: measure
+level: 3
+type: procedure
+name: Add mixed numbers with like denominators
+statement: Add two mixed numbers with the same denominator by adding the whole-number parts and the fractional
+  parts separately, regrouping b/b as 1 when the fractional parts sum to 1 or more.
+procedure:
+- Add the whole-number parts.
+- Add the fractional parts by adding numerators over the common denominator b.
+- If the fractional sum is b/b or more, rewrite it as 1 plus the remaining fraction and add the 1 to the
+  whole-number sum.
+- Write the whole-number sum and the remaining fraction as a mixed number.
+assess: Compute 2 3/4 + 1 3/4.
+sources:
+  ccss:
+  - 4.NF.B.3.c
+  learning_components:
+  - 35f78f08
+  - 32a33b2c
+requires:
+- clause: standard
+  all_of:
+  - node: addition.whole-number
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 adds the whole-number parts of the two mixed numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.like-denominators
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds the fractional parts by adding numerators over the common denominator b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.compare.same-denominator
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 decides whether the fractional sum is b/b or more by comparing it with b/b over the same
+      denominator.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.whole-number.as-fraction
+    relation: representational
+    points_to: procedure.3
+    why: Step 3 renames b/b as 1 so that one whole can move to the whole-number sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.decompose.equation
+    relation: representational
+    points_to: procedure.3
+    why: Step 3 splits a fractional sum into b/b plus a remaining fraction, which is a decomposition equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.meaning
+    relation: definitional
+    points_to: procedure.4
+    why: Step 4 writes a whole number and a fraction as one mixed number, using n a/b as n + a/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+- clause: critic-route-1
+  note: Convert both mixed numbers to fractions, add with the like-denominator rule, convert back. Changes
+    the method stated, so possibly a different node.
+  all_of:
+  - node: addition.whole-number
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 adds the whole-number parts of the two mixed numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.like-denominators
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds the fractional parts by adding numerators over the common denominator b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.compare.same-denominator
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 decides whether the fractional sum is b/b or more by comparing it with b/b over the same
+      denominator.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.whole-number.as-fraction
+    relation: representational
+    points_to: procedure.3
+    why: Step 3 renames b/b as 1 so that one whole can move to the whole-number sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.decompose.equation
+    relation: representational
+    points_to: procedure.3
+    why: Step 3 splits a fractional sum into b/b plus a remaining fraction, which is a decomposition equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.meaning
+    relation: definitional
+    points_to: procedure.4
+    why: Step 4 writes a whole number and a fraction as one mixed number, using n a/b as n + a/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.to-fraction
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Convert both mixed numbers to fractions, add with
+      the like-denominator rule, convert back. Changes the method stated, so possibly a different node.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

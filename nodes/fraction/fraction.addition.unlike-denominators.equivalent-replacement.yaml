@@ -1,0 +1,200 @@
+id: fraction.addition.unlike-denominators.equivalent-replacement
+concept: fraction
+facet: measure
+level: 3
+type: concept
+name: Replacing fractions by equivalents leaves a sum or difference unchanged
+statement: Replacing each fraction in a sum or difference by an equivalent fraction does not change the
+  value of the sum or difference, so a/b + c/d can be rewritten as a sum of two fractions with a common
+  denominator.
+assess: 'True or false: 2/3 + 5/4 = 8/12 + 15/12. True or false: 2/3 + 5/4 = 2/12 + 5/12. Say which rule
+  decides it.'
+sources:
+  ccss:
+  - 5.NF.A.1
+  learning_components:
+  - d022d8d2
+  - 089c550e
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.equivalent.multiply-principle
+    relation: definitional
+    points_to: statement
+    why: The statement rewrites a/b and c/d over a common denominator, which is done by the multiplication
+      principle for equivalent fractions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.as-number
+    relation: justificatory
+    points_to: statement
+    why: The sum stays the same because each fraction is a number, and replacing a number by an equal
+      number cannot change a sum or difference.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The claim can be grounded without treating fractions as numbers: a replacement
+        of the same amount of the same whole leaves the total of the amounts unchanged.'
+    status: disputed
+  - node: fraction.addition.joining
+    relation: definitional
+    points_to: statement
+    why: The statement is about the value of a sum, which means the total from joining parts of the same
+      whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.separating
+    relation: definitional
+    points_to: statement
+    why: The statement also covers differences, which means the amount left after separating parts of
+      the same whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.multiply-principle.recognize
+    relation: procedural
+    points_to: assess
+    why: Deciding that 8/12 and 15/12 are equivalent to 2/3 and 5/4, and that 2/12 is not equivalent to
+      2/3, requires recognizing equivalent fractions.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Recognizing which specific rewrites are equivalent is demanded by the true/false
+        items, but the concept (replacement preserves the value) does not require a recognition skill.'
+    status: proposed
+  - node: fraction.equivalent.same-size
+    relation: definitional
+    points_to: statement
+    why: Each replaced fraction must be the same amount of the same whole, which is why the total of the
+      amounts does not change.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Equal amount of the same whole is one way to ground ''equivalent''; it is not
+        the only one.'
+    status: disputed
+- clause: critic-route-1
+  note: 'Two grounding routes for the same claim: (a) part-whole, using same-size equivalence plus joining/separating;
+    (b) number, using fraction.as-number plus equivalence as the same number. Either supports the statement;
+    the multiplication principle is needed in both for the common-denominator clause.'
+  all_of:
+  - node: fraction.equivalent.multiply-principle
+    relation: definitional
+    points_to: statement
+    why: The statement rewrites a/b and c/d over a common denominator, which is done by the multiplication
+      principle for equivalent fractions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.joining
+    relation: definitional
+    points_to: statement
+    why: The statement is about the value of a sum, which means the total from joining parts of the same
+      whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.separating
+    relation: definitional
+    points_to: statement
+    why: The statement also covers differences, which means the amount left after separating parts of
+      the same whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.multiply-principle.recognize
+    relation: procedural
+    points_to: assess
+    why: Deciding that 8/12 and 15/12 are equivalent to 2/3 and 5/4, and that 2/12 is not equivalent to
+      2/3, requires recognizing equivalent fractions.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Recognizing which specific rewrites are equivalent is demanded by the true/false
+        items, but the concept (replacement preserves the value) does not require a recognition skill.'
+    status: proposed
+  - node: fraction.equivalent.same-size
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Two grounding routes for the same claim: (a) part-whole,
+      using same-size equivalence plus joining/separating; (b) number, using fraction.as-number plus equivalence
+      as the same number. Either supports the statement; the multiplication principle is needed in both
+      for the common-denominator clause.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: fraction.as-number
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Two grounding routes for the same claim: (a) part-whole,
+      using same-size equivalence plus joining/separating; (b) number, using fraction.as-number plus equivalence
+      as the same number. Either supports the statement; the multiplication principle is needed in both
+      for the common-denominator clause.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: fraction.equivalent.same-point
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Two grounding routes for the same claim: (a) part-whole,
+      using same-size equivalence plus joining/separating; (b) number, using fraction.as-number plus equivalence
+      as the same number. Either supports the statement; the multiplication principle is needed in both
+      for the common-denominator clause.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

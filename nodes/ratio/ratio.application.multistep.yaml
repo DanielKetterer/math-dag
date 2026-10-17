@@ -1,0 +1,61 @@
+id: ratio.application.multistep
+concept: ratio
+facet: composed-unit
+level: 3
+type: application
+name: Solve multi-step ratio problems
+statement: A problem needs two or more steps of ratio reasoning, such as finding parts from a part-to-part
+  ratio and a total, then comparing or combining them.
+assess: The ratio of boys to girls in a class of 32 is 3:5. How many more girls than boys are there?
+sources:
+  ccss:
+  - 7.RP.A.3
+  learning_components:
+  - da9fc2c7
+requires:
+- clause: standard
+  all_of:
+  - node: ratio.application.missing-value
+    relation: definitional
+    points_to: statement
+    why: Each stage of the problem, such as finding a part from a ratio and a total, is a missing-value
+      ratio problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.whole-number
+    relation: definitional
+    points_to: assess
+    why: A part-to-part ratio with a total requires adding the parts, such as 3 + 5, to find how many
+      units make the whole.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Adding 3 + 5 to get the total number of units is an arithmetic step of the test
+        problem, not of multi-step ratio reasoning in general.'
+    status: proposed
+  - node: subtraction.whole-number
+    relation: procedural
+    points_to: assess
+    why: The test problem asks how many more girls than boys, which requires subtracting the two part
+      amounts.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Subtracting 12 from 20 to compare the two parts is demanded by the test problem.'
+    status: proposed
+status: proposed

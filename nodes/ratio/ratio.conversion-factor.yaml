@@ -1,0 +1,84 @@
+id: ratio.conversion-factor
+concept: ratio
+facet: unit-rate
+level: 3
+type: concept
+name: A conversion factor is a ratio of equal measurements
+statement: 'A conversion factor is a ratio of two equal measurements in different units, such as 12 in
+  : 1 ft, so multiplying a measurement by (12 in)/(1 ft) changes its unit without changing its size.'
+assess: To change 5 ft to inches, should you multiply by (12 in)/(1 ft) or by (1 ft)/(12 in)? Why does
+  the length stay the same?
+sources:
+  ccss:
+  - 6.RP.A.3.d
+  learning_components:
+  - 534e2e4c
+requires:
+- clause: standard
+  all_of:
+  - node: ratio.composed-unit
+    relation: definitional
+    points_to: statement
+    why: 'A conversion factor such as 12 in : 1 ft is a for-every relationship between two measurement
+      units for the same length.'
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.unit-conversion
+    relation: definitional
+    points_to: statement
+    why: The two measurements in a conversion factor are equal amounts in different units, the equivalence
+      12 in = 1 ft used in unit conversion.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one
+    relation: justificatory
+    points_to: statement
+    why: The length stays the same because the factor (12 in)/(1 ft) equals 1, and multiplying by 1 leaves
+      a number unchanged.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Multiplying by a factor equal to 1 is the usual reason the size is unchanged;
+        substituting equal measurements is the other.'
+    status: disputed
+  - node: fraction.whole-number.as-fraction
+    relation: justificatory
+    points_to: statement
+    why: The factor is a fraction with equal amounts on top and bottom, so it is a fraction form of the
+      whole number 1.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Viewing the factor as a fraction form of 1 is one explanation of why size is
+        unchanged; the other substitutes equal measurements.'
+    status: disputed
+  - node: ratio.unit-rate
+    relation: representational
+    points_to: statement
+    why: 'Writing the ratio 12 in : 1 ft as the fraction (12 in)/(1 ft) uses the a/b form of a ratio.'
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

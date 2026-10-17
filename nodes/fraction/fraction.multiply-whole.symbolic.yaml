@@ -1,0 +1,60 @@
+id: fraction.multiply-whole.symbolic
+concept: fraction
+facet: measure
+level: 3
+type: procedure
+name: Multiply a fraction by a whole number symbolically
+statement: Compute n x (a/b) by multiplying the whole number by the numerator and keeping the denominator.
+procedure:
+- Multiply the whole number n by the numerator a.
+- Write the product over the denominator b.
+assess: Compute 7 x (3/8).
+sources:
+  ccss:
+  - 4.NF.B.4
+  - 4.NF.B.4.b
+  learning_components:
+  - b676d1b5
+  - 801b8bb6
+  - 3caedc60
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.multiply-whole.rule
+    relation: definitional
+    points_to: statement
+    why: The procedure of multiplying n by the numerator and keeping the denominator is the rule n x (a/b)
+      = (n x a)/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.multi-digit
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 multiplies the whole number n by the numerator a, which may have several digits.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: If the node''s scope includes whole numbers and numerators beyond the facts range,
+        multi-digit multiplication is required; the test problem 7 x 3 uses only a fact.'
+    status: disputed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 multiplies the whole number by the numerator, a single-digit product in the test problem.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

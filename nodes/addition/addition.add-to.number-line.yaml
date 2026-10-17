@@ -1,0 +1,62 @@
+id: addition.add-to.number-line
+concept: addition
+facet: add-to
+level: 2
+type: representation
+name: Represent a whole-number sum on a number line
+statement: The sum a + b is shown on a number line by placing a length of b units end to end after the
+  length from 0 to a; the endpoint is a + b.
+procedure:
+- Mark the length from 0 to a.
+- From a, mark a further length of b units to the right, in one jump or in smaller jumps that total b.
+- Read the label at the endpoint; it is a + b.
+assess: Show 38 + 25 on a number line and find the sum.
+sources:
+  ccss:
+  - 2.MD.B.6
+  learning_components:
+  - 5ca2749c
+  - 59146f3f
+requires:
+- clause: standard
+  all_of:
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 marks the length from 0 to a, which is the whole number a shown as a length on the line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.no-gaps-overlaps
+    relation: definitional
+    points_to: statement
+    why: Placing the length b end to end after the length a relies on lengths joining with no gaps and
+      no overlaps.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.whole-number
+    relation: definitional
+    points_to: statement
+    why: The model must represent the meaning of a + b as the total from joining a and b, and the endpoint
+      is read as the sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

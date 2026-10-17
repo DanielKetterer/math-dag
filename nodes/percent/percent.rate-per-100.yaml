@@ -1,0 +1,41 @@
+id: percent.rate-per-100
+concept: percent
+facet: rate-per-100
+level: 2
+type: concept
+name: Percent as a rate per 100
+statement: p percent of a quantity means p parts for every 100 equal parts of that quantity.
+assess: On a 10 by 10 grid, shade 35% of the grid. What does 35% mean in terms of the 100 squares?
+sources:
+  ccss:
+  - 6.RP.A.3.c
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: ratio.composed-unit
+    relation: definitional
+    points_to: statement
+    why: Percent means p for every 100, a for-every relationship with the second quantity fixed at 100
+      equal parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: p parts out of 100 equal parts of a quantity is p parts of size 1/100 of that quantity.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

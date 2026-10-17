@@ -1,0 +1,72 @@
+id: fraction.multiplication.parts-of-partition.fraction
+concept: fraction
+facet: operator
+level: 2
+type: concept
+name: (a/b) x (c/d) as a parts of c/d split into b equal parts
+statement: For a fraction c/d, (a/b) x (c/d) is the amount formed by a parts when c/d is partitioned into
+  b equal parts.
+assess: Use a fraction model to show (2/3) x (4/5) as parts of 4/5 split into 3 equal parts. What is the
+  product?
+sources:
+  ccss:
+  - 5.NF.B.4.a
+  learning_components:
+  - 027af5d2
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: The quantity c/d being partitioned is itself c parts of size 1/d of a whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: partitioning.equal-area.any-shape
+    relation: representational
+    points_to: statement
+    why: Partitioning the amount c/d into b equal parts means splitting a shaded region of a model into
+      equal-area parts.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Equal-area partition of an arbitrary shape is only needed if the model is an
+        irregular area; the quantity can be modeled as a rectangular strip or number-line segment partitioned
+        into equal parts.'
+    status: disputed
+  - node: fraction.multiply-whole.model
+    relation: procedural
+    points_to: assess
+    why: Taking 2 parts of size 4/15 to read the product 8/15 is a whole number times a fraction.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Reading 8/15 from two parts of size 4/15 is a whole-number-times-fraction computation
+        demanded by the test problem, not by the meaning.'
+    status: proposed
+  - node: division.partitive.meaning
+    relation: definitional
+    points_to: statement
+    why: Partitioning c/d into b equal parts is the sharing meaning of division; as proposed it is only
+      reachable through scaffold or related edges.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: fraction.multiplication.parts-of-partition.whole-number
+  relation: specializes
+  note: The whole-number version is the special case d = 1 of the target (q = q/1); same operator meaning,
+    narrower quantity. The target is self-contained and does not need it.
+status: proposed

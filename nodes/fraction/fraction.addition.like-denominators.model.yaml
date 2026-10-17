@@ -1,0 +1,119 @@
+id: fraction.addition.like-denominators.model
+concept: fraction
+facet: measure
+level: 2
+type: procedure
+name: Add fractions with like denominators using a model
+statement: Using fraction strips or a number line partitioned into lengths of 1/b, find a/b + c/b by joining
+  a lengths and c lengths of 1/b and counting the total.
+procedure:
+- Show a/b as a lengths of size 1/b.
+- Place c more lengths of size 1/b end to end after them.
+- Count the total number of lengths of size 1/b and write that number over b.
+assess: Use a number line to find 3/4 + 2/4.
+sources:
+  ccss:
+  - 4.NF.B.3.a
+  - 4.NF.B.3.d
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.non-unit.number-line
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 shows a/b as a lengths of size 1/b on a partitioned number line or strip.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows fraction strips or a number line; showing a lengths of 1/b
+        on a strip does not need the number line.'
+    status: disputed
+  - node: addition.add-to.number-line
+    relation: representational
+    points_to: procedure.2
+    why: Step 2 places more lengths end to end after the first lengths, as in representing a sum on a
+      number line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows fraction strips or a number line. Strips joined end to end
+        need no number-line addition.'
+    status: disputed
+  - node: fraction.non-unit.unit-sum
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 counts the total lengths of size 1/b and writes that count over b, since a total of k
+      lengths is k/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.joining
+    relation: definitional
+    points_to: statement
+    why: Joining a lengths and c lengths of the same whole is the meaning of adding fractions that this
+      procedure carries out.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+- clause: critic-route-1
+  note: Fraction strips laid end to end, no number line.
+  all_of:
+  - node: fraction.non-unit.unit-sum
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 counts the total lengths of size 1/b and writes that count over b, since a total of k
+      lengths is k/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.joining
+    relation: definitional
+    points_to: statement
+    why: Joining a lengths and c lengths of the same whole is the meaning of adding fractions that this
+      procedure carries out.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Fraction strips laid end to end, no number line.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

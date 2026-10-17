@@ -1,0 +1,61 @@
+id: fraction.application.subtraction-same-whole
+concept: fraction
+facet: part-whole
+level: 3
+type: application
+name: Solve word problems subtracting fractions of the same whole
+statement: A story takes away or compares two fractional amounts of the same whole, possibly with unlike
+  denominators; the learner represents it with an equation or model and finds the difference.
+assess: A jug held 7/8 liter of juice. Leo poured out 1/3 liter. How much juice is left?
+sources:
+  ccss:
+  - 5.NF.A.2
+  learning_components:
+  - ed662f1f
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.subtraction.unlike-denominators
+    relation: definitional
+    points_to: statement
+    why: The statement says the amounts may have unlike denominators, and the difference is found by subtracting
+      them with this procedure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.separating
+    relation: definitional
+    points_to: statement
+    why: The story takes away or compares two fractional amounts of the same whole, which is the separating
+      meaning of subtraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.comparison
+    relation: definitional
+    points_to: statement
+    why: The statement covers stories that 'compare' two amounts (how much more), the comparison meaning
+      of subtraction; the only proposed meaning is separating.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: fraction.compare.same-whole
+  relation: same_idea_different_form
+  note: The same-whole condition is built into the separating meaning and is supplied by the story; the
+    comparison form of the idea is not a separate requirement for subtraction.
+status: proposed

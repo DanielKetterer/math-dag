@@ -1,0 +1,86 @@
+id: fraction.application.whole-number-division-fraction-answer
+concept: fraction
+facet: quotient
+level: 3
+type: application
+name: Solve division word problems with fraction or mixed-number answers
+statement: A story divides a whole number of units equally into a whole number of shares where the answer
+  is not a whole number; the learner writes the quotient as a fraction or mixed number.
+assess: 9 people share a 50-pound sack of rice equally by weight. How many pounds does each person get,
+  and between what two whole numbers does the answer lie?
+sources:
+  ccss:
+  - 5.NF.B.3
+  learning_components:
+  - 46b4aaee
+  - '26645597'
+requires:
+- clause: standard
+  all_of:
+  - node: division.partitive.situation-to-expression
+    relation: representational
+    points_to: statement
+    why: The learner first models the equal-sharing story and writes the division expression such as 50
+      divided by 9.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.quotient.symbolic
+    relation: definitional
+    points_to: statement
+    why: Writing the non-whole quotient as a fraction uses a divided by b equals a/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement allows a mixed-number answer, which is a whole number plus a fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows ''fraction or mixed number''; a learner who writes the quotient
+        as the fraction 50/9 meets it without the mixed-number meaning.'
+    status: disputed
+  - node: fraction.between-whole-numbers
+    relation: procedural
+    points_to: assess
+    why: The test question asks between what two whole numbers the answer lies.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The ''between what two whole numbers'' question is posed by the test problem;
+        the statement only asks for the quotient as a fraction or mixed number.'
+    status: proposed
+  - node: division.multi-digit
+    relation: definitional
+    points_to: statement
+    why: Writing 50/9 as a mixed number needs division with a remainder; the only proposed edge to it
+      is via the between-whole-numbers node, which is task-only here.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,73 @@
+id: ratio.application.unit-rate
+concept: ratio
+facet: unit-rate
+level: 3
+type: application
+name: Solve unit rate problems (unit pricing, constant speed)
+statement: A problem gives a rate as a pair of amounts (cost and items, distance and time, work and time);
+  the learner finds the unit rate and uses it to find another amount at the same rate.
+assess: It took 7 hours to mow 4 lawns. At that rate, how many lawns could be mowed in 35 hours, and at
+  what rate were lawns mowed?
+sources:
+  ccss:
+  - 6.RP.A.3.b
+  learning_components:
+  - 3c9af449
+  - 37ee8b36
+  - 29e60e03
+requires:
+- clause: standard
+  all_of:
+  - node: ratio.unit-rate.find
+    relation: procedural
+    points_to: statement
+    why: The learner finds the unit rate from the pair of amounts, such as lawns per hour or cost per
+      item, before using it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.operations
+    relation: procedural
+    points_to: statement
+    why: Using the unit rate to find another amount at the same rate multiplies or divides decimal quantities,
+      as in unit pricing.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Decimal unit prices are a route to the rate; the test problem (4/7 lawn per hour,
+        35 hours) is done in fractions.'
+    status: disputed
+  - node: ratio.unit-rate
+    relation: definitional
+    points_to: statement
+    why: Using the unit rate to find another amount relies on its meaning as the amount for 1 unit of
+      the other quantity.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.symbolic
+    relation: procedural
+    points_to: statement
+    why: Finding another amount at the same rate multiplies the unit rate, often a fraction like 4/7,
+      by the new quantity.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Multiplying a fractional rate by a quantity is one route; the other uses a decimal
+        rate.'
+    status: disputed
+status: proposed

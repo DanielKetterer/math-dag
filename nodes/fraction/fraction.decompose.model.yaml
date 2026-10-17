@@ -1,0 +1,65 @@
+id: fraction.decompose.model
+concept: fraction
+facet: measure
+level: 2
+type: procedure
+name: Decompose a fraction into a sum of same-denominator fractions with a model
+statement: Using a model of a/b as a parts of size 1/b, including when a is greater than b, split the
+  a parts into groups in more than one way; each grouping is a sum of fractions with denominator b.
+procedure:
+- Show a/b on a model as a parts of size 1/b.
+- Separate the a parts into two or more groups.
+- Name each group as (number of parts in the group)/b.
+- Regroup the parts differently to get another decomposition.
+assess: Shade 7/5 on fraction strips of fifths, then group the shaded fifths to show two different ways
+  to break 7/5 into a sum of fifths.
+sources:
+  ccss:
+  - 4.NF.B.3.b
+  learning_components:
+  - 144856f4
+  - 78c91fb0
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.non-unit.unit-sum
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 shows a/b as a parts of size 1/b, including the case a greater than b where the amount
+      exceeds one whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 names each group of k parts as k/b, using the meaning of a fraction as parts of size 1/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.joining
+    relation: definitional
+    points_to: statement
+    why: Each grouping is a sum because the groups of parts, joined back together, make the original amount.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

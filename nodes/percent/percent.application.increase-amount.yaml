@@ -1,0 +1,50 @@
+id: percent.application.increase-amount
+concept: percent
+facet: rate-per-100
+level: 3
+type: application
+name: Find a total after adding a percent of a base (markup, tax, tip)
+statement: A problem adds one or more percents of a base amount to it, such as a markup, sales tax, or
+  tip; the learner finds each percent of the base and the resulting total.
+assess: A meal costs $40. Sales tax is 6% and the tip is 18%, both of the $40. What is the total?
+sources:
+  ccss:
+  - 7.RP.A.3
+  learning_components:
+  - 3b368729
+  - 3334f873
+  - 6cd0042b
+  - 82a776bd
+requires:
+- clause: standard
+  all_of:
+  - node: percent.of-quantity
+    relation: procedural
+    points_to: statement
+    why: The learner finds each percent of the base amount, such as 6% of $40 and 18% of $40, before adding.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.operations
+    relation: procedural
+    points_to: assess
+    why: Amounts such as $2.40 and $7.20 are decimals that are found and added to the base, as in 40 +
+      2.4 + 7.2.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test problem''s amounts (2.40, 7.20) need decimal arithmetic; the percent
+        idea does not.'
+    status: proposed
+status: proposed

@@ -1,0 +1,53 @@
+id: fraction.multiply-whole.as-unit-multiple
+concept: fraction
+facet: measure
+level: 2
+type: representation
+name: A multiple of a/b as a multiple of 1/b
+statement: n x (a/b) is n groups of a copies of 1/b, so it can be rewritten as (n x a) x (1/b).
+assess: Use a fraction model to rewrite 3 x (2/5) as a whole number times 1/5.
+sources:
+  ccss:
+  - 4.NF.B.4.b
+  learning_components:
+  - 14047f66
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.multiple-of-unit
+    relation: definitional
+    points_to: statement
+    why: The statement rewrites a/b as a copies of 1/b inside each of the n groups.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: The product n x (a/b) is read as n equal groups, each holding a/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: definitional
+    points_to: statement
+    why: The statement and assessment name the whole-number product n x a (3 x 2 = 6) as the coefficient
+      of 1/b.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

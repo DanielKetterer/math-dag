@@ -1,0 +1,75 @@
+id: decimal.number-line
+concept: decimal
+facet: measure
+level: 2
+type: representation
+name: Locate tenths and hundredths decimals on the number line
+statement: A decimal to tenths or hundredths is the point reached by partitioning each unit interval into
+  10 or 100 equal lengths and counting that many tenths or hundredths from 0.
+procedure:
+- Partition the interval from 0 to 1 into 10 equal lengths (tenths), and each tenth into 10 equal lengths
+  (hundredths) if needed.
+- Count the decimal's number of tenths or hundredths from 0.
+- Label the endpoint with the decimal.
+assess: Locate 0.62 on a number line marked 0, 0.1, 0.2, ..., 1.
+sources:
+  ccss:
+  - 4.NF.C.6
+  learning_components:
+  - dc34402c
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.unit.number-line
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 partitions the unit interval into 10 or 100 equal lengths, locating the unit fractions
+      1/10 and 1/100.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.same-point
+    relation: definitional
+    points_to: procedure.1
+    why: Partitioning each tenth into 10 equal lengths relies on 1/10 and 10/100 being the same point
+      on the line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.number-line
+    relation: representational
+    points_to: procedure.2
+    why: Step 2 counts a number of tenths or hundredths from 0, which locates a non-unit fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: procedure.3
+    why: Step 3 labels the endpoint with a decimal written in hundredths notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

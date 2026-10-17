@@ -1,0 +1,64 @@
+id: fraction.non-unit.number-line
+concept: fraction
+facet: measure
+level: 2
+type: representation
+name: Locate a non-unit fraction on the number line
+statement: a/b is the endpoint reached by marking off a lengths of size 1/b from 0 on the number line.
+procedure:
+- Locate 1/b on the number line.
+- Mark off a copies of the length 1/b, end to end, starting at 0.
+- Label the endpoint of the last copy as a/b.
+assess: Place 5/6 on a number line marked only with 0 and 1.
+sources:
+  ccss:
+  - 3.NF.A.2.b
+  learning_components:
+  - d65254fc
+  - a1e20219
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.unit.number-line
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 locates 1/b on the number line, which gives the length that is then copied a times.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.iterate-units
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 lays a copies of the length 1/b end to end from 0 with no gaps or overlaps, as in iterating
+      a unit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: The statement reads a/b as a copies of size 1/b, the same meaning as a parts each of size 1/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The target is the measure facet and its statement is a copies of the length 1/b
+        from 0. This is reachable from fraction.unit.number-line by iterating the unit-fraction length,
+        without the area-model reading of a/b.'
+    status: disputed
+status: proposed

@@ -1,0 +1,94 @@
+id: percent.application.percent-change
+concept: percent
+facet: rate-per-100
+level: 3
+type: application
+name: Find a percent increase or decrease
+statement: A problem gives an original and a new amount; the learner finds the percent change as (new
+  - original)/original x 100, always relative to the original amount.
+assess: A price drops from $50 to $40. What is the percent decrease?
+sources:
+  ccss:
+  - 7.RP.A.3
+  learning_components:
+  - 892d2a63
+  - 93360b70
+requires:
+- clause: standard
+  all_of:
+  - node: percent.rate-per-100
+    relation: definitional
+    points_to: statement
+    why: Multiplying the relative change by 100 expresses it as parts per 100, which is the meaning of
+      a percent.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.equivalent
+    relation: definitional
+    points_to: statement
+    why: The change-to-original ratio is scaled to an equivalent ratio with 100 as the second term to
+      read the percent.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Scaling change:original to ?:100 is one route; the quotient-then-multiply formula
+        is the other.'
+    status: disputed
+  - node: decimal.operations
+    relation: procedural
+    points_to: statement
+    why: Computing new - original and dividing by the original, as in 10 divided by 50 equals 0.2, uses
+      decimal arithmetic.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Dividing 10 by 50 to 0.2 is one route; the other scales change:original to an
+        equivalent ratio with 100 as the second term.'
+    status: disputed
+  - node: rational-numbers.operations
+    relation: definitional
+    points_to: statement
+    why: The formula (new - original)/original gives a negative number for a decrease, so signed subtraction
+      and division are used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Signed values appear only if a decrease is recorded as negative; the magnitude
+        of the change with the word increase or decrease avoids negatives.'
+    status: disputed
+  - node: fraction.quotient.symbolic
+    relation: representational
+    points_to: statement
+    why: The ratio (new - original)/original is a quotient written as a fraction of the change over the
+      original amount.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Writing the change over the original as a quotient fraction is one route; scaling
+        to 100 or decimal division are the others.'
+    status: disputed
+  - node: subtraction.whole-number
+    relation: definitional
+    points_to: statement
+    why: The difference new - original is the first computation.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,82 @@
+id: multiplication.array-area.fraction-product.represent
+concept: multiplication
+facet: array-area
+level: 2
+type: representation
+name: Represent a fraction product as a rectangular area
+statement: The product (a/b) x (c/d) is shown as the area of an a/b-by-c/d rectangle drawn inside a unit
+  square whose sides are partitioned into b and d equal parts.
+procedure:
+- Draw a unit square.
+- Partition one side into b equal parts and the other side into d equal parts, making b x d small rectangles.
+- Shade the rectangle that is a parts by c parts; it holds a x c small rectangles, so its area is (a x
+  c)/(b x d).
+assess: Draw an area model for (2/3) x (3/4) and use it to name the product.
+sources:
+  ccss:
+  - 5.NF.B.4.b
+  learning_components:
+  - 9e161f6b
+requires:
+- clause: standard
+  all_of:
+  - node: partitioning.equal-shares.area
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 partitions the sides of the unit square into b and d equal parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 shades a of the b parts along one side and c of the d parts along the other.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.tiling
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 counts the a x c small rectangles in the shaded array, as rows times columns.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.unit.part-whole
+    relation: definitional
+    points_to: procedure.3
+    why: Each small rectangle is one of the b x d equal parts of the unit square, so its area is 1/(b
+      x d).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: fraction.multiplication.parts-of-partition.fraction
+  relation: same_idea_different_form
+  note: The target defines the product as the area of an a/b-by-c/d rectangle (array-area meaning); the
+    parts-of-partition meaning is the operator version of the same product, not needed to draw the area
+    model.
+status: proposed

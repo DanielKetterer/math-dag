@@ -1,0 +1,161 @@
+id: ratio.application.missing-value
+concept: ratio
+facet: composed-unit
+level: 2
+type: application
+name: Solve ratio problems that give a ratio and one quantity
+statement: A real-world or mathematical problem gives a ratio between two quantities and one value of
+  one quantity; the learner uses ratio reasoning (table, tape diagram, double number line, or equation)
+  to find the corresponding value.
+assess: A recipe uses 3 cups of flour for every 2 eggs. How many cups of flour are needed for 10 eggs?
+sources:
+  ccss:
+  - 6.RP.A.3
+  learning_components:
+  - c869a6c1
+  - 5b9cd29a
+requires:
+- clause: standard
+  all_of:
+  - node: ratio.composed-unit
+    relation: definitional
+    points_to: statement
+    why: Interpreting a given ratio such as 3 cups of flour for every 2 eggs uses the for-every meaning
+      of a ratio.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.table.make
+    relation: procedural
+    points_to: statement
+    why: The table route builds rows of equivalent ratios from the given ratio before looking for the
+      known quantity.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Building a table of equivalent ratios is the table method, one of four.'
+    status: disputed
+  - node: ratio.table.missing-value
+    relation: procedural
+    points_to: statement
+    why: The table route finds the missing entry by multiplying a complete row by the factor that produces
+      the known quantity.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Multiplying a complete row by a factor is the table method, one of four.'
+    status: disputed
+  - node: ratio.equivalent
+    relation: definitional
+    points_to: statement
+    why: Every method (table, tape, number line, equation) produces or uses equivalent ratios; none of
+      the proposed edges states this directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+- clause: tape-diagram
+  all_of:
+  - node: ratio.composed-unit
+    relation: definitional
+    points_to: statement
+    why: Interpreting a given ratio such as 3 cups of flour for every 2 eggs uses the for-every meaning
+      of a ratio.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.tape-diagram
+    relation: representational
+    points_to: statement
+    why: The tape route draws the two quantities as tapes of equal units and uses the known amount to
+      find the unit size.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The tape diagram is one of four named methods, and is natural when a total is
+        known.'
+    status: disputed
+- clause: double-number-line
+  all_of:
+  - node: ratio.composed-unit
+    relation: definitional
+    points_to: statement
+    why: Interpreting a given ratio such as 3 cups of flour for every 2 eggs uses the for-every meaning
+      of a ratio.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.double-number-line
+    relation: representational
+    points_to: statement
+    why: The number-line route marks pairs of equivalent ratios on two aligned lines until the known quantity
+      appears.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The double number line is one of four named methods for the missing value.'
+    status: disputed
+- clause: critic-route-1
+  note: 'Equation or scaling route: find the scale factor n between the given quantity and the ratio term,
+    then multiply the other term'
+  all_of:
+  - node: ratio.composed-unit
+    relation: definitional
+    points_to: statement
+    why: Interpreting a given ratio such as 3 cups of flour for every 2 eggs uses the for-every meaning
+      of a ratio.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.equivalent
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Equation or scaling route: find the scale factor n
+      between the given quantity and the ratio term, then multiply the other term'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: multiplication.scaling.resize
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Equation or scaling route: find the scale factor n
+      between the given quantity and the ratio term, then multiply the other term'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

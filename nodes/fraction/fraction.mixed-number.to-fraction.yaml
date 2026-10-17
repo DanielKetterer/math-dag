@@ -1,0 +1,83 @@
+id: fraction.mixed-number.to-fraction
+concept: fraction
+facet: measure
+level: 3
+type: procedure
+name: Rewrite a mixed number as a fraction
+statement: The mixed number n a/b equals the fraction (n x b + a)/b, because each whole is b/b.
+procedure:
+- Rewrite the whole number n as (n x b)/b.
+- Add a/b by adding numerators.
+- Write the result (n x b + a)/b.
+assess: Write 3 2/5 as a fraction.
+sources:
+  ccss:
+  - 4.NF.B.3.c
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.mixed-number.meaning
+    relation: definitional
+    points_to: statement
+    why: The rewriting starts from the meaning of n a/b as n + a/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.whole-number.as-fraction
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 writes the whole number n as a fraction with denominator b, using that each whole is b/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.multiply-principle.generate
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 turns n into (n x b)/b by multiplying numerator and denominator of n/1 by the same whole
+      number b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Step 1 can be done by writing each whole as b/b and adding n copies, which the
+        node already supports through like-denominator addition and whole numbers as fractions.'
+    status: disputed
+  - node: fraction.addition.like-denominators
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds (n x b)/b and a/b by adding the numerators over the common denominator.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 computes n x b to get the numerator of the rewritten whole number.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

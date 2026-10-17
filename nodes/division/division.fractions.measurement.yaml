@@ -1,0 +1,66 @@
+id: division.fractions.measurement
+concept: division
+facet: measurement
+level: 2
+type: concept
+name: Fraction division as how many groups of c/d make a/b
+statement: a/b divided by c/d is the number of groups of size c/d that make up a/b, where a leftover amount
+  counts as the fraction of a group it fills.
+assess: Write a division expression for 'How many 3/4-cup servings are in 2/3 cup of yogurt?' and say
+  what the quotient counts.
+sources:
+  ccss:
+  - 6.NS.A.1
+  learning_components:
+  - 63c4ca02
+requires:
+- clause: standard
+  all_of:
+  - node: division.measurement.meaning
+    relation: definitional
+    points_to: statement
+    why: The quotient is read as the number of equal groups that fit, the whole-number grouping meaning
+      that is extended here to fractional group sizes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: A leftover amount counts as the fraction of one group it fills, which is the parts-of-a-whole
+      reading of a fraction with the group as the whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.measurement.situation-to-expression
+    relation: procedural
+    points_to: assess
+    why: The test problem asks the learner to model a serving situation as grouping and write a division
+      expression for it.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is the grouping meaning of the quotient; writing a division expression
+        for the yogurt story is demanded only by the test problem (a representation skill).'
+    status: proposed
+related:
+- node: division.whole-by-unit-fraction.interpret
+  relation: generalizes
+  note: Dividing a whole number by a unit fraction is the special case that this node generalizes; a learner
+    with the grouping meaning and fractions-as-parts can interpret 2/3 divided by 3/4 without it.
+status: proposed

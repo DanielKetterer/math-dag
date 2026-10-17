@@ -1,0 +1,75 @@
+id: percent.application.multistep
+concept: percent
+facet: rate-per-100
+level: 3
+type: application
+name: Solve multi-step percent problems
+statement: A problem applies two or more percents in sequence, each to the result of the previous step,
+  so the combined effect is not the sum of the percents.
+assess: A $100 item is discounted 20%, then the sale price is discounted another 10%. What is the final
+  price, and what single percent discount is that?
+sources:
+  ccss:
+  - 7.RP.A.3
+  learning_components:
+  - fda5f0e0
+requires:
+- clause: standard
+  all_of:
+  - node: percent.application.decrease-amount
+    relation: definitional
+    points_to: statement
+    why: Each stage takes a percent off the amount left from the previous stage, which is the discount
+      calculation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Each stage can be a discount calculation, or simply a percent of the current
+        amount followed by subtraction.'
+    status: disputed
+  - node: percent.application.increase-amount
+    relation: definitional
+    points_to: statement
+    why: A stage may instead add a percent of the current amount, as in markup or tax, which is the increase
+      calculation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A stage may be an increase, or may be handled as a percent of the current amount
+        followed by addition.'
+    status: disputed
+  - node: percent.application.percent-change
+    relation: definitional
+    points_to: assess
+    why: Finding the single percent discount equal to the two successive discounts is a percent-change
+      calculation from $100 to $72.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Finding the single equivalent discount from $100 to $72 is demanded by the test
+        problem; the statement is about sequential percents.'
+    status: proposed
+  - node: percent.of-quantity
+    relation: definitional
+    points_to: statement
+    why: Both stage types are applications of a percent of the current amount; this is the shared direct
+      skill.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,62 @@
+id: fraction.multiplication.symbolic
+concept: fraction
+facet: operator
+level: 3
+type: procedure
+name: Multiply a fraction or whole number by a fraction
+statement: Multiply a fraction or whole number by a fraction by multiplying numerators and multiplying
+  denominators, after writing any whole number q as q/1.
+procedure:
+- Write any whole-number factor q as q/1.
+- Multiply the numerators to get the numerator of the product.
+- Multiply the denominators to get the denominator of the product.
+assess: Compute (3/4) x (5/6) and (2/9) x 6.
+sources:
+  ccss:
+  - 5.NF.B.4
+  learning_components:
+  - 4aeee2dd
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.whole-number.as-fraction
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 writes a whole-number factor q as the fraction q/1.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.product-rule
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 and 3 multiply numerators and denominators, which is carrying out the product rule.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.multi-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Multiplying the numerators and the denominators are whole-number multiplications that may involve
+      several digits.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

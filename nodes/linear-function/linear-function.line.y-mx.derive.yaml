@@ -1,0 +1,57 @@
+id: linear-function.line.y-mx.derive
+concept: linear-function
+facet: line
+level: 4
+type: justification
+name: Derive y = mx for a line through the origin
+statement: For any point (x, y) other than the origin on a non-vertical line through the origin with slope
+  m, the slope from (0, 0) to (x, y) is y/x = m, so y = mx; the origin also satisfies y = mx.
+assess: A line through the origin has slope 3. Explain why every point (x, y) on it satisfies y = 3x.
+sources:
+  ccss:
+  - 8.EE.B.6
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: slope.between-two-points
+    relation: justificatory
+    points_to: statement
+    why: The slope from (0, 0) to (x, y) is computed as y/x using the slope formula.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: slope.constant-on-line
+    relation: justificatory
+    points_to: statement
+    why: Setting y/x equal to m for every point works only because the slope between any two points of
+      the line is the same.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equations.one-step
+    relation: justificatory
+    points_to: statement
+    why: Going from y/x = m to y = mx is solving a one-step equation by multiplying both sides by x.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,63 @@
+id: division.fractions.partitive
+concept: division
+facet: partitive
+level: 2
+type: concept
+name: Fraction division as the amount in one whole group
+statement: a/b divided by c/d is the amount in one whole group when c/d of a group holds the amount a/b.
+assess: 3/4 of a jug holds 1/2 gallon. Write a division expression for how much the full jug holds and
+  say what the quotient measures.
+sources:
+  ccss:
+  - 6.NS.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: division.partitive.meaning
+    relation: definitional
+    points_to: statement
+    why: The quotient is the size of one whole group when an amount is split into equal groups, the sharing
+      meaning from whole-number division.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: The phrase c/d of a group means c parts of size 1/d of that group, so the group itself plays
+      the role of the whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.partitive.situation-to-expression
+    relation: procedural
+    points_to: assess
+    why: The test problem asks the learner to model the jug situation as finding a whole from a share
+      and write a division expression.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Modeling the jug story as a division expression is demanded by the test problem,
+        not by the statement of the partitive meaning.'
+    status: proposed
+related:
+- node: fraction.multiplication.parts-of-partition.whole-number
+  relation: same_idea_different_form
+  note: '''c/d of a group'' is a fraction of a quantity, which the part-whole reading with the group as
+    the whole (e458) already gives; the multiplication framing of the same phrase is an alternative form,
+    not a requirement.'
+status: proposed

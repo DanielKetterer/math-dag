@@ -1,0 +1,64 @@
+id: fraction.compare.common-numerator
+concept: fraction
+facet: part-whole
+level: 3
+type: procedure
+name: Compare fractions by rewriting with a common numerator
+statement: Compare two fractions with nonzero numerators by rewriting both with a common numerator; the
+  fraction with the smaller rewritten denominator is greater.
+procedure:
+- Find a common multiple of the two numerators (the product of the numerators always works).
+- Rewrite each fraction with that numerator by multiplying its numerator and denominator by the same whole
+  number.
+- Compare the rewritten denominators; the smaller denominator gives the larger fraction, and equal denominators
+  mean the fractions are equal.
+assess: Which is greater, 2/3 or 3/5? Compare them by making the numerators the same.
+sources:
+  ccss:
+  - 4.NF.A.2
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: factors-multiples.whole-number
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds a common multiple of the two numerators, which uses multiples of whole numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.multiply-principle.generate
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 rewrites each fraction with the common numerator by multiplying numerator and denominator
+      by one whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.compare.same-numerator
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 compares the rewritten denominators, which is exactly comparing two fractions that share
+      a numerator.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,49 @@
+id: division.unit-fraction-by-whole.compute
+concept: division
+facet: unknown-factor
+level: 3
+type: procedure
+name: Divide a unit fraction by a whole number
+statement: Compute (1/b) divided by a whole number n greater than 0 by multiplying the denominator b by
+  n.
+procedure:
+- Multiply the denominator b by the divisor n.
+- Write the quotient as 1/(b x n).
+assess: Compute 1/4 divided by 3.
+sources:
+  ccss:
+  - 5.NF.B.7
+  - 5.NF.B.7.a
+  learning_components:
+  - 137f8ccd
+  - bfa79064
+requires:
+- clause: standard
+  all_of:
+  - node: division.unit-fraction-by-whole.rule
+    relation: procedural
+    points_to: procedure.1
+    why: Steps 1 and 2 apply the rule (1/b) divided by n = 1/(b x n).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.multi-digit
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 multiplies the denominator b by the divisor n, which may be multi-digit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

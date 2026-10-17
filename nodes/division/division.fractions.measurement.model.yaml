@@ -1,0 +1,147 @@
+id: division.fractions.measurement.model
+concept: division
+facet: measurement
+level: 2
+type: procedure
+name: Divide fractions with a visual fraction model
+statement: Find a/b divided by c/d by cutting the whole into b x d equal parts, so both fractions are
+  counted in the same parts, and finding how many groups the size of c/d fit in a/b.
+procedure:
+- Draw a whole and partition it into b x d equal parts.
+- Shade a/b of the whole; it covers a x d of the parts. Mark c/d; it covers c x b of the parts.
+- Count how many full groups of c x b parts fit in the a x d shaded parts.
+- If r parts are left over, they make r/(c x b) of a group.
+- The quotient is the number of full groups plus r/(c x b).
+assess: Use a visual fraction model to find (3/4) divided by (1/6).
+sources:
+  ccss:
+  - 6.NS.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: division.fractions.measurement
+    relation: definitional
+    points_to: statement
+    why: The model carries out the grouping meaning of the quotient, counting how many groups of c/d fit
+      in a/b and treating the leftover as part of a group.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.multi-digit
+    relation: procedural
+    points_to: procedure.3
+    why: Counting how many full groups of c x b parts fit in the a x d shaded parts is a whole-number
+      division that yields a quotient and a remainder.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The step needs a whole-number quotient with remainder, but with the small counts
+        in a drawn model (18 parts in groups of 4) the multi-digit division algorithm is more than is
+        required and no finer division node is indexed.'
+    status: disputed
+  - node: fraction.non-unit.part-whole
+    relation: procedural
+    points_to: procedure.4
+    why: The r leftover parts form r/(c x b) of a group because a group of c x b parts is treated as one
+      whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.meaning
+    relation: procedural
+    points_to: procedure.5
+    why: The quotient is stated as full groups plus a fraction of a group, which is a whole number plus
+      a fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.multiply-principle.generate
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 rewrites a/b as (a x d) parts and c/d as (c x b) parts of the same b x d partition using
+      equivalent fractions.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: At level 2 the same rewriting (a x d parts of the b x d partition) can be seen
+        directly in the model by cutting each part into d pieces, without the symbolic level 3 procedure.'
+    status: disputed
+- clause: critic-route-1
+  note: Recognize/generate equivalent fractions with a model (level 2) for the common partition
+  all_of:
+  - node: division.fractions.measurement
+    relation: definitional
+    points_to: statement
+    why: The model carries out the grouping meaning of the quotient, counting how many groups of c/d fit
+      in a/b and treating the leftover as part of a group.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: procedural
+    points_to: procedure.4
+    why: The r leftover parts form r/(c x b) of a group because a group of c x b parts is treated as one
+      whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.meaning
+    relation: procedural
+    points_to: procedure.5
+    why: The quotient is stated as full groups plus a fraction of a group, which is a whole number plus
+      a fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.simple.generate
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Recognize/generate equivalent fractions with a model
+      (level 2) for the common partition'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

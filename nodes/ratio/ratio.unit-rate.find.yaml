@@ -1,0 +1,76 @@
+id: ratio.unit-rate.find
+concept: ratio
+facet: unit-rate
+level: 3
+type: procedure
+name: Find a unit rate from a ratio of whole numbers
+statement: Find the unit rate of a ratio a:b, b not 0, by dividing a by b and naming the result in units
+  of the first quantity per unit of the second.
+procedure:
+- Identify the two quantities and which is 'per' which.
+- Divide the first quantity's value a by the second's value b.
+- Label the result as units of the first quantity per 1 unit of the second.
+assess: A 12-pack of juice costs $9. Find the cost per can.
+sources:
+  ccss:
+  - 6.RP.A.2
+  learning_components:
+  - b9b94f31
+requires:
+- clause: standard
+  all_of:
+  - node: ratio.unit-rate
+    relation: definitional
+    points_to: statement
+    why: The procedure computes the unit rate a/b, so the meaning of the unit rate as the first quantity
+      per 1 unit of the second is used throughout.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.unit-rate.language
+    relation: procedural
+    points_to: procedure.1
+    why: Deciding which quantity is per which, and labeling the result as units per 1 unit, uses the per
+      and for each rate language.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.operations
+    relation: procedural
+    points_to: procedure.2
+    why: Dividing the first value by the second often gives a decimal result, as in 9 divided by 12 equals
+      0.75.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The result a/b can be expressed as a decimal by decimal division, or left as
+        the fraction a/b.'
+    status: disputed
+  - node: fraction.quotient.symbolic
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides a by b, and when a is smaller than b the exact quotient is the fraction a/b.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The rate a/b can be written as a fraction, or as a decimal by decimal division.'
+    status: disputed
+status: proposed

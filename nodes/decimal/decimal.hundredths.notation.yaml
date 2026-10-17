@@ -1,0 +1,56 @@
+id: decimal.hundredths.notation
+concept: decimal
+facet: decimal-fraction
+level: 3
+type: representation
+name: Decimal notation for hundredths
+statement: A fraction with denominator 100 is written in decimal notation with whole ones before the point
+  and the remaining hundredths in two places after the point, using a 0 in the tenths place when there
+  are fewer than 10 hundredths (62/100 = 0.62, 5/100 = 0.05).
+assess: Write 62/100 and 5/100 in decimal notation.
+sources:
+  ccss:
+  - 4.NF.C.6
+  learning_components:
+  - 269378e0
+requires:
+- clause: standard
+  all_of:
+  - node: decimal.tenths.notation
+    relation: representational
+    points_to: statement
+    why: The first place after the point and the whole ones before it are written as in tenths notation
+      before a second place is added.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.base-ten
+    relation: representational
+    points_to: statement
+    why: The second place after the point is a further place-value position worth one hundredth.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.tenths-hundredths
+    relation: representational
+    points_to: statement
+    why: Reading 62/100 as 6 tenths plus 2 hundredths rests on adding a tenths fraction to a hundredths
+      fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

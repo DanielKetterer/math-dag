@@ -1,0 +1,82 @@
+id: fraction.multiply-whole.model
+concept: fraction
+facet: measure
+level: 2
+type: procedure
+name: Multiply a fraction by a whole number using unit fractions
+statement: Find n x (a/b) with a model by rewriting it as (n x a) x (1/b) and counting the copies of 1/b,
+  giving (n x a)/b.
+procedure:
+- Show a/b as a copies of 1/b, and draw n such groups.
+- Count all the copies of 1/b in the n groups.
+- Write the product as that count over b.
+assess: Use a fraction model to find 4 x (2/3).
+sources:
+  ccss:
+  - 4.NF.B.4.b
+  learning_components:
+  - 4671de27
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.equal-groups.meaning
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 draws n equal groups, each showing a/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.unit-sum
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 shows each group a/b as a copies of 1/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 counts all the copies of 1/b in the n groups, which is the product n x a.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiply-whole.unit-fraction
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 writes the total count of copies of 1/b as that count over b, as in multiplying a unit
+      fraction by a whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiply-whole.as-unit-multiple
+    relation: representational
+    points_to: statement
+    why: The method rewrites n x (a/b) as (n x a) x (1/b) before counting the copies.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

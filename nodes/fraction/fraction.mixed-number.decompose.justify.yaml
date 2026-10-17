@@ -1,0 +1,59 @@
+id: fraction.mixed-number.decompose.justify
+concept: fraction
+facet: measure
+level: 2
+type: justification
+name: Justify a mixed-number decomposition with a model
+statement: An equation decomposing n a/b into a sum of fractions with denominator b is justified by a
+  model showing that the parts on the right, put together, make exactly n wholes and a more parts of size
+  1/b.
+assess: Use a drawing to show why 2 1/3 = 4/3 + 3/3.
+sources:
+  ccss:
+  - 4.NF.B.3.b
+  learning_components:
+  - 5be2e8e4
+  - 288a6904
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.mixed-number.decompose.model
+    relation: justificatory
+    points_to: statement
+    why: The justification uses a model of n a/b with each whole split into parts of size 1/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.decompose.equation
+    relation: representational
+    points_to: statement
+    why: The equation being justified is the recorded decomposition n a/b = c/b + d/b + ..., read from
+      the model.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.meaning
+    relation: definitional
+    points_to: statement
+    why: The justification must show the parts make exactly n wholes and a more parts, which is the meaning
+      of the mixed number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

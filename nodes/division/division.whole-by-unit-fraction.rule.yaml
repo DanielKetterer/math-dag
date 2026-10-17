@@ -1,0 +1,56 @@
+id: division.whole-by-unit-fraction.rule
+concept: division
+facet: unknown-factor
+level: 3
+type: concept
+name: n divided by 1/b = n x b
+statement: For whole numbers n and b with b greater than 0, n divided by 1/b = n x b.
+assess: 'True or false: 3 divided by 1/4 = 12. True or false: 3 divided by 1/4 = 3/4. Say which rule decides
+  it.'
+sources:
+  ccss:
+  - 5.NF.B.7.b
+  learning_components:
+  - abaff428
+requires:
+- clause: standard
+  all_of:
+  - node: division.whole-by-unit-fraction.interpret
+    relation: definitional
+    points_to: statement
+    why: The rule states the number of parts of size 1/b found when counting how many fit in n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The rule''s node is in the unknown-factor facet; the measurement interpretation
+        is one way to give the division meaning.'
+    status: disputed
+- clause: critic-route-1
+  note: 'Ground the rule through the unknown-factor meaning: the quotient is the number that multiplied
+    by 1/b gives n.'
+  all_of:
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Ground the rule through the unknown-factor meaning:
+      the quotient is the number that multiplied by 1/b gives n.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: fraction.multiply-whole.rule
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Ground the rule through the unknown-factor meaning:
+      the quotient is the number that multiplied by 1/b gives n.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

@@ -1,0 +1,100 @@
+id: ratio.tape-diagram
+concept: ratio
+facet: composed-unit
+level: 2
+type: representation
+name: Represent a ratio with a tape diagram
+statement: A ratio a:b is drawn as two tapes made of a and b equal-size units; when a total or one quantity
+  is known, dividing it by its number of units gives the unit size.
+procedure:
+- Draw a tape of a equal units for the first quantity and a tape of b equal units for the second.
+- Mark the known amount on the units it covers (one tape, or both tapes for a total).
+- Divide the known amount by the number of units it covers to get the unit size.
+- Multiply the unit size by the number of units of the quantity asked for.
+assess: The ratio of red to blue marbles is 3:5 and there are 40 marbles. Use a tape diagram to find how
+  many are red.
+sources:
+  ccss:
+  - 6.RP.A.3
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: ratio.composed-unit
+    relation: representational
+    points_to: statement
+    why: The two tapes of a and b equal units draw the for-every relationship, with each unit standing
+      for one share of the composite unit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.partitive.meaning
+    relation: definitional
+    points_to: statement
+    why: Dividing a known amount by its number of units to get the unit size is the sharing meaning of
+      division, one equal share per unit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.whole-number
+    relation: procedural
+    points_to: procedure.2
+    why: When the known amount is a total, it covers both tapes, so the number of units covered is the
+      sum a + b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.multi-digit
+    relation: procedural
+    points_to: procedure.3
+    why: Dividing the known amount by the number of units it covers to get the unit size is a whole-number
+      division of possibly large numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The tape needs a whole-number quotient (known amount by number of units); the
+        test uses 40 divided by 8, so the multi-digit algorithm is more than is required and no finer
+        division node is indexed.'
+    status: disputed
+  - node: multiplication.equal-groups.meaning
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 multiplies the unit size by the number of units, which counts that many equal groups of
+      the unit size.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: definitional
+    points_to: statement
+    why: Facts-level products and quotients suffice for the tape diagram; this is the finer prerequisite.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

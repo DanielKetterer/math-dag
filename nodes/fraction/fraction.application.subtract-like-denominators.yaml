@@ -1,0 +1,88 @@
+id: fraction.application.subtract-like-denominators
+concept: fraction
+facet: measure
+level: 2
+type: application
+name: Solve word problems subtracting fractions with like denominators
+statement: A story problem separates or compares two fractional amounts of the same whole with the same
+  denominator; the learner represents it with a model or equation and finds the difference.
+assess: A ribbon is 9/10 of a meter long. Ana cuts off 4/10 of a meter. How long is the ribbon now?
+sources:
+  ccss:
+  - 4.NF.B.3.d
+  learning_components:
+  - 80c88178
+  - 63e76820
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.subtraction.separating
+    relation: definitional
+    points_to: statement
+    why: The story separates one fractional amount from another of the same whole, which is the situation
+      that subtraction of fractions describes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.like-denominators.model
+    relation: representational
+    points_to: statement
+    why: The learner represents the story with a number line or strip model and finds the difference by
+      counting remaining lengths of 1/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows ''a model or equation''; the model is one way to find the
+        difference.'
+    status: disputed
+  - node: subtraction.comparison.number-line
+    relation: definitional
+    points_to: statement
+    why: The statement includes comparison stories, where the difference is the distance between two amounts.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Comparison stories can be represented with aligned strips or bars showing the
+        gap; the number-line distance is one representation, and the assessment uses a separating story.'
+    status: disputed
+- clause: critic-route-1
+  note: Write an equation for the story and compute with the symbolic like-denominator rule; comparison
+    stories via aligned strips.
+  all_of:
+  - node: fraction.subtraction.separating
+    relation: definitional
+    points_to: statement
+    why: The story separates one fractional amount from another of the same whole, which is the situation
+      that subtraction of fractions describes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.like-denominators
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Write an equation for the story and compute with the
+      symbolic like-denominator rule; comparison stories via aligned strips.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

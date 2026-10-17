@@ -1,0 +1,73 @@
+id: multiplication.scaling.compare-without-computing
+concept: multiplication
+facet: scaling
+level: 3
+type: procedure
+name: Compare a product with a factor without multiplying
+statement: Decide whether a product of positive numbers is greater than, equal to, or less than one factor
+  by comparing the other factor with 1, without performing the multiplication.
+procedure:
+- Pick the factor q to compare the product with; call the other factor f.
+- Compare f with 1.
+- 'Conclude: the product is greater than q if f > 1, equal to q if f = 1, and less than q if f < 1.'
+assess: 'Without multiplying, put these in order from least to greatest: 225, (9/10) x 225, (11/8) x 225.'
+sources:
+  ccss:
+  - 5.NF.B.5.a
+  learning_components:
+  - 029248f4
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.compare.benchmark
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 compares the factor f with 1, which is comparing a fraction with a benchmark.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.scaling.size-principle
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 concludes greater, equal, or less using the scaling size principle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.symbols
+    relation: representational
+    points_to: assess
+    why: Putting the three products in order and recording the order requires comparing numbers with symbols.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Listing three products in order needs ordering numbers, but the symbols are only
+        a recording device; the procedure (compare the factor with 1) does not depend on them.'
+    status: proposed
+  - node: multiplication.properties
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 may pick either factor as the one to compare against, which uses the commutative property
+      of multiplication.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

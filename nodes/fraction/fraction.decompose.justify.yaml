@@ -1,0 +1,46 @@
+id: fraction.decompose.justify
+concept: fraction
+facet: measure
+level: 2
+type: justification
+name: Justify a fraction decomposition with a model
+statement: An equation decomposing a/b into a sum of fractions with denominator b is justified by a model
+  showing that the parts on the right, put together, are exactly the a parts of size 1/b.
+assess: Use a drawing to show why 5/6 = 2/6 + 2/6 + 1/6.
+sources:
+  ccss:
+  - 4.NF.B.3.b
+  learning_components:
+  - eadbe803
+  - c152b85c
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.decompose.model
+    relation: justificatory
+    points_to: statement
+    why: The justification uses a model of a/b as a parts of size 1/b that are split into groups.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.decompose.equation
+    relation: representational
+    points_to: statement
+    why: The equation being justified is the recorded decomposition a/b = c/b + d/b + ..., read from the
+      model.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

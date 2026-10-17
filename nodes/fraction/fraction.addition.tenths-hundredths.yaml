@@ -1,0 +1,48 @@
+id: fraction.addition.tenths-hundredths
+concept: fraction
+facet: measure
+level: 3
+type: procedure
+name: Add a fraction in tenths to a fraction in hundredths
+statement: Add a/10 + c/100 by rewriting a/10 as (10 x a)/100 and adding numerators, giving (10 x a +
+  c)/100.
+procedure:
+- Rewrite the tenths fraction a/10 as (10 x a)/100.
+- Add the numerators of the two hundredths fractions.
+- Write the sum over 100.
+assess: Compute 3/10 + 4/100.
+sources:
+  ccss:
+  - 4.NF.C.5
+  learning_components:
+  - 91c2912b
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.tenths-to-hundredths
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites the tenths fraction a/10 as (10 x a)/100.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.like-denominators
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds the numerators of the two fractions over the common denominator 100.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

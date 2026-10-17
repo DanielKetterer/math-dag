@@ -1,0 +1,66 @@
+id: ratio.table.compare
+concept: ratio
+facet: composed-unit
+level: 2
+type: procedure
+name: Compare two ratios with tables
+statement: Compare ratios a:b and c:d by extending both tables to rows with the same value of the first
+  quantity and comparing the values of the second quantity there.
+procedure:
+- Make a table of equivalent ratios for each ratio.
+- Extend both tables until they share a value of the first quantity (a common multiple of a and c always
+  works).
+- In those rows, the ratio with the larger second value has more of the second quantity per unit of the
+  first.
+assess: Mix A uses 3 cups of juice to 5 cups of water; Mix B uses 4 cups of juice to 7 cups of water.
+  Use tables to decide which mix has more water for the same amount of juice.
+sources:
+  ccss:
+  - 6.RP.A.3.a
+  learning_components:
+  - 05492c78
+requires:
+- clause: standard
+  all_of:
+  - node: ratio.table.make
+    relation: procedural
+    points_to: procedure.1
+    why: Making one table of equivalent ratios for each of the two ratios is the first step of the comparison.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: factors-multiples.whole-number
+    relation: procedural
+    points_to: procedure.2
+    why: A common multiple of the two first-quantity values guarantees that both tables reach a shared
+      value of the first quantity.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.symbols
+    relation: procedural
+    points_to: procedure.3
+    why: Deciding which ratio has more of the second quantity compares the two second-quantity values
+      in the shared rows.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

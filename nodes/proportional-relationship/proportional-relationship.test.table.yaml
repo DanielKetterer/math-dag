@@ -1,0 +1,116 @@
+id: proportional-relationship.test.table
+concept: proportional-relationship
+facet: core
+level: 3
+type: procedure
+name: Decide from a table whether a relationship is proportional
+statement: A table shows a proportional relationship exactly when y/x is the same for every row with x
+  not 0 and every row with x = 0 has y = 0.
+procedure:
+- For each row with x not 0, compute y/x.
+- Check that every row with x = 0 has y = 0.
+- The relationship is proportional exactly when all the quotients are equal and the check in step 2 holds.
+assess: 'Is this relationship proportional? x: 2, 4, 6; y: 3, 6, 10.'
+sources:
+  ccss:
+  - 7.RP.A.2.a
+  learning_components:
+  - dad3591d
+requires:
+- clause: standard
+  all_of:
+  - node: proportional-relationship.definition
+    relation: definitional
+    points_to: statement
+    why: 'The test is the definition applied to a table: all quotients y/x equal and y = 0 whenever x
+      = 0.'
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.unit-rate.find
+    relation: procedural
+    points_to: procedure.1
+    why: Computing y/x for each row with x not 0 is finding the unit rate of the pair of values in that
+      row.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.multiply-principle.recognize
+    relation: procedural
+    points_to: procedure.3
+    why: Deciding whether quotients such as 3/2, 6/4, and 10/6 are all equal means recognizing which fractions
+      are equivalent.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Quotients can be judged equal by recognizing equivalent fractions, or by comparing
+        decimal values or cross-multiplying.'
+    status: disputed
+- clause: critic-route-1
+  note: 'Scale-factor check: each row is the same multiple of a base row, so rows are equivalent ratios'
+  all_of:
+  - node: proportional-relationship.definition
+    relation: definitional
+    points_to: statement
+    why: 'The test is the definition applied to a table: all quotients y/x equal and y = 0 whenever x
+      = 0.'
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.unit-rate.find
+    relation: procedural
+    points_to: procedure.1
+    why: Computing y/x for each row with x not 0 is finding the unit rate of the pair of values in that
+      row.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.equivalent
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Scale-factor check: each row is the same multiple
+      of a base row, so rows are equivalent ratios'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: ratio.table.missing-value
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Scale-factor check: each row is the same multiple
+      of a base row, so rows are equivalent ratios'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

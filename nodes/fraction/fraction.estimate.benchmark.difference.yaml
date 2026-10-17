@@ -1,0 +1,101 @@
+id: fraction.estimate.benchmark.difference
+concept: fraction
+facet: measure
+level: 2
+type: procedure
+name: Estimate a fraction difference with benchmarks and judge reasonableness
+statement: Estimate a difference of fractions by replacing each fraction with a nearby benchmark (0, 1/2,
+  1, or a whole number), and use the estimate to judge whether a computed difference is reasonable.
+procedure:
+- 'Replace each fraction with its nearest benchmark: 0, 1/2, 1, or a whole number.'
+- Subtract the benchmarks to get an estimate of the difference.
+- Call a computed difference unreasonable if it is far from the estimate or is larger than the first fraction.
+assess: Jo says 11/12 - 3/8 = 8/4. Use benchmark fractions to decide whether this is reasonable.
+sources:
+  ccss:
+  - 5.NF.A.2
+  learning_components:
+  - 109ac5cd
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.compare.reasoning-size
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 picks the nearest benchmark for each fraction by reasoning about whether it is close to
+      0, 1/2, or 1.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Picking the nearest benchmark can be done by reasoning about size, but also by
+        locating each fraction on a number line.'
+    status: disputed
+  - node: fraction.subtraction.like-denominators.model
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts benchmark fractions such as 1 - 1/2, which is like-denominator subtraction with
+      a model.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.whole-number
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts benchmark whole numbers, for example 2 - 1, to produce the estimate.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+- clause: critic-route-1
+  note: Locate each fraction on a number line and read off the nearest benchmark, then subtract benchmark
+    lengths.
+  all_of:
+  - node: fraction.subtraction.like-denominators.model
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts benchmark fractions such as 1 - 1/2, which is like-denominator subtraction with
+      a model.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.whole-number
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts benchmark whole numbers, for example 2 - 1, to produce the estimate.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.number-line
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Locate each fraction on a number line and read off
+      the nearest benchmark, then subtract benchmark lengths.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

@@ -1,0 +1,115 @@
+id: fraction.mixed-number.addition.unlike-denominators
+concept: fraction
+facet: measure
+level: 3
+type: procedure
+name: Add mixed numbers with unlike denominators
+statement: Add two mixed numbers whose fraction parts have unlike denominators by adding whole parts and
+  fraction parts separately over a common denominator, regrouping when the fraction parts sum to 1 or
+  more.
+procedure:
+- Rewrite the two fraction parts over a common multiple of their denominators.
+- Add the fraction parts, and add the whole-number parts.
+- If the fraction sum is 1 or more, write it as 1 plus a fraction less than 1 and add the 1 to the whole-number
+  sum.
+assess: Compute 2 3/4 + 1 5/6.
+sources:
+  ccss:
+  - 5.NF.A.1
+  learning_components:
+  - d2565c2d
+requires:
+- clause: standard
+  all_of:
+  - node: factors-multiples.whole-number
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites the fraction parts over a common multiple of their two denominators.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Using n = b x d for the two denominators needs no factors-and-multiples analysis;
+        the node is only needed to find a smaller common multiple.'
+    status: disputed
+  - node: fraction.mixed-number.add
+    relation: procedural
+    points_to: procedure.3
+    why: Steps 2 and 3 add whole parts and fraction parts separately and regroup a fraction sum of 1 or
+      more, as in like-denominator mixed-number addition.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.unlike-denominators
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites the two fraction parts over a common multiple of their denominators, exactly
+      as unlike-denominator addition does.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+- clause: critic-route-1
+  note: Convert both mixed numbers to improper fractions, add with unlike denominators, and convert back.
+    This is arguably a different node because the statement specifies adding whole and fraction parts
+    separately.
+  all_of:
+  - node: fraction.mixed-number.add
+    relation: procedural
+    points_to: procedure.3
+    why: Steps 2 and 3 add whole parts and fraction parts separately and regroup a fraction sum of 1 or
+      more, as in like-denominator mixed-number addition.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.unlike-denominators
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites the two fraction parts over a common multiple of their denominators, exactly
+      as unlike-denominator addition does.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.to-fraction
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Convert both mixed numbers to improper fractions,
+      add with unlike denominators, and convert back. This is arguably a different node because the statement
+      specifies adding whole and fraction parts separately.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: fraction.between-whole-numbers
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Convert both mixed numbers to improper fractions,
+      add with unlike denominators, and convert back. This is arguably a different node because the statement
+      specifies adding whole and fraction parts separately.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

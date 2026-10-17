@@ -1,0 +1,88 @@
+id: partitioning.equal-area.any-shape
+concept: partitioning
+facet: area
+level: 2
+type: procedure
+name: Partition a shape into parts with equal area
+statement: Partition a shape into n parts that have the same area, checking equality by area (for example
+  by counting unit squares) rather than by shape. The steps below work for any rectangle and any n; other
+  shapes are split into pieces whose areas are then checked to be equal.
+procedure:
+- For a rectangle, partition one side into n equal lengths.
+- Through each mark, draw a line parallel to the adjacent side, making n strips.
+- Confirm the strips have equal area (same length and width, or the same number of unit squares).
+assess: This 6-by-2 rectangle is drawn on a grid. Partition it into 6 parts with equal area and show how
+  you know the areas are equal.
+sources:
+  ccss:
+  - 3.G.A.2
+  learning_components:
+  - 1e26fb99
+requires:
+- clause: standard
+  all_of:
+  - node: partitioning.equal-shares.area
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 divides one side of a rectangle into n equal lengths, extending to any n the equal strips
+      drawn there.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.tiling
+    relation: definitional
+    points_to: statement
+    why: Equality of the parts is checked by area, counting unit squares or using length times width of
+      each strip.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: partitioning.equal-shares.different-shapes
+    relation: definitional
+    points_to: statement
+    why: The statement says equality is checked by area rather than by shape, since equal parts may have
+      different shapes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.iterate-units
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 partitions one side into n equal lengths by laying equal unit lengths along it.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Equal-length partition of a side by laying unit lengths only works when the side
+        length is a multiple of n units. Other credible ways: folding or marking the side and checking
+        by direct comparison, or measuring the side and dividing.'
+    status: disputed
+  - node: partitioning.segment.equal-lengths
+    relation: definitional
+    points_to: statement
+    why: Step 1 partitions a side into n equal lengths for any n; the map has no node that teaches this.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,61 @@
+id: division.unit-fraction-by-whole.explain
+concept: division
+facet: unknown-factor
+level: 4
+type: justification
+name: Explain (1/b) divided by n = 1/(b x n) with multiplication
+statement: (1/b) divided by n is the number that multiplied by n gives 1/b; since (1/(b x n)) x n = n/(b
+  x n) = 1/b, the quotient is 1/(b x n) for every b and n.
+assess: Use multiplication to explain why 1/3 divided by 4 = 1/12, and say why the same argument works
+  for any unit fraction and nonzero whole number.
+sources:
+  ccss:
+  - 5.NF.B.7.a
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.multiply-whole.rule
+    relation: justificatory
+    points_to: statement
+    why: The step (1/(b x n)) x n = n/(b x n) uses the rule for multiplying a fraction by a whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: For a unit fraction the step n x (1/m) = n/m is the definition of n/m as n copies
+        of 1/m; the general multiplication rule is more than required.'
+    status: disputed
+  - node: fraction.equivalent.multiply-principle
+    relation: justificatory
+    points_to: statement
+    why: The step n/(b x n) = 1/b uses the multiplication principle for equivalent fractions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: The explanation reads (1/b) divided by n as the number that multiplied by n gives 1/b.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: division.unknown-factor.rewrite
+  relation: same_idea_different_form
+  note: The rewriting is the representational form of the unknown-factor meaning already supplied by e424;
+    the statement performs the rewrite as an instance of that meaning.
+status: proposed

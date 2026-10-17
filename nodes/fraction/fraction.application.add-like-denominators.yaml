@@ -1,0 +1,76 @@
+id: fraction.application.add-like-denominators
+concept: fraction
+facet: measure
+level: 2
+type: application
+name: Solve word problems adding fractions with like denominators
+statement: A story problem joins two fractional amounts of the same whole with the same denominator; the
+  learner represents it with a model or equation and finds the total.
+assess: Jo ran 3/8 of a mile in the morning and 4/8 of a mile in the afternoon. How far did she run in
+  all?
+sources:
+  ccss:
+  - 4.NF.B.3.d
+  learning_components:
+  - 123700d1
+  - 832d4e61
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.addition.joining
+    relation: definitional
+    points_to: statement
+    why: The story joins two fractional amounts of one whole, which is the situation that addition of
+      fractions describes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.like-denominators.model
+    relation: representational
+    points_to: statement
+    why: The learner represents the story with a number line or strip model and finds the total by counting
+      lengths of 1/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows ''a model or equation''; the strip or number-line model
+        is one way to find the total.'
+    status: disputed
+- clause: critic-route-1
+  note: Write an equation for the story and compute with the symbolic like-denominator rule.
+  all_of:
+  - node: fraction.addition.joining
+    relation: definitional
+    points_to: statement
+    why: The story joins two fractional amounts of one whole, which is the situation that addition of
+      fractions describes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.like-denominators
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Write an equation for the story and compute with the
+      symbolic like-denominator rule.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

@@ -1,0 +1,1046 @@
+[
+ {
+  "node": "fraction.unit.part-whole",
+  "target": "partitioning.equal-area.any-shape",
+  "verdict": "scaffold",
+  "reason": "The statement concerns reading 1/b from a partition that is given; the assessment hands over an already partitioned rectangle. Being able to construct an equal-area partition for any b is not needed to understand what 1/b names.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The phrase 'b equal parts' means parts of equal area, for any whole number b, not only 2, 3 or 4."
+ },
+ {
+  "node": "fraction.unit.part-whole",
+  "target": "partitioning.equal-shares.whole-as-shares",
+  "verdict": "scaffold",
+  "reason": "The statement already says the whole is partitioned into b equal parts, so exhaustion of the whole is built into the partition idea (and into partitioning.equal-shares.area). Knowing that b copies make the whole is used later (b/b = 1), not to name one part as 1/b.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The denominator b counts all the equal parts that together make the whole, which is why one part is 1/b."
+ },
+ {
+  "node": "fraction.unit.number-line",
+  "target": "partitioning.equal-area.any-shape",
+  "verdict": "wrong",
+  "reason": "Direction is reversed: partitioning.equal-area.any-shape uses 'partition one side into n equal lengths' as its own step 1, which is exactly the skill the target's step 2 needs. The shared prerequisite is an equal-length partition of a segment, not the area procedure.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 2 splits the interval from 0 to 1 into b equal lengths, the same equal-length partition of a side used there."
+ },
+ {
+  "node": "fraction.equivalent.same-size",
+  "target": "partitioning.equal-shares.different-shapes",
+  "verdict": "scaffold",
+  "reason": "The shaded regions in the standard bar/strip models of 1/2 and 2/4 are congruent, so the 'same amount, different shape' idea is not needed to judge them equal. It helps when models differ in shape. The rationale also misreads the source, which is about equal shares of identical wholes having different shapes, not about parts of different sizes.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The same amount can be cut into differently sized and shaped parts, as with 1/2 and 2/4 of equal bars."
+ },
+ {
+  "node": "fraction.compare.same-whole",
+  "target": "fraction.compare.reasoning-size",
+  "verdict": "scaffold",
+  "reason": "Understanding that an amount depends on which whole needs only the meaning of a unit fraction (e41) and direct size comparison (e39). The rule 1/2 > 1/3 is the misconception being qualified, not a requirement for seeing that wholes can differ in size.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The caveat qualifies the rule that 1/2 is greater than 1/3, which is reasoning about part size and number of parts."
+ },
+ {
+  "node": "fraction.application.compare-in-context",
+  "target": "fraction.compare.same-whole",
+  "verdict": "indirect",
+  "reason": "The same-whole requirement enters through the justification-by-drawing node; the story simply states the pizzas are the same size, so solving it does not require the caveat as a separate concept.",
+  "via": "fraction.compare.justify",
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The story states that the pizzas are the same size, which is the condition that makes the comparison valid."
+ },
+ {
+  "node": "number-line.whole-number-lengths",
+  "target": "measurement.length.iterate-units",
+  "verdict": "scaffold",
+  "reason": "The statement needs only the idea of length as a number of unit lengths (e93). The test can be done on a given line with equally spaced labeled points, so iterating units is helpful for building the number line but not required.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Drawing the length for 7 means laying seven unit lengths end to end starting at 0."
+ },
+ {
+  "node": "addition.add-to.number-line",
+  "target": "place-value.base-ten",
+  "verdict": "scaffold",
+  "reason": "The procedure allows one jump or any smaller jumps. Jumping by ones, or any chunk, represents the sum; tens-and-ones splitting only makes the computation efficient.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 2 splits b into smaller jumps that total b, such as 20 and 5 for 25, using tens and ones."
+ },
+ {
+  "node": "subtraction.take-away.number-line",
+  "target": "place-value.base-ten",
+  "verdict": "scaffold",
+  "reason": "The jump of b can be taken in one move or in any smaller moves; place-value chunks (10 and 7) are an efficiency, not required to represent the difference.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 2 splits the jump of b units into smaller jumps, such as 10 and 7 for 17, using tens and ones."
+ },
+ {
+  "node": "subtraction.comparison.number-line",
+  "target": "place-value.base-ten",
+  "verdict": "scaffold",
+  "reason": "The step allows one jump or smaller jumps; going to the next ten then by tens is a strategy choice, not required for the representation.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 2 jumps from b to the next ten and then by tens, which uses the tens and ones structure of the numbers."
+ },
+ {
+  "node": "division.unknown-factor.find-quotient",
+  "target": "division.unknown-factor.meaning",
+  "verdict": "indirect",
+  "reason": "The unknown-factor meaning enters through the rewrite step (a divided by b = ? becomes b x ? = a), which is the only place the procedure uses it. The existence remark (b not 0, a a multiple of b) is commentary, not performed.",
+  "via": "division.unknown-factor.rewrite",
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Naming the unknown factor as the quotient, and knowing when a whole-number quotient exists, uses the unknown-factor meaning."
+ },
+ {
+  "node": "fraction.compare.common-denominator",
+  "target": "fraction.equivalent.multiply-principle",
+  "verdict": "indirect",
+  "reason": "The multiplication principle is the rule that the generate procedure applies; the target only uses it through generating equivalent fractions in step 2.",
+  "via": "fraction.equivalent.multiply-principle.generate",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement rewrites fractions with the multiplication principle, which guarantees each rewritten fraction equals the original."
+ },
+ {
+  "node": "fraction.compare.benchmark",
+  "target": "fraction.compare.common-denominator",
+  "verdict": "scaffold",
+  "reason": "The target states the test (a/b > 1/2 exactly when 2 x a > b) and a level 3 procedure can apply it with whole-number comparison alone; common-denominator comparison only explains why the test is true, which is level 4 content.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The test that a/b exceeds 1/2 exactly when 2 x a exceeds b compares a/b with 1/2 over the common denominator 2 x b."
+ },
+ {
+  "node": "fraction.compare.benchmark",
+  "target": "fraction.whole-number.as-fraction",
+  "verdict": "scaffold",
+  "reason": "Writing 1 as b/b explains the test against benchmark 1; applying the stated test (compare a with b) does not require it, and the assessment uses only 1/2.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The test against the benchmark 1 writes 1 as b/b so that a/b and b/b can be compared by numerators."
+ },
+ {
+  "node": "fraction.compare.benchmark",
+  "target": "fraction.compare.same-denominator",
+  "verdict": "scaffold",
+  "reason": "The test 'a/b > 1 exactly when a > b' is stated in the procedure and reduces to whole-number comparison; same-denominator comparison with b/b explains the test but is not needed to apply it.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Testing whether a/b exceeds 1 compares a/b with b/b, two fractions with the same denominator."
+ },
+ {
+  "node": "fraction.compare.unlike.justify",
+  "target": "fraction.compare.justify",
+  "verdict": "scaffold",
+  "reason": "The unlike-denominator justification statement is self-contained (same whole, common-size parts, compare counts); the general justification is a simpler instance practised first, not a requirement.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The unlike-denominator justification extends the general justification of a fraction comparison by a model of the same whole."
+ },
+ {
+  "node": "fraction.mixed-number.decompose.justify",
+  "target": "fraction.decompose.justify",
+  "verdict": "scaffold",
+  "reason": "The mixed-number argument (grouped parts put together make the original parts) is self-contained given the mixed-number model and equation; the fraction version is a simpler earlier instance.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The argument that the grouped parts put together are the original parts extends the justification used for a fraction decomposition."
+ },
+ {
+  "node": "fraction.multiply-whole.as-unit-multiple",
+  "target": "multiplication.properties",
+  "verdict": "scaffold",
+  "reason": "At level 2 the model shows n groups of a copies as n x a copies by the equal-groups meaning of product; the associative property is the symbolic name for this regrouping and is not needed.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Regrouping n groups of a copies into (n x a) copies of 1/b uses the associative property of multiplication."
+ },
+ {
+  "node": "fraction.multiply-whole.rule",
+  "target": "fraction.multiply-whole.model",
+  "verdict": "scaffold",
+  "reason": "The model procedure illustrates the rule for particular numbers; the rule as a level 3 concept does not require having carried out that procedure by either route.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The rule n x (a/b) = (n x a)/b generalizes the result of counting copies of 1/b in the model for any whole number n and fraction a/b."
+ },
+ {
+  "node": "fraction.multiply-whole.rule",
+  "target": "multiplication.properties",
+  "verdict": "scaffold",
+  "reason": "The associative property is the formal name for regrouping in the unit-fraction explanation; the rule can be understood by repeated addition or the group-counting explanation without naming it.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Regrouping n x (a x (1/b)) as (n x a) x (1/b) is the associative property."
+ },
+ {
+  "node": "fraction.application.multiply-whole",
+  "target": "fraction.application.multiply-whole.model",
+  "verdict": "scaffold",
+  "reason": "The statement says the learner finds the total as whole number x fraction; drawing a model is helpful but the expression plus a model of copies of 1/b (fraction.multiply-whole.model) already covers the work.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The learner must represent the equal groups of a fractional amount, here with a drawn model."
+ },
+ {
+  "node": "fraction.application.multiply-whole.equation",
+  "target": "fraction.multiply-whole.as-unit-multiple",
+  "verdict": "scaffold",
+  "reason": "Writing n x (a/b) = t from a story does not require reading the expression as n groups of a copies of 1/b; that reading supports meaning but the equation is written from the equal-groups situation.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The expression n x (a/b) is read as n groups of a copies of 1/b, which the learner must interpret."
+ },
+ {
+  "node": "decimal.hundredths.notation",
+  "target": "fraction.tenths-to-hundredths",
+  "verdict": "indirect",
+  "reason": "That ten hundredths make a tenth is step 1 of the tenths-plus-hundredths addition that the target already needs.",
+  "via": "fraction.addition.tenths-hundredths",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The tenths place holds groups of 10 hundredths, which is why 62/100 reads as 6 tenths and 2 hundredths."
+ },
+ {
+  "node": "decimal.number-line",
+  "target": "decimal.tenths.notation",
+  "verdict": "indirect",
+  "reason": "Tenths notation is a prerequisite of hundredths notation, so labelling a tenths decimal is covered through it.",
+  "via": "decimal.hundredths.notation",
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 3 labels the endpoint with a decimal written in tenths notation."
+ },
+ {
+  "node": "decimal.compare",
+  "target": "place-value.base-ten",
+  "verdict": "indirect",
+  "reason": "Reading digits of a decimal as a number of hundredths is the content of hundredths notation, which itself builds on place value.",
+  "via": "decimal.hundredths.notation",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 2 reads a decimal such as 1.20 as a total of 120 hundredths using place value."
+ },
+ {
+  "node": "decimal.compare",
+  "target": "decimal.tenths.notation",
+  "verdict": "indirect",
+  "reason": "Tenths notation is a prerequisite of hundredths notation, which this node already requires.",
+  "via": "decimal.hundredths.notation",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 1 reads a decimal with only tenths and appends a 0 to show hundredths."
+ },
+ {
+  "node": "decimal.compare.justify",
+  "target": "decimal.tenths.notation",
+  "verdict": "indirect",
+  "reason": "Tenths notation is a prerequisite of hundredths notation, which this node already requires.",
+  "via": "decimal.hundredths.notation",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Decimals such as 0.5 must be read as a number of tenths to shade them."
+ },
+ {
+  "node": "fraction.addition.unlike-denominators",
+  "target": "fraction.addition.unlike-denominators.equivalent-replacement",
+  "verdict": "scaffold",
+  "reason": "The target is a level 3 procedure; it can be executed without knowing why the rewrite preserves the sum. The equivalent-replacement concept is the justification, not an ingredient.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The rewriting in step 2 is allowed because replacing each fraction by an equivalent one leaves the sum unchanged."
+ },
+ {
+  "node": "fraction.subtraction.unlike-denominators",
+  "target": "fraction.addition.unlike-denominators.equivalent-replacement",
+  "verdict": "scaffold",
+  "reason": "Level 3 procedure; the justification for rewriting is not needed to carry it out.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The rewriting in step 2 is allowed because replacing each fraction by an equivalent one leaves the difference unchanged."
+ },
+ {
+  "node": "fraction.mixed-number.addition.unlike-denominators",
+  "target": "fraction.equivalent.multiply-principle.generate",
+  "verdict": "indirect",
+  "reason": "Rewriting the fraction parts as equivalent fractions is exactly the generate skill, but it is already carried inside unlike-denominator addition (which depends on multiply-principle.generate).",
+  "via": "fraction.addition.unlike-denominators",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 1 produces the equivalent fractions over the common denominator for each fraction part."
+ },
+ {
+  "node": "fraction.mixed-number.addition.unlike-denominators",
+  "target": "fraction.addition.unlike-denominators.equivalent-replacement",
+  "verdict": "scaffold",
+  "reason": "Level 3 procedure; the justification is not required to execute it.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Rewriting the fraction parts over a common denominator is valid because equivalent replacement leaves the total unchanged."
+ },
+ {
+  "node": "fraction.mixed-number.subtraction.unlike-denominators",
+  "target": "fraction.equivalent.multiply-principle.generate",
+  "verdict": "indirect",
+  "reason": "Generating the equivalent fractions is required, but it is already carried inside unlike-denominator subtraction.",
+  "via": "fraction.subtraction.unlike-denominators",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 1 produces the equivalent fractions over n for each fraction part."
+ },
+ {
+  "node": "fraction.mixed-number.subtraction.unlike-denominators",
+  "target": "fraction.addition.unlike-denominators.equivalent-replacement",
+  "verdict": "scaffold",
+  "reason": "Level 3 procedure; the justification is not required to execute it.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Rewriting the fraction parts over a common denominator is valid because equivalent replacement leaves the difference unchanged."
+ },
+ {
+  "node": "fraction.application.addition-same-whole",
+  "target": "fraction.application.add-like-denominators",
+  "verdict": "scaffold",
+  "reason": "Story-to-equation modeling is a transferable skill that can be learned directly with unlike denominators (from whole-number story problems plus joining); the like-denominator application is an easier warm-up, not a requirement.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Representing the story with an equation or model extends the story-to-equation skill already used with like denominators."
+ },
+ {
+  "node": "fraction.application.subtraction-same-whole",
+  "target": "fraction.application.subtract-like-denominators",
+  "verdict": "scaffold",
+  "reason": "Story-to-equation modeling can be learned directly at unlike denominators; the like-denominator application is an easier warm-up, not a requirement.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Representing the story with an equation or model extends the story-to-equation skill already used with like denominators."
+ },
+ {
+  "node": "fraction.estimate.benchmark.sum",
+  "target": "fraction.addition.joining",
+  "verdict": "indirect",
+  "reason": "The fact that a sum is at least each addend comes from the joining meaning, which adding fractions with a model already presupposes; step 3 is a rule to apply, not a separate justification requirement.",
+  "via": "fraction.addition.like-denominators.model",
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 3 calls a sum unreasonable if it is smaller than an addend, because joining parts never gives less than one of the parts."
+ },
+ {
+  "node": "fraction.estimate.benchmark.difference",
+  "target": "fraction.subtraction.separating",
+  "verdict": "indirect",
+  "reason": "The fact that a difference is no more than the first fraction comes from the separating meaning, which subtracting fractions with a model already presupposes; step 3 is a rule to apply.",
+  "via": "fraction.subtraction.like-denominators.model",
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 3 calls a difference unreasonable if it is larger than the first fraction, because separating a part leaves no more than the whole amount."
+ },
+ {
+  "node": "fraction.between-whole-numbers",
+  "target": "fraction.compare.same-denominator",
+  "verdict": "scaffold",
+  "reason": "Level 3 procedure; the conclusion 'between q and q+1' can be applied without proving r/b < 1. The comparison is the justification.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Showing a/b lies below q + 1 uses r/b < b/b = 1, a comparison of two fractions with the same denominator."
+ },
+ {
+  "node": "fraction.quotient.equal-sharing",
+  "target": "partitioning.equal-shares.area",
+  "verdict": "indirect",
+  "reason": "Cutting wholes into equal shares is needed for the drawing, but the unit-fraction concept already carries the partitioning requirement.",
+  "via": "fraction.unit.part-whole",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Showing the sharing of 3 pizzas among 4 people requires drawing and cutting wholes into equal shares."
+ },
+ {
+  "node": "fraction.quotient.equal-sharing",
+  "target": "fraction.unit.part-whole",
+  "verdict": "indirect",
+  "reason": "Cutting each pizza into 4 equal parts of 1/4 is needed, but only through the non-unit fraction concept (a parts of size 1/b), which itself builds on unit fractions.",
+  "via": "fraction.non-unit.part-whole",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The drawing of 3 pizzas shared by 4 cuts each pizza into 4 equal parts, each a unit fraction 1/4 of a pizza."
+ },
+ {
+  "node": "fraction.quotient.symbolic",
+  "target": "division.partitive.situation-to-expression",
+  "verdict": "scaffold",
+  "reason": "Writing a situation as a division expression is not used by the symbolic statement or by its assessment (conversion between a/b and a divided by b).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Writing a sharing situation as a divided by b is the division expression whose value the statement names a/b."
+ },
+ {
+  "node": "fraction.multiplication.parts-of-partition.fraction",
+  "target": "division.unit-fraction-by-whole.interpret",
+  "verdict": "scaffold",
+  "reason": "Sharing a unit fraction is the special case c = 1 of the target; it helps but a learner can understand the general c/d partition directly.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Splitting c/d into b equal parts splits each unit fraction 1/d into b smaller parts, as in sharing a unit fraction."
+ },
+ {
+  "node": "fraction.multiplication.operation-sequence",
+  "target": "multiplication.properties",
+  "verdict": "scaffold",
+  "reason": "Showing why a x (q divided by b) = (a x q) divided by b is a justification; the L3 statement can be understood and applied without it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Showing a x (q divided by b) equals (a x q) divided by b uses associativity and commutativity of multiplication."
+ },
+ {
+  "node": "fraction.multiplication.product-rule",
+  "target": "fraction.multiplication.operation-sequence",
+  "verdict": "scaffold",
+  "reason": "Rewriting the product as a x (c/d) divided by b is a step in one derivation of the rule, not required to state and use the rule.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Writing (a/b) x (c/d) as a x (c/d) divided by b is the first step of deriving the product rule."
+ },
+ {
+  "node": "fraction.multiplication.product-rule",
+  "target": "fraction.multiply-whole.rule",
+  "verdict": "scaffold",
+  "reason": "The step a x (c/d) = (a x c)/d is part of a derivation of the rule, not required to know the rule at level 3.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The step a x (c/d) = (a x c)/d is the whole-number-times-fraction rule."
+ },
+ {
+  "node": "fraction.multiplication.product-rule",
+  "target": "division.unit-fraction-by-whole.rule",
+  "verdict": "scaffold",
+  "reason": "The step (a x c)/d divided by b is part of a derivation of the rule, which is justification (not required to know the rule at level 3).",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Dividing (a x c)/d by b gives (a x c)/(d x b), which rests on the rule (1/d) divided by b = 1/(d x b)."
+ },
+ {
+  "node": "fraction.mixed-number.multiplication",
+  "target": "fraction.between-whole-numbers",
+  "verdict": "scaffold",
+  "reason": "Redundant with e357 and e360: step 3 needs the quotient and the remainder as the fraction part, which between-whole-numbers does not itself deliver (it only locates the fraction between wholes).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 3 divides numerator by denominator to find the whole part and remainder of the mixed-number answer."
+ },
+ {
+  "node": "multiplication.array-area.fraction-sides.multiply",
+  "target": "multiplication.array-area.fraction-sides.tiling",
+  "verdict": "scaffold",
+  "reason": "Level 3 procedure; why multiplication matches tiling is justification, not needed to carry out the computation.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Tiling with unit-fraction squares is how the area of a fraction-sided rectangle was first found, and the product must match it."
+ },
+ {
+  "node": "multiplication.scaling.explain-greater-than-one",
+  "target": "multiplication.scaling.size-principle",
+  "verdict": "scaffold",
+  "reason": "The target states and proves the claim q x f > q; the L3 principle is the thing being justified, not an ingredient of the proof.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The explanation justifies the claim that q x f is greater than q when f is greater than 1."
+ },
+ {
+  "node": "multiplication.scaling.explain-less-than-one",
+  "target": "multiplication.scaling.size-principle",
+  "verdict": "scaffold",
+  "reason": "The target states and proves q x f < q; the L3 principle is the thing being justified, not an ingredient of the proof.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The explanation justifies the claim that q x f is less than q when f is less than 1."
+ },
+ {
+  "node": "fraction.application.multiplication-in-context.model",
+  "target": "fraction.application.multiply-whole.model",
+  "verdict": "scaffold",
+  "reason": "Drawing a model for a story is a transferable skill; the whole-number-times version is an easier warm-up but a learner can learn modeling directly for fraction of a fraction.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Drawing a visual model for a story extends the model-drawing skill used with a fraction times a whole number."
+ },
+ {
+  "node": "fraction.application.multiplication-in-context.equation",
+  "target": "fraction.application.multiply-whole.equation",
+  "verdict": "scaffold",
+  "reason": "Writing the equation for a story is a transferable skill; the whole-number-times version is an easier warm-up, not a requirement.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Writing the multiplication equation for a story extends writing an equation for a fraction-times-whole-number problem."
+ },
+ {
+  "node": "division.unit-fraction-by-whole.interpret",
+  "target": "partitioning.equal-shares.area",
+  "verdict": "indirect",
+  "reason": "Cutting a shape into equal shares and cutting again is needed to draw the model, but the unit-fraction concept already carries the partitioning requirement.",
+  "via": "fraction.unit.part-whole",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Drawing a model of 1/3 divided by 4 requires cutting a shape into equal shares and cutting those again."
+ },
+ {
+  "node": "division.unit-fraction-by-whole.interpret",
+  "target": "partitioning.equal-area.any-shape",
+  "verdict": "scaffold",
+  "reason": "Equal-area partition of arbitrary shapes is more general than needed; the model uses a whole split into b equal parts and one part split again, which partitioning.equal-shares.area covers.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Splitting each of the whole's b parts into n equal-area parts is how the model is drawn."
+ },
+ {
+  "node": "division.unit-fraction-by-whole.explain",
+  "target": "division.unit-fraction-by-whole.rule",
+  "verdict": "scaffold",
+  "reason": "The target states and proves the quotient; the L3 rule is the thing being justified, not an ingredient of the proof.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The explanation justifies the quotient 1/(b x n) that the rule states."
+ },
+ {
+  "node": "division.whole-by-unit-fraction.interpret",
+  "target": "partitioning.equal-shares.area",
+  "verdict": "indirect",
+  "reason": "Drawing the cuts is needed, but the unit-fraction concept already carries the partitioning requirement.",
+  "via": "fraction.unit.part-whole",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Drawing a model of 4 divided by 1/5 requires cutting each whole into equal parts."
+ },
+ {
+  "node": "division.whole-by-unit-fraction.interpret",
+  "target": "partitioning.equal-shares.whole-as-shares",
+  "verdict": "indirect",
+  "reason": "That a whole holds b parts of size 1/b is already part of the unit-fraction concept (one of b equal parts of a whole).",
+  "via": "fraction.unit.part-whole",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Each whole holds b parts of size 1/b because a whole is all of its equal shares."
+ },
+ {
+  "node": "division.whole-by-unit-fraction.explain",
+  "target": "division.whole-by-unit-fraction.rule",
+  "verdict": "scaffold",
+  "reason": "The target states and proves the quotient n x b; the L3 rule is the thing being justified, not an ingredient of the proof.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The explanation justifies the quotient n x b that the rule states."
+ },
+ {
+  "node": "division.fractions.measurement.model",
+  "target": "fraction.equivalent.multiply-principle",
+  "verdict": "indirect",
+  "reason": "The symbolic principle is applied through its generate procedure; step 2 only asks for the rewriting that the procedure performs.",
+  "via": "fraction.equivalent.multiply-principle.generate",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Shading a/b as a x d of the b x d parts and c/d as c x b parts uses a/b = (a x d)/(b x d) and c/d = (c x b)/(d x b)."
+ },
+ {
+  "node": "division.fractions.rule",
+  "target": "fraction.multiplication.product-rule",
+  "verdict": "scaffold",
+  "reason": "The product rule is used only to verify the rule by multiplying back, a justification step not required to state or apply the rule.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The verification multiplies (c/d) by (a x d)/(b x c) with the product rule to get (a x c x d)/(d x b x c)."
+ },
+ {
+  "node": "division.fractions.rule",
+  "target": "fraction.equivalent.multiply-principle",
+  "verdict": "scaffold",
+  "reason": "Cancelling c x d is a step of the verification, which is justification; this node is the rule as a concept and its test problem only applies the rule.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Cancelling the common factor c x d in (a x c x d)/(b x c x d) to reach a/b uses the multiplication principle for equivalent fractions."
+ },
+ {
+  "node": "division.fractions.rule",
+  "target": "division.fractions.measurement.model",
+  "verdict": "scaffold",
+  "reason": "The common-denominator counting argument justifies the rule through the measurement facet; the target is the rule in the unknown-factor facet and does not need this derivation to be stated or applied.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Counting groups of c x b parts in a x d parts over the common denominator b x d shows the quotient is (a x d) counted in units of (b x c)."
+ },
+ {
+  "node": "division.fractions.rule",
+  "target": "fraction.quotient.symbolic",
+  "verdict": "scaffold",
+  "reason": "Reducing to whole-number division over a common denominator is a derivation route (measurement facet), not needed for the unknown-factor statement.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Once both fractions share a denominator, the quotient is the whole-number division (a x d) divided by (b x c), which equals (a x d)/(b x c)."
+ },
+ {
+  "node": "division.fractions.application.model",
+  "target": "division.measurement.situation-to-expression",
+  "verdict": "scaffold",
+  "reason": "Neither the statement nor the test problem asks for a division expression; the learner needs the grouping meaning (e483) and the model, not the expression-writing skill.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Translating the serving story into a division expression follows the same grouping-to-expression modeling as whole-number problems."
+ },
+ {
+  "node": "ratio.unit-rate",
+  "target": "fraction.quotient.equal-sharing",
+  "verdict": "indirect",
+  "reason": "Sharing a wholes among b is the level 2 meaning that the symbolic quotient a/b formalizes.",
+  "via": "fraction.quotient.symbolic",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The amount for 1 unit of the second quantity is a shared equally among b units, so it equals a/b."
+ },
+ {
+  "node": "ratio.tape-diagram",
+  "target": "multiplication.multi-digit",
+  "verdict": "scaffold",
+  "reason": "The product of unit size and unit count is a multiplication fact in the test problem (5 x 3); multiplication.facts.within-100 is the level needed, and multi-digit multiplication only matters for large amounts.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Multiplying the unit size by the number of units of the asked-for quantity is a whole-number product of possibly large numbers."
+ },
+ {
+  "node": "ratio.table.missing-value",
+  "target": "ratio.table.make",
+  "verdict": "scaffold",
+  "reason": "The table is given in the test problem; finding a missing entry needs equivalent ratios, not the skill of building a table row by row.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The procedure works inside a table of equivalent-ratio rows, a complete row and an incomplete row, as built by making a ratio table."
+ },
+ {
+  "node": "ratio.table.plot",
+  "target": "ratio.table.make",
+  "verdict": "scaffold",
+  "reason": "The table is given; plotting needs reading each row as an ordered pair, not making a table of equivalent ratios.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The points come from the rows of a table of equivalent ratios, each row giving one ordered pair of corresponding quantities."
+ },
+ {
+  "node": "ratio.application.unit-rate",
+  "target": "ratio.unit-rate.language",
+  "verdict": "indirect",
+  "reason": "Naming the rate with per or for each is the labeling step of finding a unit rate.",
+  "via": "ratio.unit-rate.find",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Stating at what rate the lawns were mowed uses rate language with per or for each and the correct units."
+ },
+ {
+  "node": "percent.rate-per-100",
+  "target": "fraction.unit.part-whole",
+  "verdict": "indirect",
+  "reason": "One of 100 equal parts is the unit fraction underlying p parts of size 1/100.",
+  "via": "fraction.non-unit.part-whole",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The quantity is split into 100 equal parts, each a unit fraction 1/100 of the whole, and percent counts p of those parts."
+ },
+ {
+  "node": "percent.of-quantity",
+  "target": "fraction.non-unit.part-whole",
+  "verdict": "indirect",
+  "reason": "Reading p percent as the fraction p/100 comes from the meaning of percent as p of 100 equal parts.",
+  "via": "percent.rate-per-100",
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Expressing p parts of 100 as the fraction p/100 is the non-unit fraction reading of p parts each of size 1/100."
+ },
+ {
+  "node": "percent.of-quantity",
+  "target": "fraction.multiplication.parts-of-partition.whole-number",
+  "verdict": "indirect",
+  "reason": "The partition meaning of (p/100) x Q is the foundation of the symbolic product used in the procedure; the level 3 procedure needs only the symbolic multiplication.",
+  "via": "fraction.multiplication.symbolic",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The formula (p/100) x Q is explained as p parts of Q split into 100 equal parts, with Q a whole quantity."
+ },
+ {
+  "node": "percent.application.find-whole",
+  "target": "expressions.variables",
+  "verdict": "scaffold",
+  "reason": "A placeholder for the unknown (a box or ?) works as in the fraction-division equation nodes; a letter W is a notational choice.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The whole is the unknown W in the equation, so the learner writes an expression with a variable standing for the unknown amount."
+ },
+ {
+  "node": "proportional-relationship.constant.from-values",
+  "target": "ratio.unit-rate.language",
+  "verdict": "indirect",
+  "reason": "Deciding which quantity is per which is the identification step of finding a unit rate.",
+  "via": "ratio.unit-rate.find",
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Deciding which quantity is y per x uses the per and for each rate language to order the quotient."
+ },
+ {
+  "node": "proportional-relationship.constant.equation",
+  "target": "proportional-relationship.equation.write",
+  "verdict": "scaffold",
+  "reason": "Reading k from a given equation needs variables and the constant, not the skill of writing equations from contexts.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The equation y = kx is the standard form that represents a proportional relationship, so k is read from that form."
+ },
+ {
+  "node": "proportional-relationship.equation.write",
+  "target": "equations.one-step",
+  "verdict": "scaffold",
+  "reason": "Multiplying y/x = k by x derives the equation, but y = kx also follows from each unit of x having k of y (equal groups), so equation solving is not required.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The equation y = kx follows from y/x = k by multiplying both sides of the equation by x."
+ },
+ {
+  "node": "proportional-relationship.graph.point-meaning",
+  "target": "proportional-relationship.definition",
+  "verdict": "scaffold",
+  "reason": "A point on any graph means paired values; knowing the definition of a proportional relationship is not needed to explain what one point means.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The statement is about points on the graph of a proportional relationship, which requires knowing what such a relationship is."
+ },
+ {
+  "node": "proportional-relationship.graph.origin-meaning",
+  "target": "proportional-relationship.definition",
+  "verdict": "scaffold",
+  "reason": "The meaning of (0, 0) is explained in the situation (no grapes, no cost); the definition explains why the origin is on the graph but is not needed for that interpretation.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The definition requires y = 0 when x = 0, which is why the graph of a proportional relationship contains (0, 0)."
+ },
+ {
+  "node": "percent.application.decrease-amount",
+  "target": "decimal.operations",
+  "verdict": "scaffold",
+  "reason": "The test problem (25% of $80 = $20) uses whole numbers; decimal subtraction arises only for non-round prices.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The sale price is found by subtracting the decimal discount from the original price."
+ },
+ {
+  "node": "percent.application.percent-change",
+  "target": "percent.of-quantity",
+  "verdict": "scaffold",
+  "reason": "Computing p percent of the original is a check of the answer; finding p comes from the per-100 meaning.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "A percent change of p means the change equals p percent of the original amount."
+ },
+ {
+  "node": "proportional-relationship.graph.make",
+  "target": "proportional-relationship.equation.write",
+  "verdict": "scaffold",
+  "reason": "Drawing the graph of a given y = kx needs the equation read as a rule, not the skill of writing equations from contexts.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The graph is drawn from an equation y = kx, the symbolic representation of the relationship."
+ },
+ {
+  "node": "slope.unit-rate",
+  "target": "proportional-relationship.graph.make",
+  "verdict": "scaffold",
+  "reason": "The graph is given in the test problem; making a graph is not needed to compute its slope.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The statement refers to the graph of y = kx as the line through the origin and (1, k), whose slope is then computed."
+ },
+ {
+  "node": "slope.constant-on-line.explain",
+  "target": "slope.constant-on-line",
+  "verdict": "scaffold",
+  "reason": "The target statement already asserts that the ratios are equal; the level 3 node adds only a numerical check, so the justification can be followed without it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The explanation proves the fact that the slope between any two distinct points of a non-vertical line has the same value."
+ },
+ {
+  "node": "linear-function.line.y-mx.derive",
+  "target": "linear-function.line.y-mx.write",
+  "verdict": "scaffold",
+  "reason": "The target statement contains the conclusion y = mx; the write node adds only the equation form and a numeric task.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The derivation explains the equation y = mx that the write node produces for a line through the origin."
+ },
+ {
+  "node": "linear-function.line.y-mx-plus-b.write",
+  "target": "equations.one-step",
+  "verdict": "scaffold",
+  "reason": "The procedure gives the formula b = y1 - m x x1 to compute; solving an equation is the reason, not a step.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Computing b = y1 - m x x1 solves the equation y1 = m x x1 + b for b, a one-step equation."
+ },
+ {
+  "node": "linear-function.line.y-mx-plus-b.derive",
+  "target": "linear-function.line.y-mx-plus-b.write",
+  "verdict": "scaffold",
+  "reason": "The target statement contains the conclusion y = mx + b; the write node adds the equation form and a numeric task.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The derivation explains the equation y = mx + b that the write node produces for a line crossing the vertical axis at b."
+ },
+ {
+  "node": "linear-function.line.y-mx-plus-b.derive",
+  "target": "equations.one-step",
+  "verdict": "indirect",
+  "reason": "The two moves (multiply by x, add b) are exactly a two-step linear equation solution.",
+  "via": "equations.linear.solve",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Going from (y - b)/x = m to y = mx + b multiplies by x and then adds b, two one-step equation moves."
+ },
+ {
+  "node": "linear-function.model.rate.from-two-values",
+  "target": "linear-function.model.rate.interpret",
+  "verdict": "scaffold",
+  "reason": "The procedure only computes the quotient of differences; the interpretation of the rate is a separate concept node.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The computed value is the rate of change, the amount the output changes per 1-unit increase in the input."
+ },
+ {
+  "node": "linear-function.model.rate.from-description",
+  "target": "rational-numbers.operations",
+  "verdict": "scaffold",
+  "reason": "Step 2 only attaches a sign to the stated rate; signed arithmetic is not performed.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Taking the rate as negative when the output goes down uses signed numbers to show a decrease."
+ },
+ {
+  "node": "linear-function.model.initial.from-two-values",
+  "target": "equations.one-step",
+  "verdict": "scaffold",
+  "reason": "The procedure states the formula b = y1 - m x x1 to compute; solving an equation is the reason, not a step.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 3 finds b by solving y1 = m x x1 + b for b."
+ },
+ {
+  "node": "linear-function.model.initial.from-description",
+  "target": "equations.one-step",
+  "verdict": "scaffold",
+  "reason": "The procedure computes b = y1 - m x x1; solving an equation is the reason, not a step.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 2 finds b by solving y1 = m x x1 + b for b."
+ }
+]

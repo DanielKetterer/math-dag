@@ -1,0 +1,72 @@
+id: linear-function.model.rate.from-two-values
+concept: linear-function
+facet: model
+level: 3
+type: procedure
+name: Find the rate of change from two (x, y) values
+statement: The rate of change of a linear function, from two (x, y) values read from a table or graph
+  with different x, is (y2 - y1)/(x2 - x1).
+procedure:
+- Read two pairs (x1, y1) and (x2, y2) with x1 not equal to x2.
+- Compute m = (y2 - y1)/(x2 - x1).
+assess: A table for a linear function shows x = 2, y = 11 and x = 5, y = 20. Find the rate of change.
+sources:
+  ccss:
+  - 8.F.B.4
+  learning_components:
+  - e1ce9802
+  - c6f0747b
+requires:
+- clause: standard
+  all_of:
+  - node: data.graphs.read
+    relation: procedural
+    points_to: procedure.1
+    why: Reading two (x, y) pairs from a table or graph uses reading values from graphs and tables.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: slope.between-two-points
+    relation: procedural
+    points_to: procedure.2
+    why: Computing m = (y2 - y1)/(x2 - x1) applies the slope formula to the two pairs.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The same formula is taught as slope; function-first curricula teach it as change
+        in y over change in x for a table without slope.'
+    status: disputed
+  - node: slope.constant-on-line
+    relation: justificatory
+    points_to: procedure.1
+    why: Any two pairs with different x give the same m because the rate of a linear function is constant
+      like slope on a line.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Constancy of the rate for any two pairs can come from linearity defined as constant
+        rate, not from slope on a line.'
+    status: disputed
+  - node: rational-numbers.operations
+    relation: definitional
+    points_to: statement
+    why: Differences and quotients are negative for a decreasing function; the statement does not restrict
+      to increasing ones.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

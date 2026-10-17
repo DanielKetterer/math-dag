@@ -1,0 +1,109 @@
+id: fraction.division.symbolic
+concept: division
+facet: unknown-factor
+level: 3
+type: procedure
+name: Divide fractions with the rule (a/b) divided by (c/d) = (a x d)/(b x c)
+statement: Compute a quotient of two fractions, the divisor not 0, by multiplying the dividend by the
+  reciprocal of the divisor.
+procedure:
+- Check that the divisor c/d is not 0 (c is not 0).
+- Rewrite (a/b) divided by (c/d) as (a/b) x (d/c).
+- Multiply numerators and denominators to get (a x d)/(b x c), and simplify if asked.
+assess: Compute (5/6) divided by (5/12) and (2/3) divided by (3/4).
+sources:
+  ccss:
+  - 6.NS.A.1
+  learning_components:
+  - bc5dfb39
+requires:
+- clause: standard
+  all_of:
+  - node: division.fractions.rule
+    relation: procedural
+    points_to: procedure.2
+    why: Rewriting the quotient as (a/b) x (d/c) applies the rule that dividing by c/d equals multiplying
+      by the reciprocal d/c.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.symbolic
+    relation: procedural
+    points_to: procedure.3
+    why: Multiplying numerators and denominators to get (a x d)/(b x c) is the symbolic multiplication
+      of two fractions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.multiply-principle
+    relation: procedural
+    points_to: procedure.3
+    why: Simplifying the result, as in 60/30 or 12/18, divides numerator and denominator by a common factor,
+      an equivalent-fraction step.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: factors-multiples.whole-number
+    relation: procedural
+    points_to: procedure.3
+    why: Simplifying the product to lowest terms requires finding a common factor or the greatest common
+      factor of the numerator and denominator.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Simplification is an optional step (''if asked''); finding a common factor is
+        needed only when simplifying, as in 60/30, and the map''s factors-multiples node may cover divisibility
+        only.'
+    status: disputed
+  - node: division.by-zero.undefined
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 checks that the divisor is not 0, which rests on knowing that division by zero has no
+      value.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'necessary: Knowing the divisor must not be 0 is needed for step 1 (note: this node id does
+        not appear in index.txt, and e479 names a spelling variant).'
+    status: proposed
+  - node: fraction.reciprocal
+    relation: definitional
+    points_to: statement
+    why: The statement multiplies by the reciprocal of the divisor, so the learner must know that d/c
+      is the reciprocal of c/d.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'necessary: The reciprocal d/c of c/d must be known to rewrite the quotient (note: fraction.reciprocal
+        is not in index.txt).'
+    status: proposed
+related:
+- node: division.by-zero.undefined
+  relation: same_idea_different_form
+  note: Same target as e478 under a different spelling (dot instead of hyphen); neither id is in index.txt,
+    so one should be kept and the id fixed.
+status: proposed

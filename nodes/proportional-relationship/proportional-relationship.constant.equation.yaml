@@ -1,0 +1,73 @@
+id: proportional-relationship.constant.equation
+concept: proportional-relationship
+facet: core
+level: 3
+type: procedure
+name: Find the constant of proportionality from an equation
+statement: When a proportional relationship's equation is written as y = kx, the constant of proportionality
+  is the coefficient k of x.
+procedure:
+- If needed, rewrite the equation in the form y = kx.
+- Read k as the coefficient of x.
+assess: Find the constant of proportionality in y = x/3 and in 2y = 7x.
+sources:
+  ccss:
+  - 7.RP.A.2.b
+  learning_components:
+  - 3c7dcfad
+requires:
+- clause: standard
+  all_of:
+  - node: proportional-relationship.constant
+    relation: definitional
+    points_to: statement
+    why: The coefficient read from the equation is the constant of proportionality defined as the common
+      value of y/x.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equations.one-step
+    relation: procedural
+    points_to: assess
+    why: Rewriting 2y = 7x as y = (7/2)x isolates y by dividing both sides by 2, a one-step equation move.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Rewriting 2y = 7x as y = (7/2)x is an ''if needed'' step used by the test problem;
+        the statement is about equations already in the form y = kx.'
+    status: proposed
+  - node: expressions.variables
+    relation: procedural
+    points_to: procedure.2
+    why: Reading k as the coefficient of x requires recognizing the numerical factor in an expression
+      with a variable.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.quotient.symbolic
+    relation: definitional
+    points_to: statement
+    why: Reading x/3 as (1/3)x and 7x/2 as (7/2)x needs a/b as a divided by b for the test problem's coefficients.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

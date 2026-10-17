@@ -1,0 +1,81 @@
+id: decimal.tenths.notation
+concept: decimal
+facet: decimal-fraction
+level: 3
+type: representation
+name: Decimal notation for tenths
+statement: A fraction with denominator 10 is written in decimal notation with its number of tenths shown
+  as whole ones before the point and the remaining tenths in the first place after the point (3/10 = 0.3,
+  14/10 = 1.4).
+assess: Write 7/10 and 14/10 in decimal notation.
+sources:
+  ccss:
+  - 4.NF.C.6
+  learning_components:
+  - 86f60c17
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.base-ten
+    relation: representational
+    points_to: statement
+    why: The first place after the point is a new place-value position worth one tenth, extending base-ten
+      place value.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: The number of tenths in a/10 is a parts of size 1/10 of one whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.meaning
+    relation: definitional
+    points_to: statement
+    why: Writing 14/10 as 1.4 splits the amount into whole ones and remaining tenths, as in a mixed number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Mixed-number meaning is one way to see ones plus remaining tenths; the decomposition
+        14/10 = 10/10 + 4/10 with 10/10 = 1 gives it without mixed-number notation.'
+    status: disputed
+  - node: fraction.decompose.equation
+    relation: representational
+    points_to: statement
+    why: Seeing 14/10 as 10/10 + 4/10 is a decomposition of a fraction into like-denominator parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Splitting 14/10 into whole ones and remaining tenths can be done by decomposing
+        into 10/10 + 4/10, or by the mixed-number meaning 1 4/10, or by regrouping ten tenths as one.'
+    status: disputed
+  - node: fraction.whole-number.as-fraction
+    relation: definitional
+    points_to: statement
+    why: Showing 14/10 as one whole one plus 4 tenths needs 10/10 = 1.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

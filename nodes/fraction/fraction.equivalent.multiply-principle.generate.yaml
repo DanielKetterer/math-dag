@@ -1,0 +1,49 @@
+id: fraction.equivalent.multiply-principle.generate
+concept: fraction
+facet: measure
+level: 3
+type: procedure
+name: Generate equivalent fractions with a/b = (n x a)/(n x b)
+statement: Produce a fraction equivalent to a/b by multiplying its numerator and denominator by the same
+  whole number n greater than 0.
+procedure:
+- Choose a whole number n greater than 0.
+- Multiply the numerator by n and the denominator by n.
+- Write the result as the equivalent fraction.
+assess: Write two fractions equivalent to 3/5.
+sources:
+  ccss:
+  - 4.NF.A.1
+  learning_components:
+  - c3b684c1
+  - 13498e57
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.equivalent.multiply-principle
+    relation: definitional
+    points_to: statement
+    why: The result is accepted as equivalent to a/b because of the rule a/b = (n x a)/(n x b).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies the numerator and the denominator by n, for example 3 x 2 and 5 x 2 for 3/5.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

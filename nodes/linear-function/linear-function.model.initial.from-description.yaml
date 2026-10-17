@@ -1,0 +1,68 @@
+id: linear-function.model.initial.from-description
+concept: linear-function
+facet: model
+level: 3
+type: procedure
+name: Find the initial value from a verbal description
+statement: From a description of a linear relationship, the initial value is the output when the input
+  is 0, such as a starting amount or a fixed fee.
+procedure:
+- If the description states the output at input 0 (a starting amount or fixed fee), take it as b.
+- Otherwise find m and a stated pair (x1, y1), and compute b = y1 - m x x1.
+assess: A candle burns 2 cm per hour. After 3 hours it is 18 cm tall. How tall was it at the start?
+sources:
+  ccss:
+  - 8.F.B.4
+  learning_components:
+  - 411f2a23
+  - c8e759d8
+requires:
+- clause: standard
+  all_of:
+  - node: linear-function.model.initial.interpret
+    relation: definitional
+    points_to: statement
+    why: The initial value is the output at input 0, such as a starting amount or fixed fee, which is
+      its meaning in context.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.model.rate.from-description
+    relation: procedural
+    points_to: procedure.2
+    why: Finding m from the description, including a negative rate for the burning candle, comes before
+      computing b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-numbers.operations
+    relation: procedural
+    points_to: assess
+    why: The candle problem has a negative rate of -2 cm per hour, so computing b uses signed arithmetic.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The candle problem''s negative rate of -2 cm per hour needs signed arithmetic
+        in the test problem, not in finding an initial value in general.'
+    status: proposed
+related:
+- node: linear-function.model.initial.from-two-values
+  relation: same_idea_different_form
+  note: Step 2 repeats the same computation as the table-or-graph procedure; either can be learned without
+    the other.
+status: proposed

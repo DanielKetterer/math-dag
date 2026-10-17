@@ -1,0 +1,53 @@
+id: fraction.multiple-of-unit
+concept: fraction
+facet: measure
+level: 2
+type: concept
+name: A fraction as a whole-number multiple of a unit fraction
+statement: For any whole number a and denominator b, a/b = a x (1/b).
+assess: Write 5/4 as a product of a whole number and a unit fraction.
+sources:
+  ccss:
+  - 4.NF.B.4.a
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.non-unit.unit-sum
+    relation: definitional
+    points_to: statement
+    why: Writing a/b as a x (1/b) restates the sum of a copies of 1/b as a product.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: The product a x (1/b) means a equal groups, each of size 1/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.as-number
+    relation: definitional
+    points_to: statement
+    why: The product multiplies a whole number by the number 1/b, so the unit fraction must be a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

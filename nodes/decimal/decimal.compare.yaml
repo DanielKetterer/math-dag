@@ -1,0 +1,90 @@
+id: decimal.compare
+concept: decimal
+facet: decimal-fraction
+level: 3
+type: procedure
+name: Compare two decimals to hundredths
+statement: Compare two decimals to hundredths by rewriting each as a whole number of hundredths; the decimal
+  with more hundredths is greater.
+procedure:
+- Write each decimal with two digits after the point, appending a 0 if it has only tenths.
+- Rewrite each as a total number of hundredths (1.20 is 120 hundredths, 0.95 is 95 hundredths).
+- Compare the two whole numbers; the larger count gives the larger decimal, and equal counts mean the
+  decimals are equal.
+assess: Which is greater, 0.5 or 0.45?
+sources:
+  ccss:
+  - 4.NF.C.7
+  learning_components:
+  - f44fbaad
+requires:
+- clause: standard
+  all_of:
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 writes each decimal with two places after the point, reading them as hundredths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.tenths-to-hundredths
+    relation: procedural
+    points_to: procedure.1
+    why: Appending a 0 to a decimal in tenths rewrites a number of tenths as hundredths, as in 5/10 =
+      50/100.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.symbols
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 compares the two whole numbers of hundredths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.compare.same-denominator
+    relation: definitional
+    points_to: statement
+    why: With both decimals as counts of hundredths, the one with more hundredths is greater, as with
+      fractions sharing a denominator.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.to-fraction
+    relation: procedural
+    points_to: procedure.2
+    why: Writing 1.20 as 120 hundredths is rewriting a mixed number as a single fraction.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A decimal with a ones digit can be read as a whole number of hundredths by reading
+        each one as 100 hundredths, without the mixed-number conversion; the assessment uses decimals
+        below 1.'
+    status: disputed
+status: proposed

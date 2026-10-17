@@ -1,0 +1,76 @@
+id: fraction.mixed-number.decompose.model
+concept: fraction
+facet: measure
+level: 2
+type: procedure
+name: Decompose a mixed number into a sum of same-denominator fractions with a model
+statement: Using a model of n a/b in which each whole is b parts of size 1/b, split all the parts into
+  groups in more than one way; each grouping is a sum of fractions with denominator b.
+procedure:
+- Show n a/b on a model, with each of the n wholes partitioned into b parts of size 1/b, plus a more parts.
+- Separate all n x b + a parts into two or more groups.
+- Name each group as (number of parts in the group)/b.
+- Regroup the parts differently to get another decomposition.
+assess: Shade 1 3/4 on fraction strips of fourths, then group the shaded fourths to show two different
+  ways to break 1 3/4 into a sum of fourths.
+sources:
+  ccss:
+  - 4.NF.B.3.b
+  learning_components:
+  - 8dc1a96f
+  - a3248bfb
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.mixed-number.meaning
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 shows n a/b as n wholes plus a parts of size 1/b, which is the meaning of the mixed number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.whole-number.as-fraction
+    relation: definitional
+    points_to: procedure.1
+    why: Step 1 partitions each whole into b parts of size 1/b, using that one whole is b/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 counts all n x b + a parts, which needs the product of n wholes and b parts per whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.decompose.model
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 to 4 group the parts, name each group over b and regroup, exactly as in decomposing a
+      fraction with a model.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,83 @@
+id: fraction.multiply-whole.rule
+concept: fraction
+facet: measure
+level: 3
+type: concept
+name: The rule n x (a/b) = (n x a)/b
+statement: For any whole number n and fraction a/b, n x (a/b) = (n x a)/b.
+assess: 'True or false: 4 x (3/5) = 12/20. True or false: 4 x (3/5) = 12/5. Say which rule decides it.'
+sources:
+  ccss:
+  - 4.NF.B.4.b
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.multiply-whole.as-unit-multiple
+    relation: justificatory
+    points_to: statement
+    why: The rule is explained by rewriting n x (a/b) as (n x a) x (1/b) and reading that as (n x a)/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The unit-multiple rewriting is one explanation of the rule; repeated addition
+        of a/b gives the same result without it.'
+    status: disputed
+  - node: fraction.multiple-of-unit
+    relation: definitional
+    points_to: statement
+    why: Both sides of the rule are rewritten using a/b = a x (1/b), including (n x a)/b = (n x a) x (1/b).
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The rule can be reached by repeated addition of like fractions rather than through
+        unit fractions.'
+    status: disputed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: Every route reads n x (a/b) as n equal groups of a/b; none of the proposed edges supplies the
+      meaning of this product.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+- clause: critic-route-1
+  note: Repeated addition of a/b n times with the like-denominator rule.
+  all_of:
+  - node: fraction.addition.like-denominators
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Repeated addition of a/b n times with the like-denominator
+      rule.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Repeated addition of a/b n times with the like-denominator
+      rule.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: fraction.as-number
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Repeated addition of a/b n times with the like-denominator
+      rule.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

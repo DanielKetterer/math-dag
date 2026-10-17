@@ -1,0 +1,62 @@
+id: ratio.equivalent
+concept: ratio
+facet: composed-unit
+level: 2
+type: concept
+name: Equivalent ratios
+statement: Two ratios a:b and c:d are equivalent when there is one positive number n with c = n x a and
+  d = n x b; they describe the same relationship between the quantities.
+assess: Are 4:6 and 10:15 equivalent ratios? If so, find the number n.
+sources:
+  ccss:
+  - 6.RP.A.1
+  learning_components:
+  - ff25751a
+requires:
+- clause: standard
+  all_of:
+  - node: ratio.composed-unit
+    relation: definitional
+    points_to: statement
+    why: Equivalent ratios are different counts of the same composite unit, so the for-every relationship
+      must be understood first.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.scaling.resize
+    relation: definitional
+    points_to: statement
+    why: The statement c = n x a and d = n x b with any positive n, including fractions, treats multiplication
+      as resizing both quantities by the same factor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Fractional n is a resizing of both quantities; the other route reads n as repeated
+        or split composite units.'
+    status: disputed
+  - node: fraction.quotient.symbolic
+    relation: definitional
+    points_to: assess
+    why: Finding n for 4:6 and 10:15 requires writing the quotient 10 divided by 4 as the number 5/2.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Finding n for 4:6 and 10:15 requires expressing 10 divided by 4 as 5/2 in the
+        test problem, not in the idea of equivalence.'
+    status: proposed
+status: proposed

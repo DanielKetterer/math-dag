@@ -1,0 +1,73 @@
+id: multiplication.array-area.fraction-sides.explain
+concept: multiplication
+facet: array-area
+level: 4
+type: justification
+name: Explain why tiling and multiplying give the same area
+statement: With both sides written as p/n and q/n, tiling gives p x q squares of area 1/(n x n), an area
+  of (p x q)/(n x n), which is exactly (p/n) x (q/n) by the product rule; so for any fractional side lengths
+  the two methods agree.
+assess: Explain why tiling a 2/3-by-4/5 rectangle with small squares gives the same area as computing
+  (2/3) x (4/5), and why the same argument works for any fractional side lengths.
+sources:
+  ccss:
+  - 5.NF.B.4.b
+  learning_components:
+  - 7e715af1
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.array-area.fraction-sides.tiling
+    relation: justificatory
+    points_to: statement
+    why: The explanation uses the tiling count of p x q squares each of area 1/(n x n).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.product-rule
+    relation: justificatory
+    points_to: statement
+    why: The explanation shows (p x q)/(n x n) is exactly (p/n) x (q/n) by the product rule.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.array-area.fraction-sides.multiply
+    relation: definitional
+    points_to: statement
+    why: The statement compares the tiling area with the area found by multiplying side lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.multiply-principle
+    relation: justificatory
+    points_to: statement
+    why: The argument for any side lengths relies on rewriting both fractions over a common denominator
+      n by the multiplication principle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

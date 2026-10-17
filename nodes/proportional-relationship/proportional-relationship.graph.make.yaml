@@ -1,0 +1,173 @@
+id: proportional-relationship.graph.make
+concept: proportional-relationship
+facet: core
+level: 3
+type: representation
+name: Graph a proportional relationship
+statement: The graph of a proportional relationship y = kx is the line through the origin and the point
+  (1, k).
+procedure:
+- Plot (0, 0).
+- Plot (x, k x x) for one convenient x not 0.
+- Draw the line through the two points (only the part where both quantities make sense, if the situation
+  restricts them).
+assess: Graph y = 2.5x for x from 0 to 4.
+sources:
+  ccss:
+  - 8.EE.B.5
+  learning_components:
+  - 0edaa02c
+requires:
+- clause: standard
+  all_of:
+  - node: proportional-relationship.test.graph
+    relation: definitional
+    points_to: statement
+    why: The statement says the graph is a line through the origin, which is what a graph of a proportional
+      relationship looks like.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: proportional-relationship.graph.unit-rate-point
+    relation: definitional
+    points_to: statement
+    why: The statement uses the point (1, k) on the line, whose meaning is 1 unit of x corresponding to
+      k units of y.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The point (1, k) can be justified by its meaning, or simply obtained by evaluating
+        y = kx at x = 1.'
+    status: disputed
+  - node: coordinate-plane.first-quadrant
+    relation: procedural
+    points_to: procedure.2
+    why: Plotting (0, 0) and the point (x, k x x) and drawing the line through them is done in the first
+      quadrant.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variables
+    relation: procedural
+    points_to: procedure.2
+    why: Computing the second point (x, k x x) evaluates the expression kx at a chosen value of x.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.operations
+    relation: procedural
+    points_to: assess
+    why: Graphing y = 2.5x requires computing a point such as (2, 5) by multiplying a decimal slope by
+      x.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Multiplying 2.5 by x is demanded by the test problem y = 2.5x.'
+    status: proposed
+- clause: critic-route-1
+  note: Plot several (x, kx) pairs from a ratio table and draw the line through them
+  all_of:
+  - node: proportional-relationship.test.graph
+    relation: definitional
+    points_to: statement
+    why: The statement says the graph is a line through the origin, which is what a graph of a proportional
+      relationship looks like.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.first-quadrant
+    relation: procedural
+    points_to: procedure.2
+    why: Plotting (0, 0) and the point (x, k x x) and drawing the line through them is done in the first
+      quadrant.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variables
+    relation: procedural
+    points_to: procedure.2
+    why: Computing the second point (x, k x x) evaluates the expression kx at a chosen value of x.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.operations
+    relation: procedural
+    points_to: assess
+    why: Graphing y = 2.5x requires computing a point such as (2, 5) by multiplying a decimal slope by
+      x.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Multiplying 2.5 by x is demanded by the test problem y = 2.5x.'
+    status: proposed
+  - node: ratio.table.plot
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Plot several (x, kx) pairs from a ratio table and
+      draw the line through them'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: ratio.table.make
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Plot several (x, kx) pairs from a ratio table and
+      draw the line through them'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

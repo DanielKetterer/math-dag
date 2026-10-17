@@ -1,0 +1,50 @@
+id: slope.between-two-points
+concept: slope
+facet: core
+level: 3
+type: concept
+name: Slope between two points
+statement: The slope between two points (x1, y1) and (x2, y2) with x1 not equal to x2 is (y2 - y1)/(x2
+  - x1), the vertical change divided by the horizontal change.
+assess: Find the slope between (2, 5) and (6, -3).
+sources:
+  ccss:
+  - 8.EE.B.6
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: coordinate-plane.four-quadrants
+    relation: representational
+    points_to: statement
+    why: The two points may lie in any quadrant, as in (2, 5) and (6, -3), so they are read and located
+      in all four quadrants.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-numbers.operations
+    relation: definitional
+    points_to: statement
+    why: The vertical and horizontal changes are signed differences and their quotient is a signed rational
+      number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: ratio.unit-rate
+  relation: generalizes
+  note: A unit rate is the special case of slope for proportional graphs (slope.unit-rate comes after
+    this node); the slope formula is a quotient of changes and needs no unit-rate concept.
+status: proposed

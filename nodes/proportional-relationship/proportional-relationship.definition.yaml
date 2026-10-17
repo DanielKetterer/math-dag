@@ -1,0 +1,64 @@
+id: proportional-relationship.definition
+concept: proportional-relationship
+facet: core
+level: 3
+type: concept
+name: What a proportional relationship is
+statement: Two quantities x and y are in a proportional relationship when the quotient y/x has the same
+  value for every pair of corresponding values with x not 0, and y = 0 when x = 0.
+assess: A gym charges $20 to join plus $10 per visit. Is the total cost proportional to the number of
+  visits? Explain using the definition.
+sources:
+  ccss:
+  - 7.RP.A.2
+  - 7.RP.A.2.a
+  learning_components:
+  - b02c3de8
+  - 539cab15
+requires:
+- clause: standard
+  all_of:
+  - node: ratio.equivalent
+    relation: definitional
+    points_to: statement
+    why: Every pair having the same quotient y/x means all pairs are in equivalent ratios, the meaning
+      of equivalent ratios.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement is the constant-quotient definition, which can be learned directly
+        from unit rates; seeing all pairs as equivalent ratios is the other way into the idea.'
+    status: disputed
+  - node: ratio.unit-rate
+    relation: definitional
+    points_to: statement
+    why: The quotient y/x for a pair is the unit rate of that pair, so proportionality says all pairs
+      share one unit rate.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.unit-rate.find
+    relation: procedural
+    points_to: assess
+    why: Deciding whether the gym cost is proportional requires computing the quotient of total cost by
+      number of visits.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Computing cost divided by visits for the gym is needed to apply the definition
+        in the test problem, not to state it.'
+    status: proposed
+status: proposed

@@ -1,0 +1,79 @@
+id: fraction.equivalent.multiply-principle.recognize
+concept: fraction
+facet: measure
+level: 3
+type: procedure
+name: Recognize equivalent fractions with a/b = (n x a)/(n x b)
+statement: Decide whether two fractions are equivalent by rewriting both over a common denominator with
+  the multiplication principle and comparing numerators.
+procedure:
+- Find a common multiple of the two denominators.
+- Rewrite each fraction over that denominator by multiplying its numerator and denominator by the same
+  whole number.
+- The fractions are equivalent exactly when the rewritten numerators are equal.
+assess: Is 4/6 equivalent to 6/9? Is 6/8 equivalent to 3/5?
+sources:
+  ccss:
+  - 4.NF.A.1
+  learning_components:
+  - 5f61cb2a
+  - df5f3fb2
+requires:
+- clause: standard
+  all_of:
+  - node: factors-multiples.whole-number
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds a common multiple of the two denominators, such as 18 for 6 and 9.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.multiply-principle.generate
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 rewrites each fraction over the common denominator by multiplying its numerator and denominator
+      by one whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.compare.same-denominator
+    relation: justificatory
+    points_to: procedure.3
+    why: Step 3 says fractions over one denominator are equal exactly when numerators are equal, since
+      more parts means a greater fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.multiply-principle
+    relation: definitional
+    points_to: statement
+    why: The statement uses the multiplication principle to justify that each rewritten fraction equals
+      the original.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

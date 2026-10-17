@@ -1,0 +1,47 @@
+id: slope.constant-on-line
+concept: slope
+facet: core
+level: 3
+type: concept
+name: Slope is the same between any two points of a line
+statement: For a non-vertical line, the slope between any two distinct points on it has the same value,
+  called the slope m of the line.
+assess: A(0, 1), B(2, 4), and C(6, 10) lie on one line. What must be true of the slopes AB, BC, and AC?
+  Check by computing.
+sources:
+  ccss:
+  - 8.EE.B.6
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: slope.between-two-points
+    relation: definitional
+    points_to: statement
+    why: The statement compares the slopes computed between different pairs of points, each given by the
+      slope formula.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.multiply-principle.recognize
+    relation: procedural
+    points_to: assess
+    why: Checking that slopes such as 3/2, 6/4, and 9/6 are the same requires recognizing equivalent fractions.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Recognizing 3/2, 6/4, and 9/6 as equal is needed to check the test problem, not
+        to state the concept.'
+    status: proposed
+status: proposed

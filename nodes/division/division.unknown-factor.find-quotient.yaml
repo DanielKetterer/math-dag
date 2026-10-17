@@ -1,0 +1,51 @@
+id: division.unknown-factor.find-quotient
+concept: division
+facet: unknown-factor
+level: 3
+type: procedure
+name: Find a quotient by finding an unknown factor
+statement: Find a divided by b by finding the unknown factor in b x ? = a. This gives a whole-number quotient
+  only when b is not 0 and a is a multiple of b; otherwise skip-counting by b passes a without landing
+  on it.
+procedure:
+- Rewrite a divided by b = ? as b x ? = a.
+- Find the whole number that makes b x ? = a true, by recalling a multiplication fact or by skip-counting
+  by b from 0 until reaching a and counting the skips.
+- That number is the quotient.
+assess: Find 56 divided by 8 by thinking of a multiplication fact. Write the fact you used.
+sources:
+  ccss:
+  - 3.OA.B.6
+  learning_components:
+  - 6c50e14a
+requires:
+- clause: standard
+  all_of:
+  - node: division.unknown-factor.rewrite
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites a divided by b = ? as b x ? = a before any search for the number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds the number that makes b x ? = a true by recalling a single-digit multiplication
+      fact or skip-counting by b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

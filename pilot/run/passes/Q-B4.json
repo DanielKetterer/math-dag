@@ -1,0 +1,1967 @@
+{
+ "pass": "Q",
+ "batch": "B4",
+ "nodes": {
+  "division.fractions.measurement": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.measurement.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The quotient is defined as the number of equal groups, here groups of size c/d, so the grouping meaning of division is applied to fractions."
+      },
+      {
+       "node": "division.whole-by-unit-fraction.interpret",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Counting how many 1/b parts fit in a whole number is the special case that this statement extends to any group size c/d."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A leftover amount counts as the fraction of a group it fills, which treats the group as the whole and the leftover as some of its equal parts."
+      },
+      {
+       "node": "division.measurement.situation-to-expression",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks the learner to model a serving situation as grouping and write a division expression for it."
+      }
+     ]
+    }
+   ]
+  },
+  "division.fractions.partitive": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.partitive.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The quotient is the size of one whole group when the amount in a known share is given, which is the sharing meaning of division."
+      },
+      {
+       "node": "fraction.multiplication.parts-of-partition.whole-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Saying c/d of a group holds a/b uses c/d of a quantity, meaning c of the d equal parts of the group."
+      },
+      {
+       "node": "division.partitive.situation-to-expression",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks the learner to model the jug situation as finding a whole from a share and write a division expression."
+      }
+     ]
+    }
+   ]
+  },
+  "division.fractions.unknown-factor": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement defines the quotient as the unknown factor q in a multiplication, which is the unknown-factor meaning of division."
+      },
+      {
+       "node": "fraction.multiplication.parts-of-partition.fraction",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation (c/d) x q = a/b multiplies two fractions, whose meaning is c parts of q split into d equal parts."
+      },
+      {
+       "node": "division.unknown-factor.rewrite",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks the learner to rewrite (2/3) divided by (3/4) as a multiplication equation with an unknown factor."
+      },
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Deciding whether 8/9 is the answer requires multiplying (3/4) x (8/9) and comparing the product with 2/3."
+      }
+     ]
+    }
+   ]
+  },
+  "division.fractions.measurement.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.fractions.measurement",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement finds how many groups of size c/d fit in a/b, which is exactly the grouping meaning of fraction division."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle.generate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 rewrites a/b as (a x d) parts and c/d as (c x b) parts of the same b x d partition using equivalent fractions."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 names r leftover parts of a group of c x b parts as the fraction r/(c x b) of a group."
+      },
+      {
+       "node": "fraction.mixed-number.meaning",
+       "relation": "representational",
+       "points_to": "procedure.5",
+       "scope": "concept",
+       "why": "Step 5 states the quotient as a number of full groups plus a fraction of a group, which is a mixed number."
+      }
+     ]
+    }
+   ]
+  },
+  "division.fractions.rule": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.fractions.unknown-factor",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The left side (a/b) divided by (c/d) is meaningful as the number whose product with c/d is a/b, so the rule states a value for that unknown factor."
+      },
+      {
+       "node": "fraction.multiplication.product-rule",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The right side (a x d)/(b x c) equals (a/b) x (d/c) by the product rule, which is how the rule expresses division as multiplication."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.division.symbolic": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "new:division.by-zero-undefined",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 checks that the divisor is not 0, which rests on knowing that division by zero has no value."
+      },
+      {
+       "node": "division.fractions.rule",
+       "relation": "definitional",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 rewrites the quotient as a product using the rule (a/b) divided by (c/d) = (a x d)/(b x c)."
+      },
+      {
+       "node": "new:fraction.reciprocal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement multiplies by the reciprocal of the divisor, so the learner must know that d/c is the reciprocal of c/d."
+      },
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 multiplies numerators and denominators of the two fractions to get (a x d)/(b x c)."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Simplifying in step 3, as in 60/30 = 2, divides numerator and denominator by a common factor using a/b = (n x a)/(n x b)."
+      }
+     ]
+    }
+   ]
+  },
+  "division.fractions.check-by-multiplication": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.fractions.unknown-factor",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The claim that q is the quotient because (c/d) x q = a/b is the unknown-factor definition of fraction division."
+      },
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Verifying the claim means computing the product (c/d) x q and seeing that it equals a/b."
+      }
+     ]
+    }
+   ]
+  },
+  "division.fractions.application.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.fractions.measurement.model",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner draws the visual fraction model and reads off the number of groups, which is the procedure of that model."
+      },
+      {
+       "node": "division.fractions.measurement",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Recognizing that the story asks how many groups of one fractional size fit in an amount uses the grouping meaning of fraction division."
+      }
+     ]
+    }
+   ]
+  },
+  "division.fractions.application.equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.fractions.unknown-factor",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner writes (c/d) x ? = a/b to relate the two known fractions, which is the unknown-factor form of fraction division."
+      },
+      {
+       "node": "fraction.division.symbolic",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Solving the equation or the expression (a/b) divided by (c/d) = ? is done by the symbolic fraction division procedure."
+      },
+      {
+       "node": "multiplication.array-area.fraction-sides.multiply",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The land problem gives area and length and needs area = length x width with fraction side lengths to set up the equation."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.composed-unit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "'For every a there are b' means each group of a units of one quantity comes with a group of b of the other, repeated as equal groups."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.notation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.composed-unit",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The notation a:b or 'a to b' writes down the for-every relationship between the two quantities, in the stated order."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.equivalent": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.composed-unit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Equivalent ratios are two descriptions of the same for-every relationship between the quantities."
+      },
+      {
+       "node": "multiplication.scaling.resize",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The definition c = n x a and d = n x b resizes both quantities by the same factor n, which may be a fraction."
+      },
+      {
+       "node": "fraction.quotient.symbolic",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Finding n for 4:6 and 10:15 means dividing 10 by 4, a quotient of whole numbers that is not a whole number."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.unit-rate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.composed-unit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The unit rate is the amount of the first quantity for 1 unit of the second, a for-every statement with the second quantity equal to 1."
+      },
+      {
+       "node": "ratio.equivalent",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The unit rate a/b is the first entry of the equivalent ratio (a/b):1 obtained by resizing both quantities by 1/b."
+      },
+      {
+       "node": "fraction.quotient.equal-sharing",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The amount for 1 unit of the second quantity is a shared equally among b units, so it equals a/b."
+      },
+      {
+       "node": "decimal.operations",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem 150:4 has unit rate 37.5, which requires dividing 150 by 4 as a decimal."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.unit-rate.language": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.unit-rate",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sentence 'a/b units of the first quantity per 1 unit of the second' states the unit rate in words, so the learner needs the unit rate itself."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.unit-rate.find": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.unit-rate",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The quotient a divided by b is the unit rate, the amount of the first quantity for 1 unit of the second."
+      },
+      {
+       "node": "fraction.quotient.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 divides a by b, and when a is smaller than b the exact quotient is the fraction a/b."
+      },
+      {
+       "node": "ratio.unit-rate.language",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 labels the result in rate language as units of the first quantity per 1 unit of the second."
+      },
+      {
+       "node": "decimal.operations",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The juice problem 9 divided by 12 gives a cost per can of 0.75 dollars, a decimal quotient."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.tape-diagram": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.composed-unit",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The two tapes of a and b equal units show the for-every relationship, so the learner must already read a ratio that way."
+      },
+      {
+       "node": "addition.whole-number",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "When a total is known, step 3 divides by the number of units both tapes cover, which is the sum a + b."
+      },
+      {
+       "node": "division.partitive.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 divides the known amount into equal units, giving the size of each unit as an equal share."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 multiplies the unit size by the number of units, which counts that many equal groups of the unit size."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.double-number-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.equivalent",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The aligned tick marks are pairs of values in equivalent ratios, which is the defining property of the diagram."
+      },
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each of the two lines is a number line starting at 0 with values marked as lengths from 0."
+      },
+      {
+       "node": "division.multi-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "To find the distance for 2 gallons the learner divides 150 miles by 5 gallons to get the miles for 1 gallon."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.application.missing-value": {
+   "routes": [
+    {
+     "clause": "table",
+     "edges": [
+      {
+       "node": "ratio.table.missing-value",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner builds or extends a ratio table and finds the missing entry by multiplying a complete row by the same number."
+      }
+     ]
+    },
+    {
+     "clause": "tape-diagram",
+     "edges": [
+      {
+       "node": "ratio.tape-diagram",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner draws a tape diagram with the given ratio, marks the known quantity, and finds the unit size to get the other quantity."
+      }
+     ]
+    },
+    {
+     "clause": "double-number-line",
+     "edges": [
+      {
+       "node": "ratio.double-number-line",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner marks the given ratio and the known value on a double number line and reads the corresponding value on the other line."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.table.make": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.notation",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes the ratio a:b as the first row with one column per quantity, keeping the stated order."
+      },
+      {
+       "node": "ratio.equivalent",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds rows (n x a):(n x b), which are the equivalent ratios obtained by scaling both quantities by n."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Computing n x a and n x b for n = 2, 3, 4 in each new row uses single-digit multiplication facts."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.table.missing-value": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.table.make",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure acts on a table whose rows are equivalent ratios, the object built by making a ratio table."
+      },
+      {
+       "node": "ratio.equivalent",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Multiplying both entries of a complete row by the same number n gives an equivalent ratio, which is why the method works."
+      },
+      {
+       "node": "fraction.quotient.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 divides the known entry by the matching entry, and n may be a fraction such as 9 divided by 6."
+      },
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 multiplies the other entry by n, which may be a fraction, as in 4 x 3/2."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.table.plot": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.first-quadrant",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 plots each point x units right and y units up from the origin in the first quadrant."
+      },
+      {
+       "node": "ratio.table.make",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rows being plotted are the pairs of a table of equivalent ratios, so the learner must know such a table."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.table.compare": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.table.make",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 makes a table of equivalent ratios for each of the two ratios."
+      },
+      {
+       "node": "factors-multiples.whole-number",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 extends both tables to a shared first value, which is a common multiple of a and c."
+      },
+      {
+       "node": "comparing.whole-numbers.symbols",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 compares the second values in the shared rows to see which is larger."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.application.unit-rate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.unit-rate.find",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner finds the unit rate from the given pair of amounts, such as 4 lawns in 7 hours."
+      },
+      {
+       "node": "ratio.unit-rate",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Using the unit rate to find another amount relies on its meaning as the amount for 1 unit of the other quantity."
+      },
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding another amount at the same rate multiplies the unit rate, often a fraction like 4/7, by the new quantity."
+      }
+     ]
+    }
+   ]
+  },
+  "percent.rate-per-100": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.composed-unit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Percent is a for-every statement with the second quantity fixed at 100 equal parts."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "p parts out of 100 equal parts of a quantity is p parts of size 1/100 of that quantity."
+      }
+     ]
+    }
+   ]
+  },
+  "percent.of-quantity": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "percent.rate-per-100",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The factor p/100 is the rate of p parts per 100 equal parts, which is what p percent means."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes p parts of 100 as the fraction p/100, a non-unit fraction of the whole."
+      },
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the fraction p/100 by the quantity Q, which is a whole number or fraction times a fraction."
+      }
+     ]
+    }
+   ]
+  },
+  "percent.application.find-whole": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "percent.of-quantity",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The part is p percent of the whole W, which is the relation (p/100) x W = part that the learner sets up."
+      },
+      {
+       "node": "equations.one-step",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding W from (p/100) x W = part is solving a one-step equation."
+      },
+      {
+       "node": "fraction.division.symbolic",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The coefficient p/100 is a fraction, so solving divides the part by a fraction, as in 18 divided by 30/100."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.conversion-factor": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.unit-conversion",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A conversion factor is built from two equal measurements in different units, such as 12 in and 1 ft."
+      },
+      {
+       "node": "ratio.unit-rate",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing the ratio 12 in : 1 ft as the fraction (12 in)/(1 ft) uses the a/b form of a ratio."
+      },
+      {
+       "node": "multiplication.by-one",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The size is unchanged because the factor has equal measurements top and bottom, so it equals 1 and multiplying by 1 changes nothing."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.convert-units": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.conversion-factor",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 chooses and multiplies by a conversion factor with the current unit in the denominator."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 cancels matching units like common factors of numerator and denominator, as in (n x a)/(n x b) = a/b."
+      },
+      {
+       "node": "decimal.operations",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 multiplies the numbers, and the measurement or factors may be decimals, as in 2.5 x 3 x 12."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.unit-rate.fractions": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.unit-rate",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The unit rate of a rate with fraction quantities is still the amount of the first quantity for 1 unit of the second."
+      },
+      {
+       "node": "new:fraction.complex-fraction",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes the rate as the complex fraction (a/b)/(c/d), a fraction whose numerator and denominator are fractions."
+      },
+      {
+       "node": "fraction.division.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes (a/b) divided by (c/d) by fraction division."
+      },
+      {
+       "node": "ratio.unit-rate.language",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 labels the result in rate language as units of the first quantity per 1 unit of the second."
+      }
+     ]
+    }
+   ]
+  },
+  "proportional-relationship.definition": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.unit-rate",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The defining quotient y/x is the unit rate of each pair of corresponding values."
+      },
+      {
+       "node": "ratio.equivalent",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A constant quotient for every pair means all the pairs are equivalent ratios, including the pair 0 and 0."
+      }
+     ]
+    }
+   ]
+  },
+  "proportional-relationship.test.table": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "proportional-relationship.definition",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The test restates the definition of proportionality as conditions on the rows of a table."
+      },
+      {
+       "node": "ratio.unit-rate.find",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 computes y/x for each row, which is finding a unit rate from a pair of values."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle.recognize",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 checks whether quotients such as 3/2 and 6/4 are equal, which is recognizing equivalent fractions."
+      }
+     ]
+    }
+   ]
+  },
+  "proportional-relationship.test.graph": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "proportional-relationship.definition",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The graph test restates the definition of proportionality in terms of the shape of the plotted pairs."
+      },
+      {
+       "node": "ratio.table.plot",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The test depends on how pairs of equivalent ratios appear as plotted points on the coordinate plane."
+      },
+      {
+       "node": "coordinate-plane.first-quadrant",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 checks whether the line passes through (0, 0), which means reading points on the coordinate plane."
+      }
+     ]
+    }
+   ]
+  },
+  "proportional-relationship.constant": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "proportional-relationship.definition",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The constant of proportionality is the common value of y/x that the definition says every pair shares."
+      },
+      {
+       "node": "ratio.unit-rate",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement identifies k with the unit rate, the amount of y for 1 unit of x."
+      },
+      {
+       "node": "ratio.unit-rate.find",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The apples problem requires dividing 7.50 by 5 to get the cost per pound and naming it with its units."
+      }
+     ]
+    }
+   ]
+  },
+  "proportional-relationship.constant.from-values": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "proportional-relationship.constant",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure finds k, the common value of y/x, from one pair of corresponding values."
+      },
+      {
+       "node": "ratio.unit-rate.language",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 decides which quantity is y per unit of x, which uses the 'per' reading of a rate."
+      },
+      {
+       "node": "ratio.unit-rate.find",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 computes k = y/x, which is dividing one quantity by the other to find a unit rate."
+      }
+     ]
+    }
+   ]
+  },
+  "proportional-relationship.constant.graph": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "proportional-relationship.constant",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure finds k, the constant of proportionality, from a point on the graph."
+      },
+      {
+       "node": "coordinate-plane.first-quadrant",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 reads the coordinates of a point on the line exactly."
+      },
+      {
+       "node": "ratio.unit-rate.find",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes k = y/x from the coordinates, which is dividing to find a unit rate."
+      }
+     ]
+    }
+   ]
+  },
+  "proportional-relationship.constant.equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "proportional-relationship.constant",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The coefficient of x in y = kx is identified as the constant of proportionality k."
+      },
+      {
+       "node": "equations.one-step",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 rewrites an equation such as 2y = 7x as y = (7/2)x by dividing both sides by the same number."
+      },
+      {
+       "node": "expressions.variables",
+       "relation": "representational",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 reads k as the coefficient of x in an expression such as x/3, which is (1/3) times x."
+      }
+     ]
+    }
+   ]
+  },
+  "proportional-relationship.constant.diagram": {
+   "routes": [
+    {
+     "clause": "tape-diagram",
+     "edges": [
+      {
+       "node": "proportional-relationship.constant",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The value read from the diagram is k, the constant of proportionality, the amount of y for 1 unit of x."
+      },
+      {
+       "node": "ratio.tape-diagram",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure reads aligned amounts on a tape diagram of the proportional relationship."
+      },
+      {
+       "node": "fraction.quotient.equal-sharing",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 splits the y-amount into as many equal parts as there are x units, which can give a fractional share."
+      }
+     ]
+    },
+    {
+     "clause": "double-number-line",
+     "edges": [
+      {
+       "node": "proportional-relationship.constant",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The value read from the diagram is k, the constant of proportionality, the amount of y for 1 unit of x."
+      },
+      {
+       "node": "ratio.double-number-line",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure reads the aligned values on a double number line of the proportional relationship."
+      },
+      {
+       "node": "fraction.quotient.equal-sharing",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 splits the y-amount into as many equal parts as there are x units, which can give a fractional share."
+      }
+     ]
+    }
+   ]
+  },
+  "proportional-relationship.equation.write": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "proportional-relationship.constant",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation y = kx has the constant of proportionality k as its coefficient."
+      },
+      {
+       "node": "expressions.variables",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 names variables for the two quantities and writes the relationship as an equation with them."
+      },
+      {
+       "node": "proportional-relationship.constant.from-values",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds k from the given values, as in $2.25 per notebook."
+      }
+     ]
+    }
+   ]
+  },
+  "proportional-relationship.graph.point-meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.table.plot",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A point (x, y) on the graph stands for one row of corresponding values, with the first quantity on the horizontal axis."
+      },
+      {
+       "node": "proportional-relationship.definition",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The points belong to the graph of a proportional relationship, whose pairs are corresponding values of the two quantities."
+      }
+     ]
+    }
+   ]
+  },
+  "proportional-relationship.graph.origin-meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "proportional-relationship.graph.point-meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The meaning of (0, 0) is the case x = 0, y = 0 of what any point (x, y) on the graph means."
+      },
+      {
+       "node": "proportional-relationship.definition",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The origin is on the graph because the definition requires y = 0 when x = 0."
+      }
+     ]
+    }
+   ]
+  },
+  "proportional-relationship.graph.unit-rate-point": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "proportional-relationship.graph.point-meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The meaning of (1, r) is the case x = 1, y = r of what any point (x, y) on the graph means."
+      },
+      {
+       "node": "ratio.unit-rate",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement concludes that r is the unit rate, the amount of the second quantity for 1 unit of the first."
+      }
+     ]
+    }
+   ]
+  },
+  "proportional-relationship.graph.make": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "proportional-relationship.equation.write",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The graph drawn is that of an equation y = kx, written with the constant of proportionality k."
+      },
+      {
+       "node": "proportional-relationship.graph.unit-rate-point",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says the line passes through (1, k), which is the point meaning 1 unit of x corresponds to k units of y."
+      },
+      {
+       "node": "proportional-relationship.test.graph",
+       "relation": "justificatory",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 draws a straight line through the origin, which is justified because a proportional graph is a line through the origin."
+      },
+      {
+       "node": "coordinate-plane.first-quadrant",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 1 and 2 plot (0, 0) and (x, k x x) as points in the first quadrant."
+      },
+      {
+       "node": "expressions.variables",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 evaluates k x x for a chosen x, which is evaluating an expression with a variable."
+      },
+      {
+       "node": "decimal.operations",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Graphing y = 2.5x requires computing a decimal product such as 2.5 x 2 to get a second point."
+      }
+     ]
+    }
+   ]
+  },
+  "ratio.application.multistep": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.application.missing-value",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each step of ratio reasoning, such as finding a part from a ratio and a total, is a ratio problem with one given quantity."
+      },
+      {
+       "node": "subtraction.whole-number",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem compares the two parts found, 20 girls and 12 boys, by finding how many more girls there are."
+      }
+     ]
+    }
+   ]
+  },
+  "percent.application.multistep": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "percent.application.decrease-amount",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each step may take a percent off the current amount to get a new amount, as with a discount."
+      },
+      {
+       "node": "percent.application.increase-amount",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each step may add a percent of the current amount to it, as with a markup or tax."
+      },
+      {
+       "node": "percent.application.percent-change",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks for the single percent discount that matches the final price, which is a percent change from the original."
+      }
+     ]
+    }
+   ]
+  },
+  "percent.application.increase-amount": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "percent.of-quantity",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each tax, tip, or markup is found as a percent of the base amount."
+      },
+      {
+       "node": "decimal.operations",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Percents of dollar amounts and their sums are decimals, as in 6% of 40 being 2.40."
+      }
+     ]
+    }
+   ]
+  },
+  "percent.application.decrease-amount": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "percent.of-quantity",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The discount is found as a percent of the original price."
+      },
+      {
+       "node": "decimal.operations",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Subtracting the discount from the original price and working with dollar amounts uses decimal operations."
+      }
+     ]
+    }
+   ]
+  },
+  "percent.application.percent-change": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "percent.of-quantity",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A percent change of p means the change equals p percent of the original amount."
+      },
+      {
+       "node": "fraction.quotient.symbolic",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The ratio (new - original)/original is a quotient written as a fraction of the change over the original amount."
+      },
+      {
+       "node": "decimal.operations",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Subtracting the amounts, dividing by the original, and multiplying by 100 are decimal operations."
+      }
+     ]
+    }
+   ]
+  },
+  "slope.unit-rate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "slope.between-two-points",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The slope is computed as vertical change divided by horizontal change between two points on the line."
+      },
+      {
+       "node": "slope.constant-on-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Speaking of the slope of the whole graph relies on every pair of points giving the same slope."
+      },
+      {
+       "node": "proportional-relationship.constant",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement equates the slope with k, the constant of proportionality."
+      },
+      {
+       "node": "proportional-relationship.graph.make",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The graph of y = kx passes through (0, 0) and (1, k), and the slope between those points is k."
+      }
+     ]
+    }
+   ]
+  },
+  "proportional-relationship.compare.representations": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "proportional-relationship.constant.from-values",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 2 find the unit rate from a table or a verbal description."
+      },
+      {
+       "node": "proportional-relationship.constant.graph",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 2 find the unit rate from a graph by reading a point."
+      },
+      {
+       "node": "proportional-relationship.constant.equation",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 2 find the unit rate from an equation by reading the coefficient k."
+      },
+      {
+       "node": "decimal.compare",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 decides which unit rate is greater, comparing values such as 55 and 57.5."
+      }
+     ]
+    }
+   ]
+  },
+  "slope.between-two-points": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.four-quadrants",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The two points have coordinates that may be negative, and vertical and horizontal change are read from the plane."
+      },
+      {
+       "node": "rational-numbers.operations",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Computing y2 - y1 and x2 - x1 involves subtracting signed numbers, as in -3 - 5."
+      },
+      {
+       "node": "ratio.unit-rate",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Slope is a quotient of changes, the change in y for 1 unit change in x, which is a unit rate."
+      }
+     ]
+    }
+   ]
+  },
+  "slope.constant-on-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "slope.between-two-points",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about the value of the slope between pairs of points, which is defined by that formula."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle.recognize",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Checking that slopes such as 3/2, 6/4, and 9/6 are equal means recognizing equivalent fractions."
+      }
+     ]
+    }
+   ]
+  },
+  "slope.constant-on-line.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "slope.constant-on-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation shows why the slope between any two distinct points of a line has the same value."
+      },
+      {
+       "node": "slope.between-two-points",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The triangles' legs are the vertical and horizontal changes whose ratio defines the slope."
+      },
+      {
+       "node": "geometry.similar-triangles",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The argument uses that similar triangles have equal ratios of corresponding sides, so the vertical to horizontal ratios agree."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.line.y-mx.write": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.four-quadrants",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 reads the coordinates of a point on the line other than the origin."
+      },
+      {
+       "node": "slope.constant-on-line",
+       "relation": "justificatory",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Any point other than the origin can be used because the slope is the same between any two points of the line."
+      },
+      {
+       "node": "slope.between-two-points",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes m = y/x, the slope between (0, 0) and (x, y)."
+      },
+      {
+       "node": "proportional-relationship.equation.write",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation y = mx has the same form as y = kx for a proportional relationship."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.line.y-mx.derive": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-function.line.y-mx.write",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The derivation explains why the equation y = mx describes every point of a line through the origin."
+      },
+      {
+       "node": "slope.constant-on-line",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The slope from (0, 0) to any point (x, y) equals m because slope is the same between any two points."
+      },
+      {
+       "node": "slope.between-two-points",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The step y/x = m applies the slope formula to the points (0, 0) and (x, y)."
+      },
+      {
+       "node": "equations.one-step",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Going from y/x = m to y = mx multiplies both sides by x, a one-step equation move."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.line.y-mx-plus-b.write": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.four-quadrants",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 reads the coordinates of two points on the line."
+      },
+      {
+       "node": "slope.constant-on-line",
+       "relation": "justificatory",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Any two points give the same m because slope is the same between any two points of the line."
+      },
+      {
+       "node": "slope.between-two-points",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes m = (y2 - y1)/(x2 - x1)."
+      },
+      {
+       "node": "equations.one-step",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 finds b = y1 - m x x1 by solving y1 = m x x1 + b for b."
+      },
+      {
+       "node": "linear-function.line.y-mx.write",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation y = mx + b extends the form y = mx for lines through the origin."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.line.y-mx-plus-b.derive": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-function.line.y-mx-plus-b.write",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The derivation explains why the equation y = mx + b describes every point of the line."
+      },
+      {
+       "node": "slope.constant-on-line",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The slope from (0, b) to any point (x, y) equals m because slope is the same between any two points."
+      },
+      {
+       "node": "slope.between-two-points",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The step (y - b)/x = m applies the slope formula to the points (0, b) and (x, y)."
+      },
+      {
+       "node": "equations.one-step",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Going from (y - b)/x = m to y = mx + b multiplies by x and then adds b, two one-step equation moves."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.model.construct": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "functions.definition",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The model y = mx + b assigns one output y to each input x, so it is a function."
+      },
+      {
+       "node": "expressions.variables",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 names the input and output variables, and step 4 writes the expression mx + b with them."
+      },
+      {
+       "node": "linear-function.model.rate.from-description",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds the rate of change m from the description, such as $25 per hour."
+      },
+      {
+       "node": "linear-function.model.initial.from-description",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 finds the initial value b from the description, such as the $40 visit fee."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.model.rate.from-two-values": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-function.model.rate.interpret",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The quotient computed is the rate of change, the amount the output changes for each 1-unit increase in the input."
+      },
+      {
+       "node": "data.graphs.read",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 reads two pairs of values from a table or a graph."
+      },
+      {
+       "node": "slope.constant-on-line",
+       "relation": "justificatory",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Any two pairs with different x give the same m because the rate of a linear function is constant like slope on a line."
+      },
+      {
+       "node": "slope.between-two-points",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes (y2 - y1)/(x2 - x1), which is the slope formula."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.model.rate.from-description": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-function.model.rate.interpret",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner looks for the amount the output changes per 1 unit of input, which is the meaning of the rate of change."
+      },
+      {
+       "node": "ratio.unit-rate.language",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds the phrase with 'per' or 'each' that states the change per unit of input."
+      },
+      {
+       "node": "new:rational-number.negative-as-decrease",
+       "relation": "representational",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 takes m as negative when the output goes down, which uses negative numbers for decreases."
+      },
+      {
+       "node": "linear-function.model.rate.from-two-values",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 computes m from two stated (x, y) values when the description gives them."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.model.initial.from-two-values": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-function.model.initial.interpret",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The initial value is the output at x = 0, the meaning of b in the model."
+      },
+      {
+       "node": "data.graphs.read",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 reads the y-value at x = 0 from the table or graph when it is shown."
+      },
+      {
+       "node": "linear-function.model.rate.from-two-values",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds m from two shown pairs, which is the rate of change procedure."
+      },
+      {
+       "node": "equations.one-step",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 finds b by solving y1 = m x x1 + b for b."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.model.initial.from-description": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-function.model.initial.interpret",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The initial value is the output when the input is 0, such as a starting amount or fixed fee."
+      },
+      {
+       "node": "linear-function.model.rate.from-description",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds m from the description before computing b."
+      },
+      {
+       "node": "equations.one-step",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds b by solving y1 = m x x1 + b for b."
+      },
+      {
+       "node": "rational-numbers.operations",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The candle problem has a negative rate of -2 cm per hour, so computing b uses signed arithmetic."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.model.rate.interpret": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ratio.unit-rate",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rate of change is the amount of output for each 1 unit of input, a unit rate of change."
+      },
+      {
+       "node": "functions.definition",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement speaks of the output changing as the input increases, which uses input and output of a function."
+      },
+      {
+       "node": "expressions.variables",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner reads m as the coefficient of the variable in a formula such as C = 2.5d + 3."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.model.initial.interpret": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "functions.definition",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The initial value is the output the function assigns to the input 0."
+      },
+      {
+       "node": "expressions.variables",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Evaluating a formula such as h = 120 - 4t at t = 0 shows that b is the output when the input is 0."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

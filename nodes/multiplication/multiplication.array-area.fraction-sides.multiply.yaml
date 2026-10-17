@@ -1,0 +1,59 @@
+id: multiplication.array-area.fraction-sides.multiply
+concept: multiplication
+facet: array-area
+level: 3
+type: procedure
+name: Find the area of a fraction-sided rectangle by multiplying side lengths
+statement: The area of a rectangle with side lengths a/b and c/d is found by computing (a/b) x (c/d) with
+  the product rule.
+procedure:
+- Multiply the two side lengths with the product rule (a x c)/(b x d).
+- Label the result in square units.
+assess: Find the area of a rectangle that is 3/5 m by 2/3 m.
+sources:
+  ccss:
+  - 5.NF.B.4.b
+  learning_components:
+  - fe7e289c
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.multiplication.symbolic
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 multiplies the two side lengths using the product rule on fractions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.tiling
+    relation: definitional
+    points_to: procedure.2
+    why: Step 2 labels the result in square units, using area as side length times side length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The procedure labels area in square units using area as side times side, which
+        needs the rectangle-area formula. It is not clear whether area.rectangle.tiling (counting unit
+        squares) includes the multiplicative formula.'
+    status: disputed
+  - node: area.rectangle.length-times-width
+    relation: definitional
+    points_to: statement
+    why: The procedure labels area as side times side; unclear whether area.rectangle.tiling includes
+      the multiplicative area formula.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

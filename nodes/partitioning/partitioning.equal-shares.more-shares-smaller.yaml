@@ -1,0 +1,75 @@
+id: partitioning.equal-shares.more-shares-smaller
+concept: partitioning
+facet: area
+level: 1
+type: concept
+name: More equal shares of the same whole are smaller
+statement: For the same whole, partitioning into more equal shares makes each share smaller; a fourth
+  of a shape is smaller than a half of the same shape.
+assess: Two crackers are the same size. One is cut into halves and the other into fourths. Which is bigger,
+  a half or a fourth?
+sources:
+  ccss:
+  - 1.G.A.3
+  learning_components:
+  - b3badaf7
+requires:
+- clause: standard
+  all_of:
+  - node: partitioning.equal-shares.area
+    relation: definitional
+    points_to: statement
+    why: The statement compares the shares from partitioning the same whole into different numbers of
+      equal shares.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: partitioning.equal-shares.name
+    relation: representational
+    points_to: assess
+    why: The test compares a half with a fourth, so the learner must know those share names.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The idea that more equal shares of the same whole are smaller does not need the
+        names; the assessment happens to ask about a half and a fourth.'
+    status: proposed
+  - node: comparing.size.direct
+    relation: definitional
+    points_to: statement
+    why: Deciding that one share is smaller than another share of the same whole uses direct comparison
+      of size.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: partitioning.equal-shares.whole-as-shares
+    relation: justificatory
+    points_to: statement
+    why: The shares always together make the same whole, so more shares means each takes a smaller part.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: At level 1 the claim can be established by directly comparing a half and a fourth
+        cut from same-size wholes. The explanation via ''the shares always make the same whole'' is a
+        justification, not required to hold the concept.'
+    status: disputed
+status: proposed

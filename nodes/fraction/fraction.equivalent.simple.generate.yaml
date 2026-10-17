@@ -1,0 +1,77 @@
+id: fraction.equivalent.simple.generate
+concept: fraction
+facet: part-whole
+level: 2
+type: procedure
+name: Recognize and generate simple equivalent fractions with a model
+statement: 'Using a fraction model with denominators 2, 3, 4, 6, or 8, find a fraction that covers the
+  same amount as a given one by splitting or joining its parts.
+
+  '
+procedure:
+- Show the given fraction on a model.
+- Split each part into equal smaller parts, or join equal groups of parts.
+- Count the new number of shaded parts and total parts and write the new fraction.
+assess: Use a fraction strip to find a fraction equal to 2/3 with denominator 6.
+sources:
+  ccss:
+  - 3.NF.A.3.b
+  learning_components:
+  - 3194d5b0
+  - 463e4334
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.non-unit.part-whole
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 shows the given fraction on a model as a shaded parts out of b equal parts, and step 3
+      writes the new one.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: partitioning.equal-shares.area
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 splits each part into equal smaller parts, which is partitioning a shape into equal shares.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.same-size
+    relation: definitional
+    points_to: statement
+    why: The new fraction is accepted because it covers the same amount of the same whole as the given
+      one.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.objects
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 counts the new number of shaded parts and of total parts in order to write the new fraction.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

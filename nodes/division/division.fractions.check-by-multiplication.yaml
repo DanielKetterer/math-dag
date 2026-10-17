@@ -1,0 +1,45 @@
+id: division.fractions.check-by-multiplication
+concept: division
+facet: unknown-factor
+level: 3
+type: justification
+name: Justify a fraction quotient by multiplying back
+statement: A claimed quotient q of a/b divided by c/d is correct because (c/d) x q = a/b, by the relationship
+  between multiplication and division.
+assess: Explain, using multiplication, why (2/3) divided by (3/4) = 8/9.
+sources:
+  ccss:
+  - 6.NS.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: division.fractions.unknown-factor
+    relation: justificatory
+    points_to: statement
+    why: The justification rests on the fact that a quotient q is correct exactly when (c/d) x q equals
+      a/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.symbolic
+    relation: justificatory
+    points_to: statement
+    why: Carrying out the check requires computing the product (c/d) x q, for example (3/4) x (8/9), and
+      comparing it with the dividend.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,71 @@
+id: fraction.multiplication.operation-sequence
+concept: fraction
+facet: operator
+level: 3
+type: concept
+name: (a/b) x q equals a x q divided by b
+statement: For any whole number or fraction q, (a/b) x q equals the result of multiplying q by a and then
+  dividing by b.
+assess: Write (2/3) x 4 as a multiplication followed by a division, and find the result.
+sources:
+  ccss:
+  - 5.NF.B.4.a
+  learning_components:
+  - 61ddb83d
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.multiplication.parts-of-partition.fraction
+    relation: justificatory
+    points_to: statement
+    why: The same a-of-b-equal-parts reasoning supports the statement when q is a fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.quotient.symbolic
+    relation: procedural
+    points_to: assess
+    why: Writing the result of 8 divided by 3 as the fraction 8/3 is needed to state the product in the
+      test problem.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Writing 8 divided by 3 as the fraction 8/3 is needed to state the answer in the
+        test problem, not by the identity.'
+    status: proposed
+  - node: fraction.multiply-whole.model
+    relation: definitional
+    points_to: statement
+    why: The statement allows q a fraction, so 'multiplying q by a' needs a fraction times a whole number.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: division.nonunit-fraction-by-whole
+    relation: definitional
+    points_to: statement
+    why: For q a fraction, 'dividing by b' is dividing a non-unit fraction (a x c/d) by a whole number;
+      the map only has unit-fraction division by a whole number.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: fraction.multiplication.parts-of-partition.whole-number
+  relation: specializes
+  note: The whole-number case is the special case of the fraction case (q = q/1); parts-of-partition.fraction
+    already covers it.
+status: proposed

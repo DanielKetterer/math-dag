@@ -1,0 +1,74 @@
+id: fraction.non-unit.unit-sum
+concept: fraction
+facet: measure
+level: 2
+type: representation
+name: A fraction as a sum of unit fractions
+statement: For any whole number a and denominator b, a/b is the sum of a copies of 1/b, including when
+  a is greater than b (for example, 5/4 = 1/4 + 1/4 + 1/4 + 1/4 + 1/4).
+assess: Write 5/4 as a sum of unit fractions and show the sum on a number line.
+sources:
+  ccss:
+  - 4.NF.B.3
+  - 4.NF.B.4.a
+  learning_components:
+  - 28d45152
+  - 1df660cf
+  - 42bbf920
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: A fraction a/b is built from a parts of size 1/b, which is what the sum of a unit fractions counts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.joining
+    relation: definitional
+    points_to: statement
+    why: The sum of a copies of 1/b is the joining of equal parts of one whole into a single amount.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.number-line
+    relation: representational
+    points_to: assess
+    why: The assessment asks the learner to show the sum of unit fractions as a point on a number line,
+      including past 1.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is about a sum of unit fractions; the number-line display appears
+        only in the assessment prompt.'
+    status: proposed
+  - node: fraction.as-number
+    relation: definitional
+    points_to: statement
+    why: The case where a exceeds b requires a fraction to be a number that can be larger than one whole.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: If fraction.non-unit.part-whole already covers a/b with a greater than b (a parts
+        of size 1/b past one whole), then ''fraction as a number'' is not needed for this representation;
+        if it is limited to a less than b, as-number is the route to i'
+    status: disputed
+status: proposed

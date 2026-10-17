@@ -1,0 +1,55 @@
+id: linear-function.model.initial.interpret
+concept: linear-function
+facet: model
+level: 3
+type: concept
+name: Interpret the initial value in context
+statement: The initial value b of a linear model is the output, in its units, when the input is 0.
+assess: The height of water in a pool is h = 120 - 4t centimeters after t hours of draining. What does
+  120 mean in this situation?
+sources:
+  ccss:
+  - 8.F.B.4
+  learning_components:
+  - 6c340f89
+requires:
+- clause: standard
+  all_of:
+  - node: linear-function.line.y-mx-plus-b.write
+    relation: representational
+    points_to: statement
+    why: The model is written y = mx + b and b is read as the constant term in that equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Reading b as the constant term of y = mx + b is one route; the other evaluates
+        the formula at input 0.'
+    status: disputed
+  - node: expressions.variables
+    relation: definitional
+    points_to: statement
+    why: Setting x = 0 in the expression mx + b shows the output equals b, which uses evaluating an expression.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: functions.definition
+    relation: definitional
+    points_to: statement
+    why: The initial value is the output the function assigns to the input 0.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The initial value is the output at input 0, but it is unclear whether the formal
+        function definition is needed rather than informal dependence.'
+    status: disputed
+status: proposed

@@ -1,0 +1,62 @@
+id: division.whole-by-unit-fraction.explain
+concept: division
+facet: unknown-factor
+level: 4
+type: justification
+name: Explain n divided by 1/b = n x b with multiplication
+statement: n divided by 1/b is the number that multiplied by 1/b gives n; since (n x b) x (1/b) = (n x
+  b)/b = n, the quotient is n x b for every n and b.
+assess: Use multiplication to explain why 4 divided by 1/5 = 20, and say why the same argument works for
+  any whole number and unit fraction.
+sources:
+  ccss:
+  - 5.NF.B.7.b
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.multiply-whole.rule
+    relation: justificatory
+    points_to: statement
+    why: The step (n x b) x (1/b) = (n x b)/b uses the rule for multiplying a fraction by a whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: For a unit fraction the step (n x b) x (1/b) = (n x b)/b is the definition of
+        (n x b)/b as n x b copies of 1/b; the general rule is more than required.'
+    status: disputed
+  - node: fraction.quotient.symbolic
+    relation: justificatory
+    points_to: statement
+    why: The step (n x b)/b = n uses that a fraction a/b is a divided by b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The step (n x b)/b = n can be justified by quotient reading but equally by equivalent
+        fractions on n = n/1 or by b copies of 1/b making a whole.'
+    status: disputed
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: The explanation reads n divided by 1/b as the number that multiplied by 1/b gives n.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: division.unknown-factor.rewrite
+  relation: same_idea_different_form
+  note: The rewriting is the representational form of the unknown-factor meaning already supplied by e436;
+    the statement performs the rewrite as an instance of that meaning.
+status: proposed

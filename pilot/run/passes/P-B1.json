@@ -1,0 +1,1235 @@
+{
+ "pass": "P",
+ "batch": "B1",
+ "nodes": {
+  "fraction.unit.part-whole": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "partitioning.equal-area.any-shape",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The phrase 'b equal parts' means parts of equal area, for any whole number b, not only 2, 3 or 4."
+      },
+      {
+       "node": "partitioning.equal-shares.name",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The unit fraction 1/b generalizes the names half, third and fourth to any b, naming one equal share."
+      },
+      {
+       "node": "partitioning.equal-shares.whole-as-shares",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The denominator b counts all the equal parts that together make the whole, which is why one part is 1/b."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.non-unit.part-whole": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement defines a/b as a parts each of size 1/b, so the unit fraction 1/b must already be meaningful."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.unit.number-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 marks 0 and 1 on a number line, so the learner must read the length from 0 to 1 as one unit."
+      },
+      {
+       "node": "partitioning.equal-area.any-shape",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 splits the interval from 0 to 1 into b equal lengths, the same equal-length partition of a side used there."
+      },
+      {
+       "node": "fraction.unit.part-whole",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 labels the first of b equal lengths as 1/b, carrying over the meaning of a unit fraction as one of b equal parts."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.non-unit.number-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.unit.number-line",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 locates 1/b on the number line, which gives the length that is then copied a times."
+      },
+      {
+       "node": "measurement.length.iterate-units",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 lays a copies of the length 1/b end to end from 0 with no gaps or overlaps, as in iterating a unit."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement reads a/b as a copies of size 1/b, the same meaning as a parts each of size 1/b."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.as-number": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.non-unit.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The claim that a fraction names a single point rests on being able to locate a/b by marking off lengths from 0."
+      },
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Calling a fraction a number of the same kind as a whole number requires whole numbers already seen as points on the line."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.whole-number.as-fraction": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.as-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Saying two fractions are one number because they name the same point needs fractions understood as numbers with positions."
+      },
+      {
+       "node": "fraction.non-unit.number-line",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The reason b/b equals 1 is that marking off b lengths of 1/b from 0 lands exactly at the point 1."
+      },
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing n as n/1 compares the fraction point with the whole-number point n reached by n unit lengths from 0."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.equivalent.same-size": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each of the two fractions being compared is read as a parts of size 1/b of a whole."
+      },
+      {
+       "node": "comparing.size.direct",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Deciding that two shaded regions cover the same amount of the same whole uses direct comparison of area."
+      },
+      {
+       "node": "partitioning.equal-shares.different-shapes",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The same amount can be cut into differently sized and shaped parts, as with 1/2 and 2/4 of equal bars."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.equivalent.same-point": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.as-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Two fractions can name the same point only if each fraction is already understood as a point with a definite position."
+      },
+      {
+       "node": "fraction.non-unit.number-line",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The number-line model locates each fraction such as 2/3 and 4/6 by marking off lengths of its unit fraction from 0."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.equivalent.simple.generate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 shows the given fraction on a model as a shaded parts out of b equal parts, and step 3 writes the new one."
+      },
+      {
+       "node": "partitioning.equal-shares.area",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 splits each part into equal smaller parts, which is partitioning a shape into equal shares."
+      },
+      {
+       "node": "fraction.equivalent.same-size",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The new fraction is accepted because it covers the same amount of the same whole as the given one."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.equivalent.simple.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.equivalent.same-size",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation concludes that 1/2 and 2/4 are equal because the model shows the same amount of the same whole."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The drawing has to show 2/4 as two shaded parts out of four equal parts of the whole."
+      },
+      {
+       "node": "fraction.equivalent.simple.generate",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation accounts for what splitting each part in the model produces, the step of generating an equivalent fraction."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.compare.same-denominator": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.non-unit.number-line",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each fraction a/b is a lengths of size 1/b from 0, so the one with more lengths lies farther along the line."
+      },
+      {
+       "node": "fraction.as-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Saying one fraction is greater requires that fractions have definite sizes that can be ordered like whole numbers."
+      },
+      {
+       "node": "comparing.whole-numbers.symbols",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "With equal part sizes the decision reduces to comparing the two numerators as whole numbers, such as 3 and 5."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.compare.same-numerator": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement reads each fraction as the same number of parts of size 1/b, so the part size is all that differs."
+      },
+      {
+       "node": "partitioning.equal-shares.more-shares-smaller",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A larger denominator means more equal shares of the whole, so each part is smaller, which decides the comparison."
+      },
+      {
+       "node": "comparing.whole-numbers.symbols",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding which denominator is smaller, such as 3 versus 5, compares two whole numbers."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.compare.reasoning-size": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.compare.same-denominator",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The test pairs such as 2/6 and 5/6 are decided by counting how many parts of equal size each fraction has."
+      },
+      {
+       "node": "fraction.compare.same-numerator",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The test pairs such as 3/4 and 3/6 are decided by comparing the size of the parts when the part counts match."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.compare.same-whole": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A fraction such as 1/2 names one part of some particular whole, so its actual amount depends on which whole is meant."
+      },
+      {
+       "node": "comparing.size.direct",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The small pizza versus large pizza example is settled by directly comparing the two actual amounts of pizza."
+      },
+      {
+       "node": "fraction.compare.reasoning-size",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The caveat qualifies the rule that 1/2 is greater than 1/3, which is reasoning about part size and number of parts."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.compare.record-symbols": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.whole-numbers.symbols",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The symbols >, = and < are the same ones already used to record comparisons of whole numbers."
+      },
+      {
+       "node": "fraction.compare.reasoning-size",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The symbol written records the outcome of a comparison, which must first be decided by reasoning about the two fractions."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.compare.justify": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.compare.same-denominator",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The argument about number of equal-size parts is the justification of the same-denominator comparison."
+      },
+      {
+       "node": "fraction.compare.same-numerator",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The argument about part size when the part counts match is the justification of the same-numerator comparison."
+      },
+      {
+       "node": "fraction.compare.same-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A drawing comparing two fractions is valid only if both models use wholes of the same size, as in the 2/3 versus 2/5 drawing."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The drawing shows each fraction as a number of shaded equal parts out of the total number of parts."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.application.compare-in-context": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.compare.reasoning-size",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner decides which of two shares such as 2/6 and 2/8 is larger by reasoning about part size and count."
+      },
+      {
+       "node": "fraction.compare.same-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story states that the pizzas are the same size, which is the condition that makes the comparison valid."
+      },
+      {
+       "node": "fraction.compare.justify",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner must also explain why one share is larger, using a model or an argument about part size."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.equivalent.multiply-principle": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.equivalent.same-point",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule asserts that a/b and (n x a)/(n x b) name the same point, which is what equivalence means on the line."
+      },
+      {
+       "node": "fraction.equivalent.simple.generate",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule is the general symbolic form of the pattern seen when splitting every part in a model into equal smaller parts."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Checking that 12/20 equals 3/5 requires multiplying 3 and 5 by 4 using single-digit facts."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.equivalent.multiply-principle.generate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.equivalent.multiply-principle",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The result is accepted as equivalent to a/b because of the rule a/b = (n x a)/(n x b)."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the numerator and the denominator by n, for example 3 x 2 and 5 x 2 for 3/5."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.equivalent.multiply-principle.recognize": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors-multiples.whole-number",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds a common multiple of the two denominators, such as 18 for 6 and 9."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle.generate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 rewrites each fraction over the common denominator by multiplying its numerator and denominator by one whole number."
+      },
+      {
+       "node": "fraction.compare.same-denominator",
+       "relation": "justificatory",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 says fractions over one denominator are equal exactly when numerators are equal, since more parts means a greater fraction."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses the multiplication principle to justify that each rewritten fraction equals the original."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.equivalent.multiply-principle.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.equivalent.multiply-principle",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation is for the specific equation a/b = (n x a)/(n x b), which it must state and apply for every n."
+      },
+      {
+       "node": "fraction.equivalent.simple.explain",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The general argument extends the model-based explanation of why one simple pair such as 1/2 and 2/4 is equal."
+      },
+      {
+       "node": "fraction.equivalent.same-size",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The key claim that the amount covered does not change is the meaning of two fractions covering the same whole amount."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Splitting each of a chosen parts into n pieces gives a groups of n, which is n x a pieces in total."
+      }
+     ]
+    }
+   ]
+  },
+  "partitioning.equal-shares.area": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.recognize",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement concerns dividing a circle or a rectangle, so the learner must recognize each shape."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 draws n - 1 lines and gets n strips, which requires counting lines and strips."
+      },
+      {
+       "node": "comparing.size.direct",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 checks that the shares are the same size by directly comparing them."
+      }
+     ]
+    }
+   ]
+  },
+  "partitioning.equal-shares.name": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "partitioning.equal-shares.area",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The names half, third and fourth refer to one share of a whole divided into 2, 3 or 4 equal shares."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Choosing the name depends on counting the equal shares, 2, 3 or 4, that the whole has been cut into."
+      }
+     ]
+    }
+   ]
+  },
+  "partitioning.equal-shares.whole-as-shares": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "partitioning.equal-shares.name",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is phrased with the names halves, thirds and fourths, as in two halves make one whole."
+      },
+      {
+       "node": "partitioning.equal-shares.area",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The claim that n shares make up the whole with nothing left over is the property of an equal partition."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding that a sandwich cut in fourths has four fourths requires counting the shares."
+      }
+     ]
+    }
+   ]
+  },
+  "partitioning.equal-shares.more-shares-smaller": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "partitioning.equal-shares.area",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement compares the shares from partitioning the same whole into different numbers of equal shares."
+      },
+      {
+       "node": "partitioning.equal-shares.name",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The test compares a half with a fourth, so the learner must know those share names."
+      },
+      {
+       "node": "comparing.size.direct",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Deciding that one share is smaller than another share of the same whole uses direct comparison of size."
+      }
+     ]
+    }
+   ]
+  },
+  "partitioning.equal-shares.different-shapes": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "partitioning.equal-shares.area",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement concerns shares produced by different ways of partitioning identical wholes into equal shares."
+      },
+      {
+       "node": "comparing.size.direct",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Judging that shares cover the same amount even though their shapes differ uses direct comparison of amount of area."
+      },
+      {
+       "node": "shapes.recognize",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement contrasts shares of different shapes, such as triangles and rectangles cut from identical squares."
+      },
+      {
+       "node": "partitioning.equal-shares.name",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test asks whether a triangle half equals a rectangle half, so the learner must know what a half is."
+      }
+     ]
+    }
+   ]
+  },
+  "partitioning.equal-area.any-shape": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "partitioning.equal-shares.area",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 divides one side of a rectangle into n equal lengths, extending to any n the equal strips drawn there."
+      },
+      {
+       "node": "area.rectangle.tiling",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Equality of the parts is checked by area, counting unit squares or using length times width of each strip."
+      },
+      {
+       "node": "partitioning.equal-shares.different-shapes",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says equality is checked by area rather than by shape, since equal parts may have different shapes."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.no-gaps-overlaps": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.objects",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The length is the number of unit copies, which is found by counting them."
+      },
+      {
+       "node": "comparing.size.direct",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Spanning the object end to end with same-size copies uses direct comparison of lengths to match endpoints and unit sizes."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.iterate-units": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.no-gaps-overlaps",
+       "relation": "definitional",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 places each copy exactly where the previous one ends, with no gap and no overlap, which is the meaning of length."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 counts the copies to get the whole-number length."
+      }
+     ]
+    }
+   ]
+  },
+  "number-line.whole-number-lengths": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.no-gaps-overlaps",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The length from 0 to n is read as n same-size unit lengths spanning with no gaps or overlaps."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The labels 0, 1, 2, ... are the counting numbers assigned to equally spaced points on the line."
+      },
+      {
+       "node": "measurement.length.iterate-units",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Drawing the length for 7 means laying seven unit lengths end to end starting at 0."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.add-to.number-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 marks the length from 0 to a, which is the whole number a shown as a length on the line."
+      },
+      {
+       "node": "measurement.length.no-gaps-overlaps",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Placing the length b end to end after the length a relies on lengths joining with no gaps and no overlaps."
+      },
+      {
+       "node": "addition.whole-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The model must represent the meaning of a + b as the total from joining a and b, and the endpoint is read as the sum."
+      },
+      {
+       "node": "place-value.base-ten",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 splits b into smaller jumps that total b, such as 20 and 5 for 25, using tens and ones."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.take-away.number-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 locates a on the number line, the point reached by a unit lengths from 0."
+      },
+      {
+       "node": "subtraction.whole-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The model represents a - b as what remains when b is taken away from a, so that meaning of subtraction is used."
+      },
+      {
+       "node": "place-value.base-ten",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 splits the jump of b units into smaller jumps, such as 10 and 7 for 17, using tens and ones."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.comparison.number-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 locates both b and a as points on the number line, each marked by its length from 0."
+      },
+      {
+       "node": "measurement.length.no-gaps-overlaps",
+       "relation": "definitional",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 measures the length of the segment from b to a as a count of unit lengths spanning it."
+      },
+      {
+       "node": "comparing.size.direct",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The difference is read as how much longer one quantity is than the other, a direct comparison of two lengths."
+      },
+      {
+       "node": "subtraction.whole-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says the length of the segment is a - b, so the meaning of subtraction is needed to name that length."
+      },
+      {
+       "node": "place-value.base-ten",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 jumps from b to the next ten and then by tens, which uses the tens and ones structure of the numbers."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.equal-groups.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.objects",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The product is a total number of objects, and a and b are counts of groups and of objects in each group."
+      },
+      {
+       "node": "addition.whole-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The total of a groups with b objects each is found by joining the groups, which is a sum of a equal addends."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.equal-groups.expression-to-situation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner must read a x b as a groups of b objects each in order to pick or invent the matching situation."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.equal-groups.situation-to-expression": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing a x b for 7 boxes of 3 crayons requires knowing a is the number of groups and b the number in each group."
+      }
+     ]
+    }
+   ]
+  },
+  "division.partitive.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The b groups made by sharing are equal groups, so the quotient is the group size that makes b equal groups total a."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The quotient is a count of the objects in each group, found by counting the objects shared out."
+      }
+     ]
+    }
+   ]
+  },
+  "division.measurement.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The groups of b objects are equal groups, so the quotient is the number of such equal groups that total a."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The quotient is a count of the groups formed, such as the 4 packs of 6 stickers."
+      }
+     ]
+    }
+   ]
+  },
+  "division.partitive.situation-to-expression": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.partitive.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing a divided by b for a sharing situation requires knowing the quotient is the number in each group."
+      }
+     ]
+    }
+   ]
+  },
+  "division.measurement.situation-to-expression": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.measurement.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing a divided by b for a grouping situation requires knowing the quotient is the number of groups."
+      }
+     ]
+    }
+   ]
+  },
+  "division.partitive.expression-to-situation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.partitive.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Inventing a story where 20 divided by 4 gives the number in each group uses the sharing meaning of the quotient."
+      }
+     ]
+    }
+   ]
+  },
+  "division.measurement.expression-to-situation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.measurement.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Inventing a story where 20 divided by 4 gives the number of groups uses the grouping meaning of the quotient."
+      }
+     ]
+    }
+   ]
+  },
+  "division.unknown-factor.meaning": {
+   "routes": [
+    {
+     "clause": "partitive",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation b x c = a is read as b groups of c objects with a total of a objects."
+      },
+      {
+       "node": "division.partitive.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Sharing a among b groups with c in each means b groups of c make a, so the quotient c satisfies b x c = a."
+      }
+     ]
+    },
+    {
+     "clause": "measurement",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation b x c = a is read as groups of objects with a total of a objects."
+      },
+      {
+       "node": "division.measurement.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Forming c groups of b from a gives c x b = a, so the number of groups c satisfies the multiplication equation."
+      },
+      {
+       "node": "multiplication.properties",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Turning c groups of b into the equation b x c = a uses the commutative property of multiplication."
+      }
+     ]
+    }
+   ]
+  },
+  "division.unknown-factor.rewrite": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Rewriting a divided by b = ? as b x ? = a applies the meaning of the quotient as the unknown factor."
+      }
+     ]
+    }
+   ]
+  },
+  "division.unknown-factor.find-quotient": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.unknown-factor.rewrite",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 rewrites a divided by b = ? as b x ? = a before any search for the number."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds the number that makes b x ? = a true by recalling a single-digit multiplication fact or skip-counting by b."
+      },
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Naming the unknown factor as the quotient, and knowing when a whole-number quotient exists, uses the unknown-factor meaning."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

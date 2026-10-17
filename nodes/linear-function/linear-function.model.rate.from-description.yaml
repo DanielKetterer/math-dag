@@ -1,0 +1,77 @@
+id: linear-function.model.rate.from-description
+concept: linear-function
+facet: model
+level: 3
+type: procedure
+name: Find the rate of change from a verbal description
+statement: From a description of a linear relationship, the rate of change is the stated change in the
+  output for each 1-unit increase in the input, negative when the output decreases.
+procedure:
+- Find the phrase giving the change in the output per unit of input (for example 'per', 'each').
+- Take that amount as m, negative if the output goes down.
+- If the description instead gives two (x, y) values, compute m from them.
+assess: A 500-liter tank drains at 20 liters per minute. What is the rate of change of the volume with
+  respect to time?
+sources:
+  ccss:
+  - 8.F.B.4
+  learning_components:
+  - 1944c542
+  - dd4d95c3
+requires:
+- clause: standard
+  all_of:
+  - node: linear-function.model.rate.interpret
+    relation: definitional
+    points_to: statement
+    why: The rate is the stated change in the output for each 1-unit increase in the input, which is the
+      meaning of rate of change.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.unit-rate.language
+    relation: procedural
+    points_to: procedure.1
+    why: Finding phrases such as per or each that give the change in output per unit of input uses rate
+      language.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.model.rate.from-two-values
+    relation: procedural
+    points_to: procedure.3
+    why: When the description gives two (x, y) values instead of a stated rate, m is computed from them.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.negative-as-decrease
+    relation: representational
+    points_to: procedure.2
+    why: Step 2 takes m as negative when the output goes down, which uses negative numbers for decreases.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The node rational-number.negative-as-decrease is not in index.txt, but step 2
+        needs negative numbers as decreases.'
+    status: disputed
+status: proposed

@@ -1,0 +1,64 @@
+id: measurement.length.iterate-units
+concept: measurement
+facet: length
+level: 1
+type: procedure
+name: Measure length by laying units end to end
+statement: Measure an object's length by laying same-size copies of a shorter unit end to end along it
+  and counting them. At this level objects are chosen to be a whole number of units long; if the last
+  copy overhangs the end, the length lies between two whole numbers of units.
+procedure:
+- Line up one end of the first copy of the unit with one end of the object.
+- Place each next copy so it starts exactly where the previous one ends, in a straight line along the
+  object, with no gap and no overlap.
+- Stop when a copy reaches the other end of the object.
+- Count the copies; that whole number is the length in that unit.
+assess: Use copies of this paper clip to find how long the marker is, in paper clips.
+sources:
+  ccss:
+  - 1.MD.A.2
+  learning_components:
+  - c325c592
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.length.no-gaps-overlaps
+    relation: definitional
+    points_to: procedure.2
+    why: Step 2 places each copy exactly where the previous one ends, with no gap and no overlap, which
+      is the meaning of length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.objects
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 counts the copies to get the whole-number length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.size.direct
+    relation: definitional
+    points_to: statement
+    why: The unit is shorter than the object and the last copy reaches or overhangs the end, which is
+      judged by direct comparison.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

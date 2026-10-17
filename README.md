@@ -4,9 +4,10 @@ A research map of how school mathematics, pre-K through grade 12, fits
 together: what there is to learn, what has to be learned first and exactly
 why, and how curricula order it.
 
-**Status:** setting up. The rules are a first draft awaiting review, six
-example nodes pass the checker, and the pilot slice (equal sharing to slope)
-is scoped.
+**Status:** pilot built. The slice from equal sharing (grade 1) to slope
+(grade 8) has 190 nodes and 725 prerequisite edges; it passes the checker
+with nothing unlearnable and no cycles. It recovers 85% of the Coherence Map's
+links in the slice. Awaiting human review: `pilot/run/REVIEW.md`.
 
 ## Layout
 

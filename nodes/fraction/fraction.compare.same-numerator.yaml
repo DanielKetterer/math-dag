@@ -1,0 +1,62 @@
+id: fraction.compare.same-numerator
+concept: fraction
+facet: part-whole
+level: 2
+type: procedure
+name: Compare fractions with the same numerator
+statement: 'When two fractions have the same numerator, there are the same number of parts, so the fraction
+  whose parts are larger (smaller denominator) is greater.
+
+  '
+assess: Which is greater, 2/3 or 2/5? Explain.
+sources:
+  ccss:
+  - 3.NF.A.3.d
+  learning_components:
+  - ea2ae87f
+  - 1f979ba2
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: The statement reads each fraction as the same number of parts of size 1/b, so the part size is
+      all that differs.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: partitioning.equal-shares.more-shares-smaller
+    relation: justificatory
+    points_to: statement
+    why: A larger denominator means more equal shares of the whole, so each part is smaller, which decides
+      the comparison.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.symbols
+    relation: definitional
+    points_to: statement
+    why: Finding which denominator is smaller, such as 3 versus 5, compares two whole numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

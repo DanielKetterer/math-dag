@@ -1,0 +1,75 @@
+id: fraction.compare.same-denominator
+concept: fraction
+facet: measure
+level: 2
+type: procedure
+name: Compare fractions with the same denominator
+statement: 'When two fractions have the same denominator, the parts are the same size, so the fraction
+  with more parts is greater.
+
+  '
+assess: Which is greater, 3/8 or 5/8? Explain.
+sources:
+  ccss:
+  - 3.NF.A.3.d
+  learning_components:
+  - '56514983'
+  - bd5ee9b3
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.non-unit.number-line
+    relation: representational
+    points_to: statement
+    why: Each fraction a/b is a lengths of size 1/b from 0, so the one with more lengths lies farther
+      along the line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.as-number
+    relation: definitional
+    points_to: statement
+    why: Saying one fraction is greater requires that fractions have definite sizes that can be ordered
+      like whole numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.symbols
+    relation: definitional
+    points_to: statement
+    why: With equal part sizes the decision reduces to comparing the two numerators as whole numbers,
+      such as 3 and 5.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: Each fraction is a parts of one common size 1/b, so equal denominators leave only the number
+      of parts to compare.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The target is measure facet. The idea that a fractions are a copies of one common
+        size 1/b is already given by fraction.non-unit.number-line (a lengths of 1/b from 0); the part-whole
+        reading is the same idea in an area model.'
+    status: disputed
+status: proposed

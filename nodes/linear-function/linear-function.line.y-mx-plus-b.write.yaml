@@ -1,0 +1,89 @@
+id: linear-function.line.y-mx-plus-b.write
+concept: linear-function
+facet: line
+level: 3
+type: representation
+name: Write y = mx + b for a line not through the origin
+statement: A non-vertical line with slope m that crosses the vertical axis at (0, b) has the equation
+  y = mx + b.
+procedure:
+- Read two points (x1, y1) and (x2, y2) on the line.
+- Compute m = (y2 - y1)/(x2 - x1).
+- Compute b = y1 - m x x1.
+- Write y = mx + b.
+assess: A line passes through (2, 5) and (6, 7). Write its equation.
+sources:
+  ccss:
+  - 8.EE.B.6
+  learning_components:
+  - 3e7febf4
+requires:
+- clause: standard
+  all_of:
+  - node: slope.constant-on-line
+    relation: definitional
+    points_to: statement
+    why: The statement refers to the slope m of the line, which is well defined because every pair of
+      points gives the same slope.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: slope.between-two-points
+    relation: procedural
+    points_to: procedure.2
+    why: Computing m = (y2 - y1)/(x2 - x1) from the two read points is the slope formula.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.four-quadrants
+    relation: representational
+    points_to: statement
+    why: The crossing point (0, b) lies on the vertical axis and b may be negative, so axis points in
+      all quadrants are read.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-numbers.operations
+    relation: definitional
+    points_to: statement
+    why: Slopes and intercepts may be negative or fractional, as the statement allows any non-vertical
+      line.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: expressions.variables
+    relation: definitional
+    points_to: statement
+    why: 'Critic: The result is an equation with variables. (proposed as a missing direct prerequisite
+      of this node).'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: linear-function.line.y-mx.write
+  relation: generalizes
+  note: y = mx + b generalizes y = mx; the target can be learned straight from slope and intercept without
+    y = mx first.
+status: proposed

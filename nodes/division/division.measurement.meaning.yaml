@@ -1,0 +1,74 @@
+id: division.measurement.meaning
+concept: division
+facet: measurement
+level: 2
+type: concept
+name: A quotient as the number of equal groups
+statement: When a objects are put into equal groups of b objects each, the quotient a divided by b is
+  the number of groups.
+assess: 24 stickers are put into packs of 6, and 24 divided by 6 is 4. What does the 4 tell you?
+sources:
+  ccss:
+  - 3.OA.A.2
+  learning_components:
+  - 6d81db77
+  - '30398626'
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: The groups of b objects are equal groups, so the quotient is the number of such equal groups
+      that total a.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The measurement meaning can be learned by repeatedly taking groups of b from
+        a and counting the groups (repeated subtraction), without a multiplication meaning.'
+    status: disputed
+  - node: counting.objects
+    relation: definitional
+    points_to: statement
+    why: The quotient is a count of the groups formed, such as the 4 packs of 6 stickers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+- clause: critic-route-1
+  note: 'Repeated-removal route: take groups of b from a until none remain and count the groups, with
+    no multiplication.'
+  all_of:
+  - node: counting.objects
+    relation: definitional
+    points_to: statement
+    why: The quotient is a count of the groups formed, such as the 4 packs of 6 stickers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.whole-number
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Repeated-removal route: take groups of b from a until
+      none remain and count the groups, with no multiplication.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

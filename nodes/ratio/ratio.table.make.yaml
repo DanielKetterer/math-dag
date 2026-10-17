@@ -1,0 +1,66 @@
+id: ratio.table.make
+concept: ratio
+facet: composed-unit
+level: 2
+type: procedure
+name: Make a table of equivalent ratios
+statement: From a ratio a:b, given directly or read from a description, build a table whose rows are pairs
+  of whole-number values in equivalent ratios.
+procedure:
+- Write the ratio a:b as the first row, one column per quantity.
+- 'For n = 2, 3, 4, ..., add the row (n x a) : (n x b).'
+assess: A paint mix uses 2 cans of blue for every 3 cans of yellow. Make a table with four rows of equivalent
+  ratios.
+sources:
+  ccss:
+  - 6.RP.A.3.a
+  learning_components:
+  - 1da2eafe
+  - 6808344c
+  - '96529518'
+requires:
+- clause: standard
+  all_of:
+  - node: ratio.equivalent
+    relation: definitional
+    points_to: statement
+    why: Each added row is a pair (n x a, n x b) that is an equivalent ratio of the first row, so the
+      meaning of equivalent ratios defines the table.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.notation
+    relation: procedural
+    points_to: procedure.1
+    why: Writing the ratio a:b as the first row, with each quantity in its own column in the stated order,
+      is the ratio notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Writing the first row from a ratio given as a:b uses the notation; if the ratio
+        is given in words, the row is read from the for-every description.'
+    status: disputed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Computing the products n x a and n x b for n = 2, 3, 4 uses single-digit multiplication facts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

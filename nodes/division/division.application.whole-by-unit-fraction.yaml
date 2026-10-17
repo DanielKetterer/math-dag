@@ -1,0 +1,62 @@
+id: division.application.whole-by-unit-fraction
+concept: division
+facet: measurement
+level: 3
+type: application
+name: Solve real-world problems dividing a whole number by a unit fraction
+statement: A real-world problem asks how many unit-fraction-sized parts fit into a whole-number amount;
+  the learner represents it with a model or equation and finds the count.
+assess: A 5-meter ribbon is cut into pieces 1/4 meter long. How many pieces are there?
+sources:
+  ccss:
+  - 5.NF.B.7.c
+  learning_components:
+  - c13bce31
+requires:
+- clause: standard
+  all_of:
+  - node: division.whole-by-unit-fraction.interpret
+    relation: representational
+    points_to: statement
+    why: The learner represents the cutting with a fraction model and counts the parts in the model.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The model route (draw and count) is sufficient under the statement''s ''model
+        or equation''.'
+    status: disputed
+- clause: equation
+  all_of:
+  - node: division.whole-by-unit-fraction.equation
+    relation: representational
+    points_to: statement
+    why: The learner represents the story with the equation n divided by 1/b = ?.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The equation is required only on the equation route; the model route needs no
+        equation.'
+    status: disputed
+  - node: division.whole-by-unit-fraction.compute
+    relation: procedural
+    points_to: statement
+    why: The learner finds the count by multiplying the whole number by the denominator.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows ''a model or equation''; the equation route needs this procedure,
+        the model route counts parts in the drawing.'
+    status: disputed
+status: proposed

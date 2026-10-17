@@ -1,0 +1,106 @@
+id: linear-function.model.rate.interpret
+concept: linear-function
+facet: model
+level: 3
+type: concept
+name: Interpret the rate of change in context
+statement: The rate of change m of a linear model is the amount the output changes, in its units, for
+  each 1-unit increase in the input.
+assess: The cost of a taxi ride is C = 2.5d + 3, where d is miles. What does 2.5 mean in this situation?
+sources:
+  ccss:
+  - 8.F.B.4
+  learning_components:
+  - b2a9431b
+requires:
+- clause: standard
+  all_of:
+  - node: ratio.unit-rate
+    relation: definitional
+    points_to: statement
+    why: The rate of change is the change in output for 1 unit of input, which is a unit rate of output
+      per input.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx-plus-b.write
+    relation: representational
+    points_to: statement
+    why: The model is written y = mx + b and m is read as the coefficient of x in that equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Reading m as the coefficient of x in y = mx + b is one way to meet the rate in
+        a formula; the other is as the per-unit amount from a proportional equation.'
+    status: disputed
+  - node: functions.definition
+    relation: definitional
+    points_to: statement
+    why: The statement speaks of the output changing as the input increases, which uses input and output
+      of a function.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The statement speaks of output and input, but it is unclear whether the formal
+        function definition is needed rather than informal dependence.'
+    status: disputed
+  - node: expressions.variables
+    relation: representational
+    points_to: statement
+    why: The learner reads m as the coefficient of the variable in a formula such as C = 2.5d + 3.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+- clause: critic-route-1
+  note: Rate as coefficient of the input variable in a proportional equation, extended to adding a constant
+  all_of:
+  - node: ratio.unit-rate
+    relation: definitional
+    points_to: statement
+    why: The rate of change is the change in output for 1 unit of input, which is a unit rate of output
+      per input.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variables
+    relation: representational
+    points_to: statement
+    why: The learner reads m as the coefficient of the variable in a formula such as C = 2.5d + 3.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: proportional-relationship.constant.equation
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Rate as coefficient of the input variable in a proportional
+      equation, extended to adding a constant'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

@@ -1,0 +1,129 @@
+id: fraction.mixed-number.subtraction.unlike-denominators
+concept: fraction
+facet: measure
+level: 3
+type: procedure
+name: Subtract mixed numbers with unlike denominators
+statement: Subtract a smaller mixed number from a larger one when the fraction parts have unlike denominators
+  by rewriting the fraction parts over a common denominator, regrouping 1 from the whole part when the
+  first fraction part is smaller, then subtracting parts separately.
+procedure:
+- Rewrite the two fraction parts over a common multiple n of their denominators.
+- If the first fraction part is less than the second, take 1 from the first whole part and add n/n to
+  its fraction part.
+- Subtract the fraction parts, and subtract the whole-number parts.
+assess: Compute 4 1/6 - 1 3/4.
+sources:
+  ccss:
+  - 5.NF.A.1
+  learning_components:
+  - 3f8f80e7
+requires:
+- clause: standard
+  all_of:
+  - node: factors-multiples.whole-number
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites the fraction parts over a common multiple n of their two denominators.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Using n = b x d needs no factors-and-multiples analysis.'
+    status: disputed
+  - node: fraction.mixed-number.subtract
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 and 3 compare fraction parts, regroup 1 from the whole part as n/n, and subtract parts
+      separately, as in like-denominator mixed-number subtraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.unlike-denominators
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites the two fraction parts over a common multiple n of their denominators, as unlike-denominator
+      subtraction does.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.compare.same-denominator
+    relation: definitional
+    points_to: statement
+    why: Step 2 only needs a numerator comparison once both fraction parts share denominator n; this is
+      the real prerequisite behind the proposed common-denominator comparison edge.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+- clause: critic-route-1
+  note: Convert both mixed numbers to improper fractions, subtract with unlike denominators, and convert
+    back. Arguably a different node because the statement specifies regrouping from the whole part.
+  all_of:
+  - node: fraction.mixed-number.subtract
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 and 3 compare fraction parts, regroup 1 from the whole part as n/n, and subtract parts
+      separately, as in like-denominator mixed-number subtraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.unlike-denominators
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites the two fraction parts over a common multiple n of their denominators, as unlike-denominator
+      subtraction does.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.to-fraction
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Convert both mixed numbers to improper fractions,
+      subtract with unlike denominators, and convert back. Arguably a different node because the statement
+      specifies regrouping from the whole part.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: fraction.between-whole-numbers
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Convert both mixed numbers to improper fractions,
+      subtract with unlike denominators, and convert back. Arguably a different node because the statement
+      specifies regrouping from the whole part.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+related:
+- node: fraction.compare.common-denominator
+  relation: generalizes
+  note: After step 1 both parts have denominator n, so only a same-denominator comparison (numerator against
+    numerator) is needed; common-denominator comparison bundles the rewriting already done in step 1.
+    The correct prerequisite is fraction.compare.same-denominator; this node generalizes it.
+status: proposed

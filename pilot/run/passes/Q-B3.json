@@ -1,0 +1,1456 @@
+{
+ "pass": "Q",
+ "batch": "B3",
+ "nodes": {
+  "fraction.addition.unlike-denominators.equivalent-replacement": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.equivalent.same-size",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each replaced fraction must be the same amount of the same whole, which is why the total of the amounts does not change."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The common-denominator rewriting a/b = (n x a)/(n x b) is how each fraction in the sum is replaced by an equivalent one."
+      },
+      {
+       "node": "fraction.addition.joining",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about the value of a sum, which means the amount made by joining the two fractional parts."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle.recognize",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Deciding that 8/12 equals 2/3 and that 2/12 does not equal 2/3 requires recognizing equivalent fractions."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.addition.unlike-denominators": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors-multiples.whole-number",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 asks for a common multiple of the denominators b and d, which uses multiples and common multiples."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle.generate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 rewrites a/b as (a x (n/b))/n, which is generating an equivalent fraction with a chosen denominator."
+      },
+      {
+       "node": "division.multi-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes the multiplier n/b and n/d, which are whole-number quotients of the common multiple by each denominator."
+      },
+      {
+       "node": "fraction.addition.like-denominators",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 adds the numerators over n, which is the like-denominator addition of fractions."
+      },
+      {
+       "node": "fraction.addition.unlike-denominators.equivalent-replacement",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rewriting in step 2 is allowed only because replacing addends by equivalent fractions leaves the sum unchanged."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.subtraction.unlike-denominators": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors-multiples.whole-number",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 asks for a common multiple of the denominators b and d, which uses multiples and common multiples."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle.generate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 rewrites a/b as (a x (n/b))/n, which is generating an equivalent fraction with a chosen denominator."
+      },
+      {
+       "node": "division.multi-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes the multiplier n/b and n/d, which are whole-number quotients of the common multiple by each denominator."
+      },
+      {
+       "node": "fraction.subtraction.like-denominators",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 subtracts the numerators over n, which is the like-denominator subtraction of fractions."
+      },
+      {
+       "node": "fraction.addition.unlike-denominators.equivalent-replacement",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rewriting in step 2 is allowed because replacing fractions by equivalents leaves a difference unchanged, as the replacement node states for differences."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.mixed-number.addition.unlike-denominators": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.addition.unlike-denominators",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 rewrites the two fraction parts over a common multiple of their denominators, exactly as unlike-denominator addition does."
+      },
+      {
+       "node": "fraction.mixed-number.add",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Steps 2 and 3 add whole parts and fraction parts separately and regroup a fraction sum of 1 or more into the whole part."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.mixed-number.subtraction.unlike-denominators": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.subtraction.unlike-denominators",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 rewrites the two fraction parts over a common multiple n of their denominators, as unlike-denominator subtraction does."
+      },
+      {
+       "node": "fraction.compare.common-denominator",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 asks whether the first fraction part is less than the second, decided by comparing numerators over the common denominator n."
+      },
+      {
+       "node": "fraction.mixed-number.subtract",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Regrouping 1 as n/n from the whole part, and then subtracting parts separately, is the like-denominator mixed-number subtraction method."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.application.addition-same-whole": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.addition.joining",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story combines two fractional amounts of the same whole, which is the joining meaning of fraction addition."
+      },
+      {
+       "node": "fraction.application.add-like-denominators",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Turning a combining story into an equation or model is first learned with like denominators and is extended here to unlike ones."
+      },
+      {
+       "node": "fraction.addition.unlike-denominators",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding the total when the denominators differ requires adding fractions with unlike denominators."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.application.subtraction-same-whole": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.subtraction.separating",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story takes away or compares fractional amounts of one whole, which is the separating meaning of fraction subtraction."
+      },
+      {
+       "node": "fraction.application.subtract-like-denominators",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Turning a take-away story into an equation or model is first learned with like denominators and is extended here to unlike ones."
+      },
+      {
+       "node": "fraction.subtraction.unlike-denominators",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding the difference when the denominators differ requires subtracting fractions with unlike denominators."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.estimate.benchmark.sum": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.compare.reasoning-size",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 chooses the nearest of 0, 1/2, 1 or a whole number, which requires reasoning about whether a fraction is nearer to one benchmark."
+      },
+      {
+       "node": "fraction.addition.like-denominators.model",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds benchmarks such as 1/2 + 1/2 and 1/2 + 1, which are sums of same-denominator fractions seen in a model."
+      },
+      {
+       "node": "addition.whole-number",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds benchmark whole numbers, for example 1 + 1, to produce the estimate."
+      },
+      {
+       "node": "fraction.addition.joining",
+       "relation": "justificatory",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 calls a sum unreasonable if smaller than an addend, because joining parts to an amount cannot make it smaller."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.estimate.benchmark.difference": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.compare.reasoning-size",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 chooses the nearest of 0, 1/2, 1 or a whole number, which requires reasoning about whether a fraction is nearer to one benchmark."
+      },
+      {
+       "node": "fraction.subtraction.like-denominators.model",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 subtracts benchmarks such as 1 - 1/2 and 1/2 - 0, which are differences of same-denominator fractions seen in a model."
+      },
+      {
+       "node": "subtraction.whole-number",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 subtracts benchmark whole numbers, for example 2 - 1, to produce the estimate."
+      },
+      {
+       "node": "fraction.subtraction.separating",
+       "relation": "justificatory",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 calls a difference unreasonable if larger than the first fraction, because separating parts away cannot leave more than was there."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.between-whole-numbers": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.multi-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 divides the numerator a by the denominator b to get a whole-number quotient q and remainder r."
+      },
+      {
+       "node": "fraction.whole-number.as-fraction",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 concludes a/b equals q when r = 0, which uses a whole number written as a fraction, q = (q x b)/b."
+      },
+      {
+       "node": "fraction.mixed-number.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 rests on a/b = q + r/b, the mixed-number view of a fraction as a whole number plus a fraction."
+      },
+      {
+       "node": "fraction.compare.same-denominator",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Showing a/b lies below q + 1 uses r/b < b/b = 1, a comparison of two fractions with the same denominator."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.quotient.equal-sharing": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.partitive.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about the size of each equal share when a wholes are shared among b people, a partitive quotient."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each share is named a/b of one whole, a parts of size 1/b, using the non-unit fraction meaning."
+      },
+      {
+       "node": "fraction.unit.part-whole",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The drawing of 3 pizzas shared by 4 cuts each pizza into 4 equal parts, each a unit fraction 1/4 of a pizza."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.quotient.symbolic": {
+   "routes": [
+    {
+     "clause": "equal-sharing",
+     "edges": [
+      {
+       "node": "fraction.quotient.equal-sharing",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equality a divided by b = a/b is the symbolic record of each share when a wholes are shared among b."
+      },
+      {
+       "node": "division.partitive.situation-to-expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing a sharing situation as a divided by b is the division expression whose value the statement names a/b."
+      }
+     ]
+    },
+    {
+     "clause": "unknown-factor",
+     "edges": [
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a divided by b is the number that multiplied by b gives a, the unknown-factor meaning of the quotient."
+      },
+      {
+       "node": "fraction.multiply-whole.rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Checking that b x (a/b) = (b x a)/b = a shows a/b is the unknown factor, which uses n x (a/b) = (n x a)/b."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.application.whole-number-division-fraction-answer": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.quotient.symbolic",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The quotient of two whole numbers is written as the fraction a/b, which is exactly a divided by b = a/b."
+      },
+      {
+       "node": "division.partitive.situation-to-expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story divides units equally into shares, so it must be modeled as a division expression first."
+      },
+      {
+       "node": "fraction.mixed-number.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "When the answer is not whole it may be written as a mixed number, a whole number plus a fraction."
+      },
+      {
+       "node": "fraction.between-whole-numbers",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Turning 50/9 into a mixed number uses the quotient and remainder that locate the fraction between two whole numbers."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.multiplication.parts-of-partition.whole-number": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The product is a parts, each of size 1/b of the quantity, which is the non-unit fraction meaning applied to q."
+      },
+      {
+       "node": "division.partitive.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Partitioning q into b equal parts means finding the size of each equal share of q."
+      },
+      {
+       "node": "fraction.quotient.equal-sharing",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "To find the product of (2/3) x 4, each third of 4 must be named as 4/3, the share when 4 wholes are shared by 3."
+      },
+      {
+       "node": "fraction.multiply-whole.model",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Taking 2 parts of size 4/3 to get the product is a whole number times a fraction, found with unit fractions."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.multiplication.parts-of-partition.fraction": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.multiplication.parts-of-partition.whole-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement repeats the parts-of-partition meaning, but with a fraction c/d in place of the whole number q."
+      },
+      {
+       "node": "partitioning.equal-area.any-shape",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Partitioning the amount c/d into b equal parts means splitting a shaded region of a model into equal-area parts."
+      },
+      {
+       "node": "division.unit-fraction-by-whole.interpret",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "In the model, 4/5 split into 3 parts needs each fifth split into 3, giving parts of size 1/15."
+      },
+      {
+       "node": "fraction.multiply-whole.model",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Taking 2 parts of size 4/15 to read the product 8/15 is a whole number times a fraction."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.multiplication.operation-sequence": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.multiplication.parts-of-partition.whole-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The case of whole q follows from the parts-of-partition meaning, a parts of q split into b equal parts."
+      },
+      {
+       "node": "fraction.multiplication.parts-of-partition.fraction",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The case of fractional q follows from the parts-of-partition meaning applied to c/d."
+      },
+      {
+       "node": "multiplication.properties",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Taking a parts after dividing q by b equals dividing a x q by b, an exchange of the order of multiplying and dividing."
+      },
+      {
+       "node": "fraction.quotient.symbolic",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Writing the division of 8 by 3 as the fraction 8/3 uses a divided by b = a/b."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.multiplication.product-rule": {
+   "routes": [
+    {
+     "clause": "parts-of-partition",
+     "edges": [
+      {
+       "node": "fraction.multiplication.parts-of-partition.fraction",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The product (a/b) x (c/d) is first defined as a parts of c/d split into b equal parts, which the rule then computes."
+      },
+      {
+       "node": "fraction.multiplication.operation-sequence",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Multiplying c/d by a, then dividing by b, gives the numerator a x c and leads to the denominator."
+      },
+      {
+       "node": "division.unit-fraction-by-whole.rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Dividing each 1/d by b gives 1/(b x d), which produces the denominator b x d of the product."
+      },
+      {
+       "node": "fraction.whole-number.as-fraction",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement writes a whole number q as q/1 so that the rule covers whole-number factors."
+      }
+     ]
+    },
+    {
+     "clause": "area-model",
+     "edges": [
+      {
+       "node": "multiplication.array-area.fraction-product.represent",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The area model shows the shaded rectangle holds a x c of b x d equal pieces, which is the rule."
+      },
+      {
+       "node": "fraction.whole-number.as-fraction",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement writes a whole number q as q/1 so that the rule covers whole-number factors."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.multiplication.symbolic": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.whole-number.as-fraction",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes a whole-number factor q as q/1."
+      },
+      {
+       "node": "multiplication.multi-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 2 and 3 multiply whole-number numerators and whole-number denominators, which can be multi-digit products."
+      },
+      {
+       "node": "fraction.multiplication.product-rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Multiplying numerators and denominators is the product rule, which explains why the procedure gives the product."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.mixed-number.multiplication": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.mixed-number.to-fraction",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 rewrites each mixed number w a/b as the fraction (w x b + a)/b."
+      },
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the two fractions by multiplying numerators and denominators."
+      },
+      {
+       "node": "fraction.between-whole-numbers",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 divides numerator by denominator to find the whole part and remainder of the mixed-number answer."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle.recognize",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The product 20/6 of the test problem must be reduced to 3 1/3, which requires recognizing 2/6 equals 1/3."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.array-area.fraction-sides.tiling": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors-multiples.whole-number",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 needs a common denominator n for both side lengths, which is a common multiple of the two denominators."
+      },
+      {
+       "node": "fraction.equivalent.simple.generate",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 rewrites each side length as an equivalent fraction over n, such as 1/2 as 2/4."
+      },
+      {
+       "node": "fraction.non-unit.unit-sum",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 lays p squares along a side of length p/n, because p/n is a sum of p unit fractions 1/n."
+      },
+      {
+       "node": "fraction.unit.part-whole",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 names each small square as one of n x n equal parts of the unit square, so its area is 1/(n x n)."
+      },
+      {
+       "node": "area.rectangle.tiling",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 counts p x q tiles to find area, which is area of a rectangle by tiling as a product of rows and columns."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.array-area.fraction-sides.multiply": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 multiplies the two side lengths with the product rule, which is the fraction multiplication procedure."
+      },
+      {
+       "node": "area.rectangle.tiling",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses area of a rectangle as length times width, now with fractional lengths."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.array-area.fraction-product.represent": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.rectangle.tiling",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A product is shown as the area of a rectangle whose sides are the two factors, as in area as length times width."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sides of the shaded rectangle have lengths a/b and c/d of the unit side, each a parts of size 1/b or 1/d."
+      },
+      {
+       "node": "partitioning.equal-shares.area",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 partitions the unit square into b and d equal parts along its two sides."
+      },
+      {
+       "node": "fraction.unit.part-whole",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 names each of the b x d small rectangles as 1/(b x d) of the unit square."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.array-area.fraction-sides.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.array-area.fraction-sides.tiling",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation describes what the tiling method gives, p x q squares of area 1/(n x n)."
+      },
+      {
+       "node": "multiplication.array-area.fraction-sides.multiply",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation compares the tiling area with the area found by multiplying side lengths."
+      },
+      {
+       "node": "fraction.multiplication.product-rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The tiling area (p x q)/(n x n) is identified with (p/n) x (q/n) by the product rule."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Any two fractional side lengths can be rewritten over a common denominator n, which makes the argument general."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.scaling.resize": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Resizing by a whole-number factor is the multiplicative comparison of the new size as n times the old size."
+      },
+      {
+       "node": "fraction.multiplication.parts-of-partition.whole-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Shrinking or stretching by a fraction factor means taking a parts of the quantity split into b equal parts."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.scaling.size-principle": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.scaling.resize",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Whether q x f is larger or smaller than q follows from f stretching or shrinking the quantity q."
+      },
+      {
+       "node": "fraction.compare.benchmark",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The cases f > 1, f = 1 and f < 1 compare the factor with the benchmark 1."
+      },
+      {
+       "node": "multiplication.by-one",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The case f = 1 says the product equals q, which is multiplying by 1 leaving a number unchanged."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.scaling.compare-without-computing": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.properties",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 may pick either factor as the one to compare against, which uses the commutative property of multiplication."
+      },
+      {
+       "node": "fraction.compare.benchmark",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 compares the other factor with 1, a comparison with a benchmark fraction."
+      },
+      {
+       "node": "multiplication.scaling.size-principle",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 concludes greater, equal or less using the scaling size principle."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.scaling.explain-greater-than-one": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.scaling.size-principle",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation justifies the claim that q x f is greater than q when f is greater than 1."
+      },
+      {
+       "node": "fraction.decompose.equation",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing f = 1 + g for a fraction f > 1 decomposes the fraction as b/b plus a fraction with the same denominator."
+      },
+      {
+       "node": "multiplication.properties",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The step q x (1 + g) = q x 1 + q x g is the distributive property."
+      },
+      {
+       "node": "multiplication.by-one",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The step q x 1 = q uses multiplying by 1 leaving a number unchanged."
+      },
+      {
+       "node": "fraction.multiplication.product-rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Showing q x g is a positive amount uses the product rule, since the product of positive fractions has positive numerator and denominator."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.scaling.explain-less-than-one": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.scaling.size-principle",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation justifies the claim that q x f is less than q when f is less than 1."
+      },
+      {
+       "node": "fraction.multiplication.parts-of-partition.whole-number",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The reasoning reads (a/b) x q as a of the b equal parts of q, for q a whole number."
+      },
+      {
+       "node": "fraction.multiplication.parts-of-partition.fraction",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The same reasoning reads (a/b) x q as a of the b equal parts of q when q is a fraction."
+      },
+      {
+       "node": "partitioning.equal-shares.whole-as-shares",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "All b equal parts together make up q, so taking only a < b of them gives less than q."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.equivalent.multiply-principle.multiply-by-one": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.equivalent.multiply-principle",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement reinterprets the equation a/b = (n x a)/(n x b) of the multiplication principle."
+      },
+      {
+       "node": "fraction.multiplication.product-rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The step (n x a)/(n x b) = (n/n) x (a/b) is the product rule read backward."
+      },
+      {
+       "node": "fraction.whole-number.as-fraction",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The step n/n = 1 uses the whole number 1 written as a fraction."
+      },
+      {
+       "node": "multiplication.by-one",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The point of the statement is that multiplying by 1 leaves a/b unchanged."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.application.multiplication-in-context.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.multiplication.parts-of-partition.fraction",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A fraction of a fractional quantity, such as 2/3 of 3/4 acre, is the parts-of-partition meaning of the product."
+      },
+      {
+       "node": "multiplication.array-area.fraction-product.represent",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The visual model for the product is the area model of a fraction times a fraction."
+      },
+      {
+       "node": "fraction.mixed-number.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Mixed-number quantities in the problem must be read as a whole number plus a fraction when drawn."
+      },
+      {
+       "node": "fraction.application.multiply-whole.model",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Drawing a model from a story and reading the answer from it is first done with whole-number multipliers."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.application.multiplication-in-context.equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.multiplication.parts-of-partition.fraction",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The phrase a fraction of a quantity must be recognized as multiplication by that fraction to write the equation."
+      },
+      {
+       "node": "fraction.application.multiply-whole.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing a multiplication equation for a story is first learned with whole-number multipliers."
+      },
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Solving the equation symbolically requires multiplying fractions by multiplying numerators and denominators."
+      },
+      {
+       "node": "fraction.mixed-number.multiplication",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Mixed-number multiples, such as 1 1/2 batches of 2 1/4 cups, require multiplying mixed numbers."
+      }
+     ]
+    }
+   ]
+  },
+  "division.unit-fraction-by-whole.interpret": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.partitive.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement reads the quotient as the size of each part when 1/b is split into n equal parts."
+      },
+      {
+       "node": "fraction.unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The result 1/(b x n) of the whole is a unit fraction, one of b x n equal parts of the whole."
+      },
+      {
+       "node": "partitioning.equal-area.any-shape",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Splitting each of the whole's b parts into n equal-area parts is how the model is drawn."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The b parts, each split into n, make b groups of n parts, which is b x n equal parts in all."
+      }
+     ]
+    }
+   ]
+  },
+  "division.unit-fraction-by-whole.rule": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.unit-fraction-by-whole.interpret",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule states symbolically the share size found in the model, each of b x n equal parts of the whole."
+      }
+     ]
+    }
+   ]
+  },
+  "division.unit-fraction-by-whole.compute": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.multi-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 multiplies the denominator b by the divisor n, which may be a multi-digit product."
+      },
+      {
+       "node": "division.unit-fraction-by-whole.rule",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 writes the quotient as 1/(b x n), which is the rule itself."
+      }
+     ]
+    }
+   ]
+  },
+  "division.unit-fraction-by-whole.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation reads (1/b) divided by n as the number that multiplied by n gives 1/b."
+      },
+      {
+       "node": "division.unit-fraction-by-whole.rule",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation justifies the rule (1/b) divided by n = 1/(b x n)."
+      },
+      {
+       "node": "fraction.multiply-whole.rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The step (1/(b x n)) x n = n/(b x n) uses the rule n x (a/b) = (n x a)/b."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The step n/(b x n) = 1/b uses the multiplication principle for equivalent fractions."
+      }
+     ]
+    }
+   ]
+  },
+  "division.whole-by-unit-fraction.interpret": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.measurement.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement reads the quotient as the number of parts of size 1/b that fit into n, a measurement quotient."
+      },
+      {
+       "node": "fraction.unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The parts of size 1/b are unit fractions, each one of b equal parts of a whole."
+      },
+      {
+       "node": "partitioning.equal-shares.whole-as-shares",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each whole holds b parts of size 1/b because a whole is all of its equal shares."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "n wholes each holding b parts give n groups of b, so n x b parts in all."
+      }
+     ]
+    }
+   ]
+  },
+  "division.whole-by-unit-fraction.rule": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.whole-by-unit-fraction.interpret",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule states symbolically the count found in the model, b parts in each of n wholes."
+      }
+     ]
+    }
+   ]
+  },
+  "division.whole-by-unit-fraction.compute": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.multi-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 multiplies the whole number n by the denominator b, which may be a multi-digit product."
+      },
+      {
+       "node": "division.whole-by-unit-fraction.rule",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 writes n x b as the quotient, which is the rule itself."
+      }
+     ]
+    }
+   ]
+  },
+  "division.whole-by-unit-fraction.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation reads n divided by 1/b as the number that multiplied by 1/b gives n."
+      },
+      {
+       "node": "division.whole-by-unit-fraction.rule",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation justifies the rule n divided by 1/b = n x b."
+      },
+      {
+       "node": "fraction.multiply-whole.rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The step (n x b) x (1/b) = (n x b)/b uses the rule n x (a/b) = (n x a)/b."
+      },
+      {
+       "node": "fraction.quotient.symbolic",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The step (n x b)/b = n uses a fraction as a division of whole numbers, (n x b) divided by b."
+      }
+     ]
+    }
+   ]
+  },
+  "division.unit-fraction-by-whole.equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.unit-fraction-by-whole.interpret",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation records the situation of sharing 1/b equally among n, which the interpretation describes."
+      },
+      {
+       "node": "division.partitive.situation-to-expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing a sharing situation as a division expression is the skill used with 1/b as the dividend."
+      }
+     ]
+    }
+   ]
+  },
+  "division.whole-by-unit-fraction.equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.whole-by-unit-fraction.interpret",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation records the situation of counting parts of size 1/b in n, which the interpretation describes."
+      },
+      {
+       "node": "division.measurement.situation-to-expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing a grouping situation as a division expression is the skill used with 1/b as the divisor."
+      }
+     ]
+    }
+   ]
+  },
+  "division.application.unit-fraction-by-whole": {
+   "routes": [
+    {
+     "clause": "model",
+     "edges": [
+      {
+       "node": "division.unit-fraction-by-whole.interpret",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner draws a model of the unit fraction split into equal shares and reads each share from it."
+      }
+     ]
+    },
+    {
+     "clause": "equation",
+     "edges": [
+      {
+       "node": "division.unit-fraction-by-whole.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner writes the division equation (1/b) divided by n = ? for the story."
+      },
+      {
+       "node": "division.unit-fraction-by-whole.compute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner finds each share by dividing the unit fraction by the whole number."
+      }
+     ]
+    }
+   ]
+  },
+  "division.application.whole-by-unit-fraction": {
+   "routes": [
+    {
+     "clause": "model",
+     "edges": [
+      {
+       "node": "division.whole-by-unit-fraction.interpret",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner draws a model of n wholes cut into unit-fraction parts and counts the parts."
+      }
+     ]
+    },
+    {
+     "clause": "equation",
+     "edges": [
+      {
+       "node": "division.whole-by-unit-fraction.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner writes the division equation n divided by 1/b = ? for the story."
+      },
+      {
+       "node": "division.whole-by-unit-fraction.compute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner finds the count by dividing the whole number by the unit fraction."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

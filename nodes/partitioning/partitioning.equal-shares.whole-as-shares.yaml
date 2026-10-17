@@ -1,0 +1,64 @@
+id: partitioning.equal-shares.whole-as-shares
+concept: partitioning
+facet: area
+level: 1
+type: concept
+name: The whole as all of its equal shares
+statement: 'A whole partitioned into n equal shares is made of exactly n of those shares: two halves,
+  three thirds, or four fourths make one whole.'
+assess: A sandwich is cut into fourths. How many fourths make the whole sandwich?
+sources:
+  ccss:
+  - 1.G.A.3
+  - 2.G.A.3
+  learning_components:
+  - 213a7a8d
+  - d40094e3
+  - 75be40c8
+requires:
+- clause: standard
+  all_of:
+  - node: partitioning.equal-shares.name
+    relation: representational
+    points_to: assess
+    why: The statement is phrased with the names halves, thirds and fourths, as in two halves make one
+      whole.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The idea (n equal shares make exactly the whole) does not depend on the words
+        halves, thirds, fourths; only the examples and the test question phrase it that way.'
+    status: proposed
+  - node: partitioning.equal-shares.area
+    relation: definitional
+    points_to: statement
+    why: The claim that n shares make up the whole with nothing left over is the property of an equal
+      partition.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.objects
+    relation: definitional
+    points_to: statement
+    why: Finding that a sandwich cut in fourths has four fourths requires counting the shares.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,67 @@
+id: ratio.table.missing-value
+concept: ratio
+facet: composed-unit
+level: 2
+type: procedure
+name: Find a missing value in a ratio table
+statement: Find a missing entry in a ratio table by multiplying both entries of a complete row by the
+  same number, chosen to produce the known entry of the incomplete row.
+procedure:
+- Pick a complete row (p, q) of the table.
+- In the incomplete row, take the known entry and divide it by the entry of the complete row in the same
+  column; call the result n (n may be a fraction).
+- Multiply the other entry of the complete row by n to get the missing value.
+assess: 'A ratio table has the row 4 : 6. Find the missing value in the row ? : 9.'
+sources:
+  ccss:
+  - 6.RP.A.3.a
+  learning_components:
+  - 23e8528c
+requires:
+- clause: standard
+  all_of:
+  - node: ratio.equivalent
+    relation: definitional
+    points_to: statement
+    why: Multiplying both entries of a complete row by the same number n gives an equivalent ratio, which
+      is why the missing entry is correct.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.quotient.symbolic
+    relation: procedural
+    points_to: procedure.2
+    why: Dividing the known entry by the matching entry of the complete row gives n, which may be a fraction
+      such as 9 divided by 6 equals 3/2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The factor n as the fraction 9/6 = 3/2 is one representation; a decimal quotient
+        1.5 is the other.'
+    status: disputed
+  - node: fraction.multiplication.symbolic
+    relation: procedural
+    points_to: procedure.3
+    why: Multiplying the other entry of the complete row by the fraction n, such as 4 x 3/2, is a fraction
+      multiplication.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A fractional factor n is multiplied as a fraction; the alternative writes n as
+        a decimal, or chooses a complete row so n is whole.'
+    status: disputed
+status: proposed

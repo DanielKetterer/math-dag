@@ -1,0 +1,87 @@
+id: subtraction.comparison.number-line
+concept: subtraction
+facet: comparison
+level: 2
+type: representation
+name: Represent a whole-number difference as a distance on a number line
+statement: For whole numbers with b no greater than a, the difference a - b is the length of the segment
+  from b to a on the number line.
+procedure:
+- Locate b and a on the number line.
+- Measure the length from b up to a, in one jump or in smaller jumps (for example to the next ten, then
+  by tens).
+- The total length of the jumps is a - b.
+assess: Use a number line to find how far it is from 48 to 73, and write the subtraction it shows.
+sources:
+  ccss:
+  - 2.MD.B.6
+  learning_components:
+  - 6075778b
+  - 59146f3f
+requires:
+- clause: standard
+  all_of:
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 locates both b and a as points on the number line, each marked by its length from 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.no-gaps-overlaps
+    relation: definitional
+    points_to: procedure.2
+    why: Step 2 measures the length of the segment from b to a as a count of unit lengths spanning it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.size.direct
+    relation: definitional
+    points_to: statement
+    why: The difference is read as how much longer one quantity is than the other, a direct comparison
+      of two lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.whole-number
+    relation: definitional
+    points_to: statement
+    why: The statement says the length of the segment is a - b, so the meaning of subtraction is needed
+      to name that length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.whole-number
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds the lengths of the jumps to get the total distance.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

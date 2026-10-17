@@ -1,0 +1,94 @@
+id: ratio.unit-rate.fractions
+concept: ratio
+facet: unit-rate
+level: 3
+type: procedure
+name: Compute a unit rate from a ratio of fractions
+statement: For a rate of a/b units of one quantity per c/d units of another, with c not 0, the unit rate
+  is the complex fraction (a/b)/(c/d), computed by fraction division.
+procedure:
+- Write the rate as (a/b)/(c/d), the first quantity over the second.
+- Compute (a/b) divided by (c/d) by fraction division.
+- Label the result as units of the first quantity per 1 unit of the second.
+assess: A painter covers 2/3 of a wall in 3/4 of an hour. Find the unit rate in walls per hour.
+sources:
+  ccss:
+  - 7.RP.A.1
+  learning_components:
+  - 84257a01
+  - 5b1f724c
+  - 863028c4
+requires:
+- clause: standard
+  all_of:
+  - node: ratio.unit-rate
+    relation: definitional
+    points_to: statement
+    why: The result is the unit rate, the amount of the first quantity for 1 unit of the second, now with
+      fractional values.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.quotient.symbolic
+    relation: representational
+    points_to: statement
+    why: The complex fraction (a/b)/(c/d) uses the fraction bar to mean division of the top fraction by
+      the bottom fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.division.symbolic
+    relation: procedural
+    points_to: procedure.2
+    why: Computing (a/b) divided by (c/d) is done by the symbolic rule for dividing fractions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.unit-rate.language
+    relation: procedural
+    points_to: procedure.3
+    why: Labeling the result as units of the first quantity per 1 unit of the second uses rate language.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.complex-fraction
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 writes the rate as the complex fraction (a/b)/(c/d), a fraction whose numerator and denominator
+      are fractions.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: fraction.complex-fraction is not in index.txt; step 1 writes a complex fraction,
+        so some node for it is needed.'
+    status: disputed
+related:
+- node: ratio.unit-rate.find
+  relation: generalizes
+  note: Identifying which quantity is per which is the same step as for whole-number ratios; the whole-number
+    procedure is the special case that this node generalizes, not a prerequisite of it.
+status: proposed

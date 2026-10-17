@@ -1,0 +1,126 @@
+id: multiplication.array-area.fraction-sides.tiling
+concept: multiplication
+facet: array-area
+level: 2
+type: procedure
+name: Find the area of a fraction-sided rectangle by tiling with unit-fraction squares
+statement: Find the area of a rectangle with fractional side lengths by rewriting both sides over a common
+  denominator n, tiling the rectangle with squares of side 1/n, and counting squares, each of area 1/(n
+  x n).
+procedure:
+- Rewrite both side lengths over a common denominator n, as p/n and q/n.
+- 'Tile the rectangle with squares of side 1/n: p along one side and q along the other.'
+- Note that n x n such squares fill a unit square, so each has area 1/(n x n).
+- Count the p x q squares; the area is (p x q)/(n x n) square units.
+assess: A rectangle is 3/4 m by 1/2 m. Tile it with squares of side 1/4 m and find its area.
+sources:
+  ccss:
+  - 5.NF.B.4.b
+  learning_components:
+  - 3d4b5315
+requires:
+- clause: standard
+  all_of:
+  - node: factors-multiples.whole-number
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 needs a common denominator n for the two side lengths, found as a common multiple of the
+      denominators.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A common denominator for two side lengths can be taken to be the product of the
+        denominators; factors and multiples are only needed for a smaller one.'
+    status: disputed
+  - node: fraction.equivalent.multiply-principle.generate
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites each side length as an equivalent fraction p/n or q/n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: At level 2, the equivalent fractions can be produced with a model rather than
+        the symbolic rule.'
+    status: disputed
+  - node: fraction.multiple-of-unit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 uses that a side of length p/n is p copies of the unit fraction 1/n, so p squares fit
+      along it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: That a side p/n holds p squares of side 1/n is one expression of p/n as p copies
+        of 1/n; the same fact is available from other forms.'
+    status: disputed
+  - node: fraction.unit.part-whole
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 shows each small square is one of n x n equal parts of the unit square, so its area is
+      1/(n x n).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.tiling
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 counts the p x q squares in the rectangle as rows times columns, as in finding area by
+      tiling.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.simple.generate
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites each side length as an equivalent fraction over n, such as 1/2 as 2/4.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Model-based generation covers only simple denominators; the symbolic rule is
+        the alternative for general ones.'
+    status: disputed
+  - node: fraction.non-unit.unit-sum
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 lays p squares along a side of length p/n, because p/n is a sum of p unit fractions 1/n.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The unit-sum form is one of several statements of the same fact: p/n is p copies
+        of 1/n.'
+    status: disputed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: This is the direct source of 'p/n is p parts of size 1/n'; the proposed unit-multiple and unit-sum
+      edges are alternative statements of the same fact.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

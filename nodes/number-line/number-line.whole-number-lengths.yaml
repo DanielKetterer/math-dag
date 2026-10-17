@@ -3,33 +3,42 @@ concept: number-line
 facet: core
 level: 2
 type: representation
-name: Whole numbers as lengths on a number line
-statement: >
-  On a number line, the whole number n names the point reached after laying
-  off n equal unit lengths from 0. The number is the length from 0, not the
-  tick mark itself.
-procedure:
-  - Mark 0.
-  - Lay off equal unit lengths from 0, one after another.
-  - Label the end of the nth length as n.
-assess: "On a number line marked 0 to 10, show the length from 0 that represents 6."
+name: Whole numbers as lengths from 0 on a number line
+statement: On a number line diagram with equally spaced points labeled 0, 1, 2, ..., the whole number
+  n is represented by the length from 0 to the point labeled n, which is n unit lengths.
+assess: On this number line, draw the length that shows 7.
 sources:
-  ccss: [2.MD.B.6]
-  learning_components: [0119f987-f1eb-59b5-ae44-5bbc8ca9635a]
+  ccss:
+  - 2.MD.B.6
+  learning_components:
+  - 0119f987
 requires:
-  - clause: standard
-    all_of:
-      - node: measurement.length.unit-iteration
-        relation: definitional
-        points_to: statement
-        why: The statement defines n as n equal unit lengths laid end to end from 0, which is measuring a length by iterating a unit.
-        evidence: [{kind: content, source: claude-draft-1}]
-      - node: counting.objects
-        relation: procedural
-        points_to: procedure.3
-        why: Step 3 labels the end of the nth length, which means counting the unit lengths laid off so far.
-        evidence: [{kind: content, source: claude-draft-1}]
-misconceptions:
-  - "When finding the difference between two marks on a scale, counts lines instead of gaps (Eedi construct 420)"
-  - "Believes the first mark on a number line is always 1 (Eedi construct 420)"
+- clause: standard
+  all_of:
+  - node: measurement.length.no-gaps-overlaps
+    relation: definitional
+    points_to: statement
+    why: The length from 0 to n is read as n same-size unit lengths spanning with no gaps or overlaps.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.objects
+    relation: definitional
+    points_to: statement
+    why: The labels 0, 1, 2, ... are the counting numbers assigned to equally spaced points on the line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
 status: proposed

@@ -1,0 +1,57 @@
+id: linear-function.line.y-mx-plus-b.derive
+concept: linear-function
+facet: line
+level: 4
+type: justification
+name: Derive y = mx + b for a line crossing the vertical axis at b
+statement: For any point (x, y) with x not 0 on a non-vertical line with slope m through (0, b), the slope
+  from (0, b) to (x, y) is (y - b)/x = m, so y = mx + b; the point (0, b) also satisfies it.
+assess: A line has slope 2 and crosses the vertical axis at (0, -3). Explain why every point (x, y) on
+  it satisfies y = 2x - 3.
+sources:
+  ccss:
+  - 8.EE.B.6
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: slope.between-two-points
+    relation: justificatory
+    points_to: statement
+    why: The slope from (0, b) to (x, y) is computed as (y - b)/x with the slope formula.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: slope.constant-on-line
+    relation: justificatory
+    points_to: statement
+    why: Setting (y - b)/x equal to m for every point works because the slope between any two points of
+      the line is the same.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equations.linear.solve
+    relation: justificatory
+    points_to: statement
+    why: Going from (y - b)/x = m to y = mx + b multiplies both sides by x and adds b, a two-step equation
+      solution.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

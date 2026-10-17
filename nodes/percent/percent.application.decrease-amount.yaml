@@ -1,0 +1,40 @@
+id: percent.application.decrease-amount
+concept: percent
+facet: rate-per-100
+level: 3
+type: application
+name: Find a sale price after a percent discount
+statement: A problem takes a percent of an original price off as a discount; the learner finds the discount
+  and the resulting sale price.
+assess: Shoes that cost $80 are 25% off. What are the discount and the sale price?
+sources:
+  ccss:
+  - 7.RP.A.3
+  learning_components:
+  - f5370e05
+requires:
+- clause: standard
+  all_of:
+  - node: percent.of-quantity
+    relation: procedural
+    points_to: statement
+    why: The learner finds the discount as 25% of the original price, a percent of a quantity.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.whole-number
+    relation: definitional
+    points_to: statement
+    why: The sale price is the original minus the discount.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

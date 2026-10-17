@@ -1,0 +1,77 @@
+id: linear-function.model.initial.from-two-values
+concept: linear-function
+facet: model
+level: 3
+type: procedure
+name: Find the initial value from a table or graph
+statement: The initial value of a linear function is its output at x = 0; when x = 0 is not shown, it
+  is b = y1 - m x x1 for any shown pair (x1, y1).
+procedure:
+- If the table or graph shows the point with x = 0, read its y-value as b.
+- Otherwise find the rate of change m from two shown pairs.
+- Compute b = y1 - m x x1 for one shown pair (x1, y1).
+assess: A table for a linear function shows x = 2, y = 11 and x = 5, y = 20. Find the initial value.
+sources:
+  ccss:
+  - 8.F.B.4
+  learning_components:
+  - 5f3a9252
+  - 443d082c
+requires:
+- clause: standard
+  all_of:
+  - node: linear-function.model.initial.interpret
+    relation: definitional
+    points_to: statement
+    why: The initial value is the output when the input is 0, which is the meaning of the initial value
+      of a linear model.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.graphs.read
+    relation: procedural
+    points_to: procedure.1
+    why: Reading the y-value at x = 0 from a table or graph uses reading values from graphs and tables.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.model.rate.from-two-values
+    relation: procedural
+    points_to: procedure.2
+    why: Finding the rate of change m from two shown pairs is the second step when x = 0 is not shown.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-numbers.operations
+    relation: definitional
+    points_to: statement
+    why: Computing y1 - m x x1 involves negative or fractional m.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: linear-function.line.y-mx-plus-b.write
+  relation: same_idea_different_form
+  note: The line node and this node share the computation b = y1 - m x x1; neither is needed to learn
+    it in the other's context.
+status: proposed

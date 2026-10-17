@@ -1,0 +1,85 @@
+id: percent.of-quantity
+concept: percent
+facet: rate-per-100
+level: 3
+type: procedure
+name: Find a percent of a quantity
+statement: p percent of a quantity Q is (p/100) x Q.
+procedure:
+- Write p percent as the rate p/100.
+- Multiply p/100 by Q.
+assess: Find 35% of 60.
+sources:
+  ccss:
+  - 6.RP.A.3.c
+  learning_components:
+  - c75962da
+requires:
+- clause: standard
+  all_of:
+  - node: percent.rate-per-100
+    relation: procedural
+    points_to: procedure.1
+    why: Writing p percent as the rate p/100 uses the meaning of percent as p parts for every 100 equal
+      parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.symbolic
+    relation: procedural
+    points_to: procedure.2
+    why: Multiplying p/100 by Q, as in (35/100) x 60, is carried out as a fraction times a whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Multiplying p/100 by Q as fractions is one route; the other writes p percent
+        as a decimal hundredths number and multiplies decimals.'
+    status: disputed
+- clause: critic-route-1
+  note: 'Decimal route: write p% as a hundredths decimal and multiply by Q'
+  all_of:
+  - node: percent.rate-per-100
+    relation: procedural
+    points_to: procedure.1
+    why: Writing p percent as the rate p/100 uses the meaning of percent as p parts for every 100 equal
+      parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.hundredths.notation
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Decimal route: write p% as a hundredths decimal and
+      multiply by Q'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: decimal.operations
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Decimal route: write p% as a hundredths decimal and
+      multiply by Q'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

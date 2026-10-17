@@ -1,0 +1,70 @@
+id: ratio.convert-units
+concept: ratio
+facet: unit-rate
+level: 3
+type: procedure
+name: Convert measurement units with conversion factors
+statement: Convert a measurement by multiplying it by one or more conversion factors, each written with
+  the unit to remove in the denominator, and cancelling units like common factors.
+procedure:
+- Write the measurement with its unit.
+- Multiply by a conversion factor whose denominator has the current unit and whose numerator has the next
+  unit.
+- Cancel the matching units and multiply the numbers.
+- Repeat until the result is in the target unit.
+assess: How many inches are in 2.5 yards? (1 yd = 3 ft, 1 ft = 12 in)
+sources:
+  ccss:
+  - 6.RP.A.3.d
+  learning_components:
+  - 18baa937
+requires:
+- clause: standard
+  all_of:
+  - node: ratio.conversion-factor
+    relation: procedural
+    points_to: procedure.2
+    why: Choosing a factor with the current unit in the denominator and the next unit in the numerator
+      uses what a conversion factor is.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.symbolic
+    relation: procedural
+    points_to: procedure.3
+    why: Multiplying the measurement by one or more conversion factors written as fractions is a product
+      of fractions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.operations
+    relation: procedural
+    points_to: assess
+    why: The test problem 2.5 yards requires multiplying the decimal 2.5 by 3 and then by 12.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Multiplying the decimal 2.5 by 3 and 12 is demanded by the test problem, not by
+        the conversion procedure.'
+    status: proposed
+related:
+- node: fraction.equivalent.multiply-principle
+  relation: same_idea_different_form
+  note: Cancelling units mirrors cancelling a common factor, but it is taught as a rule of the procedure;
+    the analogy is not required.
+status: proposed

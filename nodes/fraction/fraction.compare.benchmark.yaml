@@ -1,0 +1,49 @@
+id: fraction.compare.benchmark
+concept: fraction
+facet: measure
+level: 3
+type: procedure
+name: Compare fractions using a benchmark fraction
+statement: Compare two fractions by comparing each to a benchmark such as 1/2 or 1; this decides the comparison
+  only when the two fractions fall on opposite sides of the benchmark.
+procedure:
+- Choose a benchmark, 1/2 or 1.
+- Compare each fraction to the benchmark (a/b is greater than 1/2 exactly when 2 x a is greater than b,
+  and greater than 1 exactly when a is greater than b).
+- If one fraction is above the benchmark and the other below, the one above is greater; otherwise this
+  method does not decide, and another method is needed.
+assess: Use 1/2 to decide which is greater, 3/8 or 4/7.
+sources:
+  ccss:
+  - 4.NF.A.2
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: comparing.whole-numbers.symbols
+    relation: procedural
+    points_to: procedure.2
+    why: The test for the benchmark 1/2 compares the whole numbers 2 x a and b.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.as-number
+    relation: definitional
+    points_to: statement
+    why: Deciding a comparison by a benchmark uses transitivity of order on fractions treated as magnitudes
+      (above 1/2 and below 1/2 implies ordered); the proposed edges give only computational supports.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: fraction.compare.reasoning-size
+  relation: specializes
+  note: Benchmark comparison is a formalization of informal size reasoning (a specialization of it) but
+    the L3 test does not need the informal skill; what it needs is that fractions are ordered magnitudes.
+status: proposed

@@ -1,0 +1,96 @@
+id: percent.application.find-whole
+concept: percent
+facet: rate-per-100
+level: 3
+type: application
+name: Find the whole given a part and the percent
+statement: A problem gives a part and the percent of the whole that it is; the learner finds the whole
+  W from (p/100) x W = part.
+assess: 18 students walk to school. That is 30% of the class. How many students are in the class?
+sources:
+  ccss:
+  - 6.RP.A.3.c
+  learning_components:
+  - e6525dd8
+requires:
+- clause: standard
+  all_of:
+  - node: percent.of-quantity
+    relation: definitional
+    points_to: statement
+    why: The statement (p/100) x W = part says the part is p percent of the whole W, which is the meaning
+      of finding a percent of a quantity.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equations.one-step
+    relation: procedural
+    points_to: statement
+    why: Solving (p/100) x W = part for W is a one-step equation solved by dividing both sides by p/100.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Formal one-step equation solving is one route; the other reasons about the unknown
+        factor or uses unit steps (30% is 18, so 10% is 6).'
+    status: disputed
+  - node: fraction.division.symbolic
+    relation: procedural
+    points_to: statement
+    why: The coefficient p/100 is a fraction, so solving divides the part by a fraction, as in 18 divided
+      by 30/100.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The division by p/100 may be done by the fraction rule, but also by decimal division
+        or by percent-unit reasoning.'
+    status: disputed
+- clause: critic-route-1
+  note: 'Unit-percent reasoning: find 1% or 10% from the given part, then scale to 100%'
+  all_of:
+  - node: percent.of-quantity
+    relation: definitional
+    points_to: statement
+    why: The statement (p/100) x W = part says the part is p percent of the whole W, which is the meaning
+      of finding a percent of a quantity.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.table.missing-value
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Unit-percent reasoning: find 1% or 10% from the given
+      part, then scale to 100%'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: percent.rate-per-100
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Unit-percent reasoning: find 1% or 10% from the given
+      part, then scale to 100%'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

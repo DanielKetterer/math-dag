@@ -1,0 +1,66 @@
+id: division.unit-fraction-by-whole.rule
+concept: division
+facet: unknown-factor
+level: 3
+type: concept
+name: (1/b) divided by n = 1/(b x n)
+statement: For whole numbers b and n greater than 0, (1/b) divided by n = 1/(b x n).
+assess: 'True or false: 1/5 divided by 2 = 1/10. True or false: 1/5 divided by 2 = 2/5. Say which rule
+  decides it.'
+sources:
+  ccss:
+  - 5.NF.B.7.a
+  learning_components:
+  - 137f8ccd
+requires:
+- clause: standard
+  all_of:
+  - node: division.unit-fraction-by-whole.interpret
+    relation: definitional
+    points_to: statement
+    why: The rule states the size of each part found when 1/b is shared into n equal parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The rule''s node is in the unknown-factor facet; the sharing interpretation is
+        one way to give the division meaning.'
+    status: disputed
+- clause: critic-route-1
+  note: 'Ground the rule through the unknown-factor meaning: the quotient is the number that multiplied
+    by n gives 1/b.'
+  all_of:
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Ground the rule through the unknown-factor meaning:
+      the quotient is the number that multiplied by n gives 1/b.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: fraction.multiply-whole.rule
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Ground the rule through the unknown-factor meaning:
+      the quotient is the number that multiplied by n gives 1/b.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: fraction.equivalent.multiply-principle
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Ground the rule through the unknown-factor meaning:
+      the quotient is the number that multiplied by n gives 1/b.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

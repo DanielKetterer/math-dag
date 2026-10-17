@@ -1,0 +1,93 @@
+id: division.unknown-factor.meaning
+concept: division
+facet: unknown-factor
+level: 3
+type: concept
+name: A quotient as an unknown factor
+statement: For whole numbers a and b, with b not 0 and a a multiple of b, a divided by b is the whole
+  number c for which b x c = a.
+assess: Which multiplication fact shows that 42 divided by 7 is 6?
+sources:
+  ccss:
+  - 3.OA.B.6
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: The equation b x c = a is read as b groups of c objects with a total of a objects.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The multiplication equation b x c = a only needs a multiplication meaning; the
+        array/area meaning serves equally.'
+    status: disputed
+  - node: division.partitive.meaning
+    relation: justificatory
+    points_to: statement
+    why: Sharing a among b groups with c in each means b groups of c make a, so the quotient c satisfies
+      b x c = a.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Same as the measurement-meaning edge: either division meaning (or an array) can
+        ground the unknown-factor reading. At least one of the two is needed; an OR-clause fits.'
+    status: disputed
+- clause: measurement
+  all_of:
+  - node: division.measurement.meaning
+    relation: justificatory
+    points_to: statement
+    why: Forming c groups of b from a gives c x b = a, so the number of groups c satisfies the multiplication
+      equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Alternative sources for the multiplication/division link exist: the partitive
+        meaning or an array. At least one division meaning is needed, so an OR-clause {division.measurement.meaning,
+        division.partitive.meaning} fits.'
+    status: disputed
+  - node: multiplication.properties
+    relation: justificatory
+    points_to: statement
+    why: Turning c groups of b into the equation b x c = a uses the commutative property of multiplication.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Commutativity is needed only on the grouping route (c groups of b gives c x b).
+        The partitive route gives b groups of c, which is b x c directly, and the fact can be stated in
+        either factor order.'
+    status: disputed
+- clause: critic-route-1
+  note: 'Array route: read b x c = a as an array with b rows and c columns and a total of a, with one
+    dimension unknown.'
+  all_of:
+  - node: multiplication.array.rows-columns
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Array route: read b x c = a as an array with b rows
+      and c columns and a total of a, with one dimension unknown.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

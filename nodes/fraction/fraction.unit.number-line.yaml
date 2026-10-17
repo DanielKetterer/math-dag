@@ -4,60 +4,90 @@ facet: measure
 level: 2
 type: representation
 name: Locate a unit fraction on the number line
-statement: >
-  1/b is the point reached by partitioning the interval from 0 to 1 into b
-  equal lengths and taking one of those lengths from 0. Equivalently, 1/b is
-  the length that, laid off b times from 0, reaches 1.
+statement: 1/b is the point reached by partitioning the interval from 0 to 1 into b equal lengths and
+  taking one of those lengths from 0.
 procedure:
-  - Mark 0 and 1 on a number line.
-  - Partition the interval from 0 to 1 into b equal lengths.
-  - Label the endpoint of the first length from 0 as 1/b.
-assess: "Place 1/4 on a number line marked only with 0 and 1."
+- Mark 0 and 1 on a number line.
+- Partition the interval from 0 to 1 into b equal lengths.
+- Label the endpoint of the first length from 0 as 1/b.
+assess: Place 1/4 on a number line marked only with 0 and 1.
 sources:
-  ccss: [3.NF.A.2.a]
+  ccss:
+  - 3.NF.A.2.a
   learning_components:
-    - 9adcd390-9117-501d-b02b-6759698e3b36
-    - 33922a0f-8f0f-57b2-83a4-9d81d8b00054
-  eedi: ["420"]
+  - 9adcd390
+  - 33922a0f
 requires:
-  - clause: via-part-whole
-    note: The usual Common Core route. The number line reuses the area picture with the interval 0 to 1 as the whole.
-    all_of:
-      - node: number-line.whole-number-lengths
-        relation: representational
-        points_to: procedure.1
-        why: Step 1 sets up a number line and reads points as lengths from 0, as with whole numbers.
-        evidence: [{kind: content, source: claude-draft-1}]
-      - node: partitioning.equal-parts.length
-        relation: procedural
-        points_to: procedure.2
-        why: Step 2 partitions the interval from 0 to 1 into b equal lengths, which is partitioning a length rather than an area.
-        evidence: [{kind: content, source: claude-draft-1}]
-      - node: fraction.unit.part-whole
-        relation: definitional
-        points_to: statement
-        why: The first sentence treats the interval from 0 to 1 as the whole and one of its b equal parts as 1/b.
-        evidence: [{kind: content, source: claude-draft-1}]
-  - clause: measure-first
-    note: >
-      Measurement-first curricula (Davydov-style) introduce fractions as lengths
-      without the area part-whole model. To verify against an actual sequence.
-    all_of:
-      - node: number-line.whole-number-lengths
-        relation: representational
-        points_to: procedure.1
-        why: Step 1 sets up a number line and reads points as lengths from 0, as with whole numbers.
-        evidence: [{kind: content, source: claude-draft-1}]
-      - node: partitioning.equal-parts.length
-        relation: procedural
-        points_to: procedure.2
-        why: Step 2 partitions the interval from 0 to 1 into b equal lengths, which is partitioning a length rather than an area.
-        evidence: [{kind: content, source: claude-draft-1}]
-      - node: measurement.length.unit-iteration
-        relation: definitional
-        points_to: statement
-        why: The second sentence defines 1/b as the length that fits exactly b times into the unit, which is iterating a unit length.
-        evidence: [{kind: content, source: claude-draft-1}]
-misconceptions:
-  - "Does not split number line into correct number of parts when representing fractions on it (Eedi construct 420)"
+- clause: standard
+  all_of:
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 marks 0 and 1 on a number line, so the learner must read the length from 0 to 1 as one
+      unit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.unit.part-whole
+    relation: representational
+    points_to: procedure.3
+    why: Step 3 labels the first of b equal lengths as 1/b, carrying over the meaning of a unit fraction
+      as one of b equal parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The target is the measure facet. A measure-first route reaches 1/b on the line
+        from unit length: partition 0-1 into b equal lengths and see that b copies of the piece fill the
+        unit, with no area-model unit fraction.'
+    status: disputed
+  - node: partitioning.segment.equal-lengths
+    relation: definitional
+    points_to: statement
+    why: Step 2 partitions the interval from 0 to 1 into b equal lengths. No node in the map teaches equal-length
+      partitioning of a segment (folding, marking, checking by comparison); the area procedure uses it
+      rather than supplies it.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+- clause: critic-route-1
+  note: 'Measure-first route: name 1/b as the length whose b copies make the unit length, built from lengths
+    on the number line rather than from the area-model unit fraction.'
+  all_of:
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 marks 0 and 1 on a number line, so the learner must read the length from 0 to 1 as one
+      unit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: partitioning.segment.equal-lengths
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Measure-first route: name 1/b as the length whose
+      b copies make the unit length, built from lengths on the number line rather than from the area-model
+      unit fraction.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
 status: proposed

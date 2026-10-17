@@ -1,0 +1,73 @@
+id: linear-function.line.y-mx.write
+concept: linear-function
+facet: line
+level: 3
+type: representation
+name: Write y = mx for a line through the origin
+statement: A non-vertical line through the origin with slope m has the equation y = mx.
+procedure:
+- Read a point (x, y) on the line other than the origin.
+- Compute m = y/x.
+- Write y = mx.
+assess: A line passes through the origin and (4, 6). Write its equation.
+sources:
+  ccss:
+  - 8.EE.B.6
+  learning_components:
+  - c931c413
+requires:
+- clause: standard
+  all_of:
+  - node: slope.constant-on-line
+    relation: procedural
+    points_to: procedure.1
+    why: Reading any point other than the origin gives the same m, because the slope between the origin
+      and any point of the line is the same.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: slope.between-two-points
+    relation: procedural
+    points_to: procedure.2
+    why: Computing m = y/x is the slope between the origin (0, 0) and the chosen point (x, y).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.four-quadrants
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 reads the coordinates of a point on the line other than the origin.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variables
+    relation: definitional
+    points_to: statement
+    why: The equation y = mx is written with variables.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: proportional-relationship.equation.write
+  relation: generalizes
+  note: y = kx for proportional relationships is the first-quadrant special case of y = mx; the target
+    generalizes it and can be learned from slope directly.
+status: proposed

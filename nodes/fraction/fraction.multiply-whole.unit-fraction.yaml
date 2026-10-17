@@ -1,0 +1,60 @@
+id: fraction.multiply-whole.unit-fraction
+concept: fraction
+facet: measure
+level: 2
+type: procedure
+name: Multiply a unit fraction by a whole number with a model
+statement: Find n x (1/b) by laying n lengths of 1/b end to end and counting them, giving n/b.
+procedure:
+- Show one length of size 1/b.
+- Lay n copies of that length end to end from 0.
+- Count the copies and write the product as n/b.
+assess: Use a number line to find 6 x (1/5).
+sources:
+  ccss:
+  - 4.NF.B.4
+  learning_components:
+  - a9ce7b44
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.unit.number-line
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 shows one length of size 1/b on a number line partitioned into b equal lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: procedure.2
+    why: Step 2 lays n equal copies end to end, which is n equal groups of 1/b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiple-of-unit
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 writes the count of n copies of 1/b as n/b, using that n/b equals n x (1/b).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

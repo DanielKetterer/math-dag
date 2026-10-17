@@ -1,0 +1,100 @@
+id: fraction.equivalent.multiply-principle.explain
+concept: fraction
+facet: part-whole
+level: 4
+type: justification
+name: Explain why a/b = (n x a)/(n x b)
+statement: 'Splitting each of the b parts into n equal parts multiplies the number of parts by n and the
+  number of chosen parts by n, while the amount covered does not change; so (n x a)/(n x b) is the same
+  amount as a/b, for every n.
+
+  '
+assess: Use a visual fraction model to explain why 2/3 = (4 x 2)/(4 x 3), and say why the same argument
+  works for any n.
+sources:
+  ccss:
+  - 4.NF.A.1
+  learning_components:
+  - 74de8dae
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.equivalent.multiply-principle
+    relation: definitional
+    points_to: statement
+    why: The explanation is for the specific equation a/b = (n x a)/(n x b), which it must state and apply
+      for every n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.same-size
+    relation: definitional
+    points_to: statement
+    why: The key claim that the amount covered does not change is the meaning of two fractions covering
+      the same whole amount.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: Splitting each of a chosen parts into n pieces gives a groups of n, which is n x a pieces in
+      total.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.properties
+    relation: justificatory
+    points_to: statement
+    why: Counting b parts each split into n parts gives b x n, which equals n x b by the commutative property.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The count of pieces can be described as ''n times as many'' (parts and chosen
+        parts each become n times as many), which gives n x a and n x b without invoking commutativity.'
+    status: disputed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: The visual model of 2/3 and then 8/12 must show a shaded parts out of b equal parts; the assessment
+      requires drawing it.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: partitioning.equal-shares.area
+    relation: definitional
+    points_to: statement
+    why: The argument is a splitting of every part into n equal smaller parts, an equal partition of a
+      part of a shape.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: fraction.equivalent.simple.explain
+  relation: specializes
+  note: The simple explain node is the special case n = 2 (and similar) of the general argument. The target's
+    own assessment already requires a specific model case (2/3 = 8/12) plus the generalization, so the
+    special case is not a separate prerequisite.
+status: proposed
