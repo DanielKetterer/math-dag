@@ -97,20 +97,15 @@ one-to-one tagging in a count (K.CC.B.4.a), cardinality at K range
 successor (K.CC.B.4.c), and the same count regardless of order or arrangement
 (K.CC.B.4.b, second clause).
 
-## 5. Open questions for you
-
+## 5.  Questions:
+  a. Answered
 1. **Floor.** Preschool band, with the roots being rote number words, perceptual
    comparison of very unequal sets, small-set naming at a glance, shape
-   matching, and seeing objects as alike? Or the strict K-entry floor
-   (about 10-15 nodes)?
-2. **Strands.** Six (in the manifest) or two (number; space and measure)?
-3. **Patterning.** Out (my recommendation: nothing in K-8 depends on it under the
-   counterfactual test), or in as nodes with no dependents?
-4. **Clements-Sarama access.** Book or login available? If not, the writers work
-   from the secondary file and every node citing it carries that flag.
-5. **The counting.objects split.** Do it in the same pass as the pre-K layer
-   (my recommendation, since the pre-K nodes are its prerequisites), or
-   separately?
+   matching, and seeing objects as alike.
+2. **Strands.** Six (in the manifest) or two (number; space and measure)? Neither, should be one, I think you will update..
+3. **Patterning.** Out.
+4. **Clements-Sarama access.** Book or login available? Some sources available, see sources main folder
+5. **The counting.objects split.** Do it in the same pass as the pre-K layer.
 
 ## 6. Design calls made unless you object
 
