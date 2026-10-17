@@ -1,0 +1,540 @@
+{
+ "pass": "P",
+ "batch": "prek",
+ "nodes": {
+  "counting.sequence.recite": {
+   "routes": [],
+   "root_reason": "The number words one through nineteen are memorized as a rote sequence; a child needs no earlier skill in this map to say them in order."
+  },
+  "counting.sequence.backward": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Counting backward reverses the memorized forward order of number words, so the learner must already hold that order to run it in reverse."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.one-to-one": {
+   "routes": [],
+   "root_reason": "The assessment credits tagging each object exactly once with any number words, whether or not they are in conventional order, so neither the word sequence nor any quantity idea is required."
+  },
+  "cardinality.small-number-words": {
+   "routes": [],
+   "root_reason": "This is the first mapping of the words one, two and three to exact quantities, learned from experience with small sets before counting is used to find how many."
+  },
+  "counting.cardinal.last-word": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A collection counted correctly requires the number words said in their conventional order, and the last of those words is what names the total."
+      },
+      {
+       "node": "counting.one-to-one",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement applies only when every object received exactly one word, since a skipped or double-tagged object makes the last word the wrong total."
+      },
+      {
+       "node": "cardinality.small-number-words",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Saying the last word names how many only if a number word already names an exact quantity, as the words one, two and three do."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.cardinal.order-irrelevance": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.cardinal.last-word",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The claim that the count stays the same under any order or arrangement is about the total named by the last word, so that idea must already be in place."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.successor": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement refers to the word after n in the count sequence, so the learner must know which word follows each given word."
+      },
+      {
+       "node": "counting.cardinal.last-word",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Adding one object makes the number the next word only if each word in the sequence names how many objects have been counted."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.objects": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step one has the learner say the number words in order starting at one, and the tray of twelve shells needs the words through twelve."
+      },
+      {
+       "node": "counting.one-to-one",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step two pairs each word with exactly one uncounted object while keeping counted and uncounted objects apart, which is the tagging skill."
+      },
+      {
+       "node": "counting.cardinal.last-word",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step four answers how many with the last number word said, which relies on knowing the last word names the whole collection."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.produce-set": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step two says the number words in order from one as objects are moved, up to the requested number such as eight."
+      },
+      {
+       "node": "counting.one-to-one",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Each object moved from the supply must receive exactly one word, so no object is moved without a word or tagged twice."
+      },
+      {
+       "node": "counting.cardinal.last-word",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step three stops when the word just said equals the given number, which works only because the last word said names how many have been moved."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.events": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each clap or jump is paired with the next number word in order, so the learner must produce the sequence while the events occur."
+      },
+      {
+       "node": "counting.one-to-one",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires saying one number word with each event as it happens, which is one-word-per-item tagging applied to actions instead of objects."
+      },
+      {
+       "node": "counting.cardinal.last-word",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Telling how many claps there were means reporting the last word said as the total, even though the claps are no longer present."
+      }
+     ]
+    }
+   ]
+  },
+  "numeral.read": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Reading a numeral means saying the number word it stands for, so the learner must already know the spoken number words from one to nine."
+      }
+     ]
+    }
+   ]
+  },
+  "numeral.match-quantity": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "numeral.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner must turn the card 4 into the number word four before deciding which set that word describes."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A numeral stands for how many objects are in a set, so pairing it with a set requires finding how many by counting the set."
+      }
+     ]
+    }
+   ]
+  },
+  "numeral.write": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "numeral.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing the numeral for a spoken number uses the learned link between each digit symbol and its number word, the same link used in reading."
+      }
+     ]
+    }
+   ]
+  },
+  "numeral.informal-record": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.one-to-one",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Making exactly one mark for each car keeps every object paired once and none skipped or doubled, the same tagging discipline as one word per object."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Using the record to tell how many later means counting the marks and answering with the last number word said."
+      }
+     ]
+    }
+   ]
+  },
+  "subitizing.perceptual": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "cardinality.small-number-words",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Naming a briefly shown set means applying a number word that already names an exact quantity, extended here from one to three up through four or five."
+      }
+     ]
+    }
+   ]
+  },
+  "subitizing.nonverbal": {
+   "routes": [],
+   "root_reason": "Making a matching set after a glimpse uses direct perception of small exact quantity and requires no number words, so nothing earlier in the map is needed."
+  },
+  "subitizing.conceptual": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subitizing.perceptual",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each part of the arrangement, such as the five and the two, must itself be named at a glance, which is the perceptual skill."
+      },
+      {
+       "node": "addition.add-to.count-all",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Knowing the whole the recognized parts make means finding the total of two sets joined together, the meaning of joining and counting all."
+      }
+     ]
+    }
+   ]
+  },
+  "comparing.count.perceptual": {
+   "routes": [],
+   "root_reason": "Telling which of two very unequal sets has more uses direct perception of large quantity differences, with no counting or other earlier skill in this map."
+  },
+  "comparing.count.small-equal": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subitizing.nonverbal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Judging that three cars and three buttons are the same number requires apprehending each small set's exact quantity directly without words, even when the objects differ."
+      }
+     ]
+    }
+   ]
+  },
+  "comparing.count.matching": {
+   "routes": [],
+   "root_reason": "Pairing each object in one collection with an object in the other uses no number words or counting, so a child can do it with nothing earlier in the map."
+  },
+  "comparing.count.by-counting": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps one and two count each collection to get its number, and the test problem counts six buttons and four blocks."
+      },
+      {
+       "node": "counting.sequence.recite",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step three decides which number comes later in the count sequence, which requires knowing the order of the number words."
+      },
+      {
+       "node": "counting.successor",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The collection with the later count has more only because each next number word names exactly one more than the word before it."
+      },
+      {
+       "node": "counting.cardinal.order-irrelevance",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The comparison holds whatever the size or spread of the objects, because rearranging or spreading a collection does not change its count."
+      }
+     ]
+    }
+   ]
+  },
+  "ordinal.position": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The ordinal words first through tenth follow the count sequence, and finding the fifth animal means counting up to five in order."
+      },
+      {
+       "node": "counting.one-to-one",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Naming an object's place means counting from the stated end and pairing exactly one word with each animal passed, such as the pig."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.attribute": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "classifying.attribute.identify",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Length must be seen as one attribute of an object that can be considered apart from other attributes such as weight or color."
+      }
+     ]
+    }
+   ]
+  },
+  "comparing.size.direct": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.attribute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure decides which object is longer, so the learner must treat length as the attribute being compared between the two pencils."
+      }
+     ]
+    }
+   ]
+  },
+  "comparing.weight.direct": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "new:measurement.weight.attribute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner must treat weight as a separate attribute of an object, apart from its size, to say the small stone is heavier than the large sponge."
+      }
+     ]
+    }
+   ]
+  },
+  "comparing.size.order": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.size.direct",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Placing the straws in order from shortest to longest is done by comparing pairs of lengths directly, side by side with ends aligned."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.add-to.nonverbal": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subitizing.nonverbal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Making a pile that matches the new total without naming a number uses the same wordless representation of a small exact quantity, here updated after one more is added."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.take-away.nonverbal": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subitizing.nonverbal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Making a pile that matches the number left without naming it uses the wordless representation of a small exact quantity, updated after one is removed."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.add-to.count-all": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.produce-set",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step one makes a first set of a given size, such as three counters, which is counting out a set of a given number."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step three counts every object in the combined set starting from one, and the last word said is the total in step four."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.take-away.count-remaining": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.produce-set",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps one and two make the starting set and remove exactly the given number of objects, which requires counting out a given number."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step three counts the objects that remain, and the last number word said is the answer."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
