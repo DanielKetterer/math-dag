@@ -1,0 +1,876 @@
+{
+ "pass": "Q",
+ "batch": "prek",
+ "nodes": {
+  "counting.sequence.recite": {
+   "routes": [],
+   "root_reason": "The number words are memorized by rote from the surrounding language; no earlier skill in the map is used, and the statement itself says they do not follow a generating rule."
+  },
+  "counting.sequence.backward": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Saying the words in reverse order starts from the memorized forward sequence of number words, which must be known to be reversed."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.one-to-one": {
+   "routes": [],
+   "root_reason": "Tagging each object once with one spoken word needs only pointing and speech; the assessment credits it even when the words are out of conventional order, so the memorized sequence is not required."
+  },
+  "cardinality.small-number-words": {
+   "routes": [],
+   "root_reason": "Giving exactly one, two, or three objects on request is attached to the words directly and is assessed without any counting, so no earlier skill in the map is used."
+  },
+  "counting.cardinal.last-word": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The last word said is only meaningful if the words were said in the conventional order, one after another, from one."
+      },
+      {
+       "node": "counting.one-to-one",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement concerns a collection that has been counted correctly, meaning each object received exactly one word with none skipped or repeated."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.cardinal.order-irrelevance": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.objects",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The number claimed to stay the same under reordering is the number found by counting the collection, and the test starts from a completed count."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.successor": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The claim is about the word after n in the count sequence, so the order of the number words must already be known."
+      },
+      {
+       "node": "counting.cardinal.last-word",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each word is claimed to name a quantity, which uses the idea that the last word of a count names how many in the whole."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.objects": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 says the number words in order starting at one, which is the memorized forward sequence."
+      },
+      {
+       "node": "counting.one-to-one",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 pairs each word with exactly one uncounted object and keeps counted and uncounted apart."
+      },
+      {
+       "node": "counting.cardinal.last-word",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 answers how many with the last word said, which uses the idea that the last word names the whole collection."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.produce-set": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 says the number words in order from one while moving objects, so the forward sequence is used directly."
+      },
+      {
+       "node": "counting.one-to-one",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 moves objects one at a time, each with exactly one word, so every moved object is tagged once."
+      },
+      {
+       "node": "counting.cardinal.last-word",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 stops when the word just said equals the given number, which uses the last word as the size of the set so far."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.events": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each action is given the next number word in conventional order, so the memorized sequence is said aloud as events happen."
+      },
+      {
+       "node": "counting.one-to-one",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "One word is said with each sound or action as it happens, tagging each event exactly once without skipping or repeating."
+      },
+      {
+       "node": "counting.cardinal.last-word",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Telling how many there were uses the last word said as the number of all the events, since none remain to point to."
+      }
+     ]
+    }
+   ]
+  },
+  "numeral.read": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The spoken answer is one of the memorized number words, and the numeral is read by naming the word it stands for."
+      }
+     ]
+    }
+   ]
+  },
+  "numeral.match-quantity": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "numeral.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The card is first read as a number, and only then can it be paired with the set it describes."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Labeling a set with its numeral requires finding how many objects the set has, which is done by counting it."
+      }
+     ]
+    }
+   ]
+  },
+  "numeral.write": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "numeral.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing a numeral for a spoken number uses the same convention that pairs each written numeral with its number word."
+      }
+     ]
+    }
+   ]
+  },
+  "numeral.informal-record": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.one-to-one",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Making exactly one mark for each object tags every object once, with none skipped or marked twice."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Using the record later to tell how many requires counting the marks and answering with the last word said."
+      }
+     ]
+    }
+   ]
+  },
+  "subitizing.perceptual": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "cardinality.small-number-words",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Naming a briefly shown set requires that the words one to four already name exact quantities, so the word can be matched to the seen quantity."
+      }
+     ]
+    }
+   ]
+  },
+  "subitizing.nonverbal": {
+   "routes": [],
+   "root_reason": "Matching a briefly seen small set by making an equal set uses direct perception of quantity and no number words, so nothing earlier in the map is used."
+  },
+  "subitizing.conceptual": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subitizing.perceptual",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each small part of the arrangement must be recognized at a glance, which is exactly the perceptual naming of small sets."
+      },
+      {
+       "node": "number-composition.within-5",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Knowing the whole the parts make uses known part-whole pairs, such as seeing five as parts of two and three."
+      },
+      {
+       "node": "addition.add-to.count-all",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding the whole from larger parts such as five and two is the total of two joined sets, which the join-and-count-all procedure produces."
+      }
+     ]
+    }
+   ]
+  },
+  "comparing.count.perceptual": {
+   "routes": [],
+   "root_reason": "Seeing which of two very unequal sets has more is a direct perceptual judgment made without counting or matching, so no earlier skill in the map is used."
+  },
+  "comparing.count.small-equal": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subitizing.nonverbal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Judging two small sets of different objects as the same number by looking uses the direct recognition of small quantity without counting."
+      }
+     ]
+    }
+   ]
+  },
+  "comparing.count.matching": {
+   "routes": [],
+   "root_reason": "Pairing objects of one collection with objects of the other and seeing what is left over is physical manipulation, and the words more and same are not tied to any earlier node."
+  },
+  "comparing.count.by-counting": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 2 count each collection to get its number, using the full counting procedure with the last word as the answer."
+      },
+      {
+       "node": "counting.sequence.recite",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 asks which number comes later in the count sequence, which requires knowing the order of the number words."
+      },
+      {
+       "node": "counting.successor",
+       "relation": "justificatory",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The rule that the later number means more is justified because each next word names one more than the word before."
+      }
+     ]
+    }
+   ]
+  },
+  "ordinal.position": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The ordinal words first, second, third and so on follow the order of the number words, so the sequence must be known."
+      },
+      {
+       "node": "counting.one-to-one",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding the fifth animal means counting from the stated end with one word per animal, stopping at the one tagged with the target word."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.attribute": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "classifying.attribute.identify",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Length is one attribute among several, such as weight or color, that an object has and that can be separated from the others."
+      }
+     ]
+    }
+   ]
+  },
+  "comparing.size.direct": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.attribute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The comparison is of the attribute length, so longer and taller must already mean end-to-end extent rather than weight or bulk."
+      }
+     ]
+    }
+   ]
+  },
+  "comparing.weight.direct": {
+   "routes": [],
+   "root_reason": "Hefting two objects or watching which balance pan goes down yields heavier directly, and no earlier node in the map is used."
+  },
+  "comparing.size.order": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.size.direct",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Putting objects in order requires deciding which of two is longer, which is the direct side-by-side comparison done repeatedly."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.add-to.nonverbal": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subitizing.nonverbal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The child keeps track of a small hidden quantity and makes a matching set of it, which is the nonverbal matching of small quantities."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.take-away.nonverbal": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subitizing.nonverbal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The child keeps track of a small hidden quantity and makes a matching set of what remains, using nonverbal matching of small quantities."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.add-to.count-all": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.produce-set",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Making the first and second sets of the given sizes is done by counting out a set of a given number."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 counts all the objects in the combined set from one, and the last number word said is the total."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.take-away.count-remaining": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.produce-set",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Making the starting set and removing the stated number of objects are both done by counting out a set of a given number."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 counts the objects that remain and gives the last number word said as the answer."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.application.add-to-story": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.add-to.count-all",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Acting the story out with objects means making the start, adding the second amount, and counting all to find how many in all."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.application.take-from-story": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.take-away.count-remaining",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Acting the story out with objects means making the start, removing the stated amount, and counting what is left."
+      }
+     ]
+    }
+   ]
+  },
+  "number-composition.part-whole.inexact": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.count.matching",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The whole has more than a part because the part pairs off with some of the whole, leaving the other part unpaired."
+      }
+     ]
+    }
+   ]
+  },
+  "number-composition.within-5": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-composition.part-whole.inexact",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Naming a missing part or a whole presupposes seeing a set as parts that together make a whole."
+      },
+      {
+       "node": "addition.add-to.count-all",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The whole of two known parts is the total of the two joined sets, which the join-and-count procedure finds."
+      },
+      {
+       "node": "subtraction.take-away.count-remaining",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The missing part when the whole and one part are known is the amount left after removing that part."
+      }
+     ]
+    }
+   ]
+  },
+  "partitioning.set.deal-out": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.count.matching",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 judges the shares equal when every recipient was given an object in the last round, which is the matching rule about leftover objects."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.equal-groups.make": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.produce-set",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each group is made by counting out exactly the given number of objects from the larger set, one group at a time."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.match": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "classifying.alike",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Picking the same shape from several is a judgment that two figures are alike in one respect despite other differences like size."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.name.prototype": {
+   "routes": [],
+   "root_reason": "Naming typical circles, squares, and triangles is learning words for shapes seen in usual orientation, and no earlier node in the map is used."
+  },
+  "shapes.recognize": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.name.prototype",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The class names triangle, square, and circle are the categories into which every example, whatever its size or orientation, must be sorted."
+      },
+      {
+       "node": "shapes.match",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Recognizing examples that differ in size and orientation extends matching a shape to another that has been turned or resized."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.sides.count": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sides are pointed to one by one and counted, with each tagged once and the last number word given as the answer."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.corners.count": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.sides.count",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A corner is defined as the point where two sides meet, so sides must already be identifiable as straight boundary segments."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The corners are touched one by one and counted, with each tagged once and the last number word given as the answer."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.compare.same-different": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.match",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Deciding exact sameness of shape and size refines the earlier judgment that two figures are the same shape despite size or turning."
+      },
+      {
+       "node": "spatial.motion.turn-flip",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Laying one shape on top of the other to check all parts match requires turning or flipping a shape into the same orientation."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.compose.from-sides": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.sides.count",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sticks stand for the sides of the shape, so the learner must know a triangle has three sides and use that many sticks."
+      },
+      {
+       "node": "shapes.corners.count",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The pieces must meet end to end at the corners, so corners of the goal shape must be identifiable."
+      },
+      {
+       "node": "shapes.name.prototype",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The task names the goal shape, so the learner must know what a triangle looks like from its name."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.compose.fill-outline": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.match",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Choosing a piece that fits an outlined region is picking the piece with the same shape as the region, whatever its orientation."
+      },
+      {
+       "node": "spatial.motion.turn-flip",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Placing the chosen piece in its region requires turning it, sliding it, or flipping it so it lies inside the outline."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.compose.combine": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.compose.fill-outline",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Placing pieces edge to edge to fill a region is the same fitting of pieces into a region, now without drawn inside lines."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.decompose.simple": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.compose.fill-outline",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Covering a shape that has a drawn line with smaller pieces is filling regions whose outlines are shown with fitting pieces."
+      },
+      {
+       "node": "shapes.name.prototype",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The assessment asks the learner to name the smaller shapes the square splits into, such as two triangles."
+      }
+     ]
+    }
+   ]
+  },
+  "spatial.motion.turn-flip": {
+   "routes": [],
+   "root_reason": "Turning, sliding, or flipping a piece until it fits is learned by manipulating a physical shape, and no earlier node in the map is used."
+  },
+  "spatial.position.body": {
+   "routes": [],
+   "root_reason": "Following directions such as forward, up, and backward with one's own body depends only on the spoken words and the body, so no earlier node in the map is used."
+  },
+  "spatial.position.relative": {
+   "routes": [],
+   "root_reason": "Placing an object in, on, under, or behind another uses spoken position words and handling objects, and no earlier node in the map is used."
+  },
+  "classifying.alike": {
+   "routes": [],
+   "root_reason": "Judging that two objects are alike or different is a basic perceptual comparison, and no earlier node in the map is used."
+  },
+  "classifying.attribute.identify": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "classifying.alike",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Naming the shared attribute of a group starts from seeing that the objects are alike in some respect."
+      }
+     ]
+    }
+   ]
+  },
+  "classifying.sort.given-attribute": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "classifying.attribute.identify",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Making one place for each value of a stated attribute requires knowing what an attribute and its values are."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
