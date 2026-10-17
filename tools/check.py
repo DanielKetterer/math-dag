@@ -166,7 +166,10 @@ def check_pathways(nodes, rep):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--report")
+    ap.add_argument("--nodes", default=os.path.join(ROOT, "nodes"),
+                    help="folder of node files to check (default: nodes/)")
     args = ap.parse_args()
+    nodes_dir = os.path.abspath(args.nodes)
     rep = Report()
 
     concepts = load_yaml(os.path.join(ROOT, "concepts.yaml")) or {}
@@ -174,8 +177,8 @@ def main():
         validator = Draft202012Validator(json.load(f))
 
     nodes = {}
-    for path in sorted(glob.glob(os.path.join(ROOT, "nodes", "**", "*.yaml"), recursive=True)):
-        rel = os.path.relpath(path, ROOT)
+    for path in sorted(glob.glob(os.path.join(nodes_dir, "**", "*.yaml"), recursive=True)):
+        rel = os.path.join("nodes", os.path.relpath(path, nodes_dir))
         data = load_yaml(path)
         errs = sorted(validator.iter_errors(data), key=lambda e: list(e.path))
         if errs:

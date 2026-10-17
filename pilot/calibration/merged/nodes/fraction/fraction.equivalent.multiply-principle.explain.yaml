@@ -1,0 +1,72 @@
+id: fraction.equivalent.multiply-principle.explain
+concept: fraction
+facet: part-whole
+level: 4
+type: justification
+name: Explain why a/b = (n x a)/(n x b)
+statement: 'Splitting each of the b parts into n equal parts multiplies the number of parts by n and the
+  number of chosen parts by n, while the amount covered does not change; so (n x a)/(n x b) is the same
+  amount as a/b, for every n.
+
+  '
+assess: Use a visual fraction model to explain why 2/3 = (4 x 2)/(4 x 3), and say why the same argument
+  works for any n.
+sources:
+  ccss:
+  - 4.NF.A.1
+  learning_components:
+  - 74de8dae
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.equivalent.multiply-principle.generate
+    relation: definitional
+    points_to: statement
+    why: The statement explains the identity a/b = (n x a)/(n x b), so the learner must know the rule
+      being justified.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+  - node: fraction.equivalent.simple.generate
+    relation: justificatory
+    points_to: statement
+    why: The argument splits each of the b parts into n equal parts, which is the split step of the model
+      procedure done for a general n.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    status: disputed
+  - node: multiplication.equal-groups
+    relation: justificatory
+    points_to: statement
+    why: Counting the new parts as b groups of n, and the chosen parts as a groups of n, gives n x b and
+      n x a by equal groups.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+  - node: fraction.equivalent.same-size
+    relation: justificatory
+    points_to: statement
+    why: The conclusion that the amount covered does not change, so the fractions are equal, uses the
+      same-amount meaning of equivalence.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+status: proposed

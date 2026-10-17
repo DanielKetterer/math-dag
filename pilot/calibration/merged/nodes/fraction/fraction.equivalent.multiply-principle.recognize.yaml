@@ -1,0 +1,49 @@
+id: fraction.equivalent.multiply-principle.recognize
+concept: fraction
+facet: measure
+level: 3
+type: procedure
+name: Recognize equivalent fractions with a/b = (n x a)/(n x b)
+statement: Decide whether two fractions are equivalent by checking whether one is obtained from the other
+  by multiplying numerator and denominator by the same whole number.
+procedure:
+- Find whether the larger denominator is a whole-number multiple n of the smaller one.
+- Check whether the corresponding numerator is the same multiple n.
+- Conclude equivalent if both use the same n.
+assess: Is 4/10 equivalent to 2/5? Is 6/8 equivalent to 3/5?
+sources:
+  ccss:
+  - 4.NF.A.1
+  learning_components:
+  - 5f61cb2a
+  - df5f3fb2
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.equivalent.multiply-principle.generate
+    relation: definitional
+    points_to: statement
+    why: Recognition checks whether one fraction is obtained from the other by multiplying numerator and
+      denominator by the same n, the generate rule.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 decides whether the larger denominator is a multiple n of the smaller, and step 2 checks
+      the numerators, both by multiplication facts.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+status: proposed

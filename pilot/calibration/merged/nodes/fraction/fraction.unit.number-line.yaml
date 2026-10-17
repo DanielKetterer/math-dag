@@ -1,0 +1,78 @@
+id: fraction.unit.number-line
+concept: fraction
+facet: measure
+level: 2
+type: representation
+name: Locate a unit fraction on the number line
+statement: '1/b is the point reached by partitioning the interval from 0 to 1 into b equal lengths and
+  taking one of those lengths from 0. Equivalently, 1/b is the length that, laid off b times from 0, reaches
+  1.
+
+  '
+procedure:
+- Mark 0 and 1 on a number line.
+- Partition the interval from 0 to 1 into b equal lengths.
+- Label the endpoint of the first length from 0 as 1/b.
+assess: Place 1/4 on a number line marked only with 0 and 1.
+sources:
+  ccss:
+  - 3.NF.A.2.a
+  learning_components:
+  - 9adcd390
+  - 33922a0f
+requires:
+- clause: standard
+  all_of:
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 marks 0 and 1 on a number line, treating the interval from 0 to 1 as a length on the whole-number
+      line.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+  - node: partitioning.equal-parts.length
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 partitions the interval from 0 to 1 into b equal lengths, which is partitioning a length
+      into equal parts.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+  - node: fraction.unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: The statement reuses the meaning of 1/b as one of b equal parts, with the interval from 0 to
+      1 playing the role of the whole.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+  - node: measurement.length.unit-iteration
+    relation: definitional
+    points_to: statement
+    why: The second characterization, 1/b as the length that laid off b times from 0 reaches 1, is unit
+      iteration with 1/b as the unit.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+status: proposed

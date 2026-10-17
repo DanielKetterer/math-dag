@@ -1,0 +1,57 @@
+id: fraction.compare.same-whole
+concept: fraction
+facet: part-whole
+level: 2
+type: concept
+name: Fraction comparisons need the same whole
+statement: 'Comparing two fractions by size is only valid when both refer to the same whole; 1/2 of a
+  small pizza can be less than 1/3 of a large one.
+
+  '
+assess: Sam says 1/2 is always bigger than 1/3. When could 1/3 of something be bigger than 1/2 of something?
+sources:
+  ccss:
+  - 3.NF.A.3.d
+  learning_components:
+  - ee846e61
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: The caveat depends on a fraction being a part of a specific whole, so 1/2 of a small pizza is
+      sized by that pizza.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+  - node: fraction.compare.same-numerator
+    relation: definitional
+    points_to: statement
+    why: The claim being qualified, that 1/2 is bigger than 1/3, is a same-numerator comparison that holds
+      only for one whole.
+    evidence:
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: disputed
+  - node: comparing.area.direct
+    relation: justificatory
+    points_to: statement
+    why: Showing 1/3 of a large pizza exceeds 1/2 of a small one compares the two actual amounts directly
+      by size.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+status: proposed

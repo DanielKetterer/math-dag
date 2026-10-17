@@ -1,0 +1,77 @@
+id: fraction.equivalent.simple.generate
+concept: fraction
+facet: part-whole
+level: 2
+type: procedure
+name: Recognize and generate simple equivalent fractions with a model
+statement: 'Using a fraction model with denominators 2, 3, 4, 6, or 8, find a fraction that covers the
+  same amount as a given one by splitting or joining its parts.
+
+  '
+procedure:
+- Show the given fraction on a model.
+- Split each part into equal smaller parts, or join equal groups of parts.
+- Count the new number of shaded parts and total parts and write the new fraction.
+assess: Use a fraction strip to find a fraction equal to 2/3 with denominator 6.
+sources:
+  ccss:
+  - 3.NF.A.3.b
+  learning_components:
+  - 3194d5b0
+  - 463e4334
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.non-unit.part-whole
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 shows the given fraction on a model and step 3 writes the new fraction, both using a/b
+      as a shaded of b equal parts.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+  - node: partitioning.equal-shares.area
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 splits each part into equal smaller parts, which is partitioning a region of the strip
+      or area model into equal shares.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+  - node: counting.objects
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 counts the new number of shaded parts and the new total number of parts to get the numerator
+      and denominator.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+  - node: fraction.equivalent.same-size
+    relation: definitional
+    points_to: statement
+    why: The statement asks for a fraction that covers the same amount as the given one, which is the
+      same-size meaning of equivalence.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+status: proposed

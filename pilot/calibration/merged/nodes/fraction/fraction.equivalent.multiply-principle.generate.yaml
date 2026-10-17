@@ -1,0 +1,49 @@
+id: fraction.equivalent.multiply-principle.generate
+concept: fraction
+facet: measure
+level: 3
+type: procedure
+name: Generate equivalent fractions with a/b = (n x a)/(n x b)
+statement: For any whole number n greater than 0, a/b = (n x a)/(n x b), so multiplying numerator and
+  denominator by n gives an equivalent fraction.
+procedure:
+- Choose a whole number n greater than 0.
+- Multiply the numerator by n and the denominator by n.
+- Write the result as the equivalent fraction.
+assess: Write two fractions equivalent to 3/5.
+sources:
+  ccss:
+  - 4.NF.A.1
+  learning_components:
+  - c3b684c1
+  - 13498e57
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies the numerator by n and the denominator by n, which uses single-digit multiplication
+      facts.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+  - node: fraction.equivalent.same-point
+    relation: definitional
+    points_to: statement
+    why: The statement claims the result is an equivalent fraction, which means it names the same point
+      on the number line as a/b.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+status: proposed

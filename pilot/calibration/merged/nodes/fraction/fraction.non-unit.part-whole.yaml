@@ -1,0 +1,44 @@
+id: fraction.non-unit.part-whole
+concept: fraction
+facet: part-whole
+level: 2
+type: concept
+name: Non-unit fraction as a parts of size 1/b
+statement: a/b names the quantity formed by a parts, each of size 1/b, of a whole partitioned into b equal
+  parts.
+assess: A bar is split into 8 equal parts and 3 are shaded. What fraction of the bar is shaded?
+sources:
+  ccss:
+  - 3.NF.A.1
+  learning_components:
+  - 0f80aa86
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: The statement defines a/b as a parts each of size 1/b, so the unit fraction 1/b is the unit being
+      collected.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+  - node: counting.objects
+    relation: definitional
+    points_to: statement
+    why: The numerator a is the count of selected parts of size 1/b, so reading a/b requires counting
+      the shaded parts.
+    evidence:
+    - kind: content
+      source: pass-A
+    - kind: content
+      source: pass-B
+    - kind: content
+      source: pass-C
+    status: proposed
+status: proposed
