@@ -3,24 +3,34 @@
 Research step for the pre-K floor, done 2026-10-17. No nodes, edges, or model
 passes were run. Subagent cost: 0 tokens.
 
+**Status: closed.** Daniel answered every open question on 2026-10-17
+(section 5). The writer unit may run once `writer.md` has its pre-K variant.
+
 ## 1. What was gathered
 
 | File | Source | Provenance | Items |
 |---|---|---|---|
 | `elof.yaml` | Head Start ELOF, Mathematics Development, preschoolers (36-60 months) | Primary, public domain | 10 goals, 30 progression steps |
-| `clements_sarama.yaml` | Clements and Sarama learning trajectories, 12 trajectories | Secondary (OTF reproduction of the tables) | 103 levels, ages 1 to 7 |
+| `clements_sarama.yaml` | Clements and Sarama learning trajectories, 12 trajectories | Authors' own Building Blocks levels document (copy in `sources/Learning_trajectories_math.pdf`); spot-checked against [LT]2 | 103 levels, ages 1 to 7 |
 | `counting_principles.yaml` | Gelman and Gallistel principles, knower-level and successor studies | Mixed: fetched, secondary, memory | 5 principles, 8 findings |
 
 ## 2. What needs your check
 
 In order of how much a wrong source would cost later.
 
-1. **Clements-Sarama is secondary.** Level names come from the Ontario Teachers'
-   Federation reproduction; the "does" lines are paraphrases from my fetch
-   tool. Two levels appear twice in the reproduction (flagged in the file).
-   If you have the Routledge book or an [LT]2 login, spot-check five levels:
-   Corresponder, Counter (Small Numbers), Producer, Matching Comparer,
-   Conceptual Subitizer to 5+. Those five carry the most weight below.
+1. **Clements-Sarama: checked, closed.** The file was extracted from the
+   Building Blocks developmental-levels document, the authors' own publication
+   through McGraw-Hill (Daniel added a copy as
+   `sources/Learning_trajectories_math.pdf`), not a third-party rewrite.
+   Daniel also added the [LT]2 site export (`sources/LT2.pdf`) and the 2004
+   theory paper. The five load-bearing levels match [LT]2: Corresponder,
+   Counter (Small Numbers, which [LT]2 names as the cardinal principle),
+   Producer (Small Numbers), Matching Comparer, and Conceptual Subitizer to 5.
+   Two naming differences: [LT]2 says "Conceptual Subitizer to 5" (not "5+")
+   and "Early Comparer of Dissimilar Items" (not "Nonverbal Comparer").
+   [LT]2 is the newer and fuller source and should be the writer's first
+   reference for level descriptions; it also adds infant levels, which the
+   floor excludes.
 2. **Four counting findings are from memory, not read this session**:
    `cp.knower-levels`, `cp.recite-before-meaning`, `cp.procedure-before-principle`,
    and `cp.unit-task`. They are marked `provenance: memory`. They are leads,
@@ -87,9 +97,9 @@ list only shows whether 40-60 is the right size. K-level nodes from the
 | geometry-spatial | match shapes across size and orientation; name prototype shapes; recognize non-prototype triangles and squares (`shapes.recognize`); compare shapes as same or different; build a picture from shapes that touch; position words for one's own body; mentally turn a simple shape | elof.p-math-9, 10; cs.shapes.*; cs.compshape.*; cs.cmpshape.*; cs.spatial.* | Position words: body-referenced (pre-K) versus object-referenced (K.G.A.1) are two facets |
 | classify | see objects as alike; name the attribute a group shares; sort by a given attribute | cs.classify.* | Attribute Sorter and Consistent Sorter differ in reliability, not task: one node |
 
-Count: about 38 candidates, plus 5 if patterning is in (recognize, fill a gap,
-duplicate, extend, name the repeating unit). That sits at the low end of 40-60;
-the writer pass will split or merge some.
+Count: about 38 candidates (patterning out). That sits just under 40-60; the
+writer pass will split or merge some, and the counting.objects split adds
+about 4 K nodes.
 
 K nodes the `counting.objects` split needs, written alongside this layer:
 one-to-one tagging in a count (K.CC.B.4.a), cardinality at K range
@@ -97,15 +107,28 @@ one-to-one tagging in a count (K.CC.B.4.a), cardinality at K range
 successor (K.CC.B.4.c), and the same count regardless of order or arrangement
 (K.CC.B.4.b, second clause).
 
-## 5.  Questions:
-  a. Answered
-1. **Floor.** Preschool band, with the roots being rote number words, perceptual
-   comparison of very unequal sets, small-set naming at a glance, shape
-   matching, and seeing objects as alike.
-2. **Strands.** Six (in the manifest) or two (number; space and measure)? Neither, should be one, I think you will update..
-3. **Patterning.** Out.
-4. **Clements-Sarama access.** Book or login available? Some sources available, see sources main folder
-5. **The counting.objects split.** Do it in the same pass as the pre-K layer.
+## 5. Decisions (Daniel, 2026-10-17, all closed)
+
+1. **Floor: the preschool band.** Roots are rote number words, perceptual
+   comparison of very unequal sets, naming a small set at a glance, shape
+   matching, and seeing objects as alike. Infant and toddler levels are out.
+2. **Strands: one.** A single `prek` strand (about 38 nodes, inside the 30-60
+   batch size). Every proposer sees the whole floor, so cross-topic edges such
+   as cardinality into comparing-by-counting are not hidden. The manifest is
+   updated to four units: writer, proposer A, proposer B, critic.
+3. **Patterning: out.** Nothing in K-8 depends on it under the counterfactual
+   test. The ELOF and trajectory items stay in the source files, flagged.
+4. **Clements-Sarama access: sources added to the repo** (`sources/LT2.pdf`,
+   `sources/Learning_trajectories_math.pdf`,
+   `sources/learningtrajectoriesinmathematicseducation.pdf`). See section 2,
+   item 1.
+5. **The counting.objects split: same pass.** The writer produces the K nodes
+   from the split (K.CC.B.4.a-c and the order-irrelevance clause) alongside
+   the pre-K layer, since the pre-K nodes are their prerequisites.
+
+Still open, but not questions for Daniel: the four memory-sourced counting
+findings (section 2, item 2) and the successor-direction dispute (item 3).
+They block edges touching the successor node, not the writer.
 
 ## 6. Design calls made unless you object
 

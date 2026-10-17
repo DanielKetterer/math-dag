@@ -55,21 +55,27 @@ then be the rote number sequence, one-to-one matching, judging bigger or
 smaller by sight, and recognizing shape categories. Daniel decided: floor at 
 what Kindergarten assumes.
 
-## Pre-K floor: research step done (2026-10-17, second session)
+## Pre-K floor: research done, vetting closed (2026-10-17, second session)
 
 - Sources extracted into `sources/prek/`: `elof.yaml` (Head Start ELOF,
-  primary), `clements_sarama.yaml` (12 trajectories, SECONDARY reproduction),
-  `counting_principles.yaml` (principles plus knower/successor findings, some
-  from memory and marked so).
-- `sources/prek/VETTING.md` is the sheet for Daniel: what to verify, findings
-  that change the plan, a candidate inventory (~38 competencies, ~43 with
-  patterning), and five open questions (floor, strands, patterning,
-  Clements-Sarama access, whether to split counting.objects in the same pass).
-- Do not start the writer units until Daniel answers VETTING.md section 5;
-  then mark `prek.research.vetting` done.
+  primary), `clements_sarama.yaml` (Building Blocks developmental levels, the
+  authors' own document; five key levels spot-checked against [LT]2),
+  `counting_principles.yaml` (principles plus knower/successor findings; four
+  findings are from memory and marked so).
+- Daniel added `sources/LT2.pdf` ([LT]2 site export, newest and fullest; first
+  reference for level descriptions), `sources/Learning_trajectories_math.pdf`
+  (the Building Blocks document the yaml came from), and the 2004 Clements and
+  Sarama theory paper.
+- Decisions, all closed (see `sources/prek/VETTING.md` section 5): floor at the
+  preschool band; one `prek` strand; patterning out; split counting.objects in
+  the same pass.
+- Before the writer unit runs: give `writer.md` a short pre-K variant that cites
+  `sources.prek` ids instead of `lc` ids and points at LT2.pdf for level
+  descriptions. Get Daniel's go-ahead on cost first (estimate 150-300k subagent
+  tokens for the writer).
+- Edges touching the successor node wait until the successor-direction dispute
+  (VETTING.md section 2, item 3) is read.
 - `schema/node.schema.json` accepts `sources.prek: [...]`.
-- `writer.md` still expects learning-component ids; it needs a short pre-K
-  variant that cites `sources.prek` ids before the first writer unit.
 
 ## Running a run: manifest and run_state
 

@@ -27,16 +27,13 @@
 run: prek
 description: Pre-K floor of the map, from developmental sources.
 
-# OPEN (Daniel): six strands below, or two (number; space and measure).
-# Six costs an estimated 20-30% more on node writing and loses less on failure.
-# Edit this list before the first writer unit runs.
+# One strand (Daniel, 2026-10-17). The layer is about 38 nodes, inside the
+# 30-60 batch size, and its prerequisites cross every topic line (comparing by
+# counting needs cardinality, join-and-count needs counting), so every proposer
+# must see the whole floor. Six strands would have paid the agent start-up cost
+# 24 times and hidden cross-topic edges from the proposers.
 strands:
-  prek-counting: counting sequence, one-to-one, small-number meanings, cardinality, producing sets, numerals
-  prek-subitize-compare: subitizing, comparing collections, ordinal words
-  prek-operations: joining and separating, composing number, fair sharing
-  prek-measurement: attributes, direct and indirect comparison, ordering by size
-  prek-geometry-spatial: shape recognition, comparing and composing shapes, position words, motions
-  prek-classify: sorting by attribute (patterning excluded pending Daniel's call)
+  prek: counting sequence, one-to-one, small-number meanings, cardinality, producing sets, numerals; subitizing; comparing collections, ordinal words; joining and separating, composing number, fair sharing; length and other attributes, direct comparison, ordering by size; shape recognition, comparing and composing shapes, position words, motions; sorting by attribute; plus the K split of counting.objects. Patterning excluded (Daniel).
 
 units:
   # ---------- research (inline, no subagents) ----------
@@ -65,46 +62,21 @@ units:
     stage: review
     output: sources/prek/VETTING.md
     validate: exists
-    status: pending        # done when Daniel has answered the open questions
+    status: done        # done when Daniel has answered the open questions
     tokens: 0
 
-  # ---------- per strand: writer, two proposers, critic ----------
-  # Writer units wait on Daniel's vetting. Proposers wait on their strand's
-  # writer. The critic waits on both proposers. Strands do not wait on each other.
-  - {id: prek-counting.writer, stage: writer, strand: prek-counting, after: [prek.research.vetting], output: pilot/run/prek/prek-counting.nodes.yaml, validate: writer, status: pending, tokens: 0}
-  - {id: prek-counting.proposer-a, stage: proposer-a, strand: prek-counting, after: [prek-counting.writer], output: pilot/run/prek/prek-counting.pass-a.yaml, validate: proposer, status: pending, tokens: 0}
-  - {id: prek-counting.proposer-b, stage: proposer-b, strand: prek-counting, after: [prek-counting.writer], output: pilot/run/prek/prek-counting.pass-b.yaml, validate: proposer, status: pending, tokens: 0}
-  - {id: prek-counting.critic, stage: critic, strand: prek-counting, after: [prek-counting.proposer-a, prek-counting.proposer-b], output: pilot/run/prek/prek-counting.critic.json, validate: critic, status: pending, tokens: 0}
-
-  - {id: prek-subitize-compare.writer, stage: writer, strand: prek-subitize-compare, after: [prek.research.vetting], output: pilot/run/prek/prek-subitize-compare.nodes.yaml, validate: writer, status: pending, tokens: 0}
-  - {id: prek-subitize-compare.proposer-a, stage: proposer-a, strand: prek-subitize-compare, after: [prek-subitize-compare.writer], output: pilot/run/prek/prek-subitize-compare.pass-a.yaml, validate: proposer, status: pending, tokens: 0}
-  - {id: prek-subitize-compare.proposer-b, stage: proposer-b, strand: prek-subitize-compare, after: [prek-subitize-compare.writer], output: pilot/run/prek/prek-subitize-compare.pass-b.yaml, validate: proposer, status: pending, tokens: 0}
-  - {id: prek-subitize-compare.critic, stage: critic, strand: prek-subitize-compare, after: [prek-subitize-compare.proposer-a, prek-subitize-compare.proposer-b], output: pilot/run/prek/prek-subitize-compare.critic.json, validate: critic, status: pending, tokens: 0}
-
-  - {id: prek-operations.writer, stage: writer, strand: prek-operations, after: [prek.research.vetting], output: pilot/run/prek/prek-operations.nodes.yaml, validate: writer, status: pending, tokens: 0}
-  - {id: prek-operations.proposer-a, stage: proposer-a, strand: prek-operations, after: [prek-operations.writer], output: pilot/run/prek/prek-operations.pass-a.yaml, validate: proposer, status: pending, tokens: 0}
-  - {id: prek-operations.proposer-b, stage: proposer-b, strand: prek-operations, after: [prek-operations.writer], output: pilot/run/prek/prek-operations.pass-b.yaml, validate: proposer, status: pending, tokens: 0}
-  - {id: prek-operations.critic, stage: critic, strand: prek-operations, after: [prek-operations.proposer-a, prek-operations.proposer-b], output: pilot/run/prek/prek-operations.critic.json, validate: critic, status: pending, tokens: 0}
-
-  - {id: prek-measurement.writer, stage: writer, strand: prek-measurement, after: [prek.research.vetting], output: pilot/run/prek/prek-measurement.nodes.yaml, validate: writer, status: pending, tokens: 0}
-  - {id: prek-measurement.proposer-a, stage: proposer-a, strand: prek-measurement, after: [prek-measurement.writer], output: pilot/run/prek/prek-measurement.pass-a.yaml, validate: proposer, status: pending, tokens: 0}
-  - {id: prek-measurement.proposer-b, stage: proposer-b, strand: prek-measurement, after: [prek-measurement.writer], output: pilot/run/prek/prek-measurement.pass-b.yaml, validate: proposer, status: pending, tokens: 0}
-  - {id: prek-measurement.critic, stage: critic, strand: prek-measurement, after: [prek-measurement.proposer-a, prek-measurement.proposer-b], output: pilot/run/prek/prek-measurement.critic.json, validate: critic, status: pending, tokens: 0}
-
-  - {id: prek-geometry-spatial.writer, stage: writer, strand: prek-geometry-spatial, after: [prek.research.vetting], output: pilot/run/prek/prek-geometry-spatial.nodes.yaml, validate: writer, status: pending, tokens: 0}
-  - {id: prek-geometry-spatial.proposer-a, stage: proposer-a, strand: prek-geometry-spatial, after: [prek-geometry-spatial.writer], output: pilot/run/prek/prek-geometry-spatial.pass-a.yaml, validate: proposer, status: pending, tokens: 0}
-  - {id: prek-geometry-spatial.proposer-b, stage: proposer-b, strand: prek-geometry-spatial, after: [prek-geometry-spatial.writer], output: pilot/run/prek/prek-geometry-spatial.pass-b.yaml, validate: proposer, status: pending, tokens: 0}
-  - {id: prek-geometry-spatial.critic, stage: critic, strand: prek-geometry-spatial, after: [prek-geometry-spatial.proposer-a, prek-geometry-spatial.proposer-b], output: pilot/run/prek/prek-geometry-spatial.critic.json, validate: critic, status: pending, tokens: 0}
-
-  - {id: prek-classify.writer, stage: writer, strand: prek-classify, after: [prek.research.vetting], output: pilot/run/prek/prek-classify.nodes.yaml, validate: writer, status: pending, tokens: 0}
-  - {id: prek-classify.proposer-a, stage: proposer-a, strand: prek-classify, after: [prek-classify.writer], output: pilot/run/prek/prek-classify.pass-a.yaml, validate: proposer, status: pending, tokens: 0}
-  - {id: prek-classify.proposer-b, stage: proposer-b, strand: prek-classify, after: [prek-classify.writer], output: pilot/run/prek/prek-classify.pass-b.yaml, validate: proposer, status: pending, tokens: 0}
-  - {id: prek-classify.critic, stage: critic, strand: prek-classify, after: [prek-classify.proposer-a, prek-classify.proposer-b], output: pilot/run/prek/prek-classify.critic.json, validate: critic, status: pending, tokens: 0}
+  # ---------- one strand: writer, two proposers, critic ----------
+  # The writer waits on Daniel's vetting. Proposers wait on the writer. The
+  # critic waits on both proposers.
+  - {id: prek.writer, stage: writer, strand: prek, after: [prek.research.vetting], output: pilot/run/prek/prek.nodes.yaml, validate: writer, status: pending, tokens: 0}
+  - {id: prek.proposer-a, stage: proposer-a, strand: prek, after: [prek.writer], output: pilot/run/prek/prek.pass-a.yaml, validate: proposer, status: pending, tokens: 0}
+  - {id: prek.proposer-b, stage: proposer-b, strand: prek, after: [prek.writer], output: pilot/run/prek/prek.pass-b.yaml, validate: proposer, status: pending, tokens: 0}
+  - {id: prek.critic, stage: critic, strand: prek, after: [prek.proposer-a, prek.proposer-b], output: pilot/run/prek/prek.critic.json, validate: critic, status: pending, tokens: 0}
 
   # ---------- merge (script, no subagents) ----------
   - id: prek.merge
     stage: merge
-    after: [prek-counting.critic, prek-subitize-compare.critic, prek-operations.critic, prek-measurement.critic, prek-geometry-spatial.critic, prek-classify.critic]
+    after: [prek.critic]
     output: pilot/run/prek/merge_report.md
     validate: check
     status: pending
