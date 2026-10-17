@@ -69,9 +69,9 @@ units:
   # The writer waits on Daniel's vetting. Proposers wait on the writer. The
   # critic waits on both proposers.
   - {id: prek.writer, stage: writer, strand: prek, after: [prek.research.vetting], output: pilot/run/prek/prek.nodes.yaml, validate: writer, status: done, tokens: 157661, commit: e108677, usage_pct_week: 2, usage_note: "Daniel reading; includes Claude setup for the unit"}
-  - {id: prek.proposer-a, stage: proposer-a, strand: prek, after: [prek.writer], output: pilot/run/prek/passes/P-prek.json, validate: proposer, status: running, tokens: 0}
+  - {id: prek.proposer-a, stage: proposer-a, strand: prek, after: [prek.writer], output: pilot/run/prek/passes/P-prek.json, validate: proposer, status: done, tokens: 117278, commit: cac280f}
   - {id: prek.proposer-b, stage: proposer-b, strand: prek, after: [prek.writer], output: pilot/run/prek/passes/Q-prek.json, validate: proposer, status: done, tokens: 112638, commit: c0e094c}
-  - {id: prek.critic, stage: critic, strand: prek, after: [prek.proposer-a, prek.proposer-b], output: pilot/run/prek/critic/verdicts-prek.json, validate: critic, status: pending, tokens: 0}
+  - {id: prek.critic, stage: critic, strand: prek, after: [prek.proposer-a, prek.proposer-b], output: pilot/run/prek/critic/verdicts-prek.json, validate: critic, status: running, tokens: 0}
 
   # ---------- merge (script, no subagents) ----------
   - id: prek.merge
