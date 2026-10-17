@@ -201,13 +201,12 @@ Grade belongs here, never on a node. 3/4 is not "a grade 3 idea"; it is an
 idea Common Core places in grade 3.
 
 ## 6. Decisions for Daniel
+Done:
 
-1. **Global level scale (2.2)**: one 1-4 scale for all concepts, or a separate scale per concept?
-2. **Facets as a required field (2.3)**: every node names a facet, even concepts with only one?
-   My draft says yes, with `facet: core` allowed.
-3. **Application nodes (2.1)**: should problem types be nodes in the map at all? For a
-   research map I lean yes, because "where word problems sit" is a real question.
-4. **Where the map starts (3.1)**: proposed roots are counting objects, comparing
-   quantities by size, and recognizing shapes. Pre-K below that is out of scope for now.
+1. **Global level scale (2.2)**: one 1-4 scale for all concepts
+2. **Facets as a required field (2.3)**: every node names a facet, even concepts with only one.
+3. **Application nodes (2.1)**: problem types should be nodes in the map.
+4. **Where the map starts (3.1)**: counting objects, comparing
+   quantities by size, and recognizing shapes.
 5. **The Eedi misconceptions**: attach them to nodes as evidence of where understanding
-   breaks (my lean), or make them nodes of their own?
+   breaks.
