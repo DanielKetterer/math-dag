@@ -1,0 +1,40 @@
+new_concepts:
+  - {concept: decimal, facet: decimal-fraction, reason: "Grade 4 decimals are notation for fractions with denominator 10 or 100 (4.NF.C.6, 4.NF.C.7); concepts.yaml has no decimal concept."}
+  - {concept: decimal, facet: measure, reason: "Decimals as points on the number line (4.NF.C.6 locate 0.62); parallels the fraction measure facet."}
+covered_by:
+  - {lc: "b8719b33", node: fraction.compare.same-whole}
+  - {lc: "e1eb33c5", node: fraction.compare.record-symbols}
+  - {lc: "c7ecef55", node: fraction.compare.record-symbols}
+  - {lc: "971e94a1", node: fraction.compare.same-whole}
+  - {lc: "0bf72853", node: fraction.compare.record-symbols}
+dropped: []
+notes: >-
+  (1) The general comparison components 82d042d0 and b5c4b5f8 are attached to
+  fraction.compare.common-denominator; 4.NF.A.2 names two more strategies, written
+  as separate nodes (common-numerator, benchmark) with lc []. The benchmark node is
+  stated as deciding only when the fractions straddle the benchmark.
+  (2) The S0 nodes fraction.compare.same-whole and fraction.compare.record-symbols
+  are stated for fractions in general, so the grade 4 unlike-denominator versions
+  are listed as covered. The decimal versions (971e94a1, 0bf72853) are also listed
+  as covered, since decimals to hundredths are fractions with denominator 10 or 100;
+  a reviewer may prefer separate decimal nodes. fraction.compare.justify (S0) is
+  limited to same numerator or same denominator, so a new node
+  fraction.compare.unlike.justify was written.
+  (3) 4.NF.B.4.a components 1df660cf (a < b) and 42bbf920 (a > b) describe a/b as a
+  sum of unit fractions, the same meaning as 28d45152 (4.NF.B.3); all three are merged
+  into fraction.non-unit.unit-sum (measure facet so a > b is covered). The 4.NF.B.4.a
+  standard's own claim a/b = a x (1/b) has no component and is written as
+  fraction.multiple-of-unit with lc [].
+  (4) Nodes with lc [] were added where the standard text or other nodes require them
+  and no component exists: like-denominator addition and subtraction (model and
+  symbolic), mixed-number meaning, mixed number to fraction (the "replace each mixed
+  number with an equivalent fraction" route of 4.NF.B.3.c), and the rule
+  n x (a/b) = (n x a)/b as a concept separate from its procedure. Adding or
+  subtracting mixed numbers by first converting to fractions is a second route to
+  fraction.mixed-number.add/subtract, left for the prerequisite pass.
+  (5) Unit-fraction times whole number (a9ce7b44) is kept separate from the general
+  symbolic procedure because it is the counting case n x (1/b) = n/b done with a model;
+  the non-unit and general components are merged into fraction.multiply-whole.symbolic.
+  (6) fraction.tenths-to-hundredths overlaps fraction.equivalent.multiply-principle.generate
+  (n = 10 with a target denominator); kept because 4.NF.C.5 makes it the bridge to
+  decimal notation.
