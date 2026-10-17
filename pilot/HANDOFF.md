@@ -44,6 +44,17 @@ pilot/run/review-daniel.md.
    into 8.EE.B.6, similar triangles the other); 106 holds because of the
    benchmark reasonableness check, so it is a task-scope link.
 
+## Open decision: where the map's floor is
+
+Decision 4 set the roots as counting objects, comparing quantities by size,
+and recognizing shapes. Under the one-meaning-per-node rule, counting.objects
+splits into one-to-one correspondence, cardinality, and the successor idea
+(K.CC.B.4.a-c), and comparing splits into attribute comparison, comparing
+groups by matching, and comparing groups by counting. The true roots would
+then be the rote number sequence, one-to-one matching, judging bigger or
+smaller by sight, and recognizing shape categories. Daniel to decide: floor at
+"what Kindergarten assumes" or "what Kindergarten teaches first".
+
 ## Explorer
 
 `tools/build_explorer.py` rebuilds `explorer/index.html` from `nodes/`. Rebuild after every
