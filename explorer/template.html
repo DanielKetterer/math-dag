@@ -86,6 +86,18 @@ main.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 
 }
 .legend .row { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
 .swatch { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+.gfilter { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+.gfilter .hint { font-size: 11px; margin-right: 2px; }
+button.gchip {
+  font: inherit; font-size: 12px; color: var(--ink); background: var(--surface); cursor: pointer;
+  border: 1px solid var(--rule); border-radius: 999px; padding: 2px 8px 2px 5px; display: inline-flex; align-items: center; gap: 3px;
+  font-variant-numeric: tabular-nums;
+}
+button.gchip:hover { border-color: var(--accent); }
+button.gchip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); font-weight: 700; }
+.gfilter.on button.gchip[aria-pressed="false"] { opacity: 0.45; }
+button.gchip .n { color: var(--ink-soft); font-weight: 400; }
+button.gclear { font: inherit; font-size: 12px; background: none; border: 0; color: var(--accent); cursor: pointer; padding: 2px 4px; text-decoration: underline; }
 .line { display: inline-block; width: 24px; height: 0; border-top: 2px solid var(--ink-soft); vertical-align: middle; margin-right: 4px; }
 .line.dash { border-top-style: dashed; border-color: var(--dispute); }
 .line.dot { border-top-style: dotted; }
@@ -125,7 +137,12 @@ ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
   main.split { grid-template-columns: minmax(0, 1fr); }
   .stage { height: 62vh; min-height: 360px; }
   aside.panel { border-left: 0; border-top: 1px solid var(--rule); overflow: visible; }
-  .legend { display: none; }
+  .legend { position: static; margin: 8px 12px 0; box-sizing: border-box; max-width: none; }
+  .brand { flex-wrap: wrap; }
+  .brand .sub { white-space: normal; }
+  .legend .row:not(.gfilter) { display: none; }
+  .stage { display: flex; flex-direction: column; }
+  #cy { position: relative; inset: auto; flex: 1 1 auto; min-height: 300px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
@@ -163,7 +180,9 @@ ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
   const DATA = JSON.parse(document.getElementById("graph-data").textContent);
   const byId = new Map(DATA.nodes.map(n => [n.id, n]));
   const GRADE = ["#9b8bd6", "#f2c14e", "#d9c55a", "#a8cc6e", "#62b98a", "#36a3a0", "#3a86b0", "#4c63a8", "#5d4497", "#7a3a8c"];
-  const GRADE_NAME = g => g === 0 ? "K" : g >= 9 ? "HS" : "Grade " + g;
+  const PREK_COLOR = "#e08aa6";
+  const GRADE_NAME = g => g === -1 ? "Pre-K" : g === 0 ? "K" : g >= 9 ? "HS" : "Grade " + g;
+  const gradeColor = g => g === -1 ? PREK_COLOR : GRADE[Math.min(g, 9)];
   const SHAPE = { concept: "ellipse", procedure: "round-rectangle", representation: "diamond", fact: "tag",
                   justification: "hexagon", application: "round-pentagon", outside: "ellipse" };
   const TYPE_NAME = { concept: "concept", procedure: "procedure", representation: "representation",
@@ -177,9 +196,11 @@ ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
   const pilot = DATA.nodes.filter(n => !n.outside);
   const disputedCount = DATA.edges.filter(e => e.status === "disputed").length;
   document.getElementById("sub").textContent =
-    `${pilot.length} skills · ${DATA.edges.length} links · equal shares to slope`;
+    `${pilot.length} skills · ${DATA.edges.length} links · Pre-K to grade 8`;
 
-  const state = { focus: null, selected: null, disputed: true, outside: false, depth: 2 };
+  // grades: the grade filter; empty means every grade is shown
+  const state = { focus: null, selected: null, disputed: true, outside: false, depth: 2, grades: new Set() };
+  const gradeOn = n => !state.grades.size || (n.grade != null && state.grades.has(n.grade));
 
   function tok(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
 
@@ -187,7 +208,7 @@ ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
     return [
       { selector: "node", style: {
         "shape": ele => SHAPE[ele.data("type")] || "ellipse",
-        "background-color": ele => ele.data("outside") ? tok("--surface") : (ele.data("grade") == null ? tok("--outside") : GRADE[Math.min(ele.data("grade"), 9)]),
+        "background-color": ele => ele.data("outside") ? tok("--surface") : (ele.data("grade") == null ? tok("--outside") : gradeColor(ele.data("grade"))),
         "border-width": ele => ele.data("outside") ? 1.5 : 1, "border-color": ele => ele.data("outside") ? tok("--outside") : tok("--ink"),
         "border-style": ele => ele.data("outside") ? "dashed" : "solid",
         "width": 26, "height": 26, "label": "data(label)", "color": tok("--ink"),
@@ -245,10 +266,10 @@ ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
     if (state.focus) {
       up = closure(state.focus, "up", state.depth); down = closure(state.focus, "down", state.depth);
       upAll = closure(state.focus, "up").size; downAll = closure(state.focus, "down").size;
-      visible = new Set([state.focus, ...up, ...down]);
+      visible = new Set([state.focus, ...[...up, ...down].filter(id => gradeOn(byId.get(id)))]);
     } else {
       up = new Set(); down = new Set();
-      visible = new Set(DATA.nodes.filter(n => state.outside || !n.outside).map(n => n.id));
+      visible = new Set(DATA.nodes.filter(n => (state.outside || !n.outside) && gradeOn(n)).map(n => n.id));
     }
     cy.batch(() => {
       cy.elements().removeClass("hidden faded hl up down sel");
@@ -267,6 +288,7 @@ ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
       fit, padding: 70, animate: false }).run();
     if (state.selected) highlight(state.selected, false);
     renderCrumb();
+    renderLegend();
   }
 
   function highlight(id, center = true) {
@@ -309,6 +331,11 @@ ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
     const t = document.createElement("span");
     t.innerHTML = `Chain for <b></b>: <span style="color:var(--up)">${up.size} upstream</span> · <span style="color:var(--down)">${down.size} downstream</span>${state.depth < 99 ? ` <span style="color:var(--ink-soft)">(within ${state.depth} step${state.depth > 1 ? "s" : ""}; ${upAll} and ${downAll} in all)</span>` : ""}`;
     t.querySelector("b").textContent = n.name;
+    if (state.grades.size) {
+      const f = document.createElement("span"); f.style.color = "var(--ink-soft)";
+      f.textContent = ` · showing ${[...state.grades].sort((a, b) => a - b).map(GRADE_NAME).join(", ")} only`;
+      t.append(f);
+    }
     const b = document.createElement("button"); b.className = "btn"; b.type = "button"; b.textContent = "Whole map";
     b.onclick = showAll;
     el.append(t, b);
@@ -322,7 +349,7 @@ ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
   function renderPanel(id) {
     const n = byId.get(id), p = document.getElementById("panel");
     const deps = (children.get(id) || []).map(e => e.target);
-    const gradeChip = n.grade != null ? `<span class="chip grade"><span class="swatch" style="background:${GRADE[Math.min(n.grade, 9)]}"></span>${GRADE_NAME(n.grade)}</span>` : "";
+    const gradeChip = n.grade != null ? `<span class="chip grade"><span class="swatch" style="background:${gradeColor(n.grade)}"></span>${GRADE_NAME(n.grade)}</span>` : "";
     let html = `<div><h2>${esc(n.name)}</h2><div class="mono">${esc(n.id)}</div></div>`;
     if (n.outside) {
       html += `<div class="chips"><span class="chip">outside the slice</span></div><p>${esc(n.statement)}</p>
@@ -362,7 +389,7 @@ ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
     const roots = pilot.filter(n => !n.routes.length).length;
     document.getElementById("panel").innerHTML = `<div class="intro">
       <h2>How school math fits together</h2>
-      <p>Each dot is one skill, from cutting a shape into equal shares (grade 1) to slope (grade 8). Arrows run from a prerequisite to the skill that needs it, so the map reads top to bottom.</p>
+      <p>Each dot is one skill, from saying the counting words (before Kindergarten) to slope (grade 8). Colors show the Common Core grade; Pre-K marks skills Common Core assumes rather than teaches. Click a grade in the key to show only that grade. Arrows run from a prerequisite to the skill that needs it, so the map reads top to bottom.</p>
       <div class="stats">
         <div class="stat"><div class="n">${pilot.length}</div><div class="t">skills in the slice</div></div>
         <div class="stat"><div class="n">${DATA.edges.length}</div><div class="t">prerequisite links</div></div>
@@ -376,10 +403,14 @@ ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
 
   function renderLegend() {
     const grades = [...new Set(pilot.map(n => n.grade).filter(g => g != null))].sort((a, b) => a - b);
+    const count = g => pilot.filter(n => n.grade === g).length;
     const used = [...new Set(pilot.map(n => n.type))];
     const shapeGlyph = { concept: "●", procedure: "▢", representation: "◆", fact: "▶", justification: "⬢", application: "⬟" };
     document.getElementById("legend").innerHTML =
-      `<div class="row">${grades.map(g => `<span><span class="swatch" style="background:${GRADE[Math.min(g, 9)]}"></span>${GRADE_NAME(g).replace("Grade ", "Gr ")}</span>`).join("")}</div>
+      `<div class="row gfilter${state.grades.size ? " on" : ""}" role="group" aria-label="Filter by grade">
+         <span class="hint">${state.grades.size ? "Showing:" : "Filter by grade:"}</span>
+         ${grades.map(g => `<button type="button" class="gchip" data-grade="${g}" aria-pressed="${state.grades.has(g)}" title="Show ${GRADE_NAME(g)} (shift-click to add)"><span class="swatch" style="background:${gradeColor(g)}"></span>${GRADE_NAME(g).replace("Grade ", "Gr ")} <span class="n">${count(g)}</span></button>`).join("")}
+         ${state.grades.size ? `<button type="button" class="gclear" data-grade="all">All grades</button>` : ""}</div>
        <div class="row">${used.map(t => `<span>${shapeGlyph[t] || "●"} ${TYPE_NAME[t] || t}</span>`).join("")}</div>
        <div class="row"><span><span class="line"></span>agreed</span><span><span class="line dash"></span>disputed</span><span><span class="line dot"></span>test problem only</span></div>`;
   }
@@ -397,6 +428,21 @@ ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
   document.getElementById("t-disputed").onchange = e => { state.disputed = e.target.checked; applyView(!state.focus ? true : true); };
   document.getElementById("t-outside").onchange = e => { state.outside = e.target.checked; applyView(true); };
   document.getElementById("b-all").onclick = showAll;
+  // Click a grade to show only it; shift- or ctrl-click to add or remove it from the set.
+  document.getElementById("legend").addEventListener("click", ev => {
+    const b = ev.target.closest("button[data-grade]"); if (!b) return;
+    if (b.dataset.grade === "all") state.grades.clear();
+    else {
+      const g = +b.dataset.grade;
+      if (ev.shiftKey || ev.ctrlKey || ev.metaKey) { state.grades.has(g) ? state.grades.delete(g) : state.grades.add(g); }
+      else if (state.grades.size === 1 && state.grades.has(g)) state.grades.clear();
+      else state.grades = new Set([g]);
+    }
+    const key = b.dataset.grade;
+    applyView(true);
+    const again = document.querySelector(`#legend button[data-grade="${key}"]`) || document.querySelector("#legend button.gchip");
+    if (again) again.focus({ preventScroll: true });
+  });
   document.getElementById("depth").onchange = e => { state.depth = +e.target.value; if (state.focus) applyView(true); };
 
   // search

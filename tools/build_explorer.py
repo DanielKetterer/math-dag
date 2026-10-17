@@ -73,7 +73,8 @@ def main():
             "id": i, "name": n["name"], "concept": n["concept"], "facet": n["facet"], "level": n["level"],
             "type": n["type"], "statement": n["statement"], "procedure": n.get("procedure") or [],
             "assess": n["assess"], "ccss": [str(s) for s in src.get("ccss", [])],
-            "grade": grade_of(src.get("ccss", [])), "routes": routes,
+            "grade": grade_of(src.get("ccss", [])) if src.get("ccss") or not src.get("prek") else -1,
+            "routes": routes,
             "related": n.get("related") or [], "root": n.get("root_reason", ""), "outside": False})
     for o, k in outside.items():
         out_nodes.append({"id": o, "name": meanings.get(o, o.replace(".", " ").replace("-", " ")),
