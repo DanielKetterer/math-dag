@@ -44,6 +44,12 @@ pilot/run/review-daniel.md.
    into 8.EE.B.6, similar triangles the other); 106 holds because of the
    benchmark reasonableness check, so it is a task-scope link.
 
+## Explorer
+
+`tools/build_explorer.py` rebuilds `explorer/index.html` from `nodes/`. Rebuild after every
+merge. A private published copy lives at https://claude.ai/artifact/Q7RWducGX1KtkuZeSAu6Vq;
+to update it from a new chat, publish the rebuilt fragment with that URL.
+
 ## Then
 
 Apply Daniel's verdicts, rerun merge and checker, and either extend the slice or

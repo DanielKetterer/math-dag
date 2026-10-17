@@ -1,0 +1,437 @@
+<title>School Math Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap">
+<style>
+/* Layout: graph-paper canvas on the left, a reading panel on the right; stacks on phones. */
+:root {
+  --paper: #f6f8fa;
+  --grid: #e3e9ef;
+  --surface: #ffffff;
+  --ink: #1d2733;
+  --ink-soft: #566476;
+  --rule: #d5dde6;
+  --accent: #2a5bd7;
+  --accent-soft: #e4ecfd;
+  --dispute: #c2621b;
+  --dispute-soft: #fcefe3;
+  --up: #2a5bd7;
+  --down: #8a3fb8;
+  --outside: #9aa6b4;
+  --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #12171e; --grid: #1c232d; --surface: #182029; --ink: #e3e9f0; --ink-soft: #9aa8b8;
+    --rule: #2b3542; --accent: #7aa2ff; --accent-soft: #1d2a47; --dispute: #f0a25e; --dispute-soft: #3a2a1b;
+    --up: #7aa2ff; --down: #c592ea; --outside: #5d6a79; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #12171e; --grid: #1c232d; --surface: #182029; --ink: #e3e9f0; --ink-soft: #9aa8b8;
+  --rule: #2b3542; --accent: #7aa2ff; --accent-soft: #1d2a47; --dispute: #f0a25e; --dispute-soft: #3a2a1b;
+  --up: #7aa2ff; --down: #c592ea; --outside: #5d6a79; color-scheme: dark;
+}
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+.app { height: 100%; display: grid; grid-template-rows: auto 1fr; }
+header.bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px;
+  padding-block: 10px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  border-bottom: 1px solid var(--rule); background: var(--surface);
+}
+.brand { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
+.brand h1 { margin: 0; font-family: var(--font-display); font-size: 19px; font-weight: 700; letter-spacing: -0.01em; white-space: nowrap; }
+.brand .sub { color: var(--ink-soft); font-size: 13px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.search { position: relative; flex: 1 1 260px; max-width: 420px; }
+.search input {
+  width: 100%; box-sizing: border-box; padding: 7px 10px; border: 1px solid var(--rule); border-radius: 6px;
+  background: var(--paper); color: var(--ink); font: inherit;
+}
+.search input:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.results {
+  position: absolute; z-index: 20; top: calc(100% + 4px); left: 0; right: 0; margin: 0; padding: 4px; list-style: none;
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  max-height: 320px; overflow-y: auto;
+}
+.results li { padding: 6px 8px; border-radius: 4px; cursor: pointer; display: grid; gap: 1px; }
+.results li[aria-selected="true"], .results li:hover { background: var(--accent-soft); }
+.results .rid { font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft); }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; font-size: 13px; color: var(--ink-soft); }
+.controls select { font: inherit; font-size: 13px; padding: 3px 4px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); color: var(--ink); }
+.controls label { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; white-space: nowrap; }
+button.btn {
+  font: inherit; font-size: 13px; padding: 5px 10px; border-radius: 6px; cursor: pointer;
+  border: 1px solid var(--rule); background: var(--surface); color: var(--ink);
+}
+button.btn:hover { border-color: var(--accent); }
+button.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+main.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 420px); min-height: 0; }
+.stage { position: relative; min-height: 0; min-width: 0;
+  background-color: var(--paper);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px; }
+#cy { position: absolute; inset: 0; }
+.crumb {
+  position: absolute; left: 12px; top: 12px; z-index: 5; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 10px; font-size: 13px; max-width: calc(100% - 24px);
+}
+.crumb b { font-weight: 700; }
+.legend {
+  position: absolute; left: 12px; bottom: 12px; z-index: 5; background: var(--surface); border: 1px solid var(--rule);
+  border-radius: 6px; padding: 8px 10px; font-size: 12px; color: var(--ink-soft); display: grid; gap: 6px; max-width: calc(100% - 24px);
+}
+.legend .row { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
+.swatch { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: -2px; margin-right: 3px; }
+.line { display: inline-block; width: 24px; height: 0; border-top: 2px solid var(--ink-soft); vertical-align: middle; margin-right: 4px; }
+.line.dash { border-top-style: dashed; border-color: var(--dispute); }
+.line.dot { border-top-style: dotted; }
+aside.panel { border-left: 1px solid var(--rule); background: var(--surface); overflow-y: auto; min-height: 0; min-width: 0; }
+.panel-inner { padding: 18px; display: grid; gap: 16px; }
+.panel h2 { margin: 0; font-family: var(--font-display); font-size: 22px; line-height: 1.2; text-wrap: balance; }
+.mono { font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft); word-break: break-all; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--rule); color: var(--ink-soft); white-space: nowrap; }
+.chip.grade { color: var(--ink); }
+.label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); margin: 0 0 4px; font-weight: 700; }
+.panel p { margin: 0; }
+ol.steps { margin: 0; padding-left: 20px; }
+.assess { padding: 10px 12px; border: 1px dashed var(--rule); border-radius: 6px; font-style: italic; }
+.route { border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+.route-head { padding: 8px 12px; background: var(--paper); font-size: 13px; display: grid; gap: 2px; }
+.route-head b { font-family: var(--font-mono); font-size: 12px; font-weight: 500; }
+.edge { padding: 10px 12px; border-top: 1px solid var(--rule); display: grid; gap: 4px; font-size: 14px; }
+.edge.disputed { background: var(--dispute-soft); }
+.edge .top { display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; justify-content: space-between; }
+a.jump { color: var(--accent); text-decoration: none; font-weight: 700; cursor: pointer; }
+a.jump:hover { text-decoration: underline; }
+.pill { font-size: 11px; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--rule); color: var(--ink-soft); white-space: nowrap; }
+.pill.disputed { border-color: var(--dispute); color: var(--dispute); }
+.why { color: var(--ink); }
+.critic { font-size: 13px; color: var(--ink-soft); }
+ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.empty { color: var(--ink-soft); }
+.intro { display: grid; gap: 12px; }
+.intro h2 { font-size: 24px; }
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.stat { border: 1px solid var(--rule); border-radius: 6px; padding: 8px 10px; }
+.stat .n { font-family: var(--font-display); font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.stat .t { font-size: 12px; color: var(--ink-soft); }
+@media (max-width: 760px) {
+  .app { height: auto; }
+  main.split { grid-template-columns: minmax(0, 1fr); }
+  .stage { height: 62vh; min-height: 360px; }
+  aside.panel { border-left: 0; border-top: 1px solid var(--rule); overflow: visible; }
+  .legend { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="app">
+  <header class="bar">
+    <div class="brand"><h1>School Math Map</h1><span class="sub" id="sub"></span></div>
+    <div class="search">
+      <input id="q" type="search" placeholder="Find a skill: slope, unit fraction, 4.NF.B.3" autocomplete="off" aria-label="Find a skill" aria-controls="results">
+      <ul id="results" class="results" role="listbox" hidden></ul>
+    </div>
+    <div class="controls">
+      <label><input type="checkbox" id="t-disputed" checked> Disputed links</label>
+      <label><input type="checkbox" id="t-outside"> Skills outside the slice</label>
+      <label>Chain depth <select id="depth"><option value="1">1 step</option><option value="2" selected>2 steps</option><option value="3">3 steps</option><option value="99">all</option></select></label>
+      <button class="btn" id="b-all" type="button">Whole map</button>
+    </div>
+  </header>
+  <main class="split">
+    <section class="stage" aria-label="Prerequisite graph">
+      <div id="cy"></div>
+      <div class="crumb" id="crumb" hidden></div>
+      <div class="legend" id="legend"></div>
+    </section>
+    <aside class="panel" aria-live="polite"><div class="panel-inner" id="panel"></div></aside>
+  </main>
+</div>
+
+<script id="graph-data" type="application/json">__GRAPH_DATA__</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+<script>
+(function () {
+  const DATA = JSON.parse(document.getElementById("graph-data").textContent);
+  const byId = new Map(DATA.nodes.map(n => [n.id, n]));
+  const GRADE = ["#9b8bd6", "#f2c14e", "#d9c55a", "#a8cc6e", "#62b98a", "#36a3a0", "#3a86b0", "#4c63a8", "#5d4497", "#7a3a8c"];
+  const GRADE_NAME = g => g === 0 ? "K" : g >= 9 ? "HS" : "Grade " + g;
+  const SHAPE = { concept: "ellipse", procedure: "round-rectangle", representation: "diamond", fact: "tag",
+                  justification: "hexagon", application: "round-pentagon", outside: "ellipse" };
+  const TYPE_NAME = { concept: "concept", procedure: "procedure", representation: "representation",
+                      fact: "fact", justification: "justification", application: "problem type" };
+
+  // dependents and prerequisites, per edge
+  const parents = new Map(), children = new Map();
+  for (const n of DATA.nodes) { parents.set(n.id, []); children.set(n.id, []); }
+  for (const e of DATA.edges) { parents.get(e.target).push(e); children.get(e.source).push(e); }
+
+  const pilot = DATA.nodes.filter(n => !n.outside);
+  const disputedCount = DATA.edges.filter(e => e.status === "disputed").length;
+  document.getElementById("sub").textContent =
+    `${pilot.length} skills · ${DATA.edges.length} links · equal shares to slope`;
+
+  const state = { focus: null, selected: null, disputed: true, outside: false, depth: 2 };
+
+  function tok(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+
+  function styleSheet() {
+    return [
+      { selector: "node", style: {
+        "shape": ele => SHAPE[ele.data("type")] || "ellipse",
+        "background-color": ele => ele.data("outside") ? tok("--surface") : (ele.data("grade") == null ? tok("--outside") : GRADE[Math.min(ele.data("grade"), 9)]),
+        "border-width": ele => ele.data("outside") ? 1.5 : 1, "border-color": ele => ele.data("outside") ? tok("--outside") : tok("--ink"),
+        "border-style": ele => ele.data("outside") ? "dashed" : "solid",
+        "width": 26, "height": 26, "label": "data(label)", "color": tok("--ink"),
+        "font-family": "Atkinson Hyperlegible, Segoe UI, sans-serif", "font-size": 10,
+        "text-wrap": "wrap", "text-max-width": 110, "text-valign": "bottom", "text-margin-y": 4,
+        "text-background-color": tok("--paper"), "text-background-opacity": 0.85, "text-background-padding": 1,
+        "min-zoomed-font-size": 7 } },
+      { selector: "edge", style: {
+        "width": 1.2, "curve-style": "bezier", "target-arrow-shape": "triangle", "arrow-scale": 0.8,
+        "line-color": tok("--ink-soft"), "target-arrow-color": tok("--ink-soft"), "opacity": 0.55 } },
+      { selector: "edge.disputed", style: { "line-style": "dashed", "line-color": tok("--dispute"), "target-arrow-color": tok("--dispute") } },
+      { selector: "edge.task", style: { "line-style": "dotted" } },
+      { selector: ".hidden", style: { "display": "none" } },
+      { selector: ".faded", style: { "opacity": 0.12 } },
+      { selector: "edge.hl", style: { "opacity": 1, "width": 2.2 } },
+      { selector: "node.up", style: { "border-color": tok("--up"), "border-width": 3 } },
+      { selector: "node.down", style: { "border-color": tok("--down"), "border-width": 3 } },
+      { selector: "node.sel", style: { "border-color": tok("--accent"), "border-width": 5, "width": 34, "height": 34, "font-size": 12, "z-index": 10 } },
+    ];
+  }
+
+  const elements = [];
+  for (const n of DATA.nodes) elements.push({ group: "nodes", data: { id: n.id, label: n.name, grade: n.grade, type: n.type, outside: n.outside } });
+  DATA.edges.forEach((e, i) => elements.push({ group: "edges", classes: [e.status === "disputed" ? "disputed" : "", e.task ? "task" : ""].join(" "),
+    data: { id: "e" + i, source: e.source, target: e.target } }));
+
+  const cy = cytoscape({ container: document.getElementById("cy"), elements, style: styleSheet(),
+    wheelSensitivity: 0.25, minZoom: 0.08, maxZoom: 3 });
+  const restyle = () => cy.style(styleSheet());
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", restyle);
+  new MutationObserver(restyle).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+  function edgeOn(e) { return state.disputed || e.status !== "disputed"; }
+  function closure(start, dir, depth = 99) {
+    const seen = new Set();
+    let frontier = [start];
+    for (let d = 0; d < depth && frontier.length; d++) {
+      const next = [];
+      for (const x of frontier) {
+        for (const e of (dir === "up" ? parents.get(x) : children.get(x)) || []) {
+          if (!edgeOn(e)) continue;
+          const y = dir === "up" ? e.source : e.target;
+          if (!state.outside && byId.get(y).outside) continue;
+          if (!seen.has(y) && y !== start) { seen.add(y); next.push(y); }
+        }
+      }
+      frontier = next;
+    }
+    return seen;
+  }
+
+  let up = new Set(), down = new Set(), upAll = 0, downAll = 0;
+  function applyView(fit = true) {
+    let visible;
+    if (state.focus) {
+      up = closure(state.focus, "up", state.depth); down = closure(state.focus, "down", state.depth);
+      upAll = closure(state.focus, "up").size; downAll = closure(state.focus, "down").size;
+      visible = new Set([state.focus, ...up, ...down]);
+    } else {
+      up = new Set(); down = new Set();
+      visible = new Set(DATA.nodes.filter(n => state.outside || !n.outside).map(n => n.id));
+    }
+    cy.batch(() => {
+      cy.elements().removeClass("hidden faded hl up down sel");
+      cy.nodes().forEach(nd => { if (!visible.has(nd.id())) nd.addClass("hidden"); });
+      cy.edges().forEach(ed => {
+        const e = DATA.edges[+ed.id().slice(1)];
+        if (!visible.has(e.source) || !visible.has(e.target) || !edgeOn(e)) ed.addClass("hidden");
+      });
+      if (state.focus) {
+        up.forEach(id => cy.getElementById(id).addClass("up"));
+        down.forEach(id => cy.getElementById(id).addClass("down"));
+      }
+    });
+    const eles = cy.elements().not(".hidden");
+    eles.layout({ name: "dagre", rankDir: "TB", nodeSep: 55, rankSep: 80, edgeSep: 8, ranker: "network-simplex",
+      fit, padding: 70, animate: false }).run();
+    if (state.selected) highlight(state.selected, false);
+    renderCrumb();
+  }
+
+  function highlight(id, center = true) {
+    cy.batch(() => {
+      cy.elements().removeClass("faded hl sel");
+      const nd = cy.getElementById(id);
+      if (nd.empty() || nd.hasClass("hidden")) return;
+      nd.addClass("sel");
+      if (!state.focus) {
+        const hood = nd.closedNeighborhood().not(".hidden");
+        cy.elements().not(".hidden").not(hood).addClass("faded");
+        nd.connectedEdges().not(".hidden").addClass("hl");
+      }
+    });
+    if (center) {
+      const nd = cy.getElementById(id);
+      if (nd.nonempty() && !nd.hasClass("hidden")) cy.animate({ center: { eles: nd }, zoom: Math.max(cy.zoom(), 0.9) }, { duration: 250 });
+    }
+  }
+
+  function select(id, opts = {}) {
+    if (!byId.has(id)) return;
+    state.selected = id;
+    if (opts.focus) { state.focus = id; applyView(true); highlight(id, false); renderPanel(id); try { history.replaceState(null, "", "#" + id); } catch (e) {} return; }
+    else {
+      const nd = cy.getElementById(id);
+      if (nd.hasClass("hidden")) { state.focus = id; applyView(true); }
+    }
+    highlight(id, !opts.focus);
+    renderPanel(id);
+    try { history.replaceState(null, "", "#" + id); } catch (e) {}
+  }
+
+  function renderCrumb() {
+    const el = document.getElementById("crumb");
+    if (!state.focus) { el.hidden = true; return; }
+    const n = byId.get(state.focus);
+    el.hidden = false;
+    el.innerHTML = "";
+    const t = document.createElement("span");
+    t.innerHTML = `Chain for <b></b>: <span style="color:var(--up)">${up.size} upstream</span> · <span style="color:var(--down)">${down.size} downstream</span>${state.depth < 99 ? ` <span style="color:var(--ink-soft)">(within ${state.depth} step${state.depth > 1 ? "s" : ""}; ${upAll} and ${downAll} in all)</span>` : ""}`;
+    t.querySelector("b").textContent = n.name;
+    const b = document.createElement("button"); b.className = "btn"; b.type = "button"; b.textContent = "Whole map";
+    b.onclick = showAll;
+    el.append(t, b);
+  }
+
+  function showAll() { state.focus = null; applyView(true); if (state.selected) highlight(state.selected, true); }
+
+  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const jump = id => `<a class="jump" data-id="${esc(id)}" tabindex="0">${esc(byId.get(id) ? byId.get(id).name : id)}</a>`;
+
+  function renderPanel(id) {
+    const n = byId.get(id), p = document.getElementById("panel");
+    const deps = (children.get(id) || []).map(e => e.target);
+    const gradeChip = n.grade != null ? `<span class="chip grade"><span class="swatch" style="background:${GRADE[Math.min(n.grade, 9)]}"></span>${GRADE_NAME(n.grade)}</span>` : "";
+    let html = `<div><h2>${esc(n.name)}</h2><div class="mono">${esc(n.id)}</div></div>`;
+    if (n.outside) {
+      html += `<div class="chips"><span class="chip">outside the slice</span></div><p>${esc(n.statement)}</p>
+        <p class="empty">Not written yet. Other skills point to it as a prerequisite.</p>`;
+    } else {
+      html += `<div class="chips">${gradeChip}<span class="chip">level ${n.level}</span><span class="chip">${esc(TYPE_NAME[n.type] || n.type)}</span>
+        <span class="chip">${esc(n.concept)} · ${esc(n.facet)}</span>${n.ccss.map(c => `<span class="chip">${esc(c)}</span>`).join("")}</div>
+        <div><p class="label">What it is</p><p>${esc(n.statement)}</p></div>`;
+      if (n.procedure.length) html += `<div><p class="label">Steps</p><ol class="steps">${n.procedure.map(s => `<li>${esc(s)}</li>`).join("")}</ol></div>`;
+      html += `<div><p class="label">Test problem</p><p class="assess">${esc(n.assess)}</p></div>`;
+    }
+    html += `<div><button class="btn primary" type="button" id="b-focus">Trace its chain</button></div>`;
+    if (!n.outside) {
+      html += `<div><p class="label">What it needs</p>`;
+      if (!n.routes.length) html += `<p class="empty">Nothing in the map. ${esc(n.root)}</p>`;
+      else {
+        if (n.routes.length > 1) html += `<p class="critic" style="margin-bottom:8px">${n.routes.length} routes in. Any one route is enough.</p>`;
+        html += `<div style="display:grid;gap:10px">` + n.routes.map((r, i) => `
+          <div class="route"><div class="route-head"><span><b>${esc(r.clause)}</b>${n.routes.length > 1 ? ` · route ${i + 1}` : ""}</span>${r.note ? `<span>${esc(r.note)}</span>` : ""}</div>
+          ${r.edges.map(e => `<div class="edge ${e.status === "disputed" ? "disputed" : ""}">
+            <div class="top">${jump(e.node)}<span class="chips"><span class="pill">${esc(e.relation)}</span>${e.task ? `<span class="pill">test problem only</span>` : ""}<span class="pill ${e.status}">${esc(e.status)}</span></span></div>
+            <div class="why">${esc(e.why)}</div>
+            ${e.critic ? `<div class="critic">Critic: ${esc(e.critic)}</div>` : ""}</div>`).join("")}
+          </div>`).join("") + `</div>`;
+      }
+      html += `</div>`;
+    }
+    html += `<div><p class="label">Needed by (${deps.length})</p>${deps.length ? `<ul class="plain">${deps.map(d => `<li>${jump(d)}</li>`).join("")}</ul>` : `<p class="empty">Nothing in the map depends on this yet.</p>`}</div>`;
+    if (n.related.length) html += `<div><p class="label">Related, not prerequisite</p><ul class="plain">${n.related.map(r => `<li>${jump(r.node)} <span class="critic">(${esc(r.relation.replace(/_/g, " "))})</span></li>`).join("")}</ul></div>`;
+    p.innerHTML = html;
+    p.parentElement.scrollTop = 0;
+    document.getElementById("b-focus").onclick = () => select(id, { focus: true });
+  }
+
+  function renderIntro() {
+    const multi = pilot.filter(n => n.routes.length > 1).length;
+    const roots = pilot.filter(n => !n.routes.length).length;
+    document.getElementById("panel").innerHTML = `<div class="intro">
+      <h2>How school math fits together</h2>
+      <p>Each dot is one skill, from cutting a shape into equal shares (grade 1) to slope (grade 8). Arrows run from a prerequisite to the skill that needs it, so the map reads top to bottom.</p>
+      <div class="stats">
+        <div class="stat"><div class="n">${pilot.length}</div><div class="t">skills in the slice</div></div>
+        <div class="stat"><div class="n">${DATA.edges.length}</div><div class="t">prerequisite links</div></div>
+        <div class="stat"><div class="n">${multi}</div><div class="t">skills with more than one route in</div></div>
+        <div class="stat"><div class="n">${disputedCount}</div><div class="t">links still disputed</div></div>
+      </div>
+      <p>Click a skill to read what it is, how it is tested, and exactly why it needs each prerequisite. <b>Trace its chain</b> shows everything upstream and downstream of it.</p>
+      <p class="critic">Try: ${["fraction.unit.number-line", "fraction.division.symbolic", "slope.constant-on-line"].filter(i => byId.has(i)).map(jump).join(" · ") || jump(pilot[0].id)}</p>
+    </div>`;
+  }
+
+  function renderLegend() {
+    const grades = [...new Set(pilot.map(n => n.grade).filter(g => g != null))].sort((a, b) => a - b);
+    const used = [...new Set(pilot.map(n => n.type))];
+    const shapeGlyph = { concept: "●", procedure: "▢", representation: "◆", fact: "▶", justification: "⬢", application: "⬟" };
+    document.getElementById("legend").innerHTML =
+      `<div class="row">${grades.map(g => `<span><span class="swatch" style="background:${GRADE[Math.min(g, 9)]}"></span>${GRADE_NAME(g).replace("Grade ", "Gr ")}</span>`).join("")}</div>
+       <div class="row">${used.map(t => `<span>${shapeGlyph[t] || "●"} ${TYPE_NAME[t] || t}</span>`).join("")}</div>
+       <div class="row"><span><span class="line"></span>agreed</span><span><span class="line dash"></span>disputed</span><span><span class="line dot"></span>test problem only</span></div>`;
+  }
+
+  // events
+  cy.on("tap", "node", ev => select(ev.target.id()));
+  cy.on("dbltap", "node", ev => select(ev.target.id(), { focus: true }));
+  cy.on("tap", ev => { if (ev.target === cy) { state.selected = null; cy.elements().removeClass("faded hl sel"); renderIntro(); } });
+  document.getElementById("panel").addEventListener("click", ev => {
+    const a = ev.target.closest("a.jump"); if (a) select(a.dataset.id);
+  });
+  document.getElementById("panel").addEventListener("keydown", ev => {
+    const a = ev.target.closest("a.jump"); if (a && ev.key === "Enter") select(a.dataset.id);
+  });
+  document.getElementById("t-disputed").onchange = e => { state.disputed = e.target.checked; applyView(!state.focus ? true : true); };
+  document.getElementById("t-outside").onchange = e => { state.outside = e.target.checked; applyView(true); };
+  document.getElementById("b-all").onclick = showAll;
+  document.getElementById("depth").onchange = e => { state.depth = +e.target.value; if (state.focus) applyView(true); };
+
+  // search
+  const q = document.getElementById("q"), res = document.getElementById("results");
+  let hits = [], cursor = 0;
+  function search(text) {
+    const t = text.trim().toLowerCase();
+    if (!t) { res.hidden = true; return; }
+    const pool = DATA.nodes.filter(n => state.outside || !n.outside);
+    hits = pool.map(n => {
+      const hay = (n.name + " " + n.id + " " + n.ccss.join(" ") + " " + n.statement).toLowerCase();
+      const score = n.name.toLowerCase().startsWith(t) ? 0 : n.name.toLowerCase().includes(t) ? 1 : n.ccss.some(c => c.toLowerCase().startsWith(t)) ? 1 : hay.includes(t) ? 2 : 9;
+      return [score, n];
+    }).filter(x => x[0] < 9).sort((a, b) => a[0] - b[0] || a[1].name.length - b[1].name.length).slice(0, 10).map(x => x[1]);
+    cursor = 0; drawHits();
+  }
+  function drawHits() {
+    res.innerHTML = hits.length ? hits.map((n, i) => `<li role="option" data-id="${esc(n.id)}" aria-selected="${i === cursor}"><span>${esc(n.name)}</span><span class="rid">${esc(n.id)}${n.ccss.length ? " · " + esc(n.ccss.join(", ")) : ""}</span></li>`).join("")
+      : `<li class="empty">No skill matches. Try a word from its name or a standard code.</li>`;
+    res.hidden = false;
+  }
+  q.addEventListener("input", () => search(q.value));
+  q.addEventListener("keydown", ev => {
+    if (res.hidden) return;
+    if (ev.key === "ArrowDown") { cursor = Math.min(cursor + 1, hits.length - 1); drawHits(); ev.preventDefault(); }
+    else if (ev.key === "ArrowUp") { cursor = Math.max(cursor - 1, 0); drawHits(); ev.preventDefault(); }
+    else if (ev.key === "Enter" && hits[cursor]) { select(hits[cursor].id); res.hidden = true; q.blur(); }
+    else if (ev.key === "Escape") res.hidden = true;
+  });
+  res.addEventListener("mousedown", ev => { const li = ev.target.closest("li[data-id]"); if (li) { ev.preventDefault(); select(li.dataset.id); res.hidden = true; } });
+  q.addEventListener("blur", () => setTimeout(() => res.hidden = true, 120));
+
+  renderLegend();
+  applyView(true);
+  const start = decodeURIComponent((location.hash || "").slice(1));
+  if (byId.has(start)) select(start); else renderIntro();
+})();
+</script>

@@ -18,6 +18,7 @@ links in the slice. Awaiting human review: `pilot/run/REVIEW.md`.
 | `nodes/<concept>/<id>.yaml` | One file per node: what it is, how it is tested, what it requires and why. |
 | `pathways/` | How particular curricula order the nodes, and at which grade. |
 | `schema/node.schema.json` | Machine-checkable form of the node rules. |
+| `explorer/index.html` | Interactive map: search a skill, read its prerequisites and why, trace its chain. Open it in a browser. Rebuild with `python3 tools/build_explorer.py`. |
 | `tools/check.py` | Checks the map: schema, precise whys, learnability, merge candidates, pathway order. |
 | `tools/pilot_scope.py` | Gathers seed material for the pilot slice. |
 | `pilot/` | The first slice, built end to end before scaling. |
