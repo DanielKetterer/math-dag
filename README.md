@@ -14,6 +14,7 @@ links in the slice. Awaiting human review: `pilot/run/REVIEW.md`.
 | Path | What it is |
 |---|---|
 | `RULES.md` | The rules every node and link must follow. Start here. |
+| `DIAGNOSTIC_FRONTIER_PROPOSAL.md` | Proposal for a diagnostic layer that estimates a learner's current capabilities and identifies an evidence-based learning frontier. |
 | `concepts.yaml` | The list of concepts and their facets (distinct meanings). |
 | `nodes/<concept>/<id>.yaml` | One file per node: what it is, how it is tested, what it requires and why. |
 | `pathways/` | How particular curricula order the nodes, and at which grade. |
