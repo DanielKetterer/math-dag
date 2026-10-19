@@ -198,7 +198,7 @@ def v_writer_lc(unit):
         if n.get("type") not in NODE_TYPES:
             errs.append(f"{where}: bad type {n.get('type')!r}")
         for lc in (n.get("sources") or {}).get("lc", []) or []:
-            if str(lc) not in want:
+            if str(lc) not in want and str(lc) not in unit.get("merged_lc", []):
                 errs.append(f"{where}: cites lc {lc} not in its input")
             got.add(str(lc))
     extra = unit["output"].replace(".yaml", ".extra.yaml")
@@ -208,7 +208,7 @@ def v_writer_lc(unit):
         x = yaml.safe_load(open(path(extra), encoding="utf-8")) or {}
     except yaml.YAMLError as e:
         return errs + [f"extra file does not parse: {e}"]
-    for k in ("covered_by", "dropped"):
+    for k in ("covered_by", "dropped", "merged_into"):
         for r in x.get(k) or []:
             got.add(str(r.get("lc")))
     missing = sorted(want - got)

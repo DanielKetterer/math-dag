@@ -1,0 +1,100 @@
+{
+ "place-value.base-ten": {
+  "strand": "N1",
+  "replaced_by": [
+   "place-value.ten.unit",
+   "place-value.two-digit.tens-ones",
+   "place-value.hundred.unit",
+   "place-value.three-digit.hundreds-tens-ones",
+   "place-value.ten-times-right",
+   "place-value.expanded-form"
+  ],
+  "note": "Base-ten place value of whole numbers spans the ten as a unit, two-digit tens and ones, the hundred as a unit, three-digit digit values, the general ten-times relation, and expanded form; these are different levels and tests. Re-point each old edge to the finest node its source actually uses: two-digit work to place-value.two-digit.tens-ones, three-digit work to place-value.three-digit.hundreds-tens-ones, multi-digit algorithms to place-value.ten-times-right or place-value.expanded-form."
+ },
+ "multiplication.properties": {
+  "strand": "N3",
+  "replaced_by": [
+   "multiplication.commutative",
+   "multiplication.associative",
+   "multiplication.distributive",
+   "multiplication.by-one",
+   "multiplication.by-zero"
+  ],
+  "note": "Three or more separate properties; an edge pointing at the group should point at the one property it uses. The strategy nodes (multiplication.commutative.strategy, multiplication.associative.strategy, multiplication.distributive.strategy, division.distributive.strategy) are the applications."
+ },
+ "factors-multiples.whole-number": {
+  "strand": "N3",
+  "replaced_by": [
+   "factors.factor-pair.meaning",
+   "factors.factor-pairs.find-all",
+   "factors.multiple-of-each-factor",
+   "factors.is-multiple.decide",
+   "factors.prime-composite.meaning",
+   "factors.prime-composite.decide"
+  ],
+  "note": "The reserved description also names common multiples, GCF and LCM (6.NS.B.4); those are not in this strand's input and must be written by the strand that owns 6.NS.B.4. Edges that need GCF or LCM should be re-pointed to those later nodes, not to these."
+ },
+ "addition.whole-number": {
+  "strand": "N4",
+  "replaced_by": [
+   "addition.base-ten.like-units",
+   "addition.base-ten.compose-unit",
+   "addition.base-ten.model",
+   "addition.base-ten.strategy",
+   "addition.base-ten.relate-written",
+   "addition.base-ten.explain",
+   "addition.standard-algorithm"
+  ],
+  "note": "Covers addition beyond 20 only. Addition within 10 and within 20 belongs to other strands; old edges meaning small-number addition must be re-pointed there. Edges meaning 'can add multi-digit numbers' most likely want addition.standard-algorithm or addition.base-ten.strategy."
+ },
+ "subtraction.whole-number": {
+  "strand": "N4",
+  "replaced_by": [
+   "subtraction.base-ten.like-units",
+   "subtraction.base-ten.decompose-unit",
+   "subtraction.base-ten.model",
+   "subtraction.base-ten.strategy",
+   "subtraction.base-ten.add-up",
+   "subtraction.base-ten.relate-written",
+   "subtraction.base-ten.explain",
+   "subtraction.standard-algorithm"
+  ],
+  "note": "Covers subtraction beyond 20 only; within 10 and within 20 belong to other strands. Edges meaning 'can subtract multi-digit numbers' most likely want subtraction.standard-algorithm or subtraction.base-ten.strategy."
+ },
+ "multiplication.multi-digit": {
+  "strand": "N4",
+  "replaced_by": [
+   "multiplication.by-multiple-of-ten",
+   "multiplication.multiple-of-ten.by-multiple-of-ten",
+   "multiplication.partial-products.by-one-digit",
+   "multiplication.partial-products.two-digit-by-two-digit",
+   "multiplication.standard-algorithm"
+  ],
+  "note": "Spans place-value strategies and the standard algorithm, which are different nodes by rule 6. Most old edges probably want multiplication.standard-algorithm (computing a product) or a partial-products node."
+ },
+ "division.multi-digit": {
+  "strand": "N4",
+  "replaced_by": [
+   "division.partial-quotients.one-digit-divisor",
+   "division.partial-quotients.one-digit-divisor.remainder",
+   "division.partial-quotients.two-digit-divisor"
+  ],
+  "note": "Spans exact quotients and remainders, one- and two-digit divisors. The standard long-division algorithm for whole numbers is 6.NS.B.2 (later phase); edges that mean fluent long division should wait for that node."
+ },
+ "decimal.operations": {
+  "strand": "N4",
+  "replaced_by": [
+   "decimal.addition.model",
+   "decimal.subtraction.model",
+   "decimal.multiplication.by-whole.model",
+   "decimal.multiplication.by-decimal.model",
+   "decimal.division.by-whole.model",
+   "decimal.division.by-decimal.model",
+   "decimal.addition.relate-written",
+   "decimal.subtraction.relate-written",
+   "decimal.multiplication.relate-written",
+   "decimal.division.relate-written"
+  ],
+  "note": "Four operations, each with a model node and a relate-to-written node. The fluent decimal standard algorithms are 6.NS.B.3 (later phase); old edges that mean symbolic decimal computation should be re-pointed to those when written."
+ }
+}
