@@ -1,4 +1,4 @@
-# Handoff: state after applying both reviews (2026-10-19)
+# Handoff: state after both reviews and the fixes run (2026-10-19)
 
 Read this first in a new session. Then RULES.md. The reviews themselves are in
 pilot/run/review-daniel.md (pilot, K-8) and pilot/run/prek/REVIEW_ANSWERS.txt
@@ -71,24 +71,41 @@ Flagged for Daniel (applied, confirm or reverse in overrides.yaml):
    fewer than 40 when fewer unreviewed edges remain.
 5. tools/check.py: new finding "superset route".
 
-## Next: step 2, new nodes (needs Daniel's go-ahead on cost)
+## Fixes run: complete, awaiting Daniel's review (2026-10-19)
 
-Write, then two Sonnet proposers and one blinded Sonnet critic on just these:
-
-- Pre-K new: comparing.more-than (test must separate number from size, e.g. a
-  few big items against many small ones), shapes.closed-boundary,
-  shapes.name.receptive, numeral.digit-formation,
-  counting.number-words.vocabulary, number conservation (split from
-  counting.cardinal.order-irrelevance).
-- Pre-K rewrites: counting.cardinal.last-word test (give-a-number beyond the
-  subset-knower range); counting.cardinal.order-irrelevance narrowed to order.
-- Pilot new: partitioning.segment.equal-lengths, fraction.compare.to-one,
-  fraction.complex-fraction, division.facts.within-100,
-  rational-number.negative-as-decrease (concept list needs rational-number).
-- Restrict fraction.multiply-whole.symbolic to products within 100 (C62).
-
-Estimate: writing in the main session; proposers and critic about 130-200k
-subagent tokens.
+- 12 new nodes (pilot/run/fixes/batches/fixes.yaml), written inline;
+  two Sonnet proposers and a blinded Sonnet critic; merged. Checker: 254
+  nodes, 0 errors. Queue: pilot/run/fixes/REVIEW.md (29 items).
+- Cost: P 98,236; Q 93,950; critic 98,545; total 290,731 subagent tokens,
+  well over the 110-170k estimate. Each agent costs about 95k whatever the
+  batch size (reading the prompt and the 254-line index dominates), so a
+  12-node batch is the least efficient size. Fold future fix-ups into the
+  next real slice instead of running them alone.
+- Rewritten in place (own batches): ratio.composed-unit test (no notation)
+  plus review edges to counting.unitize and counting.objects;
+  counting.cardinal.last-word test ('give me seven' after counting);
+  counting.cardinal.order-irrelevance narrowed to order (conservation split
+  out as cardinality.conservation); fraction.multiply-whole.symbolic scoped to
+  products within 100.
+- Raise with Daniel first:
+  1. Cycle: both passes made comparing.more-than require comparing by counting
+     and by matching, which his review made require comparing.more-than (D53,
+     D54). The meaning of 'more' cannot be grounded in methods that presuppose
+     it; likely wrong edges (queue items 19, 20), which would leave
+     comparing.more-than a root.
+  2. Critic routes misread: for comparing.more-than the critic asked for an OR
+     of counting and matching, which the passes already gave, but merge_run
+     built an AND of both (a superset route). For fraction.compare.to-one,
+     critic-route-1 duplicates unit-fraction-count. Same merge_run flaw as the
+     4 older superset routes: critic missing_routes are read as AND.
+  3. shapes.name.receptive requires shapes.match (critic: necessary), though
+     A17 moved matching out of shapes.recognize. IM 360 places division facts
+     before the unknown-factor meaning, which refutes that edge or shows a
+     missing route (fact recall from multiplication facts alone).
+  4. rational-number.negative-as-decrease points at an unwritten
+     new:rational-number.negative-meaning (undecided).
+- Queue item 29 (7.RP.A.1 -> 7.RP.A.2) was already answered as pilot item 109.
+- Running total: 809,951 subagent tokens.
 
 ## Still open
 
@@ -112,7 +129,7 @@ subagent tokens.
 `python3 tools/run_state.py` prints status, the running subagent-token total,
 and what can run next. Mark a unit done only through
 `--mark UNIT done --tokens N --commit SHA`. Commit and push after every unit.
-Running total: 519,220 subagent tokens (no subagents used 2026-10-19).
+Running total: 809,951 subagent tokens (after the fixes run).
 
 ## Explorer
 
