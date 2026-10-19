@@ -32,7 +32,8 @@
 - C64 division.fractions.measurement.model -> division.multi-digit: replaced by division.facts.within-100
 - C65 fraction.division.symbolic -> factors-multiples.whole-number: dropped
 - C66 ratio.composed-unit -> multiplication.equal-groups.meaning: dropped
-- ratio.composed-unit: now a root (every prerequisite dropped or moved in review)
+- review-2026-10-19 ratio.composed-unit -> counting.unitize: added on every route
+- review-2026-10-19 ratio.composed-unit -> counting.objects: added on every route
 - C67 ratio.tape-diagram -> division.multi-digit: replaced by division.facts.within-100
 - C69 proportional-relationship.compare.representations -> ratio.convert-units: moved to related (common_path)
 - proportional-relationship.compare.representations: only route left, renamed via-compare -> standard

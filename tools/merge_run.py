@@ -19,7 +19,7 @@ routes become extra routes (the node's necessary edges plus the new ones),
 disputed.
 
 Human review (<dir>/overrides.yaml, optional) is applied last and outranks the
-critic. Edge actions: keep (status reviewed), drop, task, related (moved to
+critic. Edge actions: add (an edge no pass proposed), keep (status reviewed), drop, task, related (moved to
 `related` as common_path), require (put in every route), replace (point the
 edge at another node), restore (bring back an edge the critic dropped),
 uphold (confirm a critic drop). Route entries add an OR clause: a copy of the
@@ -70,6 +70,20 @@ def apply_overrides(nid, requires, related, ov, dropped, counts, log):
     for o in [o for o in ov["edges"] if o["node"] == nid]:
         t, act = o["target"], o["action"]
         if act == "uphold":
+            continue
+        if act == "add":  # an edge no pass proposed, by the reviewer's decision
+            edge = {"node": t, "relation": o["relation"], "points_to": o["points_to"], "why": o["why"],
+                    "evidence": [review_ev(o, reviewer)], "status": "reviewed"}
+            if o.get("scope") == "task":
+                edge["scope"], edge["points_to"] = "task", "assess"
+            if not requires:
+                requires.append({"clause": "standard", "all_of": []})
+            for c in requires:
+                if not any(e["node"] == t for e in c["all_of"]):
+                    c["all_of"].append(copy.deepcopy(edge))
+            touched = True
+            counts["review: add"] += 1
+            log.append(f"- {o['item']} {nid} -> {t}: added on every route")
             continue
         hits = [(c, e) for c in requires for e in c["all_of"] if e["node"] == t]
         if not hits and act in ("drop", "related") and (nid, t) in done:

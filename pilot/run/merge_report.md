@@ -21,6 +21,7 @@
 - review: dominated route removed: 5
 - review: task: 4
 - review: replace: 3
+- review: add: 2
 - wrong: 1
 - review: require: 1
 - critic indirect overruled by review: 1
