@@ -65,6 +65,14 @@ Where it fits, propose an OR-clause or a `related` link rather than deletion.
 After the edges, for each node: name any **missing** direct prerequisite and any
 **missing** alternative route at the same level.
 
+A missing route is a whole way in. List in its `prerequisites` every direct
+prerequisite that route needs, including ones already proposed as edges, and
+leave out the edges it does without. One route per alternative: if counting and
+matching are two ways in, write two routes, never one route listing both.
+Do not propose a route that only adds prerequisites to a route the node already
+has; that route adds nothing. An edge you call `necessary` must appear in every
+route you write; if your route does without it, the edge is `route-only`.
+
 Preserve uncertainty. Do not force a verdict the evidence does not support.
 
 ## Output
@@ -73,6 +81,7 @@ Write valid JSON to the path you were given:
 
 ```json
 {
+  "route_semantics": "complete",
   "edges": {
     "e1": {
       "verdict": "necessary | route-only | indirect | task-only | scaffold | related | wrong | undecided",

@@ -590,6 +590,59 @@ edges:
   why: The relationship is stated in whole numbers of units, such as 2 wings and 1 beak, so the learner must
     know how many objects a counted whole number names.
   reason: Daniel, 2026-10-19 (after C66 left the node a root).
+- item: C12-split
+  node: decimal.compare
+  target: comparing.whole-numbers.symbols
+  action: replace
+  with: comparing.whole-numbers.magnitude
+  why: Step 3 decides which of the two whole numbers of hundredths is greater.
+  reason: "Daniel C12 (fixes review): the edge needs deciding which whole number is greater, not the symbols; the boundary node is split into comparing.whole-numbers.magnitude and comparing.whole-numbers.symbols."
+- item: C12-split
+  node: fraction.compare.benchmark
+  target: comparing.whole-numbers.symbols
+  action: replace
+  with: comparing.whole-numbers.magnitude
+  why: The test for the benchmark 1/2 decides which of the whole numbers 2 x a and b is greater.
+  reason: "Daniel C12 (fixes review): the edge needs deciding which whole number is greater, not the symbols; the boundary node is split into comparing.whole-numbers.magnitude and comparing.whole-numbers.symbols."
+- item: C12-split
+  node: fraction.compare.same-denominator
+  target: comparing.whole-numbers.symbols
+  action: replace
+  with: comparing.whole-numbers.magnitude
+  why: With equal part sizes the decision reduces to deciding which numerator, such as 3 or 5, is greater.
+  reason: "Daniel C12 (fixes review): the edge needs deciding which whole number is greater, not the symbols; the boundary node is split into comparing.whole-numbers.magnitude and comparing.whole-numbers.symbols."
+- item: C12-split
+  node: fraction.compare.same-numerator
+  target: comparing.whole-numbers.symbols
+  action: replace
+  with: comparing.whole-numbers.magnitude
+  why: Finding which denominator is smaller, such as 3 versus 5, decides which of two whole numbers is greater.
+  reason: "Daniel C12 (fixes review): the edge needs deciding which whole number is greater, not the symbols; the boundary node is split into comparing.whole-numbers.magnitude and comparing.whole-numbers.symbols."
+- item: C12-split
+  node: ratio.table.compare
+  target: comparing.whole-numbers.symbols
+  action: replace
+  with: comparing.whole-numbers.magnitude
+  why: Deciding which ratio has more of the second quantity decides which of two whole-number values in the shared rows is greater.
+  reason: "Daniel C12 (fixes review): the edge needs deciding which whole number is greater, not the symbols; the boundary node is split into comparing.whole-numbers.magnitude and comparing.whole-numbers.symbols."
+- item: E106
+  node: fraction.estimate.benchmark.sum
+  target: fraction.compare.benchmark
+  action: add
+  relation: procedural
+  points_to: assess
+  scope: task
+  why: The test judges reasonableness by placing each fraction against the benchmarks 0, 1/2 and 1, which is comparing a fraction with a benchmark fraction.
+  reason: "Daniel E106: task-scope link (benchmark reasonableness check)."
+- item: E106
+  node: fraction.estimate.benchmark.difference
+  target: fraction.compare.benchmark
+  action: add
+  relation: procedural
+  points_to: assess
+  scope: task
+  why: The test judges reasonableness by placing each fraction against the benchmarks 0, 1/2 and 1, which is comparing a fraction with a benchmark fraction.
+  reason: "Daniel E106: task-scope link (benchmark reasonableness check)."
 routes:
 - item: D75
   node: fraction.unit.number-line
@@ -633,10 +686,34 @@ routes:
     why: The three cases of the principle turn on whether the factor is greater than, equal to, or less than 1,
       which for a fraction is comparing numerator with denominator.
   note: Compare the factor with 1 directly, without the benchmark procedure.
+- item: E107
+  node: division.fractions.measurement
+  name: via-unit-fraction-case
+  without:
+  - division.measurement.meaning
+  add:
+  - node: division.whole-by-unit-fraction.interpret
+    relation: definitional
+    points_to: statement
+    why: How many groups of c/d make a/b generalizes how many parts of size 1/b fit in a whole number, the measurement meaning met first with a unit fraction.
+  note: Generalize from dividing a whole number by a unit fraction (Daniel E107, route-only).
+- item: E111
+  node: linear-function.line.y-mx.write
+  name: via-proportional
+  without:
+  - slope.between-two-points
+  - slope.constant-on-line
+  add:
+  - node: proportional-relationship.equation.write
+    relation: definitional
+    points_to: statement
+    why: A line through the origin is the graph of a proportional relationship, so its equation is y = kx with k read from any point as y/x.
+  note: Write the line as a proportional relationship y = kx (Daniel E111, route-only).
 benchmark_links:
 - item: E104
   verdict: real prerequisite
   daniel: Yes - Unit fractions support expressing equal geometric partitions as fractions.
+  applied: "no edge needed - the 3.G.A.2 clause that names each part as a unit fraction is fraction.unit.part-whole itself, which carries both standards (2026-10-19)."
 - item: E105
   verdict: 'no'
   daniel: No - Decimal comparison can be developed through base-ten place value without the general unlike-fraction
@@ -645,9 +722,11 @@ benchmark_links:
   verdict: task-scope link (benchmark reasonableness check)
   daniel: Yes - Comparing and finding equivalent fractions supports adding and subtracting fractions with unlike
     denominators.
+  applied: "applied as task edges from both benchmark-estimate nodes to fraction.compare.benchmark (2026-10-19)."
 - item: E107
   verdict: route-only
   daniel: Yes - Unit-fraction division is a special case that supports the broader fraction-division concept.
+  applied: "applied as route via-unit-fraction-case on division.fractions.measurement (2026-10-19)."
 - item: E108
   verdict: 'no'
   daniel: No - Understanding a ratio's per-one meaning does not require the specific fraction-division procedures
@@ -658,7 +737,9 @@ benchmark_links:
 - item: E110
   verdict: real prerequisite
   daniel: Yes - Solving proportional-relationship problems supports solving multistep proportional problems.
+  applied: "NOT applied: no 7.RP.A.3 node found whose statement, procedure or test uses a proportional-relationship node; raised with Daniel (2026-10-19)."
 - item: E111
   verdict: route-only
   daniel: Yes - Proportional relationships provide a route into slope and linear equations, although other routes
     also exist.
+  applied: "applied as route via-proportional on linear-function.line.y-mx.write (2026-10-19)."

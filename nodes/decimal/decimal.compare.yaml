@@ -18,7 +18,7 @@ sources:
   learning_components:
   - f44fbaad
 requires:
-- clause: via-to-fraction
+- clause: standard
   all_of:
   - node: decimal.hundredths.notation
     relation: representational
@@ -47,10 +47,10 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: comparing.whole-numbers.symbols
+  - node: comparing.whole-numbers.magnitude
     relation: procedural
     points_to: procedure.3
-    why: Step 3 compares the two whole numbers of hundredths.
+    why: Step 3 decides which of the two whole numbers of hundredths is greater.
     evidence:
     - kind: content
       source: pass-P
@@ -59,7 +59,12 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'C12-split replace: Daniel C12 (fixes review): the edge needs deciding which whole number
+        is greater, not the symbols; the boundary node is split into comparing.whole-numbers.magnitude
+        and comparing.whole-numbers.symbols.'
+    status: reviewed
   - node: fraction.compare.same-denominator
     relation: definitional
     points_to: statement

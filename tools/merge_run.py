@@ -41,6 +41,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ALIASES = {"division.by-zero-undefined": "division.by-zero.undefined"}
 RELATED = {"generalizes", "specializes", "same_idea_different_form", "contrasts_with", "common_path"}
 KEEPING = {"keep", "task", "require", "replace", "restore", "related"}
+ABSORBED = collections.defaultdict(dict)  # node -> {target: edge} from routes removed as supersets
 
 
 def load_overrides(d):
@@ -51,6 +52,7 @@ def load_overrides(d):
     ov.setdefault("edges", [])
     ov.setdefault("routes", [])
     ov.setdefault("rename", {})
+    ov.setdefault("set_routes", [])
     ov["by_edge"] = collections.defaultdict(list)
     for o in ov["edges"]:
         ov["by_edge"][(o["node"], o["target"])].append(o)
@@ -88,6 +90,11 @@ def apply_overrides(nid, requires, related, ov, dropped, counts, log):
         hits = [(c, e) for c in requires for e in c["all_of"] if e["node"] == t]
         if not hits and act in ("drop", "related") and (nid, t) in done:
             continue  # a duplicate item already applied this
+        if not hits and t in ABSORBED[nid]:
+            counts[f"review: {act} on an absorbed route"] += 1
+            log.append(f"- {o['item']} {nid} -> {t}: {act} noted; its route needed everything another route "
+                       f"needs and more, so the edge is in related (common_path)")
+            continue
         if not hits:
             counts["review: target not found"] += 1
             log.append(f"- {o['item']} {nid} -> {t}: {act} NOT APPLIED (edge not found)")
@@ -151,12 +158,68 @@ def apply_overrides(nid, requires, related, ov, dropped, counts, log):
                                   "why": a["why"], "evidence": [review_ev({"item": r["item"], "action": "route",
                                                                            "reason": r.get("note")}, reviewer)],
                                   "status": "reviewed"})
+            if a.get("scope") == "task":
+                new["all_of"][-1]["scope"], new["all_of"][-1]["points_to"] = "task", "assess"
         requires.append(new)
         counts["review: route added"] += 1
         log.append(f"- {r['item']} {nid}: added route {r['name']} (without {r.get('without', [])}, "
                    f"plus {[a['node'] for a in r.get('add', [])]})")
+    for sr in [r for r in ov.get("set_routes", []) if r["node"] == nid]:
+        pool = {}
+        for c in requires:
+            for e in c["all_of"]:
+                pool.setdefault(e["node"], e)
+        for t, e in ABSORBED[nid].items():
+            pool.setdefault(t, e)
+        new_routes, missing = [], []
+        for r in sr["routes"]:
+            c = {"clause": r["name"]}
+            if r.get("note"):
+                c["note"] = r["note"]
+            c["all_of"] = []
+            for t in r["nodes"]:
+                tid, scope = (t[:-5], "task") if t.endswith(":task") else (t, None)
+                if tid not in pool:
+                    missing.append(tid)
+                    continue
+                e = copy.deepcopy(pool[tid])
+                if scope:
+                    e["scope"], e["points_to"] = "task", "assess"
+                e["status"] = "reviewed"
+                e["evidence"].append(review_ev({"item": sr["item"], "action": "set_routes",
+                                                "reason": sr.get("reason")}, reviewer))
+                c["all_of"].append(e)
+            new_routes.append(c)
+        if missing:
+            log.append(f"- {sr['item']} {nid}: set_routes NOT APPLIED (no existing edge to {missing})")
+            continue
+        current = {e["node"] for c in requires for e in c["all_of"]}
+        left = sorted(current - {e["node"] for c in new_routes for e in c["all_of"]})
+        have = {r["node"] for r in related}
+        for t in sr.get("to_related", []):
+            if t in left and t not in have:
+                related.append({"node": t, "relation": "common_path",
+                                "note": f"Common path, not required ({sr['item']}): {sr.get('reason') or ''}"[:500]})
+        for t in left:
+            if t not in sr.get("to_related", []):
+                dropped.append({"node": nid, "target": t, "verdict": "review", "item": sr["item"],
+                                "reason": sr.get("reason"), "why": pool[t].get("why")})
+        used = {e["node"] for c in new_routes for e in c["all_of"]}
+        related[:] = [r for r in related if not (r["relation"] == "common_path" and r["node"] in used)]
+        requires[:] = new_routes
+        touched = True
+        counts["review: set_routes"] += 1
+        log.append(f"- {sr['item']} {nid}: routes set to {[(r['name'], r['nodes']) for r in sr['routes']]}; "
+                   f"related {sr.get('to_related', [])}; dropped {[t for t in left if t not in sr.get('to_related', [])]}")
     if not touched:
         return False
+    absorb(nid, requires, related, counts, log)
+    return True
+
+
+def absorb(nid, requires, related, counts, log):
+    """A route that needs everything another route needs, and more, adds nothing (A or (A and B) = A).
+    Remove it; edges left only on removed routes move to related as common_path (RULES 3.5)."""
     # a route that needs everything another route needs, and more, adds nothing
     sets = [frozenset(e["node"] for e in c["all_of"]) for c in requires]
     keep = [i for i, s in enumerate(sets)
@@ -164,13 +227,15 @@ def apply_overrides(nid, requires, related, ov, dropped, counts, log):
     survivors = set().union(*[sets[i] for i in keep]) if keep else set()
     have = {r["node"] for r in related}
     for i in [i for i in range(len(requires)) if i not in keep]:
+        for e in requires[i]["all_of"]:
+            ABSORBED[nid].setdefault(e["node"], e)
         moved = sorted({e["node"] for e in requires[i]["all_of"]} - survivors - have)
         for t in moved:
             related.append({"node": t, "relation": "common_path",
                             "note": f"Common path, not required: route '{requires[i]['clause']}' needed everything "
-                                    f"another route needs and more, so it was removed in review."})
+                                    f"another route needs and more, so it was removed."})
             have.add(t)
-        counts["review: dominated route removed"] += 1
+        counts["dominated route removed"] += 1
         log.append(f"- {nid}: route {requires[i]['clause']} removed (superset of another route); "
                    f"moved to related: {moved or 'nothing'}")
     requires[:] = [requires[i] for i in keep if requires[i]["all_of"]]
@@ -178,7 +243,6 @@ def apply_overrides(nid, requires, related, ov, dropped, counts, log):
         log.append(f"- {nid}: only route left, renamed {requires[0]['clause']} -> standard")
         requires[0]["clause"] = "standard"
         requires[0].pop("note", None)
-    return True
 
 
 def rename_all(doc, rename):
@@ -206,12 +270,14 @@ def main(d):
     union = {(u["node"], u["target"]): u for u in json.load(open(os.path.join(d, "union.json")))}
     mapping = json.load(open(os.path.join(d, "critic", "_mapping.json")))
     verdicts, node_notes = {}, {}
+    complete_routes = False
     for p in sorted(glob.glob(os.path.join(d, "critic", "verdicts-*.json"))):
         v = json.load(open(p, encoding="utf-8"))
         for eid, x in v["edges"].items():
             m = mapping[eid]
             verdicts[(m["node"], m["target"])] = x
         node_notes.update(v.get("nodes", {}))
+        complete_routes = complete_routes or v.get("route_semantics") == "complete"
     missing_v = [k for k in union if k not in verdicts]
 
     # which non-first pass clauses each edge belonged to
@@ -229,6 +295,7 @@ def main(d):
     for nid, n in nodes.items():
         main_edges, alt = [], collections.OrderedDict()
         related = []
+        core_ids = set()  # edges the critic called necessary (or task-only): on every route
         split_from_main = False
         for (a, t), u in union.items():
             if a != nid:
@@ -282,6 +349,8 @@ def main(d):
                 split_from_main = True
             else:
                 main_edges.append((edge, e0))
+                if verdict in ("necessary", "task-only"):
+                    core_ids.add(edge["node"])
 
         def fix_points(edge, proc):
             pt = edge["points_to"]
@@ -331,24 +400,41 @@ def main(d):
             c["all_of"] = copy.deepcopy(necessary) + [e for e in edges if e["node"] not in {x["node"] for x in necessary}]
             requires.append(c)
             counts["alt route from passes"] += 1
+        # The critic's missing routes list the route's prerequisites. A route is the critic's
+        # core (edges it called necessary or task-only, which every route needs) plus that list;
+        # it is NOT every kept edge plus extras, which made an alternative method keep the
+        # edges it was meant to skip (the old superset-route flaw). Listed prerequisites that
+        # are already edges of this node reuse that edge, with its why and evidence.
+        pool = {}
+        for e in main:
+            pool.setdefault(e["node"], e)
+        for a in alt.values():
+            for e, _ in a["edges"]:
+                pool.setdefault(e["node"], e)
         for i, mr in enumerate(notes.get("missing_routes", []) or []):
             pre = [ALIASES.get(t.replace("new:", ""), t.replace("new:", "")) for t in (mr.get("prerequisites") or []) if t and t != nid]
             if not pre:
                 continue
             desc = (mr.get("description") or "").strip()
-            extra = []
+            # Critic files that declare "route_semantics": "complete" list every prerequisite of
+            # the route; older files listed only the extras, so their routes start from every
+            # main-route edge (and the absorption below removes those that add nothing).
+            base = core_ids if complete_routes else {e["node"] for e in main}
+            route = [copy.deepcopy(e) for e in main if e["node"] in base]
             for t in pre:
-                if any(e["node"] == t for e in necessary):
+                if any(e["node"] == t for e in route):
+                    continue
+                if t in pool:
+                    route.append(copy.deepcopy(pool[t]))
                     continue
                 why = f"Alternative route proposed by the critic: {desc}"
-                extra.append({"node": t, "relation": "definitional", "points_to": "statement", "why": why[:600],
+                route.append({"node": t, "relation": "definitional", "points_to": "statement", "why": why[:600],
                               "evidence": [{"kind": "content", "source": "critic-sonnet", "note": "missing route"}],
                               "status": "disputed"})
-            if not extra:
-                continue
-            requires.append({"clause": f"critic-route-{i + 1}", "note": desc[:500],
-                             "all_of": copy.deepcopy(necessary) + extra})
+            requires.append({"clause": f"critic-route-{i + 1}", "note": desc[:500], "all_of": route})
             counts["alt route from critic"] += 1
+        if len(requires) > 1:
+            absorb(nid, requires, related, counts, review_log)
 
         emptied_by_review = False
         if ov:

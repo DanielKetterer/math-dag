@@ -16,7 +16,7 @@ sources:
   - 'Review item A35 (pre-K, 2026-10-19): split from counting.cardinal.order-irrelevance'
   - Piaget's number conservation task
 requires:
-- clause: standard
+- clause: by-matching
   all_of:
   - node: comparing.count.matching
     relation: definitional
@@ -34,7 +34,12 @@ requires:
       note: 'task-only: Matching only sets up the starting agreement that the rows are equal. The idea
         that moving objects without adding or removing leaves the number unchanged does not need matching,
         and the starting equality could be set up by counting.'
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A2, A9, D27, D28 set_routes: The test needs the initial equality of the rows; matching, counting
+        each row, or seeing two small equal sets each gives it (Daniel D27, D28: task routes). ''More''
+        as number stays task-scoped on every route (A9).'
+    status: reviewed
   - node: comparing.more-than
     relation: definitional
     points_to: assess
@@ -49,63 +54,88 @@ requires:
       note: 'task-only: The word ''more'' appears in the test question, but the conservation idea is about
         how many, not the meaning of ''more''; the question could be asked as ''same number or different
         number?''.'
-    status: proposed
-- clause: critic-route-1
-  note: Establish the initial equality of the two rows by counting each row (or by seeing a small equal
-    pair) instead of matching.
+    - kind: review
+      source: DK
+      note: 'A2, A9, D27, D28 set_routes: The test needs the initial equality of the rows; matching, counting
+        each row, or seeing two small equal sets each gives it (Daniel D27, D28: task routes). ''More''
+        as number stays task-scoped on every route (A9).'
+    status: reviewed
+- clause: by-counting
   all_of:
-  - node: comparing.count.matching
-    relation: definitional
-    points_to: assess
-    why: The test starts from two rows matched one to one, and the child must see that matching shows
-      the same number.
-    scope: task
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'task-only: Matching only sets up the starting agreement that the rows are equal. The idea
-        that moving objects without adding or removing leaves the number unchanged does not need matching,
-        and the starting equality could be set up by counting.'
-    status: proposed
-  - node: comparing.more-than
-    relation: definitional
-    points_to: assess
-    why: The test question asks whether one row has more now, so the child must take 'more' to mean number,
-      not length.
-    scope: task
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'task-only: The word ''more'' appears in the test question, but the conservation idea is about
-        how many, not the meaning of ''more''; the question could be asked as ''same number or different
-        number?''.'
-    status: proposed
   - node: counting.objects
     relation: definitional
-    points_to: statement
+    points_to: assess
     why: 'Alternative route proposed by the critic: Establish the initial equality of the two rows by
       counting each row (or by seeing a small equal pair) instead of matching.'
     evidence:
     - kind: content
       source: critic-sonnet
       note: missing route
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'A2, A9, D27, D28 set_routes: The test needs the initial equality of the rows; matching, counting
+        each row, or seeing two small equal sets each gives it (Daniel D27, D28: task routes). ''More''
+        as number stays task-scoped on every route (A9).'
+    status: reviewed
+    scope: task
+  - node: comparing.more-than
+    relation: definitional
+    points_to: assess
+    why: The test question asks whether one row has more now, so the child must take 'more' to mean number,
+      not length.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The word ''more'' appears in the test question, but the conservation idea is about
+        how many, not the meaning of ''more''; the question could be asked as ''same number or different
+        number?''.'
+    - kind: review
+      source: DK
+      note: 'A2, A9, D27, D28 set_routes: The test needs the initial equality of the rows; matching, counting
+        each row, or seeing two small equal sets each gives it (Daniel D27, D28: task routes). ''More''
+        as number stays task-scoped on every route (A9).'
+    status: reviewed
+- clause: by-small-equal
+  all_of:
   - node: comparing.count.small-equal
     relation: definitional
-    points_to: statement
+    points_to: assess
     why: 'Alternative route proposed by the critic: Establish the initial equality of the two rows by
       counting each row (or by seeing a small equal pair) instead of matching.'
     evidence:
     - kind: content
       source: critic-sonnet
       note: missing route
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'A2, A9, D27, D28 set_routes: The test needs the initial equality of the rows; matching, counting
+        each row, or seeing two small equal sets each gives it (Daniel D27, D28: task routes). ''More''
+        as number stays task-scoped on every route (A9).'
+    status: reviewed
+    scope: task
+  - node: comparing.more-than
+    relation: definitional
+    points_to: assess
+    why: The test question asks whether one row has more now, so the child must take 'more' to mean number,
+      not length.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The word ''more'' appears in the test question, but the conservation idea is about
+        how many, not the meaning of ''more''; the question could be asked as ''same number or different
+        number?''.'
+    - kind: review
+      source: DK
+      note: 'A2, A9, D27, D28 set_routes: The test needs the initial equality of the rows; matching, counting
+        each row, or seeing two small equal sets each gives it (Daniel D27, D28: task routes). ''More''
+        as number stays task-scoped on every route (A9).'
+    status: reviewed
 related:
 - node: counting.cardinal.order-irrelevance
   relation: same_idea_different_form

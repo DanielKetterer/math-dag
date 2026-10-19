@@ -15,12 +15,14 @@ sources:
   other:
   - 'Review item A40 (pilot, 2026-10-17): the scaling principle needs this, not the benchmark procedure'
 requires:
-- clause: via-as-fraction
+- clause: as-b-over-b
+  note: Write 1 as b/b and compare a/b with b/b by numerators.
   all_of:
-  - node: comparing.whole-numbers.symbols
+  - node: comparing.whole-numbers.magnitude
     relation: definitional
     points_to: statement
-    why: The statement itself compares the whole numbers a and b as greater than, equal to, or less than.
+    why: The statement compares the whole numbers a and b, deciding which is greater; the comparison symbols
+      are not used.
     evidence:
     - kind: content
       source: pass-P
@@ -31,7 +33,16 @@ requires:
       note: 'undecided: The statement uses the comparison of whole numbers a and b (greater, equal, less),
         not the written symbols. If the boundary node covers deciding which of two whole numbers is greater,
         the edge is necessary; if it is only about notation, the'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D23 replace: Claude (C12) on Daniel''s condition: the edge needs magnitude comparison, not
+        the symbols, so the boundary node is split into comparing.whole-numbers.magnitude and comparing.whole-numbers.symbols.'
+    - kind: review
+      source: DK
+      note: 'D24-D26 set_routes: Two routes (Daniel D24-D26). Writing 1 as b/b and comparing a/b with
+        b/b by numerators is ONE route and needs both edges; the passes had split it into two incomplete
+        routes, each missing half the method.'
+    status: reviewed
   - node: fraction.whole-number.as-fraction
     relation: definitional
     points_to: statement
@@ -47,24 +58,12 @@ requires:
       note: 'route-only: Writing 1 as b/b is needed in the same-denominator route; in the unit-multiple
         route the same fact comes from b copies of 1/b making 1. | other route: Get 1 = b/b from b copies
         of 1/b making the whole (fraction.multiple-of-unit).'
-    status: disputed
-- clause: via-same-denominator
-  all_of:
-  - node: comparing.whole-numbers.symbols
-    relation: definitional
-    points_to: statement
-    why: The statement itself compares the whole numbers a and b as greater than, equal to, or less than.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'undecided: The statement uses the comparison of whole numbers a and b (greater, equal, less),
-        not the written symbols. If the boundary node covers deciding which of two whole numbers is greater,
-        the edge is necessary; if it is only about notation, the'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D24-D26 set_routes: Two routes (Daniel D24-D26). Writing 1 as b/b and comparing a/b with
+        b/b by numerators is ONE route and needs both edges; the passes had split it into two incomplete
+        routes, each missing half the method.'
+    status: reviewed
   - node: fraction.compare.same-denominator
     relation: justificatory
     points_to: statement
@@ -80,13 +79,20 @@ requires:
       note: 'route-only: Comparing a/b with b/b by numerators is one way to establish the rule. | other
         route: Read a/b as a copies of 1/b and b copies of 1/b as 1 (fraction.multiple-of-unit); more
         than b copies exceeds 1.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D24-D26 set_routes: Two routes (Daniel D24-D26). Writing 1 as b/b and comparing a/b with
+        b/b by numerators is ONE route and needs both edges; the passes had split it into two incomplete
+        routes, each missing half the method.'
+    status: reviewed
 - clause: unit-fraction-count
+  note: Read a/b as a copies of 1/b; b copies make 1.
   all_of:
-  - node: comparing.whole-numbers.symbols
+  - node: comparing.whole-numbers.magnitude
     relation: definitional
     points_to: statement
-    why: The statement itself compares the whole numbers a and b as greater than, equal to, or less than.
+    why: The statement compares the whole numbers a and b, deciding which is greater; the comparison symbols
+      are not used.
     evidence:
     - kind: content
       source: pass-P
@@ -97,7 +103,16 @@ requires:
       note: 'undecided: The statement uses the comparison of whole numbers a and b (greater, equal, less),
         not the written symbols. If the boundary node covers deciding which of two whole numbers is greater,
         the edge is necessary; if it is only about notation, the'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D23 replace: Claude (C12) on Daniel''s condition: the edge needs magnitude comparison, not
+        the symbols, so the boundary node is split into comparing.whole-numbers.magnitude and comparing.whole-numbers.symbols.'
+    - kind: review
+      source: DK
+      note: 'D24-D26 set_routes: Two routes (Daniel D24-D26). Writing 1 as b/b and comparing a/b with
+        b/b by numerators is ONE route and needs both edges; the passes had split it into two incomplete
+        routes, each missing half the method.'
+    status: reviewed
   - node: fraction.multiple-of-unit
     relation: definitional
     points_to: statement
@@ -110,69 +125,10 @@ requires:
       source: critic-sonnet
       note: 'route-only: The copies-of-a-unit-fraction reading yields the rule, but a learner can instead
         reach it by comparing a/b with b/b.'
-    status: disputed
-- clause: critic-route-1
-  note: Read a/b as a copies of 1/b and use b copies of 1/b = 1; compare the number of copies a with b.
-  all_of:
-  - node: comparing.whole-numbers.symbols
-    relation: definitional
-    points_to: statement
-    why: The statement itself compares the whole numbers a and b as greater than, equal to, or less than.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'undecided: The statement uses the comparison of whole numbers a and b (greater, equal, less),
-        not the written symbols. If the boundary node covers deciding which of two whole numbers is greater,
-        the edge is necessary; if it is only about notation, the'
-    status: disputed
-  - node: fraction.multiple-of-unit
-    relation: definitional
-    points_to: statement
-    why: 'Alternative route proposed by the critic: Read a/b as a copies of 1/b and use b copies of 1/b
-      = 1; compare the number of copies a with b.'
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing route
-    status: disputed
-- clause: critic-route-2
-  note: Write 1 as b/b and compare a/b with b/b by numerators.
-  all_of:
-  - node: comparing.whole-numbers.symbols
-    relation: definitional
-    points_to: statement
-    why: The statement itself compares the whole numbers a and b as greater than, equal to, or less than.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'undecided: The statement uses the comparison of whole numbers a and b (greater, equal, less),
-        not the written symbols. If the boundary node covers deciding which of two whole numbers is greater,
-        the edge is necessary; if it is only about notation, the'
-    status: disputed
-  - node: fraction.whole-number.as-fraction
-    relation: definitional
-    points_to: statement
-    why: 'Alternative route proposed by the critic: Write 1 as b/b and compare a/b with b/b by numerators.'
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing route
-    status: disputed
-  - node: fraction.compare.same-denominator
-    relation: definitional
-    points_to: statement
-    why: 'Alternative route proposed by the critic: Write 1 as b/b and compare a/b with b/b by numerators.'
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing route
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D24-D26 set_routes: Two routes (Daniel D24-D26). Writing 1 as b/b and comparing a/b with
+        b/b by numerators is ONE route and needs both edges; the passes had split it into two incomplete
+        routes, each missing half the method.'
+    status: reviewed
 status: proposed

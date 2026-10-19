@@ -1,0 +1,72 @@
+# Daniel's review of the fixes run (pilot/run/fixes/REVIEW.md), answers in
+# Daniels_review.txt (2026-10-19). Section C was handed to Claude; those
+# decisions are marked "Claude (C..)" and are Daniel's to reverse.
+# Items 19 and 20 (the comparing.more-than cycle) are not answered yet.
+reviewer: DK
+review: pilot/run/fixes/REVIEW.md, answers in Daniels_review.txt (2026-10-19)
+rename: {}
+edges:
+- {item: A1, node: fraction.complex-fraction, target: fraction.quotient.symbolic, action: keep, reason: Not marked wrong.}
+- {item: A3, node: division.facts.within-100, target: division.unknown-factor.meaning, action: keep, reason: Not marked wrong.}
+- {item: A4, node: counting.unitize, target: counting.objects, action: keep, reason: Not marked wrong.}
+- {item: A5, node: fraction.complex-fraction, target: fraction.as-number, action: keep, reason: Not marked wrong.}
+- {item: A6, node: partitioning.segment.equal-lengths, target: measurement.length.attribute, action: keep, reason: Not marked wrong.}
+- item: A7
+  node: shapes.name.receptive
+  target: shapes.match
+  action: drop
+  reason: Wrong as a required edge - matching identical shapes may help, but direct labeling and classification are credible routes to selecting a shape by its name.
+- item: A8
+  node: division.facts.within-100
+  target: multiplication.facts.within-100
+  action: related
+  reason: Keep as an alternative route, not a universal prerequisite - division facts can also be learned directly. The other route is not a node, so the edge is a common path (RULES 3.5).
+- {item: B10, node: shapes.closed-boundary, target: shapes.recognize, action: uphold, reason: Critic drop checked and upheld.}
+- {item: B11, node: comparing.more-than, target: comparing.count.perceptual, action: uphold, reason: Critic drop checked and upheld.}
+- item: D14
+  node: shapes.closed-boundary
+  target: spatial.position.relative
+  action: drop
+  reason: Wrong as a required edge - neither the concept nor the test of a closed boundary needs the words inside and outside.
+- {item: D15, node: partitioning.segment.equal-lengths, target: measurement.length.no-gaps-overlaps, action: keep, reason: Keep only as the measurement route.}
+- {item: D16, node: partitioning.segment.equal-lengths, target: comparing.size.direct, action: keep, reason: Not marked wrong.}
+- {item: D17, node: partitioning.segment.equal-lengths, target: partitioning.equal-shares.whole-as-shares, action: keep, reason: Not marked wrong.}
+- {item: D18, node: partitioning.segment.equal-lengths, target: measurement.length.iterate-units, action: keep, reason: Not marked wrong.}
+- item: D21
+  node: rational-number.negative-as-decrease
+  target: rational-number.negative-meaning
+  action: drop
+  reason: "Claude (C13, D21): in Common Core negatives are first met in 6.NS.C.5, through opposite quantities in context, and this node is one of those contexts; the sign convention is introduced here, so no prior negative-number meaning is needed (Daniel: a decrease context can itself introduce negatives)."
+- item: D22
+  node: rational-number.negative-as-decrease
+  target: subtraction.whole-number
+  action: drop
+  reason: Wrong as a required edge - signed change can be introduced from context without subtraction.
+- item: D23
+  node: fraction.compare.to-one
+  target: comparing.whole-numbers.symbols
+  action: replace
+  with: comparing.whole-numbers.magnitude
+  why: The statement compares the whole numbers a and b, deciding which is greater; the comparison symbols are not used.
+  reason: "Claude (C12) on Daniel's condition: the edge needs magnitude comparison, not the symbols, so the boundary node is split into comparing.whole-numbers.magnitude and comparing.whole-numbers.symbols."
+set_routes:
+- item: D24-D26
+  node: fraction.compare.to-one
+  reason: "Two routes (Daniel D24-D26). Writing 1 as b/b and comparing a/b with b/b by numerators is ONE route and needs both edges; the passes had split it into two incomplete routes, each missing half the method."
+  routes:
+  - name: as-b-over-b
+    note: Write 1 as b/b and compare a/b with b/b by numerators.
+    nodes: [comparing.whole-numbers.magnitude, fraction.whole-number.as-fraction, fraction.compare.same-denominator]
+  - name: unit-fraction-count
+    note: Read a/b as a copies of 1/b; b copies make 1.
+    nodes: [comparing.whole-numbers.magnitude, fraction.multiple-of-unit]
+- item: A2, A9, D27, D28
+  node: cardinality.conservation
+  reason: "The test needs the initial equality of the rows; matching, counting each row, or seeing two small equal sets each gives it (Daniel D27, D28: task routes). 'More' as number stays task-scoped on every route (A9)."
+  routes:
+  - name: by-matching
+    nodes: ["comparing.count.matching:task", "comparing.more-than:task"]
+  - name: by-counting
+    nodes: ["counting.objects:task", "comparing.more-than:task"]
+  - name: by-small-equal
+    nodes: ["comparing.count.small-equal:task", "comparing.more-than:task"]

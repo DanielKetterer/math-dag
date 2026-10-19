@@ -71,85 +71,13 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-- clause: critic-route-1
-  note: Justify with equal numbers of parts of different sizes (common numerator), e.g. 2/3 = 6/9 and
-    3/5 = 6/10, then more shares of the same whole are smaller. Arguably a different node since the statement
-    specifies a common size of part.
-  all_of:
-  - node: fraction.compare.same-whole
-    relation: definitional
-    points_to: statement
-    why: The model must show both fractions as parts of one and the same whole or the comparison has no
-      meaning.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
-  - node: fraction.equivalent.same-size
-    relation: definitional
-    points_to: statement
-    why: Showing both fractions with parts of a common size means replacing each by an equivalent amount
-      of the same whole.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
-  - node: fraction.equivalent.simple.generate
-    relation: representational
-    points_to: statement
-    why: Building the model with parts of a common size requires subdividing the parts of each fraction
-      to generate equivalent fractions in the model.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
-  - node: fraction.compare.same-denominator
-    relation: definitional
-    points_to: statement
-    why: Once both fractions are shown in parts of a common size, the numbers of parts are compared as
-      with a shared denominator.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
-  - node: fraction.compare.same-numerator
-    relation: definitional
-    points_to: statement
-    why: 'Alternative route proposed by the critic: Justify with equal numbers of parts of different sizes
-      (common numerator), e.g. 2/3 = 6/9 and 3/5 = 6/10, then more shares of the same whole are smaller.
-      Arguably a different node since the statement specifies a common size of part.'
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing route
-    status: disputed
-  - node: partitioning.equal-shares.more-shares-smaller
-    relation: definitional
-    points_to: statement
-    why: 'Alternative route proposed by the critic: Justify with equal numbers of parts of different sizes
-      (common numerator), e.g. 2/3 = 6/9 and 3/5 = 6/10, then more shares of the same whole are smaller.
-      Arguably a different node since the statement specifies a common size of part.'
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing route
-    status: disputed
+related:
+- node: fraction.compare.same-numerator
+  relation: common_path
+  note: 'Common path, not required: route ''critic-route-1'' needed everything another route needs and
+    more, so it was removed.'
+- node: partitioning.equal-shares.more-shares-smaller
+  relation: common_path
+  note: 'Common path, not required: route ''critic-route-1'' needed everything another route needs and
+    more, so it was removed.'
 status: proposed

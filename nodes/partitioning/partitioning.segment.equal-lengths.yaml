@@ -28,7 +28,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A6 keep: Not marked wrong.'
+    status: reviewed
   - node: measurement.length.no-gaps-overlaps
     relation: definitional
     points_to: statement
@@ -42,7 +45,10 @@ requires:
       note: 'route-only: The needed idea is that the parts exactly fill the strip with no gap or overlap.
         The measurement version of that idea is one source of it, but not the only one. | other route:
         Get the fill-with-no-gaps idea from equal shares of a whole (partitioning.equal-shares.whole-as-shares).'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D15 keep: Keep only as the measurement route.'
+    status: reviewed
 - clause: via-direct
   all_of:
   - node: measurement.length.attribute
@@ -56,7 +62,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A6 keep: Not marked wrong.'
+    status: reviewed
   - node: comparing.size.direct
     relation: procedural
     points_to: assess
@@ -74,7 +83,10 @@ requires:
         | other route: Measure the parts with a common unit by laying units end to end and compare the
         counts (measurement.length.iterate-units), as when marking a strip of 12 units into 4 parts of
         3 units.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D16 keep: Not marked wrong.'
+    status: reviewed
 - clause: via-whole-as-shares
   all_of:
   - node: measurement.length.attribute
@@ -88,7 +100,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A6 keep: Not marked wrong.'
+    status: reviewed
   - node: partitioning.equal-shares.whole-as-shares
     relation: definitional
     points_to: statement
@@ -102,7 +117,10 @@ requires:
       note: 'route-only: The idea that the parts together are the whole and fill it is required in some
         form, but the area-based version is not the only source of it. | other route: Get the no-gaps-or-overlaps
         idea from measuring length by units (measurement.length.no-gaps-overlaps).'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D17 keep: Not marked wrong.'
+    status: reviewed
 - clause: critic-route-1
   note: Make equal parts by measuring the strip with a common unit and dividing the unit count.
   all_of:
@@ -117,7 +135,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A6 keep: Not marked wrong.'
+    status: reviewed
   - node: measurement.length.iterate-units
     relation: definitional
     points_to: statement
@@ -127,5 +148,8 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing route
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D18 keep: Not marked wrong.'
+    status: reviewed
 status: proposed

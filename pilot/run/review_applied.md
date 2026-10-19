@@ -1,42 +1,64 @@
 # Review verdicts applied by merge_run
 
+- fraction.unit.number-line: route via-part-whole removed (superset of another route); moved to related: ['fraction.unit.part-whole']
+- fraction.unit.number-line: only route left, renamed critic-route-1 -> standard
+- D75 fraction.unit.number-line -> fraction.unit.part-whole: keep noted; its route needed everything another route needs and more, so the edge is in related (common_path)
 - D76 fraction.unit.number-line -> partitioning.segment.equal-lengths: required on every route
 - D75 fraction.unit.number-line: added route measure-first (without ['fraction.unit.part-whole'], plus [])
-- fraction.unit.number-line: route via-part-whole removed (superset of another route); moved to related: ['fraction.unit.part-whole']
-- fraction.unit.number-line: only route left, renamed measure-first -> standard
-- D78 fraction.non-unit.number-line: added route measure-first (without ['fraction.non-unit.part-whole'], plus [])
+- fraction.unit.number-line: route measure-first removed (superset of another route); moved to related: nothing
 - fraction.non-unit.number-line: route via-part-whole removed (superset of another route); moved to related: ['fraction.non-unit.part-whole']
-- fraction.non-unit.number-line: only route left, renamed measure-first -> standard
+- fraction.non-unit.number-line: only route left, renamed critic-route-1 -> standard
+- D78 fraction.non-unit.number-line -> fraction.non-unit.part-whole: keep noted; its route needed everything another route needs and more, so the edge is in related (common_path)
+- D78 fraction.non-unit.number-line: added route measure-first (without ['fraction.non-unit.part-whole'], plus [])
+- fraction.non-unit.number-line: route measure-first removed (superset of another route); moved to related: nothing
+- fraction.equivalent.simple.explain: route via-generate removed (superset of another route); moved to related: ['fraction.equivalent.simple.generate']
+- fraction.equivalent.simple.explain: only route left, renamed critic-route-1 -> standard
+- C12-split fraction.compare.same-denominator -> comparing.whole-numbers.symbols: replaced by comparing.whole-numbers.magnitude
 - D88 fraction.compare.same-denominator: added route measure (without ['fraction.non-unit.part-whole'], plus [])
 - fraction.compare.same-denominator: route via-part-whole removed (superset of another route); moved to related: ['fraction.non-unit.part-whole']
 - fraction.compare.same-denominator: only route left, renamed measure -> standard
+- C12-split fraction.compare.same-numerator -> comparing.whole-numbers.symbols: replaced by comparing.whole-numbers.magnitude
 - A12 partitioning.equal-shares.whole-as-shares -> partitioning.equal-shares.name: task
 - D99 partitioning.equal-shares.more-shares-smaller: added route direct-compare (without ['partitioning.equal-shares.whole-as-shares'], plus [])
 - partitioning.equal-shares.more-shares-smaller: route via-whole-as-shares removed (superset of another route); moved to related: ['partitioning.equal-shares.whole-as-shares']
 - partitioning.equal-shares.more-shares-smaller: only route left, renamed direct-compare -> standard
-- D80 division.partitive.meaning: added route via-sharing (without ['multiplication.equal-groups.meaning'], plus [])
 - division.partitive.meaning: route via-meaning removed (superset of another route); moved to related: ['multiplication.equal-groups.meaning']
-- division.partitive.meaning: only route left, renamed via-sharing -> standard
+- division.partitive.meaning: only route left, renamed critic-route-1 -> standard
+- D80 division.partitive.meaning -> multiplication.equal-groups.meaning: keep noted; its route needed everything another route needs and more, so the edge is in related (common_path)
+- D80 division.partitive.meaning: added route via-sharing (without ['multiplication.equal-groups.meaning'], plus [])
+- division.partitive.meaning: route via-sharing removed (superset of another route); moved to related: nothing
+- C12-split fraction.compare.benchmark -> comparing.whole-numbers.symbols: replaced by comparing.whole-numbers.magnitude
+- fraction.compare.unlike.justify: route critic-route-1 removed (superset of another route); moved to related: ['fraction.compare.same-numerator', 'partitioning.equal-shares.more-shares-smaller']
 - C61 fraction.non-unit.unit-sum -> fraction.as-number: dropped
 - A18 fraction.mixed-number.decompose.justify -> fraction.mixed-number.decompose.equation: dropped
+- fraction.mixed-number.add: route critic-route-1 removed (superset of another route); moved to related: ['fraction.mixed-number.to-fraction']
+- fraction.mixed-number.subtract: route critic-route-1 removed (superset of another route); moved to related: ['fraction.mixed-number.to-fraction']
 - D81 fraction.multiply-whole.as-unit-multiple -> multiplication.facts.within-100: task
 - C62 fraction.multiply-whole.symbolic -> multiplication.multi-digit: dropped
 - A7 fraction.application.multiply-whole.model -> multiplication.equal-groups.situation-to-expression: dropped
 - A37 fraction.application.multiply-whole.model -> fraction.multiply-whole.as-unit-multiple: dropped
+- C12-split decimal.compare -> comparing.whole-numbers.symbols: replaced by comparing.whole-numbers.magnitude
+- decimal.compare: only route left, renamed via-to-fraction -> standard
+- fraction.addition.unlike-denominators.equivalent-replacement: route critic-route-1 removed (superset of another route); moved to related: ['fraction.equivalent.same-point']
 - A24 fraction.addition.unlike-denominators.equivalent-replacement -> fraction.equivalent.multiply-principle.recognize: task
+- E106 fraction.estimate.benchmark.sum -> fraction.compare.benchmark: added on every route
+- E106 fraction.estimate.benchmark.difference -> fraction.compare.benchmark: added on every route
 - B51 fraction.quotient.equal-sharing -> partitioning.equal-shares.area: restore (task)
 - A5 fraction.multiplication.parts-of-partition.whole-number -> fraction.multiply-whole.model: task
 - A8 fraction.mixed-number.multiplication -> fraction.equivalent.multiply-principle.recognize: dropped
 - handoff-2 fraction.mixed-number.multiplication -> division.multi-digit: replaced by division.facts.within-100
 - A40 multiplication.scaling.size-principle: added route via-compare-to-one (without ['fraction.compare.benchmark'], plus ['fraction.compare.to-one'])
+- E107 division.fractions.measurement: added route via-unit-fraction-case (without ['division.measurement.meaning'], plus ['division.whole-by-unit-fraction.interpret'])
 - C64 division.fractions.measurement.model -> division.multi-digit: replaced by division.facts.within-100
 - C65 fraction.division.symbolic -> factors-multiples.whole-number: dropped
 - C66 ratio.composed-unit -> multiplication.equal-groups.meaning: dropped
 - review-2026-10-19 ratio.composed-unit -> counting.unitize: added on every route
 - review-2026-10-19 ratio.composed-unit -> counting.objects: added on every route
 - C67 ratio.tape-diagram -> division.multi-digit: replaced by division.facts.within-100
+- C12-split ratio.table.compare -> comparing.whole-numbers.symbols: replaced by comparing.whole-numbers.magnitude
 - C69 proportional-relationship.compare.representations -> ratio.convert-units: moved to related (common_path)
 - proportional-relationship.compare.representations: only route left, renamed via-compare -> standard
+- E111 linear-function.line.y-mx.write: added route via-proportional (without ['slope.between-two-points', 'slope.constant-on-line'], plus ['proportional-relationship.equation.write'])
 - C72 linear-function.model.rate.interpret -> functions.definition: dropped
 - C73 linear-function.model.initial.interpret -> functions.definition: dropped
 - linear-function.model.initial.interpret: only route left, renamed via-write -> standard

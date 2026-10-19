@@ -49,11 +49,11 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: comparing.whole-numbers.symbols
+  - node: comparing.whole-numbers.magnitude
     relation: procedural
     points_to: procedure.3
-    why: Deciding which ratio has more of the second quantity compares the two second-quantity values
-      in the shared rows.
+    why: Deciding which ratio has more of the second quantity decides which of two whole-number values
+      in the shared rows is greater.
     evidence:
     - kind: content
       source: pass-P
@@ -62,5 +62,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'C12-split replace: Daniel C12 (fixes review): the edge needs deciding which whole number
+        is greater, not the symbols; the boundary node is split into comparing.whole-numbers.magnitude
+        and comparing.whole-numbers.symbols.'
+    status: reviewed
 status: proposed

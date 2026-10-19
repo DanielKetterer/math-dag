@@ -65,6 +65,39 @@ requires:
       source: critic-sonnet
       note: missing prerequisite
     status: disputed
+- clause: via-proportional
+  note: Write the line as a proportional relationship y = kx (Daniel E111, route-only).
+  all_of:
+  - node: coordinate-plane.four-quadrants
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 reads the coordinates of a point on the line other than the origin.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variables
+    relation: definitional
+    points_to: statement
+    why: The equation y = mx is written with variables.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: proportional-relationship.equation.write
+    relation: definitional
+    points_to: statement
+    why: A line through the origin is the graph of a proportional relationship, so its equation is y =
+      kx with k read from any point as y/x.
+    evidence:
+    - kind: review
+      source: DK
+      note: 'E111 route: Write the line as a proportional relationship y = kx (Daniel E111, route-only).'
+    status: reviewed
 related:
 - node: proportional-relationship.equation.write
   relation: generalizes

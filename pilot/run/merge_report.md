@@ -8,20 +8,21 @@
 - alt route from passes: 105
 - route-only split into own clause: 104
 - scaffold: 65
-- review: keep: 64
+- review: keep: 61
+- alt route from critic: 36
 - task-only: 36
 - missing-prerequisite added: 32
-- alt route from critic: 32
 - indirect: 25
 - related: 23
 - review: critic drop upheld: 19
+- dominated route removed: 13
 - undecided: 13
 - review: drop: 10
-- review: route added: 6
-- review: dominated route removed: 5
+- review: route added: 8
+- review: replace: 8
 - review: task: 4
-- review: replace: 3
-- review: add: 2
+- review: add: 4
+- review: keep on an absorbed route: 3
 - wrong: 1
 - review: require: 1
 - critic indirect overruled by review: 1

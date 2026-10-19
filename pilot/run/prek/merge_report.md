@@ -21,5 +21,5 @@
 - indirect: 2
 - undecided: 2
 - review: route added: 2
-- review: dominated route removed: 2
+- dominated route removed: 2
 - task-only: 1

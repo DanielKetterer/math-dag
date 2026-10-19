@@ -44,11 +44,10 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: comparing.whole-numbers.symbols
+  - node: comparing.whole-numbers.magnitude
     relation: definitional
     points_to: statement
-    why: With equal part sizes the decision reduces to comparing the two numerators as whole numbers,
-      such as 3 and 5.
+    why: With equal part sizes the decision reduces to deciding which numerator, such as 3 or 5, is greater.
     evidence:
     - kind: content
       source: pass-P
@@ -57,10 +56,15 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'C12-split replace: Daniel C12 (fixes review): the edge needs deciding which whole number
+        is greater, not the symbols; the boundary node is split into comparing.whole-numbers.magnitude
+        and comparing.whole-numbers.symbols.'
+    status: reviewed
 related:
 - node: fraction.non-unit.part-whole
   relation: common_path
   note: 'Common path, not required: route ''via-part-whole'' needed everything another route needs and
-    more, so it was removed in review.'
+    more, so it was removed.'
 status: proposed

@@ -16,7 +16,7 @@ sources:
   - d20a384e
   - f577262f
 requires:
-- clause: via-generate
+- clause: standard
   all_of:
   - node: fraction.equivalent.same-size
     relation: justificatory
@@ -43,21 +43,9 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: fraction.equivalent.simple.generate
-    relation: justificatory
-    points_to: statement
-    why: The explanation accounts for what splitting each part in the model produces, the step of generating
-      an equivalent fraction.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The explanation can be given without splitting: draw two equal-size bars, shade
-        1/2 on one and 2/4 on the other, and show they cover the same amount using the same-size criterion.
-        | other route: Draw two aligned equal bars showing 1/2 and 2/4 and compare the shaded amounts
-        directly (fraction.equivalent.same-size plus fraction.non-unit.part-whole).'
-    status: disputed
+related:
+- node: fraction.equivalent.simple.generate
+  relation: common_path
+  note: 'Common path, not required: route ''via-generate'' needed everything another route needs and more,
+    so it was removed.'
 status: proposed

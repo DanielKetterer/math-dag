@@ -46,10 +46,11 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: comparing.whole-numbers.symbols
+  - node: comparing.whole-numbers.magnitude
     relation: definitional
     points_to: statement
-    why: Finding which denominator is smaller, such as 3 versus 5, compares two whole numbers.
+    why: Finding which denominator is smaller, such as 3 versus 5, decides which of two whole numbers
+      is greater.
     evidence:
     - kind: content
       source: pass-P
@@ -61,5 +62,10 @@ requires:
     - kind: review
       source: DK
       note: 'A6 keep: Keep - The comparison rule depends on comparing the denominators as whole numbers.'
+    - kind: review
+      source: DK
+      note: 'C12-split replace: Daniel C12 (fixes review): the edge needs deciding which whole number
+        is greater, not the symbols; the boundary node is split into comparing.whole-numbers.magnitude
+        and comparing.whole-numbers.symbols.'
     status: reviewed
 status: proposed

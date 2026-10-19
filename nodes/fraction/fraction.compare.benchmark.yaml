@@ -20,10 +20,10 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: comparing.whole-numbers.symbols
+  - node: comparing.whole-numbers.magnitude
     relation: procedural
     points_to: procedure.2
-    why: The test for the benchmark 1/2 compares the whole numbers 2 x a and b.
+    why: The test for the benchmark 1/2 decides which of the whole numbers 2 x a and b is greater.
     evidence:
     - kind: content
       source: pass-Q
@@ -33,6 +33,11 @@ requires:
     - kind: review
       source: DK
       note: 'A25 keep: Keep - The specified benchmark test compares whole-number quantities.'
+    - kind: review
+      source: DK
+      note: 'C12-split replace: Daniel C12 (fixes review): the edge needs deciding which whole number
+        is greater, not the symbols; the boundary node is split into comparing.whole-numbers.magnitude
+        and comparing.whole-numbers.symbols.'
     status: reviewed
   - node: fraction.as-number
     relation: definitional

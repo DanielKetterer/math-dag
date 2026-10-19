@@ -62,6 +62,47 @@ requires:
       note: 'task-only: The statement is the grouping meaning of the quotient; writing a division expression
         for the yogurt story is demanded only by the test problem (a representation skill).'
     status: proposed
+- clause: via-unit-fraction-case
+  note: Generalize from dividing a whole number by a unit fraction (Daniel E107, route-only).
+  all_of:
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: A leftover amount counts as the fraction of one group it fills, which is the parts-of-a-whole
+      reading of a fraction with the group as the whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.measurement.situation-to-expression
+    relation: procedural
+    points_to: assess
+    why: The test problem asks the learner to model a serving situation as grouping and write a division
+      expression for it.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is the grouping meaning of the quotient; writing a division expression
+        for the yogurt story is demanded only by the test problem (a representation skill).'
+    status: proposed
+  - node: division.whole-by-unit-fraction.interpret
+    relation: definitional
+    points_to: statement
+    why: How many groups of c/d make a/b generalizes how many parts of size 1/b fit in a whole number,
+      the measurement meaning met first with a unit fraction.
+    evidence:
+    - kind: review
+      source: DK
+      note: 'E107 route: Generalize from dividing a whole number by a unit fraction (Daniel E107, route-only).'
+    status: reviewed
 related:
 - node: division.whole-by-unit-fraction.interpret
   relation: generalizes

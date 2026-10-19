@@ -3,13 +3,20 @@
 - Node files written: 12
 - Example files superseded and removed: none
 - Union edges with no critic verdict: 0
+- review: keep: 9
 - route-only: 8
 - alt route from passes: 8
 - necessary: 7
 - route-only split into own clause: 6
 - alt route from critic: 5
+- dominated route removed: 4
+- review: drop: 4
 - scaffold: 2
 - missing-prerequisite added: 2
 - task-only: 2
+- review: set_routes: 2
 - undecided: 2
+- review: critic drop upheld: 2
 - related: 1
+- review: replace: 1
+- review: related: 1
