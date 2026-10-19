@@ -67,6 +67,10 @@ def main(d):
         batches[b] = yaml.safe_load(open(p, encoding="utf-8"))
     nodes = {n["id"]: n for ns in batches.values() for n in ns}
     ids = set(nodes)
+    targets = set(ids)  # every node the passes may point at, not only this run's batch
+    idx = os.path.join(d, "index.txt")
+    if os.path.exists(idx):
+        targets |= {l.split("|")[0].strip() for l in open(idx, encoding="utf-8") if l.strip()}
     passes = {}
     for lab in PASSES:
         passes[lab] = {}
@@ -88,7 +92,7 @@ def main(d):
                 routes_ct[lab] += 1
             for r in entry.get("routes", []):
                 for e in r.get("edges", []):
-                    errs = lint(nodes[nid], r, e, ids, boundary)
+                    errs = lint(nodes[nid], r, e, targets, boundary)
                     if errs:
                         lint_log[lab].append(f"{nid} -> {e.get('node')}: {'; '.join(errs)}")
                     key = (nid, e.get("node", ""))
