@@ -1,0 +1,1757 @@
+{
+ "pass": "P",
+ "batch": "N4",
+ "nodes": {
+  "addition.base-ten.like-units": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.three-digit.hundreds-tens-ones",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement adds hundreds to hundreds, tens to tens and ones to ones, so the three digits must already be read as hundreds, tens and ones."
+      },
+      {
+       "node": "addition.within-10.fluency",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "In the test problem 325 + 40 the learner must find 2 tens plus 4 tens, a single-digit sum of units."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.base-ten.compose-unit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.ten.unit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says ten ones make one ten, which is exactly the meaning of a ten as a bundle of ten ones."
+      },
+      {
+       "node": "place-value.hundred.unit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says ten tens make one hundred, which is the meaning of a hundred as a bundle of ten tens."
+      },
+      {
+       "node": "place-value.two-digit.tens-ones",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks whether 5 tens and 13 ones is the same number as the traded form, which needs the value of tens and ones digits."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.base-ten.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.three-digit.hundreds-tens-ones",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 shows each addend as hundreds, tens and ones with blocks or a drawing."
+      },
+      {
+       "node": "addition.base-ten.like-units",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 puts like units together, which is the rule that only like base-ten units are combined."
+      },
+      {
+       "node": "addition.base-ten.compose-unit",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 trades 10 ones for a ten and 10 tens for a hundred, the composing move."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.base-ten.strategy": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.expanded-form",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 splits each addend into hundreds, tens and ones, which is writing it in expanded form."
+      },
+      {
+       "node": "addition.base-ten.like-units",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement adds the hundreds, the tens and the ones separately, which relies on adding like units only."
+      },
+      {
+       "node": "addition.within-20.fluency",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds the digits in each place, and the digit sums run up to 18 and must be recalled quickly."
+      },
+      {
+       "node": "addition.base-ten.compose-unit",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 combines partial sums such as 500 + 110 + 15, which requires regrouping tens and ones into larger units."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.base-ten.relate-written": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.base-ten.model",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement relates each step of a base-ten addition model to the written method, so the model is one of the two things related."
+      },
+      {
+       "node": "place-value.three-digit.hundreds-tens-ones",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The written columns are the hundreds, tens and ones places, so the learner must read digits by place."
+      },
+      {
+       "node": "addition.two-digit.relate-written",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The column record and the carried 1 are the notation first matched to a model with two-digit numbers, then extended here."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.base-ten.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.base-ten.strategy",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement explains why adding by place value gives the correct sum, so the place-value strategy is the thing being justified."
+      },
+      {
+       "node": "place-value.expanded-form",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem splits 47 and 38 into 40 + 7 and 30 + 8, which is expanded form."
+      },
+      {
+       "node": "addition.commutative",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement names the commutative property as one of the two properties that justify regrouping the parts."
+      },
+      {
+       "node": "addition.associative.strategy",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement names the associative property, here met as choosing which numbers to add first, as the second justifying property."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.standard-algorithm": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.ten-times-right",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 aligns digits of the same place value, and multi-digit numbers have places each ten times the place to the right."
+      },
+      {
+       "node": "addition.base-ten.like-units",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Adding column by column is adding like units, with ones added to ones and tens to tens."
+      },
+      {
+       "node": "addition.within-20.fluency",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds the digits of a column, and with a carried digit a column total is at most 19."
+      },
+      {
+       "node": "addition.base-ten.compose-unit",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 carries the tens digit of a column total, which is trading 10 units for 1 unit of the next place."
+      },
+      {
+       "node": "addition.base-ten.relate-written",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The carried 1 as a written mark is introduced as the record of a trade in the model-to-written relation."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.base-ten.like-units": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.three-digit.hundreds-tens-ones",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement subtracts hundreds from hundreds, tens from tens and ones from ones, so each digit must be read by its place."
+      },
+      {
+       "node": "subtraction.within-10.fluency",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "In the test problem 586 - 30 the learner must find 8 tens minus 3 tens, a single-digit difference of units."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.base-ten.decompose-unit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.ten.unit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement trades 1 ten for 10 ones, which is the meaning of a ten as a bundle of ten ones."
+      },
+      {
+       "node": "place-value.hundred.unit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement also trades 1 hundred for 10 tens, which is the meaning of a hundred as ten tens."
+      },
+      {
+       "node": "place-value.two-digit.tens-ones",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks whether the traded form of 4 tens and 2 ones is the same number, which needs the values of tens and ones digits."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.base-ten.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.three-digit.hundreds-tens-ones",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 shows the minuend as hundreds, tens and ones with blocks or a drawing."
+      },
+      {
+       "node": "subtraction.base-ten.decompose-unit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 trades 1 unit of the next larger place for 10 of this unit when there are too few to take away."
+      },
+      {
+       "node": "subtraction.base-ten.like-units",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 takes away ones, tens and hundreds of the subtrahend from like units."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.base-ten.strategy": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.expanded-form",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 splits the subtrahend into hundreds, tens and ones, which is writing it in expanded form."
+      },
+      {
+       "node": "subtraction.base-ten.like-units",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement takes away the hundreds, then the tens, then the ones, each part being a like-unit subtraction."
+      },
+      {
+       "node": "subtraction.base-ten.decompose-unit",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Steps 3 and 4 often need a ten or hundred broken into smaller units, as in 424 - 50 and 374 - 8."
+      },
+      {
+       "node": "subtraction.within-20.fluency",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 subtracts a ones part such as 14 - 8 from a number whose ones digit is smaller."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.base-ten.relate-written": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.base-ten.model",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement relates each step of a base-ten subtraction model to the written method, so the model is one of the two things related."
+      },
+      {
+       "node": "place-value.three-digit.hundreds-tens-ones",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The written columns are the hundreds, tens and ones places, so the learner must read digits by place."
+      },
+      {
+       "node": "subtraction.tens-minus-tens.relate-written",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The written subtraction record in columns is first matched to a model with tens, then extended to regrouping here."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.base-ten.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.base-ten.strategy",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement explains why taking away place-value parts gives the correct difference, so that strategy is what is justified."
+      },
+      {
+       "node": "place-value.expanded-form",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem splits 358 into 300 + 50 + 8, which is expanded form."
+      },
+      {
+       "node": "subtraction.take-away.count-remaining",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The identity a - (b + c) = (a - b) - c is justified by taking away b and then taking away c from what is left."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.standard-algorithm": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.ten-times-right",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 aligns digits of the same place value, and multi-digit numbers have places each ten times the place to the right."
+      },
+      {
+       "node": "subtraction.base-ten.like-units",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Subtracting column by column is subtracting like units, with ones from ones and tens from tens."
+      },
+      {
+       "node": "subtraction.within-20.fluency",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 and step 3 subtract single digits, including results such as 12 - 8 after regrouping."
+      },
+      {
+       "node": "subtraction.base-ten.decompose-unit",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 takes 1 from a higher place and adds 10 to the current place, which is trading 1 unit for 10 of the next smaller unit."
+      },
+      {
+       "node": "subtraction.base-ten.relate-written",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The crossed-out digit and the added 10 are the written marks that record a trade."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.by-multiple-of-ten": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.decade.tens",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes a multiple of 10 such as 80 as 8 tens."
+      },
+      {
+       "node": "place-value.hundreds.multiples",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes a multiple of 100 such as 500 as 5 hundreds."
+      },
+      {
+       "node": "place-value.ten-times-right",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 also writes a multiple of 1000 as a number of thousands, which needs the higher whole-number places."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies two one-digit numbers such as 9 x 8, a recalled fact."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement reads 9 x 80 as 9 groups of 8 tens, which uses a product as a number of equal groups."
+      },
+      {
+       "node": "addition.base-ten.compose-unit",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 turns 72 tens into 720, which regroups ten tens as a hundred."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.multiple-of-ten.by-multiple-of-ten": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.decade.tens",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes each factor such as 30 as a one-digit number of tens."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the one-digit numbers, such as 3 x 4."
+      },
+      {
+       "node": "multiplication.commutative",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement regroups 30 x 40 as (3 x 4) x (10 x 10), which swaps the order of factors."
+      },
+      {
+       "node": "multiplication.associative",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement regroups the four factors 3, 10, 4 and 10 into two products, which uses associativity."
+      },
+      {
+       "node": "place-value.hundred.unit",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 uses 10 x 10 = 100, a hundred as ten tens."
+      },
+      {
+       "node": "addition.base-ten.compose-unit",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 reads 12 hundreds as 1200, which regroups ten hundreds as a thousand."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.partial-products.by-one-digit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.expanded-form",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 splits the multi-digit factor into thousands, hundreds, tens and ones."
+      },
+      {
+       "node": "multiplication.distributive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says multiplying each part and adding the partial products is the distributive property."
+      },
+      {
+       "node": "multiplication.by-multiple-of-ten",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies a part such as 800 or 3000 by the one-digit factor, a one-digit by multiple-of-ten product."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the ones part by the one-digit factor, using a recalled fact."
+      },
+      {
+       "node": "addition.standard-algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 adds partial products such as 21000 + 5600 + 280 + 42, which exceed 1000."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.partial-products.two-digit-by-two-digit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.expanded-form",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 splits each factor into tens and ones."
+      },
+      {
+       "node": "multiplication.distributive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement multiplies each part of one factor by each part of the other and adds, applying the distributive property twice."
+      },
+      {
+       "node": "multiplication.multiple-of-ten.by-multiple-of-ten",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 includes the tens x tens product, such as 40 x 30."
+      },
+      {
+       "node": "multiplication.by-multiple-of-ten",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 includes ones x tens products such as 6 x 40."
+      },
+      {
+       "node": "multiplication.commutative",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 includes tens x ones products such as 40 x 7, found by swapping the factors."
+      },
+      {
+       "node": "addition.standard-algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 adds four partial products that can total over 1000."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.area-model.by-one-digit.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement treats each piece of the rectangle as having area equal to its side lengths multiplied."
+      },
+      {
+       "node": "place-value.expanded-form",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement splits the long side into its place-value parts, which is expanded form drawn as segments."
+      },
+      {
+       "node": "multiplication.partial-products.by-one-digit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement explains why the partial products add to the product, so the partial-products method is what is justified."
+      },
+      {
+       "node": "multiplication.by-multiple-of-ten",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem needs areas such as 4 x 2000 = 8000 and 4 x 300 = 1200 for the pieces."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.area-model.two-digit-by-two-digit.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement treats each of the four pieces as a rectangle whose area is its two side lengths multiplied."
+      },
+      {
+       "node": "place-value.expanded-form",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement splits each side into tens and ones, which is expanded form drawn as segments."
+      },
+      {
+       "node": "multiplication.partial-products.two-digit-by-two-digit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement explains why the four partial products add to the product, so that method is what is justified."
+      },
+      {
+       "node": "multiplication.multiple-of-ten.by-multiple-of-ten",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem needs the tens-by-tens piece, 20 x 40 = 800, as a product of multiples of 10."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.standard-algorithm": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.partial-products.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Each row multiplies the top factor by one digit of the bottom factor, a multi-digit by one-digit product."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies single digits and recalls each product as a fact."
+      },
+      {
+       "node": "addition.base-ten.compose-unit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 carries the tens digit of each product, which is trading 10 units for 1 of the next place."
+      },
+      {
+       "node": "multiplication.power-of-ten.whole-number.rule",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 starts each later row one place left and fills the places on the right with zeros, which is multiplying by a power of ten."
+      },
+      {
+       "node": "addition.standard-algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 adds all the rows with the standard addition algorithm."
+      }
+     ]
+    }
+   ]
+  },
+  "division.partial-quotients.one-digit-divisor": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.measurement.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement repeatedly subtracts multiples of the divisor and counts how many divisors were removed, a quotient as a number of equal groups."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 chooses multiples of the divisor such as divisor x a one-digit number, using recalled products."
+      },
+      {
+       "node": "multiplication.by-multiple-of-ten",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 uses divisor x 10 and divisor x 100, a one-digit number times a multiple of ten or a hundred."
+      },
+      {
+       "node": "comparing.whole-numbers.magnitude",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 requires choosing a multiple that is not more than the amount left, which compares two whole numbers."
+      },
+      {
+       "node": "subtraction.standard-algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 subtracts a multiple from an amount of up to four digits, often with regrouping."
+      },
+      {
+       "node": "addition.standard-algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.5",
+       "scope": "concept",
+       "why": "Step 5 adds the partial quotients such as 100, 40 and 2 to get the quotient."
+      }
+     ]
+    }
+   ]
+  },
+  "division.partial-quotients.one-digit-divisor.remainder": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.partial-quotients.one-digit-divisor",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 subtracts multiples of the divisor as in partial quotients, so that method is carried out first."
+      },
+      {
+       "node": "comparing.whole-numbers.magnitude",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 stops when the amount left is less than the divisor, which compares two whole numbers."
+      },
+      {
+       "node": "multiplication.distributive",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement dividend = q x divisor + r is the distributive splitting of the dividend into multiples of the divisor plus a leftover."
+      }
+     ]
+    }
+   ]
+  },
+  "division.area-model.one-digit-divisor.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses a rectangle whose area is its two sides multiplied, with area n and one side d."
+      },
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement defines dividing n by d as finding the unknown side of the rectangle, an unknown factor."
+      },
+      {
+       "node": "division.partial-quotients.one-digit-divisor.remainder",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says the side pieces are the partial quotients and leftover area is the remainder."
+      },
+      {
+       "node": "multiplication.area-model.by-one-digit.explain",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement cuts a rectangle with one side d into strips by place value, the same picture used to explain multiplication by a one-digit number."
+      },
+      {
+       "node": "multiplication.by-multiple-of-ten",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem needs areas such as 6 x 100 = 600 and 6 x 40 = 240 for the strips."
+      }
+     ]
+    }
+   ]
+  },
+  "division.partial-quotients.two-digit-divisor": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.partial-quotients.one-digit-divisor.remainder",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The statement carries out the same subtract-multiples and track-remainder procedure with a larger divisor."
+      },
+      {
+       "node": "rounding.whole-number.nearest-ten-hundred",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 estimates a multiple by rounding the divisor, such as 36 to about 40."
+      },
+      {
+       "node": "multiplication.power-of-ten.whole-number.rule",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 uses known products such as 100 x 36 and 10 x 36, which append zeros."
+      },
+      {
+       "node": "multiplication.partial-products.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 multiplies the two-digit divisor by a one-digit number exactly to find the multiple to subtract."
+      },
+      {
+       "node": "comparing.whole-numbers.magnitude",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 compares the multiple with the amount left to decide whether a smaller one is needed."
+      },
+      {
+       "node": "subtraction.standard-algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 subtracts the multiple from the amount left in up to four digits."
+      }
+     ]
+    }
+   ]
+  },
+  "division.area-model.two-digit-divisor.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses a rectangle whose area is its two sides multiplied, with area n and one side d."
+      },
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement defines dividing n by d as finding the unknown side of the rectangle, an unknown factor."
+      },
+      {
+       "node": "division.partial-quotients.two-digit-divisor",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement cuts the area into multiples of d whose side pieces are the partial quotients, so that method is justified."
+      },
+      {
+       "node": "division.area-model.one-digit-divisor.explain",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The same picture, a rectangle with one side d cut into strips that are multiples of d, is first used with a one-digit divisor."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.base-ten.add-up": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.unknown-addend.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement finds a - b as the missing addend in b + ? = a, a difference as an unknown addend."
+      },
+      {
+       "node": "number-composition.make-ten.find",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds on to reach the next ten, such as 2 from 278 to 280, which is finding what makes ten."
+      },
+      {
+       "node": "addition.base-ten.strategy",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 totals the jumps such as 2 + 20 + 300 + 3, a partial-sums addition without a model."
+      }
+     ]
+    }
+   ]
+  },
+  "exponent.power-of-ten.notation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.ten-times-right",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says 10^k is 1 followed by k zeros, which is the place values each ten times the place to the right."
+      },
+      {
+       "node": "numeral.read.periods",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem starts from the numeral 10,000, a five-digit numeral with a comma period."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.power-of-ten.whole-number.rule": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.power-of-ten.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is written with 10^k, the exponent notation for a power of ten."
+      },
+      {
+       "node": "place-value.factor-of-ten",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Multiplying by 10 and appending one zero is the one-step case that the k-zeros rule repeats."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.power-of-ten.whole-number.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.power-of-ten.whole-number.rule",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement explains why the rule that multiplying by 10^k appends k zeros holds, so the rule is what is justified."
+      },
+      {
+       "node": "place-value.ten-times-right",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation says each digit moves one place left because every place is ten times the place to its right."
+      },
+      {
+       "node": "exponent.power-of-ten.notation",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation repeats the multiplying-by-10 step k times, which is the meaning of 10^k as k factors of 10."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.power-of-ten.decimal.rule": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.power-of-ten.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is written with 10^k, the exponent notation for a power of ten."
+      },
+      {
+       "node": "place-value.ten-times-right.decimal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement moves the decimal point, which relies on decimal places also being ten times the place to the right."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.power-of-ten.decimal.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.power-of-ten.decimal.rule",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement explains why the decimal point moves k places right, so the rule is what is justified."
+      },
+      {
+       "node": "place-value.ten-times-right.decimal",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation says each place is worth 10 times the place to its right, including decimal places."
+      },
+      {
+       "node": "exponent.power-of-ten.notation",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation repeats the multiplying-by-10 step k times, which is the meaning of 10^k as k factors of 10."
+      }
+     ]
+    }
+   ]
+  },
+  "division.power-of-ten.rule": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.power-of-ten.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is written with 10^k, the exponent notation for a power of ten."
+      },
+      {
+       "node": "place-value.ten-times-right.decimal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement moves the decimal point of a decimal, which relies on decimal places being related by factors of ten."
+      },
+      {
+       "node": "place-value.tenth-of-left",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Dividing by 10 moves each digit to a place one tenth the size, the place that is one tenth of the place to its left."
+      }
+     ]
+    }
+   ]
+  },
+  "division.power-of-ten.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.power-of-ten.rule",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement explains why the decimal point moves k places left, so the rule is what is justified."
+      },
+      {
+       "node": "place-value.tenth-of-left",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation says each place is worth 1/10 of the place to its left."
+      },
+      {
+       "node": "exponent.power-of-ten.notation",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation repeats the dividing-by-10 step k times, which is the meaning of 10^k as k factors of 10."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.addition.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement shows addends as ones, tenths and hundredths, and the test problem is written as the decimals 2.47 and 1.85."
+      },
+      {
+       "node": "place-value.ten-times-right.decimal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement trades 10 hundredths for 1 tenth and 10 tenths for 1 one, which is decimal places related by factors of ten."
+      },
+      {
+       "node": "addition.base-ten.model",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 2 to 4 join like units, trade up and read the sum exactly as in the whole-number base-ten model, applied to smaller units."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.subtraction.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement shows the minuend as ones, tenths and hundredths, and the test problem is written as the decimals 4.05 and 1.37."
+      },
+      {
+       "node": "place-value.ten-times-right.decimal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement trades 1 tenth for 10 hundredths and 1 one for 10 tenths, which is decimal places related by factors of ten."
+      },
+      {
+       "node": "subtraction.base-ten.model",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 2 to 4 trade down, take away and read what is left exactly as in the whole-number base-ten model, applied to smaller units."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.addition.relate-written": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "decimal.addition.model",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement matches the joining and trading in the decimal model to the written sum, so the model is one of the two things related."
+      },
+      {
+       "node": "addition.standard-algorithm",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The written decimal sum is the column method of the standard algorithm applied with aligned decimal points."
+      },
+      {
+       "node": "place-value.ten-times-right.decimal",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks why the decimal points must line up, which rests on columns holding like units of decimal places."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.subtraction.relate-written": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "decimal.subtraction.model",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement matches taking away and trading in the decimal model to the written difference, so the model is one of the two things related."
+      },
+      {
+       "node": "subtraction.standard-algorithm",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The written decimal difference is the column method of the standard algorithm applied with aligned decimal points."
+      },
+      {
+       "node": "place-value.ten-times-right.decimal",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks why the decimal points line up, which rests on columns holding like units of decimal places."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.multiplication.by-whole.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement works with a decimal d to hundredths shown as ones, tenths and hundredths, such as 0.36."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement makes n copies of d, a product as a number of equal groups."
+      },
+      {
+       "node": "decimal.addition.model",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 2 and 3 combine like units and trade 10 hundredths for a tenth and 10 tenths for a one, as in the decimal addition model."
+      },
+      {
+       "node": "place-value.ten-times-right.decimal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The trades in the statement rely on 10 hundredths making 1 tenth and 10 tenths making 1 one."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.multiplication.by-decimal.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement defines the product as the area of a rectangle with the two factors as side lengths."
+      },
+      {
+       "node": "multiplication.array-area.fraction-sides.tiling",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says a tenth times a tenth is one hundredth, which is tiling a rectangle with fractional sides by unit-fraction squares."
+      },
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses a grid whose unit square is split into 100 hundredths and a product given to hundredths."
+      },
+      {
+       "node": "decimal.addition.model",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 adds the areas of the parts, which are ones, tenths and hundredths added as decimals."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.multiplication.relate-written": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "decimal.multiplication.by-decimal.model",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement relates the area model, where a tenth times a tenth is a hundredth, to the written decimal-point rule."
+      },
+      {
+       "node": "multiplication.standard-algorithm",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The written method multiplies the factors as whole numbers, which is the standard multiplication algorithm."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.division.by-whole.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement works with a decimal d to hundredths shown as ones, tenths and hundredths, such as 3.48."
+      },
+      {
+       "node": "division.partitive.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement shares d into n equal groups and reads the amount in one group, a quotient as the size of each equal share."
+      },
+      {
+       "node": "place-value.ten-times-right.decimal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement trades 1 one for 10 tenths and 1 tenth for 10 hundredths when units cannot be shared evenly."
+      },
+      {
+       "node": "division.facts.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 2 to 4 share ones, tenths and hundredths equally among n groups, which uses basic division facts."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.division.by-decimal.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.measurement.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement finds how many copies of d make a, a quotient as the number of equal groups."
+      },
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement shows the dividend and divisor as decimals in tenths or hundredths on a grid or number line."
+      },
+      {
+       "node": "place-value.ten-times-right.decimal",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 shows the dividend in units of the divisor's smallest place, for example 1.6 as 16 tenths."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.division.relate-written": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "decimal.division.by-whole.model",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement matches sharing in the decimal model to written long division, so the model is one of the two things related."
+      },
+      {
+       "node": "new:division.long-division.one-digit",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement relates the model to written long division with bring-down and a quotient digit above each dividend digit, which is not in the map."
+      },
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem writes 3.48 in long division and places the quotient's decimal point above the dividend's."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.grouping.evaluate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.within-20.fluency",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 computes sums inside grouping symbols such as 3 + 2 and 6 + 9."
+      },
+      {
+       "node": "subtraction.within-20.fluency",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 computes differences inside grouping symbols such as 12 - 4."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 finishes the expression with a product such as 8 x 5."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.grouping.nested.evaluate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.grouping.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Each step replaces an innermost group by its value, the same compute-the-group-first move applied repeatedly."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.write.record-calculation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.grouping.evaluate",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses grouping symbols to show which step is done first, which is the meaning of grouping symbols in an expression."
+      },
+      {
+       "node": "addition.notation.expression",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem writes the step add 8 and 7 as the expression 8 + 7."
+      },
+      {
+       "node": "multiplication.equal-groups.situation-to-expression",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem writes the step multiply by 2 as a product expression with a group around the sum."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.interpret.without-evaluating": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement reads n x (A) as n times as large as A, a multiplication equation as a comparison."
+      },
+      {
+       "node": "multiplication.comparison.vs-additive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement contrasts n times as large with n more than, which is telling multiplicative from additive comparison."
+      },
+      {
+       "node": "expressions.grouping.evaluate",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement treats a parenthesized sum as one quantity A, which is the meaning of grouping symbols."
+      }
+     ]
+    }
+   ]
+  },
+  "patterns.numerical.two-rules": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "patterns.rule.generate-number",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 2 and 3 apply a rule repeatedly to the previous term, which is generating a number pattern from a rule."
+      }
+     ]
+    }
+   ]
+  },
+  "patterns.numerical.corresponding-pairs": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "patterns.numerical.two-rules",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement pairs the terms of two patterns, so each pattern's terms must be generated first."
+      }
+     ]
+    }
+   ]
+  },
+  "patterns.numerical.graph-pairs": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "patterns.numerical.corresponding-pairs",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement plots the ordered pairs formed from corresponding terms, so those pairs must be formed first."
+      },
+      {
+       "node": "coordinate-plane.first-quadrant",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement plots points in the first quadrant with the first term on the horizontal axis."
+      }
+     ]
+    }
+   ]
+  },
+  "patterns.numerical.relationship": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "patterns.numerical.corresponding-pairs",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement compares the corresponding terms of two patterns position by position."
+      },
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A fixed multiple relationship is a term being a number of times as large as the other."
+      },
+      {
+       "node": "multiplication.comparison.vs-additive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement offers a fixed multiple or a fixed amount more, which is telling multiplicative from additive comparison."
+      }
+     ]
+    }
+   ]
+  },
+  "patterns.numerical.relationship.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "patterns.numerical.relationship",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement explains why a relationship between corresponding terms holds, so the relationship is what is justified."
+      },
+      {
+       "node": "patterns.numerical.two-rules",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation works from the two rules and the starting numbers rather than from listed terms."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "After k steps of adding a, the term is k groups of a, so k x a is repeated addition seen as equal groups."
+      },
+      {
+       "node": "multiplication.associative",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement regroups k x (n x a) as n x (k x a), which uses associativity."
+      },
+      {
+       "node": "multiplication.commutative",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement swaps k and n x a when writing the second term as n times the first, which uses commutativity."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
