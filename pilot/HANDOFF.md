@@ -1,10 +1,59 @@
-# Handoff: state after both reviews and the fixes run (2026-10-19)
+# Handoff: state after the fixes-run review (2026-10-19, second session)
 
 Read this first in a new session. Then RULES.md. The reviews themselves are in
 pilot/run/review-daniel.md (pilot, K-8) and pilot/run/prek/REVIEW_ANSWERS.txt
 (pre-K); both are now encoded in `overrides.yaml` files (see below).
 
-## Measured
+## This session (2026-10-19, second): fixes review applied
+
+- Daniel's answers (pilot/run/fixes/Daniels_review.txt) are in
+  pilot/run/fixes/overrides.yaml. Precision sample: 7/9 kept edges right (A7
+  wrong; A8 right only as a route, now related/common_path). Both critic drops
+  upheld. Section C was handed to Claude: C12 split the boundary node
+  comparing.whole-numbers.symbols (every magnitude use, 10 edges in pilot and
+  fixes, now points at comparing.whole-numbers.magnitude; only
+  fraction.compare.record-symbols and multiplication.scaling.compare-without-computing
+  keep .symbols); C13 dropped the negative-meaning edge (negatives enter at
+  6.NS.C.5 through opposite-quantity contexts, this node is one of them).
+- fraction.compare.to-one now has two complete routes (1 = b/b with
+  same-denominator comparison; a copies of 1/b). The passes had split the first
+  into two half-routes.
+- Section E (pilot): E106 task edges, E107 and E111 routes applied; E104 needs
+  no edge (fraction.unit.part-whole carries both standards); E110 not applied.
+- merge_run: superset routes are now absorbed at merge time for every node
+  (A or A&B = A), extras to related/common_path. New override `set_routes`
+  (reviewer states a node's whole route list; `id:task` for task scope). Route
+  `add` entries may be task-scoped. Critic files that declare
+  `route_semantics: complete` build each critic route from its listed
+  prerequisites plus the critic's necessary edges; the critic template now asks
+  for complete routes, one per alternative. Old runs keep the old reading.
+- Checker: 254 nodes, 861 edges, 0 errors, findings 15 -> 8 (all 7 superset
+  routes gone). Benchmark: 81% of Coherence links direct, 90% through chains.
+- Subagent tokens this session: 0. Running total unchanged: 809,951.
+
+Open for Daniel:
+1. Cycle comparing.more-than / count.matching / count.by-counting (queue items
+   19, 20, unanswered). Claude's position: the matching node's own test (5 cups
+   in a tight row, 6 saucers in a longer row) does not pit number against size,
+   so its 'has more' does not need comparing.more-than; the D53/D54 edge was set
+   before comparing.more-than existed. Proposed: drop matching -> more-than (and
+   by-counting's via-matching route then stands on its own). Clements-Sarama
+   places the matching comparer first, which the current edge contradicts. Also
+   comparing.more-than is sourced to cs.compare.perceptual; the number-over-size
+   level is the counting comparer for different sizes.
+2. E110 (7.RP.A.2 -> 7.RP.A.3): no 7.RP.A.3 node uses a proportional-relationship
+   node in its statement, procedure, or test; name the node and step or call it
+   not a prerequisite.
+3. cardinality.conservation by-small-equal route: the test uses rows of 6, past
+   the small-set range; applied as Daniel said (D28), but probably wrong.
+4. New roots by review: shapes.closed-boundary, shapes.name.receptive,
+   rational-number.negative-as-decrease.
+5. The 4 old superset routes resolved by absorption lost real alternative
+   methods (mixed numbers by converting to fractions; unlike-denominator
+   comparison by same numerator). They sit in related as common_path; the old
+   critic files listed only extras, so the true routes were never written down.
+
+## Measured (first session)
 
 - Pilot (K-8) precision of kept edges, Daniel's random sample of 40: 35/40
   (about 77-96%). Critic drops: 19/20 upheld.
@@ -71,7 +120,7 @@ Flagged for Daniel (applied, confirm or reverse in overrides.yaml):
    fewer than 40 when fewer unreviewed edges remain.
 5. tools/check.py: new finding "superset route".
 
-## Fixes run: complete, awaiting Daniel's review (2026-10-19)
+## Fixes run (2026-10-19): reviewed and applied (see top)
 
 - 12 new nodes (pilot/run/fixes/batches/fixes.yaml), written inline;
   two Sonnet proposers and a blinded Sonnet critic; merged. Checker: 254
@@ -109,15 +158,7 @@ Flagged for Daniel (applied, confirm or reverse in overrides.yaml):
 
 ## Still open
 
-- 4 superset routes the checker reports (fraction.mixed-number.add and
-  .subtract, fraction.addition.unlike-denominators.equivalent-replacement,
-  fraction.compare.unlike.justify). Cause: merge_run builds a critic's
-  alternative route as the standard route plus extras, so an alternative
-  method keeps edges it was meant to skip. Fix the critic-route construction
-  or review these four.
-- Section E verdicts (pilot items 104-111) are recorded in
-  pilot/run/overrides.yaml under benchmark_links but not yet turned into
-  edges: 104 and 110 required, 107 and 111 route-only, 106 task.
+- Superset routes and section E: done (see top), except E110.
 - The 13 K-8 nodes pointing at counting.objects may want the split nodes.
 - The 34-node boundary slice (whole-number addition and subtraction,
   expressions with variables, multiplication facts) is the next slice after
@@ -137,3 +178,40 @@ Running total: 809,951 subagent tokens (after the fixes run).
 `nodes/`. Rebuilt 2026-10-19. A private published copy lives at
 https://claude.ai/artifact/Q7RWducGX1KtkuZeSAu6Vq and was NOT refreshed this
 session; to update it, publish the rebuilt page with that URL.
+
+## Big run: proposed plan (2026-10-19, awaiting Daniel's go-ahead)
+
+Scope measured from the Learning Commons data: 212 K-8 content standards not yet
+covered (practice standards MP1-8 excluded), with 765 learning components. The
+pilot turned 218 components into 190 nodes (0.87 per component), so expect
+about 650 new nodes. Most of the 31 unwritten boundary ids fall inside it.
+
+Strands of 40-60 nodes (components in brackets):
+1. K-2 counting and place value: K.CC rest, K.NBT, 1.NBT, 2.NBT [67]
+2. K-2 addition and subtraction: K.OA, 1.OA, 2.OA [46]
+3. 3-5 multiplication and division: 3.OA, 4.OA, 5.OA, 3.NBT [73]
+4. 4-5 multi-digit and decimals: 4.NBT, 5.NBT [63]
+5. K-2 measurement, data, geometry: 1.MD, 2.MD, K-2.G [62]
+6. 3-5 measurement and data: 3.MD, 4.MD, 5.MD [97, two strands]
+7. 3-5 geometry: 3.G, 4.G, 5.G [40]
+8. 6-8 number system: 6.NS, 7.NS, 8.NS [65]
+9. 6-8 expressions, equations, functions: 6.EE, 7.EE, 8.EE, 8.F [99, two strands]
+10. 6-8 geometry: 6.G, 7.G, 8.G [94, two strands]
+11. 6-8 statistics and probability: 6.SP, 7.SP, 8.SP [59]
+
+Order within a phase: all writers first, then a script pass (id clashes, merge
+candidates, reserved boundary ids, one compact index of every node), then both
+proposer passes and the critic with the full index. Splitting a coarse boundary
+id (addition.whole-number is referenced 14 times) leaves pilot edges pointing at
+a retired id: one Sonnet agent re-targets them (~150 edges).
+
+Cost model from measured runs: an agent costs ~95k fixed plus ~0.75k per node
+(proposer) or ~1.25k (critic); the prek writer was 157k for 38 nodes. Per
+48-node strand: writer ~180k, proposers 2 x ~130k, critic ~145k, ~585k. Full
+K-8 (14 strands) ~8.2M, plus ~10% reruns: about 9M subagent tokens, 11x the
+total so far. Cost driver is turns times context, so agents get a script-built
+packet and a compact id index and write their output in a few large appends.
+
+Recommended: phase 1 = strands 1-4 (~250 nodes, ~2.4M), since the pilot and the
+pre-K floor hang on those boundary nodes; review a 40-edge sample; then phases
+2 (strands 5-7) and 3 (strands 8-11).
