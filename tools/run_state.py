@@ -164,8 +164,61 @@ def v_check(unit):
     return errs
 
 
+def v_writer_lc(unit):
+    """Writer from learning components: node fields, lc ids from the input, full coverage."""
+    errs = v_exists(unit)
+    if errs:
+        return errs
+    raw = open(path(unit["output"]), encoding="utf-8").read()
+    bad = non_ascii(raw)
+    if bad:
+        errs.append(f"non-ASCII characters: {bad}")
+    try:
+        nodes = yaml.safe_load(raw)
+    except yaml.YAMLError as e:
+        return errs + [f"YAML does not parse: {e}"]
+    if not isinstance(nodes, list) or not nodes:
+        return errs + ["no node list"]
+    inp = json.load(open(path(unit["input"]), encoding="utf-8"))
+    want = {c["lc"] for s in inp for c in s["learning_components"]}
+    got, seen = set(), set()
+    for i, n in enumerate(nodes):
+        where = n.get("id", f"#{i}") if isinstance(n, dict) else f"#{i}"
+        if not isinstance(n, dict):
+            errs.append(f"{where}: not a mapping")
+            continue
+        for k in NODE_FIELDS:
+            if k not in n:
+                errs.append(f"{where}: missing `{k}`")
+        if n.get("id") in seen:
+            errs.append(f"{where}: duplicate id")
+        seen.add(n.get("id"))
+        if n.get("level") not in (1, 2, 3, 4):
+            errs.append(f"{where}: level must be 1-4")
+        if n.get("type") not in NODE_TYPES:
+            errs.append(f"{where}: bad type {n.get('type')!r}")
+        for lc in (n.get("sources") or {}).get("lc", []) or []:
+            if str(lc) not in want:
+                errs.append(f"{where}: cites lc {lc} not in its input")
+            got.add(str(lc))
+    extra = unit["output"].replace(".yaml", ".extra.yaml")
+    if not os.path.exists(path(extra)):
+        return errs + [f"missing {extra}"]
+    try:
+        x = yaml.safe_load(open(path(extra), encoding="utf-8")) or {}
+    except yaml.YAMLError as e:
+        return errs + [f"extra file does not parse: {e}"]
+    for k in ("covered_by", "dropped"):
+        for r in x.get(k) or []:
+            got.add(str(r.get("lc")))
+    missing = sorted(want - got)
+    if missing:
+        errs.append(f"{len(missing)} learning components unaccounted for: {missing[:8]}")
+    return errs
+
+
 VALIDATORS = {
-    "exists": v_exists, "source": v_source, "writer": v_writer,
+    "exists": v_exists, "source": v_source, "writer": v_writer, "writer-lc": v_writer_lc,
     "proposer": v_proposer, "critic": v_critic, "check": v_check,
 }
 

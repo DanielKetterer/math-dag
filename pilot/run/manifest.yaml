@@ -24,7 +24,7 @@
 #   python3 tools/run_state.py --mark UNIT done --tokens N --commit SHA
 #   python3 tools/run_state.py --mark UNIT running
 
-run: prek + fixes
+run: prek + fixes + big run phase 1
 description: Pre-K floor of the map, from developmental sources; then the fixes run
   (12 nodes the pilot and pre-K reviews found missing, 2026-10-19).
 
@@ -91,3 +91,12 @@ units:
   - {id: fixes.proposer-b, stage: proposer-b, strand: fixes, after: [fixes.writer], output: pilot/run/fixes/passes/Q-fixes.json, validate: proposer, status: done, tokens: 93950, commit: c92695a}
   - {id: fixes.critic, stage: critic, strand: fixes, after: [fixes.proposer-a, fixes.proposer-b], output: pilot/run/fixes/critic/verdicts-fixes.json, validate: critic, status: done, tokens: 98545, commit: 2be64cf}
   - {id: fixes.merge, stage: merge, strand: fixes, after: [fixes.critic], output: pilot/run/fixes/merge_report.md, validate: check, status: done, tokens: 0, commit: 647b474}
+
+  # ---------- big run, phase 1 (2026-10-19): K-5 number and operations ----------
+  # Strands from tools/build_phase.py (PHASES["p1"]). Writers run in parallel;
+  # then a script pass (ids, merge candidates, retired ids, index); then two
+  # proposers per strand and one critic per strand, all on the full index.
+  - {id: p1.N1.writer, stage: writer, strand: N1, after: [fixes.merge], input: pilot/run/p1/input/N1.json, output: pilot/run/p1/skeletons/N1.yaml, validate: writer-lc, status: pending, tokens: 0}
+  - {id: p1.N2.writer, stage: writer, strand: N2, after: [fixes.merge], input: pilot/run/p1/input/N2.json, output: pilot/run/p1/skeletons/N2.yaml, validate: writer-lc, status: pending, tokens: 0}
+  - {id: p1.N3.writer, stage: writer, strand: N3, after: [fixes.merge], input: pilot/run/p1/input/N3.json, output: pilot/run/p1/skeletons/N3.yaml, validate: writer-lc, status: pending, tokens: 0}
+  - {id: p1.N4.writer, stage: writer, strand: N4, after: [fixes.merge], input: pilot/run/p1/input/N4.json, output: pilot/run/p1/skeletons/N4.yaml, validate: writer-lc, status: pending, tokens: 0}
