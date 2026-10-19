@@ -1,0 +1,2494 @@
+{
+ "boundary_nodes": [
+  "area.rectangle.length-times-width",
+  "area.rectangle.tiling",
+  "coordinate-plane.first-quadrant",
+  "coordinate-plane.four-quadrants",
+  "data.graphs.read",
+  "division.nonunit-fraction-by-whole",
+  "equations.linear.solve",
+  "equations.one-step",
+  "expressions.variables",
+  "fraction.reciprocal",
+  "fraction.subtraction.comparison",
+  "functions.definition",
+  "geometry.similar-triangles",
+  "measurement.unit-conversion",
+  "measurement.weight.attribute",
+  "rational-numbers.operations"
+ ],
+ "nodes": [
+  {
+   "id": "addition.add-to.fingers",
+   "concept": "addition",
+   "facet": "add-to",
+   "level": 1,
+   "type": "procedure",
+   "name": "Add within 10 on fingers",
+   "statement": "Show each addend as a set of raised fingers and find the total of all the raised fingers; the total is the sum.",
+   "assess": "Use your fingers to find 4 + 3.",
+   "procedure": [
+    "Raise fingers for the first number.",
+    "Raise more fingers for the second number.",
+    "Find how many fingers are raised in all, by counting or by recognizing the finger pattern."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e116",
+     "prerequisite": "addition.add-to.count-all",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The sum is the total of two joined sets, which is the meaning of joining two sets and counting all, here with fingers as the sets."
+    },
+    {
+     "edge_id": "e117",
+     "prerequisite": "counting.objects",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 finds how many fingers are raised in all by counting the raised fingers one by one."
+    },
+    {
+     "edge_id": "e118",
+     "prerequisite": "counting.produce-set",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Steps 1 and 2 raise exactly the given number of fingers, which is counting out a set of a given number."
+    }
+   ]
+  },
+  {
+   "id": "addition.add-to.events",
+   "concept": "addition",
+   "facet": "add-to",
+   "level": 1,
+   "type": "procedure",
+   "name": "Join two runs of sounds or actions",
+   "statement": "The total of two runs of sounds or actions is found by keeping the count of the first run and continuing it through the second, since the first run is gone when the second is heard.",
+   "assess": "Listen: I clap 3 times, then 2 more times. How many claps were there in all?",
+   "procedure": [
+    "Count the first run of sounds as it happens and keep the last number.",
+    "Continue the count from that number through the second run.",
+    "The last number said is the total."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e119",
+     "prerequisite": "counting.cardinal.last-word",
+     "relation": "definitional",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 says the last number said is the total, which is the rule that the last word of a count tells how many."
+    },
+    {
+     "edge_id": "e120",
+     "prerequisite": "counting.events",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The first run of sounds or actions must be counted as it happens, which is counting events with no objects to point at."
+    },
+    {
+     "edge_id": "e121",
+     "prerequisite": "counting.sequence.count-on",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 continues the count from the kept last number through the second run instead of restarting at one."
+    }
+   ]
+  },
+  {
+   "id": "addition.add-to.describe",
+   "concept": "addition",
+   "facet": "add-to",
+   "level": 1,
+   "type": "representation",
+   "name": "Tell a joining action in words with numbers",
+   "statement": "A joining action is described in words by naming how many there were at the start, how many joined, and how many there are now.",
+   "assess": "Watch: 3 toy cars are parked, then 2 more drive in. Tell what happened, using numbers.",
+   "proposed_edges": [
+    {
+     "edge_id": "e122",
+     "prerequisite": "addition.add-to.count-all",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Naming how many there are now requires joining the two groups and counting all of them to find the total."
+    },
+    {
+     "edge_id": "e123",
+     "prerequisite": "counting.objects",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Naming how many there were at the start and how many joined requires counting each group of toy cars."
+    }
+   ]
+  },
+  {
+   "id": "addition.notation.expression",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 2,
+   "type": "representation",
+   "name": "Write an addition expression for a joining situation",
+   "statement": "The expression a + b stands for the amount made when an amount b is joined to an amount a.",
+   "assess": "Write an expression, with no equal sign, for: 4 ducks are in a pond and 2 more ducks come.",
+   "proposed_edges": [
+    {
+     "edge_id": "e124",
+     "prerequisite": "addition.add-to.describe",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The expression a + b stands for the start amount a and the joined amount b of a joining action described in words."
+    },
+    {
+     "edge_id": "e125",
+     "prerequisite": "numeral.write",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Writing 4 + 2 for the ducks requires writing the numerals 4 and 2 for the spoken amounts."
+    }
+   ]
+  },
+  {
+   "id": "addition.notation.equation",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 2,
+   "type": "representation",
+   "name": "Write an addition equation for a joining situation",
+   "statement": "The equation a + b = c records that joining an amount b to an amount a makes the amount c.",
+   "assess": "Write an equation for: 4 ducks were in a pond, 2 more came, and now there are 6 ducks.",
+   "proposed_edges": [
+    {
+     "edge_id": "e126",
+     "prerequisite": "addition.add-to.describe",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The result c is the amount named as how many there are now after the joining action."
+    },
+    {
+     "edge_id": "e127",
+     "prerequisite": "addition.notation.expression",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation a + b = c extends the expression a + b by recording the amount made when b joins a."
+    },
+    {
+     "edge_id": "e128",
+     "prerequisite": "numeral.write",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation also records the total c as a written numeral after the equal sign."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.take-away.fingers",
+   "concept": "subtraction",
+   "facet": "take-away",
+   "level": 1,
+   "type": "procedure",
+   "name": "Subtract within 10 on fingers",
+   "statement": "Raise fingers for the starting amount, lower fingers for the amount taken away; the fingers still raised are the difference.",
+   "assess": "Hold up 8 fingers. Put down 3 of them. How many are still up?",
+   "procedure": [
+    "Raise fingers for the starting number.",
+    "Lower fingers for the number taken away.",
+    "Find how many fingers are still raised, by counting or by recognizing the finger pattern."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e129",
+     "prerequisite": "counting.objects",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 finds how many fingers are still raised by counting the raised fingers one by one."
+    },
+    {
+     "edge_id": "e130",
+     "prerequisite": "counting.produce-set",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 raises exactly the starting number of fingers, which is counting out a set of a given number."
+    },
+    {
+     "edge_id": "e131",
+     "prerequisite": "subtraction.take-away.count-remaining",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The difference is the amount left after taking away, which is the meaning of taking objects away and counting what is left."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.take-away.describe",
+   "concept": "subtraction",
+   "facet": "take-away",
+   "level": 1,
+   "type": "representation",
+   "name": "Tell a taking-away action in words with numbers",
+   "statement": "A taking-away action is described in words by naming how many there were at the start, how many were taken away, and how many are left.",
+   "assess": "Watch: 6 toy birds are on a branch, then 2 fly away. Tell what happened, using numbers.",
+   "proposed_edges": [
+    {
+     "edge_id": "e132",
+     "prerequisite": "counting.objects",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Naming how many there were at the start and how many were taken requires counting each group of birds."
+    },
+    {
+     "edge_id": "e133",
+     "prerequisite": "subtraction.take-away.count-remaining",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Naming how many are left requires taking the flown-away birds out of the set and counting what remains."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.notation.expression",
+   "concept": "subtraction",
+   "facet": "operation",
+   "level": 2,
+   "type": "representation",
+   "name": "Write a subtraction expression for a taking-away situation",
+   "statement": "The expression a - b stands for the amount left when an amount b is taken away from an amount a.",
+   "assess": "Write an expression, with no equal sign, for: 7 apples are on a plate and 3 are eaten.",
+   "proposed_edges": [
+    {
+     "edge_id": "e134",
+     "prerequisite": "numeral.write",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Writing 7 - 3 for the apples requires writing the numerals 7 and 3 for the spoken amounts."
+    },
+    {
+     "edge_id": "e135",
+     "prerequisite": "subtraction.take-away.describe",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The expression a - b stands for the start amount a and the taken amount b of a taking-away action told in words."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.notation.equation",
+   "concept": "subtraction",
+   "facet": "operation",
+   "level": 2,
+   "type": "representation",
+   "name": "Write a subtraction equation for a taking-away situation",
+   "statement": "The equation a - b = c records that taking an amount b away from an amount a leaves the amount c.",
+   "assess": "Write an equation for: 7 apples were on a plate, 3 were eaten, and 4 are left.",
+   "proposed_edges": [
+    {
+     "edge_id": "e136",
+     "prerequisite": "numeral.write",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation also records the amount left c as a written numeral after the equal sign."
+    },
+    {
+     "edge_id": "e137",
+     "prerequisite": "subtraction.notation.expression",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation a - b = c extends the expression a - b by recording the amount left after b is taken from a."
+    },
+    {
+     "edge_id": "e138",
+     "prerequisite": "subtraction.take-away.describe",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The result c is the amount named as how many are left after the taking-away action."
+    }
+   ]
+  },
+  {
+   "id": "addition.application.put-together.total-unknown",
+   "concept": "addition",
+   "facet": "put-together",
+   "level": 1,
+   "type": "application",
+   "name": "Solve put-together story problems with the total unknown",
+   "statement": "A story gives two parts that are together at once, with no joining action, and asks for the total; the learner finds it with objects or a drawing.",
+   "assess": "There are 3 red apples and 4 green apples in a bowl. How many apples are in the bowl? Use counters or a drawing.",
+   "proposed_edges": [
+    {
+     "edge_id": "e139",
+     "prerequisite": "addition.add-to.count-all",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Finding the total of the red and green apples means putting the two groups together and counting all of them."
+    },
+    {
+     "edge_id": "e140",
+     "prerequisite": "counting.produce-set",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Showing each part with counters or a drawing means counting out a set of the given number for each part."
+    }
+   ]
+  },
+  {
+   "id": "number-composition.within-10.decompose",
+   "concept": "number-composition",
+   "facet": "part-whole",
+   "level": 1,
+   "type": "procedure",
+   "name": "Break a number up to 10 into two parts in more than one way",
+   "statement": "A number from 2 to 10 can be split into two parts in several different ways; each split is found by separating a set of that many objects into two groups, and is recorded by a drawing.",
+   "assess": "Use 7 cubes. Break them into two groups in three different ways, and draw each way.",
+   "procedure": [
+    "Make a set of the given number of objects.",
+    "Separate the set into two groups and draw the two groups.",
+    "Put the set back together and separate it a different way."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e141",
+     "prerequisite": "cardinality.conservation",
+     "relation": "definitional",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Putting the set back together and separating it a new way assumes the total stays the same when the objects are rearranged."
+    },
+    {
+     "edge_id": "e142",
+     "prerequisite": "counting.produce-set",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 makes a set of the given number of objects, which is counting out a set of that number."
+    },
+    {
+     "edge_id": "e143",
+     "prerequisite": "number-composition.part-whole.inexact",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each split names two parts of a set, and each part is smaller than the whole set that was separated."
+    },
+    {
+     "edge_id": "e144",
+     "prerequisite": "numeral.informal-record",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 draws the two groups, which is recording a set of objects with marks or drawings."
+    }
+   ]
+  },
+  {
+   "id": "number-composition.within-10.equation",
+   "concept": "number-composition",
+   "facet": "part-whole",
+   "level": 2,
+   "type": "representation",
+   "name": "Record a split of a number up to 10 as an equation",
+   "statement": "A split of a whole w into parts a and b is recorded by the equation w = a + b, or a + b = w.",
+   "assess": "Lia broke 8 cubes into a group of 5 and a group of 3. Write an equation that shows this.",
+   "proposed_edges": [
+    {
+     "edge_id": "e145",
+     "prerequisite": "addition.notation.equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The record w = a + b or a + b = w is written in the form of an addition equation."
+    },
+    {
+     "edge_id": "e146",
+     "prerequisite": "number-composition.within-10.decompose",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation w = a + b records a split of w into two parts, the split found by breaking a set into two groups."
+    }
+   ]
+  },
+  {
+   "id": "number-composition.make-ten.find",
+   "concept": "number-composition",
+   "facet": "part-whole",
+   "level": 1,
+   "type": "procedure",
+   "name": "Find the number that makes 10 with a given number",
+   "statement": "For a number n from 1 to 9, the partner that makes 10 is the number of objects that must be added to n objects to have 10, shown for example by the empty spaces of a ten frame.",
+   "assess": "This ten frame has 6 dots. How many more dots are needed to make 10?",
+   "procedure": [
+    "Show n objects, for example in a ten frame.",
+    "Add objects one at a time, or look at the empty spaces, until there are 10.",
+    "The number of objects added is the partner of n."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e147",
+     "prerequisite": "counting.objects",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 counts the objects added, or the empty spaces, to get the partner of n."
+    },
+    {
+     "edge_id": "e148",
+     "prerequisite": "counting.produce-set",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 shows n objects in a ten frame, which is counting out a set of n."
+    },
+    {
+     "edge_id": "e149",
+     "prerequisite": "counting.sequence.count-on",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 adds objects one at a time from n up to 10, which is counting forward from the given number."
+    }
+   ]
+  },
+  {
+   "id": "addition.within-10.fluency",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 3,
+   "type": "fact",
+   "name": "Add within 10 fluently",
+   "statement": "Give any sum of two whole numbers with a total of 10 or less quickly and accurately, without counting.",
+   "assess": "Answer each within about 3 seconds, without counting or computing aloud: 4 + 3, 2 + 6, 5 + 5, 0 + 7, 3 + 2.",
+   "proposed_edges": [
+    {
+     "edge_id": "e150",
+     "prerequisite": "addition.add-to.count-all",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each fact to be recalled is the total of two joined sets, which fluent recall replaces counting all of."
+    },
+    {
+     "edge_id": "e151",
+     "prerequisite": "addition.notation.expression",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test sums are given as expressions such as 4 + 3, which must be read as joining two amounts."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.within-10.fluency",
+   "concept": "subtraction",
+   "facet": "operation",
+   "level": 3,
+   "type": "fact",
+   "name": "Subtract within 10 fluently",
+   "statement": "Give any difference a - b with a at most 10 and b at most a quickly and accurately, without counting.",
+   "assess": "Answer each within about 3 seconds, without counting or computing aloud: 9 - 4, 7 - 7, 10 - 3, 6 - 2, 5 - 1.",
+   "proposed_edges": [
+    {
+     "edge_id": "e152",
+     "prerequisite": "subtraction.notation.expression",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test differences are given as expressions such as 9 - 4, which must be read as taking one amount from another."
+    },
+    {
+     "edge_id": "e153",
+     "prerequisite": "subtraction.take-away.count-remaining",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each fact to be recalled is the amount left after taking away, which fluent recall replaces counting what is left of."
+    }
+   ]
+  },
+  {
+   "id": "addition.count-on",
+   "concept": "addition",
+   "facet": "add-to",
+   "level": 2,
+   "type": "procedure",
+   "name": "Add by counting on",
+   "statement": "To find a + b, start from the number a without recounting it and say the next b number words, keeping track of how many have been said; the last word said is a + b.",
+   "assess": "Find 8 + 3 by counting on from 8. Do not count out 8 first.",
+   "procedure": [
+    "Say the first addend a.",
+    "Say the next number word and track it as 1 counted on; continue, tracking 2, 3, and so on.",
+    "Stop when b words have been counted on; the last word said is the sum."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e154",
+     "prerequisite": "addition.notation.expression",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem is written 8 + 3, so the expression must be read as adding 3 to 8."
+    },
+    {
+     "edge_id": "e155",
+     "prerequisite": "counting.cardinal.last-word",
+     "relation": "definitional",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The last word said gives the sum because the last word of a count tells how many there are."
+    },
+    {
+     "edge_id": "e156",
+     "prerequisite": "counting.produce-set",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Stopping after exactly b words are counted on is the same stopping rule as counting out a set of b."
+    },
+    {
+     "edge_id": "e157",
+     "prerequisite": "counting.sequence.count-on",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Steps 1 and 2 say the first addend and then the next number words forward from it without recounting."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.count-back",
+   "concept": "subtraction",
+   "facet": "take-away",
+   "level": 2,
+   "type": "procedure",
+   "name": "Subtract by counting back",
+   "statement": "To find a - b, start from a and say the next b number words backward, keeping track of how many have been said; the last word said is a - b (the starting word a is not counted).",
+   "assess": "Find 12 - 3 by counting back from 12.",
+   "procedure": [
+    "Start at the number a.",
+    "Say the number one less and track it as 1 counted back; continue, tracking 2, 3, and so on.",
+    "Stop when b words have been counted back; the last word said is the difference."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e158",
+     "prerequisite": "counting.produce-set",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Stopping after exactly b words are counted back is the same stopping rule as counting out a set of b."
+    },
+    {
+     "edge_id": "e159",
+     "prerequisite": "counting.sequence.backward",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 says number words one less at a time, which is counting backward by ones from a starting number."
+    },
+    {
+     "edge_id": "e160",
+     "prerequisite": "subtraction.notation.expression",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem is written 12 - 3, so the expression must be read as taking 3 from 12."
+    },
+    {
+     "edge_id": "e161",
+     "prerequisite": "subtraction.take-away.count-remaining",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The last word said is a - b because b were taken away and the number left is what remains."
+    }
+   ]
+  },
+  {
+   "id": "addition.commutative",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 3,
+   "type": "concept",
+   "name": "The order of two addends does not change the sum",
+   "statement": "For any whole numbers a and b, a + b = b + a.",
+   "assess": "Without adding, say whether 9 + 6 = 6 + 9 is true, and what rule tells you.",
+   "proposed_edges": [
+    {
+     "edge_id": "e162",
+     "prerequisite": "addition.notation.expression",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement compares the written sums a + b and b + a, so both must be read as joining two amounts."
+    },
+    {
+     "edge_id": "e163",
+     "prerequisite": "counting.cardinal.order-irrelevance",
+     "relation": "justificatory",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The reason the order of the addends does not matter is that a count of the joined collection does not depend on the order of counting."
+    },
+    {
+     "edge_id": "e164",
+     "prerequisite": "equation.equal-sign.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The claim a + b = b + a says the two sums have the same value, which is the relational meaning of the equal sign."
+    }
+   ]
+  },
+  {
+   "id": "addition.commutative.strategy",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 3,
+   "type": "procedure",
+   "name": "Switch the order of addends to make a sum easier",
+   "statement": "Replace a + b by b + a when the second form is easier, for example to count on from the larger addend or to use a known fact.",
+   "assess": "Find 2 + 9 by first switching the order of the addends. Tell what you switched it to.",
+   "procedure": [
+    "Look at a + b and decide whether b + a is easier (larger number first, or a known fact).",
+    "Rewrite the sum as b + a.",
+    "Find b + a; it equals a + b."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e165",
+     "prerequisite": "addition.commutative",
+     "relation": "justificatory",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 claims b + a equals a + b, which is the property that the order of two addends does not change the sum."
+    },
+    {
+     "edge_id": "e166",
+     "prerequisite": "addition.count-on",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem 2 + 9 is solved after switching by counting on from the larger addend."
+    }
+   ]
+  },
+  {
+   "id": "addition.associative.strategy",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 3,
+   "type": "procedure",
+   "name": "Add three numbers by choosing which two to add first",
+   "statement": "When adding three numbers, any adjacent two may be added first without changing the total, so add the pair that is easier (for example, a pair that makes 10) first.",
+   "assess": "Find 3 + 8 + 2 by first adding the two numbers that make 10.",
+   "procedure": [
+    "Look for two adjacent addends whose sum is easy, such as a pair that makes 10.",
+    "Add that pair first.",
+    "Add the third number to their sum."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e167",
+     "prerequisite": "addition.count-on",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 adds the third number to the sum of the first pair, which is a two-addend sum found by counting on."
+    },
+    {
+     "edge_id": "e168",
+     "prerequisite": "addition.notation.expression",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The problem is a written sum of three numbers, and adjacent pairs must be read as two-addend sums."
+    },
+    {
+     "edge_id": "e169",
+     "prerequisite": "counting.cardinal.order-irrelevance",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The total of three collections is the same whichever two are counted together first, since a count does not depend on order."
+    },
+    {
+     "edge_id": "e170",
+     "prerequisite": "number-composition.make-ten.find",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 looks for a pair that makes 10, which uses the partner of a number that makes 10."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.unknown-addend.meaning",
+   "concept": "subtraction",
+   "facet": "unknown-addend",
+   "level": 2,
+   "type": "concept",
+   "name": "A difference as an unknown addend",
+   "statement": "a - b is the number that must be added to b to make a, so a - b = c exactly when b + c = a.",
+   "assess": "Which equation has the same missing number as 12 - 5 = ?  (a) 5 + ? = 12  (b) 12 + 5 = ?  (c) ? - 5 = 12",
+   "proposed_edges": [
+    {
+     "edge_id": "e171",
+     "prerequisite": "addition.add-to.number-line",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Adding c to b is a jump of length c forward on the number line, ending at a."
+    },
+    {
+     "edge_id": "e172",
+     "prerequisite": "addition.notation.equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement links a - b = c to the addition equation b + c = a, which must be read as a joining record."
+    },
+    {
+     "edge_id": "e173",
+     "prerequisite": "number-composition.within-10.equation",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "That c left after taking b from a means a splits into the parts b and c, recorded as a = b + c."
+    },
+    {
+     "edge_id": "e174",
+     "prerequisite": "subtraction.comparison.number-line",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The difference a - b is the distance from b to a, which is the number that must be added to b to reach a."
+    },
+    {
+     "edge_id": "e175",
+     "prerequisite": "subtraction.notation.equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about equations of the form a - b = c and what they say about the numbers a, b, and c."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.unknown-addend.strategy",
+   "concept": "subtraction",
+   "facet": "unknown-addend",
+   "level": 3,
+   "type": "procedure",
+   "name": "Subtract by finding the missing addend",
+   "statement": "To find a - b, find the number c with b + c = a, using a known addition fact or by counting up from b to a; c is the difference.",
+   "assess": "Find 13 - 9 by thinking of 9 + ? = 13. Tell the addition fact you used.",
+   "procedure": [
+    "Rewrite a - b = ? as b + ? = a.",
+    "Find the missing addend from a known addition fact, or count up from b to a and track how many were counted.",
+    "The missing addend is a - b."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e176",
+     "prerequisite": "equation.unknown.addition",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 finds the missing addend in b + ? = a, which is finding the unknown in an addition equation."
+    },
+    {
+     "edge_id": "e177",
+     "prerequisite": "subtraction.unknown-addend.meaning",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The difference is the missing addend because a - b = c exactly when b + c = a."
+    },
+    {
+     "edge_id": "e178",
+     "prerequisite": "subtraction.unknown-addend.rewrite",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 rewrites a - b = ? as b + ? = a, which is exactly the rewrite of a subtraction as an unknown-addend addition."
+    }
+   ]
+  },
+  {
+   "id": "addition.make-ten",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 2,
+   "type": "procedure",
+   "name": "Add across 10 by making a ten",
+   "statement": "When a + b is more than 10 with a and b at most 9, split b into the part that completes a to 10 and the rest; then a + b = 10 + the rest.",
+   "assess": "Find 8 + 6 by making a ten. Show how you split the 6.",
+   "procedure": [
+    "Find the partner of a that makes 10, namely 10 - a.",
+    "Split b into 10 - a and the rest, b - (10 - a).",
+    "Add 10 - a to a to make 10, then add the rest: the sum is 10 + (b - (10 - a))."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e179",
+     "prerequisite": "number-composition.make-ten.find",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 finds the partner of a that makes 10, which is finding the number that makes 10 with a given number."
+    },
+    {
+     "edge_id": "e180",
+     "prerequisite": "number-composition.within-10.decompose",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 splits b into the part that completes a to 10 and the rest, which is breaking a number into two parts."
+    },
+    {
+     "edge_id": "e181",
+     "prerequisite": "number-composition.within-10.equation",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step two splits b into two parts, 10 - a and the rest, and records b as their sum."
+    },
+    {
+     "edge_id": "e182",
+     "prerequisite": "place-value.teen.equation",
+     "relation": "representational",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The result 10 + the rest is recorded and read as a teen number written as 10 plus ones."
+    }
+   ]
+  },
+  {
+   "id": "addition.doubles.fact",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 3,
+   "type": "fact",
+   "name": "Recall the doubles to 9 + 9",
+   "statement": "Recall each sum n + n for n from 1 to 9 without counting.",
+   "assess": "Answer each within about 3 seconds, without counting or computing aloud: 6 + 6, 8 + 8, 7 + 7, 9 + 9.",
+   "proposed_edges": [
+    {
+     "edge_id": "e183",
+     "prerequisite": "addition.add-to.count-all",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The recalled double is the total of joining two equal sets and counting all of them."
+    },
+    {
+     "edge_id": "e184",
+     "prerequisite": "addition.count-on",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each double is a sum that is first found by counting on and then recalled without counting."
+    },
+    {
+     "edge_id": "e185",
+     "prerequisite": "addition.notation.expression",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test doubles are given as expressions such as 6 + 6, which must be read as joining two equal amounts."
+    }
+   ]
+  },
+  {
+   "id": "addition.near-doubles",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 3,
+   "type": "procedure",
+   "name": "Add by using a known double",
+   "statement": "When two addends are close, rewrite the sum as the double of the smaller addend plus the difference between them: a + (a + d) = (a + a) + d.",
+   "assess": "Find 6 + 7 by using 6 + 6. Show the steps.",
+   "procedure": [
+    "Identify the smaller addend a and how much larger the other addend is, d.",
+    "Recall the double a + a.",
+    "Add d to the double."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e186",
+     "prerequisite": "addition.associative.strategy",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rewriting a + (a + d) = (a + a) + d regroups the addends, so the sum may be formed from either pair first."
+    },
+    {
+     "edge_id": "e187",
+     "prerequisite": "addition.count-on",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 adds the small difference d to the double, which is a short count on from the double."
+    },
+    {
+     "edge_id": "e188",
+     "prerequisite": "addition.doubles.fact",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 recalls the double a + a, which is a recalled doubles fact."
+    },
+    {
+     "edge_id": "e189",
+     "prerequisite": "subtraction.unknown-addend.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Finding how much larger the other addend is, d, is finding the number that added to the smaller addend gives the larger."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.decompose-to-ten",
+   "concept": "subtraction",
+   "facet": "take-away",
+   "level": 2,
+   "type": "procedure",
+   "name": "Subtract across 10 by decomposing to ten",
+   "statement": "When a teen number a is reduced by a one-digit number b larger than the ones of a, split b into the ones of a and the rest; subtracting the ones reaches 10, and then the rest is subtracted from 10.",
+   "assess": "Find 13 - 4 by first subtracting down to 10. Show how you split the 4.",
+   "procedure": [
+    "Let r be the ones in a (a = 10 + r), with b greater than r.",
+    "Split b into r and b - r.",
+    "Subtract r from a to reach 10, then subtract b - r from 10."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e190",
+     "prerequisite": "number-composition.within-10.decompose",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 splits b into the ones r and the rest, which is breaking a number into two parts."
+    },
+    {
+     "edge_id": "e191",
+     "prerequisite": "number-composition.within-10.equation",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step two splits b into r and b - r and records b as their sum."
+    },
+    {
+     "edge_id": "e192",
+     "prerequisite": "place-value.teen.equation",
+     "relation": "representational",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step one writes the teen number a as 10 plus its r ones."
+    },
+    {
+     "edge_id": "e193",
+     "prerequisite": "place-value.teen.ten-and-ones",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 reads the teen number a as 10 and r ones, which is the meaning of a teen number as ten and some ones."
+    },
+    {
+     "edge_id": "e194",
+     "prerequisite": "subtraction.notation.expression",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem is written 13 - 4, so the expression must be read as taking 4 from 13."
+    },
+    {
+     "edge_id": "e195",
+     "prerequisite": "subtraction.take-away.count-remaining",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Subtracting the rest from 10 is taking objects away from a ten and finding what is left."
+    },
+    {
+     "edge_id": "e196",
+     "prerequisite": "subtraction.within-10.fluency",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 subtracts the rest from 10, a difference of two numbers within 10."
+    }
+   ]
+  },
+  {
+   "id": "addition.within-20.fluency",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 3,
+   "type": "fact",
+   "name": "Know all sums of two one-digit numbers",
+   "statement": "Give any sum of two one-digit numbers, including those greater than 10, quickly and accurately without counting.",
+   "assess": "Answer each within about 3 seconds, without counting or computing aloud: 8 + 5, 7 + 9, 6 + 4, 9 + 3, 7 + 6.",
+   "proposed_edges": [
+    {
+     "edge_id": "e197",
+     "prerequisite": "addition.make-ten",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The sums greater than 10 are first found by splitting an addend to make a ten, then recalled without counting."
+    },
+    {
+     "edge_id": "e198",
+     "prerequisite": "addition.within-10.fluency",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The sums to be recalled include all sums within 10 and the crossing-10 sums are derived from them."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.within-20.fluency",
+   "concept": "subtraction",
+   "facet": "operation",
+   "level": 3,
+   "type": "fact",
+   "name": "Subtract within 20 fluently",
+   "statement": "Give any difference a - b in which b and a - b are both one-digit numbers (so a is at most 18), including those that cross 10, quickly and accurately without counting.",
+   "assess": "Answer each within about 3 seconds, without counting or computing aloud: 14 - 6, 11 - 8, 17 - 9, 12 - 5, 15 - 7.",
+   "proposed_edges": [
+    {
+     "edge_id": "e199",
+     "prerequisite": "addition.within-20.fluency",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The thinking-addition route uses known sums of one-digit numbers, including those over 10."
+    },
+    {
+     "edge_id": "e200",
+     "prerequisite": "subtraction.decompose-to-ten",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The differences that cross 10 are first found by subtracting down to 10 and then recalled without counting."
+    },
+    {
+     "edge_id": "e201",
+     "prerequisite": "subtraction.unknown-addend.strategy",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A difference such as 14 - 6 is reached by thinking of the addition 6 + ? = 14."
+    },
+    {
+     "edge_id": "e202",
+     "prerequisite": "subtraction.within-10.fluency",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The differences to be recalled include all differences within 10 and crossing-10 differences are derived from them."
+    }
+   ]
+  },
+  {
+   "id": "equation.equal-sign.meaning",
+   "concept": "equation",
+   "facet": "relational",
+   "level": 2,
+   "type": "concept",
+   "name": "The equal sign means both sides have the same value",
+   "statement": "The equal sign states that the number or expression on its left has the same value as the number or expression on its right; it does not mean 'the answer comes next'.",
+   "assess": "Sam says 3 + 4 = 7 + 2 is true because 3 + 4 makes 7. Is Sam right? Explain what the = sign tells you.",
+   "proposed_edges": [
+    {
+     "edge_id": "e203",
+     "prerequisite": "addition.add-to.fingers",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Deciding whether 3 + 4 = 7 + 2 requires finding the value of each sum, which can be done on fingers."
+    },
+    {
+     "edge_id": "e204",
+     "prerequisite": "addition.count-on",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem needs the values of 3 + 4 and 7 + 2 to see whether they are equal."
+    },
+    {
+     "edge_id": "e205",
+     "prerequisite": "addition.notation.equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The sign is met in written addition equations, where it must be seen as more than a mark before the answer."
+    },
+    {
+     "edge_id": "e206",
+     "prerequisite": "addition.notation.expression",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Both sides in the examples are sums, so the learner must read an expression as standing for a value."
+    },
+    {
+     "edge_id": "e207",
+     "prerequisite": "comparing.whole-numbers.symbols",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equal sign states that two numbers have the same value, as the = in a comparison of two whole numbers does."
+    }
+   ]
+  },
+  {
+   "id": "equation.true-false",
+   "concept": "equation",
+   "facet": "relational",
+   "level": 2,
+   "type": "procedure",
+   "name": "Decide whether an addition or subtraction equation is true",
+   "statement": "An equation built from whole numbers, sums, and differences is true when the two sides have the same value and false otherwise.",
+   "assess": "True or false: 6 = 6;  7 = 8 - 1;  5 + 2 = 2 + 5;  4 + 1 = 5 + 2;  9 - 3 = 4 + 2.",
+   "procedure": [
+    "Find the value of the left side.",
+    "Find the value of the right side.",
+    "The equation is true if the two values are equal, and false if they are not."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e208",
+     "prerequisite": "addition.count-on",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Steps one and two find the value of a sum on either side."
+    },
+    {
+     "edge_id": "e209",
+     "prerequisite": "addition.notation.expression",
+     "relation": "representational",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Steps 1 and 2 find the value of sides written as sums such as 5 + 2, so sum expressions must be read."
+    },
+    {
+     "edge_id": "e210",
+     "prerequisite": "equation.equal-sign.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 compares the values of the two sides, which is the relational meaning of the equal sign."
+    },
+    {
+     "edge_id": "e211",
+     "prerequisite": "subtraction.count-back",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Steps one and two find the value of a difference on either side."
+    },
+    {
+     "edge_id": "e212",
+     "prerequisite": "subtraction.notation.expression",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Steps 1 and 2 find the value of sides written as differences such as 8 - 1, so difference expressions must be read."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.unknown-addend.rewrite",
+   "concept": "subtraction",
+   "facet": "unknown-addend",
+   "level": 2,
+   "type": "representation",
+   "name": "Rewrite a subtraction as an addition with an unknown addend",
+   "statement": "The subtraction a - b = ? is rewritten as the addition b + ? = a, with the unknown in the addend position.",
+   "assess": "Write an addition equation with a box for the missing number that has the same answer as 15 - 7 = ?. Do not solve it.",
+   "proposed_edges": [
+    {
+     "edge_id": "e213",
+     "prerequisite": "addition.notation.equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rewritten form b + ? = a is an addition equation with a box in the addend position."
+    },
+    {
+     "edge_id": "e214",
+     "prerequisite": "subtraction.notation.equation",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The given problem 15 - 7 = ? is a subtraction equation that must be read as taking 7 from 15."
+    },
+    {
+     "edge_id": "e215",
+     "prerequisite": "subtraction.unknown-addend.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rewrite of a - b = ? as b + ? = a is justified by a difference being an unknown addend."
+    }
+   ]
+  },
+  {
+   "id": "equation.unknown.addition",
+   "concept": "equation",
+   "facet": "relational",
+   "level": 2,
+   "type": "procedure",
+   "name": "Find the unknown in an addition equation",
+   "statement": "In an equation relating three whole numbers by addition (a + b = c, written either way round), the unknown may be either addend or the sum; it is the number that makes the equation true.",
+   "assess": "Find the number that makes each equation true: 8 + ? = 11;  ? + 5 = 12;  14 = 6 + ?;  6 + 6 = ?.",
+   "procedure": [
+    "If the sum is unknown, add the two addends.",
+    "If an addend is unknown, find the number that added to the known addend makes the sum, by counting up or a known fact.",
+    "Check that the number makes the two sides equal."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e216",
+     "prerequisite": "addition.count-on",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 finds an unknown addend by counting up from the known addend to the sum, which is counting on."
+    },
+    {
+     "edge_id": "e217",
+     "prerequisite": "addition.notation.equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equations are read as three whole numbers related by addition, with a box for the unknown."
+    },
+    {
+     "edge_id": "e218",
+     "prerequisite": "equation.equal-sign.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 checks that the two sides are equal, and equations such as 14 = 6 + ? put the sum on the left."
+    },
+    {
+     "edge_id": "e219",
+     "prerequisite": "equation.true-false",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step three checks that the two sides have equal values."
+    }
+   ]
+  },
+  {
+   "id": "equation.unknown.subtraction",
+   "concept": "equation",
+   "facet": "relational",
+   "level": 2,
+   "type": "procedure",
+   "name": "Find the unknown in a subtraction equation",
+   "statement": "In an equation relating three whole numbers by subtraction (a - b = c, written either way round), the unknown may be the minuend, the subtrahend, or the difference; it is the number that makes the equation true.",
+   "assess": "Find the number that makes each equation true: 5 = ? - 3;  12 - ? = 8;  ? - 6 = 7;  15 - 9 = ?.",
+   "procedure": [
+    "If the difference is unknown, subtract.",
+    "If the subtrahend is unknown, find how many must be taken from a to leave c (a - c).",
+    "If the minuend is unknown, find the number that b and c together make (b + c).",
+    "Check that the number makes the two sides equal."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e220",
+     "prerequisite": "addition.count-on",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 adds b and c to find the minuend, which can be done by counting on."
+    },
+    {
+     "edge_id": "e221",
+     "prerequisite": "equation.equal-sign.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Step 4 checks both sides are equal, and equations such as 5 = ? - 3 put the difference on the left."
+    },
+    {
+     "edge_id": "e222",
+     "prerequisite": "equation.true-false",
+     "relation": "procedural",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Step four checks that the two sides have equal values."
+    },
+    {
+     "edge_id": "e223",
+     "prerequisite": "subtraction.count-back",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 subtracts when the difference is unknown, which can be done by counting back."
+    },
+    {
+     "edge_id": "e224",
+     "prerequisite": "subtraction.notation.equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equations are read as three whole numbers related by subtraction, with a box for the unknown."
+    },
+    {
+     "edge_id": "e225",
+     "prerequisite": "subtraction.unknown-addend.meaning",
+     "relation": "justificatory",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 finds an unknown minuend as b + c, which holds because a difference is an unknown addend."
+    }
+   ]
+  },
+  {
+   "id": "addition.application.add-to.change-unknown",
+   "concept": "addition",
+   "facet": "add-to",
+   "level": 2,
+   "type": "application",
+   "name": "Solve add-to story problems with the change unknown",
+   "statement": "A story gives a starting amount and the amount after more were added, and asks how many were added; the answer is the number that joined to the start makes the result.",
+   "assess": "Ana had 7 shells. She found some more. Now she has 12 shells. How many shells did she find? Use objects, a drawing, or an equation.",
+   "proposed_edges": [
+    {
+     "edge_id": "e226",
+     "prerequisite": "addition.application.add-to-story",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The story is an add-to situation that the learner already solves with objects when the result is unknown."
+    },
+    {
+     "edge_id": "e227",
+     "prerequisite": "addition.count-on",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The number joined is found by counting up from the start to the result while tracking how many were counted."
+    },
+    {
+     "edge_id": "e228",
+     "prerequisite": "equation.situation.one-step",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner writes 7 + ? = 12 with a symbol in the position of the amount that was added."
+    },
+    {
+     "edge_id": "e229",
+     "prerequisite": "equation.unknown.addition",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The answer is the number that joined to the start makes the result, which is the unknown addend in an addition equation."
+    }
+   ]
+  },
+  {
+   "id": "addition.application.add-to.start-unknown",
+   "concept": "addition",
+   "facet": "add-to",
+   "level": 2,
+   "type": "application",
+   "name": "Solve add-to story problems with the start unknown",
+   "statement": "A story gives how many were added and the final amount, and asks how many there were at the start; the answer is the number that, with the added amount joined to it, makes the final amount.",
+   "assess": "Some birds were on a wire. 5 more birds landed. Then there were 13 birds. How many birds were on the wire at first? Use objects, a drawing, or an equation.",
+   "proposed_edges": [
+    {
+     "edge_id": "e230",
+     "prerequisite": "addition.application.add-to-story",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The story is an add-to situation that the learner already solves with objects when the result is unknown."
+    },
+    {
+     "edge_id": "e231",
+     "prerequisite": "equation.situation.one-step",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner writes ? + 5 = 13 with a symbol in the start position."
+    },
+    {
+     "edge_id": "e232",
+     "prerequisite": "equation.unknown.addition",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The answer is the number that makes the final amount when the added amount joins it, which is the unknown first addend."
+    },
+    {
+     "edge_id": "e233",
+     "prerequisite": "subtraction.take-away.count-remaining",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "With objects, make the final amount, take away the part that joined, and count what is left."
+    },
+    {
+     "edge_id": "e234",
+     "prerequisite": "subtraction.unknown-addend.meaning",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The start is the number that with the added 5 makes 13, so it is 13 - 5."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.application.take-from.change-unknown",
+   "concept": "subtraction",
+   "facet": "take-away",
+   "level": 2,
+   "type": "application",
+   "name": "Solve take-from story problems with the change unknown",
+   "statement": "A story gives a starting amount and the amount left after some were taken away, and asks how many were taken; the answer is the start minus what is left.",
+   "assess": "There were 14 cookies on a plate. Some were eaten. Now there are 6 cookies. How many were eaten? Use objects, a drawing, or an equation.",
+   "proposed_edges": [
+    {
+     "edge_id": "e235",
+     "prerequisite": "equation.situation.one-step",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner writes 14 - ? = 6 with a symbol in the position of the amount taken."
+    },
+    {
+     "edge_id": "e236",
+     "prerequisite": "equation.unknown.subtraction",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The answer is the start minus what is left, which is the unknown subtrahend in a subtraction equation."
+    },
+    {
+     "edge_id": "e237",
+     "prerequisite": "subtraction.application.take-from-story",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The story is a take-from situation that the learner already solves with objects when the result is unknown."
+    },
+    {
+     "edge_id": "e238",
+     "prerequisite": "subtraction.count-back",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The amount taken is found by counting back from the start to the amount left while tracking how many were counted."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.application.take-from.start-unknown",
+   "concept": "subtraction",
+   "facet": "take-away",
+   "level": 2,
+   "type": "application",
+   "name": "Solve take-from story problems with the start unknown",
+   "statement": "A story gives how many were taken away and how many are left, and asks how many there were at the start; the answer is the amount left joined with the amount taken.",
+   "assess": "Some children were at the park. 4 children went home. Now 9 children are at the park. How many children were at the park at first? Use objects, a drawing, or an equation.",
+   "proposed_edges": [
+    {
+     "edge_id": "e239",
+     "prerequisite": "addition.count-on",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "With objects, the amount left and the amount taken are put together and counted on to find the start."
+    },
+    {
+     "edge_id": "e240",
+     "prerequisite": "equation.situation.one-step",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner writes ? - 4 = 9 with a symbol in the start position."
+    },
+    {
+     "edge_id": "e241",
+     "prerequisite": "equation.unknown.subtraction",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The answer is the amount left joined with the amount taken, which is the unknown minuend in a subtraction equation."
+    },
+    {
+     "edge_id": "e242",
+     "prerequisite": "subtraction.application.take-from-story",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The story is a take-from situation that the learner already solves with objects when the result is unknown."
+    },
+    {
+     "edge_id": "e243",
+     "prerequisite": "subtraction.unknown-addend.meaning",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The start is the number that, with 4 taken, leaves 9, so it is 4 + 9 joined together."
+    }
+   ]
+  },
+  {
+   "id": "addition.application.put-together.addend-unknown",
+   "concept": "addition",
+   "facet": "put-together",
+   "level": 2,
+   "type": "application",
+   "name": "Solve put-together/take-apart story problems with one part unknown",
+   "statement": "A story gives a total made of two kinds and the size of one part, with no action, and asks for the other part; the answer is the total minus the known part.",
+   "assess": "There are 15 balls in a box. 8 are red and the rest are blue. How many are blue? Use objects, a drawing, or an equation.",
+   "proposed_edges": [
+    {
+     "edge_id": "e244",
+     "prerequisite": "addition.application.put-together.total-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The story is a put-together situation with two parts and a total, solved before when the total was the unknown."
+    },
+    {
+     "edge_id": "e245",
+     "prerequisite": "equation.situation.one-step",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner writes 8 + ? = 15 with a symbol in the position of the unknown part."
+    },
+    {
+     "edge_id": "e246",
+     "prerequisite": "equation.unknown.addition",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Finding the number of blue balls is finding the addend that makes 15 with 8 in an addition equation."
+    },
+    {
+     "edge_id": "e247",
+     "prerequisite": "subtraction.take-away.count-remaining",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "With objects, set aside the known part of the total and count what is left as the other part."
+    },
+    {
+     "edge_id": "e248",
+     "prerequisite": "subtraction.unknown-addend.meaning",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The other part is the total minus the known part because the known part plus the other part makes the total."
+    }
+   ]
+  },
+  {
+   "id": "addition.application.put-together.both-unknown",
+   "concept": "addition",
+   "facet": "put-together",
+   "level": 1,
+   "type": "application",
+   "name": "Solve put-together story problems with both parts unknown",
+   "statement": "A story gives only the total of two kinds and asks how many of each there could be; any split of the total into two parts is an answer, and there are several.",
+   "assess": "Grandma has 6 flowers. Some are red and some are yellow. How many red and how many yellow could there be? Use objects or a drawing to find two different answers.",
+   "proposed_edges": [
+    {
+     "edge_id": "e249",
+     "prerequisite": "addition.application.put-together.total-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The story is a put-together situation with the total given, in which two parts are combined to make the total."
+    },
+    {
+     "edge_id": "e250",
+     "prerequisite": "number-composition.within-10.decompose",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Finding two different splits of 6 flowers uses breaking a number into two parts in more than one way."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.application.compare.difference-unknown",
+   "concept": "subtraction",
+   "facet": "comparison",
+   "level": 2,
+   "type": "application",
+   "name": "Solve compare story problems with the difference unknown",
+   "statement": "A story gives two amounts and asks how many more one has than the other (or how many fewer); the answer is the larger minus the smaller.",
+   "assess": "Lucy has 12 stickers. Julie has 7 stickers. How many more stickers does Lucy have than Julie? Use objects, a drawing, or an equation.",
+   "proposed_edges": [
+    {
+     "edge_id": "e251",
+     "prerequisite": "comparing.count.matching",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The difference is the part of the larger set left unmatched when the two sets are matched one to one."
+    },
+    {
+     "edge_id": "e252",
+     "prerequisite": "comparing.more-than",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The question how many more means a greater number, not bigger things, so the stickers are compared by number."
+    },
+    {
+     "edge_id": "e253",
+     "prerequisite": "counting.objects",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The difference is found by counting the unmatched objects."
+    },
+    {
+     "edge_id": "e254",
+     "prerequisite": "equation.situation.one-step",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner writes 12 - 7 = ? or 7 + ? = 12 with a symbol for the difference."
+    },
+    {
+     "edge_id": "e255",
+     "prerequisite": "equation.unknown.subtraction",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Finding the larger minus the smaller is finding the unknown difference in a subtraction equation."
+    },
+    {
+     "edge_id": "e256",
+     "prerequisite": "subtraction.unknown-addend.meaning",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The larger minus the smaller is the number that added to the smaller makes the larger."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.application.compare.bigger-unknown",
+   "concept": "subtraction",
+   "facet": "comparison",
+   "level": 2,
+   "type": "application",
+   "name": "Solve compare story problems with the larger amount unknown",
+   "statement": "A story gives the smaller amount and how many more (or fewer) the other has, and asks for the larger amount; the answer is the smaller plus the difference.",
+   "assess": "Julie has 7 stickers. Lucy has 5 more stickers than Julie. How many stickers does Lucy have? Use objects, a drawing, or an equation.",
+   "proposed_edges": [
+    {
+     "edge_id": "e257",
+     "prerequisite": "addition.add-to.count-all",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The larger amount is found by joining the smaller amount and the difference and counting all."
+    },
+    {
+     "edge_id": "e258",
+     "prerequisite": "comparing.count.matching",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The larger set is the matched set of the smaller amount together with the extra items that remain."
+    },
+    {
+     "edge_id": "e259",
+     "prerequisite": "comparing.more-than",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The phrase 5 more means a greater number by 5, not bigger things, so the larger amount is a number."
+    },
+    {
+     "edge_id": "e260",
+     "prerequisite": "counting.produce-set",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "With objects, make a set for the smaller amount and then a set of 5 more."
+    },
+    {
+     "edge_id": "e261",
+     "prerequisite": "equation.situation.one-step",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner writes 7 + 5 = ? with a symbol for the larger amount."
+    },
+    {
+     "edge_id": "e262",
+     "prerequisite": "equation.unknown.addition",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The answer is the smaller plus the difference, which is finding the unknown sum in an addition equation."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.application.compare.smaller-unknown",
+   "concept": "subtraction",
+   "facet": "comparison",
+   "level": 2,
+   "type": "application",
+   "name": "Solve compare story problems with the smaller amount unknown",
+   "statement": "A story gives the larger amount and how many fewer (or more) the other has, and asks for the smaller amount; the answer is the larger minus the difference.",
+   "assess": "Lucy has 13 stickers. Julie has 4 fewer stickers than Lucy. How many stickers does Julie have? Use objects, a drawing, or an equation.",
+   "proposed_edges": [
+    {
+     "edge_id": "e263",
+     "prerequisite": "comparing.count.matching",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The smaller set is the larger set with the unmatched extra items removed."
+    },
+    {
+     "edge_id": "e264",
+     "prerequisite": "comparing.more-than",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The phrase 4 fewer means a number lower by 4, so the comparison is by number and not by size of things."
+    },
+    {
+     "edge_id": "e265",
+     "prerequisite": "equation.situation.one-step",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner writes 13 - 4 = ? with a symbol for the smaller amount."
+    },
+    {
+     "edge_id": "e266",
+     "prerequisite": "equation.unknown.subtraction",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The answer is the larger minus the difference, which is finding the unknown difference in a subtraction equation."
+    },
+    {
+     "edge_id": "e267",
+     "prerequisite": "subtraction.take-away.count-remaining",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "With objects, make the larger amount and take away the difference, then count what is left."
+    }
+   ]
+  },
+  {
+   "id": "addition.application.three-addends",
+   "concept": "addition",
+   "facet": "put-together",
+   "level": 2,
+   "type": "application",
+   "name": "Solve story problems that add three numbers",
+   "statement": "A story combines three amounts and asks for the total, which is the sum of all three.",
+   "assess": "Max has 4 red cars, 7 blue cars, and 6 green cars. How many cars does he have? Use objects, a drawing, or an equation.",
+   "proposed_edges": [
+    {
+     "edge_id": "e268",
+     "prerequisite": "addition.application.put-together.total-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The story combines three amounts into a total, which extends combining two parts into a total."
+    },
+    {
+     "edge_id": "e269",
+     "prerequisite": "addition.associative.strategy",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The total of three amounts is found by adding two of them first and then the third."
+    },
+    {
+     "edge_id": "e270",
+     "prerequisite": "addition.count-on",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The total of three groups is found by joining one group at a time and counting on."
+    },
+    {
+     "edge_id": "e271",
+     "prerequisite": "addition.make-ten",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Adding 4, 7, and 6 passes 10 in one step, so a sum across 10 must be found."
+    }
+   ]
+  },
+  {
+   "id": "equation.situation.one-step",
+   "concept": "equation",
+   "facet": "relational",
+   "level": 2,
+   "type": "representation",
+   "name": "Write an equation with a symbol for the unknown for a one-step story",
+   "statement": "A one-step addition or subtraction story is represented by one equation that relates its three quantities, with a symbol such as ? or a box standing for the unknown quantity in its position.",
+   "assess": "Write an equation, using a box for the unknown, for this story. Do not solve it. Some birds were on a wire. 5 more landed. Then there were 13 birds.",
+   "proposed_edges": [
+    {
+     "edge_id": "e272",
+     "prerequisite": "addition.application.add-to-story",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "One-step add-to stories must be understood as joining situations to tell which quantity is the start, change, or result."
+    },
+    {
+     "edge_id": "e273",
+     "prerequisite": "addition.application.put-together.total-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "One-step put-together stories must be understood as two parts and a total to place the unknown correctly."
+    },
+    {
+     "edge_id": "e274",
+     "prerequisite": "addition.notation.equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner writes addition equations a + b = c with a symbol standing in for one quantity."
+    },
+    {
+     "edge_id": "e275",
+     "prerequisite": "comparing.more-than",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Compare stories with more or fewer are one of the story structures whose quantities the equation must relate."
+    },
+    {
+     "edge_id": "e276",
+     "prerequisite": "equation.unknown.addition",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation puts a box for the unknown in its position among three quantities related by addition."
+    },
+    {
+     "edge_id": "e277",
+     "prerequisite": "equation.unknown.subtraction",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation puts a box for the unknown in its position among three quantities related by subtraction."
+    },
+    {
+     "edge_id": "e278",
+     "prerequisite": "subtraction.application.compare.difference-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "One-step compare stories must be understood as a larger, a smaller, and a difference to place the unknown correctly."
+    },
+    {
+     "edge_id": "e279",
+     "prerequisite": "subtraction.application.take-from-story",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "One-step take-from stories must be understood as taking-away situations to tell which quantity is the start, change, or result."
+    },
+    {
+     "edge_id": "e280",
+     "prerequisite": "subtraction.notation.equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner writes subtraction equations a - b = c with a symbol standing in for one quantity."
+    }
+   ]
+  },
+  {
+   "id": "addition.application.two-step",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 2,
+   "type": "application",
+   "name": "Solve two-step addition and subtraction story problems",
+   "statement": "A story requires two addition or subtraction steps, the result of the first step being a quantity used in the second, with the unknown in any position.",
+   "assess": "A bus had 23 people. At the first stop 8 got off. At the second stop 15 got on. How many people are on the bus now? Use a drawing or equations.",
+   "proposed_edges": [
+    {
+     "edge_id": "e281",
+     "prerequisite": "addition.application.add-to.change-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each step may be an add-to story with the change unknown, which must be solved as a one-step problem."
+    },
+    {
+     "edge_id": "e282",
+     "prerequisite": "addition.application.add-to.start-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each step may be an add-to story with the start unknown, which must be solved as a one-step problem."
+    },
+    {
+     "edge_id": "e283",
+     "prerequisite": "addition.application.put-together.addend-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each step may be a put-together story with one part unknown, which must be solved as a one-step problem."
+    },
+    {
+     "edge_id": "e284",
+     "prerequisite": "addition.base-ten.model",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The second step 15 + 15 is a sum of two two-digit numbers done with a base-ten model."
+    },
+    {
+     "edge_id": "e285",
+     "prerequisite": "subtraction.application.compare.bigger-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each step may be a compare story with the larger amount unknown, which must be solved as a one-step problem."
+    },
+    {
+     "edge_id": "e286",
+     "prerequisite": "subtraction.application.compare.difference-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each step may be a compare story with the difference unknown, which must be solved as a one-step problem."
+    },
+    {
+     "edge_id": "e287",
+     "prerequisite": "subtraction.application.compare.smaller-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each step may be a compare story with the smaller amount unknown, which must be solved as a one-step problem."
+    },
+    {
+     "edge_id": "e288",
+     "prerequisite": "subtraction.application.take-from.change-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each step may be a take-from story with the change unknown, which must be solved as a one-step problem."
+    },
+    {
+     "edge_id": "e289",
+     "prerequisite": "subtraction.application.take-from.start-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each step may be a take-from story with the start unknown, which must be solved as a one-step problem."
+    },
+    {
+     "edge_id": "e290",
+     "prerequisite": "subtraction.base-ten.model",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The first step 23 - 8 is a subtraction of a one-digit number from a two-digit number done with a base-ten model."
+    }
+   ]
+  },
+  {
+   "id": "equation.situation.two-step",
+   "concept": "equation",
+   "facet": "relational",
+   "level": 2,
+   "type": "representation",
+   "name": "Write equations with a symbol for the unknown for a two-step story",
+   "statement": "A two-step addition or subtraction story is represented by equations (one per step, or one with two operations) in which a symbol stands for each unknown quantity.",
+   "assess": "Write equations, using boxes for unknowns, for this story. Do not solve them. A bus had 23 people. At the first stop 8 got off. At the second stop 15 got on. How many people are on the bus now?",
+   "proposed_edges": [
+    {
+     "edge_id": "e291",
+     "prerequisite": "addition.application.two-step",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equations follow the two steps of the story, the first result being used as a quantity in the second."
+    },
+    {
+     "edge_id": "e292",
+     "prerequisite": "equation.situation.one-step",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each step of the story is written as an equation with a symbol for the unknown, as in a one-step story."
+    }
+   ]
+  },
+  {
+   "id": "addition.two-digit-plus-tens.model",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 2,
+   "type": "procedure",
+   "name": "Add a multiple of 10 to a two-digit number with a base-ten model",
+   "statement": "To add a multiple of 10 to a two-digit number with base-ten blocks or a drawing, join the tens to the tens; the ones do not change. The sum is within 100.",
+   "assess": "Use base-ten blocks or a drawing of tens and ones to find 46 + 30.",
+   "procedure": [
+    "Show the two-digit number as tens and ones.",
+    "Add the tens of the multiple of 10 to the tens.",
+    "Read the new number of tens and the unchanged ones."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e293",
+     "prerequisite": "addition.add-to.count-all",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 adds the tens of the multiple of 10 to the tens, which is joining two small sets and counting all."
+    },
+    {
+     "edge_id": "e294",
+     "prerequisite": "addition.count-on",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Joining the tens to the tens is adding two small numbers of tens, which can be done by counting on."
+    },
+    {
+     "edge_id": "e295",
+     "prerequisite": "place-value.decade.tens",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The multiple of 10 being added is a number of tens, so 30 is joined as 3 tens."
+    },
+    {
+     "edge_id": "e296",
+     "prerequisite": "place-value.ten.unit",
+     "relation": "representational",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The base-ten blocks show each ten as a rod, a bundle of ten ones."
+    },
+    {
+     "edge_id": "e297",
+     "prerequisite": "place-value.two-digit.tens-ones",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 shows the two-digit number as tens and ones, and step 3 reads the new tens and the unchanged ones."
+    }
+   ]
+  },
+  {
+   "id": "addition.two-digit-plus-tens.split-tens",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 3,
+   "type": "procedure",
+   "name": "Add a multiple of 10 by splitting off the ones",
+   "statement": "Write the two-digit number as its tens plus its ones, add the multiple of 10 to the tens, then add back the ones: (t + u) + m = (t + m) + u, which holds by the commutative and associative properties.",
+   "assess": "Find 46 + 30 without blocks by splitting 46 into tens and ones. Show the split.",
+   "procedure": [
+    "Write the two-digit number as tens plus ones (46 = 40 + 6).",
+    "Add the multiple of 10 to the tens (40 + 30 = 70).",
+    "Add the ones back on (70 + 6 = 76)."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e298",
+     "prerequisite": "addition.associative.strategy",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation (t + u) + m = (t + m) + u regroups the three addends, which holds by the associative property."
+    },
+    {
+     "edge_id": "e299",
+     "prerequisite": "addition.commutative",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation (t + u) + m = (t + m) + u swaps the order of u and m, which holds by the commutative property."
+    },
+    {
+     "edge_id": "e300",
+     "prerequisite": "addition.within-10.fluency",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The tens are added with a one-digit fact such as 4 + 3."
+    },
+    {
+     "edge_id": "e301",
+     "prerequisite": "place-value.decade.tens",
+     "relation": "definitional",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 adds the multiple of 10 to the tens, such as 40 + 30 = 70, using decade numbers as numbers of tens."
+    },
+    {
+     "edge_id": "e302",
+     "prerequisite": "place-value.expanded-form",
+     "relation": "representational",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step one writes the two-digit number as tens plus ones, such as 46 = 40 + 6."
+    },
+    {
+     "edge_id": "e303",
+     "prerequisite": "place-value.two-digit.tens-ones",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 writes the two-digit number as tens plus ones, such as 46 = 40 + 6."
+    }
+   ]
+  },
+  {
+   "id": "addition.two-digit-plus-one-digit.model",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 2,
+   "type": "procedure",
+   "name": "Add a one-digit number to a two-digit number with a base-ten model",
+   "statement": "To add a one-digit number to a two-digit number with base-ten blocks or a drawing, join ones to ones; if there are 10 or more ones, trade ten ones for a ten. The sum is within 100.",
+   "assess": "Use base-ten blocks or a drawing of tens and ones to find 38 + 5.",
+   "procedure": [
+    "Show the two-digit number as tens and ones, and the one-digit number as ones.",
+    "Join the ones.",
+    "If there are 10 or more ones, trade ten of them for one ten.",
+    "Read the number of tens and ones."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e304",
+     "prerequisite": "addition.add-to.count-all",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 joins the ones to the ones, which is joining two small sets and counting all."
+    },
+    {
+     "edge_id": "e305",
+     "prerequisite": "addition.count-on",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Joining the ones of the number to the one-digit number is adding two small numbers."
+    },
+    {
+     "edge_id": "e306",
+     "prerequisite": "place-value.teen.decompose",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Taking ten out of a teen number of ones is splitting a teen number into ten ones and some ones."
+    },
+    {
+     "edge_id": "e307",
+     "prerequisite": "place-value.ten.unit",
+     "relation": "definitional",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 trades ten ones for one ten, which uses a ten as a bundle of ten ones."
+    },
+    {
+     "edge_id": "e308",
+     "prerequisite": "place-value.two-digit.tens-ones",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 shows the two-digit number as tens and ones and step 4 reads the result as tens and ones."
+    }
+   ]
+  },
+  {
+   "id": "addition.two-digit-plus-one-digit.next-ten",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 3,
+   "type": "procedure",
+   "name": "Add a one-digit number by making the next ten",
+   "statement": "To add a one-digit number b to a two-digit number a whose ones plus b is more than 10, split b into the amount that brings a up to the next multiple of 10 and the rest, then add the rest to that multiple of 10.",
+   "assess": "Find 38 + 5 by first making 40. Show how you split the 5.",
+   "procedure": [
+    "Find how much brings a to the next multiple of 10 (for 38, that is 2, reaching 40).",
+    "Split b into that amount and the rest (5 = 2 + 3).",
+    "Add the rest to the multiple of 10 (40 + 3 = 43)."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e309",
+     "prerequisite": "addition.make-ten",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The strategy extends adding across 10 by making a ten from one-digit numbers to a two-digit number."
+    },
+    {
+     "edge_id": "e310",
+     "prerequisite": "number-composition.make-ten.find",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 finds how much brings a to the next ten, which is the partner of the ones digit that makes 10."
+    },
+    {
+     "edge_id": "e311",
+     "prerequisite": "number-composition.within-10.decompose",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 splits b into the amount that reaches the next ten and the rest, which is breaking a number into two parts."
+    },
+    {
+     "edge_id": "e312",
+     "prerequisite": "number-composition.within-10.equation",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step two splits b into the amount to the next ten and the rest, and records it as a sum."
+    },
+    {
+     "edge_id": "e313",
+     "prerequisite": "place-value.decade.tens",
+     "relation": "definitional",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 adds the rest to a multiple of 10, such as 40 + 3, using the multiple of 10 as a number of tens."
+    },
+    {
+     "edge_id": "e314",
+     "prerequisite": "place-value.expanded-form",
+     "relation": "representational",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step three adds the rest to the multiple of 10, as in 40 + 3 = 43, which is reading tens plus ones as a number."
+    },
+    {
+     "edge_id": "e315",
+     "prerequisite": "place-value.two-digit.tens-ones",
+     "relation": "definitional",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The result 43 is read as 4 tens and 3 ones, the two digits of a two-digit number."
+    }
+   ]
+  },
+  {
+   "id": "addition.two-digit.relate-written",
+   "concept": "addition",
+   "facet": "operation",
+   "level": 2,
+   "type": "representation",
+   "name": "Match an addition done with a model to a written record",
+   "statement": "Each step of an addition done with base-ten blocks or a drawing corresponds to a step of a written record, such as adding the tens in an equation.",
+   "assess": "Ben found 46 + 30 with blocks: he put 3 more ten-rods with his 4 ten-rods and kept the 6 ones. Which written line matches what he did?  (a) 40 + 30 + 6 = 76  (b) 46 + 3 = 49  (c) 4 + 3 + 6 = 13",
+   "proposed_edges": [
+    {
+     "edge_id": "e316",
+     "prerequisite": "addition.notation.equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The written record is an addition equation such as 40 + 30 + 6 = 76 that must be read as joining amounts."
+    },
+    {
+     "edge_id": "e317",
+     "prerequisite": "addition.two-digit-plus-tens.model",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The steps matched are the steps of an addition done with base-ten blocks, such as adding the tens to the tens."
+    },
+    {
+     "edge_id": "e318",
+     "prerequisite": "addition.two-digit-plus-tens.split-tens",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The written side of the match is the equation that splits the number and adds the tens."
+    },
+    {
+     "edge_id": "e319",
+     "prerequisite": "place-value.two-digit.tens-ones",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The line 40 + 30 + 6 writes 46 as 40 + 6, which is reading the two digits as tens and ones."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.tens-minus-tens.model",
+   "concept": "subtraction",
+   "facet": "take-away",
+   "level": 2,
+   "type": "procedure",
+   "name": "Subtract a multiple of 10 from a multiple of 10 with a base-ten model",
+   "statement": "To subtract one multiple of 10 from another (each from 10 to 90, the difference 0 or more) with ten-rods or a drawing, take away that many tens; the tens left give the difference.",
+   "assess": "Use ten-rods or a drawing of tens to find 80 - 50.",
+   "procedure": [
+    "Show the first number as ten-rods.",
+    "Take away as many ten-rods as the second number has tens.",
+    "Count the ten-rods left and name the number they show."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e320",
+     "prerequisite": "place-value.decade.tens",
+     "relation": "definitional",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 names the number shown by the ten-rods left, which is a decade number as a number of tens."
+    },
+    {
+     "edge_id": "e321",
+     "prerequisite": "place-value.ten.unit",
+     "relation": "representational",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 shows the first number as ten-rods, each rod a bundle of ten ones."
+    },
+    {
+     "edge_id": "e322",
+     "prerequisite": "subtraction.take-away.count-remaining",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 takes away ten-rods and counts those left, which is taking objects away and counting what is left."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.tens-minus-tens.related-addition",
+   "concept": "subtraction",
+   "facet": "unknown-addend",
+   "level": 3,
+   "type": "procedure",
+   "name": "Subtract a multiple of 10 by finding the missing ten addend",
+   "statement": "To find a - b for multiples of 10, find the multiple of 10 that added to b makes a, for example from a known fact in tens.",
+   "assess": "Find 80 - 50 by thinking of 50 + ? = 80. Tell the fact you used.",
+   "procedure": [
+    "Rewrite a - b = ? as b + ? = a.",
+    "Find the missing multiple of 10, using the matching one-digit fact in tens (5 + 3 = 8, so 50 + 30 = 80).",
+    "The missing addend is the difference."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e323",
+     "prerequisite": "addition.within-10.fluency",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 uses a known one-digit fact such as 5 + 3 = 8, which is recalled addition within 10."
+    },
+    {
+     "edge_id": "e324",
+     "prerequisite": "place-value.decade.tens",
+     "relation": "definitional",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 uses the one-digit fact in tens, reading 50 and 30 as 5 tens and 3 tens."
+    },
+    {
+     "edge_id": "e325",
+     "prerequisite": "subtraction.unknown-addend.meaning",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The difference is the multiple of 10 that added to b makes a, because a difference is an unknown addend."
+    },
+    {
+     "edge_id": "e326",
+     "prerequisite": "subtraction.unknown-addend.rewrite",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 rewrites a - b = ? as b + ? = a, which is the rewrite of a subtraction as an unknown-addend addition."
+    }
+   ]
+  },
+  {
+   "id": "subtraction.tens-minus-tens.relate-written",
+   "concept": "subtraction",
+   "facet": "take-away",
+   "level": 2,
+   "type": "representation",
+   "name": "Match a subtraction of tens done with a model to a written record",
+   "statement": "Each step of a subtraction of tens done with ten-rods or a drawing corresponds to a step of a written record, such as an equation in tens.",
+   "assess": "Mia took 3 ten-rods away from 8 ten-rods. Which written line matches what she did?  (a) 80 - 30 = 50  (b) 80 - 3 = 77  (c) 8 + 3 = 11",
+   "proposed_edges": [
+    {
+     "edge_id": "e327",
+     "prerequisite": "place-value.decade.tens",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The line 80 - 30 = 50 writes 8 tens and 3 tens as the decade numbers 80 and 30."
+    },
+    {
+     "edge_id": "e328",
+     "prerequisite": "subtraction.notation.equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The written record is a subtraction equation such as 80 - 30 = 50 that must be read as taking one amount from another."
+    },
+    {
+     "edge_id": "e329",
+     "prerequisite": "subtraction.tens-minus-tens.model",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The steps matched are the steps of a subtraction done with ten-rods, such as taking away 3 rods from 8 rods."
+    }
+   ]
+  }
+ ]
+}

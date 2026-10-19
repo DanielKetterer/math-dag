@@ -1,0 +1,1852 @@
+{
+ "boundary_nodes": [
+  "area.rectangle.length-times-width",
+  "area.rectangle.tiling",
+  "coordinate-plane.first-quadrant",
+  "coordinate-plane.four-quadrants",
+  "data.graphs.read",
+  "division.nonunit-fraction-by-whole",
+  "equations.linear.solve",
+  "equations.one-step",
+  "expressions.variables",
+  "fraction.reciprocal",
+  "fraction.subtraction.comparison",
+  "functions.definition",
+  "geometry.similar-triangles",
+  "measurement.unit-conversion",
+  "measurement.weight.attribute",
+  "rational-numbers.operations"
+ ],
+ "nodes": [
+  {
+   "id": "parity.even-odd.pairing",
+   "concept": "parity",
+   "facet": "pairing",
+   "level": 1,
+   "type": "concept",
+   "name": "Even and odd as pairing with none or one left over",
+   "statement": "A collection has an even number of objects when its objects can be put into pairs with none left over, and an odd number when one object is left over.",
+   "assess": "Here are 13 counters. Put them in pairs. Is 13 even or odd? How do you know?",
+   "proposed_edges": [
+    {
+     "edge_id": "e330",
+     "prerequisite": "counting.objects",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Even and odd are properties of the number of objects in a collection, so the learner must count how many objects there are."
+    }
+   ]
+  },
+  {
+   "id": "parity.even-odd.skip-count",
+   "concept": "parity",
+   "facet": "pairing",
+   "level": 1,
+   "type": "procedure",
+   "name": "Decide even or odd by counting a collection by 2s",
+   "statement": "Count a collection of up to 20 objects by moving them two at a time while saying 2, 4, 6, ...; the number is even if the count ends with no object left, and odd if one object is left.",
+   "assess": "Count these 14 counters by 2s, moving two at a time. Is 14 even or odd?",
+   "procedure": [
+    "Move two objects aside and say 2.",
+    "Keep moving two objects at a time, saying the next number in the count by 2s.",
+    "If no object is left, the number is even; if one object is left, it is odd."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e331",
+     "prerequisite": "counting.unitize",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Moving two objects aside and saying one number treats each pair as a single counted unit."
+    },
+    {
+     "edge_id": "e332",
+     "prerequisite": "counting.skip.twos",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 says the next number in the count by 2s each time two objects are moved, which needs counting by twos."
+    },
+    {
+     "edge_id": "e333",
+     "prerequisite": "parity.even-odd.pairing",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule that the number is even when no object is left and odd when one is left is the pairing meaning of even and odd."
+    }
+   ]
+  },
+  {
+   "id": "parity.even.equal-addends",
+   "concept": "parity",
+   "facet": "equal-addends",
+   "level": 2,
+   "type": "representation",
+   "name": "Write an even number as a sum of two equal addends",
+   "statement": "An even number n can be written as an equation n = a + a, the sum of two equal whole numbers.",
+   "assess": "Write 18 as the sum of two equal numbers.",
+   "proposed_edges": [
+    {
+     "edge_id": "e334",
+     "prerequisite": "addition.doubles.fact",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Finding that 18 is 9 + 9 uses the double of 9 recalled or checked as a doubles fact."
+    },
+    {
+     "edge_id": "e335",
+     "prerequisite": "addition.notation.equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement writes the number as an addition equation n = a + a, so the learner must write and read addition equations."
+    },
+    {
+     "edge_id": "e336",
+     "prerequisite": "parity.even-odd.pairing",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "An even number is one whose collection splits into pairs with none left, which is what makes it two equal halves a + a."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.array.rows-columns",
+   "concept": "multiplication",
+   "facet": "array-area",
+   "level": 1,
+   "type": "concept",
+   "name": "An array as rows of equal columns",
+   "statement": "A rectangular array is an arrangement of objects in rows and columns in which every row has the same number of objects and every column has the same number of objects.",
+   "assess": "Here are three arrangements of dots. Which one is an array? For the array, how many rows are there and how many dots are in each row?",
+   "proposed_edges": [
+    {
+     "edge_id": "e337",
+     "prerequisite": "comparing.count.matching",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Every row having the same number of objects is checked by lining rows up one-to-one with each other."
+    },
+    {
+     "edge_id": "e338",
+     "prerequisite": "counting.objects",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Telling how many rows and how many dots are in each row of the array requires counting the collection."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.array.total-by-adding",
+   "concept": "multiplication",
+   "facet": "array-area",
+   "level": 2,
+   "type": "procedure",
+   "name": "Find the total of an array by adding its rows",
+   "statement": "The total number of objects in a rectangular array with up to 5 rows and 5 columns is found by adding the number in one row once for each row.",
+   "assess": "This array has 4 rows of 5 dots. Find the total by adding the rows, not by counting the dots one by one.",
+   "procedure": [
+    "Count the objects in one row.",
+    "Count the rows.",
+    "Add the row amount once for each row; the sum is the total."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e339",
+     "prerequisite": "addition.within-20.fluency",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 adds the row amount repeatedly, with partial sums in the range of the within-20 sums."
+    },
+    {
+     "edge_id": "e340",
+     "prerequisite": "counting.objects",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 counts the objects in one row and step 2 counts the rows."
+    },
+    {
+     "edge_id": "e341",
+     "prerequisite": "multiplication.array.rows-columns",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about a rectangular array with equal rows, so the learner must know what rows and columns of an array are."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.array.equal-addends-equation",
+   "concept": "multiplication",
+   "facet": "array-area",
+   "level": 2,
+   "type": "representation",
+   "name": "Write an array total as a sum of equal addends",
+   "statement": "The total of a rectangular array is recorded as an equation with one equal addend for each row, such as 5 + 5 + 5 + 5 = 20 for 4 rows of 5.",
+   "assess": "This array has 3 rows of 4 stars and 12 stars in all. Write an addition equation with one addend for each row.",
+   "proposed_edges": [
+    {
+     "edge_id": "e342",
+     "prerequisite": "addition.notation.equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The record is an addition equation such as 5 + 5 + 5 + 5 = 20, in the notation of addition equations."
+    },
+    {
+     "edge_id": "e343",
+     "prerequisite": "equation.equal-sign.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation states that the sum of the row addends equals the total, which uses the equal sign as sameness of value."
+    },
+    {
+     "edge_id": "e344",
+     "prerequisite": "multiplication.array.rows-columns",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "One addend for each row requires seeing the rows of the array and how many objects each holds."
+    },
+    {
+     "edge_id": "e345",
+     "prerequisite": "multiplication.array.total-by-adding",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation records the adding of rows that gives the total of the array."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.application.equal-groups",
+   "concept": "multiplication",
+   "facet": "equal-groups",
+   "level": 2,
+   "type": "application",
+   "name": "Solve one-step multiplication word problems within 100",
+   "statement": "A story gives a number of equal groups (objects in bags, rows of an array, or equal measures) and the size of each, with a total within 100; the learner finds the total, using a drawing or an equation.",
+   "assess": "A baker puts 6 muffins in each box and fills 7 boxes. How many muffins does she pack?",
+   "proposed_edges": [
+    {
+     "edge_id": "e346",
+     "prerequisite": "addition.two-digit-plus-one-digit.next-ten",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Totals within 100 are found by repeated addition of the group size, which passes 20 and needs two-digit sums."
+    },
+    {
+     "edge_id": "e347",
+     "prerequisite": "multiplication.array.rows-columns",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement lists rows of an array as one kind of equal group, so the array structure is used."
+    },
+    {
+     "edge_id": "e348",
+     "prerequisite": "multiplication.array.total-by-adding",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Stories with rows of an array are solved by adding the equal rows to find the total."
+    },
+    {
+     "edge_id": "e349",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The story gives a number of equal groups and the size of each, and the total is the product of the two."
+    },
+    {
+     "edge_id": "e350",
+     "prerequisite": "multiplication.equal-groups.situation-to-expression",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Using a drawing or an equation to find the total means modeling the equal-groups story and writing a multiplication expression."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.equal-groups.equation-unknown",
+   "concept": "multiplication",
+   "facet": "equal-groups",
+   "level": 2,
+   "type": "representation",
+   "name": "Write a multiplication equation with a symbol for the unknown total",
+   "statement": "An equal-groups word problem with the total unknown is represented by an equation a x b = ? in which a symbol stands for the unknown total.",
+   "assess": "There are 5 vases with 7 flowers in each. Write an equation with a symbol for the total number of flowers. Do not solve it.",
+   "proposed_edges": [
+    {
+     "edge_id": "e351",
+     "prerequisite": "equation.situation.one-step",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A symbol standing for the unknown total in an equation for a one-step story is the representation used here."
+    },
+    {
+     "edge_id": "e352",
+     "prerequisite": "multiplication.equal-groups.situation-to-expression",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation a x b = ? is the multiplication expression for the story, so the learner first writes that expression."
+    }
+   ]
+  },
+  {
+   "id": "division.application.partitive",
+   "concept": "division",
+   "facet": "partitive",
+   "level": 2,
+   "type": "application",
+   "name": "Solve one-step sharing division word problems within 100",
+   "statement": "A story gives a total within 100 shared equally among a given number of groups (including the rows of an array); the learner finds the size of each group, using a drawing or an equation.",
+   "assess": "28 stickers are shared equally among 4 friends. How many stickers does each friend get?",
+   "proposed_edges": [
+    {
+     "edge_id": "e353",
+     "prerequisite": "division.partitive.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The story shares a total equally among groups and asks for the size of each share, which is the sharing meaning of division."
+    },
+    {
+     "edge_id": "e354",
+     "prerequisite": "division.partitive.situation-to-expression",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Using a drawing or an equation means modeling the sharing story and writing the division expression for it."
+    },
+    {
+     "edge_id": "e355",
+     "prerequisite": "multiplication.array.rows-columns",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement includes sharing among the rows of an array, so rows of an array must be understood."
+    },
+    {
+     "edge_id": "e356",
+     "prerequisite": "partitioning.set.deal-out",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A drawing of the sharing is carried out by dealing the total out one at a time to each group."
+    }
+   ]
+  },
+  {
+   "id": "division.application.measurement",
+   "concept": "division",
+   "facet": "measurement",
+   "level": 2,
+   "type": "application",
+   "name": "Solve one-step grouping division word problems within 100",
+   "statement": "A story gives a total within 100 and the size of each equal group or piece (including the length of a row of an array, or an equal measure); the learner finds the number of groups, using a drawing or an equation.",
+   "assess": "Jo has 30 centimeters of ribbon and cuts it into pieces 5 centimeters long. How many pieces does she get?",
+   "proposed_edges": [
+    {
+     "edge_id": "e357",
+     "prerequisite": "division.measurement.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The story gives the size of each group and asks for the number of groups, the grouping meaning of a quotient."
+    },
+    {
+     "edge_id": "e358",
+     "prerequisite": "division.measurement.situation-to-expression",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A drawing or equation requires modeling the grouping story and writing its division expression."
+    },
+    {
+     "edge_id": "e359",
+     "prerequisite": "multiplication.equal-groups.make",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A drawing solution makes groups of the given size from the total until none is left."
+    },
+    {
+     "edge_id": "e360",
+     "prerequisite": "partitioning.segment.equal-lengths",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Cutting a length into equal pieces, such as the ribbon, is the equal-measure case in the statement."
+    }
+   ]
+  },
+  {
+   "id": "division.unknown-factor.equation-from-story",
+   "concept": "division",
+   "facet": "unknown-factor",
+   "level": 2,
+   "type": "representation",
+   "name": "Write a division word problem as a multiplication equation with an unknown factor",
+   "statement": "A sharing or grouping word problem is represented by a multiplication equation in which a symbol stands for the unknown factor, such as 4 x ? = 28 for 28 children seated 4 to a table.",
+   "assess": "28 children sit at tables with 4 children at each table. Write a multiplication equation with a box for the number of tables. Do not solve it.",
+   "proposed_edges": [
+    {
+     "edge_id": "e361",
+     "prerequisite": "division.measurement.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement covers grouping stories, such as 28 children seated 4 to a table, asking for the number of groups."
+    },
+    {
+     "edge_id": "e362",
+     "prerequisite": "division.partitive.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement covers sharing stories, which must be recognized as a total split into equal groups."
+    },
+    {
+     "edge_id": "e363",
+     "prerequisite": "equation.situation.one-step",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A symbol for the unknown inside an equation for a one-step story is the notation used here."
+    },
+    {
+     "edge_id": "e364",
+     "prerequisite": "multiplication.equal-groups.equation-unknown",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The unknown-factor equation 4 x ? = 28 uses the same symbol-for-unknown multiplication equation form, with the symbol in a factor place."
+    },
+    {
+     "edge_id": "e365",
+     "prerequisite": "multiplication.equal-groups.situation-to-expression",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation 4 x ? = 28 is a multiplication expression for equal groups equal to a total."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.unknown-factor.solve",
+   "concept": "multiplication",
+   "facet": "equal-groups",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the unknown factor in a multiplication equation",
+   "statement": "In an equation a x ? = c or ? x b = c with whole numbers, factors through 10 and c within 100, the unknown is the whole number whose product with the known factor is c.",
+   "assess": "Find the number that makes each equation true: 8 x ? = 48, and ? x 6 = 54.",
+   "procedure": [
+    "Identify the known factor and the product.",
+    "Find the number whose product with the known factor is the product, by recalling the multiplication fact or by dividing the product by the known factor.",
+    "Check by multiplying the number found by the known factor."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e366",
+     "prerequisite": "division.measurement.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Dividing the product by the known factor to find the unknown number of groups is the grouping division."
+    },
+    {
+     "edge_id": "e367",
+     "prerequisite": "division.partitive.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Dividing the product by the known factor to find the unknown group size is the sharing division."
+    },
+    {
+     "edge_id": "e368",
+     "prerequisite": "division.unknown-factor.equation-from-story",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equations a x ? = c and ? x b = c are the forms in which the unknown factor appears in a story-based equation."
+    },
+    {
+     "edge_id": "e369",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Checking by multiplying the number found by the known factor uses the product as a number of equal groups."
+    }
+   ]
+  },
+  {
+   "id": "division.unknown-dividend-divisor.solve",
+   "concept": "division",
+   "facet": "unknown-factor",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find an unknown dividend or divisor in a division equation",
+   "statement": "In a division equation c divided by a = b with whole numbers and a nonzero quotient, an unknown dividend is the product a x b, and an unknown divisor is the unknown factor in ? x b = c.",
+   "assess": "Find the number that makes each equation true: ? divided by 3 = 5, and 48 divided by ? = 6.",
+   "procedure": [
+    "Rewrite the division equation c divided by a = b as the multiplication equation a x b = c, keeping the symbol for the unknown.",
+    "If the dividend c is unknown, multiply a x b.",
+    "If the divisor a is unknown, find the number that times b gives c.",
+    "Check by putting the number found into the division equation."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e370",
+     "prerequisite": "division.unknown-factor.rewrite",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 rewrites c divided by a = b as a x b = c, keeping the symbol for the unknown."
+    },
+    {
+     "edge_id": "e371",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 multiplies a x b for an unknown dividend, using the product as a number of equal groups."
+    },
+    {
+     "edge_id": "e372",
+     "prerequisite": "multiplication.unknown-factor.solve",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 finds an unknown divisor as the unknown factor in ? x b = c."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.commutative",
+   "concept": "multiplication",
+   "facet": "array-area",
+   "level": 3,
+   "type": "concept",
+   "name": "The commutative property of multiplication",
+   "statement": "For any numbers a and b, a x b = b x a.",
+   "assess": "Without computing either side, is 7 x 9 = 9 x 7 true? Which property tells you?",
+   "proposed_edges": [
+    {
+     "edge_id": "e373",
+     "prerequisite": "equation.equal-sign.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is an equation a x b = b x a, so the learner must read it as two sides having the same value."
+    },
+    {
+     "edge_id": "e374",
+     "prerequisite": "multiplication.array.rows-columns",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The property is shown by turning an array of a rows of b into b rows of a, so rows and columns of an array are used."
+    },
+    {
+     "edge_id": "e375",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The expressions a x b and b x a each mean a number of equal groups, which the property compares."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.commutative.strategy",
+   "concept": "multiplication",
+   "facet": "array-area",
+   "level": 3,
+   "type": "procedure",
+   "name": "Use the commutative property to find a product",
+   "statement": "Find a product a x b by switching the order of the factors to b x a when that product is known or easier to find.",
+   "assess": "You know 3 x 9 = 27. Use the commutative property to find 9 x 3, and say how you used it.",
+   "procedure": [
+    "Switch the order of the two factors.",
+    "Find the product with the factors switched, from a known fact or an easier count.",
+    "Give that product as the answer to the original problem."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e376",
+     "prerequisite": "multiplication.array.total-by-adding",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 may find the product with the factors switched from an easier count of an array by adding rows."
+    },
+    {
+     "edge_id": "e377",
+     "prerequisite": "multiplication.commutative",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 switches the factors, which is applying the commutative property."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.associative",
+   "concept": "multiplication",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "The associative property of multiplication",
+   "statement": "For any numbers a, b and c, (a x b) x c = a x (b x c): when three numbers are multiplied, the product does not depend on which adjacent pair is multiplied first.",
+   "assess": "Without computing either side, is (6 x 5) x 2 = 6 x (5 x 2) true? Which property tells you?",
+   "proposed_edges": [
+    {
+     "edge_id": "e378",
+     "prerequisite": "addition.associative.strategy",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Parentheses showing which adjacent pair is done first are the same notation used for choosing which two addends to add first."
+    },
+    {
+     "edge_id": "e379",
+     "prerequisite": "equation.equal-sign.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is an equation (a x b) x c = a x (b x c) read as two sides with the same value."
+    },
+    {
+     "edge_id": "e380",
+     "prerequisite": "expressions.grouping.evaluate",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is written with parentheses showing which adjacent pair is multiplied first."
+    },
+    {
+     "edge_id": "e381",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about a product of three numbers, each product being a number of equal groups."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.associative.strategy",
+   "concept": "multiplication",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Use the associative property to find a product of three factors",
+   "statement": "Find a product of three factors by regrouping them so that an adjacent pair with a known or easy product, such as 10, is multiplied first.",
+   "assess": "Find 7 x 5 x 2 by multiplying 5 x 2 first. Show the regrouping with parentheses.",
+   "procedure": [
+    "Look for two adjacent factors whose product is known or easy.",
+    "Regroup with parentheses around that pair.",
+    "Multiply that pair, then multiply the result by the remaining factor."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e382",
+     "prerequisite": "addition.associative.strategy",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Putting parentheses around the pair chosen first uses the same notation as in addition regrouping."
+    },
+    {
+     "edge_id": "e383",
+     "prerequisite": "expressions.grouping.evaluate",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 puts parentheses around a pair and step 3 multiplies the parenthesized pair first."
+    },
+    {
+     "edge_id": "e384",
+     "prerequisite": "multiplication.associative",
+     "relation": "definitional",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 regroups the factors with parentheses, which is using the associative property."
+    },
+    {
+     "edge_id": "e385",
+     "prerequisite": "place-value.factor-of-ten",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Multiplying 7 by 10 after finding 5 x 2 uses the rule for multiplying by a factor of 10."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.distributive",
+   "concept": "multiplication",
+   "facet": "array-area",
+   "level": 3,
+   "type": "concept",
+   "name": "The distributive property of multiplication over addition",
+   "statement": "For any numbers a, b and c, a x (b + c) = a x b + a x c.",
+   "assess": "Without computing either side, is 6 x (5 + 3) = 6 x 5 + 6 x 3 true? Is 6 x (5 + 3) = 6 x 5 + 3 true?",
+   "proposed_edges": [
+    {
+     "edge_id": "e386",
+     "prerequisite": "addition.associative.strategy",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The factor (b + c) in parentheses is read as a sum found first, the same grouping notation as in addition."
+    },
+    {
+     "edge_id": "e387",
+     "prerequisite": "equation.equal-sign.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is an equation read as two sides with equal value, and the test problem asks whether such equations are true."
+    },
+    {
+     "edge_id": "e388",
+     "prerequisite": "expressions.grouping.evaluate",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement and the test problem use parentheses to show that the sum b + c is found first."
+    },
+    {
+     "edge_id": "e389",
+     "prerequisite": "multiplication.array.rows-columns",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The property is shown by splitting an array into two arrays, so rows and columns of an array are used."
+    },
+    {
+     "edge_id": "e390",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Both sides are numbers of equal groups, a groups of (b + c) against a groups of b plus a groups of c."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.distributive.strategy",
+   "concept": "multiplication",
+   "facet": "array-area",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find a product by breaking apart a factor",
+   "statement": "Find a x b by writing b as a sum of two numbers whose products with a are known, multiplying a by each part, and adding the two products.",
+   "assess": "You know 8 x 5 = 40 and 8 x 2 = 16. Use the distributive property to find 8 x 7, and show the break-apart.",
+   "procedure": [
+    "Write one factor b as a sum c + d of numbers whose products with a are known.",
+    "Find a x c and a x d.",
+    "Add the two products; the sum is a x b."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e391",
+     "prerequisite": "addition.base-ten.strategy",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 adds two products, often two-digit numbers, by a place-value addition strategy."
+    },
+    {
+     "edge_id": "e392",
+     "prerequisite": "multiplication.distributive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The strategy is justified by a x (c + d) = a x c + a x d, the distributive property."
+    },
+    {
+     "edge_id": "e393",
+     "prerequisite": "number-composition.within-10.decompose",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 writes a factor as a sum of two numbers, a decomposition of that number."
+    }
+   ]
+  },
+  {
+   "id": "division.distributive.strategy",
+   "concept": "division",
+   "facet": "partitive",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find a quotient by breaking apart the dividend",
+   "statement": "Find c divided by a by writing c as a sum of two multiples of a, dividing each part by a, and adding the two quotients; this works because (p + q) divided by a = (p divided by a) + (q divided by a).",
+   "assess": "Find 56 divided by 4 by splitting 56 into 40 + 16. Show each step.",
+   "procedure": [
+    "Write the dividend as a sum of two numbers that are each a multiple of the divisor.",
+    "Divide each part by the divisor.",
+    "Add the two quotients; the sum is the quotient of the whole dividend."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e394",
+     "prerequisite": "addition.base-ten.strategy",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 adds the two quotients, which may be two-digit numbers."
+    },
+    {
+     "edge_id": "e395",
+     "prerequisite": "division.partitive.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The quotient of each part is the size of an equal share, and the shares of the parts are added."
+    },
+    {
+     "edge_id": "e396",
+     "prerequisite": "division.unknown-factor.find-quotient",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 divides each part by the divisor, finding each quotient."
+    },
+    {
+     "edge_id": "e397",
+     "prerequisite": "multiplication.distributive",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The reason (p + q) divided by a = (p divided by a) + (q divided by a) works is the distributive property applied to the multiplication of the quotient by a."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.by-one",
+   "concept": "multiplication",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "Multiplying by 1 leaves a number unchanged",
+   "statement": "For any number a, a x 1 = a and 1 x a = a.",
+   "assess": "Without computing, what is 1 x 87? What is 3/5 x 1? Say what rule you used.",
+   "proposed_edges": [
+    {
+     "edge_id": "e398",
+     "prerequisite": "fraction.as-number",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem applies the rule to 3/5, which must be a number to be multiplied."
+    },
+    {
+     "edge_id": "e399",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule follows from 1 group of a being a, and a groups of 1 being a, the meaning of a product as equal groups."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.by-zero",
+   "concept": "multiplication",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "Multiplying by 0 gives 0",
+   "statement": "For any number a, a x 0 = 0 and 0 x a = 0.",
+   "assess": "Without computing, what is 0 x 9? What is 46 x 0? Explain using groups: what is 46 groups of 0?",
+   "proposed_edges": [
+    {
+     "edge_id": "e400",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The explanation in the test problem is that 46 equal groups of 0 contain nothing, the equal-groups meaning of a product."
+    }
+   ]
+  },
+  {
+   "id": "division.by-zero.undefined",
+   "concept": "division",
+   "facet": "unknown-factor",
+   "level": 3,
+   "type": "concept",
+   "name": "Division by zero is undefined",
+   "statement": "c divided by 0 has no value: for c not 0, no number times 0 gives c, and for c = 0, every number times 0 gives 0, so no single number is the quotient.",
+   "assess": "Ella says 6 divided by 0 = 0. Write 6 divided by 0 = ? as a multiplication with an unknown factor and explain why no number works.",
+   "proposed_edges": [
+    {
+     "edge_id": "e401",
+     "prerequisite": "division.unknown-factor.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement defines a quotient c divided by 0 as the factor that times 0 gives c."
+    },
+    {
+     "edge_id": "e402",
+     "prerequisite": "division.unknown-factor.rewrite",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem asks the learner to rewrite 6 divided by 0 as a multiplication with an unknown factor."
+    },
+    {
+     "edge_id": "e403",
+     "prerequisite": "multiplication.by-zero",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The argument that no number times 0 gives c uses the fact that any number times 0 is 0."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.facts.within-100",
+   "concept": "multiplication",
+   "facet": "core",
+   "level": 3,
+   "type": "fact",
+   "name": "Recall all products of two one-digit numbers",
+   "statement": "The product of any two one-digit numbers is known from memory, without counting or computing.",
+   "assess": "Without counting or computing aloud, give each product within 3 seconds: 7 x 8, 6 x 9, 4 x 7, 9 x 3.",
+   "proposed_edges": [
+    {
+     "edge_id": "e404",
+     "prerequisite": "multiplication.by-one",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "All products of one-digit numbers include those with 1, which are known by the rule for multiplying by 1."
+    },
+    {
+     "edge_id": "e405",
+     "prerequisite": "multiplication.by-zero",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "All products of one-digit numbers include those with 0, which are known by the rule for multiplying by 0."
+    },
+    {
+     "edge_id": "e406",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The products recalled are numbers of equal groups, and the facts attach to that meaning."
+    }
+   ]
+  },
+  {
+   "id": "operations.application.multistep",
+   "concept": "operations",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "application",
+   "name": "Solve multi-step word problems with whole-number answers",
+   "statement": "A story problem needs two or more steps, each an addition, subtraction, multiplication or division of whole numbers, and has a whole-number answer with no remainder; the learner chooses and carries out the steps.",
+   "assess": "A school buys 4 boxes of 125 pencils and gives out 290 of them. How many pencils are left?",
+   "proposed_edges": [
+    {
+     "edge_id": "e407",
+     "prerequisite": "addition.application.two-step",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement extends two-step addition and subtraction stories to stories that also use multiplication and division."
+    },
+    {
+     "edge_id": "e408",
+     "prerequisite": "division.application.measurement",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A step in the story can be a grouping division, which the learner must recognize and carry out."
+    },
+    {
+     "edge_id": "e409",
+     "prerequisite": "division.application.partitive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A step in the story can be a sharing division, which the learner must recognize and carry out."
+    },
+    {
+     "edge_id": "e410",
+     "prerequisite": "multiplication.application.equal-groups",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A step in the story can be an equal-groups multiplication, and the learner chooses and solves it."
+    },
+    {
+     "edge_id": "e411",
+     "prerequisite": "multiplication.partial-products.by-one-digit",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Finding 4 boxes of 125 pencils requires multiplying a three-digit number by a one-digit number."
+    },
+    {
+     "edge_id": "e412",
+     "prerequisite": "subtraction.base-ten.strategy",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Finding how many pencils are left after giving out 290 requires subtracting a three-digit number."
+    }
+   ]
+  },
+  {
+   "id": "operations.application.multistep.remainder",
+   "concept": "operations",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "application",
+   "name": "Solve multi-step word problems in which a remainder must be interpreted",
+   "statement": "A multi-step story problem includes a division with a remainder, and the answer depends on the situation: round the quotient up, drop the remainder, or give the remainder itself.",
+   "assess": "3 classes of 26 students each go on a trip. Each van holds 8 students. How many vans are needed?",
+   "proposed_edges": [
+    {
+     "edge_id": "e413",
+     "prerequisite": "division.partial-quotients.one-digit-divisor.remainder",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The problem includes a division with a remainder, so the quotient and remainder must be found."
+    },
+    {
+     "edge_id": "e414",
+     "prerequisite": "multiplication.partial-products.by-one-digit",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Finding 3 classes of 26 students uses multiplying a two-digit number by one digit before dividing by 8."
+    },
+    {
+     "edge_id": "e415",
+     "prerequisite": "operations.application.multistep",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is a multi-step problem in which the learner chooses and carries out the steps."
+    }
+   ]
+  },
+  {
+   "id": "operations.application.multistep.equation",
+   "concept": "operations",
+   "facet": "whole-number",
+   "level": 3,
+   "type": "representation",
+   "name": "Represent a multi-step word problem with an equation using a letter for the unknown",
+   "statement": "A multi-step story problem with whole numbers is written as one equation in which a letter stands for the unknown quantity and the operations appear in the order the story requires.",
+   "assess": "Mia buys 3 packs of 12 cards and gives away 9 cards. Write one equation, using the letter c for the number of cards she has left. Do not solve it.",
+   "proposed_edges": [
+    {
+     "edge_id": "e416",
+     "prerequisite": "equation.situation.two-step",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Writing equations with a symbol for the unknown for a two-step story is the representation extended to a single equation."
+    },
+    {
+     "edge_id": "e417",
+     "prerequisite": "expressions.write.record-calculation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The operations appear in one expression in the order the story requires, which records the calculation as a numerical expression."
+    },
+    {
+     "edge_id": "e418",
+     "prerequisite": "operations.application.multistep",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation represents a multi-step story whose steps the learner has already chosen and ordered."
+    }
+   ]
+  },
+  {
+   "id": "operations.application.reasonableness",
+   "concept": "operations",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "justification",
+   "name": "Judge whether the answer to a multi-step word problem is reasonable by estimating",
+   "statement": "An answer to a multi-step whole-number word problem is judged reasonable or not by estimating the answer with rounded numbers or mental computation and comparing.",
+   "assess": "Lee says 4 boxes of 198 nails, minus 305 nails used, leaves 1,097 nails. Without computing exactly, use rounding to decide whether his answer is reasonable, and explain.",
+   "proposed_edges": [
+    {
+     "edge_id": "e419",
+     "prerequisite": "multiplication.by-multiple-of-ten",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The estimate of 4 boxes of about 200 nails is a one-digit number times a multiple of 100."
+    },
+    {
+     "edge_id": "e420",
+     "prerequisite": "operations.application.multistep",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The answer judged is the answer to a multi-step whole-number word problem."
+    },
+    {
+     "edge_id": "e421",
+     "prerequisite": "rounding.whole-number.nearest-ten-hundred",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Estimating with rounded numbers means rounding values such as 198 and 305 to the nearest hundred."
+    }
+   ]
+  },
+  {
+   "id": "operations.application.justify-solution",
+   "concept": "operations",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "justification",
+   "name": "Justify that a solution answers a word problem",
+   "statement": "A proposed solution to a one-step or multi-step whole-number word problem is justified by showing it satisfies every condition of the story, for example by working back with the inverse operation.",
+   "assess": "A farmer packs 156 eggs into cartons of 12 and says he needs 13 cartons. Show that 13 is correct by working back from the answer.",
+   "proposed_edges": [
+    {
+     "edge_id": "e422",
+     "prerequisite": "division.unknown-factor.meaning",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Working back with the inverse operation uses that a quotient is the factor that multiplies back to the dividend."
+    },
+    {
+     "edge_id": "e423",
+     "prerequisite": "multiplication.partial-products.two-digit-by-two-digit",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Showing that 13 cartons of 12 give 156 eggs requires multiplying 13 by 12."
+    },
+    {
+     "edge_id": "e424",
+     "prerequisite": "operations.application.multistep",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The solution being justified is for a one-step or multi-step word problem whose conditions the learner must understand."
+    },
+    {
+     "edge_id": "e425",
+     "prerequisite": "subtraction.unknown-addend.meaning",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "For addition and subtraction stories, working back uses the inverse relationship of a difference as an unknown addend."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.comparison",
+   "concept": "multiplication",
+   "facet": "comparison",
+   "level": 2,
+   "type": "concept",
+   "name": "A multiplication equation as a comparison",
+   "statement": "An equation c = a x b can be read as a comparison: c is a times as many as b.",
+   "assess": "Finish the sentence for 35 = 5 x 7: 35 is ___ times as many as 7.",
+   "proposed_edges": [
+    {
+     "edge_id": "e426",
+     "prerequisite": "comparing.more-than",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The phrase times as many as extends the comparison of how many more or less in a set."
+    },
+    {
+     "edge_id": "e427",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation c = a x b is read as c being a groups of b, the equal-groups meaning of a product."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.comparison.statement-to-equation",
+   "concept": "multiplication",
+   "facet": "comparison",
+   "level": 2,
+   "type": "representation",
+   "name": "Write a multiplicative comparison statement as a multiplication equation",
+   "statement": "A verbal statement that one quantity is a times as many as another quantity b is written as the equation c = a x b, where c is the first quantity.",
+   "assess": "Write an equation for: 24 is 3 times as many as 8.",
+   "proposed_edges": [
+    {
+     "edge_id": "e428",
+     "prerequisite": "equation.equal-sign.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is written as an equation c = a x b whose two sides have the same value."
+    },
+    {
+     "edge_id": "e429",
+     "prerequisite": "multiplication.comparison",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is the reverse of reading an equation as a comparison, so the comparison meaning is used."
+    },
+    {
+     "edge_id": "e430",
+     "prerequisite": "multiplication.equal-groups.situation-to-expression",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Writing a x b from a times as many as b is writing a multiplication expression for a groups of b."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.comparison.vs-additive",
+   "concept": "multiplication",
+   "facet": "comparison",
+   "level": 2,
+   "type": "concept",
+   "name": "Tell multiplicative comparison from additive comparison",
+   "statement": "\"a times as many as b\" means a x b, while \"a more than b\" means b + a; the two describe different relationships between quantities.",
+   "assess": "Tom has 4 marbles. Sue has 3 times as many. Ray has 3 more than Tom. Draw a bar for each person, then say how many marbles Sue has and how many Ray has.",
+   "proposed_edges": [
+    {
+     "edge_id": "e431",
+     "prerequisite": "multiplication.comparison",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The node contrasts a times as many as b with a more than b, so the multiplicative reading must be known."
+    },
+    {
+     "edge_id": "e432",
+     "prerequisite": "subtraction.application.compare.bigger-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The additive reading a more than b means b + a, as in a compare story with the larger amount unknown."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.comparison.application.multiply",
+   "concept": "multiplication",
+   "facet": "comparison",
+   "level": 2,
+   "type": "application",
+   "name": "Solve multiplicative comparison word problems by multiplying",
+   "statement": "A story says one quantity is a times as many as a known quantity b and asks for the larger quantity; the learner finds a x b, using a drawing or an equation.",
+   "assess": "A blue scarf costs $6. A red scarf costs 4 times as much. How much does the red scarf cost?",
+   "proposed_edges": [
+    {
+     "edge_id": "e433",
+     "prerequisite": "multiplication.comparison",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The story says one quantity is a times as many as another, the comparison meaning of a product."
+    },
+    {
+     "edge_id": "e434",
+     "prerequisite": "multiplication.comparison.statement-to-equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Using an equation to solve means writing the statement as c = a x b."
+    },
+    {
+     "edge_id": "e435",
+     "prerequisite": "multiplication.comparison.vs-additive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner must choose multiplication rather than addition for the phrase times as much."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.comparison.application.divide",
+   "concept": "multiplication",
+   "facet": "comparison",
+   "level": 2,
+   "type": "application",
+   "name": "Solve multiplicative comparison word problems by dividing",
+   "statement": "A story gives the larger quantity in a multiplicative comparison and either the multiplier or the smaller quantity, and asks for the other; the learner finds it by division, using a drawing or an equation.",
+   "assess": "A red hat costs $18 and a blue hat costs $6. How many times as much does the red hat cost as the blue hat?",
+   "proposed_edges": [
+    {
+     "edge_id": "e436",
+     "prerequisite": "division.measurement.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Finding how many times as much is the number of groups of the smaller quantity in the larger."
+    },
+    {
+     "edge_id": "e437",
+     "prerequisite": "division.partitive.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Finding the smaller quantity given the multiplier is the size of each of a equal groups."
+    },
+    {
+     "edge_id": "e438",
+     "prerequisite": "multiplication.comparison",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The story gives a larger quantity as a times as many as a smaller one, the comparison meaning of a product."
+    },
+    {
+     "edge_id": "e439",
+     "prerequisite": "multiplication.comparison.statement-to-equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Using an equation to solve means writing the statement as c = a x b with one value unknown."
+    },
+    {
+     "edge_id": "e440",
+     "prerequisite": "multiplication.comparison.vs-additive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner must tell division by a multiplier from subtraction of an amount more."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.comparison.application.equation",
+   "concept": "multiplication",
+   "facet": "comparison",
+   "level": 2,
+   "type": "representation",
+   "name": "Write an equation with a symbol for the unknown for a multiplicative comparison word problem",
+   "statement": "A multiplicative comparison word problem is written as an equation c = a x b in which a symbol stands for whichever of the larger quantity, the multiplier, or the smaller quantity is unknown.",
+   "assess": "A tree is 35 feet tall. It is 5 times as tall as a bush. Write an equation with a symbol for the height of the bush. Do not solve it.",
+   "proposed_edges": [
+    {
+     "edge_id": "e441",
+     "prerequisite": "division.unknown-factor.equation-from-story",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "When the multiplier or smaller quantity is unknown, the symbol stands in a factor place, as in 5 x ? = 35."
+    },
+    {
+     "edge_id": "e442",
+     "prerequisite": "equation.situation.one-step",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A symbol standing for whichever quantity is unknown is the notation for the unknown in a one-step story."
+    },
+    {
+     "edge_id": "e443",
+     "prerequisite": "multiplication.comparison.statement-to-equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation c = a x b is the form into which a comparison statement is translated."
+    },
+    {
+     "edge_id": "e444",
+     "prerequisite": "multiplication.equal-groups.equation-unknown",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A symbol stands for the unknown larger quantity in the equation, as in a multiplication equation with a symbol for the total."
+    }
+   ]
+  },
+  {
+   "id": "patterns.addition-table.identify",
+   "concept": "patterns",
+   "facet": "table",
+   "level": 2,
+   "type": "concept",
+   "name": "Identify a pattern in the addition table",
+   "statement": "The entries of the addition table follow regular patterns, such as each entry being one more than the entry to its left, and equal sums lying along diagonals.",
+   "assess": "Look at this addition table for 0 to 9. Describe one pattern you see along a row and one along a diagonal.",
+   "proposed_edges": [
+    {
+     "edge_id": "e445",
+     "prerequisite": "addition.within-20.fluency",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The entries are sums of two one-digit numbers, and the patterns concern the values of these sums."
+    },
+    {
+     "edge_id": "e446",
+     "prerequisite": "data.graphs.read",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The patterns are seen by reading values along rows and diagonals of a table."
+    }
+   ]
+  },
+  {
+   "id": "patterns.multiplication-table.identify",
+   "concept": "patterns",
+   "facet": "table",
+   "level": 2,
+   "type": "concept",
+   "name": "Identify a pattern in the multiplication table",
+   "statement": "The entries of the multiplication table follow regular patterns, such as each row increasing by the same amount, the table being symmetric across its diagonal, and every entry in the 4s row being even.",
+   "assess": "Look at this multiplication table for 1 to 10. Describe one pattern in the row for 4 and one pattern that compares the row for 3 with the column for 3.",
+   "proposed_edges": [
+    {
+     "edge_id": "e447",
+     "prerequisite": "data.graphs.read",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The patterns are seen by reading values along rows and across a diagonal of a table."
+    },
+    {
+     "edge_id": "e448",
+     "prerequisite": "multiplication.commutative",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The table being symmetric across its diagonal is the commutative property of the entries."
+    },
+    {
+     "edge_id": "e449",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The entries are products, and a row increasing by the same amount is groups of equal size being added one at a time."
+    },
+    {
+     "edge_id": "e450",
+     "prerequisite": "parity.even-odd.pairing",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The pattern that every entry in the 4s row is even uses the meaning of even."
+    }
+   ]
+  },
+  {
+   "id": "patterns.arithmetic.explain",
+   "concept": "patterns",
+   "facet": "table",
+   "level": 4,
+   "type": "justification",
+   "name": "Explain an arithmetic pattern using properties of operations",
+   "statement": "An arithmetic pattern is explained in general by showing that it follows from a property of operations, such as 4 x n = 2 x n + 2 x n being a sum of two equal addends and so even.",
+   "assess": "Explain why 4 times any whole number is even.",
+   "proposed_edges": [
+    {
+     "edge_id": "e451",
+     "prerequisite": "expressions.variables",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement uses n for any whole number in the general explanation 4 x n = 2 x n + 2 x n."
+    },
+    {
+     "edge_id": "e452",
+     "prerequisite": "multiplication.distributive",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Writing 4 x n as 2 x n + 2 x n splits the factor 4 as 2 + 2, the distributive property."
+    },
+    {
+     "edge_id": "e453",
+     "prerequisite": "parity.even.equal-addends",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The conclusion that the product is even is reached by showing it is a sum of two equal addends."
+    },
+    {
+     "edge_id": "e454",
+     "prerequisite": "patterns.multiplication-table.identify",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem asks why a pattern seen in the row for 4 of the multiplication table holds."
+    }
+   ]
+  },
+  {
+   "id": "factors.factor-pair.meaning",
+   "concept": "factors",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "A factor pair of a whole number",
+   "statement": "A factor pair of a whole number n is two whole numbers whose product is n; each is a factor of n.",
+   "assess": "Is 4 and 9 a factor pair of 36? Is 5 and 7 a factor pair of 36? Explain.",
+   "proposed_edges": [
+    {
+     "edge_id": "e455",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A factor pair is two whole numbers whose product, a number of equal groups, is n."
+    },
+    {
+     "edge_id": "e456",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Checking that 4 and 9 but not 5 and 7 multiply to 36 uses recalled products."
+    }
+   ]
+  },
+  {
+   "id": "factors.factor-pairs.find-all",
+   "concept": "factors",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find all factor pairs of a whole number within 100",
+   "statement": "List every factor pair of a whole number n from 1 to 100 by testing each whole number d from 1 upward as a factor, stopping once d x d is greater than n, because in every pair the smaller factor d has d x d no greater than n.",
+   "assess": "Find all the factor pairs of 48.",
+   "procedure": [
+    "Start with 1 x n.",
+    "For each next whole number d, decide whether n divided by d is a whole number; if it is, record d x (n divided by d).",
+    "Stop as soon as d x d is greater than n; any further pair would repeat one already recorded."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e457",
+     "prerequisite": "comparing.whole-numbers.magnitude",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 stops when d x d is greater than n, which compares two whole numbers."
+    },
+    {
+     "edge_id": "e458",
+     "prerequisite": "division.facts.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 decides whether n divided by d is a whole number, using division facts."
+    },
+    {
+     "edge_id": "e459",
+     "prerequisite": "factors.factor-pair.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The procedure lists every pair of whole numbers whose product is n."
+    },
+    {
+     "edge_id": "e460",
+     "prerequisite": "factors.is-multiple.decide",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 decides for each d whether n divided by d is a whole number, which is the multiple test."
+    },
+    {
+     "edge_id": "e461",
+     "prerequisite": "multiplication.commutative",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The reason any further pair would repeat one already recorded is that a x b = b x a."
+    },
+    {
+     "edge_id": "e462",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 compares d x d with n, which uses the product of d with itself."
+    }
+   ]
+  },
+  {
+   "id": "factors.multiple-of-each-factor",
+   "concept": "factors",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "A whole number is a multiple of each of its factors",
+   "statement": "If d is a factor of n, then n is a multiple of d: n = d x k for a whole number k, so n is in the list d, 2 x d, 3 x d, ...",
+   "assess": "6 is a factor of 42. Is 42 a multiple of 6? Explain using the factor pair.",
+   "proposed_edges": [
+    {
+     "edge_id": "e463",
+     "prerequisite": "factors.factor-pair.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement starts from d being a factor of n, meaning d belongs to a pair with product n."
+    },
+    {
+     "edge_id": "e464",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The list d, 2 x d, 3 x d, and so on is the list of numbers of equal groups of size d."
+    }
+   ]
+  },
+  {
+   "id": "factors.is-multiple.decide",
+   "concept": "factors",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Decide whether a whole number within 100 is a multiple of a one-digit number",
+   "statement": "A whole number n from 1 to 100 is a multiple of a one-digit number d exactly when d x k = n for some whole number k, which is checked by skip-counting by d or by dividing n by d and looking for a remainder of 0.",
+   "assess": "Is 91 a multiple of 7? Is 58 a multiple of 6?",
+   "procedure": [
+    "Divide n by d, or skip-count by d up to n.",
+    "If the division has remainder 0, or the skip-count lands on n, then n is a multiple of d.",
+    "Otherwise n is not a multiple of d."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e465",
+     "prerequisite": "division.partial-quotients.one-digit-divisor.remainder",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 divides n by d and looks for a remainder of 0, as in 91 divided by 7."
+    },
+    {
+     "edge_id": "e466",
+     "prerequisite": "factors.multiple-of-each-factor",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement defines multiple through d x k = n, the relation between a number and its factor."
+    }
+   ]
+  },
+  {
+   "id": "factors.prime-composite.meaning",
+   "concept": "factors",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "Prime and composite numbers",
+   "statement": "A whole number greater than 1 is prime if its only factors are 1 and itself, and composite if it has a factor other than 1 and itself; 1 is neither prime nor composite.",
+   "assess": "13 has the factor pairs 1 x 13 only. 15 has the factor pairs 1 x 15 and 3 x 5. Which is prime and which is composite? Is 1 prime?",
+   "proposed_edges": [
+    {
+     "edge_id": "e467",
+     "prerequisite": "factors.factor-pair.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A prime has only the factor pair 1 and itself, and a composite has another pair, as the test problem shows."
+    }
+   ]
+  },
+  {
+   "id": "factors.prime-composite.decide",
+   "concept": "factors",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Decide whether a whole number within 100 is prime or composite",
+   "statement": "A whole number from 2 to 100 is composite if it is a multiple of some number from 2 to 9 other than itself, and prime otherwise, because any factor pair of a number up to 100 contains a factor no greater than 10.",
+   "assess": "Decide whether 91 is prime or composite, and whether 89 is prime or composite.",
+   "procedure": [
+    "Test whether the number is a multiple of 2, 3, 5 or 7, the primes less than 10.",
+    "If it is a multiple of one of them and is not that prime itself, it is composite.",
+    "If it is a multiple of none of them, it is prime."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e468",
+     "prerequisite": "factors.factor-pairs.find-all",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The reason a factor pair of a number up to 100 has a factor no greater than 10 comes from stopping once d x d exceeds n."
+    },
+    {
+     "edge_id": "e469",
+     "prerequisite": "factors.is-multiple.decide",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 tests whether the number is a multiple of 2, 3, 5 or 7."
+    },
+    {
+     "edge_id": "e470",
+     "prerequisite": "factors.prime-composite.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The procedure decides which class a number belongs to, using the meanings of prime and composite."
+    }
+   ]
+  },
+  {
+   "id": "patterns.rule.generate-number",
+   "concept": "patterns",
+   "facet": "rule",
+   "level": 2,
+   "type": "procedure",
+   "name": "Generate a number pattern from a given rule",
+   "statement": "Given a starting number and a rule such as \"add 3\" or \"multiply by 2\", produce the terms of the sequence by applying the rule to each term to get the next.",
+   "assess": "Start at 4 and use the rule \"add 5\". Write the first six terms.",
+   "procedure": [
+    "Write the starting number as the first term.",
+    "Apply the rule to the last term written to get the next term.",
+    "Repeat until the asked-for number of terms is written."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e471",
+     "prerequisite": "addition.two-digit-plus-one-digit.next-ten",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Writing 4, 9, 14, 19, 24, 29 requires adding a one-digit number to a two-digit number."
+    },
+    {
+     "edge_id": "e472",
+     "prerequisite": "addition.within-20.fluency",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 applies a rule such as add 3 to the last term, which uses single-digit sums."
+    },
+    {
+     "edge_id": "e473",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement allows rules such as multiply by 2, which must be understood as equal groups."
+    }
+   ]
+  },
+  {
+   "id": "patterns.rule.generate-shape",
+   "concept": "patterns",
+   "facet": "rule",
+   "level": 1,
+   "type": "procedure",
+   "name": "Generate a shape pattern from a given rule",
+   "statement": "Given a starting shape arrangement and a rule for changing it, such as \"add one square to each arm\" or \"repeat circle, triangle, triangle\", draw or build the next terms by applying the rule.",
+   "assess": "The first figure is 1 square. The rule is \"add one square to the right end and one to the top\". Draw the next three figures.",
+   "procedure": [
+    "Draw or build the starting term.",
+    "Apply the rule to the last term to make the next term.",
+    "Repeat until the asked-for number of terms is made."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e474",
+     "prerequisite": "shapes.compose.combine",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 applies the rule by putting a shape on the last term to make the next figure."
+    },
+    {
+     "edge_id": "e475",
+     "prerequisite": "shapes.name.receptive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A rule such as repeat circle, triangle, triangle names shapes that the learner must pick out."
+    },
+    {
+     "edge_id": "e476",
+     "prerequisite": "shapes.recognize",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Repeating circle, triangle, triangle requires recognizing each shape whatever its size or position."
+    },
+    {
+     "edge_id": "e477",
+     "prerequisite": "spatial.position.relative",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The rule in the test problem uses position words, to the right end and to the top."
+    }
+   ]
+  },
+  {
+   "id": "patterns.rule.unstated-features",
+   "concept": "patterns",
+   "facet": "rule",
+   "level": 2,
+   "type": "concept",
+   "name": "Identify a feature of a pattern not stated in its rule",
+   "statement": "The terms produced by a rule can show regularities the rule does not state, such as alternating between odd and even, and such a feature can be noticed and explained from the rule.",
+   "assess": "Start at 1 and use the rule \"add 3\": 1, 4, 7, 10, 13, ... What do you notice about odd and even numbers in this list? Explain why it will keep happening.",
+   "proposed_edges": [
+    {
+     "edge_id": "e478",
+     "prerequisite": "parity.even-odd.pairing",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The explanation that adding 3 flips odd to even is given by the pairing meaning, where adding one extra changes whether one is left over."
+    },
+    {
+     "edge_id": "e479",
+     "prerequisite": "patterns.rule.generate-number",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The terms in which a feature is noticed are produced by applying a rule to a starting number."
+    }
+   ]
+  }
+ ]
+}

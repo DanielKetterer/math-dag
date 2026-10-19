@@ -1,0 +1,1556 @@
+{
+ "boundary_nodes": [
+  "area.rectangle.length-times-width",
+  "area.rectangle.tiling",
+  "coordinate-plane.first-quadrant",
+  "coordinate-plane.four-quadrants",
+  "data.graphs.read",
+  "division.nonunit-fraction-by-whole",
+  "equations.linear.solve",
+  "equations.one-step",
+  "expressions.variables",
+  "fraction.reciprocal",
+  "fraction.subtraction.comparison",
+  "functions.definition",
+  "geometry.similar-triangles",
+  "measurement.unit-conversion",
+  "measurement.weight.attribute",
+  "rational-numbers.operations"
+ ],
+ "nodes": [
+  {
+   "id": "counting.sequence.to-100",
+   "concept": "counting",
+   "facet": "sequence",
+   "level": 1,
+   "type": "fact",
+   "name": "Count by ones from 1 to 100",
+   "statement": "Say the number words in order from one to one hundred, continuing correctly past each decade change (twenty-nine, thirty; ninety-nine, one hundred).",
+   "assess": "Count aloud by ones from 1 to 100.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1",
+     "prerequisite": "counting.sequence.recite",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The count to 100 continues the recited sequence of number words through the teens that the learner already says."
+    }
+   ]
+  },
+  {
+   "id": "counting.sequence.count-on",
+   "concept": "counting",
+   "facet": "sequence",
+   "level": 1,
+   "type": "procedure",
+   "name": "Count forward from a given number within 100",
+   "statement": "Begin the count at a given number within 100 and continue forward by ones, without first counting up from one.",
+   "assess": "Start at 57 and count forward by ones to 64. Do not start from 1.",
+   "procedure": [
+    "Say the given number.",
+    "Say the next number word in the sequence after it.",
+    "Keep saying each next number word until told to stop."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e2",
+     "prerequisite": "counting.sequence.to-100",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Counting on from a given number such as 57 uses the known sequence of number words to 100, entered in the middle."
+    }
+   ]
+  },
+  {
+   "id": "counting.sequence.within-1000",
+   "concept": "counting",
+   "facet": "sequence",
+   "level": 1,
+   "type": "procedure",
+   "name": "Count forward by ones within 1000, across hundreds",
+   "statement": "Count forward by ones from any number to any number within 1000, continuing correctly across decades and hundreds (ninety-nine, one hundred, one hundred one; three hundred ninety-nine, four hundred).",
+   "assess": "Count aloud by ones from 296 to 305.",
+   "procedure": [
+    "Say the starting number.",
+    "For each next number, keep the hundreds name and say the next tens-and-ones name.",
+    "After a number ending in ninety-nine, say the next hundred (for example, four hundred), then continue with one, two, and so on after the hundred."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e3",
+     "prerequisite": "counting.sequence.count-on",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The procedure starts at any given number, not at one, which is the skill of beginning a count at a given number."
+    },
+    {
+     "edge_id": "e4",
+     "prerequisite": "counting.sequence.to-100",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Counting within 1000 extends the number word sequence to 100 past the hundred boundary using the same decade pattern."
+    }
+   ]
+  },
+  {
+   "id": "counting.sequence.backward.across-decades",
+   "concept": "counting",
+   "facet": "sequence",
+   "level": 1,
+   "type": "procedure",
+   "name": "Count backward by ones within 120, across decades",
+   "statement": "Count backward by ones from any number up to 120 to any smaller number, continuing correctly across decade and hundred changes (forty-one, forty, thirty-nine; one hundred one, one hundred, ninety-nine).",
+   "assess": "Count backward by ones from 103 to 96.",
+   "procedure": [
+    "Say the starting number.",
+    "Say the number word just before it in the counting sequence.",
+    "After a number ending in zero, say the previous decade name with nine (after forty, thirty-nine).",
+    "Continue until the stopping number."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e5",
+     "prerequisite": "counting.sequence.backward",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Counting backward across decades extends the basic skill of counting backward by ones, saying the word just before each number."
+    },
+    {
+     "edge_id": "e6",
+     "prerequisite": "counting.sequence.to-100",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The decade names and the nine-to-ten word changes (forty, thirty-nine) must be known to step back across them."
+    },
+    {
+     "edge_id": "e7",
+     "prerequisite": "counting.sequence.within-1000",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Finding the word before 103 or 101 uses the known forward sequence past one hundred and the hundred change."
+    }
+   ]
+  },
+  {
+   "id": "counting.skip.tens.decades",
+   "concept": "counting",
+   "facet": "sequence",
+   "level": 1,
+   "type": "fact",
+   "name": "Count by tens from 0 to 120",
+   "statement": "Say the decade numbers in order from zero: ten, twenty, thirty, ..., one hundred, one hundred ten, one hundred twenty.",
+   "assess": "Count aloud by tens from 0 to 120.",
+   "proposed_edges": [
+    {
+     "edge_id": "e8",
+     "prerequisite": "counting.sequence.to-100",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The decade number words ten, twenty, up to one hundred are items of the known count word sequence that are said in turn."
+    }
+   ]
+  },
+  {
+   "id": "counting.skip.tens.from-any",
+   "concept": "counting",
+   "facet": "sequence",
+   "level": 1,
+   "type": "procedure",
+   "name": "Count forward by tens from any number within 120",
+   "statement": "Count forward by tens from any starting number up to 120, so that the ones stay the same and the tens increase by one each step (24, 34, 44, ..., 94, 104).",
+   "assess": "Count aloud by tens starting at 24 and stopping at 114.",
+   "procedure": [
+    "Say the starting number.",
+    "Say the number with the same ones and one more ten.",
+    "Repeat until the stopping number."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e9",
+     "prerequisite": "counting.sequence.count-on",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The count starts at a given number such as 24 instead of at zero."
+    },
+    {
+     "edge_id": "e10",
+     "prerequisite": "counting.sequence.within-1000",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Counting by tens from 24 reaches 104 and 114, so the learner must name numbers past one hundred correctly."
+    },
+    {
+     "edge_id": "e11",
+     "prerequisite": "counting.skip.tens.decades",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Saying the number with one more ten uses the decade word order ten, twenty, thirty that is practised when counting by tens from zero."
+    }
+   ]
+  },
+  {
+   "id": "counting.skip.tens.backward",
+   "concept": "counting",
+   "facet": "sequence",
+   "level": 1,
+   "type": "procedure",
+   "name": "Count backward by tens from any number within 120",
+   "statement": "Count backward by tens from any starting number up to 120, so that the ones stay the same and the tens decrease by one each step (117, 107, 97, 87).",
+   "assess": "Count aloud backward by tens starting at 117 and stopping at 37.",
+   "procedure": [
+    "Say the starting number.",
+    "Say the number with the same ones and one less ten.",
+    "Repeat until the stopping number."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e12",
+     "prerequisite": "counting.sequence.backward.across-decades",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Counting back from 117 to 107 to 97 crosses the hundred change, needing the names of numbers just before each hundred and decade."
+    },
+    {
+     "edge_id": "e13",
+     "prerequisite": "counting.skip.tens.decades",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Saying the number with one less ten uses the decade word order, run in reverse, from one hundred down to ten."
+    }
+   ]
+  },
+  {
+   "id": "counting.skip.fives",
+   "concept": "counting",
+   "facet": "sequence",
+   "level": 1,
+   "type": "fact",
+   "name": "Count by fives from 0 to 100",
+   "statement": "Say the multiples of five in order from zero: five, ten, fifteen, twenty, ..., one hundred.",
+   "assess": "Count aloud by fives from 0 to 100.",
+   "proposed_edges": [
+    {
+     "edge_id": "e14",
+     "prerequisite": "counting.sequence.to-100",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Counting by fives says every fifth word of the count sequence to 100, so the number words up to one hundred must be known."
+    }
+   ]
+  },
+  {
+   "id": "counting.skip.hundreds",
+   "concept": "counting",
+   "facet": "sequence",
+   "level": 1,
+   "type": "fact",
+   "name": "Count by hundreds from 0 to 1000",
+   "statement": "Say the multiples of one hundred in order from zero: one hundred, two hundred, ..., nine hundred, one thousand.",
+   "assess": "Count aloud by hundreds from 0 to 1,000.",
+   "proposed_edges": [
+    {
+     "edge_id": "e15",
+     "prerequisite": "counting.sequence.to-100",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The words one hundred and the digit words one to nine, combined into two hundred and three hundred, come from the sequence to 100."
+    }
+   ]
+  },
+  {
+   "id": "numeral.read.to-1000",
+   "concept": "numeral",
+   "facet": "core",
+   "level": 2,
+   "type": "representation",
+   "name": "Read numerals up to 1000",
+   "statement": "Give the number name, spoken or written in words, for a numeral up to 1000: name the hundreds, then the tens-and-ones name, saying nothing for a place whose digit is 0.",
+   "assess": "Read these numerals aloud: 406, 117, 860.",
+   "procedure": [
+    "If there are three digits, say the first digit followed by hundred.",
+    "Say the name of the two-digit number formed by the last two digits, or of the last digit if the tens digit is 0, or nothing if both are 0."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e16",
+     "prerequisite": "counting.sequence.within-1000",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The spoken names produced, such as four hundred six, are the number names of the counting sequence within 1000."
+    },
+    {
+     "edge_id": "e17",
+     "prerequisite": "numeral.read",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Reading a numeral up to 1000 extends the basic skill of reading a single written numeral as its number name."
+    },
+    {
+     "edge_id": "e18",
+     "prerequisite": "place-value.three-digit.hundreds-tens-ones",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step one says the first digit followed by hundred, which treats that digit as counting hundreds in a three-digit numeral."
+    },
+    {
+     "edge_id": "e19",
+     "prerequisite": "place-value.two-digit.tens-ones",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step two names the number formed by the last two digits as tens and ones, with nothing said for a zero tens digit."
+    }
+   ]
+  },
+  {
+   "id": "numeral.write.to-1000",
+   "concept": "numeral",
+   "facet": "core",
+   "level": 2,
+   "type": "representation",
+   "name": "Write numerals up to 1000 from number names",
+   "statement": "Write the numeral for a number name up to 1000 using one digit for each place, with 0 in any place that has no units (four hundred six is 406, not 4006).",
+   "assess": "Write the numeral for each number: four hundred six; one hundred twelve; seven hundred.",
+   "procedure": [
+    "Write the number of hundreds as the first digit, if there are hundreds.",
+    "Write the number of tens next, writing 0 if there are hundreds but no tens.",
+    "Write the number of ones last, writing 0 if there are none."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e20",
+     "prerequisite": "counting.sequence.within-1000",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The number names being written, such as one hundred twelve, are number words of the counting sequence within 1000."
+    },
+    {
+     "edge_id": "e21",
+     "prerequisite": "numeral.write",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Writing a numeral for a number name up to 1000 extends the basic skill of writing a numeral for a spoken number."
+    },
+    {
+     "edge_id": "e22",
+     "prerequisite": "place-value.three-digit.hundreds-tens-ones",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The steps put hundreds, tens, and ones in separate digit places, with 0 holding any empty place, as in 406."
+    }
+   ]
+  },
+  {
+   "id": "numeral.record-collection",
+   "concept": "numeral",
+   "facet": "core",
+   "level": 2,
+   "type": "representation",
+   "name": "Write the numeral for a collection of up to 120 objects",
+   "statement": "Find how many objects are in a collection of up to 120 and record that number with a written numeral.",
+   "assess": "Here is a pile of 73 loose counters. Write the number that tells how many counters there are.",
+   "proposed_edges": [
+    {
+     "edge_id": "e23",
+     "prerequisite": "counting.objects",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Finding how many objects are in the collection of 73 counters is done by counting the collection."
+    },
+    {
+     "edge_id": "e24",
+     "prerequisite": "counting.sequence.within-1000",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Collections of up to 120 objects must be counted past one hundred, which needs the sequence of number words beyond 100."
+    },
+    {
+     "edge_id": "e25",
+     "prerequisite": "numeral.write",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The count found must be recorded as a written numeral, which is the skill of writing a numeral for a number."
+    },
+    {
+     "edge_id": "e26",
+     "prerequisite": "numeral.write.to-1000",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The two- and three-digit number found by counting is recorded as a written numeral such as 73."
+    },
+    {
+     "edge_id": "e27",
+     "prerequisite": "place-value.two-digit.tens-ones",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Writing 73 for seventy-three requires knowing the left digit counts tens and the right digit counts ones."
+    }
+   ]
+  },
+  {
+   "id": "numeral.read.periods",
+   "concept": "numeral",
+   "facet": "core",
+   "level": 3,
+   "type": "representation",
+   "name": "Read multi-digit numerals up to 1,000,000",
+   "statement": "Give the number name for a whole number up to 1,000,000 by splitting its digits into periods of three from the right and naming each period's value followed by the period name (304,050 is three hundred four thousand fifty).",
+   "assess": "Write these numbers in words: 304,050 and 90,009.",
+   "procedure": [
+    "Split the digits into groups of three from the right.",
+    "Read the leftmost group as a number up to 999 and say thousand (or million for 1,000,000).",
+    "Read the last group as a number up to 999, saying nothing if it is 000."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e28",
+     "prerequisite": "numeral.read.to-1000",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Each group of three digits is read as a number up to 999, exactly the skill of reading numerals up to 1000."
+    }
+   ]
+  },
+  {
+   "id": "numeral.write.periods",
+   "concept": "numeral",
+   "facet": "core",
+   "level": 3,
+   "type": "representation",
+   "name": "Write multi-digit numerals up to 1,000,000 from number names",
+   "statement": "Write the numeral for a number name up to 1,000,000, writing the thousands part and then exactly three digits for the part after the word thousand, filling empty places with 0 (forty thousand six is 40,006).",
+   "assess": "Write the numeral for two hundred eight thousand forty.",
+   "procedure": [
+    "Write the numeral for the number said before the word thousand.",
+    "Write the numeral for the number said after thousand as exactly three digits, using leading zeros if needed.",
+    "Join the two parts, separated by a comma."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e29",
+     "prerequisite": "numeral.write.to-1000",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The number said before thousand and the three-digit part after it are each written as a numeral up to 999."
+    }
+   ]
+  },
+  {
+   "id": "place-value.teen.ten-and-ones",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 1,
+   "type": "concept",
+   "name": "Teen numbers are ten ones and some more ones",
+   "statement": "Each number from 11 to 19 is made of ten ones and some further ones, from one to nine: sixteen is ten and six.",
+   "assess": "Sixteen is ten and how many more? Answer without counting.",
+   "proposed_edges": [
+    {
+     "edge_id": "e30",
+     "prerequisite": "counting.objects",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Seeing sixteen as ten and six means counting a collection so that the count of ten objects and the leftover are separated."
+    },
+    {
+     "edge_id": "e31",
+     "prerequisite": "counting.sequence.recite",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The teen number words eleven to nineteen are the numbers whose make-up of ten and some ones is being described."
+    }
+   ]
+  },
+  {
+   "id": "place-value.teen.compose",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 1,
+   "type": "procedure",
+   "name": "Make a teen number from ten ones and some ones",
+   "statement": "Build a given number from 11 to 19 with objects or a drawing as one group of ten ones and the needed further ones.",
+   "assess": "Use a ten-frame and counters to make 14 as a full ten and some extra ones.",
+   "procedure": [
+    "Make a group of exactly ten ones, for example a full ten-frame.",
+    "Add further ones, one at a time, while counting on from ten until the given number is reached.",
+    "Show the ten and the further ones as separate parts, in objects or in a drawing."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e32",
+     "prerequisite": "counting.produce-set",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Making a group of exactly ten ones, such as a full ten-frame, is counting out a set of ten."
+    },
+    {
+     "edge_id": "e33",
+     "prerequisite": "counting.sequence.count-on",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Adding further ones while counting on from ten is counting forward from a given number rather than from one."
+    },
+    {
+     "edge_id": "e34",
+     "prerequisite": "place-value.teen.ten-and-ones",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The target is a group of ten ones plus some further ones, which is what each teen number is made of."
+    }
+   ]
+  },
+  {
+   "id": "place-value.teen.decompose",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 1,
+   "type": "procedure",
+   "name": "Split a teen number of objects into ten ones and some ones",
+   "statement": "Separate a collection of 11 to 19 objects, or a drawing of one, into a group of ten ones and the remaining ones, and say how many ones remain.",
+   "assess": "Here are 17 loose counters. Put ten of them in a ten-frame. How many counters are outside the ten-frame?",
+   "procedure": [
+    "Count out ten of the objects and set them together as one group.",
+    "Count the objects that are left.",
+    "Say the number as ten and that many ones."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e35",
+     "prerequisite": "counting.objects",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Counting the objects that are left outside the ten-frame gives how many further ones remain."
+    },
+    {
+     "edge_id": "e36",
+     "prerequisite": "counting.produce-set",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Counting out ten of the objects to set together as one group is the skill of counting out a set of a given number."
+    },
+    {
+     "edge_id": "e37",
+     "prerequisite": "place-value.teen.ten-and-ones",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The result is said as ten and that many ones, which is the make-up of a teen number as ten ones and some more ones."
+    }
+   ]
+  },
+  {
+   "id": "place-value.teen.equation",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "representation",
+   "name": "Record a teen number as 10 plus ones with an equation",
+   "statement": "A number from 11 to 19 shown as ten ones and some further ones is recorded by an equation that writes the number as 10 plus the further ones, for example 18 = 10 + 8.",
+   "assess": "A full ten-frame and 3 more counters are shown, 13 counters in all. Write an equation that shows the ten and the extra ones making 13.",
+   "proposed_edges": [
+    {
+     "edge_id": "e38",
+     "prerequisite": "addition.notation.equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation 13 = 10 + 3 is written with plus and equal signs in the same way as an addition equation for a joining."
+    },
+    {
+     "edge_id": "e39",
+     "prerequisite": "numeral.write",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Writing 10 and 13 as numerals in the equation uses the skill of writing a numeral for a number."
+    },
+    {
+     "edge_id": "e40",
+     "prerequisite": "place-value.teen.ten-and-ones",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation records the ten ones and the further ones that make up a teen number, as in 13 = 10 + 3."
+    }
+   ]
+  },
+  {
+   "id": "place-value.ten.unit",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "concept",
+   "name": "A ten is a bundle of ten ones",
+   "statement": "Ten ones grouped together form one unit called a ten, and the numeral 10 represents one ten and no ones.",
+   "assess": "Ten cubes are snapped into one rod. What is the rod called, and how many ones does it stand for?",
+   "proposed_edges": [
+    {
+     "edge_id": "e41",
+     "prerequisite": "counting.unitize",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A ten is a group of ten ones counted and treated as one unit, which is the idea of counting a group as one."
+    },
+    {
+     "edge_id": "e42",
+     "prerequisite": "numeral.read",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says the numeral 10 represents one ten and no ones, so the written numeral 10 must be read first."
+    },
+    {
+     "edge_id": "e43",
+     "prerequisite": "place-value.teen.ten-and-ones",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The bundle of ten ones is the same group of ten that makes up each teen number together with some more ones."
+    }
+   ]
+  },
+  {
+   "id": "place-value.teen.digits",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "concept",
+   "name": "In 11 to 19 the first digit is one ten",
+   "statement": "In the numerals 11 to 19, the first digit 1 stands for one ten and the second digit stands for the number of further ones.",
+   "assess": "In the numeral 16, how many ones does the 1 stand for?",
+   "proposed_edges": [
+    {
+     "edge_id": "e44",
+     "prerequisite": "numeral.read",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The numerals 11 to 19 are the written objects whose two digits are assigned meanings, so they must be readable."
+    },
+    {
+     "edge_id": "e45",
+     "prerequisite": "place-value.teen.ten-and-ones",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The second digit stands for the further ones, matching the make-up of a teen number as ten and some more ones."
+    },
+    {
+     "edge_id": "e46",
+     "prerequisite": "place-value.ten.unit",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The first digit 1 stands for one ten, which means one bundle of ten ones."
+    }
+   ]
+  },
+  {
+   "id": "place-value.decade.tens",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "concept",
+   "name": "Decade numbers are a number of tens and no ones",
+   "statement": "The numbers 10, 20, 30, ..., 90 are one, two, three, ..., nine tens and 0 ones; the first digit counts the tens.",
+   "assess": "How many ten-rods make 70? How many single cubes are needed besides the rods?",
+   "proposed_edges": [
+    {
+     "edge_id": "e47",
+     "prerequisite": "counting.skip.tens.decades",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Counting ten-rods by tens, ten, twenty, up to seventy, shows that 70 is seven tens with the matching decade word."
+    },
+    {
+     "edge_id": "e48",
+     "prerequisite": "numeral.read",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says the first digit of the numerals 10 to 90 counts the tens, so those numerals must be read."
+    },
+    {
+     "edge_id": "e49",
+     "prerequisite": "place-value.ten.unit",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Seventy is seven tens, each ten being one bundle of ten ones, with no single cubes left over."
+    }
+   ]
+  },
+  {
+   "id": "place-value.two-digit.tens-ones",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "concept",
+   "name": "The two digits of a two-digit number are tens and ones",
+   "statement": "In a two-digit numeral, the left digit counts tens and the right digit counts ones, so the number is that many tens plus that many ones (47 is 4 tens and 7 ones, 40 + 7).",
+   "assess": "How many ones in all does the 4 in 47 stand for?",
+   "proposed_edges": [
+    {
+     "edge_id": "e50",
+     "prerequisite": "addition.notation.expression",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The number is written as the sum of tens and ones, as in 47 = 40 + 7."
+    },
+    {
+     "edge_id": "e51",
+     "prerequisite": "place-value.decade.tens",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The left digit of 47 counts tens as in 40 being four tens, giving the 40 part of 40 + 7."
+    },
+    {
+     "edge_id": "e52",
+     "prerequisite": "place-value.teen.digits",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The right digit counts further ones, and a teen numeral already showed one ten with the second digit counting ones."
+    }
+   ]
+  },
+  {
+   "id": "place-value.hundred.unit",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "concept",
+   "name": "A hundred is a bundle of ten tens",
+   "statement": "Ten tens grouped together form one unit called a hundred, equal to one hundred ones.",
+   "assess": "How many ten-rods are needed to make one hundred-flat?",
+   "proposed_edges": [
+    {
+     "edge_id": "e53",
+     "prerequisite": "counting.skip.tens.decades",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Counting by tens, ten, twenty, up to one hundred, reaches 100 on the tenth count, showing ten tens make one hundred."
+    },
+    {
+     "edge_id": "e54",
+     "prerequisite": "place-value.ten.unit",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A hundred is built from ten of the units called tens, so the idea of a ten as one unit is used directly."
+    }
+   ]
+  },
+  {
+   "id": "place-value.hundreds.multiples",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "concept",
+   "name": "100, 200, ..., 900 are a number of hundreds",
+   "statement": "The numbers 100, 200, ..., 900 are one, two, ..., nine hundreds with 0 tens and 0 ones; the first digit counts the hundreds.",
+   "assess": "How many hundred-flats make 600? How many ten-rods and single cubes are needed besides the flats?",
+   "proposed_edges": [
+    {
+     "edge_id": "e55",
+     "prerequisite": "counting.skip.hundreds",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Counting by hundreds gives the number words two hundred to nine hundred that go with two to nine hundreds."
+    },
+    {
+     "edge_id": "e56",
+     "prerequisite": "numeral.read.to-1000",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says the first digit of the numerals 100 to 900 counts the hundreds, so those numerals must be read."
+    },
+    {
+     "edge_id": "e57",
+     "prerequisite": "place-value.hundred.unit",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The numbers 100 to 900 are counts of the unit called a hundred, which is ten tens or one hundred ones."
+    }
+   ]
+  },
+  {
+   "id": "place-value.three-digit.hundreds-tens-ones",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "concept",
+   "name": "The three digits of a three-digit number are hundreds, tens, and ones",
+   "statement": "In a three-digit numeral, the digits from left to right count hundreds, tens, and ones, so the number is that many hundreds plus tens plus ones (706 is 7 hundreds, 0 tens, and 6 ones).",
+   "assess": "What is the value of each digit in 706? Show 706 with base-ten blocks.",
+   "proposed_edges": [
+    {
+     "edge_id": "e58",
+     "prerequisite": "place-value.hundreds.multiples",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The left digit of 706 counts hundreds as in 700 being seven hundreds with no tens and no ones."
+    },
+    {
+     "edge_id": "e59",
+     "prerequisite": "place-value.two-digit.tens-ones",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The last two digits of a three-digit numeral count tens and ones exactly as in a two-digit numeral, including a zero in tens."
+    }
+   ]
+  },
+  {
+   "id": "place-value.ten-times-right",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 3,
+   "type": "concept",
+   "name": "Each whole-number place is ten times the place to its right",
+   "statement": "In a multi-digit whole number, a digit in one place represents ten times what the same digit represents in the place to its right.",
+   "assess": "In 5,550, the 5 in the hundreds place is how many times the value of the 5 in the tens place?",
+   "proposed_edges": [
+    {
+     "edge_id": "e60",
+     "prerequisite": "multiplication.comparison",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The phrase ten times what the same digit represents is a multiplicative comparison of two values."
+    },
+    {
+     "edge_id": "e61",
+     "prerequisite": "numeral.read.periods",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement covers multi-digit numbers like 5,550 with thousands and beyond, whose place names and comma grouping come from period reading."
+    },
+    {
+     "edge_id": "e62",
+     "prerequisite": "place-value.hundred.unit",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A digit in the hundreds place is worth ten times the same digit in the tens place because a hundred is ten tens."
+    },
+    {
+     "edge_id": "e63",
+     "prerequisite": "place-value.ten.unit",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A digit in the tens place is worth ten times the same digit in the ones place because a ten is ten ones."
+    },
+    {
+     "edge_id": "e64",
+     "prerequisite": "place-value.three-digit.hundreds-tens-ones",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The relation between neighbouring places is stated for the place structure of digits in a numeral, as in 5,550."
+    }
+   ]
+  },
+  {
+   "id": "place-value.ten-times-right.decimal",
+   "concept": "place-value",
+   "facet": "decimal",
+   "level": 3,
+   "type": "concept",
+   "name": "Each place, including decimal places, is ten times the place to its right",
+   "statement": "In a multi-digit number with decimal places, a digit in any place represents ten times what the same digit represents in the place to its right, including across the decimal point (ones to tenths, tenths to hundredths).",
+   "assess": "In 3.33, the 3 in the tenths place is how many times the value of the 3 in the hundredths place?",
+   "proposed_edges": [
+    {
+     "edge_id": "e65",
+     "prerequisite": "decimal.hundredths.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The assessed comparison, 3 in the tenths place and 3 in the hundredths place of 3.33, needs hundredths notation."
+    },
+    {
+     "edge_id": "e66",
+     "prerequisite": "decimal.tenths.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The tenths place is the first place after the decimal point and must be known to compare ones with tenths."
+    },
+    {
+     "edge_id": "e67",
+     "prerequisite": "fraction.tenths-to-hundredths",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "One tenth equals ten hundredths, shown by rewriting tenths as hundredths, which is why the tenths digit is ten times the hundredths digit."
+    },
+    {
+     "edge_id": "e68",
+     "prerequisite": "place-value.ten-times-right",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The decimal-place version of ten times the place to the right extends the same whole-number relation across the decimal point."
+    }
+   ]
+  },
+  {
+   "id": "place-value.tenth-of-left",
+   "concept": "place-value",
+   "facet": "decimal",
+   "level": 3,
+   "type": "concept",
+   "name": "Each place is one tenth of the place to its left",
+   "statement": "In a multi-digit number, including one with decimal places, a digit in one place represents 1/10 of what the same digit represents in the place to its left.",
+   "assess": "In 4.44, the value of the 4 in the hundredths place is what fraction of the value of the 4 in the tenths place?",
+   "proposed_edges": [
+    {
+     "edge_id": "e69",
+     "prerequisite": "fraction.multiplication.parts-of-partition.fraction",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The value of a decimal digit is one tenth of a fraction of the place to its left, as in 1/10 of 4/10."
+    },
+    {
+     "edge_id": "e70",
+     "prerequisite": "fraction.multiplication.parts-of-partition.whole-number",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "One tenth of a value is one part when that value is split into ten equal parts, which is how 1/10 of a quantity is formed."
+    },
+    {
+     "edge_id": "e71",
+     "prerequisite": "place-value.ten-times-right.decimal",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A place being one tenth of the place to its left is the same relation as the left place being ten times it."
+    }
+   ]
+  },
+  {
+   "id": "place-value.factor-of-ten",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 3,
+   "type": "procedure",
+   "name": "Use place value to multiply or divide by a factor of 10",
+   "statement": "Multiplying a whole number by 10 moves each digit one place to the left, so a x 10 is a with a 0 written after it; hence when b = a x 10, b divided by a = 10 and b divided by 10 = a.",
+   "assess": "Without long division, use place value to find 700 divided by 70.",
+   "procedure": [
+    "For a x 10, write the digits of a followed by one 0.",
+    "For a quotient, find whether the dividend is the divisor with one 0 written after it, or the divisor is 10.",
+    "If the dividend is the divisor times 10, the quotient is 10; if the divisor is 10 and the dividend ends in 0, the quotient is the dividend with its final 0 removed (this node covers only quotients with no remainder)."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e72",
+     "prerequisite": "division.unknown-factor.find-quotient",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The quotient of 700 divided by 70 is found by asking what times 70 makes 700."
+    },
+    {
+     "edge_id": "e73",
+     "prerequisite": "division.unknown-factor.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Finding b divided by a as the number that times a gives b is how 700 divided by 70 becomes the question of what times 70 is 700."
+    },
+    {
+     "edge_id": "e74",
+     "prerequisite": "place-value.ten-times-right",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Multiplying by 10 moves each digit one place left because each place is ten times the place to its right."
+    }
+   ]
+  },
+  {
+   "id": "place-value.expanded-form",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 3,
+   "type": "representation",
+   "name": "Move between a whole-number numeral and its expanded form",
+   "statement": "A whole number up to 1,000,000 is the sum of the values of its digits, and expanded form writes that sum with one term per nonzero digit (40,603 = 40,000 + 600 + 3).",
+   "assess": "Write 40,603 in expanded form. Write the numeral for 300,000 + 2,000 + 50 + 4.",
+   "procedure": [
+    "To expand, write each nonzero digit followed by as many zeros as there are places to its right, and join these with plus signs.",
+    "To write the numeral, put each term's leading digit in the place its value names, and write 0 in every place no term names."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e75",
+     "prerequisite": "place-value.ten-times-right",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Writing each nonzero digit followed by as many zeros as places to its right uses each place being ten times the place to its right."
+    },
+    {
+     "edge_id": "e76",
+     "prerequisite": "place-value.three-digit.hundreds-tens-ones",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A number is the sum of its digits' values, hundreds plus tens plus ones, which is the three-digit place value meaning extended to more places."
+    }
+   ]
+  },
+  {
+   "id": "place-value.expanded-form.decimal",
+   "concept": "place-value",
+   "facet": "decimal",
+   "level": 3,
+   "type": "representation",
+   "name": "Move between a decimal numeral and its expanded form",
+   "statement": "A decimal to thousandths is the sum of its digits times their place values, including 1/10, 1/100, and 1/1000 (347.392 = 3 x 100 + 4 x 10 + 7 x 1 + 3 x (1/10) + 9 x (1/100) + 2 x (1/1000)).",
+   "assess": "Write 52.406 in expanded form using fractions for the decimal places. Write the decimal for 6 x 10 + 3 x (1/10) + 8 x (1/1000).",
+   "procedure": [
+    "To expand, write each nonzero digit times the value of its place, and join these with plus signs.",
+    "To write the numeral, put each digit in the place its multiplier names, and write 0 in every place between the leftmost and rightmost named places that no term names."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e77",
+     "prerequisite": "decimal.hundredths.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The digits in the tenths and hundredths places of a decimal numeral must be known as 1/10 and 1/100 places."
+    },
+    {
+     "edge_id": "e78",
+     "prerequisite": "fraction.multiple-of-unit",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A term such as 3 x (1/10) writes three tenths as a whole-number multiple of the unit fraction 1/10."
+    },
+    {
+     "edge_id": "e79",
+     "prerequisite": "decimal.thousandths.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement and assessment reach the thousandths place, which no earlier decimal notation node in the map covers."
+    },
+    {
+     "edge_id": "e80",
+     "prerequisite": "place-value.expanded-form",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The whole-number part of 347.392 is expanded in the same way as a whole number, one term per digit."
+    },
+    {
+     "edge_id": "e81",
+     "prerequisite": "place-value.ten-times-right.decimal",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Each decimal digit is multiplied by the value of its place, which is found from each place being one tenth of the place to its left."
+    },
+    {
+     "edge_id": "e82",
+     "prerequisite": "place-value.tenth-of-left",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The place values 1/10, 1/100, and 1/1000 are each one tenth of the place to the left."
+    }
+   ]
+  },
+  {
+   "id": "decimal.name.read",
+   "concept": "decimal",
+   "facet": "decimal-fraction",
+   "level": 3,
+   "type": "representation",
+   "name": "Read a decimal to thousandths as a number name",
+   "statement": "Name a decimal to thousandths by naming the whole-number part, saying and, then naming the digits after the decimal point as one whole number followed by the name of the last place (42.07 is forty-two and seven hundredths).",
+   "assess": "Write these decimals in words: 5.408 and 0.06.",
+   "procedure": [
+    "Name the whole-number part, if it is not 0, and say and.",
+    "Read the digits after the decimal point as a whole number.",
+    {
+     "Say the name of the place of the last digit": "tenths, hundredths, or thousandths."
+    }
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e83",
+     "prerequisite": "decimal.hundredths.notation",
+     "relation": "representational",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The last place named, hundredths, must be recognised from the second position after the decimal point."
+    },
+    {
+     "edge_id": "e84",
+     "prerequisite": "decimal.tenths.notation",
+     "relation": "representational",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The last place named, tenths, must be recognised from the position of the digit after the decimal point."
+    },
+    {
+     "edge_id": "e85",
+     "prerequisite": "decimal.thousandths.notation",
+     "relation": "representational",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The last place named, thousandths, must be recognised from the third position after the decimal point, as in 5.408."
+    },
+    {
+     "edge_id": "e86",
+     "prerequisite": "numeral.read.to-1000",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The digits after the decimal point are read as one whole number up to 999, as in seven for 0.07 or four hundred eight for 5.408."
+    }
+   ]
+  },
+  {
+   "id": "decimal.name.write",
+   "concept": "decimal",
+   "facet": "decimal-fraction",
+   "level": 3,
+   "type": "representation",
+   "name": "Write a decimal to thousandths from its number name",
+   "statement": "Write the decimal for a number name to thousandths, placing the digits after the decimal point so that the last one falls in the named place, with zeros filling any places before it (forty-two and seven thousandths is 42.007).",
+   "assess": "Write the decimal for six and fifty-four thousandths.",
+   "procedure": [
+    "Write the numeral for the whole-number part, or 0 if there is none, then a decimal point.",
+    "Write the number said after and, with leading zeros so that it uses one digit for tenths, two for hundredths, or three for thousandths."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e87",
+     "prerequisite": "decimal.hundredths.notation",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "A named place of hundredths needs two digits after the decimal point, which is the notation for hundredths."
+    },
+    {
+     "edge_id": "e88",
+     "prerequisite": "decimal.tenths.notation",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "A named place of tenths needs one digit after the decimal point, which is the notation for tenths."
+    },
+    {
+     "edge_id": "e89",
+     "prerequisite": "decimal.thousandths.notation",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "A named place of thousandths needs three digits after the decimal point, as in six and fifty-four thousandths, 6.054."
+    },
+    {
+     "edge_id": "e90",
+     "prerequisite": "numeral.write.to-1000",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The number said after and, such as fifty-four, is written as a numeral and then padded with leading zeros to fill the named place."
+    }
+   ]
+  },
+  {
+   "id": "comparing.whole-numbers.numerals-within-10",
+   "concept": "comparing",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "procedure",
+   "name": "Compare two numerals from 1 to 10",
+   "statement": "Of two written numerals from 1 to 10, the one that comes later in the counting sequence names the greater number.",
+   "assess": "Shown only the written numerals 9 and 6, with no objects: which number is greater?",
+   "proposed_edges": [
+    {
+     "edge_id": "e91",
+     "prerequisite": "comparing.more-than",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Greater means a greater number or more, which is the meaning of more in a comparison of numbers."
+    },
+    {
+     "edge_id": "e92",
+     "prerequisite": "counting.sequence.recite",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The comparison uses which number word comes later in the counting sequence."
+    },
+    {
+     "edge_id": "e93",
+     "prerequisite": "counting.successor",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The later number in the counting sequence is greater because each next number word is one more than the one before."
+    },
+    {
+     "edge_id": "e94",
+     "prerequisite": "numeral.read",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The two written numerals 9 and 6 are given with no objects, so each must be read as its number."
+    }
+   ]
+  },
+  {
+   "id": "comparing.whole-numbers.magnitude",
+   "concept": "comparing",
+   "facet": "whole-number",
+   "level": 3,
+   "type": "procedure",
+   "name": "Decide which of two whole numbers is greater by place value",
+   "statement": "Of two whole numbers written without leading zeros, the one with more digits is greater; if they have the same number of digits, the greater is the one with the greater digit in the leftmost place where their digits differ.",
+   "assess": "Which is greater, 49,812 or 51,099? Which is greater, 706 or 760? Say which digits decide it.",
+   "procedure": [
+    "If one numeral has more digits, it names the greater number.",
+    "Otherwise, compare the digits place by place from the left.",
+    "At the first place where the digits differ, the number with the greater digit is greater; if no place differs, the numbers are equal."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e95",
+     "prerequisite": "comparing.whole-numbers.numerals-within-10",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "At the first differing place, deciding which single digit is greater is comparing two numerals from 1 to 10."
+    },
+    {
+     "edge_id": "e96",
+     "prerequisite": "place-value.ten-times-right",
+     "relation": "justificatory",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "A numeral with more digits is greater because each higher place is worth ten times the place to its right, as with 51,099 versus 9,812."
+    },
+    {
+     "edge_id": "e97",
+     "prerequisite": "place-value.three-digit.hundreds-tens-ones",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Deciding 706 against 760 by the digit in the leftmost place that differs uses the hundreds, tens, and ones meaning of each digit."
+    }
+   ]
+  },
+  {
+   "id": "comparing.whole-numbers.symbols",
+   "concept": "comparing",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "representation",
+   "name": "Record a whole-number comparison with >, =, <",
+   "statement": "The result of comparing two whole numbers is written with > (is greater than), = (is equal to), or < (is less than), the symbol opening toward the greater number.",
+   "assess": "You are told 58 is less than 85. Write the comparison with a symbol: 58 __ 85.",
+   "proposed_edges": [
+    {
+     "edge_id": "e98",
+     "prerequisite": "comparing.more-than",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The symbols > and < stand for is greater than and is less than, which are the meanings of more and fewer in a comparison."
+    },
+    {
+     "edge_id": "e99",
+     "prerequisite": "equation.equal-sign.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The symbol = in a comparison means both numbers are the same value, which is the meaning of the equal sign."
+    }
+   ]
+  },
+  {
+   "id": "place-value.ten-more-less",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find 10 more or 10 less than a number mentally",
+   "statement": "Adding or subtracting 10 changes the tens by one and leaves the ones unchanged; when the tens digit is 9 (adding) or 0 (subtracting), the hundreds change by one as well (196 + 10 = 206, 305 - 10 = 295).",
+   "assess": "Without counting by ones or writing anything, say: 10 more than 46; 10 less than 305.",
+   "procedure": [
+    "Keep the ones digit.",
+    "Add one ten or take away one ten from the tens.",
+    "If the tens become ten tens, write them as one more hundred and 0 tens; if there are no tens to take, take one hundred as ten tens first."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e100",
+     "prerequisite": "place-value.hundred.unit",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "When the tens reach ten tens they are written as one more hundred, and a hundred is taken as ten tens when there are no tens to remove."
+    },
+    {
+     "edge_id": "e101",
+     "prerequisite": "place-value.three-digit.hundreds-tens-ones",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Adding 10 changes the tens digit and leaves the ones, and can change the hundreds, as in 196 + 10 = 206 and 305 - 10 = 295."
+    }
+   ]
+  },
+  {
+   "id": "place-value.ten-more-less.explain",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "justification",
+   "name": "Explain 10 more or 10 less with a model",
+   "statement": "Finding 10 more or 10 less adds or removes one ten-rod (or moves one row on a hundred chart), so the tens change by one and the ones do not.",
+   "assess": "Use base-ten blocks or a hundred chart to show why 10 more than 34 is 44.",
+   "proposed_edges": [
+    {
+     "edge_id": "e102",
+     "prerequisite": "place-value.ten.unit",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Adding or removing one ten-rod changes the amount by ten because a ten-rod is a bundle of ten ones."
+    },
+    {
+     "edge_id": "e103",
+     "prerequisite": "place-value.two-digit.tens-ones",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The tens change by one and the ones do not, which uses the tens and ones meaning of the digits of 34 and 44."
+    }
+   ]
+  },
+  {
+   "id": "place-value.hundred-more-less",
+   "concept": "place-value",
+   "facet": "whole-number",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find 100 more or 100 less than a number mentally",
+   "statement": "Adding or subtracting 100 to a number from 100 to 900 changes the hundreds by one and leaves the tens and ones unchanged.",
+   "assess": "Without counting or writing anything, say: 100 more than 472; 100 less than 608.",
+   "procedure": [
+    "Keep the tens and ones digits.",
+    "Add one hundred or take away one hundred from the hundreds."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e104",
+     "prerequisite": "place-value.hundred.unit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Adding or taking away one hundred from the hundreds is adding or removing one unit called a hundred."
+    },
+    {
+     "edge_id": "e105",
+     "prerequisite": "place-value.three-digit.hundreds-tens-ones",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Adding 100 changes only the hundreds digit, which uses the hundreds, tens, and ones meaning of the digits of 472 and 608."
+    }
+   ]
+  },
+  {
+   "id": "rounding.whole-number.nearest-ten-hundred",
+   "concept": "rounding",
+   "facet": "whole-number",
+   "level": 2,
+   "type": "procedure",
+   "name": "Round a whole number to the nearest 10 or 100",
+   "statement": "Rounding to the nearest 10 (or 100) gives the multiple of 10 (or 100) closest to the number; a number exactly halfway is rounded up.",
+   "assess": "Round 347 to the nearest 10 and to the nearest 100. Mark 347 and both multiples you chose on a number line.",
+   "procedure": [
+    "Find the two multiples of 10 (or 100) that the number lies between, using place value or a number line.",
+    "Find the halfway number between them.",
+    "Choose the nearer multiple; if the number is at or past halfway, choose the greater one."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e106",
+     "prerequisite": "comparing.whole-numbers.magnitude",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Deciding whether the number is at or past the halfway number is a comparison of two whole numbers."
+    },
+    {
+     "edge_id": "e107",
+     "prerequisite": "number-line.whole-number-lengths",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The assessment marks 347 and the chosen multiples on a number line, with whole numbers as lengths from zero."
+    },
+    {
+     "edge_id": "e108",
+     "prerequisite": "place-value.three-digit.hundreds-tens-ones",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Finding the multiples of 10 and 100 that 347 lies between uses the tens and hundreds digits of the numeral."
+    },
+    {
+     "edge_id": "e109",
+     "prerequisite": "subtraction.comparison.number-line",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Closest means the smaller distance on the number line, which is a whole-number difference shown as a distance."
+    }
+   ]
+  },
+  {
+   "id": "rounding.whole-number.any-place",
+   "concept": "rounding",
+   "facet": "whole-number",
+   "level": 3,
+   "type": "procedure",
+   "name": "Round a multi-digit whole number to any place",
+   "statement": "To round a whole number to a given place, keep the digits to the left of that place, add one unit of that place if the digit to its right is 5 or more, and write 0 in every place to its right.",
+   "assess": "Round 296,513 to the nearest thousand and to the nearest ten thousand. Round 9,962 to the nearest hundred.",
+   "procedure": [
+    "Find the digit in the rounding place.",
+    "Look at the digit just to its right.",
+    "If that digit is 5 or more, add one unit of the rounding place, regrouping if the digit was 9.",
+    "Write 0 in every place to the right of the rounding place."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e110",
+     "prerequisite": "addition.base-ten.compose-unit",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Adding one unit of the rounding place when the digit is 9, as in 9,962 to the nearest hundred, needs composing a unit of the next place."
+    },
+    {
+     "edge_id": "e111",
+     "prerequisite": "place-value.ten-times-right",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Naming the rounding place and its unit in numbers like 296,513 uses the place structure of multi-digit whole numbers."
+    },
+    {
+     "edge_id": "e112",
+     "prerequisite": "rounding.whole-number.nearest-ten-hundred",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Rounding to any place generalises rounding to the nearest ten or hundred, with the same rule that halfway rounds up."
+    }
+   ]
+  },
+  {
+   "id": "rounding.decimal.any-place",
+   "concept": "rounding",
+   "facet": "decimal",
+   "level": 3,
+   "type": "procedure",
+   "name": "Round a decimal to any place",
+   "statement": "To round a decimal to a given place, keep the digits to the left of that place, add one unit of that place if the digit to its right is 5 or more, and drop every digit to its right after the decimal point.",
+   "assess": "Round 2.968 to the nearest tenth and to the nearest hundredth. Round 14.7 to the nearest whole number.",
+   "procedure": [
+    "Find the digit in the rounding place.",
+    "Look at the digit just to its right.",
+    "If that digit is 5 or more, add one unit of the rounding place, regrouping if the digit was 9.",
+    "Drop the digits to the right of the rounding place that are after the decimal point, and write 0 in any to its right that are before it."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e113",
+     "prerequisite": "decimal.thousandths.notation",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The assessed number 2.968 has a thousandths digit that decides the rounding to the hundredth, so thousandths notation is read."
+    },
+    {
+     "edge_id": "e114",
+     "prerequisite": "place-value.ten-times-right.decimal",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Finding the digit in the rounding place and its unit, such as a tenth or a hundredth, uses decimal place value."
+    },
+    {
+     "edge_id": "e115",
+     "prerequisite": "rounding.whole-number.any-place",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The decimal rule is the whole-number rule, keep digits to the left, add one unit if the next digit is 5 or more, applied to decimal places."
+    }
+   ]
+  }
+ ]
+}
