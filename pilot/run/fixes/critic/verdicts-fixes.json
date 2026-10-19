@@ -1,0 +1,201 @@
+{
+ "edges": {
+  "e1": {
+   "verdict": "route-only",
+   "reason": "The test needs some number-based way to decide which group has more, but counting is only one such way.",
+   "other_route": "Match the marbles and balls one to one and see which group has leftovers (comparing.count.matching)."
+  },
+  "e2": {
+   "verdict": "route-only",
+   "reason": "One-to-one matching settles the test but is not the only number-based method.",
+   "other_route": "Count each group and compare the counts (comparing.count.by-counting)."
+  },
+  "e3": {
+   "verdict": "scaffold",
+   "reason": "Perceptual comparison covers sets so unequal that number and size agree. The test pits number against size and spread, so a perceptual judgment is exactly what the node must override and cannot supply the meaning. It is a developmental precursor for the word 'more', not a requirement."
+  },
+  "e4": {
+   "verdict": "scaffold",
+   "reason": "The fence test asks whether a boundary has a gap; a child who cannot yet recognize triangles or squares as such can still see that a fence is open. The shapes in the figures are incidental to the idea of closure."
+  },
+  "e5": {
+   "verdict": "necessary"
+  },
+  "e6": {
+   "verdict": "task-only",
+   "reason": "Matching only sets up the starting agreement that the rows are equal. The idea that moving objects without adding or removing leaves the number unchanged does not need matching, and the starting equality could be set up by counting."
+  },
+  "e7": {
+   "verdict": "task-only",
+   "reason": "The word 'more' appears in the test question, but the conservation idea is about how many, not the meaning of 'more'; the question could be asked as 'same number or different number?'."
+  },
+  "e8": {
+   "verdict": "related",
+   "relation": "same_idea_different_form",
+   "reason": "Order and arrangement irrelevance of a count is essentially the same invariance as conservation, seen from the counting side. Neither is a prerequisite of the other; conservation is assessed here without counting."
+  },
+  "e9": {
+   "verdict": "necessary"
+  },
+  "e10": {
+   "verdict": "route-only",
+   "reason": "Judging equal lengths needs a check, and laying parts along each other is one.",
+   "other_route": "Measure the parts with a common unit by laying units end to end and compare the counts (measurement.length.iterate-units), as when marking a strip of 12 units into 4 parts of 3 units."
+  },
+  "e11": {
+   "verdict": "necessary"
+  },
+  "e12": {
+   "verdict": "route-only",
+   "reason": "The needed idea is that the parts exactly fill the strip with no gap or overlap. The measurement version of that idea is one source of it, but not the only one.",
+   "other_route": "Get the fill-with-no-gaps idea from equal shares of a whole (partitioning.equal-shares.whole-as-shares)."
+  },
+  "e13": {
+   "verdict": "route-only",
+   "reason": "The idea that the parts together are the whole and fill it is required in some form, but the area-based version is not the only source of it.",
+   "other_route": "Get the no-gaps-or-overlaps idea from measuring length by units (measurement.length.no-gaps-overlaps)."
+  },
+  "e14": {
+   "verdict": "undecided",
+   "reason": "The statement uses the comparison of whole numbers a and b (greater, equal, less), not the written symbols. If the boundary node covers deciding which of two whole numbers is greater, the edge is necessary; if it is only about notation, the edge is mislabelled.",
+   "would_decide": "Whether comparing.whole-numbers.symbols includes the skill of deciding which of two whole numbers is greater, and not only recording it with >, =, <."
+  },
+  "e15": {
+   "verdict": "route-only",
+   "reason": "Comparing a/b with b/b by numerators is one way to establish the rule.",
+   "other_route": "Read a/b as a copies of 1/b and b copies of 1/b as 1 (fraction.multiple-of-unit); more than b copies exceeds 1."
+  },
+  "e16": {
+   "verdict": "route-only",
+   "reason": "The copies-of-a-unit-fraction reading yields the rule, but a learner can instead reach it by comparing a/b with b/b.",
+   "other_route": "Write 1 as b/b (fraction.whole-number.as-fraction) and compare same-denominator fractions by numerators (fraction.compare.same-denominator)."
+  },
+  "e17": {
+   "verdict": "route-only",
+   "reason": "Writing 1 as b/b is needed in the same-denominator route; in the unit-multiple route the same fact comes from b copies of 1/b making 1.",
+   "other_route": "Get 1 = b/b from b copies of 1/b making the whole (fraction.multiple-of-unit)."
+  },
+  "e18": {
+   "verdict": "necessary"
+  },
+  "e19": {
+   "verdict": "necessary"
+  },
+  "e20": {
+   "verdict": "necessary"
+  },
+  "e21": {
+   "verdict": "necessary"
+  },
+  "e22": {
+   "verdict": "undecided",
+   "reason": "The prerequisite id rational-number.negative-meaning is not in the index or boundary list, so it cannot be checked. Whether the learner needs a prior concept of negative numbers or whether this node is where signed change is first introduced depends on that node.",
+   "would_decide": "Whether rational-number.negative-meaning exists in the map and introduces negatives as numbers (opposite of a positive amount) before this node. If so the edge is likely necessary; if negatives are first met here via change contexts it would be a wrong or related edge."
+  }
+ },
+ "nodes": {
+  "comparing.more-than": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Either counting each group or one-to-one matching supports the meaning of 'more' as number; treat e1 and e2 as an OR-clause.",
+     "prerequisites": [
+      "comparing.count.by-counting",
+      "comparing.count.matching"
+     ]
+    }
+   ]
+  },
+  "shapes.closed-boundary": {
+   "missing_prerequisites": [
+    {
+     "node": "spatial.position.relative",
+     "why": "Inside and outside (the sheep cannot get out) is the idea the fence test uses; it may need position words such as inside and outside. Weak candidate, depends on the node's content."
+    }
+   ],
+   "missing_routes": []
+  },
+  "shapes.name.receptive": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "numeral.digit-formation": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "counting.number-words.vocabulary": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "cardinality.conservation": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Establish the initial equality of the two rows by counting each row (or by seeing a small equal pair) instead of matching.",
+     "prerequisites": [
+      "counting.objects",
+      "comparing.count.small-equal"
+     ]
+    }
+   ]
+  },
+  "counting.unitize": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "partitioning.segment.equal-lengths": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Make equal parts by measuring the strip with a common unit and dividing the unit count.",
+     "prerequisites": [
+      "measurement.length.iterate-units",
+      "measurement.length.attribute"
+     ]
+    }
+   ]
+  },
+  "fraction.compare.to-one": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Read a/b as a copies of 1/b and use b copies of 1/b = 1; compare the number of copies a with b.",
+     "prerequisites": [
+      "fraction.multiple-of-unit",
+      "comparing.whole-numbers.symbols"
+     ]
+    },
+    {
+     "description": "Write 1 as b/b and compare a/b with b/b by numerators.",
+     "prerequisites": [
+      "fraction.whole-number.as-fraction",
+      "fraction.compare.same-denominator",
+      "comparing.whole-numbers.symbols"
+     ]
+    }
+   ]
+  },
+  "fraction.complex-fraction": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "division.facts.within-100": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "rational-number.negative-as-decrease": {
+   "missing_prerequisites": [
+    {
+     "node": "subtraction.whole-number",
+     "why": "The idea of a decrease as an amount removed may need subtraction; weak candidate, depends on how the node treats 'decrease'."
+    }
+   ],
+   "missing_routes": [
+    {
+     "description": "Introduce signed change directly from contexts (temperature drops, spending) with a sign convention, before treating negatives as points on a number line.",
+     "prerequisites": []
+    }
+   ]
+  }
+ }
+}
