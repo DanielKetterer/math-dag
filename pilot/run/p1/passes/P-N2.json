@@ -1,0 +1,1626 @@
+{
+ "pass": "P",
+ "batch": "N2",
+ "nodes": {
+  "addition.add-to.fingers": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.add-to.count-all",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sum is the total of two joined sets, which is the meaning of joining two sets and counting all, here with fingers as the sets."
+      },
+      {
+       "node": "counting.produce-set",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 2 raise exactly the given number of fingers, which is counting out a set of a given number."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 finds how many fingers are raised in all by counting the raised fingers one by one."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.add-to.events": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.events",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The first run of sounds or actions must be counted as it happens, which is counting events with no objects to point at."
+      },
+      {
+       "node": "counting.sequence.count-on",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 continues the count from the kept last number through the second run instead of restarting at one."
+      },
+      {
+       "node": "counting.cardinal.last-word",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 says the last number said is the total, which is the rule that the last word of a count tells how many."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.add-to.describe": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Naming how many there were at the start and how many joined requires counting each group of toy cars."
+      },
+      {
+       "node": "addition.add-to.count-all",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Naming how many there are now requires joining the two groups and counting all of them to find the total."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.notation.expression": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.add-to.describe",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The expression a + b stands for the start amount a and the joined amount b of a joining action described in words."
+      },
+      {
+       "node": "numeral.write",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "Writing 4 + 2 for the ducks requires writing the numerals 4 and 2 for the spoken amounts."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.notation.equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.notation.expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation a + b = c extends the expression a + b by recording the amount made when b joins a."
+      },
+      {
+       "node": "addition.add-to.describe",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The result c is the amount named as how many there are now after the joining action."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.take-away.fingers": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.take-away.count-remaining",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The difference is the amount left after taking away, which is the meaning of taking objects away and counting what is left."
+      },
+      {
+       "node": "counting.produce-set",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 raises exactly the starting number of fingers, which is counting out a set of a given number."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 finds how many fingers are still raised by counting the raised fingers one by one."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.take-away.describe": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Naming how many there were at the start and how many were taken requires counting each group of birds."
+      },
+      {
+       "node": "subtraction.take-away.count-remaining",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Naming how many are left requires taking the flown-away birds out of the set and counting what remains."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.notation.expression": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.take-away.describe",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The expression a - b stands for the start amount a and the taken amount b of a taking-away action told in words."
+      },
+      {
+       "node": "numeral.write",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "Writing 7 - 3 for the apples requires writing the numerals 7 and 3 for the spoken amounts."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.notation.equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.notation.expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation a - b = c extends the expression a - b by recording the amount left after b is taken from a."
+      },
+      {
+       "node": "subtraction.take-away.describe",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The result c is the amount named as how many are left after the taking-away action."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.application.put-together.total-unknown": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.add-to.count-all",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "Finding the total of the red and green apples means putting the two groups together and counting all of them."
+      },
+      {
+       "node": "counting.produce-set",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "Showing each part with counters or a drawing means counting out a set of the given number for each part."
+      }
+     ]
+    }
+   ]
+  },
+  "number-composition.within-10.decompose": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.produce-set",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 makes a set of the given number of objects, which is counting out a set of that number."
+      },
+      {
+       "node": "cardinality.conservation",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Putting the set back together and separating it a new way assumes the total stays the same when the objects are rearranged."
+      },
+      {
+       "node": "number-composition.part-whole.inexact",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each split names two parts of a set, and each part is smaller than the whole set that was separated."
+      },
+      {
+       "node": "numeral.informal-record",
+       "relation": "representational",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 draws the two groups, which is recording a set of objects with marks or drawings."
+      }
+     ]
+    }
+   ]
+  },
+  "number-composition.within-10.equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-composition.within-10.decompose",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation w = a + b records a split of w into two parts, the split found by breaking a set into two groups."
+      },
+      {
+       "node": "addition.notation.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The record w = a + b or a + b = w is written in the form of an addition equation."
+      }
+     ]
+    }
+   ]
+  },
+  "number-composition.make-ten.find": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.produce-set",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 shows n objects in a ten frame, which is counting out a set of n."
+      },
+      {
+       "node": "counting.sequence.count-on",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds objects one at a time from n up to 10, which is counting forward from the given number."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 counts the objects added, or the empty spaces, to get the partner of n."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.within-10.fluency": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.notation.expression",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "The test sums are given as expressions such as 4 + 3, which must be read as joining two amounts."
+      },
+      {
+       "node": "addition.add-to.count-all",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each fact to be recalled is the total of two joined sets, which fluent recall replaces counting all of."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.within-10.fluency": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.notation.expression",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "The test differences are given as expressions such as 9 - 4, which must be read as taking one amount from another."
+      },
+      {
+       "node": "subtraction.take-away.count-remaining",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each fact to be recalled is the amount left after taking away, which fluent recall replaces counting what is left of."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.count-on": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.count-on",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 2 say the first addend and then the next number words forward from it without recounting."
+      },
+      {
+       "node": "counting.produce-set",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Stopping after exactly b words are counted on is the same stopping rule as counting out a set of b."
+      },
+      {
+       "node": "counting.cardinal.last-word",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The last word said gives the sum because the last word of a count tells how many there are."
+      },
+      {
+       "node": "addition.notation.expression",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "The test problem is written 8 + 3, so the expression must be read as adding 3 to 8."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.count-back": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.backward",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 says number words one less at a time, which is counting backward by ones from a starting number."
+      },
+      {
+       "node": "counting.produce-set",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Stopping after exactly b words are counted back is the same stopping rule as counting out a set of b."
+      },
+      {
+       "node": "subtraction.take-away.count-remaining",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The last word said is a - b because b were taken away and the number left is what remains."
+      },
+      {
+       "node": "subtraction.notation.expression",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "The test problem is written 12 - 3, so the expression must be read as taking 3 from 12."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.commutative": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.notation.expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement compares the written sums a + b and b + a, so both must be read as joining two amounts."
+      },
+      {
+       "node": "equation.equal-sign.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The claim a + b = b + a says the two sums have the same value, which is the relational meaning of the equal sign."
+      },
+      {
+       "node": "counting.cardinal.order-irrelevance",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "The reason the order of the addends does not matter is that a count of the joined collection does not depend on the order of counting."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.commutative.strategy": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.commutative",
+       "relation": "justificatory",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 claims b + a equals a + b, which is the property that the order of two addends does not change the sum."
+      },
+      {
+       "node": "addition.count-on",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem 2 + 9 is solved after switching by counting on from the larger addend."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.associative.strategy": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.notation.expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The problem is a written sum of three numbers, and adjacent pairs must be read as two-addend sums."
+      },
+      {
+       "node": "number-composition.make-ten.find",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 looks for a pair that makes 10, which uses the partner of a number that makes 10."
+      },
+      {
+       "node": "addition.count-on",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 adds the third number to the sum of the first pair, which is a two-addend sum found by counting on."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.unknown-addend.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.notation.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about equations of the form a - b = c and what they say about the numbers a, b, and c."
+      },
+      {
+       "node": "addition.notation.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement links a - b = c to the addition equation b + c = a, which must be read as a joining record."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.unknown-addend.strategy": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.unknown-addend.rewrite",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 rewrites a - b = ? as b + ? = a, which is exactly the rewrite of a subtraction as an unknown-addend addition."
+      },
+      {
+       "node": "equation.unknown.addition",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds the missing addend in b + ? = a, which is finding the unknown in an addition equation."
+      },
+      {
+       "node": "subtraction.unknown-addend.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The difference is the missing addend because a - b = c exactly when b + c = a."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.make-ten": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-composition.make-ten.find",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds the partner of a that makes 10, which is finding the number that makes 10 with a given number."
+      },
+      {
+       "node": "number-composition.within-10.decompose",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 splits b into the part that completes a to 10 and the rest, which is breaking a number into two parts."
+      },
+      {
+       "node": "place-value.teen.equation",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The result 10 + the rest is recorded and read as a teen number written as 10 plus ones."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.doubles.fact": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.notation.expression",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "The test doubles are given as expressions such as 6 + 6, which must be read as joining two equal amounts."
+      },
+      {
+       "node": "addition.count-on",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each double is a sum that is first found by counting on and then recalled without counting."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.near-doubles": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.doubles.fact",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 recalls the double a + a, which is a recalled doubles fact."
+      },
+      {
+       "node": "addition.associative.strategy",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rewriting a + (a + d) = (a + a) + d regroups the addends, so the sum may be formed from either pair first."
+      },
+      {
+       "node": "addition.count-on",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 adds the small difference d to the double, which is a short count on from the double."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.decompose-to-ten": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.teen.ten-and-ones",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 reads the teen number a as 10 and r ones, which is the meaning of a teen number as ten and some ones."
+      },
+      {
+       "node": "number-composition.within-10.decompose",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 splits b into the ones r and the rest, which is breaking a number into two parts."
+      },
+      {
+       "node": "subtraction.within-10.fluency",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 subtracts the rest from 10, a difference of two numbers within 10."
+      },
+      {
+       "node": "subtraction.notation.expression",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "The test problem is written 13 - 4, so the expression must be read as taking 4 from 13."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.within-20.fluency": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.within-10.fluency",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sums to be recalled include all sums within 10 and the crossing-10 sums are derived from them."
+      },
+      {
+       "node": "addition.make-ten",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sums greater than 10 are first found by splitting an addend to make a ten, then recalled without counting."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.within-20.fluency": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.within-10.fluency",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The differences to be recalled include all differences within 10 and crossing-10 differences are derived from them."
+      },
+      {
+       "node": "subtraction.decompose-to-ten",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The differences that cross 10 are first found by subtracting down to 10 and then recalled without counting."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.equal-sign.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.whole-numbers.symbols",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equal sign states that two numbers have the same value, as the = in a comparison of two whole numbers does."
+      },
+      {
+       "node": "addition.notation.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sign is met in written addition equations, where it must be seen as more than a mark before the answer."
+      },
+      {
+       "node": "addition.add-to.fingers",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Deciding whether 3 + 4 = 7 + 2 requires finding the value of each sum, which can be done on fingers."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.true-false": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.equal-sign.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 compares the values of the two sides, which is the relational meaning of the equal sign."
+      },
+      {
+       "node": "addition.notation.expression",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 2 find the value of sides written as sums such as 5 + 2, so sum expressions must be read."
+      },
+      {
+       "node": "subtraction.notation.expression",
+       "relation": "representational",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 1 and 2 find the value of sides written as differences such as 8 - 1, so difference expressions must be read."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.unknown-addend.rewrite": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.unknown-addend.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rewrite of a - b = ? as b + ? = a is justified by a difference being an unknown addend."
+      },
+      {
+       "node": "subtraction.notation.equation",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "The given problem 15 - 7 = ? is a subtraction equation that must be read as taking 7 from 15."
+      },
+      {
+       "node": "addition.notation.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rewritten form b + ? = a is an addition equation with a box in the addend position."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.unknown.addition": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.equal-sign.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 checks that the two sides are equal, and equations such as 14 = 6 + ? put the sum on the left."
+      },
+      {
+       "node": "addition.notation.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equations are read as three whole numbers related by addition, with a box for the unknown."
+      },
+      {
+       "node": "addition.count-on",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds an unknown addend by counting up from the known addend to the sum, which is counting on."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.unknown.subtraction": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.equal-sign.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 checks both sides are equal, and equations such as 5 = ? - 3 put the difference on the left."
+      },
+      {
+       "node": "subtraction.notation.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equations are read as three whole numbers related by subtraction, with a box for the unknown."
+      },
+      {
+       "node": "subtraction.unknown-addend.meaning",
+       "relation": "justificatory",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 finds an unknown minuend as b + c, which holds because a difference is an unknown addend."
+      },
+      {
+       "node": "subtraction.count-back",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 subtracts when the difference is unknown, which can be done by counting back."
+      },
+      {
+       "node": "addition.count-on",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 adds b and c to find the minuend, which can be done by counting on."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.application.add-to.change-unknown": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.application.add-to-story",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story is an add-to situation that the learner already solves with objects when the result is unknown."
+      },
+      {
+       "node": "equation.unknown.addition",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The answer is the number that joined to the start makes the result, which is the unknown addend in an addition equation."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.application.add-to.start-unknown": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.application.add-to-story",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story is an add-to situation that the learner already solves with objects when the result is unknown."
+      },
+      {
+       "node": "equation.unknown.addition",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The answer is the number that makes the final amount when the added amount joins it, which is the unknown first addend."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.application.take-from.change-unknown": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.application.take-from-story",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story is a take-from situation that the learner already solves with objects when the result is unknown."
+      },
+      {
+       "node": "equation.unknown.subtraction",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The answer is the start minus what is left, which is the unknown subtrahend in a subtraction equation."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.application.take-from.start-unknown": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.application.take-from-story",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story is a take-from situation that the learner already solves with objects when the result is unknown."
+      },
+      {
+       "node": "equation.unknown.subtraction",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The answer is the amount left joined with the amount taken, which is the unknown minuend in a subtraction equation."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.application.put-together.addend-unknown": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.application.put-together.total-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story is a put-together situation with two parts and a total, solved before when the total was the unknown."
+      },
+      {
+       "node": "subtraction.unknown-addend.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The other part is the total minus the known part because the known part plus the other part makes the total."
+      },
+      {
+       "node": "equation.unknown.addition",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "Finding the number of blue balls is finding the addend that makes 15 with 8 in an addition equation."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.application.put-together.both-unknown": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.application.put-together.total-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story is a put-together situation with the total given, in which two parts are combined to make the total."
+      },
+      {
+       "node": "number-composition.within-10.decompose",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "Finding two different splits of 6 flowers uses breaking a number into two parts in more than one way."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.application.compare.difference-unknown": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.more-than",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The question how many more means a greater number, not bigger things, so the stickers are compared by number."
+      },
+      {
+       "node": "comparing.count.matching",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The difference is the part of the larger set left unmatched when the two sets are matched one to one."
+      },
+      {
+       "node": "subtraction.unknown-addend.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The larger minus the smaller is the number that added to the smaller makes the larger."
+      },
+      {
+       "node": "equation.unknown.subtraction",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "Finding the larger minus the smaller is finding the unknown difference in a subtraction equation."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.application.compare.bigger-unknown": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.more-than",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The phrase 5 more means a greater number by 5, not bigger things, so the larger amount is a number."
+      },
+      {
+       "node": "comparing.count.matching",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The larger set is the matched set of the smaller amount together with the extra items that remain."
+      },
+      {
+       "node": "equation.unknown.addition",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The answer is the smaller plus the difference, which is finding the unknown sum in an addition equation."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.application.compare.smaller-unknown": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.more-than",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The phrase 4 fewer means a number lower by 4, so the comparison is by number and not by size of things."
+      },
+      {
+       "node": "comparing.count.matching",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The smaller set is the larger set with the unmatched extra items removed."
+      },
+      {
+       "node": "equation.unknown.subtraction",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The answer is the larger minus the difference, which is finding the unknown difference in a subtraction equation."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.application.three-addends": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.application.put-together.total-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story combines three amounts into a total, which extends combining two parts into a total."
+      },
+      {
+       "node": "addition.associative.strategy",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The total of three amounts is found by adding two of them first and then the third."
+      },
+      {
+       "node": "addition.make-ten",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Adding 4, 7, and 6 passes 10 in one step, so a sum across 10 must be found."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.situation.one-step": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.unknown.addition",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation puts a box for the unknown in its position among three quantities related by addition."
+      },
+      {
+       "node": "equation.unknown.subtraction",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation puts a box for the unknown in its position among three quantities related by subtraction."
+      },
+      {
+       "node": "addition.application.add-to-story",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "One-step add-to stories must be understood as joining situations to tell which quantity is the start, change, or result."
+      },
+      {
+       "node": "subtraction.application.take-from-story",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "One-step take-from stories must be understood as taking-away situations to tell which quantity is the start, change, or result."
+      },
+      {
+       "node": "addition.application.put-together.total-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "One-step put-together stories must be understood as two parts and a total to place the unknown correctly."
+      },
+      {
+       "node": "subtraction.application.compare.difference-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "One-step compare stories must be understood as a larger, a smaller, and a difference to place the unknown correctly."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.application.two-step": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.application.add-to.change-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each step may be an add-to story with the change unknown, which must be solved as a one-step problem."
+      },
+      {
+       "node": "addition.application.add-to.start-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each step may be an add-to story with the start unknown, which must be solved as a one-step problem."
+      },
+      {
+       "node": "subtraction.application.take-from.change-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each step may be a take-from story with the change unknown, which must be solved as a one-step problem."
+      },
+      {
+       "node": "subtraction.application.take-from.start-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each step may be a take-from story with the start unknown, which must be solved as a one-step problem."
+      },
+      {
+       "node": "addition.application.put-together.addend-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each step may be a put-together story with one part unknown, which must be solved as a one-step problem."
+      },
+      {
+       "node": "subtraction.application.compare.difference-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each step may be a compare story with the difference unknown, which must be solved as a one-step problem."
+      },
+      {
+       "node": "subtraction.application.compare.bigger-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each step may be a compare story with the larger amount unknown, which must be solved as a one-step problem."
+      },
+      {
+       "node": "subtraction.application.compare.smaller-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each step may be a compare story with the smaller amount unknown, which must be solved as a one-step problem."
+      },
+      {
+       "node": "subtraction.base-ten.model",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The first step 23 - 8 is a subtraction of a one-digit number from a two-digit number done with a base-ten model."
+      },
+      {
+       "node": "addition.base-ten.model",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The second step 15 + 15 is a sum of two two-digit numbers done with a base-ten model."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.situation.two-step": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.situation.one-step",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each step of the story is written as an equation with a symbol for the unknown, as in a one-step story."
+      },
+      {
+       "node": "addition.application.two-step",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equations follow the two steps of the story, the first result being used as a quantity in the second."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.two-digit-plus-tens.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.two-digit.tens-ones",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 shows the two-digit number as tens and ones, and step 3 reads the new tens and the unchanged ones."
+      },
+      {
+       "node": "place-value.decade.tens",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The multiple of 10 being added is a number of tens, so 30 is joined as 3 tens."
+      },
+      {
+       "node": "place-value.ten.unit",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The base-ten blocks show each ten as a rod, a bundle of ten ones."
+      },
+      {
+       "node": "addition.add-to.count-all",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds the tens of the multiple of 10 to the tens, which is joining two small sets and counting all."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.two-digit-plus-tens.split-tens": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.two-digit.tens-ones",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes the two-digit number as tens plus ones, such as 46 = 40 + 6."
+      },
+      {
+       "node": "place-value.decade.tens",
+       "relation": "definitional",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds the multiple of 10 to the tens, such as 40 + 30 = 70, using decade numbers as numbers of tens."
+      },
+      {
+       "node": "addition.commutative",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation (t + u) + m = (t + m) + u swaps the order of u and m, which holds by the commutative property."
+      },
+      {
+       "node": "addition.associative.strategy",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation (t + u) + m = (t + m) + u regroups the three addends, which holds by the associative property."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.two-digit-plus-one-digit.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.two-digit.tens-ones",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 shows the two-digit number as tens and ones and step 4 reads the result as tens and ones."
+      },
+      {
+       "node": "place-value.ten.unit",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 trades ten ones for one ten, which uses a ten as a bundle of ten ones."
+      },
+      {
+       "node": "addition.add-to.count-all",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 joins the ones to the ones, which is joining two small sets and counting all."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.two-digit-plus-one-digit.next-ten": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-composition.make-ten.find",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds how much brings a to the next ten, which is the partner of the ones digit that makes 10."
+      },
+      {
+       "node": "number-composition.within-10.decompose",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 splits b into the amount that reaches the next ten and the rest, which is breaking a number into two parts."
+      },
+      {
+       "node": "place-value.decade.tens",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 adds the rest to a multiple of 10, such as 40 + 3, using the multiple of 10 as a number of tens."
+      },
+      {
+       "node": "place-value.two-digit.tens-ones",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The result 43 is read as 4 tens and 3 ones, the two digits of a two-digit number."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.two-digit.relate-written": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.two-digit-plus-tens.model",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The steps matched are the steps of an addition done with base-ten blocks, such as adding the tens to the tens."
+      },
+      {
+       "node": "addition.notation.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The written record is an addition equation such as 40 + 30 + 6 = 76 that must be read as joining amounts."
+      },
+      {
+       "node": "place-value.two-digit.tens-ones",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "The line 40 + 30 + 6 writes 46 as 40 + 6, which is reading the two digits as tens and ones."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.tens-minus-tens.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.decade.tens",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 names the number shown by the ten-rods left, which is a decade number as a number of tens."
+      },
+      {
+       "node": "place-value.ten.unit",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 shows the first number as ten-rods, each rod a bundle of ten ones."
+      },
+      {
+       "node": "subtraction.take-away.count-remaining",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 takes away ten-rods and counts those left, which is taking objects away and counting what is left."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.tens-minus-tens.related-addition": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.unknown-addend.rewrite",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 rewrites a - b = ? as b + ? = a, which is the rewrite of a subtraction as an unknown-addend addition."
+      },
+      {
+       "node": "subtraction.unknown-addend.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The difference is the multiple of 10 that added to b makes a, because a difference is an unknown addend."
+      },
+      {
+       "node": "place-value.decade.tens",
+       "relation": "definitional",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 uses the one-digit fact in tens, reading 50 and 30 as 5 tens and 3 tens."
+      },
+      {
+       "node": "addition.within-10.fluency",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 uses a known one-digit fact such as 5 + 3 = 8, which is recalled addition within 10."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.tens-minus-tens.relate-written": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.tens-minus-tens.model",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The steps matched are the steps of a subtraction done with ten-rods, such as taking away 3 rods from 8 rods."
+      },
+      {
+       "node": "subtraction.notation.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The written record is a subtraction equation such as 80 - 30 = 50 that must be read as taking one amount from another."
+      },
+      {
+       "node": "place-value.decade.tens",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "The line 80 - 30 = 50 writes 8 tens and 3 tens as the decade numbers 80 and 30."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
