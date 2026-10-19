@@ -1,0 +1,178 @@
+id: fraction.compare.to-one
+concept: fraction
+facet: part-whole
+level: 3
+type: concept
+name: Compare a fraction with 1 by its numerator and denominator
+statement: A fraction a/b is greater than 1 when a is greater than b, equal to 1 when a equals b, and
+  less than 1 when a is less than b.
+assess: 'Without computing, sort these fractions into less than 1, equal to 1, and greater than 1: 3/5,
+  7/4, 6/6, 9/10, 5/2. Credit all five placed correctly.'
+sources:
+  ccss:
+  - 5.NF.B.5.b
+  learning_components: []
+  other:
+  - 'Review item A40 (pilot, 2026-10-17): the scaling principle needs this, not the benchmark procedure'
+requires:
+- clause: via-as-fraction
+  all_of:
+  - node: comparing.whole-numbers.symbols
+    relation: definitional
+    points_to: statement
+    why: The statement itself compares the whole numbers a and b as greater than, equal to, or less than.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The statement uses the comparison of whole numbers a and b (greater, equal, less),
+        not the written symbols. If the boundary node covers deciding which of two whole numbers is greater,
+        the edge is necessary; if it is only about notation, the'
+    status: disputed
+  - node: fraction.whole-number.as-fraction
+    relation: definitional
+    points_to: statement
+    why: Comparing a/b with 1 uses 1 written as b/b, so the equal-to-1 case rests on whole numbers written
+      as fractions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Writing 1 as b/b is needed in the same-denominator route; in the unit-multiple
+        route the same fact comes from b copies of 1/b making 1. | other route: Get 1 = b/b from b copies
+        of 1/b making the whole (fraction.multiple-of-unit).'
+    status: disputed
+- clause: via-same-denominator
+  all_of:
+  - node: comparing.whole-numbers.symbols
+    relation: definitional
+    points_to: statement
+    why: The statement itself compares the whole numbers a and b as greater than, equal to, or less than.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The statement uses the comparison of whole numbers a and b (greater, equal, less),
+        not the written symbols. If the boundary node covers deciding which of two whole numbers is greater,
+        the edge is necessary; if it is only about notation, the'
+    status: disputed
+  - node: fraction.compare.same-denominator
+    relation: justificatory
+    points_to: statement
+    why: The rule follows by comparing a/b with b/b, two fractions with the same denominator, by their
+      numerators a and b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Comparing a/b with b/b by numerators is one way to establish the rule. | other
+        route: Read a/b as a copies of 1/b and b copies of 1/b as 1 (fraction.multiple-of-unit); more
+        than b copies exceeds 1.'
+    status: disputed
+- clause: unit-fraction-count
+  all_of:
+  - node: comparing.whole-numbers.symbols
+    relation: definitional
+    points_to: statement
+    why: The statement itself compares the whole numbers a and b as greater than, equal to, or less than.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The statement uses the comparison of whole numbers a and b (greater, equal, less),
+        not the written symbols. If the boundary node covers deciding which of two whole numbers is greater,
+        the edge is necessary; if it is only about notation, the'
+    status: disputed
+  - node: fraction.multiple-of-unit
+    relation: definitional
+    points_to: statement
+    why: Reading a/b as a copies of 1/b, and knowing that b copies of 1/b make 1, gives the comparison
+      with 1.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The copies-of-a-unit-fraction reading yields the rule, but a learner can instead
+        reach it by comparing a/b with b/b.'
+    status: disputed
+- clause: critic-route-1
+  note: Read a/b as a copies of 1/b and use b copies of 1/b = 1; compare the number of copies a with b.
+  all_of:
+  - node: comparing.whole-numbers.symbols
+    relation: definitional
+    points_to: statement
+    why: The statement itself compares the whole numbers a and b as greater than, equal to, or less than.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The statement uses the comparison of whole numbers a and b (greater, equal, less),
+        not the written symbols. If the boundary node covers deciding which of two whole numbers is greater,
+        the edge is necessary; if it is only about notation, the'
+    status: disputed
+  - node: fraction.multiple-of-unit
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Read a/b as a copies of 1/b and use b copies of 1/b
+      = 1; compare the number of copies a with b.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+- clause: critic-route-2
+  note: Write 1 as b/b and compare a/b with b/b by numerators.
+  all_of:
+  - node: comparing.whole-numbers.symbols
+    relation: definitional
+    points_to: statement
+    why: The statement itself compares the whole numbers a and b as greater than, equal to, or less than.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The statement uses the comparison of whole numbers a and b (greater, equal, less),
+        not the written symbols. If the boundary node covers deciding which of two whole numbers is greater,
+        the edge is necessary; if it is only about notation, the'
+    status: disputed
+  - node: fraction.whole-number.as-fraction
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Write 1 as b/b and compare a/b with b/b by numerators.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: fraction.compare.same-denominator
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Write 1 as b/b and compare a/b with b/b by numerators.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

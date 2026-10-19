@@ -89,5 +89,5 @@ units:
   - {id: fixes.writer, stage: writer, strand: fixes, after: [prek.merge], output: pilot/run/fixes/batches/fixes.yaml, validate: writer, status: done, tokens: 0, commit: 555b0ea}
   - {id: fixes.proposer-a, stage: proposer-a, strand: fixes, after: [fixes.writer], output: pilot/run/fixes/passes/P-fixes.json, validate: proposer, status: done, tokens: 98236, commit: 22ba64c}
   - {id: fixes.proposer-b, stage: proposer-b, strand: fixes, after: [fixes.writer], output: pilot/run/fixes/passes/Q-fixes.json, validate: proposer, status: done, tokens: 93950, commit: c92695a}
-  - {id: fixes.critic, stage: critic, strand: fixes, after: [fixes.proposer-a, fixes.proposer-b], output: pilot/run/fixes/critic/verdicts-fixes.json, validate: critic, status: running, tokens: 0}
+  - {id: fixes.critic, stage: critic, strand: fixes, after: [fixes.proposer-a, fixes.proposer-b], output: pilot/run/fixes/critic/verdicts-fixes.json, validate: critic, status: done, tokens: 98545, commit: 2be64cf}
   - {id: fixes.merge, stage: merge, strand: fixes, after: [fixes.critic], output: pilot/run/fixes/merge_report.md, validate: check, status: pending, tokens: 0}

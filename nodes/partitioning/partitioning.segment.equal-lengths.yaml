@@ -1,0 +1,131 @@
+id: partitioning.segment.equal-lengths
+concept: partitioning
+facet: length
+level: 1
+type: procedure
+name: Partition a strip or segment into equal lengths
+statement: Partition a strip or segment into b parts of equal length that together fill it, with no gaps
+  or overlaps.
+assess: Give the child a paper strip. 'Fold or mark this strip into 4 parts that are all the same length.'
+  Credit four equal parts that fill the whole strip, checked by laying one part along the others.
+sources:
+  ccss:
+  - 3.NF.A.2.a
+  learning_components: []
+  other:
+  - Review items A44, D76, D77 (pilot, 2026-10-17)
+requires:
+- clause: via-no-gaps-overlaps
+  all_of:
+  - node: measurement.length.attribute
+    relation: definitional
+    points_to: statement
+    why: The statement asks for parts of equal length, so length must already be an attribute the child
+      can attend to.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.no-gaps-overlaps
+    relation: definitional
+    points_to: statement
+    why: The parts must together fill the whole strip with no gaps or overlaps, the same idea as spanning
+      a length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The needed idea is that the parts exactly fill the strip with no gap or overlap.
+        The measurement version of that idea is one source of it, but not the only one. | other route:
+        Get the fill-with-no-gaps idea from equal shares of a whole (partitioning.equal-shares.whole-as-shares).'
+    status: disputed
+- clause: via-direct
+  all_of:
+  - node: measurement.length.attribute
+    relation: definitional
+    points_to: statement
+    why: The statement asks for parts of equal length, so length must already be an attribute the child
+      can attend to.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.size.direct
+    relation: procedural
+    points_to: assess
+    why: The test checks the equal parts by laying one part along the others, which is a direct comparison
+      of lengths.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Judging equal lengths needs a check, and laying parts along each other is one.
+        | other route: Measure the parts with a common unit by laying units end to end and compare the
+        counts (measurement.length.iterate-units), as when marking a strip of 12 units into 4 parts of
+        3 units.'
+    status: disputed
+- clause: via-whole-as-shares
+  all_of:
+  - node: measurement.length.attribute
+    relation: definitional
+    points_to: statement
+    why: The statement asks for parts of equal length, so length must already be an attribute the child
+      can attend to.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: partitioning.equal-shares.whole-as-shares
+    relation: definitional
+    points_to: statement
+    why: The requirement that parts together fill the strip with no gaps or overlaps is the whole being
+      all of its equal shares.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The idea that the parts together are the whole and fill it is required in some
+        form, but the area-based version is not the only source of it. | other route: Get the no-gaps-or-overlaps
+        idea from measuring length by units (measurement.length.no-gaps-overlaps).'
+    status: disputed
+- clause: critic-route-1
+  note: Make equal parts by measuring the strip with a common unit and dividing the unit count.
+  all_of:
+  - node: measurement.length.attribute
+    relation: definitional
+    points_to: statement
+    why: The statement asks for parts of equal length, so length must already be an attribute the child
+      can attend to.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.iterate-units
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Make equal parts by measuring the strip with a common
+      unit and dividing the unit count.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

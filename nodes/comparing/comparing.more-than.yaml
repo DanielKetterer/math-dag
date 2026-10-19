@@ -1,0 +1,74 @@
+id: comparing.more-than
+concept: comparing
+facet: count
+level: 1
+type: concept
+name: '''More'' means a greater number, not bigger things'
+statement: When two collections are compared, 'more' refers to the number of objects in each, not to the
+  size of the objects or the space they cover.
+assess: Show 3 large balls spread across the table and 9 small marbles in a tight cluster. 'Which group
+  has more?' Credit the marbles.
+sources:
+  ccss: []
+  learning_components: []
+  prek:
+  - cs.compare.perceptual
+  other:
+  - Review item D53-D57 (pre-K, 2026-10-19)
+  - Odic, Pietroski, Hunter, Lidz and Halberda (2013) on children's 'more' for number versus area
+requires:
+- clause: via-by-counting
+  all_of:
+  - node: comparing.count.by-counting
+    relation: definitional
+    points_to: statement
+    why: The statement says 'more' refers to the number in each group, and the learner finds those numbers
+      by counting each group.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The test needs some number-based way to decide which group has more, but counting
+        is only one such way. | other route: Match the marbles and balls one to one and see which group
+        has leftovers (comparing.count.matching).'
+    status: disputed
+- clause: by-matching
+  all_of:
+  - node: comparing.count.matching
+    relation: definitional
+    points_to: statement
+    why: Matching objects one to one shows which group has leftover objects, so 'more' is judged by number
+      and not by size or spread.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: One-to-one matching settles the test but is not the only number-based method.'
+    status: disputed
+- clause: critic-route-1
+  note: Either counting each group or one-to-one matching supports the meaning of 'more' as number; treat
+    e1 and e2 as an OR-clause.
+  all_of:
+  - node: comparing.count.by-counting
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Either counting each group or one-to-one matching
+      supports the meaning of ''more'' as number; treat e1 and e2 as an OR-clause.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: comparing.count.matching
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Either counting each group or one-to-one matching
+      supports the meaning of ''more'' as number; treat e1 and e2 as an OR-clause.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

@@ -1,0 +1,49 @@
+id: division.facts.within-100
+concept: division
+facet: unknown-factor
+level: 3
+type: fact
+name: Recall division facts within 100
+statement: Recall the quotient of a divided by b whenever a = b x c with b and c whole numbers from 1
+  to 10.
+assess: '''Tell me the answers: 56 divided by 8, 42 divided by 6, 81 divided by 9.'' Credit all three
+  correct, each given without counting or computing aloud.'
+sources:
+  ccss:
+  - 3.OA.C.7
+  learning_components: []
+  other:
+  - 'Review items C64, C67 (pilot, 2026-10-17): single-digit division should not point at the multi-digit
+    algorithm'
+requires:
+- clause: standard
+  all_of:
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement defines the quotient through a = b x c, which is a quotient seen as an unknown
+      factor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: definitional
+    points_to: statement
+    why: Recalling a divided by b rests on knowing the fluent multiplication fact b x c = a for single-digit
+      factors.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

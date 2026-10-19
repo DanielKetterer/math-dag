@@ -112,10 +112,16 @@ def main(d):
     lines.append("")
 
     lines += ["## D. Disputed edges and new routes, highest impact first", "",
-              f"{len(disputed)} edges are disputed (route-only, added by the critic, or on an alternative route).",
+              f"{len({(x['node'], x['target']) for x in disputed})} edges are disputed (route-only, added by the critic, or on an alternative route).",
               f"The {min(30, len(disputed))} below matter most. Mark the ones that are **wrong**.", ""]
+    grouped = collections.OrderedDict()  # one item per edge, listing every route it sits on
+    for x in disputed:
+        g = grouped.setdefault((x["node"], x["target"]), dict(x, clauses=[]))
+        g["clauses"].append(x["clause"])
+    disputed = list(grouped.values())
     for x in sorted(disputed, key=lambda x: -impact.get(x["node"], 0))[:30]:
-        route = f" [route: {x['clause']}]" if x["clause"] != "standard" else ""
+        cl = [c for c in x["clauses"] if c != "standard"]
+        route = f" [route: {', '.join(cl)}]" if cl else ""
         sub = [f"Why: {x['why'][:300]}"]
         if x["note"]:
             sub.append(f"Critic: {x['note'][:300]}")

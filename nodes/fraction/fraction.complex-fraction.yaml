@@ -1,0 +1,47 @@
+id: fraction.complex-fraction
+concept: fraction
+facet: quotient
+level: 3
+type: concept
+name: A complex fraction as a division of fractions
+statement: A fraction whose numerator and denominator are themselves fractions, (a/b)/(c/d), means a/b
+  divided by c/d.
+assess: Rewrite (1/2)/(3/4) as a division expression using the division sign.
+sources:
+  ccss:
+  - 7.RP.A.1
+  learning_components: []
+  other:
+  - Review item C68 (pilot, 2026-10-17)
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.quotient.symbolic
+    relation: definitional
+    points_to: statement
+    why: The statement extends the meaning of a fraction bar as division, a divided by b equals a/b, to
+      a bar between two fractions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.as-number
+    relation: definitional
+    points_to: statement
+    why: The numerator and denominator are themselves fractions, which only makes sense if a fraction
+      is a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed
