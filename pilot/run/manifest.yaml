@@ -24,8 +24,9 @@
 #   python3 tools/run_state.py --mark UNIT done --tokens N --commit SHA
 #   python3 tools/run_state.py --mark UNIT running
 
-run: prek
-description: Pre-K floor of the map, from developmental sources.
+run: prek + fixes
+description: Pre-K floor of the map, from developmental sources; then the fixes run
+  (12 nodes the pilot and pre-K reviews found missing, 2026-10-19).
 
 # One strand (Daniel, 2026-10-17). The layer is about 38 nodes, inside the
 # 30-60 batch size, and its prerequisites cross every topic line (comparing by
@@ -81,3 +82,12 @@ units:
     validate: check
     status: done
     tokens: 0
+
+  # ---------- fixes run (2026-10-19) ----------
+  # One batch of 12 nodes the reviews found missing, written in the main session
+  # (no subagent tokens). Proposers and critic run on this batch only.
+  - {id: fixes.writer, stage: writer, strand: fixes, after: [prek.merge], output: pilot/run/fixes/batches/fixes.yaml, validate: writer, status: done, tokens: 0, commit: 555b0ea}
+  - {id: fixes.proposer-a, stage: proposer-a, strand: fixes, after: [fixes.writer], output: pilot/run/fixes/passes/P-fixes.json, validate: proposer, status: pending, tokens: 0}
+  - {id: fixes.proposer-b, stage: proposer-b, strand: fixes, after: [fixes.writer], output: pilot/run/fixes/passes/Q-fixes.json, validate: proposer, status: pending, tokens: 0}
+  - {id: fixes.critic, stage: critic, strand: fixes, after: [fixes.proposer-a, fixes.proposer-b], output: pilot/run/fixes/critic/verdicts-fixes.json, validate: critic, status: pending, tokens: 0}
+  - {id: fixes.merge, stage: merge, strand: fixes, after: [fixes.critic], output: pilot/run/fixes/merge_report.md, validate: check, status: pending, tokens: 0}

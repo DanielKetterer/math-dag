@@ -365,6 +365,8 @@ def main(d):
                           "learning_components": [str(s) for s in src.get("lc", [])]}
         if src.get("prek"):
             doc["sources"]["prek"] = [str(s) for s in src["prek"]]
+        if src.get("other"):
+            doc["sources"]["other"] = [str(s) for s in src["other"]]
         doc["requires"] = requires
         if not requires:
             reasons = [passes[p].get(nid, {}).get("root_reason") for p in ("P", "Q")]

@@ -1,0 +1,175 @@
+# Fixes run (2026-10-19): nodes the pilot and pre-K reviews found missing.
+# Written in the main session (Claude Opus 5.5) following pilot/run/writer.md;
+# each node's origin is in its sources.other.
+
+# ---------- pre-K and K floor ----------
+
+- id: comparing.more-than
+  concept: comparing
+  facet: count
+  level: 1
+  type: concept
+  name: "'More' means a greater number, not bigger things"
+  statement: When two collections are compared, 'more' refers to the number of objects in each, not to the
+    size of the objects or the space they cover.
+  assess: "Show 3 large balls spread across the table and 9 small marbles in a tight cluster. 'Which group
+    has more?' Credit the marbles."
+  sources:
+    prek: [cs.compare.perceptual]
+    other: ["Review item D53-D57 (pre-K, 2026-10-19)", "Odic, Pietroski, Hunter, Lidz and Halberda (2013) on children's 'more' for number versus area"]
+
+- id: shapes.closed-boundary
+  concept: shapes
+  facet: properties
+  level: 1
+  type: concept
+  name: A shape's boundary closes with no gaps
+  statement: A flat shape such as a triangle or a square is bounded by a line that goes all the way around
+    and meets itself; a figure whose boundary has a gap is not that shape.
+  assess: "Show 6 drawings of fences: three closed triangles and squares, and the same three figures each
+    with a small gap in one side or corner. 'Which fences have no gap, so the sheep inside cannot get
+    out?' Credit all and only the three closed figures."
+  sources:
+    prek: [cs.shapes.recognizer-cst]
+    other: ["Review item D51 (pre-K, 2026-10-19)"]
+
+- id: shapes.name.receptive
+  concept: shapes
+  facet: core
+  level: 1
+  type: representation
+  name: Pick out the shape that is named
+  statement: When the name circle, square, or triangle is said, pick out a typical example of that shape
+    from a set of shapes.
+  assess: "Lay out a typical circle, square, triangle, and rectangle, each resting on a side. 'Show me the
+    triangle.' Repeat for the circle and the square. Credit the correct shape each time."
+  sources:
+    prek: [cs.shapes.prototype]
+    other: ["Review items A25, A39 (pre-K, 2026-10-19): the shape tests need the name understood, not spoken"]
+
+- id: numeral.digit-formation
+  concept: numeral
+  facet: core
+  level: 1
+  type: procedure
+  name: Form the digits 0 to 9
+  statement: Write each of the digits 0 through 9 so that it is recognizable and not reversed.
+  assess: "Show a card with the digits 0 to 9. 'Copy each number onto your paper.' Credit all ten digits
+    legible and none reversed."
+  sources:
+    ccss: [K.CC.A.3]
+    other: ["Review item D74 (pre-K, 2026-10-19): forming digits is a motor skill separate from knowing which numeral names a number"]
+
+- id: counting.number-words.vocabulary
+  concept: counting
+  facet: core
+  level: 1
+  type: concept
+  name: Know the number words zero to nine as words
+  statement: The words zero through nine are number words, each one a separate word the learner can say
+    and tell apart from other words, whether or not the learner can recite them in order.
+  assess: "Say these words one at a time: 'seven, blue, cat, three, zero, run, nine'. 'Clap when you hear
+    a number word.' Credit claps for seven, three, zero, and nine only."
+  sources:
+    prek: [cs.counting.reciter, elof.p-math-1]
+    other: ["Review items C48, D60, D61 (pre-K, 2026-10-19): replaces number.word.zero"]
+
+- id: cardinality.conservation
+  concept: cardinality
+  facet: core
+  level: 1
+  type: concept
+  name: Spreading out or pushing together does not change how many
+  statement: Moving the objects of a collection closer together or farther apart, without adding or
+    removing any, does not change how many objects there are.
+  assess: "Lay out two rows of 6 counters, matched one to one, and the child agrees the rows have the same
+    number. While the child watches, spread one row out so it is longer. 'Does one row have more now, or
+    do they have the same number?' Credit 'the same', given without counting."
+  sources:
+    other: ["Review item A35 (pre-K, 2026-10-19): split from counting.cardinal.order-irrelevance", "Piaget's number conservation task"]
+
+- id: counting.unitize
+  concept: counting
+  facet: core
+  level: 1
+  type: concept
+  name: Count a group of objects as one unit
+  statement: A group of objects, such as a pair of socks or a bundle of ten sticks, can be counted as one
+    unit, so that the count tells how many groups there are rather than how many objects.
+  assess: "Show 4 pairs of socks, each pair clipped together. 'How many socks are there? How many pairs
+    of socks are there?' Credit 8 socks and 4 pairs."
+  sources:
+    ccss: [1.NBT.B.2.a]
+    other: ["Review 2026-10-19: prerequisite of ratio.composed-unit (Daniel)"]
+
+# ---------- K-8 ----------
+
+- id: partitioning.segment.equal-lengths
+  concept: partitioning
+  facet: length
+  level: 1
+  type: procedure
+  name: Partition a strip or segment into equal lengths
+  statement: Partition a strip or segment into b parts of equal length that together fill it, with no gaps
+    or overlaps.
+  assess: "Give the child a paper strip. 'Fold or mark this strip into 4 parts that are all the same
+    length.' Credit four equal parts that fill the whole strip, checked by laying one part along the
+    others."
+  sources:
+    ccss: [3.NF.A.2.a]
+    other: ["Review items A44, D76, D77 (pilot, 2026-10-17)"]
+
+- id: fraction.compare.to-one
+  concept: fraction
+  facet: part-whole
+  level: 3
+  type: concept
+  name: Compare a fraction with 1 by its numerator and denominator
+  statement: A fraction a/b is greater than 1 when a is greater than b, equal to 1 when a equals b, and less
+    than 1 when a is less than b.
+  assess: "Without computing, sort these fractions into less than 1, equal to 1, and greater than 1: 3/5,
+    7/4, 6/6, 9/10, 5/2. Credit all five placed correctly."
+  sources:
+    ccss: [5.NF.B.5.b]
+    other: ["Review item A40 (pilot, 2026-10-17): the scaling principle needs this, not the benchmark procedure"]
+
+- id: fraction.complex-fraction
+  concept: fraction
+  facet: quotient
+  level: 3
+  type: concept
+  name: A complex fraction as a division of fractions
+  statement: A fraction whose numerator and denominator are themselves fractions, (a/b)/(c/d), means a/b
+    divided by c/d.
+  assess: "Rewrite (1/2)/(3/4) as a division expression using the division sign."
+  sources:
+    ccss: [7.RP.A.1]
+    other: ["Review item C68 (pilot, 2026-10-17)"]
+
+- id: division.facts.within-100
+  concept: division
+  facet: unknown-factor
+  level: 3
+  type: fact
+  name: Recall division facts within 100
+  statement: Recall the quotient of a divided by b whenever a = b x c with b and c whole numbers from 1 to
+    10.
+  assess: "'Tell me the answers: 56 divided by 8, 42 divided by 6, 81 divided by 9.' Credit all three
+    correct, each given without counting or computing aloud."
+  sources:
+    ccss: [3.OA.C.7]
+    other: ["Review items C64, C67 (pilot, 2026-10-17): single-digit division should not point at the multi-digit algorithm"]
+
+- id: rational-number.negative-as-decrease
+  concept: rational-number
+  facet: change
+  level: 2
+  type: representation
+  name: A decrease as a negative number
+  statement: A decrease in a quantity is written as a negative number whose size is the amount of the
+    decrease, and an increase as a positive number.
+  assess: "The water in a tank goes down by 15 liters. Write the change in the amount of water as a signed
+    number. Credit -15."
+  sources:
+    ccss: [6.NS.C.5]
+    other: ["Review item C71 (pilot, 2026-10-17)"]
