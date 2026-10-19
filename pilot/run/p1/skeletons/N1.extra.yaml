@@ -1,0 +1,51 @@
+new_concepts:
+  - {concept: place-value, facet: whole-number, reason: "Base-ten place value of whole numbers (units of ten and hundred, digit values, expanded form, ten-times relation, mental 10/100 more or less). Reserved id place-value.base-ten already assumes this concept."}
+  - {concept: place-value, facet: decimal, reason: "Place-value relations that extend past the decimal point (ten times / one tenth across the decimal point, decimal expanded form with 1/10, 1/100, 1/1000)."}
+  - {concept: rounding, facet: whole-number, reason: "Rounding whole numbers to the nearest 10, 100, or any place; no existing concept covers approximation to a place."}
+  - {concept: rounding, facet: decimal, reason: "Rounding decimals to any place; differs from whole-number rounding in that digits after the decimal point are dropped, not replaced by 0."}
+retires:
+  - {id: place-value.base-ten, replaced_by: [place-value.ten.unit, place-value.two-digit.tens-ones, place-value.hundred.unit, place-value.three-digit.hundreds-tens-ones, place-value.ten-times-right, place-value.expanded-form], note: "Base-ten place value of whole numbers spans the ten as a unit, two-digit tens and ones, the hundred as a unit, three-digit digit values, the general ten-times relation, and expanded form; these are different levels and tests. Re-point each old edge to the finest node its source actually uses: two-digit work to place-value.two-digit.tens-ones, three-digit work to place-value.three-digit.hundreds-tens-ones, multi-digit algorithms to place-value.ten-times-right or place-value.expanded-form."}
+covered_by:
+  - {lc: "67200ac5", node: counting.sequence.recite}
+  - {lc: "7497ced2", node: decimal.compare}
+  - {lc: "25797f65", node: decimal.compare}
+dropped: []
+notes: >-
+  Range merges: counting forward by ones within 120 and within 1000 are one node
+  (counting.sequence.within-1000); only counting.sequence.to-100 (the rote K
+  sequence from 1) and the count-on node (starting from a given number) are kept
+  separate because starting at an arbitrary number is a different skill from
+  reciting from one. Counting backward by ones within 120 is written as
+  counting.sequence.backward.across-decades because the existing
+  counting.sequence.backward is an L1 fact that, from its name, covers small
+  backward counts; if that node already includes crossing decades to 120, merge.
+  Skip-count component 3b089bbf is cited by three nodes (tens, fives, hundreds)
+  because it names three sequences. Reading and writing numerals are split at
+  1000 versus periods (thousands) because the comma/period structure and the
+  placement of zeros after the word thousand is a real new rule; reading and
+  writing within 1000 merge 1.NBT.A.1 and the standard-form/word-form part of
+  2.NBT.A.3. The existing numeral.read and numeral.write (L2) presumably cover
+  single-digit numerals; the new to-1000 nodes are the multi-digit extension.
+  Expanded form: the three components per standard (standard-expanded,
+  word-expanded, standard-word) are split as standard/word (numeral nodes) and
+  numeral/expanded (place-value.expanded-form); word-to-expanded is composite
+  (read then expand), cited on the expanded-form node. Whole-number expanded
+  form to 1000 and to 1,000,000 are merged (range only). Decimal comparison to
+  thousandths (5.NBT.A.3.b) is put under decimal.compare, which is written for
+  hundredths: the range extension does not change the mathematics, so the
+  reviewer should widen decimal.compare to thousandths rather than add a node;
+  the symbol-recording component 25797f65 is likewise assumed to be part of
+  decimal.compare (if not, it belongs with a symbol-recording node for
+  decimals). comparing.whole-numbers.magnitude is written at level 3 as the
+  place-value comparison procedure for any whole numbers (two-digit, three-digit,
+  multi-digit merged); the comparative-language components fd3f3ed6 and 0f972f57
+  are folded into it since saying "greater than" is the result of that node.
+  Comparing written numerals within 10 (K.CC.C.7) is a separate L2 node since
+  it rests on the counting sequence, not place value. place-value.two-digit.tens-ones
+  and place-value.three-digit.hundreds-tens-ones have no lc of their own: they
+  are the stem statements of 1.NBT.B.2 and 2.NBT.A.1, whose listed components
+  are only the special cases. The 10-more/10-less procedure merges two-digit and
+  three-digit ranges; crossing a hundred (95 + 10, 305 - 10) is included in the
+  statement. Two small wording fixes were made in place to entries already
+  written (teen equation, divide-by-10 restriction) before any later entry was
+  appended. Ids owned by other strands referenced only here: none used.
