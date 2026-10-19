@@ -1,0 +1,218 @@
+{
+  "route_semantics": "complete",
+  "edges": {
+    "e1": {"verdict": "necessary"},
+    "e2": {"verdict": "necessary"},
+    "e3": {"verdict": "necessary"},
+    "e4": {"verdict": "necessary"},
+    "e5": {"verdict": "necessary"},
+    "e6": {"verdict": "necessary"},
+    "e7": {"verdict": "necessary"},
+    "e8": {"verdict": "necessary"},
+    "e9": {"verdict": "scaffold", "reason": "Counting forward by tens from 24 steps through the tens, not through ones; count-on by ones within 100 is a different sequence skill. Starting mid-sequence is only a shared surface feature. What is needed is the decade order (e11) and the words past 100 (e10)."},
+    "e10": {"verdict": "necessary"},
+    "e11": {"verdict": "necessary"},
+    "e12": {"verdict": "scaffold", "reason": "Counting back by tens does not pass through the by-ones predecessor of each number; the step is 'same ones, one less ten'. Backward-by-ones across decades is a different skill. What the target needs is the number names past 100 (117, 107), which this edge does not supply."},
+    "e13": {"verdict": "necessary"},
+    "e14": {"verdict": "necessary"},
+    "e15": {"verdict": "necessary"},
+    "e16": {"verdict": "route-only", "reason": "Reading 406 as 'four hundred six' needs only the words already in the sequence to 100 plus the rule of naming hundreds then the two-digit name; the ability to count across hundred boundaries is not used in reading a numeral.", "other_route": "Compose the name by rule from digit words, 'hundred', and the two-digit names learned in the count to 100, with numeral.read for the numeral-to-word link."},
+    "e17": {"verdict": "necessary"},
+    "e18": {"verdict": "wrong", "reason": "Circular: place-value.three-digit.hundreds-tens-ones depends on place-value.hundreds.multiples, which depends on numeral.read.to-1000 (e56). Reading a numeral aloud is a positional naming rule that comes before the place-value meaning, not after it."},
+    "e19": {"verdict": "scaffold", "reason": "Step 2 names the two-digit number as a number name (known from the count sequence and numeral.read); it does not require interpreting the digits as tens and ones. Place-value meaning explains the naming rule but reading can be done without it."},
+    "e20": {"verdict": "route-only", "reason": "Parsing 'one hundred twelve' needs only the words in the count to 100 and the hundred-plus-two-digit pattern; counting across hundreds is not used when writing a numeral from a name.", "other_route": "Parse the name into its hundreds word and two-digit name using the words from the count to 100, then write digits with numeral.write and the three-digit place structure."},
+    "e21": {"verdict": "necessary"},
+    "e22": {"verdict": "necessary"},
+    "e23": {"verdict": "necessary"},
+    "e24": {"verdict": "necessary"},
+    "e25": {"verdict": "necessary"},
+    "e26": {"verdict": "necessary"},
+    "e27": {"verdict": "indirect", "via": "numeral.write.to-1000", "reason": "Writing 73 for a counted collection is done with the positional writing skill, which already rests on the tens-and-ones structure through numeral.write.to-1000 (and three-digit place value). The target does not itself ask for the tens/ones interpretation."},
+    "e28": {"verdict": "necessary"},
+    "e29": {"verdict": "necessary"},
+    "e30": {"verdict": "necessary"},
+    "e31": {"verdict": "necessary"},
+    "e32": {"verdict": "necessary"},
+    "e33": {"verdict": "necessary"},
+    "e34": {"verdict": "scaffold", "reason": "The task itself states the structure to build (a full ten and some ones), so the concept is not needed to carry out the procedure. Doing compose is how the concept is usually built, so the dependency runs at best the other way."},
+    "e35": {"verdict": "necessary"},
+    "e36": {"verdict": "necessary"},
+    "e37": {"verdict": "scaffold", "reason": "Splitting 17 counters into a ten and the rest, and reporting how many remain, can be done without already holding the concept that a teen is ten and some ones; the procedure builds that concept. Saying 'ten and seven' restates the outcome."},
+    "e38": {"verdict": "necessary"},
+    "e39": {"verdict": "necessary"},
+    "e40": {"verdict": "necessary"},
+    "e41": {"verdict": "necessary"},
+    "e42": {"verdict": "necessary"},
+    "e43": {"verdict": "scaffold", "reason": "A ten as a bundle of ten ones comes from counting ten ones and treating them as one unit (counting.objects, counting.unitize). The teen concept reuses a group of ten but is not needed to form the unit; in the usual sequence it motivates it."},
+    "e44": {"verdict": "necessary"},
+    "e45": {"verdict": "necessary"},
+    "e46": {"verdict": "necessary"},
+    "e47": {"verdict": "route-only", "reason": "Skip counting by tens is one way to see that 70 is seven tens, but the quantity of rods can be found by counting the rods as units.", "other_route": "Count the ten-rods as units (one ten, two tens, ... seven tens) using ten.unit, with the decade word 'seventy' taken from reading the numeral."},
+    "e48": {"verdict": "necessary"},
+    "e49": {"verdict": "necessary"},
+    "e50": {"verdict": "scaffold", "reason": "The concept is that the left digit counts tens and the right digit counts ones; the written sum 40 + 7 is an illustration, and the idea holds in words ('4 tens and 7 ones') without addition notation."},
+    "e51": {"verdict": "necessary"},
+    "e52": {"verdict": "route-only", "reason": "The special case of one ten is not needed to see that the right digit counts ones in a general two-digit numeral; it can be learned directly with tens and ones blocks.", "other_route": "Interpret 47 directly as 4 tens and 7 ones with base-ten blocks, using decade.tens for the tens digit and ten.unit and counting for the ones, reading the numeral with numeral.read."},
+    "e53": {"verdict": "route-only", "reason": "Skip counting to 100 is one way to see that ten tens is one hundred ones; the equivalence can also be shown by stacking ten rods against a flat and counting the ones.", "other_route": "Put ten ten-rods together, count all the ones to 100 (counting.sequence.to-100), and name the result a hundred."},
+    "e54": {"verdict": "necessary"},
+    "e55": {"verdict": "route-only", "reason": "The words 'two hundred' to 'nine hundred' are also supplied by reading the numerals (e56), and the number of flats can be found by counting flats by ones.", "other_route": "Count hundred-flats as units one at a time, with the hundreds words coming from numeral.read.to-1000."},
+    "e56": {"verdict": "necessary"},
+    "e57": {"verdict": "necessary"},
+    "e58": {"verdict": "necessary"},
+    "e59": {"verdict": "necessary"},
+    "e60": {"verdict": "necessary"},
+    "e61": {"verdict": "scaffold", "reason": "The ten-times relation between neighbouring places does not require reading the number aloud or knowing period names; only the place structure of the digits is used. The comma grouping in 5,550 is notation, not a reading skill."},
+    "e62": {"verdict": "necessary"},
+    "e63": {"verdict": "necessary"},
+    "e64": {"verdict": "necessary"},
+    "e65": {"verdict": "necessary"},
+    "e66": {"verdict": "necessary"},
+    "e67": {"verdict": "indirect", "via": "decimal.hundredths.notation", "reason": "That one tenth equals ten hundredths is already built into hundredths notation (0.1 = 0.10), which this node requires directly. The rewrite procedure is not itself used by the target."},
+    "e68": {"verdict": "necessary"},
+    "e69": {"verdict": "necessary"},
+    "e70": {"verdict": "necessary"},
+    "e71": {"verdict": "route-only", "reason": "With the meaning of '1/10 of' and the decimal notations, 1/10 of 4/10 = 4/100 gives the relation directly; the inverse relation 'ten times' is not required.", "other_route": "Use fraction parts-of-partition for 1/10 of a decimal place value and read the places with tenths and hundredths notation, without going through the ten-times statement."},
+    "e72": {"verdict": "scaffold", "reason": "The procedure only checks whether the dividend is the divisor with a zero appended; it does not carry out a search for an unknown factor. The meaning of division as an unknown factor (e73) is what the statement 'hence b divided by a = 10' uses."},
+    "e73": {"verdict": "necessary"},
+    "e74": {"verdict": "necessary"},
+    "e75": {"verdict": "necessary"},
+    "e76": {"verdict": "necessary"},
+    "e77": {"verdict": "necessary", "reason": "Required (the decimal places to hundredths)."},
+    "e78": {"verdict": "necessary"},
+    "e79": {"verdict": "necessary", "reason": "Genuinely required (the statement and test reach thousandths), but decimal.thousandths.notation does not appear in index.txt or boundary_nodes; the node must be created."},
+    "e80": {"verdict": "necessary"},
+    "e81": {"verdict": "scaffold", "reason": "The multipliers 1/10, 1/100, 1/1000 are supplied by the tenths, hundredths and thousandths notation nodes; the ten-times relation between places is not used to expand a decimal."},
+    "e82": {"verdict": "scaffold", "reason": "The place values 1/10, 1/100, 1/1000 are given by the decimal notation nodes; the one-tenth-of-the-left relation is not applied in the expansion or the reverse conversion."},
+    "e83": {"verdict": "necessary"},
+    "e84": {"verdict": "necessary"},
+    "e85": {"verdict": "necessary", "reason": "Genuinely required (statement and test reach thousandths), but decimal.thousandths.notation does not appear in index.txt or boundary_nodes; the node must be created."},
+    "e86": {"verdict": "necessary"},
+    "e87": {"verdict": "necessary"},
+    "e88": {"verdict": "necessary"},
+    "e89": {"verdict": "necessary", "reason": "Genuinely required (statement and test reach thousandths), but decimal.thousandths.notation does not appear in index.txt or boundary_nodes; the node must be created."},
+    "e90": {"verdict": "necessary"},
+    "e91": {"verdict": "necessary"},
+    "e92": {"verdict": "necessary"},
+    "e93": {"verdict": "necessary"},
+    "e94": {"verdict": "necessary"},
+    "e95": {"verdict": "necessary"},
+    "e96": {"verdict": "scaffold", "reason": "The rule 'more digits means greater' is a level 3 procedure and can be applied without knowing why; the ten-times relation only justifies it."},
+    "e97": {"verdict": "necessary"},
+    "e98": {"verdict": "necessary"},
+    "e99": {"verdict": "necessary"},
+    "e100": {"verdict": "necessary"},
+    "e101": {"verdict": "necessary"},
+    "e102": {"verdict": "necessary"},
+    "e103": {"verdict": "necessary"},
+    "e104": {"verdict": "necessary"},
+    "e105": {"verdict": "necessary"},
+    "e106": {"verdict": "necessary"},
+    "e107": {"verdict": "task-only", "reason": "The statement and procedure allow place value or a number line to bracket the number; only the test problem requires marking numbers on a number line."},
+    "e108": {"verdict": "route-only", "reason": "Procedure step 1 says to find the bracketing multiples 'using place value or a number line', so reading the tens and hundreds digits is one of two ways.", "other_route": "Locate 347 on a number line and find the neighbouring multiples of 10 and 100 by skip counting by tens and hundreds from a known point."},
+    "e109": {"verdict": "scaffold", "reason": "The procedure decides by comparing the number with the halfway number, not by computing or comparing distances. Difference as distance explains why this works but is not used."},
+    "e110": {"verdict": "necessary"},
+    "e111": {"verdict": "necessary"},
+    "e112": {"verdict": "necessary"},
+    "e113": {"verdict": "task-only", "reason": "Only the test number 2.968 forces reading a thousandths digit; the statement works for any decimal place. The node decimal.thousandths.notation is also absent from index.txt and boundary_nodes."},
+    "e114": {"verdict": "necessary"},
+    "e115": {"verdict": "necessary"}
+  },
+  "nodes": {
+    "counting.sequence.to-100": {"missing_prerequisites": [], "missing_routes": []},
+    "counting.sequence.count-on": {"missing_prerequisites": [], "missing_routes": []},
+    "counting.sequence.within-1000": {"missing_prerequisites": [], "missing_routes": []},
+    "counting.sequence.backward.across-decades": {"missing_prerequisites": [], "missing_routes": []},
+    "counting.skip.tens.decades": {"missing_prerequisites": [], "missing_routes": []},
+    "counting.skip.tens.from-any": {"missing_prerequisites": [], "missing_routes": []},
+    "counting.skip.tens.backward": {
+      "missing_prerequisites": [{"node": "counting.sequence.within-1000", "why": "The test starts at 117 and the procedure passes through 107 and 97, so number names past 100 are used directly; the proposed edges do not supply them (forward tens has this as e10)."}],
+      "missing_routes": []
+    },
+    "counting.skip.fives": {"missing_prerequisites": [], "missing_routes": []},
+    "counting.skip.hundreds": {
+      "missing_prerequisites": [{"node": "new:counting.number-word.thousand", "why": "The statement ends at 'one thousand', a word not covered by the count to 100 or by counting within 1000."}],
+      "missing_routes": []
+    },
+    "numeral.read.to-1000": {
+      "missing_prerequisites": [],
+      "missing_routes": [{"description": "Compose the number name by rule from the digit words, 'hundred', and the two-digit names learned in the count to 100, without counting across hundreds.", "prerequisites": ["numeral.read", "counting.sequence.to-100"]}]
+    },
+    "numeral.write.to-1000": {
+      "missing_prerequisites": [],
+      "missing_routes": [{"description": "Parse the given name into its hundreds word and its two-digit name using the words from the count to 100, then write one digit per place.", "prerequisites": ["numeral.write", "counting.sequence.to-100", "place-value.three-digit.hundreds-tens-ones"]}]
+    },
+    "numeral.record-collection": {"missing_prerequisites": [], "missing_routes": []},
+    "numeral.read.periods": {
+      "missing_prerequisites": [{"node": "new:counting.number-word.thousand-million", "why": "The procedure says 'thousand' and 'million' after a group; these period words are not covered by any node in the map."}],
+      "missing_routes": []
+    },
+    "numeral.write.periods": {
+      "missing_prerequisites": [{"node": "new:counting.number-word.thousand-million", "why": "The learner must recognise the words 'thousand' and 'million' in the number name to split it into periods; no node covers them."}],
+      "missing_routes": []
+    },
+    "place-value.teen.ten-and-ones": {"missing_prerequisites": [], "missing_routes": []},
+    "place-value.teen.compose": {"missing_prerequisites": [], "missing_routes": []},
+    "place-value.teen.decompose": {"missing_prerequisites": [], "missing_routes": []},
+    "place-value.teen.equation": {
+      "missing_prerequisites": [{"node": "equation.equal-sign.meaning", "why": "13 = 10 + 3 puts the total on the left of the equal sign, so the learner must read the sign as 'same value', not 'the answer comes next'."}],
+      "missing_routes": []
+    },
+    "place-value.ten.unit": {
+      "missing_prerequisites": [{"node": "counting.objects", "why": "The statement forms a ten by grouping ten ones, which are counted out; the proposed edges reach counting only through the teen node."}],
+      "missing_routes": []
+    },
+    "place-value.teen.digits": {"missing_prerequisites": [], "missing_routes": []},
+    "place-value.decade.tens": {"missing_prerequisites": [], "missing_routes": []},
+    "place-value.two-digit.tens-ones": {
+      "missing_prerequisites": [{"node": "numeral.read", "why": "The statement interprets the digits of two-digit numerals such as 47, so the learner must be able to identify the numeral as that number."}],
+      "missing_routes": [{"description": "Interpret 47 directly as 4 tens and 7 ones with base-ten blocks, without the teen special case.", "prerequisites": ["place-value.decade.tens", "place-value.ten.unit", "numeral.read"]}]
+    },
+    "place-value.hundred.unit": {
+      "missing_prerequisites": [],
+      "missing_routes": [{"description": "Stack ten ten-rods against a hundred-flat and count all the ones to 100.", "prerequisites": ["place-value.ten.unit", "counting.objects", "counting.sequence.to-100"]}]
+    },
+    "place-value.hundreds.multiples": {
+      "missing_prerequisites": [],
+      "missing_routes": [{"description": "Count hundred-flats one at a time as units, with the hundreds words coming from reading the numerals.", "prerequisites": ["place-value.hundred.unit", "numeral.read.to-1000"]}]
+    },
+    "place-value.three-digit.hundreds-tens-ones": {"missing_prerequisites": [], "missing_routes": []},
+    "place-value.ten-times-right": {"missing_prerequisites": [], "missing_routes": []},
+    "place-value.ten-times-right.decimal": {"missing_prerequisites": [], "missing_routes": []},
+    "place-value.tenth-of-left": {
+      "missing_prerequisites": [
+        {"node": "decimal.tenths.notation", "why": "The test reads the tenths place of 4.44 directly."},
+        {"node": "decimal.hundredths.notation", "why": "The test reads the hundredths place of 4.44 directly."}
+      ],
+      "missing_routes": [{"description": "Apply '1/10 of' to a decimal place value (1/10 of 4/10 = 4/100) and read the places with decimal notation, without the ten-times statement.", "prerequisites": ["fraction.multiplication.parts-of-partition.fraction", "fraction.multiplication.parts-of-partition.whole-number", "decimal.tenths.notation", "decimal.hundredths.notation"]}]
+    },
+    "place-value.factor-of-ten": {
+      "missing_prerequisites": [{"node": "multiplication.equal-groups.meaning", "why": "The statement defines a x 10 and claims its digits shift; the learner must know what multiplying by 10 means (ten groups of a)."}],
+      "missing_routes": []
+    },
+    "place-value.expanded-form": {
+      "missing_prerequisites": [{"node": "addition.notation.expression", "why": "Expanded form is written as a sum with plus signs, and the second test builds a numeral from such a sum."}],
+      "missing_routes": []
+    },
+    "place-value.expanded-form.decimal": {"missing_prerequisites": [], "missing_routes": []},
+    "decimal.name.read": {"missing_prerequisites": [], "missing_routes": []},
+    "decimal.name.write": {"missing_prerequisites": [], "missing_routes": []},
+    "comparing.whole-numbers.numerals-within-10": {"missing_prerequisites": [], "missing_routes": []},
+    "comparing.whole-numbers.magnitude": {"missing_prerequisites": [], "missing_routes": []},
+    "comparing.whole-numbers.symbols": {"missing_prerequisites": [], "missing_routes": []},
+    "place-value.ten-more-less": {"missing_prerequisites": [], "missing_routes": []},
+    "place-value.ten-more-less.explain": {"missing_prerequisites": [], "missing_routes": []},
+    "place-value.hundred-more-less": {"missing_prerequisites": [], "missing_routes": []},
+    "rounding.whole-number.nearest-ten-hundred": {
+      "missing_prerequisites": [{"node": "new:number.halfway-between", "why": "Procedure step 2 finds the halfway number between two multiples of 10 or 100 (345, 350); no node covers halving 10 or 100."}],
+      "missing_routes": [{"description": "Bracket the number on a number line by skip counting by tens and hundreds, then decide the nearer multiple by comparing with the halfway number.", "prerequisites": ["number-line.whole-number-lengths", "counting.skip.tens.from-any", "counting.skip.hundreds", "comparing.whole-numbers.magnitude"]}]
+    },
+    "rounding.whole-number.any-place": {"missing_prerequisites": [], "missing_routes": []},
+    "rounding.decimal.any-place": {
+      "missing_prerequisites": [
+        {"node": "decimal.tenths.notation", "why": "The statement and test name and read the tenths place directly; it is reached only indirectly through e114."},
+        {"node": "decimal.hundredths.notation", "why": "The test rounds to the nearest hundredth, reading the hundredths place directly."}
+      ],
+      "missing_routes": []
+    }
+  }
+}
