@@ -57,6 +57,12 @@ RESERVED = {
     "division.multi-digit": ("Divide multi-digit whole numbers, with remainders", "N4"),
     "decimal.operations": ("Add, subtract, multiply, divide decimals", "N4"),
     "patterns.numerical.two-rules": ("Generate two numerical patterns and form ordered pairs", "N4"),
+    # left by the p1 retarget pass for skills a later phase writes (6.NS.B.3, 6.NS.B.4)
+    "decimal.addition.algorithm": ("Add multi-digit decimals with the standard algorithm", "later"),
+    "decimal.subtraction.algorithm": ("Subtract multi-digit decimals with the standard algorithm", "later"),
+    "decimal.multiplication.algorithm": ("Multiply multi-digit decimals with the standard algorithm", "later"),
+    "decimal.division.algorithm": ("Divide multi-digit decimals with the standard algorithm", "later"),
+    "multiples.common-multiple": ("A common multiple of two whole numbers, including the least", "later"),
 }
 
 
