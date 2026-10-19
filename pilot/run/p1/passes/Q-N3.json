@@ -1,0 +1,1220 @@
+{
+ "pass": "Q",
+ "batch": "N3",
+ "nodes": {
+  "parity.even-odd.pairing": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.objects",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Even and odd are properties of the number of objects in a collection, so the learner must count how many objects there are."
+      }
+     ]
+    }
+   ]
+  },
+  "parity.even-odd.skip-count": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "parity.even-odd.pairing",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The result rule, no object left means even and one left means odd, is the pairing meaning of even and odd."
+      },
+      {
+       "node": "counting.unitize",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Moving two objects aside and saying one number treats each pair as a single counted unit."
+      },
+      {
+       "node": "new:counting.skip.twos",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 says the next number in the count by 2s each time two objects are moved, which needs the sequence 2, 4, 6."
+      }
+     ]
+    }
+   ]
+  },
+  "parity.even.equal-addends": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "parity.even-odd.pairing",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement writes an even number, one that splits into pairs with none left, as two equal whole numbers."
+      },
+      {
+       "node": "addition.notation.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is an addition equation n = a + a, so the learner must write and read addition equations."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.array.rows-columns": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.objects",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Deciding that every row has the same number of objects and counting dots in each row requires counting a collection."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.array.total-by-adding": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.array.rows-columns",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure applies to a rectangular array and uses its rows being equal in size."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 2 count the objects in one row and count the rows."
+      },
+      {
+       "node": "addition.within-20.fluency",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 adds the row amount repeatedly, and row sums such as 5 + 5 + 5 reach past 10 and 20."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.array.equal-addends-equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.array.rows-columns",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation has one addend per row, so the learner must see the array as equal rows."
+      },
+      {
+       "node": "addition.notation.equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is recorded as an addition equation such as 5 + 5 + 5 + 5 = 20."
+      },
+      {
+       "node": "multiplication.array.total-by-adding",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation records the adding of rows that gives the total of the array."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.application.equal-groups": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story gives a number of equal groups and the size of each, which is the meaning of a product."
+      },
+      {
+       "node": "multiplication.equal-groups.situation-to-expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Solving with a drawing or an equation means modeling the equal-groups situation and writing the multiplication."
+      },
+      {
+       "node": "multiplication.array.total-by-adding",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Stories with rows of an array are solved by adding the equal rows to find the total."
+      },
+      {
+       "node": "addition.two-digit-plus-one-digit.next-ten",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Totals within 100 are found by repeated addition of the group size, which passes 20 and needs two-digit sums."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.equal-groups.equation-unknown": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.situation-to-expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation a x b = ? is the multiplication expression for the equal-groups story set equal to the total."
+      },
+      {
+       "node": "equation.situation.one-step",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A symbol stands for the unknown total, as in an equation with a symbol for the unknown of a one-step story."
+      }
+     ]
+    }
+   ]
+  },
+  "division.application.partitive": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.partitive.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story asks for the size of each equal share, which is the sharing meaning of a quotient."
+      },
+      {
+       "node": "division.partitive.situation-to-expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Solving with a drawing or an equation means modeling the sharing situation and writing the division."
+      },
+      {
+       "node": "partitioning.set.deal-out",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A drawing solution deals the total out one at a time among the groups to find the share size."
+      }
+     ]
+    }
+   ]
+  },
+  "division.application.measurement": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.measurement.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story asks for the number of equal groups or pieces, which is the grouping meaning of a quotient."
+      },
+      {
+       "node": "division.measurement.situation-to-expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Solving with a drawing or an equation means modeling the grouping situation and writing the division."
+      },
+      {
+       "node": "multiplication.equal-groups.make",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A drawing solution makes groups of the given size from the total until none remain and counts the groups."
+      }
+     ]
+    }
+   ]
+  },
+  "division.unknown-factor.equation-from-story": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.equation-unknown",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The unknown-factor equation 4 x ? = 28 uses the same symbol-for-unknown multiplication equation form, with the symbol in a factor place."
+      },
+      {
+       "node": "division.measurement.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A grouping story such as children seated 4 to a table has the number of groups unknown."
+      },
+      {
+       "node": "division.partitive.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A sharing story has the size of each share unknown, which becomes the unknown factor in the equation."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.unknown-factor.solve": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The unknown is the number of groups or group size whose product with the known factor is c."
+      },
+      {
+       "node": "division.unknown-factor.equation-from-story",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equations a x ? = c and ? x b = c are the unknown-factor form with a symbol for the missing factor."
+      }
+     ]
+    }
+   ]
+  },
+  "division.unknown-dividend-divisor.solve": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.unknown-factor.rewrite",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 rewrites the division equation as a multiplication equation, keeping the symbol for the unknown."
+      },
+      {
+       "node": "multiplication.unknown-factor.solve",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 finds an unknown divisor as the unknown factor in ? x b = c."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.commutative": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement a x b = b x a compares products, each defined as a number of equal groups."
+      },
+      {
+       "node": "multiplication.array.rows-columns",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The property is shown by reading the same array as a rows of b and as b rows of a."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.commutative.strategy": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.commutative",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The strategy switches factor order, which is justified by the commutative property a x b = b x a."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.associative": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each product in (a x b) x c is a number of equal groups, and a product of three numbers repeats that meaning."
+      },
+      {
+       "node": "expressions.grouping.evaluate",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is written with parentheses showing which adjacent pair is multiplied first."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.associative.strategy": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.associative",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Regrouping three factors is allowed because the product does not depend on which adjacent pair is multiplied first."
+      },
+      {
+       "node": "expressions.grouping.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 puts parentheses around a pair and step 3 multiplies the parenthesized pair first."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.distributive": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Both sides a x (b + c) and a x b + a x c count a groups of a number, using the meaning of a product."
+      },
+      {
+       "node": "multiplication.array.rows-columns",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The property is seen by splitting an array of a rows into two arrays of b columns and c columns."
+      },
+      {
+       "node": "expressions.grouping.evaluate",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement and the test problem use parentheses to show that the sum b + c is found first."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.distributive.strategy": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.distributive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Multiplying a by each part and adding the products is valid because a x (c + d) = a x c + a x d."
+      },
+      {
+       "node": "number-composition.within-10.decompose",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes one factor, up to 10, as a sum of two parts such as 7 = 5 + 2."
+      },
+      {
+       "node": "addition.base-ten.strategy",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 adds two partial products such as 40 + 16, which is a two-digit sum without a model."
+      }
+     ]
+    }
+   ]
+  },
+  "division.distributive.strategy": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.distributive",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The reason given, (p + q) divided by a equals the sum of the two quotients, follows from the distributive property."
+      },
+      {
+       "node": "division.unknown-factor.find-quotient",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 divides each part by the divisor, finding each quotient from a known multiplication."
+      },
+      {
+       "node": "division.partitive.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The quotient of each part is the size of an equal share, and the shares of the parts are added."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.by-one": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a x 1 is a groups of 1 and 1 x a is one group of a, each read from the meaning of a product."
+      },
+      {
+       "node": "fraction.as-number",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks for 3/5 x 1, so the learner must treat 3/5 as a number that can be multiplied."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.by-zero": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a x 0 is a groups of nothing and 0 x a is no groups, each read from the meaning of a product."
+      }
+     ]
+    }
+   ]
+  },
+  "division.by-zero.undefined": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement treats c divided by 0 as the unknown factor in ? x 0 = c."
+      },
+      {
+       "node": "multiplication.by-zero",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "No number times 0 gives c when c is not 0, and every number times 0 gives 0, because a x 0 = 0."
+      },
+      {
+       "node": "division.unknown-factor.rewrite",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks the learner to write 6 divided by 0 = ? as a multiplication with an unknown factor."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.facts.within-100": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The remembered products are the totals of a equal groups of b, so the learner must know what a product means."
+      }
+     ]
+    }
+   ]
+  },
+  "operations.application.multistep": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.application.two-step",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A multi-step story is solved by chaining steps, as in two-step addition and subtraction stories."
+      },
+      {
+       "node": "multiplication.application.equal-groups",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "One of the steps may be a multiplication of a number of equal groups by their size."
+      },
+      {
+       "node": "division.application.partitive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "One of the steps may be a division that finds the size of each share."
+      },
+      {
+       "node": "division.application.measurement",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "One of the steps may be a division that finds the number of equal groups."
+      },
+      {
+       "node": "multiplication.partial-products.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem needs the product 4 x 125, a multi-digit number times a one-digit number."
+      },
+      {
+       "node": "subtraction.base-ten.strategy",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem subtracts 290 from a three-digit total, which needs place-value subtraction."
+      }
+     ]
+    }
+   ]
+  },
+  "operations.application.multistep.remainder": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "operations.application.multistep",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The problem is a multi-step whole-number story whose steps include a division."
+      },
+      {
+       "node": "division.partial-quotients.one-digit-divisor.remainder",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The division step produces a quotient and a remainder that must then be interpreted."
+      },
+      {
+       "node": "multiplication.partial-products.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem first finds 3 x 26 before dividing by 8."
+      }
+     ]
+    }
+   ]
+  },
+  "operations.application.multistep.equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "operations.application.multistep",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation represents a story with two or more steps, so the learner must see the steps of the story."
+      },
+      {
+       "node": "equation.situation.two-step",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation uses a symbol or letter for the unknown quantity of a story with two steps."
+      },
+      {
+       "node": "expressions.write.record-calculation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The operations are written in the order the story requires, as in an expression that records a calculation."
+      }
+     ]
+    }
+   ]
+  },
+  "operations.application.reasonableness": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "operations.application.multistep",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The answer being judged belongs to a multi-step whole-number story, so the learner must follow its steps."
+      },
+      {
+       "node": "rounding.whole-number.nearest-ten-hundred",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem uses rounding 198 and 305 to nearby tens or hundreds before estimating."
+      },
+      {
+       "node": "multiplication.by-multiple-of-ten",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The rounded estimate in the test problem needs 4 x 200."
+      }
+     ]
+    }
+   ]
+  },
+  "operations.application.justify-solution": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "operations.application.multistep",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Showing that a solution satisfies every condition requires following all steps of the story."
+      },
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem works back from 13 cartons by multiplying, the inverse of dividing 156 by 12."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.comparison": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Reading c = a x b as c being a times as many as b uses c as a copies of b, the equal-groups meaning."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.comparison.statement-to-equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The verbal statement a times as many as b is the comparison reading of the equation c = a x b."
+      },
+      {
+       "node": "equation.equal-sign.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is written as an equation c = a x b whose two sides have the same value."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.comparison.vs-additive": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The node contrasts a times as many as b with a more than b, so it needs the meaning of a times as many."
+      },
+      {
+       "node": "subtraction.application.compare.bigger-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The additive reading a more than b meaning b + a is the additive comparison of two amounts."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.comparison.application.multiply": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story says one quantity is a times as many as b, which is the comparison reading of a product."
+      },
+      {
+       "node": "multiplication.comparison.statement-to-equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner writes the statement as c = a x b and then finds c as the product."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.comparison.application.divide": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The larger quantity is a times the smaller one, so the learner must read the comparison as c = a x b."
+      },
+      {
+       "node": "division.measurement.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding how many times as much the larger is as the smaller is a grouping division of c by b."
+      },
+      {
+       "node": "division.partitive.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding the smaller quantity given the multiplier is a sharing division of c into a equal parts."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.comparison.application.equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.comparison.statement-to-equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation c = a x b is written from the comparison statement."
+      },
+      {
+       "node": "multiplication.equal-groups.equation-unknown",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A symbol stands for the unknown larger quantity in the equation, as in a multiplication equation with a symbol for the total."
+      },
+      {
+       "node": "division.unknown-factor.equation-from-story",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "When the multiplier or smaller quantity is unknown, the symbol stands in a factor place, as in 5 x ? = 35."
+      }
+     ]
+    }
+   ]
+  },
+  "patterns.addition-table.identify": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.within-20.fluency",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The entries of the table are the sums of two one-digit numbers, and the patterns are among those sums."
+      },
+      {
+       "node": "data.graphs.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The patterns are found by reading rows, columns, and diagonals of a table."
+      }
+     ]
+    }
+   ]
+  },
+  "patterns.multiplication-table.identify": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The entries of the table are products, each a number of equal groups, and the patterns are among those products."
+      },
+      {
+       "node": "data.graphs.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The patterns are found by reading rows, columns, and the diagonal of a table."
+      },
+      {
+       "node": "parity.even-odd.pairing",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "One stated pattern is that every entry in the row for 4 is even, which uses the meaning of even."
+      }
+     ]
+    }
+   ]
+  },
+  "patterns.arithmetic.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.distributive",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation 4 x n = 2 x n + 2 x n uses the distributive property to split the factor 4."
+      },
+      {
+       "node": "parity.even.equal-addends",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation concludes the number is even because it is a sum of two equal addends."
+      },
+      {
+       "node": "expressions.variables",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation is general, using n for any whole number in the expression 4 x n."
+      },
+      {
+       "node": "patterns.multiplication-table.identify",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks why a pattern seen in the row for 4 of the multiplication table holds."
+      }
+     ]
+    }
+   ]
+  },
+  "factors.factor-pair.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A factor pair is two whole numbers whose product is n, and the product is a number of equal groups."
+      }
+     ]
+    }
+   ]
+  },
+  "factors.factor-pairs.find-all": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors.factor-pair.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure lists pairs of whole numbers whose product is n, so it needs the meaning of a factor pair."
+      },
+      {
+       "node": "factors.is-multiple.decide",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 decides for each d whether n divided by d is a whole number, which is the multiple test."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 compares d x d with n, so the learner needs the product d x d."
+      }
+     ]
+    }
+   ]
+  },
+  "factors.multiple-of-each-factor": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors.factor-pair.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement starts from d being a factor of n, meaning d is in a factor pair with product n."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The list d, 2 x d, 3 x d, and so on is the totals of 1, 2, 3 groups of d."
+      }
+     ]
+    }
+   ]
+  },
+  "factors.is-multiple.decide": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors.multiple-of-each-factor",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The test decides whether n is in the list of multiples of d, which is the meaning of multiple."
+      },
+      {
+       "node": "division.partial-quotients.one-digit-divisor.remainder",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 divides n by d and step 2 reads the remainder to see whether it is 0."
+      }
+     ]
+    }
+   ]
+  },
+  "factors.prime-composite.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors.factor-pair.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Prime and composite are defined by whether a number has a factor other than 1 and itself, found through factor pairs."
+      }
+     ]
+    }
+   ]
+  },
+  "factors.prime-composite.decide": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors.prime-composite.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure decides which of the two defined classes the number belongs to."
+      },
+      {
+       "node": "factors.is-multiple.decide",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 tests whether the number is a multiple of 2, 3, 5 or 7."
+      },
+      {
+       "node": "factors.factor-pairs.find-all",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The reason a factor of at most 10 suffices is the stopping rule d x d greater than n for factor pairs."
+      }
+     ]
+    }
+   ]
+  },
+  "patterns.rule.generate-number": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.within-20.fluency",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Applying a rule like add 5 repeatedly in step 2 needs quick sums of small numbers."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A rule such as multiply by 2 uses the meaning of a product as a number of equal groups."
+      }
+     ]
+    }
+   ]
+  },
+  "patterns.rule.generate-shape": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "spatial.position.relative",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Rules such as add one square to the right end and one to the top state positions in words."
+      },
+      {
+       "node": "shapes.compose.combine",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 applies the rule by adding shapes to the last term to make a larger arrangement."
+      },
+      {
+       "node": "shapes.name.receptive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A rule such as repeat circle, triangle, triangle names shapes that the learner must pick out."
+      }
+     ]
+    }
+   ]
+  },
+  "patterns.rule.unstated-features": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "patterns.rule.generate-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The terms in which a feature is noticed are those produced by applying a rule to a starting number."
+      },
+      {
+       "node": "parity.even-odd.pairing",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The noticed feature is alternating odd and even terms, and the explanation uses pairs with none or one left over."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
