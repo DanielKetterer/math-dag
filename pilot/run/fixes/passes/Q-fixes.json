@@ -1,0 +1,252 @@
+{
+ "pass": "Q",
+ "batch": "fixes",
+ "nodes": {
+  "comparing.more-than": {
+   "routes": [
+    {
+     "clause": "by-counting",
+     "edges": [
+      {
+       "node": "comparing.count.by-counting",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says 'more' refers to the number in each group, and the learner finds those numbers by counting each group."
+      }
+     ]
+    },
+    {
+     "clause": "by-matching",
+     "edges": [
+      {
+       "node": "comparing.count.matching",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Matching objects one to one shows which group has leftover objects, so 'more' is judged by number and not by size or spread."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.closed-boundary": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.recognize",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement contrasts a complete triangle or square with a gapped figure, so the learner must already see the intended shape."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.name.receptive": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.match",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Picking the named shape from a set of circle, square, triangle and rectangle requires telling the different shapes apart first."
+      }
+     ]
+    }
+   ]
+  },
+  "numeral.digit-formation": {
+   "routes": [],
+   "root_reason": "Copying digit forms from a card is a motor skill that needs no earlier number or shape skill in the map, only the ability to look at a form and reproduce it."
+  },
+  "counting.number-words.vocabulary": {
+   "routes": [],
+   "root_reason": "Telling number words apart from other words is vocabulary and needs no earlier counting or quantity skill, since the statement says reciting in order is not required."
+  },
+  "cardinality.conservation": {
+   "routes": [
+    {
+     "clause": "by-matching",
+     "edges": [
+      {
+       "node": "comparing.count.matching",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "The test starts from two rows matched one to one and judged the same number, then asks whether spreading changes that sameness."
+      }
+     ]
+    },
+    {
+     "clause": "by-arrangement-in-counts",
+     "edges": [
+      {
+       "node": "counting.cardinal.order-irrelevance",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Knowing a count stays the same however the objects are arranged supports judging that spreading out leaves how many unchanged."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.unitize": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "concept",
+       "why": "The test counts 8 socks and then counts 4 pairs, each time counting a collection to find how many, with the pair treated as one object."
+      }
+     ]
+    }
+   ]
+  },
+  "partitioning.segment.equal-lengths": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.size.direct",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires parts of equal length, and equal length is judged by laying lengths side by side as the test does."
+      },
+      {
+       "node": "partitioning.equal-shares.whole-as-shares",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The requirement that parts together fill the strip with no gaps or overlaps is the whole being all of its equal shares."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.compare.to-one": {
+   "routes": [
+    {
+     "clause": "common-denominator-with-one",
+     "edges": [
+      {
+       "node": "fraction.whole-number.as-fraction",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Comparing a/b with 1 uses the fact that 1 can be written as b/b, a fraction with the same denominator."
+      },
+      {
+       "node": "fraction.compare.same-denominator",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "With 1 written as b/b, comparing a/b with b/b is a same-denominator comparison decided by the numerators."
+      },
+      {
+       "node": "comparing.whole-numbers.symbols",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement compares the numerator a with the denominator b as whole numbers to decide greater than, equal to, or less than."
+      }
+     ]
+    },
+    {
+     "clause": "unit-fraction-count",
+     "edges": [
+      {
+       "node": "fraction.multiple-of-unit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Reading a/b as a copies of 1/b, and knowing that b copies of 1/b make 1, gives the comparison with 1."
+      },
+      {
+       "node": "comparing.whole-numbers.symbols",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement compares the number of unit fractions a with the number b that make 1 to decide the size relative to 1."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.complex-fraction": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.quotient.symbolic",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement reads the fraction bar between two fractions as division, extending a divided by b equals a/b."
+      },
+      {
+       "node": "fraction.as-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A numerator and denominator that are themselves fractions only make sense if a fraction is a number that can be divided."
+      }
+     ]
+    }
+   ]
+  },
+  "division.facts.within-100": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement defines the quotient through a = b x c, so the quotient is read as the unknown factor c."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Recalling a quotient without computing uses the known multiplication fact b x c = a for factors from 1 to 10."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.negative-as-decrease": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "new:rational-number.negative-meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement writes a decrease with a negative number, so the learner must already know a negative number as the opposite of a positive amount."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
