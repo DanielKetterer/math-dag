@@ -101,8 +101,8 @@ units:
   - {id: p1.N3.writer, stage: writer, strand: N3, after: [fixes.merge], input: pilot/run/p1/input/N3.json, output: pilot/run/p1/skeletons/N3.yaml, validate: writer-lc, status: done, tokens: 109085, commit: pending}
   - {id: p1.N4.writer, stage: writer, strand: N4, after: [fixes.merge], input: pilot/run/p1/input/N4.json, merged_lc: [cf6b4ff1], output: pilot/run/p1/skeletons/N4.yaml, validate: writer-lc, status: done, tokens: 113264, commit: pending}
   # Script pass after the writers: tools/prepare_phase.py (merges in pilot/run/p1/merges.md).
-  - {id: p1.N1.proposer-a, stage: proposer-a, strand: N1, after: [p1.N1.writer, p1.N2.writer, p1.N3.writer, p1.N4.writer], output: pilot/run/p1/passes/P-N1.json, validate: proposer, status: pending, tokens: 0}
-  - {id: p1.N1.proposer-b, stage: proposer-b, strand: N1, after: [p1.N1.writer, p1.N2.writer, p1.N3.writer, p1.N4.writer], output: pilot/run/p1/passes/Q-N1.json, validate: proposer, status: pending, tokens: 0}
+  - {id: p1.N1.proposer-a, stage: proposer-a, strand: N1, after: [p1.N1.writer, p1.N2.writer, p1.N3.writer, p1.N4.writer], output: pilot/run/p1/passes/P-N1.json, validate: proposer, status: done, tokens: 122131, commit: pending}
+  - {id: p1.N1.proposer-b, stage: proposer-b, strand: N1, after: [p1.N1.writer, p1.N2.writer, p1.N3.writer, p1.N4.writer], output: pilot/run/p1/passes/Q-N1.json, validate: proposer, status: done, tokens: 122473, commit: pending}
   - {id: p1.N2.proposer-a, stage: proposer-a, strand: N2, after: [p1.N1.writer, p1.N2.writer, p1.N3.writer, p1.N4.writer], output: pilot/run/p1/passes/P-N2.json, validate: proposer, status: pending, tokens: 0}
   - {id: p1.N2.proposer-b, stage: proposer-b, strand: N2, after: [p1.N1.writer, p1.N2.writer, p1.N3.writer, p1.N4.writer], output: pilot/run/p1/passes/Q-N2.json, validate: proposer, status: pending, tokens: 0}
   - {id: p1.N3.proposer-a, stage: proposer-a, strand: N3, after: [p1.N1.writer, p1.N2.writer, p1.N3.writer, p1.N4.writer], output: pilot/run/p1/passes/P-N3.json, validate: proposer, status: pending, tokens: 0}
