@@ -44,17 +44,22 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: division.multi-digit
+  - node: division.facts.within-100
     relation: procedural
     points_to: procedure.3
-    why: Step 3 divides the numerator by the denominator to get a whole-number quotient and remainder.
+    why: Step 3 divides the numerator by the denominator to write a mixed number, as 10 divided by 3 in
+      the test, which division facts within 100 cover.
     evidence:
     - kind: content
       source: pass-P
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'handoff-2 replace: Handoff fix 2 (2026-10-17): single-digit division should not point at
+        the multi-digit algorithm.'
+    status: reviewed
   - node: fraction.mixed-number.meaning
     relation: definitional
     points_to: procedure.3
@@ -66,19 +71,5 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
-  - node: fraction.equivalent.multiply-principle.recognize
-    relation: procedural
-    points_to: assess
-    why: The product 20/6 of the test problem must be reduced to 3 1/3, which requires recognizing 2/6
-      equals 1/3.
-    scope: task
-    evidence:
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'task-only: Simplifying 20/6 to 3 1/3 is demanded by the test problem; the procedure ends
-        with the mixed number 3 2/6 without simplification.'
     status: proposed
 status: proposed

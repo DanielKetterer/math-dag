@@ -1,0 +1,41 @@
+# Review verdicts applied by merge_run
+
+- D76 fraction.unit.number-line -> partitioning.segment.equal-lengths: required on every route
+- D75 fraction.unit.number-line: added route measure-first (without ['fraction.unit.part-whole'], plus [])
+- fraction.unit.number-line: route via-part-whole removed (superset of another route); moved to related: ['fraction.unit.part-whole']
+- fraction.unit.number-line: only route left, renamed measure-first -> standard
+- D78 fraction.non-unit.number-line: added route measure-first (without ['fraction.non-unit.part-whole'], plus [])
+- fraction.non-unit.number-line: route via-part-whole removed (superset of another route); moved to related: ['fraction.non-unit.part-whole']
+- fraction.non-unit.number-line: only route left, renamed measure-first -> standard
+- D88 fraction.compare.same-denominator: added route measure (without ['fraction.non-unit.part-whole'], plus [])
+- fraction.compare.same-denominator: route via-part-whole removed (superset of another route); moved to related: ['fraction.non-unit.part-whole']
+- fraction.compare.same-denominator: only route left, renamed measure -> standard
+- A12 partitioning.equal-shares.whole-as-shares -> partitioning.equal-shares.name: task
+- D99 partitioning.equal-shares.more-shares-smaller: added route direct-compare (without ['partitioning.equal-shares.whole-as-shares'], plus [])
+- partitioning.equal-shares.more-shares-smaller: route via-whole-as-shares removed (superset of another route); moved to related: ['partitioning.equal-shares.whole-as-shares']
+- partitioning.equal-shares.more-shares-smaller: only route left, renamed direct-compare -> standard
+- D80 division.partitive.meaning: added route via-sharing (without ['multiplication.equal-groups.meaning'], plus [])
+- division.partitive.meaning: route via-meaning removed (superset of another route); moved to related: ['multiplication.equal-groups.meaning']
+- division.partitive.meaning: only route left, renamed via-sharing -> standard
+- C61 fraction.non-unit.unit-sum -> fraction.as-number: dropped
+- A18 fraction.mixed-number.decompose.justify -> fraction.mixed-number.decompose.equation: dropped
+- D81 fraction.multiply-whole.as-unit-multiple -> multiplication.facts.within-100: task
+- C62 fraction.multiply-whole.symbolic -> multiplication.multi-digit: dropped
+- A7 fraction.application.multiply-whole.model -> multiplication.equal-groups.situation-to-expression: dropped
+- A37 fraction.application.multiply-whole.model -> fraction.multiply-whole.as-unit-multiple: dropped
+- A24 fraction.addition.unlike-denominators.equivalent-replacement -> fraction.equivalent.multiply-principle.recognize: task
+- B51 fraction.quotient.equal-sharing -> partitioning.equal-shares.area: restore (task)
+- A5 fraction.multiplication.parts-of-partition.whole-number -> fraction.multiply-whole.model: task
+- A8 fraction.mixed-number.multiplication -> fraction.equivalent.multiply-principle.recognize: dropped
+- handoff-2 fraction.mixed-number.multiplication -> division.multi-digit: replaced by division.facts.within-100
+- A40 multiplication.scaling.size-principle: added route via-compare-to-one (without ['fraction.compare.benchmark'], plus ['fraction.compare.to-one'])
+- C64 division.fractions.measurement.model -> division.multi-digit: replaced by division.facts.within-100
+- C65 fraction.division.symbolic -> factors-multiples.whole-number: dropped
+- C66 ratio.composed-unit -> multiplication.equal-groups.meaning: dropped
+- ratio.composed-unit: now a root (every prerequisite dropped or moved in review)
+- C67 ratio.tape-diagram -> division.multi-digit: replaced by division.facts.within-100
+- C69 proportional-relationship.compare.representations -> ratio.convert-units: moved to related (common_path)
+- proportional-relationship.compare.representations: only route left, renamed via-compare -> standard
+- C72 linear-function.model.rate.interpret -> functions.definition: dropped
+- C73 linear-function.model.initial.interpret -> functions.definition: dropped
+- linear-function.model.initial.interpret: only route left, renamed via-write -> standard

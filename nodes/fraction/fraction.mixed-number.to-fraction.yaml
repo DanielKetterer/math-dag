@@ -15,7 +15,7 @@ sources:
   - 4.NF.B.3.c
   learning_components: []
 requires:
-- clause: standard
+- clause: via-generate
   all_of:
   - node: fraction.mixed-number.meaning
     relation: definitional
@@ -43,19 +43,6 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: fraction.equivalent.multiply-principle.generate
-    relation: procedural
-    points_to: procedure.1
-    why: Step 1 turns n into (n x b)/b by multiplying numerator and denominator of n/1 by the same whole
-      number b.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Step 1 can be done by writing each whole as b/b and adding n copies, which the
-        node already supports through like-denominator addition and whole numbers as fractions.'
-    status: disputed
   - node: fraction.addition.like-denominators
     relation: procedural
     points_to: procedure.2
@@ -80,4 +67,19 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: fraction.equivalent.multiply-principle.generate
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 turns n into (n x b)/b by multiplying numerator and denominator of n/1 by the same whole
+      number b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Step 1 can be done by writing each whole as b/b and adding n copies, which the
+        node already supports through like-denominator addition and whole numbers as fractions. | other
+        route: Write n as n copies of b/b and add them with fraction.addition.like-denominators, instead
+        of multiplying numerator and denominator of n/1 by b.'
+    status: disputed
 status: proposed

@@ -61,12 +61,15 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
-  - node: division.multi-digit
+    - kind: review
+      source: DK
+      note: 'A1 keep: Keep - A known total requires adding the units in both tapes.'
+    status: reviewed
+  - node: division.facts.within-100
     relation: procedural
     points_to: procedure.3
-    why: Dividing the known amount by the number of units it covers to get the unit size is a whole-number
-      division of possibly large numbers.
+    why: Step 3 divides the known amount by its number of units, as 40 divided by 8 in the test, which
+      division facts within 100 cover.
     evidence:
     - kind: content
       source: pass-P
@@ -75,7 +78,11 @@ requires:
       note: 'undecided: The tape needs a whole-number quotient (known amount by number of units); the
         test uses 40 divided by 8, so the multi-digit algorithm is more than is required and no finer
         division node is indexed.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'C67 replace: No to multi-digit division - The assessment''s tape-diagram problem needs basic
+        division, not necessarily the multi-digit algorithm.'
+    status: reviewed
   - node: multiplication.equal-groups.meaning
     relation: procedural
     points_to: procedure.4

@@ -18,23 +18,8 @@ sources:
   learning_components:
   - 1f6b0f81
 requires:
-- clause: standard
+- clause: via-reasoning-size
   all_of:
-  - node: fraction.compare.reasoning-size
-    relation: procedural
-    points_to: procedure.1
-    why: Step 1 picks the nearest benchmark for each addend by reasoning about whether it is close to
-      0, 1/2, or 1.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Picking the nearest benchmark can be done by reasoning about size, but also by
-        locating each addend on a number line and reading off the nearest benchmark.'
-    status: disputed
   - node: fraction.addition.like-denominators.model
     relation: procedural
     points_to: procedure.2
@@ -59,7 +44,26 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A4 keep: Keep - Some benchmark estimates require whole-number addition.'
+    status: reviewed
+  - node: fraction.compare.reasoning-size
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 picks the nearest benchmark for each addend by reasoning about whether it is close to
+      0, 1/2, or 1.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Picking the nearest benchmark can be done by reasoning about size, but also by
+        locating each addend on a number line and reading off the nearest benchmark. | other route: Locate
+        each addend on a number line (fraction.non-unit.number-line) and read off the nearest benchmark.'
+    status: disputed
 - clause: critic-route-1
   note: Locate each addend on a number line and read off the nearest benchmark, then add benchmark lengths.
   all_of:
@@ -87,7 +91,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A4 keep: Keep - Some benchmark estimates require whole-number addition.'
+    status: reviewed
   - node: fraction.non-unit.number-line
     relation: definitional
     points_to: statement

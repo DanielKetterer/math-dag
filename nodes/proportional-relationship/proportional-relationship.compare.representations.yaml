@@ -61,19 +61,6 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: ratio.convert-units
-    relation: procedural
-    points_to: procedure.2
-    why: Stating both unit rates in the same units may require converting measurement units with conversion
-      factors.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'undecided: Converting units is needed only if the two relationships use different units,
-        which step 2 allows but the test problem does not do.'
-    status: disputed
   - node: decimal.compare
     relation: procedural
     points_to: procedure.3
@@ -86,6 +73,12 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Comparing decimal unit rates is one case; rates given as fractions are compared
-        with fraction comparison.'
+        with fraction comparison. | other route: Compare the rates as fractions or mixed numbers (fraction.compare.common-denominator).'
     status: disputed
+related:
+- node: ratio.convert-units
+  relation: common_path
+  note: 'Common path, not required (C69): Needed only when the compared relationships use different units;
+    the test uses one unit system. | Daniel: Conditional - Unit conversion is required when the compared
+    relationships use different units, but not otherwise.'
 status: proposed

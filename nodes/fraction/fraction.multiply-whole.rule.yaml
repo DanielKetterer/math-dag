@@ -11,8 +11,22 @@ sources:
   - 4.NF.B.4.b
   learning_components: []
 requires:
-- clause: standard
+- clause: via-as-unit-multiple
   all_of:
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: Every route reads n x (a/b) as n equal groups of a/b; none of the proposed edges supplies the
+      meaning of this product.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    - kind: review
+      source: DK
+      note: 'D102 keep: Keep/add as one route - Understanding multiplication as equal groups directly
+        explains the left-hand product nx(a/b).'
+    status: reviewed
   - node: fraction.multiply-whole.as-unit-multiple
     relation: justificatory
     points_to: statement
@@ -23,8 +37,29 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: The unit-multiple rewriting is one explanation of the rule; repeated addition
-        of a/b gives the same result without it.'
-    status: disputed
+        of a/b gives the same result without it. | other route: Repeated addition of a/b with the like-denominator
+        rule, via fraction.addition.like-denominators.'
+    - kind: review
+      source: DK
+      note: 'D100 keep: Route-only - Repeated addition of fractions can derive the multiplication rule
+        without the unit-multiple concept.'
+    status: reviewed
+- clause: via-multiple-of-unit
+  all_of:
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: Every route reads n x (a/b) as n equal groups of a/b; none of the proposed edges supplies the
+      meaning of this product.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    - kind: review
+      source: DK
+      note: 'D102 keep: Keep/add as one route - Understanding multiplication as equal groups directly
+        explains the left-hand product nx(a/b).'
+    status: reviewed
   - node: fraction.multiple-of-unit
     relation: definitional
     points_to: statement
@@ -35,8 +70,16 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: The rule can be reached by repeated addition of like fractions rather than through
-        unit fractions.'
-    status: disputed
+        unit fractions. | other route: n x (a/b) as n equal groups, i.e. a/b added n times, then (a +
+        ... + a)/b = (n x a)/b by fraction.addition.like-denominators and multiplication.equal-groups.meaning.'
+    - kind: review
+      source: DK
+      note: 'D101 keep: Route-only - Repeated addition with like denominators provides an alternative
+        route to the same rule.'
+    status: reviewed
+- clause: critic-route-1
+  note: Repeated addition of a/b n times with the like-denominator rule.
+  all_of:
   - node: multiplication.equal-groups.meaning
     relation: definitional
     points_to: statement
@@ -46,10 +89,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
-    status: disputed
-- clause: critic-route-1
-  note: Repeated addition of a/b n times with the like-denominator rule.
-  all_of:
+    - kind: review
+      source: DK
+      note: 'D102 keep: Keep/add as one route - Understanding multiplication as equal groups directly
+        explains the left-hand product nx(a/b).'
+    status: reviewed
   - node: fraction.addition.like-denominators
     relation: definitional
     points_to: statement
@@ -59,17 +103,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing route
-    status: disputed
-  - node: multiplication.equal-groups.meaning
-    relation: definitional
-    points_to: statement
-    why: 'Alternative route proposed by the critic: Repeated addition of a/b n times with the like-denominator
-      rule.'
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing route
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D103 keep: Keep/add alternative route - Repeated addition and the like-denominator rule provide
+        another route to the multiplication rule.'
+    status: reviewed
   - node: fraction.as-number
     relation: definitional
     points_to: statement

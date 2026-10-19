@@ -41,7 +41,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A40 keep: KEEP: The assessed procedure counts both collections and compares their resulting
+        quantities.'
+    status: reviewed
   - node: counting.sequence.recite
     relation: procedural
     points_to: procedure.3
@@ -55,7 +59,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A12 keep: KEEP: The stated comparison procedure depends on knowing which count comes later
+        in the number-word sequence.'
+    status: reviewed
   - node: counting.successor
     relation: definitional
     points_to: statement
@@ -71,5 +79,59 @@ requires:
       note: 'route-only: ''Later in the count means more'' is grounded here by successor (each word is
         one more). | other route: The same rule can be established empirically by matching sets (comparing.count.matching)
         and noticing that the set with leftovers has the later count.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D67 keep: KEEP as a route, not a universal requirement: The successor principle explains
+        why a later count denotes more, while matching sets and observing leftovers can establish the
+        comparison another way.'
+    status: reviewed
+- clause: via-matching
+  note: Ground 'later in the count means more' by matching sets and noticing leftovers.
+  all_of:
+  - node: counting.objects
+    relation: procedural
+    points_to: procedure.1
+    why: Steps one and two count each collection to get its number, and the test problem counts six buttons
+      and four blocks.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    - kind: review
+      source: DK
+      note: 'A40 keep: KEEP: The assessed procedure counts both collections and compares their resulting
+        quantities.'
+    status: reviewed
+  - node: counting.sequence.recite
+    relation: procedural
+    points_to: procedure.3
+    why: Step three decides which number comes later in the count sequence, which requires knowing the
+      order of the number words.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    - kind: review
+      source: DK
+      note: 'A12 keep: KEEP: The stated comparison procedure depends on knowing which count comes later
+        in the number-word sequence.'
+    status: reviewed
+  - node: comparing.count.matching
+    relation: justificatory
+    points_to: statement
+    why: The rule that the later count names the larger set can be established by matching the two sets
+      one to one and seeing which has objects left over.
+    evidence:
+    - kind: review
+      source: DK
+      note: 'D67 route: Ground ''later in the count means more'' by matching sets and noticing leftovers.'
+    status: reviewed
 status: proposed

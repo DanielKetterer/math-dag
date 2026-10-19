@@ -28,7 +28,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A35 keep: Keep - The principle explicitly describes multiplication as resizing.'
+    status: reviewed
   - node: fraction.compare.benchmark
     relation: definitional
     points_to: statement
@@ -41,7 +44,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A40 keep: Wrong as a universal prerequisite - Comparing a factor with 1 is required, but
+        the separate benchmark-comparison procedure is only one route.'
+    status: reviewed
   - node: multiplication.by-one
     relation: definitional
     points_to: statement
@@ -55,4 +62,46 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+- clause: via-compare-to-one
+  note: Compare the factor with 1 directly, without the benchmark procedure.
+  all_of:
+  - node: multiplication.scaling.resize
+    relation: definitional
+    points_to: statement
+    why: The principle says whether resizing by factor f stretches or shrinks the quantity q.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    - kind: review
+      source: DK
+      note: 'A35 keep: Keep - The principle explicitly describes multiplication as resizing.'
+    status: reviewed
+  - node: multiplication.by-one
+    relation: definitional
+    points_to: statement
+    why: The case f = 1 uses that multiplying by 1 leaves the number unchanged.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.compare.to-one
+    relation: definitional
+    points_to: statement
+    why: The three cases of the principle turn on whether the factor is greater than, equal to, or less
+      than 1, which for a fraction is comparing numerator with denominator.
+    evidence:
+    - kind: review
+      source: DK
+      note: 'A40 route: Compare the factor with 1 directly, without the benchmark procedure.'
+    status: reviewed
 status: proposed

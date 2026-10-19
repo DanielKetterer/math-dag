@@ -17,21 +17,6 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: multiplication.equal-groups.meaning
-    relation: definitional
-    points_to: statement
-    why: The b groups made by sharing are equal groups, so the quotient is the group size that makes b
-      equal groups total a.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The partitive meaning can be learned from dealing out objects one at a time into
-        b groups (sharing), which uses counting and the idea of equal groups and no multiplication.'
-    status: disputed
   - node: counting.objects
     relation: definitional
     points_to: statement
@@ -45,4 +30,9 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+related:
+- node: multiplication.equal-groups.meaning
+  relation: common_path
+  note: 'Common path, not required: route ''via-meaning'' needed everything another route needs and more,
+    so it was removed in review.'
 status: proposed

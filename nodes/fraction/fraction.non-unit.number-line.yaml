@@ -46,19 +46,9 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: fraction.non-unit.part-whole
-    relation: definitional
-    points_to: statement
-    why: The statement reads a/b as a copies of size 1/b, the same meaning as a parts each of size 1/b.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The target is the measure facet and its statement is a copies of the length 1/b
-        from 0. This is reachable from fraction.unit.number-line by iterating the unit-fraction length,
-        without the area-model reading of a/b.'
-    status: disputed
+related:
+- node: fraction.non-unit.part-whole
+  relation: common_path
+  note: 'Common path, not required: route ''via-part-whole'' needed everything another route needs and
+    more, so it was removed in review.'
 status: proposed

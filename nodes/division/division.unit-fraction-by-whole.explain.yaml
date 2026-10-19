@@ -13,22 +13,8 @@ sources:
   - 5.NF.B.7.a
   learning_components: []
 requires:
-- clause: standard
+- clause: via-rule
   all_of:
-  - node: fraction.multiply-whole.rule
-    relation: justificatory
-    points_to: statement
-    why: The step (1/(b x n)) x n = n/(b x n) uses the rule for multiplying a fraction by a whole number.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: For a unit fraction the step n x (1/m) = n/m is the definition of n/m as n copies
-        of 1/m; the general multiplication rule is more than required.'
-    status: disputed
   - node: fraction.equivalent.multiply-principle
     relation: justificatory
     points_to: statement
@@ -53,6 +39,21 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: fraction.multiply-whole.rule
+    relation: justificatory
+    points_to: statement
+    why: The step (1/(b x n)) x n = n/(b x n) uses the rule for multiplying a fraction by a whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: For a unit fraction the step n x (1/m) = n/m is the definition of n/m as n copies
+        of 1/m; the general multiplication rule is more than required. | other route: Fraction as a whole-number
+        multiple of a unit fraction (fraction.multiple-of-unit).'
+    status: disputed
 related:
 - node: division.unknown-factor.rewrite
   relation: same_idea_different_form

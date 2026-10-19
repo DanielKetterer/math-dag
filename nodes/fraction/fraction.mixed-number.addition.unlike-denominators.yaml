@@ -19,20 +19,8 @@ sources:
   learning_components:
   - d2565c2d
 requires:
-- clause: standard
+- clause: via-whole-number
   all_of:
-  - node: factors-multiples.whole-number
-    relation: procedural
-    points_to: procedure.1
-    why: Step 1 rewrites the fraction parts over a common multiple of their two denominators.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Using n = b x d for the two denominators needs no factors-and-multiples analysis;
-        the node is only needed to find a smaller common multiple.'
-    status: disputed
   - node: fraction.mixed-number.add
     relation: procedural
     points_to: procedure.3
@@ -59,6 +47,19 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: factors-multiples.whole-number
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites the fraction parts over a common multiple of their two denominators.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Using n = b x d for the two denominators needs no factors-and-multiples analysis;
+        the node is only needed to find a smaller common multiple. | other route: Take the common denominator
+        to be the product of the two denominators.'
+    status: disputed
 - clause: critic-route-1
   note: Convert both mixed numbers to improper fractions, add with unlike denominators, and convert back.
     This is arguably a different node because the statement specifies adding whole and fraction parts

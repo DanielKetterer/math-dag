@@ -17,7 +17,7 @@ sources:
   learning_components:
   - b9b94f31
 requires:
-- clause: standard
+- clause: via-operations
   all_of:
   - node: ratio.unit-rate
     relation: definitional
@@ -60,8 +60,38 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: The result a/b can be expressed as a decimal by decimal division, or left as
-        the fraction a/b.'
+        the fraction a/b. | other route: Express the rate as the fraction a/b (fraction.quotient.symbolic).'
     status: disputed
+- clause: via-symbolic
+  all_of:
+  - node: ratio.unit-rate
+    relation: definitional
+    points_to: statement
+    why: The procedure computes the unit rate a/b, so the meaning of the unit rate as the first quantity
+      per 1 unit of the second is used throughout.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.unit-rate.language
+    relation: procedural
+    points_to: procedure.1
+    why: Deciding which quantity is per which, and labeling the result as units per 1 unit, uses the per
+      and for each rate language.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
   - node: fraction.quotient.symbolic
     relation: procedural
     points_to: procedure.2
@@ -71,6 +101,7 @@ requires:
       source: pass-Q
     - kind: content
       source: critic-sonnet
-      note: 'route-only: The rate a/b can be written as a fraction, or as a decimal by decimal division.'
+      note: 'route-only: The rate a/b can be written as a fraction, or as a decimal by decimal division.
+        | other route: Divide with decimal results (decimal.operations).'
     status: disputed
 status: proposed

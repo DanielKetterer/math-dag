@@ -219,6 +219,18 @@ def main():
     for nid, k in sorted(unresolved.items()):
         rep.warn(nid, f"referenced {k} time(s) but not written yet")
 
+    # a route that needs everything another route needs, and more, never changes what the node
+    # requires (RULES 3.5, common_path): usually an alternative method encoded with the main
+    # route's edges still in it
+    for nid, n in sorted(nodes.items()):
+        sets = [(c["clause"], frozenset(e["node"] for e in c["all_of"])) for c in n["requires"]]
+        for name, s in sets:
+            for other, o in sets:
+                if other != name and o < s:
+                    rep.find(f"superset route: {nid} route '{name}' needs everything route '{other}' needs, "
+                             f"plus {sorted(s - o)}; fix its edges or move the extras to related")
+                    break
+
     # learnability and cycles
     known = learnable(nodes)
     stuck = set(nodes) - known

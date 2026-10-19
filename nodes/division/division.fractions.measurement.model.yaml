@@ -18,7 +18,7 @@ sources:
   - 6.NS.A.1
   learning_components: []
 requires:
-- clause: standard
+- clause: via-generate
   all_of:
   - node: division.fractions.measurement
     relation: definitional
@@ -34,11 +34,11 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: division.multi-digit
+  - node: division.facts.within-100
     relation: procedural
     points_to: procedure.3
-    why: Counting how many full groups of c x b parts fit in the a x d shaded parts is a whole-number
-      division that yields a quotient and a remainder.
+    why: Step 3 counts how many groups of c x b parts fit in a x d parts, a single-digit division such
+      as 18 divided by 4 in the test, which division facts within 100 cover.
     evidence:
     - kind: content
       source: pass-P
@@ -47,7 +47,11 @@ requires:
       note: 'undecided: The step needs a whole-number quotient with remainder, but with the small counts
         in a drawn model (18 parts in groups of 4) the multi-digit division algorithm is more than is
         required and no finer division node is indexed.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'C64 replace: No to multi-digit division - The target may require basic division skills, but
+        the proposed prerequisite is too broad.'
+    status: reviewed
   - node: fraction.non-unit.part-whole
     relation: procedural
     points_to: procedure.4
@@ -87,7 +91,9 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: At level 2 the same rewriting (a x d parts of the b x d partition) can be seen
-        directly in the model by cutting each part into d pieces, without the symbolic level 3 procedure.'
+        directly in the model by cutting each part into d pieces, without the symbolic level 3 procedure.
+        | other route: Level 2 equivalent fractions with a model (fraction.equivalent.simple.generate,
+        fraction.equivalent.same-size).'
     status: disputed
 - clause: critic-route-1
   note: Recognize/generate equivalent fractions with a model (level 2) for the common partition
@@ -106,6 +112,24 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: division.facts.within-100
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 counts how many groups of c x b parts fit in a x d parts, a single-digit division such
+      as 18 divided by 4 in the test, which division facts within 100 cover.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The step needs a whole-number quotient with remainder, but with the small counts
+        in a drawn model (18 parts in groups of 4) the multi-digit division algorithm is more than is
+        required and no finer division node is indexed.'
+    - kind: review
+      source: DK
+      note: 'C64 replace: No to multi-digit division - The target may require basic division skills, but
+        the proposed prerequisite is too broad.'
+    status: reviewed
   - node: fraction.non-unit.part-whole
     relation: procedural
     points_to: procedure.4

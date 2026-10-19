@@ -59,17 +59,9 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: partitioning.equal-shares.whole-as-shares
-    relation: justificatory
-    points_to: statement
-    why: The shares always together make the same whole, so more shares means each takes a smaller part.
-    evidence:
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: At level 1 the claim can be established by directly comparing a half and a fourth
-        cut from same-size wholes. The explanation via ''the shares always make the same whole'' is a
-        justification, not required to hold the concept.'
-    status: disputed
+related:
+- node: partitioning.equal-shares.whole-as-shares
+  relation: common_path
+  note: 'Common path, not required: route ''via-whole-as-shares'' needed everything another route needs
+    and more, so it was removed in review.'
 status: proposed

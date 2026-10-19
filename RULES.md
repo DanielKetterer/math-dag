@@ -139,6 +139,16 @@ not to the idea. Example: computing a derivative from its definition needs
 algebraic cancellation, but understanding what a derivative is does not.
 Mark these `scope: task` and point them at `assess`. (checked)
 
+**Direct-only has one exception, and it covers test problems.** An edge to a
+skill that a chain of prerequisites already reaches is still listed when this
+node's own statement, procedure, or test problem uses that skill. If only the
+test problem uses it, it is a task edge (pilot review item 51).
+
+**Simplest form.** Simplifying a fraction to lowest terms is its own node. It
+enters another node only as a task edge, and only when that node's test
+problem asks for simplest form. "Rewrite in simplest form if wanted" in a
+procedure does not make it a prerequisite (pilot review items 8, 65).
+
 ### 3.4 Learnability (checked)
 
 With OR-clauses, a cycle is not automatically wrong. What is wrong is a node
@@ -158,6 +168,13 @@ Never by silently deleting an edge.
 
 `generalizes`, `specializes`, `same_idea_different_form`, `contrasts_with`.
 These record structure the map should show without claiming order.
+
+`common_path` records a route into a node that is common in development or
+teaching but not required: a credible way in exists without it. It is where an
+edge goes when its only alternative is not a node ("learn from varied
+examples", "explore how pieces fit"), or when its route needs everything
+another route needs and more, so it never changes what the node requires.
+An empty or superset route is never kept in `requires` (Daniel, 2026-10-19).
 
 ## 4. Evidence and status
 

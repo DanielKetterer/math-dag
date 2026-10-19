@@ -18,7 +18,7 @@ sources:
   learning_components:
   - 0edaa02c
 requires:
-- clause: standard
+- clause: via-unit-rate-point
   all_of:
   - node: proportional-relationship.test.graph
     relation: definitional
@@ -34,21 +34,6 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: proportional-relationship.graph.unit-rate-point
-    relation: definitional
-    points_to: statement
-    why: The statement uses the point (1, k) on the line, whose meaning is 1 unit of x corresponding to
-      k units of y.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The point (1, k) can be justified by its meaning, or simply obtained by evaluating
-        y = kx at x = 1.'
-    status: disputed
   - node: coordinate-plane.first-quadrant
     relation: procedural
     points_to: procedure.2
@@ -91,6 +76,21 @@ requires:
       source: critic-sonnet
       note: 'task-only: Multiplying 2.5 by x is demanded by the test problem y = 2.5x.'
     status: proposed
+  - node: proportional-relationship.graph.unit-rate-point
+    relation: definitional
+    points_to: statement
+    why: The statement uses the point (1, k) on the line, whose meaning is 1 unit of x corresponding to
+      k units of y.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The point (1, k) can be justified by its meaning, or simply obtained by evaluating
+        y = kx at x = 1. | other route: Evaluate kx at x = 1 (expressions.variables).'
+    status: disputed
 - clause: critic-route-1
   note: Plot several (x, kx) pairs from a ratio table and draw the line through them
   all_of:

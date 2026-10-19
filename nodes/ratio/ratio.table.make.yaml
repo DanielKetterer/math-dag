@@ -19,13 +19,26 @@ sources:
   - 6808344c
   - '96529518'
 requires:
-- clause: standard
+- clause: via-notation
   all_of:
   - node: ratio.equivalent
     relation: definitional
     points_to: statement
     why: Each added row is a pair (n x a, n x b) that is an equivalent ratio of the first row, so the
       meaning of equivalent ratios defines the table.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Computing the products n x a and n x b for n = 2, 3, 4 uses single-digit multiplication facts.
     evidence:
     - kind: content
       source: pass-P
@@ -48,19 +61,7 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Writing the first row from a ratio given as a:b uses the notation; if the ratio
-        is given in words, the row is read from the for-every description.'
+        is given in words, the row is read from the for-every description. | other route: Read the first
+        row from a verbal for-every description (ratio.composed-unit).'
     status: disputed
-  - node: multiplication.facts.within-100
-    relation: procedural
-    points_to: procedure.2
-    why: Computing the products n x a and n x b for n = 2, 3, 4 uses single-digit multiplication facts.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
 status: proposed

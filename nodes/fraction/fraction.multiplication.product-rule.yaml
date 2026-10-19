@@ -15,34 +15,6 @@ sources:
   learning_components:
   - 4aeee2dd
 requires:
-- clause: standard
-  all_of:
-  - node: fraction.whole-number.as-fraction
-    relation: definitional
-    points_to: statement
-    why: The statement writes a whole number q as q/1 so that the rule also covers whole-number factors.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
-  - node: fraction.multiplication.parts-of-partition.fraction
-    relation: definitional
-    points_to: statement
-    why: The product (a/b) x (c/d) is first defined as a parts of c/d split into b equal parts, which
-      the rule then computes.
-    evidence:
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Some meaning of the left side (a/b) x (c/d) is needed; the part-of-a-partition
-        meaning is one option.'
-    status: disputed
 - clause: area-model
   all_of:
   - node: fraction.whole-number.as-fraction
@@ -72,5 +44,33 @@ requires:
       source: critic-sonnet
       note: 'route-only: The area model gives a meaning and a derivation of the rule, but the operator
         meaning can serve instead.'
+    status: disputed
+- clause: via-fraction
+  all_of:
+  - node: fraction.whole-number.as-fraction
+    relation: definitional
+    points_to: statement
+    why: The statement writes a whole number q as q/1 so that the rule also covers whole-number factors.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.parts-of-partition.fraction
+    relation: definitional
+    points_to: statement
+    why: The product (a/b) x (c/d) is first defined as a parts of c/d split into b equal parts, which
+      the rule then computes.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Some meaning of the left side (a/b) x (c/d) is needed; the part-of-a-partition
+        meaning is one option. | other route: Area meaning of the product (multiplication.array-area.fraction-product.represent).'
     status: disputed
 status: proposed

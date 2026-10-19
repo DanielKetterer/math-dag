@@ -60,15 +60,22 @@ def main(d):
                         "status": e.get("status"), "scope": e.get("scope", "concept"), "route_note": c.get("note")}
                 (kept if e.get("status") == "proposed" else disputed).append(item)
     rng = random.Random(20261016)
-    sample = rng.sample(kept, 40)
+    sample = rng.sample(kept, min(40, len(kept)))  # reviewed edges are not resampled
     dropped = json.load(open(os.path.join(d, "dropped.json")))
     ver = {}
     for p in glob.glob(os.path.join(d, "critic", "verdicts-*.json")):
         ver.update(json.load(open(p))["edges"])
     mapping = json.load(open(os.path.join(d, "critic", "_mapping.json")))
-    undecided = [(mapping[e], v) for e, v in ver.items() if v.get("verdict") == "undecided"]
+    reviewed = {(i, e["node"]) for i, n in nodes.items() for c in n["requires"] for e in c["all_of"]
+                if e.get("status") == "reviewed"}
+    reviewed |= {(i, r["node"]) for i, n in nodes.items() for r in n.get("related", [])}
+    ovp = os.path.join(d, "overrides.yaml")  # every pair a human already ruled on
+    if os.path.exists(ovp):
+        reviewed |= {(o["node"], o["target"]) for o in (yaml.safe_load(open(ovp)) or {}).get("edges", [])}
+    undecided = [(mapping[e], v) for e, v in ver.items() if v.get("verdict") == "undecided"
+                 and (mapping[e]["node"], mapping[e]["target"].replace("new:", "")) not in reviewed]
 
-    lines = ["# Review queue: equal sharing to slope", "",
+    lines = [f"# Review queue: {os.path.relpath(os.path.abspath(d), ROOT)}", "",
              "Reply with item numbers. For A, B, and D: list the numbers you judge **wrong**",
              "(and any you are unsure of). For C: answer each question in a few words.",
              "Work top to bottom; sections are in priority order, and each is useful on its own.", ""]
@@ -82,7 +89,7 @@ def main(d):
             lines.append(f"   - {s}")
 
     lines += ["## A. Random sample of kept edges (precision estimate)", "",
-              f"40 drawn at random from the {len(kept)} edges both checks kept. The share you mark wrong",
+              f"{len(sample)} drawn at random from the {len(kept)} unreviewed edges both checks kept. The share you mark wrong",
               "estimates the error rate of the whole map.", ""]
     for x in sample:
         tag = " (test problem only)" if x["scope"] == "task" else ""
@@ -90,8 +97,8 @@ def main(d):
     lines.append("")
 
     lines += ["## B. Edges the critic removed, highest impact first", "",
-              f"The critic removed {len(dropped)} edges as scaffold, indirect, or wrong. These 20 sit under the",
-              "most other nodes. Mark the ones it should have **kept**.", ""]
+              f"The critic removed {len(dropped)} edges as scaffold, indirect, or wrong. The {min(20, len(dropped))} below sit",
+              "under the most other nodes. Mark the ones it should have **kept**.", ""]
     for x in sorted(dropped, key=lambda x: -impact.get(x["node"], 0))[:20]:
         via = f" (via {x['via']})" if x.get("via") else ""
         item(f"**{name(x['node'])}** needs **{name(x['target'])}**? Critic: {x['verdict']}{via}",
@@ -106,7 +113,7 @@ def main(d):
 
     lines += ["## D. Disputed edges and new routes, highest impact first", "",
               f"{len(disputed)} edges are disputed (route-only, added by the critic, or on an alternative route).",
-              "These 30 matter most. Mark the ones that are **wrong**.", ""]
+              f"The {min(30, len(disputed))} below matter most. Mark the ones that are **wrong**.", ""]
     for x in sorted(disputed, key=lambda x: -impact.get(x["node"], 0))[:30]:
         route = f" [route: {x['clause']}]" if x["clause"] != "standard" else ""
         sub = [f"Why: {x['why'][:300]}"]
@@ -117,8 +124,15 @@ def main(d):
 
     bench = open(os.path.join(ROOT, "reports", "benchmark.md")).read()
     miss = [l[2:] for l in bench.splitlines() if l.startswith("- ") and " -> " in l]
+    # only links touching a standard this run's nodes are aligned to
+    run_ccss = {str(c) for i in scope for c in (nodes.get(i, {}).get("sources") or {}).get("ccss", [])}
+    if scope:
+        miss = [m for m in miss if any(s.strip() in run_ccss for s in m.split("->"))]
     lines += ["## E. Coherence Map links the map misses", "",
-              "For each: should the map have a prerequisite path here (yes / no)?", ""]
+              "For each link A -> B, apply the counterfactual test: could a learner meet B, at its",
+              "stated level, by a credible route without A? Answer **required** (no route without A),",
+              "**route-only** (name the other route), **task** (B's test problem uses A), or",
+              "**not a prerequisite**. That A supports or builds toward B is not enough.", ""]
     for m in miss:
         item(f"{m}")
     lines.append("")

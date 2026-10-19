@@ -14,38 +14,8 @@ sources:
   learning_components:
   - fda5f0e0
 requires:
-- clause: standard
+- clause: via-decrease-amount
   all_of:
-  - node: percent.application.decrease-amount
-    relation: definitional
-    points_to: statement
-    why: Each stage takes a percent off the amount left from the previous stage, which is the discount
-      calculation.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Each stage can be a discount calculation, or simply a percent of the current
-        amount followed by subtraction.'
-    status: disputed
-  - node: percent.application.increase-amount
-    relation: definitional
-    points_to: statement
-    why: A stage may instead add a percent of the current amount, as in markup or tax, which is the increase
-      calculation.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: A stage may be an increase, or may be handled as a percent of the current amount
-        followed by addition.'
-    status: disputed
   - node: percent.application.percent-change
     relation: definitional
     points_to: assess
@@ -71,5 +41,65 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
+    status: disputed
+  - node: percent.application.decrease-amount
+    relation: definitional
+    points_to: statement
+    why: Each stage takes a percent off the amount left from the previous stage, which is the discount
+      calculation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Each stage can be a discount calculation, or simply a percent of the current
+        amount followed by subtraction. | other route: Apply percent.of-quantity at each stage and subtract
+        or add the result.'
+    status: disputed
+- clause: via-increase-amount
+  all_of:
+  - node: percent.application.percent-change
+    relation: definitional
+    points_to: assess
+    why: Finding the single percent discount equal to the two successive discounts is a percent-change
+      calculation from $100 to $72.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Finding the single equivalent discount from $100 to $72 is demanded by the test
+        problem; the statement is about sequential percents.'
+    status: proposed
+  - node: percent.of-quantity
+    relation: definitional
+    points_to: statement
+    why: Both stage types are applications of a percent of the current amount; this is the shared direct
+      skill.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: percent.application.increase-amount
+    relation: definitional
+    points_to: statement
+    why: A stage may instead add a percent of the current amount, as in markup or tax, which is the increase
+      calculation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A stage may be an increase, or may be handled as a percent of the current amount
+        followed by addition. | other route: Apply percent.of-quantity at each stage and add or subtract
+        the result.'
     status: disputed
 status: proposed

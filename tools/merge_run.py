@@ -17,6 +17,16 @@ Verdict handling:
 Critic's missing prerequisites join the main route as disputed; its missing
 routes become extra routes (the node's necessary edges plus the new ones),
 disputed.
+
+Human review (<dir>/overrides.yaml, optional) is applied last and outranks the
+critic. Edge actions: keep (status reviewed), drop, task, related (moved to
+`related` as common_path), require (put in every route), replace (point the
+edge at another node), restore (bring back an edge the critic dropped),
+uphold (confirm a critic drop). Route entries add an OR clause: a copy of the
+node's first route minus `without` plus `add`. Then every route that needs
+everything another route needs, and more, is removed; edges left only on
+removed routes move to `related` as common_path. `rename` maps node ids last.
+Everything the review changed is logged in <dir>/review_applied.md.
 """
 import collections
 import copy
@@ -29,7 +39,140 @@ import yaml
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ALIASES = {"division.by-zero-undefined": "division.by-zero.undefined"}
-RELATED = {"generalizes", "specializes", "same_idea_different_form", "contrasts_with"}
+RELATED = {"generalizes", "specializes", "same_idea_different_form", "contrasts_with", "common_path"}
+KEEPING = {"keep", "task", "require", "replace", "restore", "related"}
+
+
+def load_overrides(d):
+    p = os.path.join(d, "overrides.yaml")
+    if not os.path.exists(p):
+        return None
+    ov = yaml.safe_load(open(p, encoding="utf-8")) or {}
+    ov.setdefault("edges", [])
+    ov.setdefault("routes", [])
+    ov.setdefault("rename", {})
+    ov["by_edge"] = collections.defaultdict(list)
+    for o in ov["edges"]:
+        ov["by_edge"][(o["node"], o["target"])].append(o)
+    return ov
+
+
+def review_ev(o, reviewer):
+    note = f"{o['item']} {o['action']}: {o.get('reason') or ''}".strip()
+    return {"kind": "review", "source": reviewer, "note": note[:700]}
+
+
+def apply_overrides(nid, requires, related, ov, dropped, counts, log):
+    """Apply Daniel's verdicts to one node's routes. Returns True if it changed anything."""
+    reviewer = ov.get("reviewer", "review")
+    touched = False
+    done = set()
+    for o in [o for o in ov["edges"] if o["node"] == nid]:
+        t, act = o["target"], o["action"]
+        if act == "uphold":
+            continue
+        hits = [(c, e) for c in requires for e in c["all_of"] if e["node"] == t]
+        if not hits and act in ("drop", "related") and (nid, t) in done:
+            continue  # a duplicate item already applied this
+        if not hits:
+            counts["review: target not found"] += 1
+            log.append(f"- {o['item']} {nid} -> {t}: {act} NOT APPLIED (edge not found)")
+            continue
+        done.add((nid, t))
+        if act not in ("keep", "task"):  # these never change which routes exist
+            touched = True
+        counts[f"review: {act}"] += 1
+        if act == "drop":
+            for c in requires:
+                c["all_of"] = [e for e in c["all_of"] if e["node"] != t]
+            dropped.append({"node": nid, "target": t, "verdict": "review", "item": o["item"],
+                            "reason": o.get("reason"), "why": hits[0][1].get("why")})
+            log.append(f"- {o['item']} {nid} -> {t}: dropped")
+            continue
+        if act == "related":
+            for c in requires:
+                c["all_of"] = [e for e in c["all_of"] if e["node"] != t]
+            related.append({"node": t, "relation": "common_path",
+                            "note": f"Common path, not required ({o['item']}): {o.get('reason') or ''}"[:500]})
+            log.append(f"- {o['item']} {nid} -> {t}: moved to related (common_path)")
+            continue
+        for c, e in hits:
+            if act == "task" or (act == "restore" and o.get("scope") == "task"):
+                e["scope"], e["points_to"] = "task", "assess"
+            if act == "replace":
+                e["node"], e["why"] = o["with"], o["why"]
+            e["status"] = "reviewed"
+            e["evidence"].append(review_ev(o, reviewer))
+        if act == "replace":
+            for c in requires:  # one edge per node per route
+                seen, out = set(), []
+                for e in c["all_of"]:
+                    if e["node"] not in seen:
+                        seen.add(e["node"])
+                        out.append(e)
+                c["all_of"] = out
+            log.append(f"- {o['item']} {nid} -> {t}: replaced by {o['with']}")
+        elif act == "require":
+            proto = hits[0][1]
+            for c in requires:
+                if not any(e["node"] == t for e in c["all_of"]):
+                    c["all_of"].append(copy.deepcopy(proto))
+            log.append(f"- {o['item']} {nid} -> {t}: required on every route")
+        elif act in ("task", "restore"):
+            log.append(f"- {o['item']} {nid} -> {t}: {act}" + (" (task)" if o.get("scope") == "task" else ""))
+    for r in [r for r in ov["routes"] if r["node"] == nid]:
+        if not requires:
+            log.append(f"- {r['item']} {nid}: route {r['name']} NOT APPLIED (node has no route to copy)")
+            continue
+        touched = True
+        base = requires[0]
+        new = {"clause": r["name"]}
+        if r.get("note"):
+            new["note"] = r["note"]
+        if base.get("procedure"):
+            new["procedure"] = base["procedure"]
+        new["all_of"] = [copy.deepcopy(e) for e in base["all_of"] if e["node"] not in r.get("without", [])]
+        for a in r.get("add", []):
+            new["all_of"].append({"node": a["node"], "relation": a["relation"], "points_to": a["points_to"],
+                                  "why": a["why"], "evidence": [review_ev({"item": r["item"], "action": "route",
+                                                                           "reason": r.get("note")}, reviewer)],
+                                  "status": "reviewed"})
+        requires.append(new)
+        counts["review: route added"] += 1
+        log.append(f"- {r['item']} {nid}: added route {r['name']} (without {r.get('without', [])}, "
+                   f"plus {[a['node'] for a in r.get('add', [])]})")
+    if not touched:
+        return False
+    # a route that needs everything another route needs, and more, adds nothing
+    sets = [frozenset(e["node"] for e in c["all_of"]) for c in requires]
+    keep = [i for i, s in enumerate(sets)
+            if not any(j != i and (sets[j] < s or (sets[j] == s and j < i)) for j in range(len(sets)))]
+    survivors = set().union(*[sets[i] for i in keep]) if keep else set()
+    have = {r["node"] for r in related}
+    for i in [i for i in range(len(requires)) if i not in keep]:
+        moved = sorted({e["node"] for e in requires[i]["all_of"]} - survivors - have)
+        for t in moved:
+            related.append({"node": t, "relation": "common_path",
+                            "note": f"Common path, not required: route '{requires[i]['clause']}' needed everything "
+                                    f"another route needs and more, so it was removed in review."})
+            have.add(t)
+        counts["review: dominated route removed"] += 1
+        log.append(f"- {nid}: route {requires[i]['clause']} removed (superset of another route); "
+                   f"moved to related: {moved or 'nothing'}")
+    requires[:] = [requires[i] for i in keep if requires[i]["all_of"]]
+    if len(requires) == 1 and requires[0]["clause"] != "standard":
+        log.append(f"- {nid}: only route left, renamed {requires[0]['clause']} -> standard")
+        requires[0]["clause"] = "standard"
+        requires[0].pop("note", None)
+    return True
+
+
+def rename_all(doc, rename):
+    for c in doc.get("requires", []):
+        for e in c["all_of"]:
+            e["node"] = rename.get(e["node"], e["node"])
+    for r in doc.get("related", []):
+        r["node"] = rename.get(r["node"], r["node"])
 
 
 class NoAlias(yaml.SafeDumper):
@@ -64,6 +207,8 @@ def main(d):
         for p in glob.glob(os.path.join(d, "passes", f"{lab}-*.json")):
             passes[lab].update(json.load(open(p, encoding="utf-8"))["nodes"])
 
+    ov = load_overrides(d)
+    review_log = []
     dropped, counts = [], collections.Counter()
     written = 0
     old = glob.glob(os.path.join(ROOT, "nodes", "**", "*.yaml"), recursive=True)
@@ -78,6 +223,10 @@ def main(d):
             verdict = x.get("verdict")
             counts[verdict] += 1
             e0 = u["edges"][0]
+            if ov and verdict in ("scaffold", "indirect", "wrong") and any(
+                    o["action"] in KEEPING for o in ov["by_edge"].get((a, t.replace("new:", "")), [])):
+                counts[f"critic {verdict} overruled by review"] += 1
+                verdict = "necessary"
             if verdict in ("scaffold", "indirect", "wrong"):
                 dropped.append({"node": nid, "target": t, "verdict": verdict, "reason": x.get("reason"),
                                 "via": x.get("via"), "proposed_by": u["passes"], "why": e0.get("why")})
@@ -187,6 +336,12 @@ def main(d):
                              "all_of": copy.deepcopy(necessary) + extra})
             counts["alt route from critic"] += 1
 
+        emptied_by_review = False
+        if ov:
+            had = bool(requires)
+            if apply_overrides(nid, requires, related, ov, dropped, counts, review_log) and had and not requires:
+                emptied_by_review = True
+
         doc = {k: n[k] for k in ("id", "concept", "facet", "level", "type", "name", "statement") if k in n}
         if n.get("procedure"):
             doc["procedure"] = n["procedure"]
@@ -200,10 +355,17 @@ def main(d):
         if not requires:
             reasons = [passes[p].get(nid, {}).get("root_reason") for p in ("P", "Q")]
             reasons.append(n.get("root_reason"))
-            doc["root_reason"] = next((r for r in reasons if r), "Every proposed prerequisite was removed by the critic; check this node.")
+            if emptied_by_review:
+                doc["root_reason"] = ("Every prerequisite was dropped or moved to related in review; "
+                                      "a root by review decision, check this node.")
+                review_log.append(f"- {nid}: now a root (every prerequisite dropped or moved in review)")
+            else:
+                doc["root_reason"] = next((r for r in reasons if r), "Every proposed prerequisite was removed by the critic; check this node.")
         if related:
             seen = set()
             doc["related"] = [r for r in related if not (r["node"] in seen or seen.add(r["node"]))]
+        if ov and ov["rename"]:
+            rename_all(doc, ov["rename"])
         doc["status"] = "proposed"
         path = os.path.join(ROOT, "nodes", n["concept"], nid + ".yaml")
         os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -220,6 +382,18 @@ def main(d):
             os.remove(p)
             removed.append(os.path.relpath(p, ROOT))
 
+    if ov:
+        for o in ov["edges"]:
+            if o["action"] == "uphold":
+                for x in dropped:
+                    if (x["node"], x["target"]) == (o["node"], o["target"]):
+                        x["review"] = f"upheld by {ov.get('reviewer', 'review')} ({o['item']})"
+                        counts["review: critic drop upheld"] += 1
+        unknown = sorted({o["node"] for o in ov["edges"]} - set(nodes))
+        if unknown:
+            review_log.append(f"- overrides name nodes outside this run: {unknown}")
+        open(os.path.join(d, "review_applied.md"), "w").write(
+            "# Review verdicts applied by merge_run\n\n" + "\n".join(review_log) + "\n")
     json.dump(dropped, open(os.path.join(d, "dropped.json"), "w"), indent=1)
     rep = ["# Merge report", "", f"- Node files written: {written}",
            f"- Example files superseded and removed: {removed or 'none'}",

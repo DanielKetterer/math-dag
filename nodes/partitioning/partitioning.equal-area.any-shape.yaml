@@ -19,7 +19,7 @@ sources:
   learning_components:
   - 1e26fb99
 requires:
-- clause: standard
+- clause: via-iterate-units
   all_of:
   - node: partitioning.equal-shares.area
     relation: procedural
@@ -63,6 +63,15 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: partitioning.segment.equal-lengths
+    relation: definitional
+    points_to: statement
+    why: Step 1 partitions a side into n equal lengths for any n; the map has no node that teaches this.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
   - node: measurement.length.iterate-units
     relation: procedural
     points_to: procedure.1
@@ -74,15 +83,7 @@ requires:
       source: critic-sonnet
       note: 'route-only: Equal-length partition of a side by laying unit lengths only works when the side
         length is a multiple of n units. Other credible ways: folding or marking the side and checking
-        by direct comparison, or measuring the side and dividing.'
-    status: disputed
-  - node: partitioning.segment.equal-lengths
-    relation: definitional
-    points_to: statement
-    why: Step 1 partitions a side into n equal lengths for any n; the map has no node that teaches this.
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing prerequisite
+        by direct comparison, or measuring the side and dividing. | other route: Partition the side by
+        folding or by trial marking checked with direct comparison of the pieces (comparing.size.direct).'
     status: disputed
 status: proposed

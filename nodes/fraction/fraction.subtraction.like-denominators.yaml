@@ -16,22 +16,8 @@ sources:
   - 4.NF.B.3.d
   learning_components: []
 requires:
-- clause: standard
+- clause: via-model
   all_of:
-  - node: fraction.subtraction.like-denominators.model
-    relation: representational
-    points_to: statement
-    why: The symbolic rule a/b - c/b = (a - c)/b records the result that the length model of removing
-      like parts produces.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: A level 3 rule need not be derived from the length model.'
-    status: disputed
   - node: subtraction.whole-number
     relation: procedural
     points_to: procedure.2
@@ -46,6 +32,22 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: fraction.subtraction.like-denominators.model
+    relation: representational
+    points_to: statement
+    why: The symbolic rule a/b - c/b = (a - c)/b records the result that the length model of removing
+      like parts produces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A level 3 rule need not be derived from the length model. | other route: Derive
+        or learn the rule from the unit-sum meaning (a copies of 1/b with c copies removed leaves a -
+        c copies) or by direct instruction, via fraction.non-unit.unit-sum and fraction.subtraction.separating.'
+    status: disputed
 - clause: critic-route-1
   note: Rule from the unit-sum meaning (a copies of 1/b with c removed leaves a - c copies) or direct
     instruction.

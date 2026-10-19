@@ -13,7 +13,7 @@ sources:
   learning_components:
   - ff25751a
 requires:
-- clause: standard
+- clause: via-resize
   all_of:
   - node: ratio.composed-unit
     relation: definitional
@@ -28,22 +28,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
-  - node: multiplication.scaling.resize
-    relation: definitional
-    points_to: statement
-    why: The statement c = n x a and d = n x b with any positive n, including fractions, treats multiplication
-      as resizing both quantities by the same factor.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Fractional n is a resizing of both quantities; the other route reads n as repeated
-        or split composite units.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'A21 keep: Keep - Equivalent ratios depend on understanding the underlying ratio relationship.'
+    status: reviewed
   - node: fraction.quotient.symbolic
     relation: definitional
     points_to: assess
@@ -59,4 +47,20 @@ requires:
       note: 'task-only: Finding n for 4:6 and 10:15 requires expressing 10 divided by 4 as 5/2 in the
         test problem, not in the idea of equivalence.'
     status: proposed
+  - node: multiplication.scaling.resize
+    relation: definitional
+    points_to: statement
+    why: The statement c = n x a and d = n x b with any positive n, including fractions, treats multiplication
+      as resizing both quantities by the same factor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Fractional n is a resizing of both quantities; the other route reads n as repeated
+        or split composite units. | other route: Repeat or split the composite unit (ratio.composed-unit)
+        with fractions of a quantity (fraction.multiplication.parts-of-partition.whole-number).'
+    status: disputed
 status: proposed

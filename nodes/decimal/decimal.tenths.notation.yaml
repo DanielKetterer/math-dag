@@ -14,7 +14,7 @@ sources:
   learning_components:
   - 86f60c17
 requires:
-- clause: standard
+- clause: via-meaning
   all_of:
   - node: place-value.base-ten
     relation: representational
@@ -43,6 +43,15 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: fraction.whole-number.as-fraction
+    relation: definitional
+    points_to: statement
+    why: Showing 14/10 as one whole one plus 4 tenths needs 10/10 = 1.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
   - node: fraction.mixed-number.meaning
     relation: definitional
     points_to: statement
@@ -55,7 +64,47 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Mixed-number meaning is one way to see ones plus remaining tenths; the decomposition
-        14/10 = 10/10 + 4/10 with 10/10 = 1 gives it without mixed-number notation.'
+        14/10 = 10/10 + 4/10 with 10/10 = 1 gives it without mixed-number notation. | other route: Decompose
+        the fraction (fraction.decompose.equation) and use fraction.whole-number.as-fraction (10/10 =
+        1).'
+    status: disputed
+- clause: via-equation
+  all_of:
+  - node: place-value.base-ten
+    relation: representational
+    points_to: statement
+    why: The first place after the point is a new place-value position worth one tenth, extending base-ten
+      place value.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: The number of tenths in a/10 is a parts of size 1/10 of one whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.whole-number.as-fraction
+    relation: definitional
+    points_to: statement
+    why: Showing 14/10 as one whole one plus 4 tenths needs 10/10 = 1.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
     status: disputed
   - node: fraction.decompose.equation
     relation: representational
@@ -67,15 +116,8 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Splitting 14/10 into whole ones and remaining tenths can be done by decomposing
-        into 10/10 + 4/10, or by the mixed-number meaning 1 4/10, or by regrouping ten tenths as one.'
-    status: disputed
-  - node: fraction.whole-number.as-fraction
-    relation: definitional
-    points_to: statement
-    why: Showing 14/10 as one whole one plus 4 tenths needs 10/10 = 1.
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing prerequisite
+        into 10/10 + 4/10, or by the mixed-number meaning 1 4/10, or by regrouping ten tenths as one.
+        | other route: Mixed-number meaning of 1 4/10 with 10 tenths making 1 one (an OR with fraction.mixed-number.meaning),
+        or base-ten regrouping of ten tenths into one one.'
     status: disputed
 status: proposed

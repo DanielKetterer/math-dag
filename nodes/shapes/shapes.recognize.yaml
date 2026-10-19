@@ -20,13 +20,13 @@ sources:
   - cs.shapes.recognizer-rectangles
   - cs.shapes.recognizer
 requires:
-- clause: via-count
+- clause: standard
   all_of:
-  - node: shapes.name.prototype
+  - node: shapes.name.receptive
     relation: definitional
     points_to: statement
-    why: The test asks for all triangles, so the learner must have the shape class names, learned first
-      for typical examples.
+    why: The test asks the child to color every triangle, which needs the word triangle understood receptively,
+      not spoken, so receptive shape names replace the spoken-naming node.
     evidence:
     - kind: content
       source: pass-P
@@ -35,21 +35,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
-  - node: shapes.match
-    relation: definitional
-    points_to: statement
-    why: Recognizing every example whatever its size or orientation extends picking same-shaped figures
-      despite size and turn to a whole class of shapes.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A39 replace: REJECT as universal: Knowing names for typical shapes does not guarantee recognition
+        of rotated or atypical examples; varied labelled examples and non-examples provide another route.'
+    status: reviewed
   - node: shapes.closed-boundary
     relation: definitional
     points_to: statement
@@ -59,20 +49,20 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
-    status: disputed
-  - node: shapes.sides.count
-    relation: definitional
-    points_to: statement
-    why: Rejecting a triangle with a curved side or an open three-sided figure requires attending to whether
-      the sides are straight segments forming a closed boundary.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Rejecting a curved-sided or open lookalike can be done by attending to straight
-        sides and closure, but that is not the only way. | other route: Holistic visual comparison with
-        many varied labelled examples and non-examples (typical in curricula), without counting or attending
-        to sides.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D51 require: Required on every route (Daniel, 2026-10-19): refusing the open three-sided
+        figure is knowing that a shape''s boundary closes, whatever the route. | Daniel: KEEP; add shapes.closed-boundary:
+        The assessment includes an open three-sided figure, and counting straight sides alone does not
+        establish that a shape boundary is closed.'
+    status: reviewed
+related:
+- node: shapes.match
+  relation: common_path
+  note: 'Common path, not required (A17): REJECT as universal; retain as a route: Matching figures is
+    useful, but children can learn shape classes across orientations from varied examples and non-examples.'
+- node: shapes.sides.count
+  relation: common_path
+  note: 'Common path, not required: route ''via-count'' needed everything another route needs and more,
+    so it was removed in review.'
 status: proposed

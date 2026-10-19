@@ -33,23 +33,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
-  - node: fraction.unit.part-whole
-    relation: representational
-    points_to: procedure.3
-    why: Step 3 labels the first of b equal lengths as 1/b, carrying over the meaning of a unit fraction
-      as one of b equal parts.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The target is the measure facet. A measure-first route reaches 1/b on the line
-        from unit length: partition 0-1 into b equal lengths and see that b copies of the piece fill the
-        unit, with no area-model unit fraction.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'A27 keep: Keep - The procedure uses the unit length between 0 and 1.'
+    status: reviewed
   - node: partitioning.segment.equal-lengths
     relation: definitional
     points_to: statement
@@ -60,34 +47,18 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
-    status: disputed
-- clause: critic-route-1
-  note: 'Measure-first route: name 1/b as the length whose b copies make the unit length, built from lengths
-    on the number line rather than from the area-model unit fraction.'
-  all_of:
-  - node: number-line.whole-number-lengths
-    relation: representational
-    points_to: procedure.1
-    why: Step 1 marks 0 and 1 on a number line, so the learner must read the length from 0 to 1 as one
-      unit.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
-  - node: partitioning.segment.equal-lengths
-    relation: definitional
-    points_to: statement
-    why: 'Alternative route proposed by the critic: Measure-first route: name 1/b as the length whose
-      b copies make the unit length, built from lengths on the number line rather than from the area-model
-      unit fraction.'
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing route
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D76 require: Keep/add prerequisite - The target explicitly partitions a segment into equal
+        lengths, which the map lacks as a node.'
+    - kind: review
+      source: DK
+      note: 'D77 keep: Keep/add alternative route - Segment partitioning supports the measure-first route
+        to the number-line unit fraction.'
+    status: reviewed
+related:
+- node: fraction.unit.part-whole
+  relation: common_path
+  note: 'Common path, not required: route ''via-part-whole'' needed everything another route needs and
+    more, so it was removed in review.'
 status: proposed

@@ -1,0 +1,522 @@
+# Daniel's review verdicts, applied by tools/merge_run.py after the critic.
+# They outrank every model pass. Actions: keep, drop, task, related, require,
+# replace, restore, uphold (critic drop confirmed). routes: extra OR clauses =
+# a copy of the node's first route minus `without` plus `add`.
+reviewer: DK
+review: pilot/run/prek/REVIEW.md, answers in REVIEW_ANSWERS.txt (2026-10-19)
+rename:
+  quantity.more-than: comparing.more-than
+  graphomotor.digit-formation: numeral.digit-formation
+edges:
+- item: A1
+  node: shapes.compose.fill-outline
+  target: spatial.motion.turn-flip
+  action: task
+  reason: 'KEEP, task-scoped: The assessed puzzle may require turning a piece, but that does not make turning a
+    universal prerequisite for filling every outlined puzzle.'
+- item: A2
+  node: counting.cardinal.last-word
+  target: counting.one-to-one
+  action: keep
+  reason: 'KEEP, task-scoped: The assessment relies on a correct count, which requires one number word per object;
+    distinguish this condition from the cardinality principle itself.'
+- item: A3
+  node: counting.sequence.backward
+  target: counting.sequence.recite
+  action: keep
+  reason: 'Kept after review discussion 2026-10-19 (Daniel accepted the pushback): the test starts at eight, so
+    a rote ten-to-one chant does not bypass the forward sequence; scope note: the test needs the forward words only
+    to eight. | Daniel: REJECT: Knowing the forward count sequence is a common aid to backward counting, but the
+    exact forward sequence through nineteen need not be mastered first.'
+- item: A4
+  node: addition.add-to.nonverbal
+  target: subitizing.nonverbal
+  action: keep
+  reason: 'Kept as required: no other route was named. | Daniel: KEEP, as a route: Nonverbal matching of a small
+    exact quantity is a credible basis for reproducing the quantity after a hidden addition.'
+- item: A5
+  node: counting.objects
+  target: counting.sequence.recite
+  action: keep
+  reason: 'KEEP: Counting twelve shells in the stated procedure requires the conventional number-word sequence through
+    twelve.'
+- item: A6
+  node: counting.objects
+  target: counting.one-to-one
+  action: keep
+  reason: 'KEEP: The counting procedure explicitly assigns one number word to each object, without skipping or double-counting.'
+- item: A7
+  node: numeral.informal-record
+  target: counting.one-to-one
+  action: drop
+  reason: 'REJECT: Making one mark per object can be learned without first demonstrating one-word-per-object counting;
+    the underlying correspondence idea is shared, but the specific skill is not mandatory.'
+- item: A8
+  node: counting.produce-set
+  target: counting.sequence.recite
+  action: keep
+  reason: 'KEEP: Counting out a set of a given size requires the ordered number words through the requested number.'
+- item: A9
+  node: classifying.sort.given-attribute
+  target: classifying.attribute.identify
+  action: drop
+  reason: 'REJECT: A child can sort by color without naming the abstract attribute shared by a group.'
+- item: A10
+  node: numeral.match-quantity
+  target: numeral.read
+  action: keep
+  reason: 'Kept after review discussion 2026-10-19 (Daniel accepted the pushback): both routes keep numeral.read;
+    subitizing replaces counting the set, not knowing what the numeral denotes. | Daniel: REJECT as universal; retain
+    as a route: Numeral-to-set matching can be learned through symbol-quantity associations or subitizing without
+    first saying the numeral''s number word.'
+- item: A11
+  node: shapes.sides.count
+  target: counting.objects
+  action: keep
+  reason: 'KEEP: Counting sides requires enumerating the sides as a collection, one at a time.'
+- item: A12
+  node: comparing.count.by-counting
+  target: counting.sequence.recite
+  action: keep
+  reason: 'KEEP: The stated comparison procedure depends on knowing which count comes later in the number-word sequence.'
+- item: A13
+  node: counting.events
+  target: counting.sequence.recite
+  action: keep
+  reason: 'KEEP: Counting sounds or actions requires producing successive number words as the events occur.'
+- item: A14
+  node: addition.application.add-to-story
+  target: addition.add-to.count-all
+  action: keep
+  reason: 'Kept after review discussion 2026-10-19 (Daniel accepted the pushback): the node is acting out with objects
+    or fingers; recalled facts and counting on are different nodes (RULES 3.1). | Daniel: REJECT as universal; retain
+    as a route: Joining sets and counting all is one way to solve an add-to story, but counting on or recalling
+    a known fact can also work.'
+- item: A15
+  node: shapes.compose.from-sides
+  target: shapes.sides.count
+  action: drop
+  reason: 'Dropped: the receptive shape-name node (replacing item 25''s edge) tells the learner what the goal shape
+    is; counting sides is not needed to build it. | Daniel: REJECT: A child can build a triangle from sticks through
+    modeling or trial and error without first identifying and counting sides as a separate skill.'
+- item: A16
+  node: counting.events
+  target: counting.one-to-one
+  action: keep
+  reason: 'Kept after review discussion 2026-10-19 (Daniel accepted the pushback): the events node''s own statement
+    pairs one number word with each event; kept on the existing tagging node rather than a near-duplicate events-tagging
+    node. | Daniel: REJECT as a direct prerequisite: Counting events uses one-to-one correspondence, but prior mastery
+    of counting objects is not necessarily required; model the shared principle separately.'
+- item: A17
+  node: shapes.recognize
+  target: shapes.match
+  action: related
+  reason: 'REJECT as universal; retain as a route: Matching figures is useful, but children can learn shape classes
+    across orientations from varied examples and non-examples.'
+- item: A18
+  node: comparing.weight.direct
+  target: measurement.weight.attribute
+  action: keep
+  reason: 'KEEP: The assessment requires distinguishing weight from apparent size to identify the small heavy stone
+    as heavier than the large sponge.'
+- item: A19
+  node: shapes.corners.count
+  target: counting.objects
+  action: keep
+  reason: 'KEEP: Counting corners requires identifying and enumerating the corners one by one.'
+- item: A20
+  node: counting.cardinal.last-word
+  target: counting.sequence.recite
+  action: keep
+  reason: 'Scope note: the prerequisite must cover the number range the test uses. | Daniel: KEEP, with a scope
+    caveat: Correct counting requires the ordered number words; ensure the prerequisite covers the number range
+    used by the assessment.'
+- item: A21
+  node: subtraction.take-away.count-remaining
+  target: counting.objects
+  action: keep
+  reason: 'KEEP: The stated procedure counts the remaining objects to find how many are left.'
+- item: A22
+  node: number-composition.within-5
+  target: number-composition.part-whole.inexact
+  action: keep
+  reason: 'KEEP, conceptually: Whole-part understanding is a sound basis for number composition, although known
+    number bonds and visual patterns may provide alternative routes to particular facts.'
+- item: A23
+  node: subitizing.perceptual
+  target: cardinality.small-number-words
+  action: keep
+  reason: 'Scope note: cardinality.small-number-words covers one to three, but this node names sets up to four or
+    five; open range question for the next review. | Daniel: KEEP, but extend the range: Exact number-word meanings
+    support naming small sets, but meanings for one through three alone do not cover assessment items involving
+    four or five.'
+- item: A24
+  node: classifying.attribute.identify
+  target: classifying.alike
+  action: keep
+  reason: 'KEEP: Naming a group''s shared attribute requires recognizing the relevant likeness among its members.'
+- item: A25
+  node: shapes.compose.from-sides
+  target: shapes.name.prototype
+  action: replace
+  with: shapes.name.receptive
+  why: The test says 'Make a triangle', so the learner must know which figure the word triangle names, at least
+    receptively, to aim the build at that shape.
+  reason: 'REJECT: A child can construct a requested shape using a model or receptive understanding of its name
+    without first being able to name typical circles, squares, and triangles.'
+- item: A26
+  node: counting.successor
+  target: counting.sequence.recite
+  action: keep
+  reason: 'KEEP: Identifying the next number word presupposes knowledge of the ordered sequence; the separate "one
+    more" principle adds the quantitative meaning.'
+- item: A27
+  node: counting.produce-set
+  target: counting.one-to-one
+  action: keep
+  reason: 'KEEP: Counting out a given number of objects requires assigning exactly one number word to each object.'
+- item: A28
+  node: shapes.compose.combine
+  target: spatial.motion.turn-flip
+  action: keep
+  reason: 'KEEP, task-scoped: Turning pieces may be necessary for the particular hexagon puzzle, but it should not
+    become a universal prerequisite for shape composition.'
+- item: A29
+  node: ordinal.position
+  target: counting.sequence.recite
+  action: keep
+  reason: 'Kept after review discussion 2026-10-19 (Daniel accepted the pushback): the ordinal words fifth to tenth
+    are built from the counting words and finding the fifth counts to five (item 36); reciting is not sufficient,
+    but it is necessary. | Daniel: REJECT: Reciting cardinal number words is not the same as knowing ordinal words
+    such as first and fifth; those labels need their own representation.'
+- item: A30
+  node: subtraction.take-away.nonverbal
+  target: subitizing.nonverbal
+  action: keep
+  reason: 'Kept as required: no other route was named. | Daniel: KEEP, as a route: Wordless reproduction of a small
+    exact set is a credible route to reproducing the remaining quantity after hidden subtraction.'
+- item: A31
+  node: subtraction.application.take-from-story
+  target: subtraction.take-away.count-remaining
+  action: keep
+  reason: 'Kept after review discussion 2026-10-19 (Daniel accepted the pushback): the node is acting out with objects;
+    recalled facts are a different node. | Daniel: REJECT as universal; retain as a route: Removing objects and
+    counting what remains is one way to solve a take-from story, not the only way.'
+- item: A32
+  node: spatial.motion.turn-flip
+  target: shapes.match
+  action: drop
+  reason: 'REJECT: A learner can discover how to turn or flip a piece through trial and error without previously
+    mastering the separate skill of shape matching.'
+- item: A33
+  node: subitizing.conceptual
+  target: subitizing.perceptual
+  action: keep
+  reason: 'KEEP: Conceptual subitizing requires recognizing the small component sets whose quantities are combined
+    into the whole.'
+- item: A34
+  node: shapes.compose.combine
+  target: shapes.compose.fill-outline
+  action: related
+  reason: 'REJECT as universal; retain as a route: Filling an outlined puzzle is a useful precursor, but shapes
+    can also be composed by exploring how pieces fit together without internal guide lines.'
+- item: A35
+  node: counting.cardinal.order-irrelevance
+  target: counting.objects
+  action: keep
+  reason: 'Kept after review discussion 2026-10-19 (Daniel accepted the pushback): order irrelevance is a claim
+    about counting and cannot be held without it. The node bundles order irrelevance with number conservation under
+    rearrangement and is to be split; conservation can be grounded by matching. | Daniel: REJECT as a concept-level
+    edge; task-scope it if needed: The assessment involves a prior count, but order irrelevance can be taught using
+    a collection with its total already known.'
+- item: A36
+  node: ordinal.position
+  target: counting.one-to-one
+  action: keep
+  reason: 'KEEP: Finding an ordinal position by counting along a line requires tracking one number word per object
+    passed.'
+- item: A37
+  node: counting.events
+  target: counting.cardinal.last-word
+  action: keep
+  reason: 'KEEP: To tell how many sounds or actions occurred, the learner must understand that the final count word
+    gives the total.'
+- item: A38
+  node: counting.cardinal.last-word
+  target: cardinality.small-number-words
+  action: keep
+  reason: 'Kept as required (Daniel, 2026-10-19): the node means the cardinal principle, and the knower-level sequence
+    precedes it. Its cover-and-ask test must be rewritten as give-a-number beyond the subset-knower range. | Daniel:
+    REJECT as universal; retain as a developmental route: Exact meanings of small number words can support cardinality
+    learning, but research does not justify treating that specific skill as a necessary prior condition for every
+    route.'
+- item: A39
+  node: shapes.recognize
+  target: shapes.name.prototype
+  action: replace
+  with: shapes.name.receptive
+  why: The test asks the child to color every triangle, which needs the word triangle understood receptively, not
+    spoken, so receptive shape names replace the spoken-naming node.
+  reason: 'REJECT as universal: Knowing names for typical shapes does not guarantee recognition of rotated or atypical
+    examples; varied labelled examples and non-examples provide another route.'
+- item: A40
+  node: comparing.count.by-counting
+  target: counting.objects
+  action: keep
+  reason: 'KEEP: The assessed procedure counts both collections and compares their resulting quantities.'
+- item: B41
+  node: addition.add-to.count-all
+  target: counting.produce-set
+  action: uphold
+  reason: 'KEEP as a conditional route: Counting out a set is required when the learner must construct the addends
+    from loose objects, but not when the sets are already supplied.'
+- item: B42
+  node: subtraction.take-away.count-remaining
+  target: counting.produce-set
+  action: uphold
+  reason: 'KEEP as a conditional route: Constructing the starting set and the amount removed can use counting out;
+    the assessed procedure does not always require the learner to perform that construction.'
+- item: B43
+  node: counting.cardinal.order-irrelevance
+  target: counting.cardinal.last-word
+  action: uphold
+  reason: 'DO NOT RESTORE as a direct edge: The relationship is at most indirect through correct counting; order
+    irrelevance should not duplicate an already represented dependency.'
+- item: B44
+  node: comparing.count.by-counting
+  target: counting.cardinal.order-irrelevance
+  action: uphold
+  reason: 'DO NOT RESTORE as mandatory: A child can count both sets and compare their totals without having generalized
+    the order-irrelevance principle; that principle is still a valuable scaffold.'
+- item: B45
+  node: partitioning.set.deal-out
+  target: comparing.count.matching
+  action: uphold
+  reason: 'DO NOT RESTORE as mandatory: Fair dealing can be carried out by giving one object to each recipient in
+    turn; one-to-one matching can justify or check equality without being a prerequisite skill.'
+- item: B46
+  node: shapes.compose.from-sides
+  target: shapes.corners.count
+  action: uphold
+  reason: 'DO NOT RESTORE: Sticks meeting end to end create corners automatically; prior corner-counting is not
+    necessary to build the assessed triangle.'
+- item: B47
+  node: shapes.decompose.simple
+  target: shapes.name.prototype
+  action: uphold
+  reason: 'DO NOT RESTORE as mandatory: Recognizing and naming typical shape classes can support the naming route,
+    but the child can demonstrate decomposition by covering the square with triangle pieces.'
+- item: C48
+  node: numeral.read
+  target: counting.sequence.recite
+  action: drop
+  reason: 'No, not as stated: Reading a written numeral requires mapping each numeral to its spoken name, including
+    zero, but does not require reciting the entire count sequence in order.'
+- item: C49
+  node: subitizing.conceptual
+  target: addition.add-to.count-all
+  action: drop
+  reason: 'No, not as a universal prerequisite: Conceptual subitizing requires composing recognized parts into a
+    whole, but count-all is only one possible route; count-on, known number bonds, and structured visual patterns
+    are alternatives.'
+- item: D50
+  node: cardinality.small-number-words
+  target: subitizing.nonverbal
+  action: related
+  reason: 'REJECT as mandatory; retain as a developmental route: Research supports mapping number words to nonverbal
+    quantity representations, but reproducing a briefly seen set without words is not established as necessary for
+    learning exact number-word meanings.'
+- item: D51
+  node: shapes.recognize
+  target: shapes.closed-boundary
+  action: require
+  reason: 'Required on every route (Daniel, 2026-10-19): refusing the open three-sided figure is knowing that a
+    shape''s boundary closes, whatever the route. | Daniel: KEEP; add shapes.closed-boundary: The assessment includes
+    an open three-sided figure, and counting straight sides alone does not establish that a shape boundary is closed.'
+- item: D52
+  node: shapes.recognize
+  target: shapes.sides.count
+  action: keep
+  reason: 'REJECT as universal; retain as a route: Counting sides can help reject malformed triangles, but recognition
+    can also develop through varied examples and non-examples without explicit side-counting.'
+- item: D53
+  node: comparing.count.perceptual
+  target: quantity.more-than
+  action: keep
+  reason: 'KEEP; add quantity.more-than: Comparing collections requires a notion of numerical "more" distinct from
+    physical size or length.'
+- item: D54
+  node: comparing.count.matching
+  target: quantity.more-than
+  action: keep
+  reason: 'KEEP; add quantity.more-than: The matching procedure explicitly interprets unmatched objects as showing
+    which collection has more.'
+- item: D55
+  node: number-composition.part-whole.inexact
+  target: quantity.more-than
+  action: require
+  reason: 'KEEP; add quantity.more-than: The target''s central claim explicitly compares the whole''s quantity with
+    the quantities of its parts.'
+- item: D56
+  node: number-composition.part-whole.inexact
+  target: comparing.count.perceptual
+  action: drop
+  reason: 'REJECT: The perceptual-comparison node is limited to very unequal sets; it is not a general prerequisite
+    for reasoning that a whole contains more than a part.'
+- item: D57
+  node: number-composition.part-whole.inexact
+  target: quantity.more-than
+  action: require
+  reason: 'KEEP, but merge with D55''s prerequisite: The same quantity.more-than concept supports the target; representing
+    it twice as separate route-specific dependencies is unnecessary.'
+- item: D58
+  node: number-composition.part-whole.inexact
+  target: comparing.count.matching
+  action: keep
+  reason: 'REJECT as mandatory; retain as a route: One-to-one matching can demonstrate that a whole exceeds a part,
+    but containment, counting, and structured visual reasoning are alternatives.'
+- item: D59
+  node: subitizing.conceptual
+  target: addition.add-to.count-all
+  action: drop
+  reason: 'REJECT as mandatory: Conceptual subitizing is intended to find a whole from recognized parts without
+    counting all; count-on, remembered combinations, and visual patterns offer alternatives.'
+- item: D60
+  node: numeral.read
+  target: counting.sequence.recite
+  action: drop
+  reason: 'REJECT: Reading a numeral requires knowing the spoken label for that numeral, not necessarily reciting
+    all number words through nineteen in order.'
+- item: D61
+  node: numeral.read
+  target: number.word.zero
+  action: replace
+  with: counting.number-words.vocabulary
+  why: The test includes 0, and reading each numeral means saying its spoken name, so the learner needs the number
+    words zero through nine as vocabulary, not as a recited sequence.
+  reason: 'KEEP; add number.word.zero: Because the assessment includes numeral 0, the spoken label zero must be
+    represented explicitly if the node is meant to cover every tested numeral.'
+- item: D62
+  node: number-composition.within-5
+  target: addition.add-to.count-all
+  action: keep
+  reason: 'REJECT as mandatory; retain as a route: Joining and counting all can teach number bonds, but the target
+    asks for quick facts without counting and can be reached through structured patterns or memorized combinations.'
+- item: D63
+  node: number-composition.within-5
+  target: subtraction.take-away.count-remaining
+  action: keep
+  reason: 'REJECT as mandatory; retain as a route: Taking away and counting what remains can reveal a missing part,
+    but reasoning about what completes a whole and recognizing number bonds are alternatives.'
+- item: D64
+  node: number-composition.within-5
+  target: subitizing.conceptual
+  action: keep
+  reason: 'KEEP as an alternative route: Conceptual subitizing can support number-composition facts by recognizing
+    small sets as structured parts of a whole.'
+- item: D65
+  node: comparing.count.small-equal
+  target: subitizing.nonverbal
+  action: keep
+  reason: 'KEEP as an alternative route: Wordless reproduction of small sets can support recognition of equal quantities
+    across different object types, though it is not the only route.'
+- item: D66
+  node: comparing.count.small-equal
+  target: subitizing.perceptual
+  action: keep
+  reason: 'KEEP as an alternative route: Naming each small set at a glance and comparing the resulting number words
+    is a credible way to recognize equal quantities.'
+- item: D67
+  node: comparing.count.by-counting
+  target: counting.successor
+  action: keep
+  reason: 'KEEP as a route, not a universal requirement: The successor principle explains why a later count denotes
+    more, while matching sets and observing leftovers can establish the comparison another way.'
+- item: D68
+  node: shapes.decompose.simple
+  target: shapes.compose.fill-outline
+  action: keep
+  reason: 'KEEP as an alternative route: Filling a shape with pieces along a drawn line can demonstrate decomposition,
+    alongside recognizing and naming the component shapes.'
+- item: D69
+  node: shapes.decompose.simple
+  target: shapes.recognize
+  action: keep
+  reason: 'KEEP as an alternative route: Shape recognition at unusual orientations is needed for the naming route,
+    but not necessarily when the child demonstrates decomposition by covering the figure with pieces.'
+- item: D70
+  node: shapes.compare.same-different
+  target: shapes.sides.count
+  action: drop
+  reason: 'REJECT: Comparing two whole shapes does not invariably require counting their sides; a learner may directly
+    overlay or visually compare corresponding parts.'
+- item: D71
+  node: shapes.compare.same-different
+  target: spatial.motion.turn-flip
+  action: task
+  reason: 'Scoped to the test (Claude, 2026-10-19, for Daniel to confirm): the statement allows any method, but
+    the test credits only overlaying the whole shapes, which needs turning or flipping one; under the test-problem
+    exception this is a task edge. | Daniel: REJECT as universal; retain for the overlay route: Turning or flipping
+    is useful when orientation prevents a direct overlay, but it is not needed for every way of comparing shapes.'
+- item: D72
+  node: shapes.compose.from-sides
+  target: comparing.size.direct
+  action: drop
+  reason: 'REJECT for the assessed task: The test asks for a triangle from three sticks; comparing lengths is not
+    a necessary prior skill for constructing that triangle.'
+- item: D73
+  node: subtraction.application.take-from-story
+  target: counting.produce-set
+  action: keep
+  reason: 'KEEP as a task-/route-scoped edge: The object-modeling route may require constructing a starting set
+    of five and removing two, but a solver using fingers or known facts need not perform the separate count-out
+    procedure.'
+- item: D74
+  node: numeral.write
+  target: graphomotor.digit-formation
+  action: task
+  reason: 'KEEP, task-scoped: Correct, unreversed digit formation is required by the writing assessment, but should
+    be distinguished from knowing which numeral represents the spoken number.'
+- item: D75
+  node: numeral.match-quantity
+  target: counting.objects
+  action: keep
+  reason: 'KEEP as an alternative route: Counting each set can identify the set matching numeral 4, but subitizing
+    the small sets provides another route.'
+- item: D76
+  node: numeral.match-quantity
+  target: subitizing.perceptual
+  action: keep
+  reason: 'KEEP as an alternative route: Naming each small set at a glance and matching its quantity to the numeral
+    is a credible non-counting route.'
+- item: D77
+  node: ordinal.position
+  target: spatial.position.relative
+  action: drop
+  reason: 'REJECT: The line''s starting end is supplied by the animals'' orientation toward the barn, so relational
+    position words need not be mastered first.'
+- item: D78
+  node: addition.application.add-to-story
+  target: counting.produce-set
+  action: keep
+  reason: 'KEEP as a task-/route-scoped edge: Constructing sets from the story''s numbers is a natural object-modeling
+    route, but prebuilt sets, fingers, or known facts can bypass it.'
+routes:
+- item: D52
+  node: shapes.recognize
+  name: visual
+  without:
+  - shapes.sides.count
+  note: Recognize from varied labelled examples and non-examples, without counting sides.
+- item: D67
+  node: comparing.count.by-counting
+  name: via-matching
+  without:
+  - counting.successor
+  add:
+  - node: comparing.count.matching
+    relation: justificatory
+    points_to: statement
+    why: The rule that the later count names the larger set can be established by matching the two sets one to one
+      and seeing which has objects left over.
+  note: Ground 'later in the count means more' by matching sets and noticing leftovers.

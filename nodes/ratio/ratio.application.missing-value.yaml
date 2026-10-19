@@ -15,7 +15,7 @@ sources:
   - c869a6c1
   - 5b9cd29a
 requires:
-- clause: standard
+- clause: via-make
   all_of:
   - node: ratio.composed-unit
     relation: definitional
@@ -29,6 +29,16 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: ratio.equivalent
+    relation: definitional
+    points_to: statement
+    why: Every method (table, tape, number line, equation) produces or uses equivalent ratios; none of
+      the proposed edges states this directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
   - node: ratio.table.make
     relation: procedural
     points_to: statement
@@ -39,7 +49,32 @@ requires:
       source: pass-P
     - kind: content
       source: critic-sonnet
-      note: 'route-only: Building a table of equivalent ratios is the table method, one of four.'
+      note: 'route-only: Building a table of equivalent ratios is the table method, one of four. | other
+        route: Double number line, tape diagram, or equation.'
+    status: disputed
+- clause: via-missing-value
+  all_of:
+  - node: ratio.composed-unit
+    relation: definitional
+    points_to: statement
+    why: Interpreting a given ratio such as 3 cups of flour for every 2 eggs uses the for-every meaning
+      of a ratio.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.equivalent
+    relation: definitional
+    points_to: statement
+    why: Every method (table, tape, number line, equation) produces or uses equivalent ratios; none of
+      the proposed edges states this directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
     status: disputed
   - node: ratio.table.missing-value
     relation: procedural
@@ -53,17 +88,8 @@ requires:
       source: pass-Q
     - kind: content
       source: critic-sonnet
-      note: 'route-only: Multiplying a complete row by a factor is the table method, one of four.'
-    status: disputed
-  - node: ratio.equivalent
-    relation: definitional
-    points_to: statement
-    why: Every method (table, tape, number line, equation) produces or uses equivalent ratios; none of
-      the proposed edges states this directly.
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing prerequisite
+      note: 'route-only: Multiplying a complete row by a factor is the table method, one of four. | other
+        route: Double number line, tape diagram, or equation.'
     status: disputed
 - clause: tape-diagram
   all_of:
@@ -79,6 +105,16 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: ratio.equivalent
+    relation: definitional
+    points_to: statement
+    why: Every method (table, tape, number line, equation) produces or uses equivalent ratios; none of
+      the proposed edges states this directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
   - node: ratio.tape-diagram
     relation: representational
     points_to: statement
@@ -108,6 +144,16 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: ratio.equivalent
+    relation: definitional
+    points_to: statement
+    why: Every method (table, tape, number line, equation) produces or uses equivalent ratios; none of
+      the proposed edges states this directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
   - node: ratio.double-number-line
     relation: representational
     points_to: statement
@@ -141,12 +187,12 @@ requires:
   - node: ratio.equivalent
     relation: definitional
     points_to: statement
-    why: 'Alternative route proposed by the critic: Equation or scaling route: find the scale factor n
-      between the given quantity and the ratio term, then multiply the other term'
+    why: Every method (table, tape, number line, equation) produces or uses equivalent ratios; none of
+      the proposed edges states this directly.
     evidence:
     - kind: content
       source: critic-sonnet
-      note: missing route
+      note: missing prerequisite
     status: disputed
   - node: multiplication.scaling.resize
     relation: definitional

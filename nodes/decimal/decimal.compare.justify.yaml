@@ -13,7 +13,7 @@ sources:
   learning_components:
   - 9bccf790
 requires:
-- clause: standard
+- clause: via-part-whole
   all_of:
   - node: decimal.hundredths.notation
     relation: representational
@@ -41,30 +41,6 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: fraction.non-unit.part-whole
-    relation: representational
-    points_to: statement
-    why: A hundredths grid shows a decimal as a number of the 100 equal parts of one whole.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Seeing a decimal as a number of the 100 parts is the grid route; the number-line
-        route counts hundredths along a line instead.'
-    status: disputed
-  - node: decimal.number-line
-    relation: representational
-    points_to: statement
-    why: The model can be a number line on which each decimal is located as a point.
-    evidence:
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The statement allows a hundredths grid or a number line; the number-line model
-        is one of them.'
-    status: disputed
   - node: fraction.tenths-to-hundredths
     relation: justificatory
     points_to: statement
@@ -87,6 +63,80 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: representational
+    points_to: statement
+    why: A hundredths grid shows a decimal as a number of the 100 equal parts of one whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Seeing a decimal as a number of the 100 parts is the grid route; the number-line
+        route counts hundredths along a line instead. | other route: Number line through decimal.number-line.'
+    status: disputed
+- clause: via-number-line
+  all_of:
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: statement
+    why: The model must show the decimals read as numbers of tenths and hundredths of one whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.compare.same-whole
+    relation: definitional
+    points_to: statement
+    why: The grid or number line must show both decimals on the same whole to compare them.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.tenths-to-hundredths
+    relation: justificatory
+    points_to: statement
+    why: Showing 0.5 on a hundredths grid needs 5 tenths seen as 50 hundredths.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.compare.same-denominator
+    relation: definitional
+    points_to: statement
+    why: Judging which decimal covers more of the grid is comparing counts of hundredths.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.number-line
+    relation: representational
+    points_to: statement
+    why: The model can be a number line on which each decimal is located as a point.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows a hundredths grid or a number line; the number-line model
+        is one of them. | other route: Hundredths grid, using decimal.hundredths.notation and fraction.non-unit.part-whole.'
+    status: disputed
 - clause: critic-route-1
   note: Direct visual comparison by overlaying or aligning the two shadings on the same grid or line,
     concluding from which covers more.

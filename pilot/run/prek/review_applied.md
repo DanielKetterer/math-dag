@@ -1,0 +1,34 @@
+# Review verdicts applied by merge_run
+
+- D50 cardinality.small-number-words -> subitizing.nonverbal: moved to related (common_path)
+- cardinality.small-number-words: now a root (every prerequisite dropped or moved in review)
+- C48 numeral.read -> counting.sequence.recite: dropped
+- D61 numeral.read -> number.word.zero: replaced by counting.number-words.vocabulary
+- D74 numeral.write -> graphomotor.digit-formation: task
+- A7 numeral.informal-record -> counting.one-to-one: dropped
+- C49 subitizing.conceptual -> addition.add-to.count-all: dropped
+- D67 comparing.count.by-counting: added route via-matching (without ['counting.successor'], plus ['comparing.count.matching'])
+- D77 ordinal.position -> spatial.position.relative: dropped
+- D55 number-composition.part-whole.inexact -> quantity.more-than: required on every route
+- D56 number-composition.part-whole.inexact -> comparing.count.perceptual: dropped
+- D57 number-composition.part-whole.inexact -> quantity.more-than: required on every route
+- number-composition.part-whole.inexact: route via-matching removed (superset of another route); moved to related: ['comparing.count.matching']
+- number-composition.part-whole.inexact: only route left, renamed via-perceptual -> standard
+- A17 shapes.recognize -> shapes.match: moved to related (common_path)
+- A39 shapes.recognize -> shapes.name.prototype: replaced by shapes.name.receptive
+- D51 shapes.recognize -> shapes.closed-boundary: required on every route
+- D52 shapes.recognize: added route visual (without ['shapes.sides.count'], plus [])
+- shapes.recognize: route via-count removed (superset of another route); moved to related: ['shapes.sides.count']
+- shapes.recognize: only route left, renamed visual -> standard
+- D70 shapes.compare.same-different -> shapes.sides.count: dropped
+- D71 shapes.compare.same-different -> spatial.motion.turn-flip: task
+- shapes.compare.same-different: only route left, renamed via-turn-flip -> standard
+- A15 shapes.compose.from-sides -> shapes.sides.count: dropped
+- A25 shapes.compose.from-sides -> shapes.name.prototype: replaced by shapes.name.receptive
+- D72 shapes.compose.from-sides -> comparing.size.direct: dropped
+- A1 shapes.compose.fill-outline -> spatial.motion.turn-flip: task
+- A34 shapes.compose.combine -> shapes.compose.fill-outline: moved to related (common_path)
+- A32 spatial.motion.turn-flip -> shapes.match: dropped
+- spatial.motion.turn-flip: now a root (every prerequisite dropped or moved in review)
+- A9 classifying.sort.given-attribute -> classifying.attribute.identify: dropped
+- classifying.sort.given-attribute: now a root (every prerequisite dropped or moved in review)

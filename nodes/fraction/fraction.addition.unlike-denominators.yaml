@@ -17,8 +17,36 @@ sources:
   learning_components:
   - d022d8d2
 requires:
-- clause: standard
+- clause: via-whole-number
   all_of:
+  - node: fraction.equivalent.multiply-principle.generate
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 rewrites a/b and c/d as (a x (n/b))/n and (c x (n/d))/n, which generates equivalent fractions
+      with denominator n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.like-denominators
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds the two numerators and keeps the shared denominator n, the like-denominator addition
+      procedure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
   - node: factors-multiples.whole-number
     relation: procedural
     points_to: procedure.1
@@ -31,8 +59,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: The procedure explicitly allows n = b x d, which needs no analysis of factors
-        or multiples; the factors-and-multiples concept is only needed to choose a smaller common multiple.'
+        or multiples; the factors-and-multiples concept is only needed to choose a smaller common multiple.
+        | other route: Always take the common multiple n = b x d.'
     status: disputed
+- clause: via-multi-digit
+  all_of:
   - node: fraction.equivalent.multiply-principle.generate
     relation: procedural
     points_to: procedure.2
@@ -73,7 +104,8 @@ requires:
       source: critic-sonnet
       note: 'route-only: With n = b x d (which the statement says always works) the multipliers n/b and
         n/d are just d and b, so no division is performed. Multi-digit division is also far heavier than
-        needed for small denominators.'
+        needed for small denominators. | other route: Use n = b x d, so the multipliers are d and b with
+        no division.'
     status: disputed
 - clause: critic-route-1
   note: Take n = b x d as the common multiple, so the multipliers are d and b and no division or multiples

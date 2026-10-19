@@ -58,18 +58,9 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: fraction.non-unit.part-whole
-    relation: definitional
-    points_to: statement
-    why: Each fraction is a parts of one common size 1/b, so equal denominators leave only the number
-      of parts to compare.
-    evidence:
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The target is measure facet. The idea that a fractions are a copies of one common
-        size 1/b is already given by fraction.non-unit.number-line (a lengths of 1/b from 0); the part-whole
-        reading is the same idea in an area model.'
-    status: disputed
+related:
+- node: fraction.non-unit.part-whole
+  relation: common_path
+  note: 'Common path, not required: route ''via-part-whole'' needed everything another route needs and
+    more, so it was removed in review.'
 status: proposed

@@ -13,8 +13,19 @@ sources:
   - 5.NF.B.7.b
   learning_components: []
 requires:
-- clause: standard
+- clause: via-rule
   all_of:
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: The explanation reads n divided by 1/b as the number that multiplied by 1/b gives n.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
   - node: fraction.multiply-whole.rule
     relation: justificatory
     points_to: statement
@@ -27,8 +38,22 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: For a unit fraction the step (n x b) x (1/b) = (n x b)/b is the definition of
-        (n x b)/b as n x b copies of 1/b; the general rule is more than required.'
+        (n x b)/b as n x b copies of 1/b; the general rule is more than required. | other route: Fraction
+        as a whole-number multiple of a unit fraction (fraction.multiple-of-unit).'
     status: disputed
+- clause: via-symbolic
+  all_of:
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: The explanation reads n divided by 1/b as the number that multiplied by 1/b gives n.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
   - node: fraction.quotient.symbolic
     relation: justificatory
     points_to: statement
@@ -41,19 +66,9 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: The step (n x b)/b = n can be justified by quotient reading but equally by equivalent
-        fractions on n = n/1 or by b copies of 1/b making a whole.'
+        fractions on n = n/1 or by b copies of 1/b making a whole. | other route: Whole number as fraction
+        n/1 with the multiplication principle (fraction.whole-number.as-fraction with fraction.equivalent.multiply-principle).'
     status: disputed
-  - node: division.unknown-factor.meaning
-    relation: definitional
-    points_to: statement
-    why: The explanation reads n divided by 1/b as the number that multiplied by 1/b gives n.
-    evidence:
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
 related:
 - node: division.unknown-factor.rewrite
   relation: same_idea_different_form

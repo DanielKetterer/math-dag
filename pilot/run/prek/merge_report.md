@@ -4,13 +4,22 @@
 - Example files superseded and removed: none
 - Union edges with no critic verdict: 0
 - necessary: 50
+- review: keep: 47
 - missing-prerequisite added: 12
 - route-only: 11
 - route-only split into own clause: 11
 - alt route from passes: 11
+- review: drop: 10
+- review: critic drop upheld: 7
 - related: 6
 - scaffold: 5
+- review: related: 3
+- review: replace: 3
 - alt route from critic: 3
+- review: task: 3
+- review: require: 3
 - indirect: 2
 - undecided: 2
+- review: route added: 2
+- review: dominated route removed: 2
 - task-only: 1

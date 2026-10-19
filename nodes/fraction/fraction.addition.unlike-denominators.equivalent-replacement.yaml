@@ -16,7 +16,7 @@ sources:
   - d022d8d2
   - 089c550e
 requires:
-- clause: standard
+- clause: via-as-number
   all_of:
   - node: fraction.equivalent.multiply-principle
     relation: definitional
@@ -32,19 +32,6 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: fraction.as-number
-    relation: justificatory
-    points_to: statement
-    why: The sum stays the same because each fraction is a number, and replacing a number by an equal
-      number cannot change a sum or difference.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The claim can be grounded without treating fractions as numbers: a replacement
-        of the same amount of the same whole leaves the total of the amounts unchanged.'
-    status: disputed
   - node: fraction.addition.joining
     relation: definitional
     points_to: statement
@@ -86,7 +73,86 @@ requires:
       source: critic-sonnet
       note: 'task-only: Recognizing which specific rewrites are equivalent is demanded by the true/false
         items, but the concept (replacement preserves the value) does not require a recognition skill.'
+    - kind: review
+      source: DK
+      note: 'A24 task: Keep (task-only) - The assessment requires identifying equivalent fractions.'
+    status: reviewed
+  - node: fraction.as-number
+    relation: justificatory
+    points_to: statement
+    why: The sum stays the same because each fraction is a number, and replacing a number by an equal
+      number cannot change a sum or difference.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The claim can be grounded without treating fractions as numbers: a replacement
+        of the same amount of the same whole leaves the total of the amounts unchanged. | other route:
+        Equivalent fractions as the same amount of the same whole (fraction.equivalent.same-size) plus
+        joining, i.e. a part-whole argument.'
+    status: disputed
+- clause: via-same-size
+  all_of:
+  - node: fraction.equivalent.multiply-principle
+    relation: definitional
+    points_to: statement
+    why: The statement rewrites a/b and c/d over a common denominator, which is done by the multiplication
+      principle for equivalent fractions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
     status: proposed
+  - node: fraction.addition.joining
+    relation: definitional
+    points_to: statement
+    why: The statement is about the value of a sum, which means the total from joining parts of the same
+      whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.separating
+    relation: definitional
+    points_to: statement
+    why: The statement also covers differences, which means the amount left after separating parts of
+      the same whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.multiply-principle.recognize
+    relation: procedural
+    points_to: assess
+    why: Deciding that 8/12 and 15/12 are equivalent to 2/3 and 5/4, and that 2/12 is not equivalent to
+      2/3, requires recognizing equivalent fractions.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Recognizing which specific rewrites are equivalent is demanded by the true/false
+        items, but the concept (replacement preserves the value) does not require a recognition skill.'
+    - kind: review
+      source: DK
+      note: 'A24 task: Keep (task-only) - The assessment requires identifying equivalent fractions.'
+    status: reviewed
   - node: fraction.equivalent.same-size
     relation: definitional
     points_to: statement
@@ -98,7 +164,8 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Equal amount of the same whole is one way to ground ''equivalent''; it is not
-        the only one.'
+        the only one. | other route: Equivalent fractions as the same point/number (fraction.equivalent.same-point
+        with fraction.as-number), or equivalence taken from the multiplication principle.'
     status: disputed
 - clause: critic-route-1
   note: 'Two grounding routes for the same claim: (a) part-whole, using same-size equivalence plus joining/separating;
@@ -160,7 +227,10 @@ requires:
       source: critic-sonnet
       note: 'task-only: Recognizing which specific rewrites are equivalent is demanded by the true/false
         items, but the concept (replacement preserves the value) does not require a recognition skill.'
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A24 task: Keep (task-only) - The assessment requires identifying equivalent fractions.'
+    status: reviewed
   - node: fraction.equivalent.same-size
     relation: definitional
     points_to: statement

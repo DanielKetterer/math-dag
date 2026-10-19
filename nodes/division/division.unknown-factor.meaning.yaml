@@ -12,7 +12,7 @@ sources:
   - 3.OA.B.6
   learning_components: []
 requires:
-- clause: standard
+- clause: via-meaning
   all_of:
   - node: multiplication.equal-groups.meaning
     relation: definitional
@@ -26,8 +26,13 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: The multiplication equation b x c = a only needs a multiplication meaning; the
-        array/area meaning serves equally.'
-    status: disputed
+        array/area meaning serves equally. | other route: Read b x c = a as an array with b rows and c
+        columns containing a objects.'
+    - kind: review
+      source: DK
+      note: 'D94 keep: Route-only - The unknown-factor interpretation can be grounded by an array rather
+        than equal-groups meaning.'
+    status: reviewed
   - node: division.partitive.meaning
     relation: justificatory
     points_to: statement
@@ -41,8 +46,14 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Same as the measurement-meaning edge: either division meaning (or an array) can
-        ground the unknown-factor reading. At least one of the two is needed; an OR-clause fits.'
-    status: disputed
+        ground the unknown-factor reading. At least one of the two is needed; an OR-clause fits. | other
+        route: Measurement meaning (division.measurement.meaning): c groups of b make a, or a rows-by-columns
+        array with one dimension unknown.'
+    - kind: review
+      source: DK
+      note: 'D95 keep: Route-only - The share-size and measurement interpretations are alternative routes,
+        so both need not be mandatory.'
+    status: reviewed
 - clause: measurement
   all_of:
   - node: division.measurement.meaning
@@ -60,7 +71,10 @@ requires:
       note: 'route-only: Alternative sources for the multiplication/division link exist: the partitive
         meaning or an array. At least one division meaning is needed, so an OR-clause {division.measurement.meaning,
         division.partitive.meaning} fits.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D96 keep: Route-only - Either division meaning can ground the unknown-factor interpretation.'
+    status: reviewed
   - node: multiplication.properties
     relation: justificatory
     points_to: statement
@@ -75,7 +89,11 @@ requires:
       note: 'route-only: Commutativity is needed only on the grouping route (c groups of b gives c x b).
         The partitive route gives b groups of c, which is b x c directly, and the fact can be stated in
         either factor order.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D97 keep: Route-only - Commutativity is needed for the measurement route, not for the partitive
+        route.'
+    status: reviewed
 - clause: critic-route-1
   note: 'Array route: read b x c = a as an array with b rows and c columns and a total of a, with one
     dimension unknown.'
@@ -89,5 +107,9 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing route
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D98 keep: Keep/add alternative route - An array with one unknown dimension gives another
+        route to the unknown-factor interpretation.'
+    status: reviewed
 status: proposed

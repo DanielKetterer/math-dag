@@ -12,8 +12,17 @@ sources:
   learning_components:
   - 35bc1efc
 requires:
-- clause: standard
+- clause: via-equal-sharing
   all_of:
+  - node: fraction.as-number
+    relation: definitional
+    points_to: statement
+    why: Equating the quotient of two whole numbers with a fraction presupposes that a fraction is a number.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
   - node: fraction.quotient.equal-sharing
     relation: justificatory
     points_to: statement
@@ -25,7 +34,19 @@ requires:
       source: pass-Q
     - kind: content
       source: critic-sonnet
-      note: 'route-only: The equal-sharing result is the sharing route''s grounding of the statement.'
+      note: 'route-only: The equal-sharing result is the sharing route''s grounding of the statement.
+        | other route: Unknown-factor route: division.unknown-factor.meaning with fraction.multiply-whole.rule.'
+    status: disputed
+- clause: via-meaning
+  all_of:
+  - node: fraction.as-number
+    relation: definitional
+    points_to: statement
+    why: Equating the quotient of two whole numbers with a fraction presupposes that a fraction is a number.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
     status: disputed
   - node: division.partitive.meaning
     relation: definitional
@@ -37,8 +58,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: The meaning of a divided by b can come from sharing or from the unknown-factor
-        view; sharing is only one of the two grounding routes.'
+        view; sharing is only one of the two grounding routes. | other route: Unknown-factor route: division.unknown-factor.meaning
+        with fraction.multiply-whole.rule (b x (a/b) = a).'
     status: disputed
+- clause: unknown-factor
+  all_of:
   - node: fraction.as-number
     relation: definitional
     points_to: statement
@@ -48,8 +72,6 @@ requires:
       source: critic-sonnet
       note: missing prerequisite
     status: disputed
-- clause: unknown-factor
-  all_of:
   - node: division.unknown-factor.meaning
     relation: definitional
     points_to: statement

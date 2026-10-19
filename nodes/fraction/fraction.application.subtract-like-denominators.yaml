@@ -14,7 +14,7 @@ sources:
   - 80c88178
   - 63e76820
 requires:
-- clause: standard
+- clause: via-model
   all_of:
   - node: fraction.subtraction.separating
     relation: definitional
@@ -43,8 +43,24 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: The statement allows ''a model or equation''; the model is one way to find the
-        difference.'
+        difference. | other route: Write the equation and find the difference with fraction.subtraction.like-denominators.'
     status: disputed
+- clause: via-number-line
+  all_of:
+  - node: fraction.subtraction.separating
+    relation: definitional
+    points_to: statement
+    why: The story separates one fractional amount from another of the same whole, which is the situation
+      that subtraction of fractions describes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
   - node: subtraction.comparison.number-line
     relation: definitional
     points_to: statement
@@ -55,7 +71,9 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Comparison stories can be represented with aligned strips or bars showing the
-        gap; the number-line distance is one representation, and the assessment uses a separating story.'
+        gap; the number-line distance is one representation, and the assessment uses a separating story.
+        | other route: Aligned fraction strips or tape diagrams with the difference shown as the gap,
+        using comparing.size.direct and fraction.subtraction.separating.'
     status: disputed
 - clause: critic-route-1
   note: Write an equation for the story and compute with the symbolic like-denominator rule; comparison

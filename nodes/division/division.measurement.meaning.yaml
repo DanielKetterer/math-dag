@@ -14,23 +14,8 @@ sources:
   - 6d81db77
   - '30398626'
 requires:
-- clause: standard
+- clause: via-meaning
   all_of:
-  - node: multiplication.equal-groups.meaning
-    relation: definitional
-    points_to: statement
-    why: The groups of b objects are equal groups, so the quotient is the number of such equal groups
-      that total a.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The measurement meaning can be learned by repeatedly taking groups of b from
-        a and counting the groups (repeated subtraction), without a multiplication meaning.'
-    status: disputed
   - node: counting.objects
     relation: definitional
     points_to: statement
@@ -44,6 +29,26 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: The groups of b objects are equal groups, so the quotient is the number of such equal groups
+      that total a.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The measurement meaning can be learned by repeatedly taking groups of b from
+        a and counting the groups (repeated subtraction), without a multiplication meaning. | other route:
+        Repeatedly remove groups of b from the a objects and count how many groups are formed.'
+    - kind: review
+      source: DK
+      note: 'D89 keep: Route-only - Repeated removal can establish the number of equal groups without
+        multiplication as equal groups.'
+    status: reviewed
 - clause: critic-route-1
   note: 'Repeated-removal route: take groups of b from a until none remain and count the groups, with
     no multiplication.'
@@ -70,5 +75,9 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing route
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D90 keep: Keep/add alternative route - Repeated subtraction is a credible route to the number
+        of groups.'
+    status: reviewed
 status: proposed

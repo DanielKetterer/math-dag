@@ -33,7 +33,7 @@ requires:
     status: proposed
   - node: spatial.motion.turn-flip
     relation: procedural
-    points_to: statement
+    points_to: assess
     why: Placing the chosen piece in its region requires turning, sliding or flipping it until it fits,
       as the statement says.
     evidence:
@@ -44,5 +44,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A1 task: KEEP, task-scoped: The assessed puzzle may require turning a piece, but that does
+        not make turning a universal prerequisite for filling every outlined puzzle.'
+    status: reviewed
+    scope: task
 status: proposed

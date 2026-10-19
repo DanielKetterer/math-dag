@@ -14,7 +14,7 @@ sources:
   learning_components:
   - 027af5d2
 requires:
-- clause: standard
+- clause: via-any-shape
   all_of:
   - node: fraction.non-unit.part-whole
     relation: definitional
@@ -27,20 +27,6 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: partitioning.equal-area.any-shape
-    relation: representational
-    points_to: statement
-    why: Partitioning the amount c/d into b equal parts means splitting a shaded region of a model into
-      equal-area parts.
-    evidence:
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Equal-area partition of an arbitrary shape is only needed if the model is an
-        irregular area; the quantity can be modeled as a rectangular strip or number-line segment partitioned
-        into equal parts.'
-    status: disputed
   - node: fraction.multiply-whole.model
     relation: procedural
     points_to: assess
@@ -63,6 +49,21 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
+    status: disputed
+  - node: partitioning.equal-area.any-shape
+    relation: representational
+    points_to: statement
+    why: Partitioning the amount c/d into b equal parts means splitting a shaded region of a model into
+      equal-area parts.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Equal-area partition of an arbitrary shape is only needed if the model is an
+        irregular area; the quantity can be modeled as a rectangular strip or number-line segment partitioned
+        into equal parts. | other route: Model the quantity as a rectangular strip or segment and partition
+        it with partitioning.equal-shares.area.'
     status: disputed
 related:
 - node: fraction.multiplication.parts-of-partition.whole-number

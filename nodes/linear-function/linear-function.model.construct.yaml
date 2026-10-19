@@ -19,7 +19,7 @@ sources:
   learning_components:
   - dab9e9b0
 requires:
-- clause: standard
+- clause: via-write
   all_of:
   - node: functions.definition
     relation: definitional
@@ -35,19 +35,11 @@ requires:
       source: critic-sonnet
       note: 'undecided: Step 1 names input and output quantities, but it is unclear whether the formal
         function definition (rather than informal dependence) is needed.'
-    status: disputed
-  - node: linear-function.line.y-mx-plus-b.write
-    relation: representational
-    points_to: statement
-    why: The model is written in the form y = mx + b, the same equation form used for a line.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Building y = mx + b straight from a context (rate times input plus initial value)
-        does not need the line-geometry derivation.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'C70 keep: Yes - The definition of a function as an input-output rule directly supports constructing
+        a function model.'
+    status: reviewed
   - node: expressions.variables
     relation: procedural
     points_to: procedure.1
@@ -88,9 +80,41 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: linear-function.line.y-mx-plus-b.write
+    relation: representational
+    points_to: statement
+    why: The model is written in the form y = mx + b, the same equation form used for a line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Building y = mx + b straight from a context (rate times input plus initial value)
+        does not need the line-geometry derivation. | other route: Write rate x input + initial value
+        from the context (proportional-relationship.equation.write, expressions.variables).'
+    status: disputed
 - clause: critic-route-1
   note: Build y = mx + b from the context as rate x input + initial value, extending y = kx
   all_of:
+  - node: functions.definition
+    relation: definitional
+    points_to: statement
+    why: A linear model assigns one output y to each input x, which is the function idea the statement
+      uses.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Step 1 names input and output quantities, but it is unclear whether the formal
+        function definition (rather than informal dependence) is needed.'
+    - kind: review
+      source: DK
+      note: 'C70 keep: Yes - The definition of a function as an input-output rule directly supports constructing
+        a function model.'
+    status: reviewed
   - node: expressions.variables
     relation: procedural
     points_to: procedure.1

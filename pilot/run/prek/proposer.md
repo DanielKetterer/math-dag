@@ -27,6 +27,8 @@ enough; every edge inside a route is required for that route.
   versus skip counting, for example) are not different routes.
 - **List direct prerequisites only.** If A needs B and B needs C, A lists B,
   not C, unless A's own statement, procedure, or test problem uses C directly.
+- **Simplest form** is its own node. List it only as a `task` edge, and only
+  when the test problem asks for simplest form.
 - A node with no prerequisites among the allowed targets: `"routes": []` and a
   `"root_reason"`.
 

@@ -15,7 +15,7 @@ sources:
   - b15981ec
   - 133abb93
 requires:
-- clause: standard
+- clause: via-symbolic
   all_of:
   - node: division.fractions.unknown-factor
     relation: representational
@@ -31,34 +31,6 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: fraction.division.symbolic
-    relation: procedural
-    points_to: statement
-    why: Solving the equation (a/b) divided by (c/d) = ? is carried out by the symbolic fraction division
-      rule.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The equation can be solved by the symbolic rule, but also by reasoning about
-        the unknown factor or by the visual model.'
-    status: disputed
-  - node: fraction.application.multiplication-in-context.equation
-    relation: representational
-    points_to: statement
-    why: Writing an equation that relates two known fractions by a product, such as length times width
-      equals area, is the multiplication-story modeling skill.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Writing (c/d) x ? = a/b from a product story is one route; the other writes (a/b)
-        divided by (c/d) = ? directly from the grouping or sharing meaning.'
-    status: disputed
   - node: multiplication.array-area.fraction-sides.multiply
     relation: definitional
     points_to: assess
@@ -75,4 +47,66 @@ requires:
       note: 'task-only: Area = length x width for the strip of land is needed by the test problem''s context,
         not by the idea of modeling a division of fractions with an equation.'
     status: proposed
+  - node: fraction.division.symbolic
+    relation: procedural
+    points_to: statement
+    why: Solving the equation (a/b) divided by (c/d) = ? is carried out by the symbolic fraction division
+      rule.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The equation can be solved by the symbolic rule, but also by reasoning about
+        the unknown factor or by the visual model. | other route: Solve for the unknown factor by the
+        model or by inverse reasoning on the equation (division.fractions.measurement.model, division.fractions.unknown-factor).'
+    status: disputed
+- clause: via-equation
+  all_of:
+  - node: division.fractions.unknown-factor
+    relation: representational
+    points_to: statement
+    why: The learner writes (c/d) x ? = a/b, the unknown-factor equation that defines the quotient of
+      two fractions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.array-area.fraction-sides.multiply
+    relation: definitional
+    points_to: assess
+    why: The test problem uses area equal to length times width for a rectangle with fractional sides
+      to set up the equation.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Area = length x width for the strip of land is needed by the test problem''s context,
+        not by the idea of modeling a division of fractions with an equation.'
+    status: proposed
+  - node: fraction.application.multiplication-in-context.equation
+    relation: representational
+    points_to: statement
+    why: Writing an equation that relates two known fractions by a product, such as length times width
+      equals area, is the multiplication-story modeling skill.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Writing (c/d) x ? = a/b from a product story is one route; the other writes (a/b)
+        divided by (c/d) = ? directly from the grouping or sharing meaning. | other route: Model the story
+        as a division from the meaning of fraction division (division.fractions.measurement or division.fractions.partitive).'
+    status: disputed
 status: proposed

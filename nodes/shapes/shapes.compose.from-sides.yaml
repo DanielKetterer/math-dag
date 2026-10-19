@@ -18,11 +18,11 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: shapes.sides.count
+  - node: shapes.name.receptive
     relation: definitional
     points_to: statement
-    why: Each stick stands for one side of the shape, so the learner must know a shape's sides are straight
-      segments and how many it has.
+    why: The test says 'Make a triangle', so the learner must know which figure the word triangle names,
+      at least receptively, to aim the build at that shape.
     evidence:
     - kind: content
       source: pass-P
@@ -31,29 +31,9 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
-  - node: shapes.name.prototype
-    relation: definitional
-    points_to: statement
-    why: The learner must know what a triangle, square or circle looks like to judge that the built figure
-      looks like the named goal shape.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
-  - node: comparing.size.direct
-    relation: definitional
-    points_to: statement
-    why: If squares and rectangles are in scope, sticks must be chosen to be equal or paired lengths;
-      the triangle test does not need it.
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing prerequisite
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'A25 replace: REJECT: A child can construct a requested shape using a model or receptive understanding
+        of its name without first being able to name typical circles, squares, and triangles.'
+    status: reviewed
 status: proposed

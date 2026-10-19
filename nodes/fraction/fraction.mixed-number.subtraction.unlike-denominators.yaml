@@ -19,19 +19,8 @@ sources:
   learning_components:
   - 3f8f80e7
 requires:
-- clause: standard
+- clause: via-whole-number
   all_of:
-  - node: factors-multiples.whole-number
-    relation: procedural
-    points_to: procedure.1
-    why: Step 1 rewrites the fraction parts over a common multiple n of their two denominators.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Using n = b x d needs no factors-and-multiples analysis.'
-    status: disputed
   - node: fraction.mixed-number.subtract
     relation: procedural
     points_to: procedure.2
@@ -68,6 +57,18 @@ requires:
       source: critic-sonnet
       note: missing prerequisite
     status: disputed
+  - node: factors-multiples.whole-number
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites the fraction parts over a common multiple n of their two denominators.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Using n = b x d needs no factors-and-multiples analysis. | other route: Take
+        the common denominator to be the product of the two denominators.'
+    status: disputed
 - clause: critic-route-1
   note: Convert both mixed numbers to improper fractions, subtract with unlike denominators, and convert
     back. Arguably a different node because the statement specifies regrouping from the whole part.
@@ -98,6 +99,16 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: fraction.compare.same-denominator
+    relation: definitional
+    points_to: statement
+    why: Step 2 only needs a numerator comparison once both fraction parts share denominator n; this is
+      the real prerequisite behind the proposed common-denominator comparison edge.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
   - node: fraction.mixed-number.to-fraction
     relation: definitional
     points_to: statement

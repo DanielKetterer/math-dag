@@ -1,0 +1,645 @@
+# Daniel's review verdicts, applied by tools/merge_run.py after the critic.
+# They outrank every model pass. Actions: keep, drop, task, related, require,
+# replace, restore, uphold (critic drop confirmed). routes: extra OR clauses =
+# a copy of the node's first route minus `without` plus `add`.
+reviewer: DK
+review: pilot/run/REVIEW.md, answers in review-daniel.md (2026-10-17)
+rename: {}
+edges:
+- item: A1
+  node: ratio.tape-diagram
+  target: addition.whole-number
+  action: keep
+  reason: Keep - A known total requires adding the units in both tapes.
+- item: A2
+  node: fraction.application.multiplication-in-context.equation
+  target: fraction.mixed-number.multiplication
+  action: keep
+  reason: Keep - The stated assessment includes mixed-number multiplication.
+- item: A3
+  node: fraction.addition.like-denominators
+  target: addition.whole-number
+  action: keep
+  reason: Keep - The procedure adds the whole-number numerators.
+- item: A4
+  node: fraction.estimate.benchmark.sum
+  target: addition.whole-number
+  action: keep
+  reason: Keep - Some benchmark estimates require whole-number addition.
+- item: A5
+  node: fraction.multiplication.parts-of-partition.whole-number
+  target: fraction.multiply-whole.model
+  action: task
+  reason: Keep (task-only) - Computing the product in the assessment requires the additional multiplication skill.
+- item: A6
+  node: fraction.compare.same-numerator
+  target: comparing.whole-numbers.symbols
+  action: keep
+  reason: Keep - The comparison rule depends on comparing the denominators as whole numbers.
+- item: A7
+  node: fraction.application.multiply-whole.model
+  target: multiplication.equal-groups.situation-to-expression
+  action: drop
+  reason: Wrong - Drawing equal fractional groups does not require first writing a multiplication expression.
+- item: A8
+  node: fraction.mixed-number.multiplication
+  target: fraction.equivalent.multiply-principle.recognize
+  action: drop
+  reason: 'Dropped (handoff 2026-10-17): the node says ''if wanted'' and the test does not ask for simplest form.
+    | Daniel: Unsure/conditional - Simplification requires equivalent-fraction knowledge, but the stated procedure
+    does not require simplifying.'
+- item: A9
+  node: decimal.hundredths.notation
+  target: place-value.base-ten
+  action: keep
+  reason: Keep - Hundredths notation depends on base-ten place value.
+- item: A10
+  node: fraction.compare.record-symbols
+  target: comparing.whole-numbers.symbols
+  action: keep
+  reason: Keep - The assessment uses comparison symbols already learned with whole numbers.
+- item: A11
+  node: ratio.unit-rate.fractions
+  target: ratio.unit-rate
+  action: keep
+  reason: Keep - The target explicitly computes a unit rate from a ratio.
+- item: A12
+  node: partitioning.equal-shares.whole-as-shares
+  target: partitioning.equal-shares.name
+  action: task
+  reason: Keep (task-only) - The assessment asks the learner to name the shares as fourths.
+- item: A13
+  node: fraction.non-unit.part-whole
+  target: fraction.unit.part-whole
+  action: keep
+  reason: Keep - The non-unit fraction definition uses the meaning of a unit fraction.
+- item: A14
+  node: fraction.subtraction.unlike-denominators
+  target: fraction.equivalent.multiply-principle.generate
+  action: keep
+  reason: Keep - The procedure explicitly generates equivalent fractions.
+- item: A15
+  node: division.measurement.situation-to-expression
+  target: division.measurement.meaning
+  action: keep
+  reason: Keep - The situation-to-expression representation uses the grouping meaning of division.
+- item: A16
+  node: fraction.equivalent.simple.generate
+  target: counting.objects
+  action: keep
+  reason: Keep - The model procedure requires counting the new shaded and total parts.
+- item: A17
+  node: linear-function.model.initial.from-two-values
+  target: data.graphs.read
+  action: keep
+  reason: Keep - Reading the initial value from a table or graph requires reading its values.
+- item: A18
+  node: fraction.mixed-number.decompose.justify
+  target: fraction.mixed-number.decompose.equation
+  action: drop
+  reason: Wrong - Justifying a supplied decomposition does not require prior ability to record the equation.
+- item: A19
+  node: linear-function.line.y-mx-plus-b.derive
+  target: slope.constant-on-line
+  action: keep
+  reason: Keep - The derivation relies on slope having the same value between points on a line.
+- item: A20
+  node: proportional-relationship.test.table
+  target: ratio.unit-rate.find
+  action: keep
+  reason: Keep - The procedure tests proportionality by comparing unit rates.
+- item: A21
+  node: ratio.equivalent
+  target: ratio.composed-unit
+  action: keep
+  reason: Keep - Equivalent ratios depend on understanding the underlying ratio relationship.
+- item: A22
+  node: division.unit-fraction-by-whole.interpret
+  target: multiplication.equal-groups.meaning
+  action: keep
+  reason: Keep - The stated explanation counts b groups of n pieces.
+- item: A23
+  node: division.whole-by-unit-fraction.equation
+  target: division.whole-by-unit-fraction.interpret
+  action: keep
+  reason: Keep - The equation records how many unit-fraction parts fit into a whole number.
+- item: A24
+  node: fraction.addition.unlike-denominators.equivalent-replacement
+  target: fraction.equivalent.multiply-principle.recognize
+  action: task
+  reason: Keep (task-only) - The assessment requires identifying equivalent fractions.
+- item: A25
+  node: fraction.compare.benchmark
+  target: comparing.whole-numbers.symbols
+  action: keep
+  reason: Keep - The specified benchmark test compares whole-number quantities.
+- item: A26
+  node: division.fractions.measurement
+  target: division.measurement.meaning
+  action: keep
+  reason: Keep - The fractional quotient extends the meaning of the quotient as a number of groups.
+- item: A27
+  node: fraction.unit.number-line
+  target: number-line.whole-number-lengths
+  action: keep
+  reason: Keep - The procedure uses the unit length between 0 and 1.
+- item: A28
+  node: fraction.equivalent.multiply-principle.explain
+  target: multiplication.equal-groups.meaning
+  action: keep
+  reason: Keep - The proposed explanation counts equal groups of smaller pieces.
+- item: A29
+  node: fraction.mixed-number.add
+  target: fraction.mixed-number.meaning
+  action: keep
+  reason: Keep - The final step uses the meaning of a mixed number.
+- item: A30
+  node: proportional-relationship.constant.graph
+  target: ratio.unit-rate.find
+  action: keep
+  reason: Keep - The procedure computes the unit rate y/x from a graph.
+- item: A31
+  node: fraction.whole-number.as-fraction
+  target: fraction.as-number
+  action: keep
+  reason: Keep - The statement explicitly treats fractions as numbers with positions.
+- item: A32
+  node: slope.unit-rate
+  target: proportional-relationship.constant
+  action: keep
+  reason: Keep - The slope statement directly uses the constant of proportionality.
+- item: A33
+  node: fraction.estimate.benchmark.difference
+  target: subtraction.whole-number
+  action: keep
+  reason: Keep - Some benchmark estimates require whole-number subtraction.
+- item: A34
+  node: fraction.equivalent.multiply-principle.multiply-by-one
+  target: fraction.whole-number.as-fraction
+  action: keep
+  reason: Keep - The explanation uses n/n=1.
+- item: A35
+  node: multiplication.scaling.size-principle
+  target: multiplication.scaling.resize
+  action: keep
+  reason: Keep - The principle explicitly describes multiplication as resizing.
+- item: A36
+  node: fraction.addition.like-denominators.model
+  target: fraction.non-unit.unit-sum
+  action: keep
+  reason: Keep - The model counts lengths of size 1/b.
+- item: A37
+  node: fraction.application.multiply-whole.model
+  target: fraction.multiply-whole.as-unit-multiple
+  action: drop
+  reason: Wrong - The learner can draw groups of fractions without first representing the product as a multiple
+    of a unit fraction.
+- item: A38
+  node: fraction.mixed-number.subtract
+  target: fraction.compare.same-denominator
+  action: keep
+  reason: Keep - The procedure compares fractional parts before regrouping.
+- item: A39
+  node: fraction.equivalent.multiply-principle.explain
+  target: fraction.equivalent.same-size
+  action: keep
+  reason: Keep - The justification depends on the fractions representing the same amount.
+- item: A40
+  node: multiplication.scaling.size-principle
+  target: fraction.compare.benchmark
+  action: keep
+  reason: Wrong as a universal prerequisite - Comparing a factor with 1 is required, but the separate benchmark-comparison
+    procedure is only one route.
+- item: B41
+  node: fraction.unit.part-whole
+  target: partitioning.equal-area.any-shape
+  action: uphold
+  reason: Do not restore - The assessment supplies an already partitioned shape.
+- item: B42
+  node: fraction.unit.part-whole
+  target: partitioning.equal-shares.whole-as-shares
+  action: uphold
+  reason: Do not restore - The whole is already partitioned; learning that all shares make the whole is not required
+    to name one share.
+- item: B43
+  node: number-line.whole-number-lengths
+  target: measurement.length.iterate-units
+  action: uphold
+  reason: Do not restore - The number line supplies equally spaced labeled points.
+- item: B44
+  node: fraction.unit.number-line
+  target: partitioning.equal-area.any-shape
+  action: uphold
+  reason: Do not restore this edge - Equal-area partitioning is not the direct prerequisite; equal-length segment
+    partitioning is.
+- item: B45
+  node: fraction.compare.same-whole
+  target: fraction.compare.reasoning-size
+  action: uphold
+  reason: Do not restore - The same-whole caveat can be understood without first learning fraction-size comparison.
+- item: B46
+  node: fraction.multiply-whole.as-unit-multiple
+  target: multiplication.properties
+  action: uphold
+  reason: Do not restore - The model can establish the grouping without naming the associative property.
+- item: B47
+  node: addition.add-to.number-line
+  target: place-value.base-ten
+  action: uphold
+  reason: Do not restore - Place-value chunking improves efficiency but is not required to represent a sum.
+- item: B48
+  node: fraction.equivalent.same-size
+  target: partitioning.equal-shares.different-shapes
+  action: uphold
+  reason: Do not restore - Comparing congruent shaded amounts does not require understanding differently shaped
+    equal shares.
+- item: B49
+  node: fraction.multiply-whole.rule
+  target: fraction.multiply-whole.model
+  action: uphold
+  reason: Do not restore - The symbolic rule can be learned without first performing the particular model procedure.
+- item: B50
+  node: fraction.multiply-whole.rule
+  target: multiplication.properties
+  action: uphold
+  reason: Do not restore - The formal associative property is not necessary for the stated rule.
+- item: B51
+  node: fraction.quotient.equal-sharing
+  target: partitioning.equal-shares.area
+  action: restore
+  scope: task
+  reason: Restore as task-only - Drawing the sharing situation requires partitioning shapes into equal shares.
+- item: B52
+  node: fraction.quotient.equal-sharing
+  target: fraction.unit.part-whole
+  action: uphold
+  reason: Do not restore as direct - The dependency is already reached through the non-unit-fraction concept.
+- item: B53
+  node: fraction.quotient.symbolic
+  target: division.partitive.situation-to-expression
+  action: uphold
+  reason: Do not restore - Translating a fraction and a quotient between notations does not require modeling a word
+    problem.
+- item: B54
+  node: fraction.multiplication.parts-of-partition.fraction
+  target: division.unit-fraction-by-whole.interpret
+  action: uphold
+  reason: Do not restore - Sharing a unit fraction is a special case, not a necessary prerequisite for the general
+    fractional product.
+- item: B55
+  node: fraction.multiplication.product-rule
+  target: fraction.multiplication.operation-sequence
+  action: uphold
+  reason: Do not restore - This is a step in one derivation of the product rule.
+- item: B56
+  node: fraction.multiplication.product-rule
+  target: fraction.multiply-whole.rule
+  action: uphold
+  reason: Do not restore - The product rule can be learned without deriving it from whole-number multiplication
+    of fractions.
+- item: B57
+  node: fraction.multiplication.product-rule
+  target: division.unit-fraction-by-whole.rule
+  action: uphold
+  reason: Do not restore - This division rule supports one proof, not every route to the product rule.
+- item: B58
+  node: ratio.unit-rate
+  target: fraction.quotient.equal-sharing
+  action: uphold
+  reason: Do not restore as direct - The sharing meaning is mediated through the symbolic quotient concept.
+- item: B59
+  node: decimal.hundredths.notation
+  target: fraction.tenths-to-hundredths
+  action: uphold
+  reason: Do not restore as direct - The tenths-to-hundredths relationship can be reached through the addition node
+    already required.
+- item: B60
+  node: subtraction.take-away.number-line
+  target: place-value.base-ten
+  action: uphold
+  reason: Do not restore - Splitting a subtraction into place-value chunks is an efficiency, not a necessity.
+- item: C61
+  node: fraction.non-unit.unit-sum
+  target: fraction.as-number
+  action: drop
+  reason: No - The target explicitly includes improper fractions, which can be represented as repeated unit fractions.
+- item: C62
+  node: fraction.multiply-whole.symbolic
+  target: multiplication.multi-digit
+  action: drop
+  reason: 'Dropped: the test (7 x 3/8) needs only facts within 100; the node''s scope is to be restricted to products
+    within 100 (Daniel''s alternative). | Daniel: Yes, conditionally - Add multi-digit multiplication if the rule
+    covers products beyond 100; otherwise restrict the node''s scope.'
+- item: C63
+  node: multiplication.array-area.fraction-sides.multiply
+  target: area.rectangle.tiling
+  action: keep
+  reason: Yes - The area node explicitly includes area as length times width.
+- item: C64
+  node: division.fractions.measurement.model
+  target: division.multi-digit
+  action: replace
+  with: division.facts.within-100
+  why: Step 3 counts how many groups of c x b parts fit in a x d parts, a single-digit division such as 18 divided
+    by 4 in the test, which division facts within 100 cover.
+  reason: No to multi-digit division - The target may require basic division skills, but the proposed prerequisite
+    is too broad.
+- item: C65
+  node: fraction.division.symbolic
+  target: factors-multiples.whole-number
+  action: drop
+  reason: No, unless simplification is mandatory - The stated procedure simplifies only when asked.
+- item: C66
+  node: ratio.composed-unit
+  target: multiplication.equal-groups.meaning
+  action: drop
+  reason: No - Iterating the ratio's composite unit is unnecessary if the target covers only the "for every" relationship.
+- item: C67
+  node: ratio.tape-diagram
+  target: division.multi-digit
+  action: replace
+  with: division.facts.within-100
+  why: Step 3 divides the known amount by its number of units, as 40 divided by 8 in the test, which division facts
+    within 100 cover.
+  reason: No to multi-digit division - The assessment's tape-diagram problem needs basic division, not necessarily
+    the multi-digit algorithm.
+- item: C68
+  node: ratio.unit-rate.fractions
+  target: fraction.complex-fraction
+  action: keep
+  reason: Yes - Add a complex-fraction node because the procedure explicitly forms a fraction whose numerator and
+    denominator are fractions.
+- item: C69
+  node: proportional-relationship.compare.representations
+  target: ratio.convert-units
+  action: related
+  reason: 'Needed only when the compared relationships use different units; the test uses one unit system. | Daniel:
+    Conditional - Unit conversion is required when the compared relationships use different units, but not otherwise.'
+- item: C70
+  node: linear-function.model.construct
+  target: functions.definition
+  action: keep
+  reason: Yes - The definition of a function as an input-output rule directly supports constructing a function model.
+- item: C71
+  node: linear-function.model.rate.from-description
+  target: rational-number.negative-as-decrease
+  action: keep
+  reason: Yes - The stated procedure explicitly assigns a negative rate when the output decreases.
+- item: C72
+  node: linear-function.model.rate.interpret
+  target: functions.definition
+  action: drop
+  reason: No - A rate can be interpreted from the equation and units without first knowing the formal function definition.
+- item: C73
+  node: linear-function.model.initial.interpret
+  target: functions.definition
+  action: drop
+  reason: No - An initial value can be interpreted as the output at input zero without the formal function definition.
+- item: D74
+  node: fraction.unit.part-whole
+  target: counting.objects
+  action: keep
+  reason: Keep - Counting the equal parts is directly relevant to identifying the denominator.
+- item: D75
+  node: fraction.unit.number-line
+  target: fraction.unit.part-whole
+  action: keep
+  reason: Route-only - The part-whole unit-fraction concept is one route; a measure-first route can construct the
+    length directly.
+- item: D76
+  node: fraction.unit.number-line
+  target: partitioning.segment.equal-lengths
+  action: require
+  reason: Keep/add prerequisite - The target explicitly partitions a segment into equal lengths, which the map lacks
+    as a node.
+- item: D77
+  node: fraction.unit.number-line
+  target: partitioning.segment.equal-lengths
+  action: keep
+  reason: Keep/add alternative route - Segment partitioning supports the measure-first route to the number-line
+    unit fraction.
+- item: D78
+  node: fraction.non-unit.number-line
+  target: fraction.non-unit.part-whole
+  action: keep
+  reason: Route-only - The measure interpretation of a fraction can be learned through unit-fraction lengths, without
+    the part-whole node.
+- item: D79
+  node: fraction.non-unit.unit-sum
+  target: fraction.as-number
+  action: drop
+  reason: Do not require universally - Repeated unit-fraction lengths can represent improper fractions without the
+    separate "fraction is a number" prerequisite.
+- item: D80
+  node: division.partitive.meaning
+  target: multiplication.equal-groups.meaning
+  action: keep
+  reason: Route-only - Partitive sharing can establish the quotient as share size without first using multiplication
+    as equal groups.
+- item: D81
+  node: fraction.multiply-whole.as-unit-multiple
+  target: multiplication.facts.within-100
+  action: task
+  reason: Keep as task-only - The assessment explicitly requires the small whole-number product 3x2.
+- item: D82
+  node: fraction.addition.like-denominators.model
+  target: fraction.non-unit.number-line
+  action: keep
+  reason: Route-only - Fraction strips can model the addition without locating the fraction on a number line.
+- item: D83
+  node: fraction.addition.like-denominators.model
+  target: addition.add-to.number-line
+  action: keep
+  reason: Route-only - Joining fraction strips does not require whole-number addition on a number line.
+- item: D84
+  node: fraction.addition.like-denominators.model
+  target: fraction.non-unit.part-whole
+  action: keep
+  reason: Keep/add alternative route - Fraction strips provide the proposed route without a number line.
+- item: D85
+  node: fraction.addition.like-denominators
+  target: fraction.addition.like-denominators.model
+  action: keep
+  reason: Route-only - The symbolic addition rule can be taught directly or from the unit-sum meaning, without requiring
+    the model procedure.
+- item: D86
+  node: fraction.addition.like-denominators
+  target: fraction.non-unit.unit-sum
+  action: keep
+  reason: Keep/add alternative route - Counting copies of 1/b provides an alternative derivation of the symbolic
+    addition rule.
+- item: D87
+  node: fraction.addition.like-denominators
+  target: fraction.addition.joining
+  action: keep
+  reason: Keep/add alternative route - Understanding addition as joining parts of the same whole provides another
+    route.
+- item: D88
+  node: fraction.compare.same-denominator
+  target: fraction.non-unit.part-whole
+  action: keep
+  reason: Route-only - The measure-based fraction interpretation can supply the equal-part reasoning without the
+    part-whole node.
+- item: D89
+  node: division.measurement.meaning
+  target: multiplication.equal-groups.meaning
+  action: keep
+  reason: Route-only - Repeated removal can establish the number of equal groups without multiplication as equal
+    groups.
+- item: D90
+  node: division.measurement.meaning
+  target: subtraction.whole-number
+  action: keep
+  reason: Keep/add alternative route - Repeated subtraction is a credible route to the number of groups.
+- item: D91
+  node: fraction.equivalent.multiply-principle
+  target: fraction.equivalent.simple.generate
+  action: keep
+  reason: Route-only - Equivalent-fraction rules can be learned from number-line examples showing the same point.
+- item: D92
+  node: fraction.equivalent.multiply-principle
+  target: multiplication.equal-groups.meaning
+  action: keep
+  reason: Route-only - Multiplication can be understood through arrays instead of equal groups.
+- item: D93
+  node: fraction.equivalent.multiply-principle
+  target: multiplication.array.rows-columns
+  action: keep
+  reason: Keep/add alternative route - Arrays provide the alternative way to understand the products in the equivalent-fraction
+    principle.
+- item: D94
+  node: division.unknown-factor.meaning
+  target: multiplication.equal-groups.meaning
+  action: keep
+  reason: Route-only - The unknown-factor interpretation can be grounded by an array rather than equal-groups meaning.
+- item: D95
+  node: division.unknown-factor.meaning
+  target: division.partitive.meaning
+  action: keep
+  reason: Route-only - The share-size and measurement interpretations are alternative routes, so both need not be
+    mandatory.
+- item: D96
+  node: division.unknown-factor.meaning
+  target: division.measurement.meaning
+  action: keep
+  reason: Route-only - Either division meaning can ground the unknown-factor interpretation.
+- item: D97
+  node: division.unknown-factor.meaning
+  target: multiplication.properties
+  action: keep
+  reason: Route-only - Commutativity is needed for the measurement route, not for the partitive route.
+- item: D98
+  node: division.unknown-factor.meaning
+  target: multiplication.array.rows-columns
+  action: keep
+  reason: Keep/add alternative route - An array with one unknown dimension gives another route to the unknown-factor
+    interpretation.
+- item: D99
+  node: partitioning.equal-shares.more-shares-smaller
+  target: partitioning.equal-shares.whole-as-shares
+  action: keep
+  reason: Route-only - Direct comparison of shares from same-size wholes can establish the rule without the separate
+    whole-as-shares concept.
+- item: D100
+  node: fraction.multiply-whole.rule
+  target: fraction.multiply-whole.as-unit-multiple
+  action: keep
+  reason: Route-only - Repeated addition of fractions can derive the multiplication rule without the unit-multiple
+    concept.
+- item: D101
+  node: fraction.multiply-whole.rule
+  target: fraction.multiple-of-unit
+  action: keep
+  reason: Route-only - Repeated addition with like denominators provides an alternative route to the same rule.
+- item: D102
+  node: fraction.multiply-whole.rule
+  target: multiplication.equal-groups.meaning
+  action: keep
+  reason: Keep/add as one route - Understanding multiplication as equal groups directly explains the left-hand product
+    nx(a/b).
+- item: D103
+  node: fraction.multiply-whole.rule
+  target: fraction.addition.like-denominators
+  action: keep
+  reason: Keep/add alternative route - Repeated addition and the like-denominator rule provide another route to
+    the multiplication rule.
+- item: handoff-2
+  node: fraction.mixed-number.multiplication
+  target: division.multi-digit
+  action: replace
+  with: division.facts.within-100
+  why: Step 3 divides the numerator by the denominator to write a mixed number, as 10 divided by 3 in the test,
+    which division facts within 100 cover.
+  reason: 'Handoff fix 2 (2026-10-17): single-digit division should not point at the multi-digit algorithm.'
+routes:
+- item: D75
+  node: fraction.unit.number-line
+  name: measure-first
+  without:
+  - fraction.unit.part-whole
+  note: Construct the length 1/b directly by partitioning the segment.
+- item: D78
+  node: fraction.non-unit.number-line
+  name: measure-first
+  without:
+  - fraction.non-unit.part-whole
+  note: Iterate unit-fraction lengths without the part-whole node.
+- item: D80
+  node: division.partitive.meaning
+  name: via-sharing
+  without:
+  - multiplication.equal-groups.meaning
+  note: Share out and count each share, with no multiplication.
+- item: D88
+  node: fraction.compare.same-denominator
+  name: measure
+  without:
+  - fraction.non-unit.part-whole
+  note: Equal parts from the measure (number line) meaning.
+- item: D99
+  node: partitioning.equal-shares.more-shares-smaller
+  name: direct-compare
+  without:
+  - partitioning.equal-shares.whole-as-shares
+  note: Compare shares cut from same-size wholes directly.
+- item: A40
+  node: multiplication.scaling.size-principle
+  name: via-compare-to-one
+  without:
+  - fraction.compare.benchmark
+  add:
+  - node: fraction.compare.to-one
+    relation: definitional
+    points_to: statement
+    why: The three cases of the principle turn on whether the factor is greater than, equal to, or less than 1,
+      which for a fraction is comparing numerator with denominator.
+  note: Compare the factor with 1 directly, without the benchmark procedure.
+benchmark_links:
+- item: E104
+  verdict: real prerequisite
+  daniel: Yes - Unit fractions support expressing equal geometric partitions as fractions.
+- item: E105
+  verdict: 'no'
+  daniel: No - Decimal comparison can be developed through base-ten place value without the general unlike-fraction
+    comparison procedure.
+- item: E106
+  verdict: task-scope link (benchmark reasonableness check)
+  daniel: Yes - Comparing and finding equivalent fractions supports adding and subtracting fractions with unlike
+    denominators.
+- item: E107
+  verdict: route-only
+  daniel: Yes - Unit-fraction division is a special case that supports the broader fraction-division concept.
+- item: E108
+  verdict: 'no'
+  daniel: No - Understanding a ratio's per-one meaning does not require the specific fraction-division procedures
+    in 5.NF.B.7.
+- item: E109
+  verdict: 'yes'
+  daniel: Yes - Unit-rate reasoning is a direct route into proportional relationships.
+- item: E110
+  verdict: real prerequisite
+  daniel: Yes - Solving proportional-relationship problems supports solving multistep proportional problems.
+- item: E111
+  verdict: route-only
+  daniel: Yes - Proportional relationships provide a route into slope and linear equations, although other routes
+    also exist.

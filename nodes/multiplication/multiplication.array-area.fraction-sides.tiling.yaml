@@ -19,48 +19,8 @@ sources:
   learning_components:
   - 3d4b5315
 requires:
-- clause: standard
+- clause: via-whole-number
   all_of:
-  - node: factors-multiples.whole-number
-    relation: procedural
-    points_to: procedure.1
-    why: Step 1 needs a common denominator n for the two side lengths, found as a common multiple of the
-      denominators.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: A common denominator for two side lengths can be taken to be the product of the
-        denominators; factors and multiples are only needed for a smaller one.'
-    status: disputed
-  - node: fraction.equivalent.multiply-principle.generate
-    relation: procedural
-    points_to: procedure.1
-    why: Step 1 rewrites each side length as an equivalent fraction p/n or q/n.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: At level 2, the equivalent fractions can be produced with a model rather than
-        the symbolic rule.'
-    status: disputed
-  - node: fraction.multiple-of-unit
-    relation: procedural
-    points_to: procedure.2
-    why: Step 2 uses that a side of length p/n is p copies of the unit fraction 1/n, so p squares fit
-      along it.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: That a side p/n holds p squares of side 1/n is one expression of p/n as p copies
-        of 1/n; the same fact is available from other forms.'
-    status: disputed
   - node: fraction.unit.part-whole
     relation: definitional
     points_to: procedure.3
@@ -89,6 +49,84 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: This is the direct source of 'p/n is p parts of size 1/n'; the proposed unit-multiple and unit-sum
+      edges are alternative statements of the same fact.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: factors-multiples.whole-number
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 needs a common denominator n for the two side lengths, found as a common multiple of the
+      denominators.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A common denominator for two side lengths can be taken to be the product of the
+        denominators; factors and multiples are only needed for a smaller one. | other route: Take n as
+        the product of the two denominators.'
+    status: disputed
+- clause: via-generate
+  all_of:
+  - node: fraction.unit.part-whole
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 shows each small square is one of n x n equal parts of the unit square, so its area is
+      1/(n x n).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.tiling
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 counts the p x q squares in the rectangle as rows times columns, as in finding area by
+      tiling.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: This is the direct source of 'p/n is p parts of size 1/n'; the proposed unit-multiple and unit-sum
+      edges are alternative statements of the same fact.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: fraction.equivalent.multiply-principle.generate
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites each side length as an equivalent fraction p/n or q/n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: At level 2, the equivalent fractions can be produced with a model rather than
+        the symbolic rule. | other route: Model-based equivalent fractions (fraction.equivalent.simple.generate).'
+    status: disputed
   - node: fraction.equivalent.simple.generate
     relation: procedural
     points_to: procedure.1
@@ -99,7 +137,101 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Model-based generation covers only simple denominators; the symbolic rule is
-        the alternative for general ones.'
+        the alternative for general ones. | other route: Symbolic generation (fraction.equivalent.multiply-principle.generate).'
+    status: disputed
+- clause: via-multiple-of-unit
+  all_of:
+  - node: fraction.unit.part-whole
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 shows each small square is one of n x n equal parts of the unit square, so its area is
+      1/(n x n).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.tiling
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 counts the p x q squares in the rectangle as rows times columns, as in finding area by
+      tiling.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: This is the direct source of 'p/n is p parts of size 1/n'; the proposed unit-multiple and unit-sum
+      edges are alternative statements of the same fact.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: fraction.multiple-of-unit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 uses that a side of length p/n is p copies of the unit fraction 1/n, so p squares fit
+      along it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: That a side p/n holds p squares of side 1/n is one expression of p/n as p copies
+        of 1/n; the same fact is available from other forms. | other route: A fraction as a sum of unit
+        fractions (fraction.non-unit.unit-sum) or a parts of size 1/b (fraction.non-unit.part-whole).'
+    status: disputed
+- clause: via-unit-sum
+  all_of:
+  - node: fraction.unit.part-whole
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 shows each small square is one of n x n equal parts of the unit square, so its area is
+      1/(n x n).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.tiling
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 counts the p x q squares in the rectangle as rows times columns, as in finding area by
+      tiling.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: This is the direct source of 'p/n is p parts of size 1/n'; the proposed unit-multiple and unit-sum
+      edges are alternative statements of the same fact.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
     status: disputed
   - node: fraction.non-unit.unit-sum
     relation: procedural
@@ -111,16 +243,7 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: The unit-sum form is one of several statements of the same fact: p/n is p copies
-        of 1/n.'
-    status: disputed
-  - node: fraction.non-unit.part-whole
-    relation: definitional
-    points_to: statement
-    why: This is the direct source of 'p/n is p parts of size 1/n'; the proposed unit-multiple and unit-sum
-      edges are alternative statements of the same fact.
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing prerequisite
+        of 1/n. | other route: A fraction as a whole-number multiple of a unit fraction (fraction.multiple-of-unit)
+        or a parts of size 1/b (fraction.non-unit.part-whole).'
     status: disputed
 status: proposed

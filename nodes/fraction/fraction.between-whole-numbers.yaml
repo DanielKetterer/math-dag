@@ -17,7 +17,7 @@ sources:
   learning_components:
   - 677ac9ea
 requires:
-- clause: standard
+- clause: via-multiple-of-unit
   all_of:
   - node: division.multi-digit
     relation: procedural
@@ -46,6 +46,16 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: fraction.non-unit.number-line
+    relation: definitional
+    points_to: statement
+    why: '''Lies between two whole numbers'' is a statement of position or order; no proposed edge supplies
+      the ordering of a fraction relative to whole numbers (e318 is only a justification).'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
   - node: fraction.multiple-of-unit
     relation: definitional
     points_to: statement
@@ -57,7 +67,47 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: The multiple-of-unit reading (every b copies of 1/b make a whole) is one way
-        to see why q wholes fit; it is not the only one.'
+        to see why q wholes fit; it is not the only one. | other route: Mixed number as a whole number
+        plus a fraction (fraction.mixed-number.meaning).'
+    status: disputed
+- clause: via-meaning
+  all_of:
+  - node: division.multi-digit
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 divides a by b with a remainder to get the quotient q and remainder r.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.whole-number.as-fraction
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 concludes that a/b equals the whole number q when r = 0, which treats q as a fraction
+      with denominator 1.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.number-line
+    relation: definitional
+    points_to: statement
+    why: '''Lies between two whole numbers'' is a statement of position or order; no proposed edge supplies
+      the ordering of a fraction relative to whole numbers (e318 is only a justification).'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
     status: disputed
   - node: fraction.mixed-number.meaning
     relation: definitional
@@ -71,16 +121,8 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Step 3 needs some meaning that makes a/b = q + r/b readable as sitting between
-        q and q+1; the mixed-number meaning is one such meaning.'
-    status: disputed
-  - node: fraction.non-unit.number-line
-    relation: definitional
-    points_to: statement
-    why: '''Lies between two whole numbers'' is a statement of position or order; no proposed edge supplies
-      the ordering of a fraction relative to whole numbers (e318 is only a justification).'
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing prerequisite
+        q and q+1; the mixed-number meaning is one such meaning. | other route: Fraction as a multiple
+        of a unit fraction (fraction.multiple-of-unit): a/b is a copies of 1/b and every b copies make
+        a whole.'
     status: disputed
 status: proposed

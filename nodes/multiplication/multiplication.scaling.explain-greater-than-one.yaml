@@ -15,19 +15,8 @@ sources:
   learning_components:
   - a60d004f
 requires:
-- clause: standard
+- clause: via-meaning
   all_of:
-  - node: fraction.mixed-number.meaning
-    relation: definitional
-    points_to: statement
-    why: Writing f = 1 + g with g > 0 treats f as a whole number plus a fraction.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Writing f as a whole number plus a fraction is one way to obtain f = 1 + g.'
-    status: disputed
   - node: multiplication.properties
     relation: justificatory
     points_to: statement
@@ -54,6 +43,68 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: fraction.addition.joining
+    relation: justificatory
+    points_to: statement
+    why: Adding the positive amount q x g to q gives a total larger than q.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.meaning
+    relation: definitional
+    points_to: statement
+    why: Writing f = 1 + g with g > 0 treats f as a whole number plus a fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Writing f as a whole number plus a fraction is one way to obtain f = 1 + g. |
+        other route: Decompose f = a/b as b/b + (a-b)/b (fraction.decompose.equation).'
+    status: disputed
+- clause: via-product-rule
+  all_of:
+  - node: multiplication.properties
+    relation: justificatory
+    points_to: statement
+    why: The step q x (1 + g) = q x 1 + q x g is the distributive property.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one
+    relation: justificatory
+    points_to: statement
+    why: The step q x 1 = q uses that multiplying by 1 leaves a number unchanged.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.joining
+    relation: justificatory
+    points_to: statement
+    why: Adding the positive amount q x g to q gives a total larger than q.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
   - node: fraction.multiplication.product-rule
     relation: justificatory
     points_to: statement
@@ -67,8 +118,37 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Positivity of q x g follows from the product rule, but equally from the operator
-        meaning (a positive number of parts of a positive amount is positive).'
+        meaning (a positive number of parts of a positive amount is positive). | other route: Operator
+        meaning (fraction.multiplication.parts-of-partition.fraction).'
     status: disputed
+- clause: via-equation
+  all_of:
+  - node: multiplication.properties
+    relation: justificatory
+    points_to: statement
+    why: The step q x (1 + g) = q x 1 + q x g is the distributive property.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one
+    relation: justificatory
+    points_to: statement
+    why: The step q x 1 = q uses that multiplying by 1 leaves a number unchanged.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
   - node: fraction.addition.joining
     relation: justificatory
     points_to: statement
@@ -90,6 +170,7 @@ requires:
       source: pass-Q
     - kind: content
       source: critic-sonnet
-      note: 'route-only: Writing f = 1 + g can be done by decomposing a/b as b/b + (a-b)/b.'
+      note: 'route-only: Writing f = 1 + g can be done by decomposing a/b as b/b + (a-b)/b. | other route:
+        Write f as a mixed number (fraction.mixed-number.meaning) and take g = f - 1.'
     status: disputed
 status: proposed

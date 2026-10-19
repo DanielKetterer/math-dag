@@ -17,7 +17,7 @@ sources:
   learning_components:
   - 74de8dae
 requires:
-- clause: standard
+- clause: via-properties
   all_of:
   - node: fraction.equivalent.multiply-principle
     relation: definitional
@@ -44,7 +44,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A39 keep: Keep - The justification depends on the fractions representing the same amount.'
+    status: reviewed
   - node: multiplication.equal-groups.meaning
     relation: definitional
     points_to: statement
@@ -58,19 +61,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
-  - node: multiplication.properties
-    relation: justificatory
-    points_to: statement
-    why: Counting b parts each split into n parts gives b x n, which equals n x b by the commutative property.
-    evidence:
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The count of pieces can be described as ''n times as many'' (parts and chosen
-        parts each become n times as many), which gives n x a and n x b without invoking commutativity.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'A28 keep: Keep - The proposed explanation counts equal groups of smaller pieces.'
+    status: reviewed
   - node: fraction.non-unit.part-whole
     relation: definitional
     points_to: statement
@@ -90,6 +84,20 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
+    status: disputed
+  - node: multiplication.properties
+    relation: justificatory
+    points_to: statement
+    why: Counting b parts each split into n parts gives b x n, which equals n x b by the commutative property.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The count of pieces can be described as ''n times as many'' (parts and chosen
+        parts each become n times as many), which gives n x a and n x b without invoking commutativity.
+        | other route: Describe the refinement as n times as many parts and n times as many chosen parts
+        (multiplicative comparison, multiplication.comparison).'
     status: disputed
 related:
 - node: fraction.equivalent.simple.explain

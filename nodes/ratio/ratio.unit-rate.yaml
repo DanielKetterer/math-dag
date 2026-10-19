@@ -13,23 +13,8 @@ sources:
   learning_components:
   - db4c25ad
 requires:
-- clause: standard
+- clause: via-equivalent
   all_of:
-  - node: ratio.equivalent
-    relation: definitional
-    points_to: statement
-    why: The unit rate is the equivalent ratio whose second quantity is exactly 1, so it is found by scaling
-      a:b to (a/b):1.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The equivalent-ratio scaling to second term 1 is one derivation; sharing a equally
-        among b is the other.'
-    status: disputed
   - node: ratio.notation
     relation: representational
     points_to: assess
@@ -44,19 +29,6 @@ requires:
       note: 'task-only: The statement is about the number a/b; the colon notation matters only because
         the test problem is written 150:4.'
     status: proposed
-  - node: fraction.quotient.symbolic
-    relation: definitional
-    points_to: statement
-    why: The unit rate a/b is the quotient a divided by b written as a fraction, the amount of the first
-      quantity for one unit.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The number a/b as a divided by b is one way to get the amount per 1 unit; the
-        other scales the ratio to a second term of 1.'
-    status: disputed
   - node: decimal.operations
     relation: procedural
     points_to: assess
@@ -84,4 +56,77 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: ratio.equivalent
+    relation: definitional
+    points_to: statement
+    why: The unit rate is the equivalent ratio whose second quantity is exactly 1, so it is found by scaling
+      a:b to (a/b):1.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The equivalent-ratio scaling to second term 1 is one derivation; sharing a equally
+        among b is the other. | other route: Equal sharing of a among b units (fraction.quotient.equal-sharing,
+        fraction.quotient.symbolic).'
+    status: disputed
+- clause: via-symbolic
+  all_of:
+  - node: ratio.notation
+    relation: representational
+    points_to: assess
+    why: The statement is about a ratio written a:b and gives the unit rate as the number a/b formed from
+      its two terms.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is about the number a/b; the colon notation matters only because
+        the test problem is written 150:4.'
+    status: proposed
+  - node: decimal.operations
+    relation: procedural
+    points_to: assess
+    why: Finding the unit rate for 150:4 requires dividing 150 by 4 to get the decimal 37.5.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Dividing 150 by 4 to a decimal is demanded by the test problem; the rate can be
+        left as 75/2.'
+    status: proposed
+  - node: ratio.composed-unit
+    relation: definitional
+    points_to: statement
+    why: The unit rate is the amount of the first quantity for 1 unit of the second, a for-every statement
+      with the second quantity equal to 1.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.quotient.symbolic
+    relation: definitional
+    points_to: statement
+    why: The unit rate a/b is the quotient a divided by b written as a fraction, the amount of the first
+      quantity for one unit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The number a/b as a divided by b is one way to get the amount per 1 unit; the
+        other scales the ratio to a second term of 1. | other route: Scale a:b by 1/b to the equivalent
+        ratio (a/b):1 (ratio.equivalent with fraction.multiple-of-unit).'
+    status: disputed
 status: proposed

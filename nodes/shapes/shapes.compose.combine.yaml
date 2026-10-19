@@ -20,20 +20,6 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: shapes.compose.fill-outline
-    relation: procedural
-    points_to: statement
-    why: Combining shapes to fill an outline uses the same choosing and placing of pieces as the puzzle
-      with every piece drawn, with the dividing lines removed.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
   - node: spatial.motion.turn-flip
     relation: procedural
     points_to: assess
@@ -46,5 +32,15 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A28 keep: KEEP, task-scoped: Turning pieces may be necessary for the particular hexagon puzzle,
+        but it should not become a universal prerequisite for shape composition.'
+    status: reviewed
+related:
+- node: shapes.compose.fill-outline
+  relation: common_path
+  note: 'Common path, not required (A34): REJECT as universal; retain as a route: Filling an outlined
+    puzzle is a useful precursor, but shapes can also be composed by exploring how pieces fit together
+    without internal guide lines.'
 status: proposed

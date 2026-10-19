@@ -14,8 +14,17 @@ sources:
   learning_components:
   - 7829e94a
 requires:
-- clause: standard
+- clause: via-plot
   all_of:
+  - node: coordinate-plane.first-quadrant
+    relation: definitional
+    points_to: statement
+    why: A point (x, y) as an ordered pair of coordinates is the object being interpreted.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
   - node: ratio.table.plot
     relation: representational
     points_to: statement
@@ -29,15 +38,7 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Plotting table rows is one way to learn that a point is a pair of corresponding
-        quantities; reading coordinates on a graph is the other.'
-    status: disputed
-  - node: coordinate-plane.first-quadrant
-    relation: definitional
-    points_to: statement
-    why: A point (x, y) as an ordered pair of coordinates is the object being interpreted.
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing prerequisite
+        quantities; reading coordinates on a graph is the other. | other route: Read coordinates of points
+        on a graph (coordinate-plane.first-quadrant, data.graphs.read).'
     status: disputed
 status: proposed

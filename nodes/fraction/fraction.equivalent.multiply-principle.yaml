@@ -13,7 +13,7 @@ sources:
   - 5f61cb2a
   - c3b684c1
 requires:
-- clause: standard
+- clause: via-generate
   all_of:
   - node: fraction.equivalent.same-point
     relation: definitional
@@ -29,6 +29,21 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: Checking that 12/20 equals 3/5 requires multiplying 3 and 5 by 4 using single-digit facts.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test items (3 x 4, 5 x 4, etc.) need recalled products; the principle
+        itself holds for any whole number n.'
+    status: proposed
   - node: fraction.equivalent.simple.generate
     relation: representational
     points_to: statement
@@ -41,8 +56,29 @@ requires:
       source: critic-sonnet
       note: 'route-only: The symbolic pattern can be noticed from several number-line examples (2/3 and
         4/6, 1/2 and 3/6, ...) where a finer partition keeps the same point, which fraction.equivalent.same-point
-        already supplies.'
-    status: disputed
+        already supplies. | other route: Generalize from number-line partitions: refine each 1/b length
+        into n equal lengths and see the same point (via fraction.equivalent.same-point).'
+    - kind: review
+      source: DK
+      note: 'D91 keep: Route-only - Equivalent-fraction rules can be learned from number-line examples
+        showing the same point.'
+    status: reviewed
+- clause: via-meaning
+  all_of:
+  - node: fraction.equivalent.same-point
+    relation: definitional
+    points_to: statement
+    why: The rule asserts that a/b and (n x a)/(n x b) name the same point, which is what equivalence
+      means on the line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
   - node: multiplication.facts.within-100
     relation: procedural
     points_to: assess
@@ -68,8 +104,13 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: At level 3 the learner needs to understand what n x a means, but the equal-groups
-        reading is not the only way: the product as an array (rows by columns) gives the same understanding.'
-    status: disputed
+        reading is not the only way: the product as an array (rows by columns) gives the same understanding.
+        | other route: Multiplication understood as an array or rectangular area (rows x columns), then
+        the rule applied to the products.'
+    - kind: review
+      source: DK
+      note: 'D92 keep: Route-only - Multiplication can be understood through arrays instead of equal groups.'
+    status: reviewed
 - clause: critic-route-1
   note: Understand n x a and n x b through the array (rows by columns) meaning of multiplication instead
     of equal groups.
@@ -112,5 +153,9 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing route
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D93 keep: Keep/add alternative route - Arrays provide the alternative way to understand the
+        products in the equivalent-fraction principle.'
+    status: reviewed
 status: proposed

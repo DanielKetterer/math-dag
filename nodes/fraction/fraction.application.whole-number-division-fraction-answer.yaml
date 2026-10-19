@@ -15,7 +15,7 @@ sources:
   - 46b4aaee
   - '26645597'
 requires:
-- clause: standard
+- clause: via-meaning
   all_of:
   - node: division.partitive.situation-to-expression
     relation: representational
@@ -44,20 +44,6 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: fraction.mixed-number.meaning
-    relation: definitional
-    points_to: statement
-    why: The statement allows a mixed-number answer, which is a whole number plus a fraction.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The statement allows ''fraction or mixed number''; a learner who writes the quotient
-        as the fraction 50/9 meets it without the mixed-number meaning.'
-    status: disputed
   - node: fraction.between-whole-numbers
     relation: procedural
     points_to: assess
@@ -82,5 +68,20 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
+    status: disputed
+  - node: fraction.mixed-number.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement allows a mixed-number answer, which is a whole number plus a fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows ''fraction or mixed number''; a learner who writes the quotient
+        as the fraction 50/9 meets it without the mixed-number meaning. | other route: Write the answer
+        as an improper fraction only (fraction.quotient.symbolic).'
     status: disputed
 status: proposed

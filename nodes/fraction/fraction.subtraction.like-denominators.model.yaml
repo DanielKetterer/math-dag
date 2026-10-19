@@ -17,22 +17,8 @@ sources:
   - 4.NF.B.3.d
   learning_components: []
 requires:
-- clause: standard
+- clause: via-number-line
   all_of:
-  - node: fraction.non-unit.number-line
-    relation: representational
-    points_to: procedure.1
-    why: Step 1 shows a/b as a lengths of size 1/b on a partitioned number line or strip.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The statement allows fraction strips or a number line; a lengths of 1/b can be
-        shown on a strip.'
-    status: disputed
   - node: fraction.non-unit.unit-sum
     relation: definitional
     points_to: procedure.1
@@ -47,21 +33,6 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: subtraction.take-away.number-line
-    relation: representational
-    points_to: procedure.2
-    why: Step 2 removes c lengths by jumping back on the line, as in representing a whole-number difference
-      on a number line.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Removing c lengths can be done by crossing out parts of a strip; jumping back
-        on a number line is one representation.'
-    status: disputed
   - node: fraction.subtraction.separating
     relation: definitional
     points_to: statement
@@ -76,6 +47,37 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: fraction.non-unit.number-line
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 shows a/b as a lengths of size 1/b on a partitioned number line or strip.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows fraction strips or a number line; a lengths of 1/b can be
+        shown on a strip. | other route: Show a/b as shaded parts of a fraction strip, using fraction.non-unit.part-whole,
+        and cross out c parts.'
+    status: disputed
+  - node: subtraction.take-away.number-line
+    relation: representational
+    points_to: procedure.2
+    why: Step 2 removes c lengths by jumping back on the line, as in representing a whole-number difference
+      on a number line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Removing c lengths can be done by crossing out parts of a strip; jumping back
+        on a number line is one representation. | other route: Fraction strips with c parts crossed out,
+        using fraction.subtraction.separating and fraction.non-unit.part-whole.'
+    status: disputed
 - clause: critic-route-1
   note: Fraction strips with c parts crossed out, no number line.
   all_of:

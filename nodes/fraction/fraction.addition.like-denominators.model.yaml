@@ -17,37 +17,8 @@ sources:
   - 4.NF.B.3.d
   learning_components: []
 requires:
-- clause: standard
+- clause: via-number-line
   all_of:
-  - node: fraction.non-unit.number-line
-    relation: representational
-    points_to: procedure.1
-    why: Step 1 shows a/b as a lengths of size 1/b on a partitioned number line or strip.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The statement allows fraction strips or a number line; showing a lengths of 1/b
-        on a strip does not need the number line.'
-    status: disputed
-  - node: addition.add-to.number-line
-    relation: representational
-    points_to: procedure.2
-    why: Step 2 places more lengths end to end after the first lengths, as in representing a sum on a
-      number line.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The statement allows fraction strips or a number line. Strips joined end to end
-        need no number-line addition.'
-    status: disputed
   - node: fraction.non-unit.unit-sum
     relation: definitional
     points_to: procedure.3
@@ -61,7 +32,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A36 keep: Keep - The model counts lengths of size 1/b.'
+    status: reviewed
   - node: fraction.addition.joining
     relation: definitional
     points_to: statement
@@ -76,6 +50,45 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: fraction.non-unit.number-line
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 shows a/b as a lengths of size 1/b on a partitioned number line or strip.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows fraction strips or a number line; showing a lengths of 1/b
+        on a strip does not need the number line. | other route: Show a/b as a shaded parts of a partitioned
+        fraction strip, using fraction.non-unit.part-whole.'
+    - kind: review
+      source: DK
+      note: 'D82 keep: Route-only - Fraction strips can model the addition without locating the fraction
+        on a number line.'
+    status: reviewed
+  - node: addition.add-to.number-line
+    relation: representational
+    points_to: procedure.2
+    why: Step 2 places more lengths end to end after the first lengths, as in representing a sum on a
+      number line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows fraction strips or a number line. Strips joined end to end
+        need no number-line addition. | other route: Fraction strips laid end to end, using fraction.addition.joining
+        and fraction.non-unit.part-whole, with no whole-number number-line representation.'
+    - kind: review
+      source: DK
+      note: 'D83 keep: Route-only - Joining fraction strips does not require whole-number addition on
+        a number line.'
+    status: reviewed
 - clause: critic-route-1
   note: Fraction strips laid end to end, no number line.
   all_of:
@@ -92,7 +105,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A36 keep: Keep - The model counts lengths of size 1/b.'
+    status: reviewed
   - node: fraction.addition.joining
     relation: definitional
     points_to: statement
@@ -115,5 +131,9 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing route
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D84 keep: Keep/add alternative route - Fraction strips provide the proposed route without
+        a number line.'
+    status: reviewed
 status: proposed

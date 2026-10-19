@@ -15,18 +15,6 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: linear-function.line.y-mx-plus-b.write
-    relation: representational
-    points_to: statement
-    why: The model is written y = mx + b and b is read as the constant term in that equation.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Reading b as the constant term of y = mx + b is one route; the other evaluates
-        the formula at input 0.'
-    status: disputed
   - node: expressions.variables
     relation: definitional
     points_to: statement
@@ -40,16 +28,16 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: functions.definition
-    relation: definitional
+  - node: linear-function.line.y-mx-plus-b.write
+    relation: representational
     points_to: statement
-    why: The initial value is the output the function assigns to the input 0.
+    why: The model is written y = mx + b and b is read as the constant term in that equation.
     evidence:
     - kind: content
-      source: pass-Q
+      source: pass-P
     - kind: content
       source: critic-sonnet
-      note: 'undecided: The initial value is the output at input 0, but it is unclear whether the formal
-        function definition is needed rather than informal dependence.'
+      note: 'route-only: Reading b as the constant term of y = mx + b is one route; the other evaluates
+        the formula at input 0. | other route: Evaluate the formula at x = 0 (expressions.variables).'
     status: disputed
 status: proposed

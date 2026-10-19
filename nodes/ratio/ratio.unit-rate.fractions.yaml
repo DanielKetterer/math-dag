@@ -34,7 +34,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A11 keep: Keep - The target explicitly computes a unit rate from a ratio.'
+    status: reviewed
   - node: fraction.quotient.symbolic
     relation: representational
     points_to: statement
@@ -85,7 +88,11 @@ requires:
       source: critic-sonnet
       note: 'undecided: fraction.complex-fraction is not in index.txt; step 1 writes a complex fraction,
         so some node for it is needed.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'C68 keep: Yes - Add a complex-fraction node because the procedure explicitly forms a fraction
+        whose numerator and denominator are fractions.'
+    status: reviewed
 related:
 - node: ratio.unit-rate.find
   relation: generalizes

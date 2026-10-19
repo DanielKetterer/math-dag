@@ -13,7 +13,7 @@ sources:
   learning_components:
   - e6525dd8
 requires:
-- clause: standard
+- clause: via-one-step
   all_of:
   - node: percent.of-quantity
     relation: definitional
@@ -41,8 +41,25 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Formal one-step equation solving is one route; the other reasons about the unknown
-        factor or uses unit steps (30% is 18, so 10% is 6).'
+        factor or uses unit steps (30% is 18, so 10% is 6). | other route: Unit-percent reasoning with
+        a ratio table (ratio.table.missing-value) or unknown-factor reasoning (division.fractions.unknown-factor).'
     status: disputed
+- clause: via-symbolic
+  all_of:
+  - node: percent.of-quantity
+    relation: definitional
+    points_to: statement
+    why: The statement (p/100) x W = part says the part is p percent of the whole W, which is the meaning
+      of finding a percent of a quantity.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
   - node: fraction.division.symbolic
     relation: procedural
     points_to: statement
@@ -54,7 +71,8 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: The division by p/100 may be done by the fraction rule, but also by decimal division
-        or by percent-unit reasoning.'
+        or by percent-unit reasoning. | other route: Divide by a decimal (18 divided by 0.30 with decimal.operations)
+        or reason by 10% steps with a ratio table.'
     status: disputed
 - clause: critic-route-1
   note: 'Unit-percent reasoning: find 1% or 10% from the given part, then scale to 100%'

@@ -16,30 +16,18 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: counting.sequence.recite
-    relation: representational
-    points_to: statement
-    why: Reading a numeral means saying the number word it stands for, so the learner must already know
-      the spoken number words from one to nine.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'undecided: Reading a numeral needs the spoken word for each digit, but not the ordered recitation
-        of the list; the words could be learned numeral by numeral. The test also includes 0, whose word
-        is outside counting.sequence.recite (which starts at one'
-    status: disputed
-  - node: number.word.zero
+  - node: counting.number-words.vocabulary
     relation: definitional
     points_to: statement
-    why: The test includes 0, whose spoken word and meaning are not in counting.sequence.recite, which
-      starts at one.
+    why: The test includes 0, and reading each numeral means saying its spoken name, so the learner needs
+      the number words zero through nine as vocabulary, not as a recited sequence.
     evidence:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D61 replace: KEEP; add number.word.zero: Because the assessment includes numeral 0, the spoken
+        label zero must be represented explicitly if the node is meant to cover every tested numeral.'
+    status: reviewed
 status: proposed

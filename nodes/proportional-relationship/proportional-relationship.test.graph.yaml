@@ -18,38 +18,8 @@ sources:
   learning_components:
   - e979a208
 requires:
-- clause: standard
+- clause: via-definition
   all_of:
-  - node: proportional-relationship.definition
-    relation: definitional
-    points_to: statement
-    why: 'The graph test restates the definition: constant y/x for x not 0 and y = 0 at x = 0 appear as
-      a line through the origin.'
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The graph criterion can be reached from plotted pairs of equivalent ratios without
-        the level 3 quotient definition.'
-    status: disputed
-  - node: ratio.table.plot
-    relation: representational
-    points_to: statement
-    why: Pairs of equivalent ratios plotted as points are the graph being tested, with each point an ordered
-      pair of corresponding quantities.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Plotted ratio-table pairs are one way to learn why the points lie on a line through
-        the origin; the quotient definition is the other.'
-    status: disputed
   - node: coordinate-plane.first-quadrant
     relation: procedural
     points_to: procedure.2
@@ -64,4 +34,52 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: proportional-relationship.definition
+    relation: definitional
+    points_to: statement
+    why: 'The graph test restates the definition: constant y/x for x not 0 and y = 0 at x = 0 appear as
+      a line through the origin.'
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The graph criterion can be reached from plotted pairs of equivalent ratios without
+        the level 3 quotient definition. | other route: Plot pairs of equivalent ratios and see them lie
+        on a line through the origin (ratio.equivalent, ratio.table.plot).'
+    status: disputed
+- clause: via-plot
+  all_of:
+  - node: coordinate-plane.first-quadrant
+    relation: procedural
+    points_to: procedure.2
+    why: Checking whether the line passes through (0, 0) requires reading coordinates of points in the
+      plane.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.table.plot
+    relation: representational
+    points_to: statement
+    why: Pairs of equivalent ratios plotted as points are the graph being tested, with each point an ordered
+      pair of corresponding quantities.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Plotted ratio-table pairs are one way to learn why the points lie on a line through
+        the origin; the quotient definition is the other. | other route: The constant-quotient definition
+        (proportional-relationship.definition).'
+    status: disputed
 status: proposed

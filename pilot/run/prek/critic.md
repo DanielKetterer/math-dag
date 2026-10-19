@@ -40,12 +40,19 @@ Classify each edge as exactly one of:
 
 - `necessary`: required, directly, by every credible route
 - `route-only`: required for one route; state the other route
-- `indirect`: required, but only through another prerequisite; name it
+- `indirect`: required, but only through another prerequisite; name it. Not
+  `indirect` when this node's own statement, procedure, or test problem uses
+  the skill itself: then the edge is direct (`task-only` if only the test
+  problem uses it), even though a chain of prerequisites also reaches it
 - `task-only`: required by the test problem, not by the idea
 - `scaffold`: helpful for teaching, not required
 - `related`: an associated idea or alternative representation; give the relation
 - `wrong`: incorrect or circular
 - `undecided`: say what fact would decide it
+
+Simplifying a fraction to lowest terms is its own node. It is a prerequisite
+only as a `task-only` edge, and only when the test problem asks for simplest
+form; "simplify if wanted" in a procedure does not make it one.
 
 Do not infer necessity from shared vocabulary, from a skill appearing in an
 example, or from a curriculum's ordering. Judge the relationship, not the

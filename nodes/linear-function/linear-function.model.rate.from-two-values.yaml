@@ -17,7 +17,7 @@ sources:
   - e1ce9802
   - c6f0747b
 requires:
-- clause: standard
+- clause: via-between-two-points
   all_of:
   - node: data.graphs.read
     relation: procedural
@@ -32,6 +32,16 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: rational-numbers.operations
+    relation: definitional
+    points_to: statement
+    why: Differences and quotients are negative for a decreasing function; the statement does not restrict
+      to increasing ones.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
   - node: slope.between-two-points
     relation: procedural
     points_to: procedure.2
@@ -44,7 +54,33 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: The same formula is taught as slope; function-first curricula teach it as change
-        in y over change in x for a table without slope.'
+        in y over change in x for a table without slope. | other route: Change in y per change in x as
+        a unit rate of the differences (ratio.unit-rate, rational-numbers.operations).'
+    status: disputed
+- clause: via-constant-on-line
+  all_of:
+  - node: data.graphs.read
+    relation: procedural
+    points_to: procedure.1
+    why: Reading two (x, y) pairs from a table or graph uses reading values from graphs and tables.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-numbers.operations
+    relation: definitional
+    points_to: statement
+    why: Differences and quotients are negative for a decreasing function; the statement does not restrict
+      to increasing ones.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
     status: disputed
   - node: slope.constant-on-line
     relation: justificatory
@@ -57,16 +93,7 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Constancy of the rate for any two pairs can come from linearity defined as constant
-        rate, not from slope on a line.'
-    status: disputed
-  - node: rational-numbers.operations
-    relation: definitional
-    points_to: statement
-    why: Differences and quotients are negative for a decreasing function; the statement does not restrict
-      to increasing ones.
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing prerequisite
+        rate, not from slope on a line. | other route: Linear function defined by constant rate, or equal
+        ratios of differences (ratio.equivalent).'
     status: disputed
 status: proposed

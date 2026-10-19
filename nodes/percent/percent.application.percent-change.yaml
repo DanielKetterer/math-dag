@@ -14,7 +14,7 @@ sources:
   - 892d2a63
   - 93360b70
 requires:
-- clause: standard
+- clause: via-equivalent
   all_of:
   - node: percent.rate-per-100
     relation: definitional
@@ -28,6 +28,15 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+  - node: subtraction.whole-number
+    relation: definitional
+    points_to: statement
+    why: The difference new - original is the first computation.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
   - node: ratio.equivalent
     relation: definitional
     points_to: statement
@@ -39,7 +48,31 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Scaling change:original to ?:100 is one route; the quotient-then-multiply formula
-        is the other.'
+        is the other. | other route: Compute the quotient (new - original)/original and multiply by 100
+        (fraction.quotient.symbolic, decimal.operations).'
+    status: disputed
+- clause: via-operations
+  all_of:
+  - node: percent.rate-per-100
+    relation: definitional
+    points_to: statement
+    why: Multiplying the relative change by 100 expresses it as parts per 100, which is the meaning of
+      a percent.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.whole-number
+    relation: definitional
+    points_to: statement
+    why: The difference new - original is the first computation.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
     status: disputed
   - node: decimal.operations
     relation: procedural
@@ -54,7 +87,8 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Dividing 10 by 50 to 0.2 is one route; the other scales change:original to an
-        equivalent ratio with 100 as the second term.'
+        equivalent ratio with 100 as the second term. | other route: Scale the ratio change:original to
+        a ratio with second term 100 (ratio.equivalent).'
     status: disputed
   - node: rational-numbers.operations
     relation: definitional
@@ -67,7 +101,31 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Signed values appear only if a decrease is recorded as negative; the magnitude
-        of the change with the word increase or decrease avoids negatives.'
+        of the change with the word increase or decrease avoids negatives. | other route: Compute the
+        difference as a positive amount and label it increase or decrease (subtraction.whole-number).'
+    status: disputed
+- clause: via-symbolic
+  all_of:
+  - node: percent.rate-per-100
+    relation: definitional
+    points_to: statement
+    why: Multiplying the relative change by 100 expresses it as parts per 100, which is the meaning of
+      a percent.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.whole-number
+    relation: definitional
+    points_to: statement
+    why: The difference new - original is the first computation.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
     status: disputed
   - node: fraction.quotient.symbolic
     relation: representational
@@ -80,15 +138,7 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: Writing the change over the original as a quotient fraction is one route; scaling
-        to 100 or decimal division are the others.'
-    status: disputed
-  - node: subtraction.whole-number
-    relation: definitional
-    points_to: statement
-    why: The difference new - original is the first computation.
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing prerequisite
+        to 100 or decimal division are the others. | other route: Scale to second term 100 (ratio.equivalent)
+        or divide as decimals (decimal.operations).'
     status: disputed
 status: proposed

@@ -16,23 +16,8 @@ sources:
   - b02c3de8
   - 539cab15
 requires:
-- clause: standard
+- clause: via-equivalent
   all_of:
-  - node: ratio.equivalent
-    relation: definitional
-    points_to: statement
-    why: Every pair having the same quotient y/x means all pairs are in equivalent ratios, the meaning
-      of equivalent ratios.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The statement is the constant-quotient definition, which can be learned directly
-        from unit rates; seeing all pairs as equivalent ratios is the other way into the idea.'
-    status: disputed
   - node: ratio.unit-rate
     relation: definitional
     points_to: statement
@@ -61,4 +46,21 @@ requires:
       note: 'task-only: Computing cost divided by visits for the gym is needed to apply the definition
         in the test problem, not to state it.'
     status: proposed
+  - node: ratio.equivalent
+    relation: definitional
+    points_to: statement
+    why: Every pair having the same quotient y/x means all pairs are in equivalent ratios, the meaning
+      of equivalent ratios.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement is the constant-quotient definition, which can be learned directly
+        from unit rates; seeing all pairs as equivalent ratios is the other way into the idea. | other
+        route: Constant quotient via the unit rate of each pair (ratio.unit-rate) without the equivalent-ratio
+        framing.'
+    status: disputed
 status: proposed

@@ -16,9 +16,9 @@ sources:
   - cs.compose.pre-part-whole
   - cs.compose.inexact-part-whole
 requires:
-- clause: via-perceptual
+- clause: standard
   all_of:
-  - node: quantity.more-than
+  - node: comparing.more-than
     relation: definitional
     points_to: statement
     why: The target states the whole has more than a part, which presupposes the notion of more.
@@ -26,45 +26,18 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
-    status: disputed
-  - node: comparing.count.perceptual
-    relation: definitional
-    points_to: statement
-    why: The claim that the combined set has more than either part uses the idea of one collection having
-      more than another.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The node needs the notion of ''has more'', not the perceptual skill, which only
-        works when one set is about twice the other; the test sets (7 and 4) are not. | other route: Ground
-        ''has more'' by matching, counting, or direct containment reasoning instead.'
-    status: disputed
-- clause: via-matching
-  all_of:
-  - node: quantity.more-than
-    relation: definitional
-    points_to: statement
-    why: The target states the whole has more than a part, which presupposes the notion of more.
-    evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing prerequisite
-    status: disputed
-  - node: comparing.count.matching
-    relation: justificatory
-    points_to: statement
-    why: The whole has more than a part because the part pairs off with some of the whole, leaving the
-      other part unpaired.
-    evidence:
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: This is a justification of why the whole exceeds the part; the target is a level
-        1 concept and does not require it. Matching is one way of grounding ''has more''. | other route:
-        Containment reasoning (the whole includes the part and more), or grounding ''more'' by counting
-        or perceptual comparison.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D55 require: KEEP; add quantity.more-than: The target''s central claim explicitly compares
+        the whole''s quantity with the quantities of its parts.'
+    - kind: review
+      source: DK
+      note: 'D57 require: KEEP, but merge with D55''s prerequisite: The same quantity.more-than concept
+        supports the target; representing it twice as separate route-specific dependencies is unnecessary.'
+    status: reviewed
+related:
+- node: comparing.count.matching
+  relation: common_path
+  note: 'Common path, not required: route ''via-matching'' needed everything another route needs and more,
+    so it was removed in review.'
 status: proposed

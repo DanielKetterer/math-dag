@@ -13,7 +13,7 @@ sources:
   - 6.NS.A.1
   learning_components: []
 requires:
-- clause: standard
+- clause: via-fraction
   all_of:
   - node: division.unknown-factor.meaning
     relation: definitional
@@ -29,21 +29,6 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: fraction.multiplication.parts-of-partition.fraction
-    relation: definitional
-    points_to: statement
-    why: The equation (c/d) x q = a/b multiplies a fraction by a fraction q, read as c parts of q split
-      into d equal parts.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: The equation (c/d) x q needs some meaning for a fraction times a fraction; the
-        partition reading is one.'
-    status: disputed
   - node: fraction.multiplication.symbolic
     relation: procedural
     points_to: assess
@@ -74,6 +59,22 @@ requires:
       note: 'task-only: Rewriting the specific division as a multiplication with an unknown is the test
         problem''s task; the statement defines the quotient, which e459 covers.'
     status: proposed
+  - node: fraction.multiplication.parts-of-partition.fraction
+    relation: definitional
+    points_to: statement
+    why: The equation (c/d) x q = a/b multiplies a fraction by a fraction q, read as c parts of q split
+      into d equal parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The equation (c/d) x q needs some meaning for a fraction times a fraction; the
+        partition reading is one. | other route: Meaning of the fraction product through the product rule
+        or an area model (fraction.multiplication.product-rule, multiplication.array-area.fraction-product.represent).'
+    status: disputed
 - clause: critic-route-1
   note: Meaning of fraction x fraction via the symbolic product rule or area model rather than the partition
     reading

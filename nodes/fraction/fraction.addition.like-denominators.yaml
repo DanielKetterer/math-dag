@@ -16,8 +16,24 @@ sources:
   - 4.NF.B.3.d
   learning_components: []
 requires:
-- clause: standard
+- clause: via-model
   all_of:
+  - node: addition.whole-number
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds the two numerators as whole numbers, possibly with several digits.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    - kind: review
+      source: DK
+      note: 'A3 keep: Keep - The procedure adds the whole-number numerators.'
+    status: reviewed
   - node: fraction.addition.like-denominators.model
     relation: representational
     points_to: statement
@@ -31,21 +47,14 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'route-only: A level 3 rule need not be derived from the length model; the model is one source
-        for it.'
-    status: disputed
-  - node: addition.whole-number
-    relation: procedural
-    points_to: procedure.2
-    why: Step 2 adds the two numerators as whole numbers, possibly with several digits.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
+        for it. | other route: Derive or learn the rule from the unit-sum meaning (a/b is a copies of
+        1/b, so a copies plus c copies is a + c copies) or by direct instruction of the rule with a check
+        that denominators match, via fraction.non-unit.unit-sum and fraction.addition.joining.'
+    - kind: review
+      source: DK
+      note: 'D85 keep: Route-only - The symbolic addition rule can be taught directly or from the unit-sum
+        meaning, without requiring the model procedure.'
+    status: reviewed
 - clause: critic-route-1
   note: Rule from the unit-sum meaning (a copies plus c copies of 1/b make a + c copies) or direct instruction
     with a check that denominators match.
@@ -62,7 +71,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A3 keep: Keep - The procedure adds the whole-number numerators.'
+    status: reviewed
   - node: fraction.non-unit.unit-sum
     relation: definitional
     points_to: statement
@@ -72,7 +84,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing route
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D86 keep: Keep/add alternative route - Counting copies of 1/b provides an alternative derivation
+        of the symbolic addition rule.'
+    status: reviewed
   - node: fraction.addition.joining
     relation: definitional
     points_to: statement
@@ -82,5 +98,9 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing route
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D87 keep: Keep/add alternative route - Understanding addition as joining parts of the same
+        whole provides another route.'
+    status: reviewed
 status: proposed
