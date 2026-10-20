@@ -143,6 +143,14 @@ missing from both.
   prerequisite?
 - Some ids were retired as too broad (for example `addition.whole-number`);
   they are not in the index. Point at the specific node instead.
+- **A computation is not a method.** When a node needs a sum, difference,
+  product or quotient but any method would do, point at the method-neutral
+  node for that range (Find a sum within 10, Add within 100, Add within 1000,
+  Multiply a whole number by a one-digit number, Divide by a one-digit number,
+  the fact nodes). Point at a method (count all, partial products, the standard
+  algorithm, a base-ten model) only when this node's statement, procedure or
+  test problem requires that method. (Daniel's phase 1 review: 7 of 10 wrong
+  edges named a method.)
 
 ## Boundary list (referenced, not yet written)
 

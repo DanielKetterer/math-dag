@@ -54,6 +54,13 @@ Simplifying a fraction to lowest terms is its own node. It is a prerequisite
 only as a `task-only` edge, and only when the test problem asks for simplest
 form; "simplify if wanted" in a procedure does not make it one.
 
+A computation is not a method. An edge to one method (count all, partial
+products, the standard algorithm, a base-ten model) for a computation any
+method would do is `wrong` for that target; name the method-neutral node from
+the index in your reason (Add within 100, Multiply a whole number by a
+one-digit number, and so on). Keep the method only when the node's statement,
+procedure or test problem requires it.
+
 Do not infer necessity from shared vocabulary, from a skill appearing in an
 example, or from a curriculum's ordering. Judge the relationship, not the
 quality of its explanation: a fluent, specific rationale is not evidence that an

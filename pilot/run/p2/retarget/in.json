@@ -1,5 +1,102 @@
 {
  "candidates": {
+  "coordinate-plane.first-quadrant": [
+   {
+    "id": "coordinate-plane.first-quadrant.plot",
+    "level": 2,
+    "type": "procedure",
+    "name": "Plot a point with whole-number coordinates in the first quadrant",
+    "statement": "Plot the point with given whole-number coordinates (a, b) on a first-quadrant coordinate grid."
+   },
+   {
+    "id": "coordinate-plane.first-quadrant.read",
+    "level": 2,
+    "type": "procedure",
+    "name": "Read the coordinates of a point in the first quadrant",
+    "statement": "Give the ordered pair of whole-number coordinates of a point plotted on a first-quadrant coordinate grid."
+   }
+  ],
+  "data.graphs.read": [
+   {
+    "id": "data.categorical.read-count",
+    "level": 2,
+    "type": "representation",
+    "name": "Read the count of a category from a chart or picture graph",
+    "statement": "The number of data points in one category is read from a tally chart, table, or picture graph with one mark or picture per data point."
+   },
+   {
+    "id": "data.bar-graph.read",
+    "level": 2,
+    "type": "representation",
+    "name": "Read a category's count from a bar graph with a single-unit scale",
+    "statement": "The count for a category in a bar graph is the number on the scale level with the end of that category's bar."
+   }
+  ],
+  "measurement.unit-conversion": [
+   {
+    "id": "measurement.unit-conversion.multiplicative-relation",
+    "level": 2,
+    "type": "concept",
+    "name": "A measurement in a smaller unit is k times its number in the larger unit",
+    "statement": "If 1 larger unit equals k smaller units, then the number of smaller units in any measurement is k times the number of larger units, because each larger unit is replaced by k smaller ones."
+   },
+   {
+    "id": "measurement.unit-conversion.to-smaller.whole",
+    "level": 3,
+    "type": "procedure",
+    "name": "Convert a whole-number measurement to a smaller unit",
+    "statement": "A measurement of n larger units, with n a whole number and 1 larger unit = k smaller units, equals n x k smaller units."
+   },
+   {
+    "id": "measurement.unit-conversion.to-smaller.mixed-units",
+    "level": 3,
+    "type": "procedure",
+    "name": "Write a two-unit measurement in the smaller unit",
+    "statement": "A measurement of a larger units and b smaller units, with 1 larger unit = k smaller units, equals a x k + b smaller units."
+   },
+   {
+    "id": "measurement.unit-conversion.to-smaller.decimal",
+    "level": 3,
+    "type": "procedure",
+    "name": "Convert a decimal metric measurement to a smaller unit",
+    "statement": "A metric measurement written as a decimal is converted to a smaller unit by multiplying it by the power of ten (10, 100, or 1000) that relates the two units."
+   },
+   {
+    "id": "measurement.unit-conversion.to-smaller.fraction",
+    "level": 3,
+    "type": "procedure",
+    "name": "Convert a fractional measurement to a smaller unit",
+    "statement": "A measurement of a/b larger units, with 1 larger unit = k smaller units, equals (a/b) x k smaller units."
+   },
+   {
+    "id": "measurement.unit-conversion.to-larger.whole",
+    "level": 3,
+    "type": "procedure",
+    "name": "Convert a measurement to a larger unit with a whole-number result",
+    "statement": "When 1 larger unit = k smaller units and n is a multiple of k, n smaller units equal n divided by k larger units."
+   },
+   {
+    "id": "measurement.unit-conversion.to-larger.mixed-units",
+    "level": 3,
+    "type": "procedure",
+    "name": "Write a measurement in larger and smaller units together",
+    "statement": "When 1 larger unit = k smaller units, n smaller units equal q larger units and r smaller units, where q and r are the whole-number quotient and remainder of n divided by k."
+   },
+   {
+    "id": "measurement.unit-conversion.to-larger.decimal",
+    "level": 3,
+    "type": "procedure",
+    "name": "Convert a metric measurement to a larger unit as a decimal",
+    "statement": "A metric measurement is converted to a larger unit by dividing it by the power of ten (10, 100, or 1000) that relates the two units, giving a decimal when the division is not exact."
+   },
+   {
+    "id": "measurement.unit-conversion.to-larger.fraction",
+    "level": 3,
+    "type": "procedure",
+    "name": "Convert a measurement to a larger unit as a fraction",
+    "statement": "When 1 larger unit = k smaller units, n smaller units equal n/k larger units, written as a fraction or mixed number."
+   }
+  ],
   "place-value.expanded-form": [
    {
     "id": "place-value.expanded-form",
@@ -1412,6 +1509,49 @@
    "why": "The statement compares the whole numbers a and b, deciding which is greater; the comparison symbols are not used."
   },
   "r64": {
+   "node": "linear-function.model.initial.from-two-values",
+   "route": "standard",
+   "old_target": "data.graphs.read",
+   "statement": "The initial value of a linear function is its output at x = 0; when x = 0 is not shown, it is b = y1 - m x x1 for any shown pair (x1, y1).",
+   "procedure": [
+    "If the table or graph shows the point with x = 0, read its y-value as b.",
+    "Otherwise find the rate of change m from two shown pairs.",
+    "Compute b = y1 - m x x1 for one shown pair (x1, y1)."
+   ],
+   "assess": "A table for a linear function shows x = 2, y = 11 and x = 5, y = 20. Find the initial value.",
+   "points_to": "procedure.1",
+   "scope": "concept",
+   "why": "Reading the y-value at x = 0 from a table or graph uses reading values from graphs and tables."
+  },
+  "r65": {
+   "node": "linear-function.model.rate.from-two-values",
+   "route": "via-between-two-points",
+   "old_target": "data.graphs.read",
+   "statement": "The rate of change of a linear function, from two (x, y) values read from a table or graph with different x, is (y2 - y1)/(x2 - x1).",
+   "procedure": [
+    "Read two pairs (x1, y1) and (x2, y2) with x1 not equal to x2.",
+    "Compute m = (y2 - y1)/(x2 - x1)."
+   ],
+   "assess": "A table for a linear function shows x = 2, y = 11 and x = 5, y = 20. Find the rate of change.",
+   "points_to": "procedure.1",
+   "scope": "concept",
+   "why": "Reading two (x, y) pairs from a table or graph uses reading values from graphs and tables."
+  },
+  "r66": {
+   "node": "linear-function.model.rate.from-two-values",
+   "route": "via-constant-on-line",
+   "old_target": "data.graphs.read",
+   "statement": "The rate of change of a linear function, from two (x, y) values read from a table or graph with different x, is (y2 - y1)/(x2 - x1).",
+   "procedure": [
+    "Read two pairs (x1, y1) and (x2, y2) with x1 not equal to x2.",
+    "Compute m = (y2 - y1)/(x2 - x1)."
+   ],
+   "assess": "A table for a linear function shows x = 2, y = 11 and x = 5, y = 20. Find the rate of change.",
+   "points_to": "procedure.1",
+   "scope": "concept",
+   "why": "Reading two (x, y) pairs from a table or graph uses reading values from graphs and tables."
+  },
+  "r67": {
    "node": "multiplication.area-model.by-one-digit.explain",
    "route": "standard",
    "old_target": "place-value.expanded-form",
@@ -1422,7 +1562,7 @@
    "scope": "concept",
    "why": "The statement splits the long side into its place-value parts, which is expanded form drawn as segments."
   },
-  "r65": {
+  "r68": {
    "node": "multiplication.area-model.two-digit-by-two-digit.explain",
    "route": "standard",
    "old_target": "place-value.expanded-form",
@@ -1433,7 +1573,7 @@
    "scope": "concept",
    "why": "The statement splits each side into tens and ones, which is expanded form drawn as segments."
   },
-  "r66": {
+  "r69": {
    "node": "multiplication.associative",
    "route": "standard",
    "old_target": "expressions.grouping.evaluate",
@@ -1444,7 +1584,7 @@
    "scope": "concept",
    "why": "The statement is written with parentheses showing which adjacent pair is multiplied first."
   },
-  "r67": {
+  "r70": {
    "node": "multiplication.associative.strategy",
    "route": "standard",
    "old_target": "expressions.grouping.evaluate",
@@ -1459,7 +1599,7 @@
    "scope": "concept",
    "why": "Step 2 puts parentheses around a pair and step 3 multiplies the parenthesized pair first."
   },
-  "r68": {
+  "r71": {
    "node": "multiplication.by-multiple-of-ten",
    "route": "standard",
    "old_target": "addition.base-ten.compose-unit",
@@ -1474,7 +1614,7 @@
    "scope": "concept",
    "why": "Naming 42 tens as 420 trades ten tens for a hundred, which is composing a unit."
   },
-  "r69": {
+  "r72": {
    "node": "multiplication.distributive",
    "route": "standard",
    "old_target": "expressions.grouping.evaluate",
@@ -1485,7 +1625,7 @@
    "scope": "concept",
    "why": "The statement and the test problem use parentheses to show that the sum b + c is found first."
   },
-  "r70": {
+  "r73": {
    "node": "multiplication.distributive.strategy",
    "route": "standard",
    "old_target": "addition.base-ten.strategy",
@@ -1500,7 +1640,7 @@
    "scope": "concept",
    "why": "Step 3 adds two products, often two-digit numbers, by a place-value addition strategy."
   },
-  "r71": {
+  "r74": {
    "node": "multiplication.multiple-of-ten.by-multiple-of-ten",
    "route": "standard",
    "old_target": "addition.base-ten.compose-unit",
@@ -1515,7 +1655,7 @@
    "scope": "concept",
    "why": "Step 3 reads 12 hundreds as 1200, which regroups ten hundreds as a thousand."
   },
-  "r72": {
+  "r75": {
    "node": "multiplication.partial-products.by-one-digit",
    "route": "standard",
    "old_target": "place-value.expanded-form",
@@ -1530,7 +1670,7 @@
    "scope": "concept",
    "why": "Step 1 splits the multi-digit factor into thousands, hundreds, tens and ones."
   },
-  "r73": {
+  "r76": {
    "node": "multiplication.partial-products.by-one-digit",
    "route": "standard",
    "old_target": "addition.standard-algorithm",
@@ -1545,7 +1685,7 @@
    "scope": "concept",
    "why": "Step 3 adds partial products such as 21000 + 5600 + 280 + 42, which exceed 1000."
   },
-  "r74": {
+  "r77": {
    "node": "multiplication.partial-products.two-digit-by-two-digit",
    "route": "standard",
    "old_target": "place-value.expanded-form",
@@ -1560,7 +1700,7 @@
    "scope": "concept",
    "why": "Step 1 splits each factor into tens and ones."
   },
-  "r75": {
+  "r78": {
    "node": "multiplication.partial-products.two-digit-by-two-digit",
    "route": "standard",
    "old_target": "addition.standard-algorithm",
@@ -1575,7 +1715,7 @@
    "scope": "concept",
    "why": "Step 3 adds four partial products that can total over 1000."
   },
-  "r76": {
+  "r79": {
    "node": "multiplication.standard-algorithm",
    "route": "standard",
    "old_target": "addition.standard-algorithm",
@@ -1591,7 +1731,7 @@
    "scope": "concept",
    "why": "Step 4 adds all the rows with the standard addition algorithm."
   },
-  "r77": {
+  "r80": {
    "node": "number-composition.within-5",
    "route": "via-count-all",
    "old_target": "addition.add-to.count-all",
@@ -1602,7 +1742,7 @@
    "scope": "concept",
    "why": "The whole of two known parts is the total of the two joined sets, which the join-and-count procedure finds."
   },
-  "r78": {
+  "r81": {
    "node": "numeral.record-collection",
    "route": "standard",
    "old_target": "numeral.write.to-1000",
@@ -1613,7 +1753,7 @@
    "scope": "concept",
    "why": "The two- and three-digit number found by counting is recorded as a written numeral such as 73."
   },
-  "r79": {
+  "r82": {
    "node": "numeral.write.periods",
    "route": "standard",
    "old_target": "numeral.write.to-1000",
@@ -1628,7 +1768,7 @@
    "scope": "concept",
    "why": "The number said before thousand and the three-digit part after it are each written as a numeral up to 999."
   },
-  "r80": {
+  "r83": {
    "node": "operations.application.justify-solution",
    "route": "standard",
    "old_target": "operations.application.multistep",
@@ -1639,7 +1779,7 @@
    "scope": "concept",
    "why": "The solution being justified is for a one-step or multi-step word problem whose conditions the learner must understand."
   },
-  "r81": {
+  "r84": {
    "node": "operations.application.justify-solution",
    "route": "standard",
    "old_target": "multiplication.partial-products.two-digit-by-two-digit",
@@ -1650,7 +1790,7 @@
    "scope": "task",
    "why": "Showing that 13 cartons of 12 give 156 eggs requires multiplying 13 by 12."
   },
-  "r82": {
+  "r85": {
    "node": "operations.application.multistep.remainder",
    "route": "standard",
    "old_target": "operations.application.multistep",
@@ -1661,7 +1801,7 @@
    "scope": "concept",
    "why": "The statement is a multi-step problem in which the learner chooses and carries out the steps."
   },
-  "r83": {
+  "r86": {
    "node": "operations.application.multistep.remainder",
    "route": "standard",
    "old_target": "division.partial-quotients.one-digit-divisor.remainder",
@@ -1672,7 +1812,7 @@
    "scope": "concept",
    "why": "The problem includes a division with a remainder, so the quotient and remainder must be found."
   },
-  "r84": {
+  "r87": {
    "node": "operations.application.reasonableness",
    "route": "standard",
    "old_target": "operations.application.multistep",
@@ -1683,7 +1823,18 @@
    "scope": "concept",
    "why": "The answer judged is the answer to a multi-step whole-number word problem."
   },
-  "r85": {
+  "r88": {
+   "node": "patterns.numerical.graph-pairs",
+   "route": "standard",
+   "old_target": "coordinate-plane.first-quadrant",
+   "statement": "The ordered pairs formed from corresponding terms of two patterns are plotted as points in the first quadrant, the first term on the horizontal axis and the second on the vertical axis.",
+   "procedure": null,
+   "assess": "Plot the points (0, 0), (3, 6), (6, 12), (9, 18) on a coordinate grid; they are corresponding terms of two patterns.",
+   "points_to": "statement",
+   "scope": "concept",
+   "why": "The statement plots points in the first quadrant with the first term on the horizontal axis."
+  },
+  "r89": {
    "node": "place-value.expanded-form.decimal",
    "route": "standard",
    "old_target": "place-value.expanded-form",
@@ -1697,7 +1848,92 @@
    "scope": "concept",
    "why": "The whole-number part of 347.392 is expanded in the same way as a whole number, one term per digit."
   },
-  "r86": {
+  "r90": {
+   "node": "proportional-relationship.constant.graph",
+   "route": "standard",
+   "old_target": "coordinate-plane.first-quadrant",
+   "statement": "For the graph of a proportional relationship, k is y/x for any point (x, y) on the line other than the origin.",
+   "procedure": [
+    "Choose a point (x, y) on the line, other than (0, 0), whose coordinates can be read exactly.",
+    "Compute k = y/x."
+   ],
+   "assess": "A proportional graph is a line through (0, 0) and (2, 5). Find the constant of proportionality.",
+   "points_to": "procedure.1",
+   "scope": "concept",
+   "why": "Choosing a point whose coordinates can be read exactly requires reading ordered pairs from the first quadrant."
+  },
+  "r91": {
+   "node": "proportional-relationship.graph.make",
+   "route": "via-unit-rate-point",
+   "old_target": "coordinate-plane.first-quadrant",
+   "statement": "The graph of a proportional relationship y = kx is the line through the origin and the point (1, k).",
+   "procedure": [
+    "Plot (0, 0).",
+    "Plot (x, k x x) for one convenient x not 0.",
+    "Draw the line through the two points (only the part where both quantities make sense, if the situation restricts them)."
+   ],
+   "assess": "Graph y = 2.5x for x from 0 to 4.",
+   "points_to": "procedure.2",
+   "scope": "concept",
+   "why": "Plotting (0, 0) and the point (x, k x x) and drawing the line through them is done in the first quadrant."
+  },
+  "r92": {
+   "node": "proportional-relationship.graph.make",
+   "route": "critic-route-1",
+   "old_target": "coordinate-plane.first-quadrant",
+   "statement": "The graph of a proportional relationship y = kx is the line through the origin and the point (1, k).",
+   "procedure": [
+    "Plot (0, 0).",
+    "Plot (x, k x x) for one convenient x not 0.",
+    "Draw the line through the two points (only the part where both quantities make sense, if the situation restricts them)."
+   ],
+   "assess": "Graph y = 2.5x for x from 0 to 4.",
+   "points_to": "procedure.2",
+   "scope": "concept",
+   "why": "Plotting (0, 0) and the point (x, k x x) and drawing the line through them is done in the first quadrant."
+  },
+  "r93": {
+   "node": "proportional-relationship.graph.point-meaning",
+   "route": "via-plot",
+   "old_target": "coordinate-plane.first-quadrant",
+   "statement": "A point (x, y) on the graph of a proportional relationship means that x units of the first quantity correspond to y units of the second in the situation.",
+   "procedure": null,
+   "assess": "A graph of a cyclist's distance d (miles) against time t (hours) is a line through (0, 0) and (3, 36). Explain what the point (3, 36) means.",
+   "points_to": "statement",
+   "scope": "concept",
+   "why": "A point (x, y) as an ordered pair of coordinates is the object being interpreted."
+  },
+  "r94": {
+   "node": "proportional-relationship.test.graph",
+   "route": "via-definition",
+   "old_target": "coordinate-plane.first-quadrant",
+   "statement": "A graph shows a proportional relationship exactly when its points lie on a single straight line that passes through the origin.",
+   "procedure": [
+    "Check whether all plotted points lie on one straight line.",
+    "Check whether that line passes through (0, 0).",
+    "The relationship is proportional exactly when both checks hold."
+   ],
+   "assess": "Graph A is a line through (0, 1) and (2, 5). Graph B is a line through (0, 0) and (3, 4). Which shows a proportional relationship?",
+   "points_to": "procedure.2",
+   "scope": "concept",
+   "why": "Checking whether the line passes through (0, 0) requires reading coordinates of points in the plane."
+  },
+  "r95": {
+   "node": "proportional-relationship.test.graph",
+   "route": "via-plot",
+   "old_target": "coordinate-plane.first-quadrant",
+   "statement": "A graph shows a proportional relationship exactly when its points lie on a single straight line that passes through the origin.",
+   "procedure": [
+    "Check whether all plotted points lie on one straight line.",
+    "Check whether that line passes through (0, 0).",
+    "The relationship is proportional exactly when both checks hold."
+   ],
+   "assess": "Graph A is a line through (0, 1) and (2, 5). Graph B is a line through (0, 0) and (3, 4). Which shows a proportional relationship?",
+   "points_to": "procedure.2",
+   "scope": "concept",
+   "why": "Checking whether the line passes through (0, 0) requires reading coordinates of points in the plane."
+  },
+  "r96": {
    "node": "ratio.application.multistep",
    "route": "standard",
    "old_target": "subtraction.base-ten.strategy",
@@ -1708,7 +1944,29 @@
    "scope": "task",
    "why": "The test problem asks how many more girls than boys, which requires subtracting the two part amounts."
   },
-  "r87": {
+  "r97": {
+   "node": "ratio.conversion-factor",
+   "route": "via-by-one",
+   "old_target": "measurement.unit-conversion",
+   "statement": "A conversion factor is a ratio of two equal measurements in different units, such as 12 in : 1 ft, so multiplying a measurement by (12 in)/(1 ft) changes its unit without changing its size.",
+   "procedure": null,
+   "assess": "To change 5 ft to inches, should you multiply by (12 in)/(1 ft) or by (1 ft)/(12 in)? Why does the length stay the same?",
+   "points_to": "statement",
+   "scope": "concept",
+   "why": "The two measurements in a conversion factor are equal amounts in different units, the equivalence 12 in = 1 ft used in unit conversion."
+  },
+  "r98": {
+   "node": "ratio.conversion-factor",
+   "route": "via-as-fraction",
+   "old_target": "measurement.unit-conversion",
+   "statement": "A conversion factor is a ratio of two equal measurements in different units, such as 12 in : 1 ft, so multiplying a measurement by (12 in)/(1 ft) changes its unit without changing its size.",
+   "procedure": null,
+   "assess": "To change 5 ft to inches, should you multiply by (12 in)/(1 ft) or by (1 ft)/(12 in)? Why does the length stay the same?",
+   "points_to": "statement",
+   "scope": "concept",
+   "why": "The two measurements in a conversion factor are equal amounts in different units, the equivalence 12 in = 1 ft used in unit conversion."
+  },
+  "r99": {
    "node": "ratio.double-number-line",
    "route": "standard",
    "old_target": "division.partial-quotients.one-digit-divisor",
@@ -1719,7 +1977,7 @@
    "scope": "task",
    "why": "Finding the distance for 2 gallons from 150 miles on 5 gallons means dividing 150 by 5 to mark 1 gallon."
   },
-  "r88": {
+  "r100": {
    "node": "ratio.table.compare",
    "route": "standard",
    "old_target": "comparing.whole-numbers.magnitude",
@@ -1734,7 +1992,21 @@
    "scope": "concept",
    "why": "Deciding which ratio has more of the second quantity decides which of two whole-number values in the shared rows is greater."
   },
-  "r89": {
+  "r101": {
+   "node": "ratio.table.plot",
+   "route": "standard",
+   "old_target": "coordinate-plane.first-quadrant",
+   "statement": "Each row (x, y) of a ratio table is plotted as the point (x, y), with the first quantity on the horizontal axis and the second on the vertical axis.",
+   "procedure": [
+    "Label the horizontal axis with the first quantity and the vertical axis with the second.",
+    "For each row (x, y), plot the point x units right and y units up from the origin."
+   ],
+   "assess": "Plot the pairs from this table of cups of rice to cups of water: 1:2, 2:4, 3:6, 4:8.",
+   "points_to": "procedure.2",
+   "scope": "concept",
+   "why": "Plotting the point x units right and y units up from the origin is plotting a point in the first quadrant."
+  },
+  "r102": {
    "node": "rounding.whole-number.any-place",
    "route": "standard",
    "old_target": "addition.base-ten.compose-unit",
@@ -1750,7 +2022,7 @@
    "scope": "concept",
    "why": "Adding one unit of the rounding place when the digit is 9, as in 9,962 to the nearest hundred, needs composing a unit of the next place."
   },
-  "r90": {
+  "r103": {
    "node": "rounding.whole-number.nearest-ten-hundred",
    "route": "via-hundreds-tens-ones",
    "old_target": "comparing.whole-numbers.magnitude",
@@ -1765,7 +2037,7 @@
    "scope": "concept",
    "why": "Deciding whether the number is at or past the halfway number is a comparison of two whole numbers."
   },
-  "r91": {
+  "r104": {
    "node": "rounding.whole-number.nearest-ten-hundred",
    "route": "critic-route-1",
    "old_target": "comparing.whole-numbers.magnitude",
@@ -1780,7 +2052,7 @@
    "scope": "concept",
    "why": "Deciding whether the number is at or past the halfway number is a comparison of two whole numbers."
   },
-  "r92": {
+  "r105": {
    "node": "subtraction.application.compare.bigger-unknown",
    "route": "via-count-all",
    "old_target": "addition.add-to.count-all",
@@ -1791,7 +2063,7 @@
    "scope": "concept",
    "why": "The larger amount is found by joining the smaller amount and the difference and counting all."
   },
-  "r93": {
+  "r106": {
    "node": "subtraction.application.take-from.change-unknown",
    "route": "via-count-back",
    "old_target": "subtraction.count-back",
@@ -1802,7 +2074,7 @@
    "scope": "concept",
    "why": "The amount taken is found by counting back from the start to the amount left while tracking how many were counted."
   },
-  "r94": {
+  "r107": {
    "node": "subtraction.application.take-from.start-unknown",
    "route": "via-count-on",
    "old_target": "addition.count-on",
@@ -1813,7 +2085,7 @@
    "scope": "concept",
    "why": "With objects, the amount left and the amount taken are put together and counted on to find the start."
   },
-  "r95": {
+  "r108": {
    "node": "subtraction.base-ten.add-up",
    "route": "standard",
    "old_target": "addition.base-ten.strategy",
@@ -1828,7 +2100,7 @@
    "scope": "concept",
    "why": "Step 3 totals the jumps such as 2 + 20 + 300 + 3, a partial-sums addition without a model."
   },
-  "r96": {
+  "r109": {
    "node": "subtraction.base-ten.explain",
    "route": "via-count-remaining",
    "old_target": "subtraction.base-ten.strategy",
@@ -1839,7 +2111,7 @@
    "scope": "concept",
    "why": "The statement explains why taking away place-value parts gives the correct difference, so that strategy is what is justified."
   },
-  "r97": {
+  "r110": {
    "node": "subtraction.base-ten.explain",
    "route": "via-count-remaining",
    "old_target": "place-value.expanded-form",
@@ -1850,7 +2122,7 @@
    "scope": "task",
    "why": "The test problem splits 358 into 300 + 50 + 8, which is expanded form."
   },
-  "r98": {
+  "r111": {
    "node": "subtraction.base-ten.explain",
    "route": "via-count-remaining",
    "old_target": "expressions.grouping.evaluate",
@@ -1861,7 +2133,7 @@
    "scope": "concept",
    "why": "The identity a - (b + c) = (a - b) - c and the test expression use parentheses, which must be read as do-this-first."
   },
-  "r99": {
+  "r112": {
    "node": "subtraction.base-ten.relate-written",
    "route": "standard",
    "old_target": "subtraction.base-ten.model",
@@ -1872,7 +2144,7 @@
    "scope": "concept",
    "why": "The statement relates each step of a base-ten subtraction model to the written method, so the model is one of the two things related."
   },
-  "r100": {
+  "r113": {
    "node": "subtraction.base-ten.strategy",
    "route": "standard",
    "old_target": "place-value.expanded-form",
@@ -1888,7 +2160,7 @@
    "scope": "concept",
    "why": "Step 1 splits the subtrahend into hundreds, tens and ones, which is writing it in expanded form."
   },
-  "r101": {
+  "r114": {
    "node": "subtraction.comparison.number-line",
    "route": "standard",
    "old_target": "subtraction.base-ten.strategy",
@@ -1903,7 +2175,7 @@
    "scope": "concept",
    "why": "The statement says the length of the segment is a - b, so the meaning of subtraction is needed to name that length."
   },
-  "r102": {
+  "r115": {
    "node": "subtraction.comparison.number-line",
    "route": "standard",
    "old_target": "addition.base-ten.strategy",
@@ -1918,7 +2190,7 @@
    "scope": "concept",
    "why": "Step 3 adds the lengths of the jumps to get the total distance."
   },
-  "r103": {
+  "r116": {
    "node": "subtraction.take-away.number-line",
    "route": "standard",
    "old_target": "subtraction.base-ten.strategy",
@@ -1933,7 +2205,7 @@
    "scope": "concept",
    "why": "The model represents a - b as what remains when b is taken away from a, so that meaning of subtraction is used."
   },
-  "r104": {
+  "r117": {
    "node": "subtraction.within-20.fluency",
    "route": "via-decompose-to-ten",
    "old_target": "subtraction.decompose-to-ten",
