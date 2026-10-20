@@ -24,6 +24,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 from build_phase import RESERVED, written_nodes  # noqa: E402
 
+# Extra skeleton files proposed and criticized inside another strand's batch
+# (fix-up nodes written inline are too few to pay an agent's start-up cost).
+ATTACH = {"p2": {"F": "G1"}}
 FIELDS = ("id", "concept", "facet", "level", "type", "name", "statement", "procedure", "assess", "sources",
           "strand")
 LATER_MEANINGS = {}  # boundary meanings from earlier proposer packets
@@ -87,7 +90,11 @@ def main(d, apply_concepts):
             notes.append(f"same name, check for a duplicate: {v}")
 
     os.makedirs(os.path.join(d, "batches"), exist_ok=True)
+    attach = ATTACH.get(os.path.basename(d.rstrip("/")), {})
     for s, ns in strands.items():
+        if s in attach:
+            continue
+        ns = ns + [n for a, host in attach.items() if host == s for n in strands.get(a, [])]
         out = [{k: n[k] for k in FIELDS if k in n} for n in ns]
         with open(os.path.join(d, "batches", f"{s}.yaml"), "w", encoding="utf-8") as f:
             yaml.safe_dump(out, f, sort_keys=False, width=100, allow_unicode=False)

@@ -1,0 +1,46 @@
+new_concepts:
+  - {concept: measurement, facet: mass, reason: "Mass and customary weight units (g, kg, oz, lb); school treatment uses one attribute for both"}
+  - {concept: measurement, facet: liquid-volume, reason: "Liquid volume units (mL, L)"}
+  - {concept: measurement, facet: time, reason: "Units of time (sec, min, hr) and time intervals"}
+  - {concept: measurement, facet: unit-conversion, reason: "One quantity expressed in two units of a system, related by a multiplicative factor k"}
+  - {concept: measurement, facet: quantity, reason: "A measurement as a number of units combined arithmetically in word problems, across distance, liquid volume, mass, and money"}
+  - {concept: number-line, facet: measurement-scale, reason: "A number line whose marks are labeled in a unit of measure, with intervals that need not be one unit"}
+  - {concept: area, facet: unit-squares, reason: "Area as the number of unit squares covering a region; used for the rectangle formula nodes. M2 likely proposes the same concept and facet; merge if so"}
+  - {concept: perimeter, facet: core, reason: "Distance around a figure; perimeter has a single meaning in this range"}
+  - {concept: data, facet: line-plot, reason: "Measurement data displayed as Xs above a number line"}
+  - {concept: angle, facet: measure, reason: "Angle measure as the fraction of a turn between two rays, counted in one-degree angles"}
+  - {concept: volume, facet: unit-cubes, reason: "Volume as the number of unit cubes that pack a solid without gaps or overlaps"}
+retires:
+  - id: measurement.unit-conversion
+    replaced_by:
+      - measurement.unit-conversion.multiplicative-relation
+      - measurement.unit-conversion.to-smaller.whole
+      - measurement.unit-conversion.to-smaller.mixed-units
+      - measurement.unit-conversion.to-smaller.decimal
+      - measurement.unit-conversion.to-smaller.fraction
+      - measurement.unit-conversion.to-larger.whole
+      - measurement.unit-conversion.to-larger.mixed-units
+      - measurement.unit-conversion.to-larger.decimal
+      - measurement.unit-conversion.to-larger.fraction
+    note: "Conversion splits by direction (multiply to a smaller unit, divide to a larger one) and by the number kind of the measure or result (whole, two-unit, decimal, fraction), because each needs a different computation as prerequisite (whole-number product, quotient with remainder, multiplying or dividing by a power of ten, fraction times whole number or a divided by b = a/b). Re-point an old edge to to-smaller.whole when the referring node only needs whole-number conversion to a smaller unit (the 4.MD.A.1 meaning); to the relevant directional node otherwise."
+covered_by: []
+dropped: []
+notes: >-
+  Finding a rectangle's area from its sides is area.rectangle.length-times-width (M2, reserved); 984b8dc3 and 92e853a7
+  are cited only by the new unknown-side and application nodes, which add the unknown-factor view of 4.MD.A.3.
+  Perimeter as a sum of side lengths (3.MD.D.8) belongs to M2; perimeter.rectangle.formula adds only the 2 x l + 2 x w rule.
+  An angle as two rays with a common endpoint (the 4.MD.C.5 stem, 4.G.A.1) is left to the geometry strand; no input
+  component carries it. Elapsed time within one hour (3.MD.A.1) and line plots in halves and fourths (3.MD.B.4) may be
+  written by M2; data.line-plot.fraction-scale.make covers halves, fourths, and eighths and should absorb or replace a
+  3.MD.B.4 node if the reviewer judges the range difference does not change prerequisites (I judged it does not, so I did
+  not split eighths). Volume as an attribute of solids (5.MD.C.3 stem) has no component and is not written.
+  Nodes with lc [] fill gaps the standards text names but no component carries: liquid-volume unit sizes (4.MD.A.1 lists
+  l, ml), the multiplicative relation between units (4.MD.A.1 "12 times as long"), two-unit conversions (3 ft 4 in,
+  1 hr 20 min, used by 4.MD.A.2 problems), and angle degrees from a fraction of a turn (4.MD.C.5).
+  Merges I was unsure of: 4.MD.A.2 one-step and two-step whole-number problems are one application node; addition and
+  subtraction unknown-angle equations are one representation node; 7a331eb0 (solve addition unknown-angle problems) is
+  cited by angle.additive, whose test is exactly that problem; 653ba790 (pack a prism with cubes) is cited by
+  volume.count-cubes since packing and counting is the same act for a prism. 9432b8e1 carries two skills and is cited by
+  both measurement.application.fraction and measurement.application.money. Every conversion assess gives the unit
+  relation, so the relative-size fact nodes are not prerequisites of the conversion procedures by test; they are of the
+  application nodes only when those omit the relation. Volume B x h uses B for base area (CCSS writes b).
