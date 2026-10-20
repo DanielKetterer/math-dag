@@ -9,8 +9,9 @@ Read this first in a new session. Then RULES.md.
   Phase 1 side: p1/overrides.yaml (D91 re-pointed, F107 entry); N3 and N4 batches and
   skeletons (F107, F106); p2/retarget/out.json r87 (kept on the two-step node);
   p1/skeletons/N3.extra.yaml (LC 44a2143c moved to the reserved upper half).
-- Map: 675 nodes, 2,364 edges, 0 errors. Findings 87 -> 72: Common Core order 15 -> 7,
-  IM 67 -> 61. Unwritten ids referenced 36 -> 41 (the new reserved nodes).
+- Map: 675 nodes, 2,364 edges, 0 errors. Findings 87 -> 70: Common Core order 15 -> 6,
+  IM 67 -> 60 (after benchmark.py rebuilt pathways/ with the re-cited and narrowed
+  nodes). Unwritten ids referenced 36 -> 41 (the new reserved nodes).
 - Benchmark: 81% direct, 90% through chains (was 92%). The lost link, 3.NF.A.1 ->
   3.G.A.2, ran 3.G.A.2 -> rectangle definition -> right angle (4.G.A.1) -> degrees
   (4.MD.C.5) -> unit fractions, through the right-angle edge CC and IM refuted (F104).
