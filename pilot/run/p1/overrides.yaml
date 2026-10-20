@@ -5,8 +5,9 @@
 reviewer: DK
 review: pilot/run/p1/REVIEW.md, answers in REVIEW_ANSWERS.txt (2026-10-20)
 rename: {}
-pending: A4, A14, A17, A35, D91 (Claude pushed back, awaiting Daniel); F97, F98, F100 and new nodes (expressions.order-of-operations,
-  equation.unknown-symbol, table.read-two-way, method-neutral computation nodes) go into the next slice.
+pending: 'A4, A14, A17, D91: Daniel (2026-10-20) - settle with method-neutral computation nodes; re-point
+  these edges when those nodes are written (next slice). F97, F98, F100 and new nodes (expressions.order-of-operations,
+  equation.unknown-symbol, table.read-two-way, method-neutral nodes) go into the next slice.'
 edges:
 - item: A1
   node: place-value.expanded-form
@@ -475,6 +476,12 @@ edges:
   with: addition.base-ten.compose-unit
   why: Naming 42 tens as 420 trades ten tens for a hundred, which is composing a unit.
   reason: 'Daniel F99: as for addition.'
+- item: A35
+  node: addition.application.two-step
+  target: addition.application.add-to.start-unknown
+  action: keep
+  reason: 'Daniel (2026-10-20): KEEP - the statement says ''unknown in any position'', so start-unknown
+    problems are part of the node.'
 set_routes:
 - item: F95, D65, D66
   node: equation.equal-sign.meaning

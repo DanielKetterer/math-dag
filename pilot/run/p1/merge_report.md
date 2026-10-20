@@ -7,7 +7,7 @@
 - scaffold: 88
 - route-only: 75
 - alt route from passes: 63
-- review: keep: 54
+- review: keep: 55
 - route-only split into own clause: 53
 - alt route from critic: 52
 - missing-prerequisite added: 43
