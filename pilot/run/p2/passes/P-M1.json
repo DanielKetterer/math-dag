@@ -1,0 +1,979 @@
+{
+ "pass": "P",
+ "batch": "M1",
+ "nodes": {
+  "measurement.weight.attribute": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.weight.direct",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Weight is seen as its own attribute by holding or balancing two objects and finding which is heavier, as with the beach ball and the rock."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.attributes.several": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.attribute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Length is one of the several attributes the statement names, so the learner must already see length as an attribute of an object."
+      },
+      {
+       "node": "measurement.weight.attribute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Weight is another attribute the statement names, and the learner must see it as separate from length and size."
+      }
+     ]
+    }
+   ]
+  },
+  "comparing.length.describe-difference": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.size.direct",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement starts from two objects already compared directly by length or height, and only the wording of the result is new."
+      },
+      {
+       "node": "measurement.length.attribute",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The words longer, shorter and taller name the length attribute, so the learner must see length as what is being compared."
+      }
+     ]
+    }
+   ]
+  },
+  "comparing.weight.describe-difference": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.weight.direct",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement starts from two objects already compared directly by weight, for example on a pan balance, and only the wording of the result is new."
+      },
+      {
+       "node": "measurement.weight.attribute",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The words heavier and lighter name the weight attribute, so the learner must see weight as separate from size."
+      }
+     ]
+    }
+   ]
+  },
+  "comparing.length.indirect": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.size.direct",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 sets the marked string beside the second object and compares the two lengths directly, side by side."
+      },
+      {
+       "node": "comparing.length.describe-difference",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 states the result of the string comparison with longer, shorter or the same length, using the comparison words."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.tool.select": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.iterate-units",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A ruler, yardstick or tape is a row of equal units laid along the object, which is how the learner judges whether a tool spans the length."
+      },
+      {
+       "node": "measurement.length.no-gaps-overlaps",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A tool suits a length when its marked units can span much of it, and length is the number of units that span the object."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.ruler.from-zero": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The ruler is a number line on which each whole number marks a length counted from 0, which is the reading the statement describes."
+      },
+      {
+       "node": "measurement.length.no-gaps-overlaps",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says an object's length is the number of whole units between its two ends, which is length as the count of spanning units."
+      },
+      {
+       "node": "subtraction.within-10",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The crayon from the 2 mark to the 7 mark is found as 7 minus 2, a difference within 10."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.ruler": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.ruler.from-zero",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Steps 2 and 3 line up the 0 mark and read the number at the far end as the count of whole units from 0."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.unit-size.inverse": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.no-gaps-overlaps",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The measurement is the number of units that span the length, so a unit that covers more of it needs a smaller number."
+      },
+      {
+       "node": "measurement.length.iterate-units",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The reason a larger unit gives a smaller number is seen by laying larger and smaller units end to end along the same object."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.unit-benchmarks": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.ruler",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each benchmark is an everyday thing compared with the length of an inch, foot, centimeter or meter, units the learner knows from marked rulers and tapes."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.estimate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.unit-benchmarks",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 recalls a benchmark for the named unit and every later step copies that benchmark along the object."
+      },
+      {
+       "node": "measurement.length.no-gaps-overlaps",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 pictures copies of the benchmark laid end to end with no gaps or overlaps, which is length as the count of spanning units."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.difference": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.ruler",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 measures both objects in the same standard unit, which is the ruler procedure applied twice."
+      },
+      {
+       "node": "subtraction.within-10",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds the difference of the two measured lengths, for example 9 minus 6 in the test problem."
+      },
+      {
+       "node": "comparing.length.describe-difference",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "How much longer one object is than the other builds the comparison words longer and shorter into a number answer."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.application.addition": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The unknown length is the sum of two given lengths with sums within 100, such as 34 plus 25."
+      },
+      {
+       "node": "measurement.length.no-gaps-overlaps",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Lengths joined end to end make a total length that is the count of units spanning both, so their measures add."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.application.subtraction": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The unknown length is the difference of two given lengths within 100, such as 72 minus 28."
+      },
+      {
+       "node": "measurement.length.no-gaps-overlaps",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A piece cut off leaves a length that is the count of units remaining, so the measures subtract."
+      }
+     ]
+    }
+   ]
+  },
+  "time.analog.hour": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "numeral.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner reads the numeral that the hour hand points to on the clock face, numbers 1 to 12, to name the hour."
+      }
+     ]
+    }
+   ]
+  },
+  "time.analog.half-hour": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "time.analog.hour",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Reading the hour from the number the hour hand points to is the base that half past extends, and the minute hand now points to 6."
+      },
+      {
+       "node": "partitioning.equal-shares.name",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Half past means the minute hand has gone halfway around the face, a half of the circle, which uses halves as equal shares."
+      },
+      {
+       "node": "number.halfway-between",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The hour hand sits halfway between two numbers on the face, and the hour is read from the number it has passed."
+      }
+     ]
+    }
+   ]
+  },
+  "time.digital.read": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "numeral.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner reads the numeral before the colon as the hour and the two-digit numeral after it as the minutes, such as 35."
+      }
+     ]
+    }
+   ]
+  },
+  "time.analog.five-minutes": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "time.analog.half-hour",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 takes the hour from the number the hour hand has most recently passed, the reading first met with the half hour."
+      },
+      {
+       "node": "counting.skip.fives",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 counts by fives from 12 around the face to the number nearest the minute hand to get the minutes."
+      }
+     ]
+    }
+   ]
+  },
+  "time.analog.draw-hour": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "time.analog.hour",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Showing h o'clock draws the hands for the same time that the learner reads as h o'clock, with the minute hand at 12."
+      }
+     ]
+    }
+   ]
+  },
+  "time.analog.draw-half-hour": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "time.analog.half-hour",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Half past h is the time the learner reads from the minute hand at 6 and the hour hand between two numbers."
+      },
+      {
+       "node": "number.halfway-between",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The hour hand is drawn halfway between h and the next number, so the learner must find the point midway between two numbers on the face."
+      }
+     ]
+    }
+   ]
+  },
+  "time.analog.draw-five-minutes": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.skip.fives",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 counts by fives from 12 until reaching mm to find where the minute hand is drawn."
+      },
+      {
+       "node": "time.analog.draw-half-hour",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 places the hour hand part of the way between h and the next number, extending the halfway position used for half past."
+      },
+      {
+       "node": "time.digital.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The time is given as h:mm, so the learner must read the hour before the colon and the minutes after it."
+      }
+     ]
+    }
+   ]
+  },
+  "time.digital.write": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "time.digital.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing h:mm uses the same notation the learner reads on a digital clock, with the hour before the colon and two minute digits after."
+      },
+      {
+       "node": "numeral.write",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner writes the numerals for the hour and for the minutes spoken in words, such as twenty-five, as digits."
+      }
+     ]
+    }
+   ]
+  },
+  "time.am-pm": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "time.digital.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a.m. and p.m. are attached to a clock reading such as 8:00, which the learner must be able to read as an hour and minutes."
+      }
+     ]
+    }
+   ]
+  },
+  "money.coins.value": {
+   "routes": [],
+   "root_reason": "The coin names, appearances and cent values are conventions learned by association, so no earlier skill in the map is required beyond the small quantities themselves."
+  },
+  "money.coins.total-value": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "money.coins.value",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 starts at the value of the first coin and counts on by each coin's value, so each coin's cents must be known."
+      },
+      {
+       "node": "comparing.whole-numbers.magnitude",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 sorts the coins from greatest value to least, which compares values such as 25 and 10."
+      },
+      {
+       "node": "counting.skip.tens.from-any",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 counts on by tens for dimes from a number that is not a multiple of ten, such as 25."
+      },
+      {
+       "node": "counting.skip.fives",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 counts on by fives for nickels, for example from 45 to 50."
+      },
+      {
+       "node": "counting.sequence.count-on",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 counts on by ones for pennies from the running total, for example from 50 to 51, 52, 53."
+      }
+     ]
+    }
+   ]
+  },
+  "money.notation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "money.coins.value",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The cents sign names the unit the coins are worth in, so the learner must know what a cent is as the value of a coin."
+      },
+      {
+       "node": "numeral.write",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each amount is the numeral for the number of cents or dollars with a sign placed before or after it."
+      }
+     ]
+    }
+   ]
+  },
+  "money.application.addition": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "money.coins.total-value",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The amount given as coins, such as 3 dimes and 2 nickels, must be turned into a total value in cents before it is combined."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The total is found by adding amounts in one unit, for example 40 cents plus 25 cents, and any method would do."
+      },
+      {
+       "node": "money.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The answer is written with the correct sign, the cents sign after a number of cents or the dollar sign before dollars."
+      }
+     ]
+    }
+   ]
+  },
+  "money.application.subtraction": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "money.coins.total-value",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "An amount given as coins, such as 3 quarters, must be turned into a value in cents before the cost is taken away."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The unknown amount is the difference of two amounts in one unit, for example 75 cents minus 40 cents, and any method would do."
+      },
+      {
+       "node": "money.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The answer is written with the correct sign, the cents sign after a number of cents or the dollar sign before dollars."
+      }
+     ]
+    }
+   ]
+  },
+  "data.categorical.count-each": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each sorted category is counted as its own collection to tell how many objects are in it, up to 10."
+      }
+     ]
+    }
+   ]
+  },
+  "data.categorical.order-by-count": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.categorical.count-each",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The categories are ordered by their counts, so each category's count must already be found."
+      },
+      {
+       "node": "comparing.whole-numbers.numerals-within-10",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Ordering from most to fewest compares the counts of the categories pair by pair, with counts up to 10."
+      }
+     ]
+    }
+   ]
+  },
+  "data.categorical.organize": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "classifying.sort.given-attribute",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each data point is placed in the row for its category, such as apple or banana, by the attribute it has."
+      },
+      {
+       "node": "numeral.informal-record",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A tally chart records each data point as one mark in its category's row, a mark standing for one object."
+      },
+      {
+       "node": "data.categorical.count-each",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The chart ends with the count for each category, found by counting the marks in each row."
+      },
+      {
+       "node": "numeral.record-collection",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The count for each category is recorded as a numeral beside its row."
+      }
+     ]
+    }
+   ]
+  },
+  "data.categorical.read-count": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner counts the marks or pictures in one category's row to find how many data points it has."
+      },
+      {
+       "node": "numeral.informal-record",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The chart has one mark or picture per data point, so each mark stands for one object in the data."
+      }
+     ]
+    }
+   ]
+  },
+  "data.categorical.total": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.categorical.read-count",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The counts of the categories are read from the chart before they are combined."
+      },
+      {
+       "node": "addition.application.three-addends",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The total combines the counts of up to three categories, a sum of up to three numbers."
+      }
+     ]
+    }
+   ]
+  },
+  "data.categorical.how-many-more": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.categorical.read-count",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The two category counts are read from the chart before they are compared."
+      },
+      {
+       "node": "subtraction.application.compare.difference-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "How many more or fewer is a compare situation whose answer is the difference of the two counts."
+      }
+     ]
+    }
+   ]
+  },
+  "data.picture-graph.draw": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.categorical.organize",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A picture graph keeps the layout of the tally chart, one row or column per category with one mark per data point, now with pictures."
+      },
+      {
+       "node": "counting.produce-set",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each category's count, such as 5 dogs, is drawn as that many pictures, so the learner counts out a set of a given number."
+      }
+     ]
+    }
+   ]
+  },
+  "data.bar-graph.draw": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.picture-graph.draw",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A bar graph keeps the labeled category per bar, the common starting line and the title that the learner meets in the picture graph."
+      },
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The scale in ones from 0 is a number line of lengths from 0, and each bar ends level with the scale number equal to its count."
+      }
+     ]
+    }
+   ]
+  },
+  "data.bar-graph.read": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The count is the number on the scale level with the end of the bar, the scale being whole-number lengths from 0."
+      },
+      {
+       "node": "data.categorical.read-count",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Reading the count of one named category from a data display is the skill first met with tally charts and picture graphs."
+      }
+     ]
+    }
+   ]
+  },
+  "data.bar-graph.put-together": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.bar-graph.read",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner reads the counts of the needed categories from the bars before combining them."
+      },
+      {
+       "node": "addition.application.put-together.total-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A put-together problem asks for the combined count of the parts, the total-unknown structure."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The total is found by adding the two read counts, such as 7 plus 5, and any method would do."
+      }
+     ]
+    }
+   ]
+  },
+  "data.bar-graph.take-apart": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.bar-graph.read",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner reads the known part from the bar, such as 8 dogs, before finding the unknown part."
+      },
+      {
+       "node": "addition.application.put-together.addend-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A take-apart problem gives a total and one part and asks for the other part, the addend-unknown structure."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The unknown part is the total minus the known part, such as 13 minus 8, and any method would do."
+      }
+     ]
+    }
+   ]
+  },
+  "data.bar-graph.compare": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.bar-graph.read",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner reads both category counts from the bars before finding the difference."
+      },
+      {
+       "node": "subtraction.application.compare.difference-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "How many more or fewer is a compare situation whose answer is the difference of the two counts."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The difference of the two read counts, such as 9 minus 5, is found by any subtraction method."
+      }
+     ]
+    }
+   ]
+  },
+  "data.line-plot.make": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The line plot is a number line marked in whole units, each mark a length counted from 0."
+      },
+      {
+       "node": "measurement.length.ruler",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The data are whole-unit length measurements, such as pencils measured to the nearest inch, of the kind made with a ruler."
+      },
+      {
+       "node": "comparing.whole-numbers.numerals-within-10",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds the smallest and largest measurement by comparing the measurement numbers, such as 5 and 8."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
