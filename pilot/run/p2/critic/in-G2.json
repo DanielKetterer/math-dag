@@ -1,0 +1,1547 @@
+{
+ "boundary_nodes": [
+  "area.composite-additive",
+  "coordinate-plane.four-quadrants",
+  "coordinate.ordered-pair.notation",
+  "counting.number-word.thousand",
+  "counting.number-word.thousand-million",
+  "counting.skip.twos",
+  "decimal.addition.algorithm",
+  "decimal.division.algorithm",
+  "decimal.multiplication.algorithm",
+  "decimal.subtraction.algorithm",
+  "division.nonunit-fraction-by-whole",
+  "division.standard-algorithm.long-division",
+  "division.successive-division",
+  "equations.linear.solve",
+  "equations.one-step",
+  "expressions.variables",
+  "fraction.reciprocal",
+  "fraction.subtraction.comparison",
+  "functions.definition",
+  "geometry.similar-triangles",
+  "multiples.common-multiple",
+  "number.halfway-between",
+  "rational-numbers.operations"
+ ],
+ "nodes": [
+  {
+   "id": "shapes.attributes.shared",
+   "concept": "shapes",
+   "facet": "category",
+   "level": 2,
+   "type": "concept",
+   "name": "Shapes in different categories can share attributes",
+   "statement": "Two shapes with different category names can have an attribute in common, such as having four sides; sharing an attribute does not make them the same kind of shape.",
+   "assess": "A rhombus with no right angles and a rectangle that is not a square are shown. Name one attribute both shapes have.",
+   "proposed_edges": [
+    {
+     "edge_id": "e153",
+     "prerequisite": "shapes.attribute.defining",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement treats an attribute such as having four sides as a defining attribute that two named shapes can have in common."
+    },
+    {
+     "edge_id": "e154",
+     "prerequisite": "shapes.compare.by-attributes",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Finding an attribute two different shapes have in common is done by comparing the two shapes part by part."
+    },
+    {
+     "edge_id": "e155",
+     "prerequisite": "shapes.identify.specified-attributes",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "To say two shapes share an attribute, the learner must pick out which shapes have a given attribute."
+    },
+    {
+     "edge_id": "e156",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem shows a rectangle that is not a square, and the learner must know its four right angles to find what it shares."
+    },
+    {
+     "edge_id": "e157",
+     "prerequisite": "shapes.rhombus.define",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem shows a rhombus, and the learner must know its four equal sides to find what it shares."
+    },
+    {
+     "edge_id": "e158",
+     "prerequisite": "shapes.sides.count",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem is answered by counting the sides of the rhombus and the rectangle and noting both have four."
+    }
+   ]
+  },
+  {
+   "id": "shapes.category.defined-by-attribute",
+   "concept": "shapes",
+   "facet": "category",
+   "level": 2,
+   "type": "concept",
+   "name": "A shared attribute can define a larger category",
+   "statement": "An attribute can define a category of shapes: every shape that has the attribute belongs to the category, whatever its other attributes, size, or orientation.",
+   "assess": "A 'quad-shape' is any closed shape made of four straight sides. Which of these are quad-shapes: a square, a tilted kite, a rhombus, a four-sided arrowhead with one corner pointing in, a circle, a pentagon?",
+   "proposed_edges": [
+    {
+     "edge_id": "e159",
+     "prerequisite": "shapes.attribute.non-defining",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says membership holds whatever the shape's other attributes, size, or orientation, which are non-defining."
+    },
+    {
+     "edge_id": "e160",
+     "prerequisite": "shapes.attributes.shared",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A category defined by an attribute collects shapes of different named kinds that share that one attribute."
+    },
+    {
+     "edge_id": "e161",
+     "prerequisite": "shapes.identify.specified-attributes",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem asks the learner to pick out which listed shapes have the stated four-straight-sides attribute."
+    }
+   ]
+  },
+  {
+   "id": "shapes.quadrilateral.recognize",
+   "concept": "shapes",
+   "facet": "properties",
+   "level": 2,
+   "type": "concept",
+   "name": "Recognize quadrilaterals of any shape",
+   "statement": "A quadrilateral is a closed figure made of exactly four straight sides; every such figure is a quadrilateral, including irregular, tilted, and inward-pointing ones.",
+   "assess": "Circle every quadrilateral: a square, a tilted kite, a four-sided arrowhead with one corner pointing in, a trapezoid, a pentagon, a figure with three straight sides and one curved side.",
+   "proposed_edges": [
+    {
+     "edge_id": "e162",
+     "prerequisite": "shapes.attribute.non-defining",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement includes irregular, tilted, and inward-pointing figures, so size and orientation must not decide the name."
+    },
+    {
+     "edge_id": "e163",
+     "prerequisite": "shapes.closed-boundary",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement requires a closed figure, so the test problem rejects a figure whose boundary does not close in straight sides."
+    },
+    {
+     "edge_id": "e164",
+     "prerequisite": "shapes.polygon.name-by-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A quadrilateral is the polygon named by having exactly four sides, which this node extends to any shape."
+    }
+   ]
+  },
+  {
+   "id": "shapes.rectangle.define",
+   "concept": "shapes",
+   "facet": "properties",
+   "level": 2,
+   "type": "concept",
+   "name": "A rectangle is a quadrilateral with four right angles",
+   "statement": "A rectangle is a quadrilateral with four right angles; its side lengths play no part in the definition.",
+   "assess": "Which of these quadrilaterals are rectangles? A has four right angles and sides 2, 7, 2, 7 cm; B has four right angles and all sides 5 cm; C has sides 2, 7, 2, 7 cm and no right angles.",
+   "proposed_edges": [
+    {
+     "edge_id": "e165",
+     "prerequisite": "angle.right.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The defining attribute of a rectangle is that all four of its angles are right angles."
+    },
+    {
+     "edge_id": "e166",
+     "prerequisite": "shapes.attribute.defining",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says side lengths play no part, which uses the idea of the attributes that define a named shape."
+    },
+    {
+     "edge_id": "e167",
+     "prerequisite": "shapes.quadrilateral.recognize",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The definition names the rectangle as a quadrilateral, the figure with exactly four straight sides."
+    }
+   ]
+  },
+  {
+   "id": "shapes.rhombus.define",
+   "concept": "shapes",
+   "facet": "properties",
+   "level": 2,
+   "type": "concept",
+   "name": "A rhombus is a quadrilateral with four equal sides",
+   "statement": "A rhombus is a quadrilateral whose four sides all have the same length; its angles play no part in the definition.",
+   "assess": "Which of these quadrilaterals are rhombuses? A has four sides of 5 cm and no right angles; B has four sides of 5 cm and four right angles; C has sides 5, 3, 5, 3 cm.",
+   "proposed_edges": [
+    {
+     "edge_id": "e168",
+     "prerequisite": "shapes.attribute.defining",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says angles play no part, which uses the idea of the attributes that define a named shape."
+    },
+    {
+     "edge_id": "e169",
+     "prerequisite": "shapes.attribute.equal-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The defining attribute of a rhombus is that all four sides are equal in length."
+    },
+    {
+     "edge_id": "e170",
+     "prerequisite": "shapes.quadrilateral.recognize",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The definition names the rhombus as a quadrilateral, the figure with exactly four straight sides."
+    }
+   ]
+  },
+  {
+   "id": "shapes.square.define",
+   "concept": "shapes",
+   "facet": "properties",
+   "level": 2,
+   "type": "concept",
+   "name": "A square has four equal sides and four right angles",
+   "statement": "A square is a quadrilateral with four sides of the same length and four right angles, in any orientation.",
+   "assess": "Which of these are squares? A has four sides of 4 cm and four right angles; B has four sides of 4 cm and no right angles; C has four right angles and sides 4, 6, 4, 6 cm; D is A turned to stand on one corner.",
+   "proposed_edges": [
+    {
+     "edge_id": "e171",
+     "prerequisite": "angle.right.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A square must have four right angles, so a right angle must be recognized as a square corner."
+    },
+    {
+     "edge_id": "e172",
+     "prerequisite": "shapes.attribute.equal-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A square must have four sides of the same length, which is the equal-sides attribute."
+    },
+    {
+     "edge_id": "e173",
+     "prerequisite": "shapes.attribute.non-defining",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says a square stays a square in any orientation, such as standing on a corner."
+    },
+    {
+     "edge_id": "e174",
+     "prerequisite": "shapes.quadrilateral.recognize",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The definition names the square as a quadrilateral, the figure with exactly four straight sides."
+    }
+   ]
+  },
+  {
+   "id": "shapes.quadrilateral.subcategories-included",
+   "concept": "shapes",
+   "facet": "category",
+   "level": 2,
+   "type": "concept",
+   "name": "Rhombuses, rectangles, and squares are quadrilaterals",
+   "statement": "Rhombuses, rectangles, and squares are all quadrilaterals, because each is a closed figure with four straight sides; a shape keeps its more specific name and also belongs to the category quadrilateral.",
+   "assess": "Is a square a quadrilateral? Is a rhombus? Is a rectangle? Name the attribute that decides it.",
+   "proposed_edges": [
+    {
+     "edge_id": "e175",
+     "prerequisite": "shapes.category.defined-by-attribute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A shape that has the category attribute belongs to the category while keeping its own more specific name."
+    },
+    {
+     "edge_id": "e176",
+     "prerequisite": "shapes.quadrilateral.recognize",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The attribute that decides membership is exactly four straight sides, which defines a quadrilateral of any shape."
+    },
+    {
+     "edge_id": "e177",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement applies the definition of a rectangle to show it is a closed figure with four straight sides."
+    },
+    {
+     "edge_id": "e178",
+     "prerequisite": "shapes.rhombus.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement applies the definition of a rhombus to show it is a closed figure with four straight sides."
+    },
+    {
+     "edge_id": "e179",
+     "prerequisite": "shapes.square.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement applies the definition of a square to show it is a closed figure with four straight sides."
+    }
+   ]
+  },
+  {
+   "id": "shapes.quadrilateral.draw-other",
+   "concept": "shapes",
+   "facet": "properties",
+   "level": 2,
+   "type": "procedure",
+   "name": "Draw a quadrilateral that is not a rhombus, rectangle, or square",
+   "statement": "Draw a quadrilateral whose sides are not all the same length and whose angles are not all right angles, so it fits none of the definitions of rhombus, rectangle, or square.",
+   "assess": "Draw a quadrilateral that is not a rhombus, not a rectangle, and not a square. Say why it is none of them.",
+   "procedure": [
+    "Draw four straight sides that close into a figure.",
+    "Make at least two of the sides different in length, so it is not a rhombus or a square.",
+    "Make at least one angle that is not a right angle, so it is not a rectangle or a square.",
+    "Check the figure against each of the three definitions."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e180",
+     "prerequisite": "shapes.draw.specified-attributes",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 requires drawing a closed shape with four straight sides, a shape with a given number of sides."
+    },
+    {
+     "edge_id": "e181",
+     "prerequisite": "shapes.quadrilateral.recognize",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement asks for a quadrilateral, so the learner must know what counts as one."
+    },
+    {
+     "edge_id": "e182",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 makes one angle not right so that the figure fails the four-right-angles condition of a rectangle."
+    },
+    {
+     "edge_id": "e183",
+     "prerequisite": "shapes.rhombus.define",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 makes two sides unequal so that the figure fails the equal-sides condition of a rhombus."
+    },
+    {
+     "edge_id": "e184",
+     "prerequisite": "shapes.square.define",
+     "relation": "procedural",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Step 4 checks the figure against the square definition of four equal sides and four right angles."
+    }
+   ]
+  },
+  {
+   "id": "point.meaning",
+   "concept": "point",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "A point is an exact location",
+   "statement": "A point is an exact location with no size, drawn as a dot and named with a capital letter; the corners of a figure are points.",
+   "assess": "Draw a point on each corner of this triangle and label the points A, B, and C.",
+   "proposed_edges": [
+    {
+     "edge_id": "e185",
+     "prerequisite": "shapes.corners.count",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says the corners of a figure are points, so the learner must identify the corners of a shape."
+    }
+   ]
+  },
+  {
+   "id": "line.meaning",
+   "concept": "line",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "A line is straight and extends without end both ways",
+   "statement": "A line is straight, has no endpoints, and extends without end in both directions; it is drawn with an arrowhead at each end and named by two of its points.",
+   "assess": "Which of these figures are lines: a straight path with arrowheads at both ends, a straight path with two endpoints, a straight path with one endpoint and one arrowhead, a curved path with arrowheads at both ends?",
+   "proposed_edges": [
+    {
+     "edge_id": "e186",
+     "prerequisite": "point.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A line is named by two of its points, so the learner must know what a point is."
+    }
+   ]
+  },
+  {
+   "id": "segment.meaning",
+   "concept": "segment",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "A line segment is the part of a line between two endpoints",
+   "statement": "A line segment is the straight part of a line between two endpoints, including them; it is named by its endpoints, and the sides of a polygon are line segments.",
+   "assess": "This pentagon has points A, B, C, D, and E at its corners. Name the five line segments that form its sides.",
+   "proposed_edges": [
+    {
+     "edge_id": "e187",
+     "prerequisite": "line.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A segment is defined as the straight part of a line, so the meaning of a line is used."
+    },
+    {
+     "edge_id": "e188",
+     "prerequisite": "point.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A segment is bounded by two endpoints and named by them, and endpoints are points."
+    },
+    {
+     "edge_id": "e189",
+     "prerequisite": "shapes.sides.count",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement identifies the sides of a polygon as segments, so the learner must identify sides of a shape."
+    }
+   ]
+  },
+  {
+   "id": "ray.meaning",
+   "concept": "ray",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "A ray starts at an endpoint and extends without end one way",
+   "statement": "A ray is the part of a line that starts at one endpoint and extends without end in one direction; it is drawn with one endpoint and one arrowhead and named starting with its endpoint.",
+   "assess": "Which of these figures are rays: a straight path with one endpoint and one arrowhead, a straight path with arrowheads at both ends, a straight path with two endpoints, a curved path with one endpoint and one arrowhead?",
+   "proposed_edges": [
+    {
+     "edge_id": "e190",
+     "prerequisite": "line.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A ray is defined as the part of a line that goes on without end in one direction."
+    },
+    {
+     "edge_id": "e191",
+     "prerequisite": "point.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A ray starts at one endpoint and is named starting with that endpoint, which is a point."
+    }
+   ]
+  },
+  {
+   "id": "angle.right.meaning",
+   "concept": "angle",
+   "facet": "figure",
+   "level": 2,
+   "type": "concept",
+   "name": "A right angle forms a square corner",
+   "statement": "A right angle is an angle whose two sides form a square corner, so the corner of a sheet of paper fits it exactly.",
+   "assess": "Use the corner of an index card to test each angle of this quadrilateral, which is not a rectangle. Which of its angles are right angles?",
+   "proposed_edges": [
+    {
+     "edge_id": "e192",
+     "prerequisite": "angle.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A right angle is a kind of angle, two rays from a common endpoint, whose sides form a square corner."
+    },
+    {
+     "edge_id": "e193",
+     "prerequisite": "shapes.corners.count",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement describes the right angle as a square corner that fits the corner of a sheet of paper."
+    }
+   ]
+  },
+  {
+   "id": "angle.acute-obtuse.classify",
+   "concept": "angle",
+   "facet": "figure",
+   "level": 2,
+   "type": "concept",
+   "name": "Acute and obtuse angles compared with a right angle",
+   "statement": "An acute angle is smaller than a right angle; an obtuse angle is larger than a right angle and smaller than a straight angle.",
+   "assess": "Label each angle of this pentagon as right, acute, or obtuse.",
+   "proposed_edges": [
+    {
+     "edge_id": "e194",
+     "prerequisite": "angle.right.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Acute and obtuse angles are defined by comparing their opening with the square corner of a right angle."
+    },
+    {
+     "edge_id": "e195",
+     "prerequisite": "line.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "An obtuse angle must be smaller than a straight angle, whose two sides form a straight line."
+    }
+   ]
+  },
+  {
+   "id": "angle.draw-by-type",
+   "concept": "angle",
+   "facet": "figure",
+   "level": 2,
+   "type": "procedure",
+   "name": "Draw a right, acute, or obtuse angle",
+   "statement": "Draw an angle of a named type by drawing two rays from a common endpoint and checking the opening against a square corner.",
+   "assess": "Draw an obtuse angle with its vertex at point P.",
+   "procedure": [
+    "Draw a ray.",
+    "Place a square corner at the ray's endpoint with one edge along the ray.",
+    "For a right angle, draw the second ray along the other edge of the square corner.",
+    "For an acute angle, draw the second ray from the endpoint inside the square corner.",
+    "For an obtuse angle, draw the second ray from the endpoint between the other edge of the square corner and the extension of the first ray backward through its endpoint."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e196",
+     "prerequisite": "angle.acute-obtuse.classify",
+     "relation": "procedural",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Steps 4 and 5 place the second ray inside or beyond the square corner according to the acute or obtuse comparison."
+    },
+    {
+     "edge_id": "e197",
+     "prerequisite": "angle.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement defines the drawn angle as two rays from a common endpoint."
+    },
+    {
+     "edge_id": "e198",
+     "prerequisite": "angle.right.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 places a square corner at the endpoint, and step 3 draws the right angle along its edge."
+    },
+    {
+     "edge_id": "e199",
+     "prerequisite": "ray.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 draws a ray, and later steps draw further rays from the same endpoint."
+    }
+   ]
+  },
+  {
+   "id": "perpendicular.meaning",
+   "concept": "perpendicular",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Perpendicular lines meet at right angles",
+   "statement": "Two lines are perpendicular when they meet to form right angles; two segments or sides are perpendicular when the lines they lie on are perpendicular.",
+   "assess": "In this trapezoid with two right angles, name every pair of sides that are perpendicular.",
+   "proposed_edges": [
+    {
+     "edge_id": "e200",
+     "prerequisite": "angle.right.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Two lines are perpendicular when the angles they form at the meeting point are right angles."
+    },
+    {
+     "edge_id": "e201",
+     "prerequisite": "line.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Perpendicularity is defined as a relationship between two lines that meet."
+    },
+    {
+     "edge_id": "e202",
+     "prerequisite": "segment.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement extends the idea to segments and sides, which are perpendicular when the lines they lie on are."
+    }
+   ]
+  },
+  {
+   "id": "perpendicular.draw",
+   "concept": "perpendicular",
+   "facet": "core",
+   "level": 2,
+   "type": "procedure",
+   "name": "Draw a line perpendicular to a given line",
+   "statement": "Draw a line perpendicular to a given line through a given point on it, using a square corner.",
+   "assess": "Draw a line perpendicular to line m through the point P on m.",
+   "procedure": [
+    "Place a square corner with its vertex at the point and one edge along the given line.",
+    "Draw along the other edge of the square corner, through the point.",
+    "Extend the drawn line in both directions."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e203",
+     "prerequisite": "angle.right.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 uses a square corner to produce the right angle at the given point."
+    },
+    {
+     "edge_id": "e204",
+     "prerequisite": "line.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 extends the drawn edge in both directions so that it becomes a line."
+    },
+    {
+     "edge_id": "e205",
+     "prerequisite": "perpendicular.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The drawn line must satisfy the definition of being perpendicular to the given line."
+    },
+    {
+     "edge_id": "e206",
+     "prerequisite": "point.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 places the vertex of the square corner at the given point on the line."
+    }
+   ]
+  },
+  {
+   "id": "parallel.meaning",
+   "concept": "parallel",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Parallel lines never meet",
+   "statement": "Two lines in a plane are parallel when they never meet, however far they are extended; two segments or sides are parallel when the lines they lie on are parallel.",
+   "assess": "In this trapezoid, which has exactly one pair of parallel sides, name the pair of sides that are parallel.",
+   "proposed_edges": [
+    {
+     "edge_id": "e207",
+     "prerequisite": "line.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Parallel lines are lines that never meet however far they are extended in both directions without end."
+    },
+    {
+     "edge_id": "e208",
+     "prerequisite": "segment.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement extends parallelism to segments and sides, which are parallel when their lines are."
+    }
+   ]
+  },
+  {
+   "id": "parallel.draw",
+   "concept": "parallel",
+   "facet": "core",
+   "level": 2,
+   "type": "procedure",
+   "name": "Draw a line parallel to a given line",
+   "statement": "Draw a line through a given point, not on a given line, that is parallel to the given line.",
+   "assess": "Draw a line through point P that is parallel to line m.",
+   "procedure": [
+    "Slide a square corner along the given line, one edge on the line, until its other edge passes through the point; draw along that edge.",
+    "At the point, draw a line perpendicular to the line just drawn.",
+    "The second line is parallel to the given line, because two lines perpendicular to the same line never meet."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e209",
+     "prerequisite": "angle.right.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 slides a square corner along the line to draw a line at right angles to it."
+    },
+    {
+     "edge_id": "e210",
+     "prerequisite": "parallel.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The drawn line must satisfy the definition of never meeting the given line."
+    },
+    {
+     "edge_id": "e211",
+     "prerequisite": "perpendicular.draw",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 draws a line perpendicular, through the point, to the line drawn in step 1."
+    },
+    {
+     "edge_id": "e212",
+     "prerequisite": "perpendicular.meaning",
+     "relation": "justificatory",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 explains the result because two lines perpendicular to the same line never meet."
+    }
+   ]
+  },
+  {
+   "id": "shapes.classify.parallel-perpendicular",
+   "concept": "shapes",
+   "facet": "properties",
+   "level": 2,
+   "type": "procedure",
+   "name": "Sort figures by parallel or perpendicular sides",
+   "statement": "Sort two-dimensional figures by whether they have at least one pair of parallel sides, or by whether they have at least one pair of perpendicular sides.",
+   "assess": "Sort these six figures into two groups: those with at least one pair of perpendicular sides and those with none.",
+   "procedure": [
+    "For each figure, check each pair of sides for the named relationship.",
+    "Put the figures with at least one such pair in one group and the figures with none in the other."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e213",
+     "prerequisite": "classifying.sort.given-attribute",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 puts the figures with the named relationship in one group and the others in a second group."
+    },
+    {
+     "edge_id": "e214",
+     "prerequisite": "parallel.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 checks each pair of sides to see whether the lines they lie on are parallel."
+    },
+    {
+     "edge_id": "e215",
+     "prerequisite": "perpendicular.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 checks each pair of sides to see whether they meet at right angles."
+    }
+   ]
+  },
+  {
+   "id": "shapes.classify.angle-type",
+   "concept": "shapes",
+   "facet": "properties",
+   "level": 2,
+   "type": "procedure",
+   "name": "Sort figures by angles of a named type",
+   "statement": "Sort two-dimensional figures by whether they have at least one angle of a named type: right, acute, or obtuse.",
+   "assess": "Sort these six figures into two groups: those with at least one obtuse angle and those with none.",
+   "procedure": [
+    "For each figure, decide the type of each of its angles.",
+    "Put the figures with at least one angle of the named type in one group and the figures with none in the other."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e216",
+     "prerequisite": "angle.acute-obtuse.classify",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 also decides whether each angle is acute or obtuse compared with a right angle."
+    },
+    {
+     "edge_id": "e217",
+     "prerequisite": "angle.right.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 decides for each angle whether it is a right angle by comparing with a square corner."
+    },
+    {
+     "edge_id": "e218",
+     "prerequisite": "classifying.sort.given-attribute",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 puts figures with an angle of the named type in one group and the others in another."
+    }
+   ]
+  },
+  {
+   "id": "shapes.triangle.right.identify",
+   "concept": "shapes",
+   "facet": "properties",
+   "level": 2,
+   "type": "concept",
+   "name": "Right triangles as a category",
+   "statement": "A right triangle is a triangle with a right angle; right triangles form a category whatever their size, side lengths, or orientation.",
+   "assess": "Which of these triangles, drawn at different sizes and turned different ways with no angle marks, are right triangles?",
+   "proposed_edges": [
+    {
+     "edge_id": "e219",
+     "prerequisite": "angle.right.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A right triangle is defined as a triangle with a right angle, a square corner."
+    },
+    {
+     "edge_id": "e220",
+     "prerequisite": "shapes.attribute.non-defining",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says the category holds whatever the size or orientation, as in the turned triangles of the test problem."
+    },
+    {
+     "edge_id": "e221",
+     "prerequisite": "shapes.category.defined-by-attribute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says right triangles form a category because they share the attribute of a right angle."
+    },
+    {
+     "edge_id": "e222",
+     "prerequisite": "shapes.polygon.name-by-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The category is a kind of triangle, the polygon named by having exactly three sides."
+    }
+   ]
+  },
+  {
+   "id": "symmetry.line.meaning",
+   "concept": "symmetry",
+   "facet": "line",
+   "level": 2,
+   "type": "concept",
+   "name": "A line of symmetry folds a figure into matching parts",
+   "statement": "A line of symmetry of a figure is a line across it such that folding the figure along the line makes the two parts match exactly; a figure with such a line is line-symmetric.",
+   "assess": "A rectangle that is not a square has a dashed line drawn along one diagonal. Is the dashed line a line of symmetry? Explain by what happens when the rectangle is folded along it.",
+   "proposed_edges": [
+    {
+     "edge_id": "e223",
+     "prerequisite": "line.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A line of symmetry is a line across the figure along which the figure is folded."
+    },
+    {
+     "edge_id": "e224",
+     "prerequisite": "shapes.compare.same-different",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Matching exactly means the two parts, compared as whole shapes, are the same shape and size."
+    },
+    {
+     "edge_id": "e225",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem uses a rectangle that is not a square, so the learner must know what a rectangle is."
+    },
+    {
+     "edge_id": "e226",
+     "prerequisite": "spatial.motion.turn-flip",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Folding along the line flips one part over onto the other part."
+    }
+   ]
+  },
+  {
+   "id": "symmetry.line.draw",
+   "concept": "symmetry",
+   "facet": "line",
+   "level": 2,
+   "type": "procedure",
+   "name": "Draw all lines of symmetry of a figure",
+   "statement": "Find and draw every line of symmetry of a two-dimensional figure; for a polygon the candidate lines can be listed in full.",
+   "assess": "Draw every line of symmetry of this rectangle that is not a square.",
+   "procedure": [
+    "List the candidate lines. For a polygon, every line of symmetry passes through two points that are each a vertex or the midpoint of a side, so the candidates are the lines through two such points.",
+    "For each candidate, check whether folding along it makes the two parts match exactly.",
+    "Draw every candidate that passes, and no others."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e227",
+     "prerequisite": "line.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 forms candidate lines through two points and step 3 draws the lines that pass."
+    },
+    {
+     "edge_id": "e228",
+     "prerequisite": "partitioning.segment.equal-lengths",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 requires locating the midpoint of each side, which splits the side into two equal lengths."
+    },
+    {
+     "edge_id": "e229",
+     "prerequisite": "point.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 picks out vertices and midpoints of sides as points through which candidate lines pass."
+    },
+    {
+     "edge_id": "e230",
+     "prerequisite": "segment.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 uses the sides of a polygon, which are segments, to find their midpoints."
+    },
+    {
+     "edge_id": "e231",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem asks for the lines of symmetry of a rectangle, so its vertices and sides must be known."
+    },
+    {
+     "edge_id": "e232",
+     "prerequisite": "symmetry.line.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The procedure lists candidate lines and checks each one against the definition of a line of symmetry."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.axes-origin",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 2,
+   "type": "concept",
+   "name": "Axes and origin of a coordinate plane",
+   "statement": "A coordinate plane is made from two perpendicular number lines, the axes (the x-axis and the y-axis), placed so they cross at 0 on each; the crossing point is the origin, with coordinates (0, 0).",
+   "assess": "On this grid with both axes drawn and numbered, mark the origin and write its coordinates.",
+   "proposed_edges": [
+    {
+     "edge_id": "e233",
+     "prerequisite": "coordinate.ordered-pair.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement writes the origin in the pair notation (0, 0)."
+    },
+    {
+     "edge_id": "e234",
+     "prerequisite": "number-line.whole-number-lengths",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each axis is a number line, with whole numbers marked as lengths from 0."
+    },
+    {
+     "edge_id": "e235",
+     "prerequisite": "perpendicular.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The two axes are defined as perpendicular number lines that meet at right angles."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.ordered-pair.meaning",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 2,
+   "type": "concept",
+   "name": "The two coordinates as distances from the origin",
+   "statement": "In an ordered pair (a, b), the first number a tells how far to travel from the origin in the direction of the x-axis, and the second number b tells how far to travel in the direction of the y-axis; so (a, b) and (b, a) are different points unless a = b.",
+   "assess": "Without plotting, describe how to travel from the origin to (2, 6) and how to travel from the origin to (6, 2). Are they the same point?",
+   "proposed_edges": [
+    {
+     "edge_id": "e236",
+     "prerequisite": "coordinate-plane.axes-origin",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The coordinates tell how far to travel from the origin along the x-axis and y-axis."
+    },
+    {
+     "edge_id": "e237",
+     "prerequisite": "coordinate.ordered-pair.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about the order of the two numbers in the pair (a, b)."
+    },
+    {
+     "edge_id": "e238",
+     "prerequisite": "number-line.whole-number-lengths",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each coordinate is a distance measured as a length from 0 along one axis."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.first-quadrant.plot",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 2,
+   "type": "procedure",
+   "name": "Plot a point with whole-number coordinates in the first quadrant",
+   "statement": "Plot the point with given whole-number coordinates (a, b) on a first-quadrant coordinate grid.",
+   "assess": "Plot the points (5, 2) and (0, 3) on this grid.",
+   "procedure": [
+    "Start at the origin.",
+    "Move a units in the direction of the x-axis.",
+    "From there, move b units in the direction of the y-axis.",
+    "Mark the point reached."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e239",
+     "prerequisite": "coordinate-plane.axes-origin",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 starts at the origin, the crossing point of the two axes."
+    },
+    {
+     "edge_id": "e240",
+     "prerequisite": "coordinate-plane.ordered-pair.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Steps 2 and 3 move a units along the x-axis then b units in the y direction, as the pair tells."
+    },
+    {
+     "edge_id": "e241",
+     "prerequisite": "coordinate.ordered-pair.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The given point is written as an ordered pair (a, b) whose parts must be read in order."
+    },
+    {
+     "edge_id": "e242",
+     "prerequisite": "point.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Step 4 marks the point reached, an exact location drawn as a dot."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.first-quadrant.read",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 2,
+   "type": "procedure",
+   "name": "Read the coordinates of a point in the first quadrant",
+   "statement": "Give the ordered pair of whole-number coordinates of a point plotted on a first-quadrant coordinate grid.",
+   "assess": "Write the ordered pair for each of the unlabeled plotted points A and B on this grid; A lies on the y-axis.",
+   "procedure": [
+    "From the point, follow the grid line parallel to the y-axis to the x-axis; the number there is the x-coordinate.",
+    "From the point, follow the grid line parallel to the x-axis to the y-axis; the number there is the y-coordinate.",
+    "Write the pair as (x-coordinate, y-coordinate)."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e243",
+     "prerequisite": "coordinate-plane.axes-origin",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Steps 1 and 2 read numbers on the x-axis and y-axis, which must be identified."
+    },
+    {
+     "edge_id": "e244",
+     "prerequisite": "coordinate-plane.ordered-pair.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Steps 1 and 2 name the first number the x-coordinate and the second the y-coordinate."
+    },
+    {
+     "edge_id": "e245",
+     "prerequisite": "coordinate.ordered-pair.notation",
+     "relation": "representational",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 writes the two coordinates as an ordered pair with the x-coordinate first."
+    },
+    {
+     "edge_id": "e246",
+     "prerequisite": "parallel.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Steps 1 and 2 follow the grid line parallel to one axis from the point to the other axis."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.application.mathematical",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 2,
+   "type": "application",
+   "name": "Solve a mathematical problem by graphing points",
+   "statement": "Solve a mathematical problem by graphing points in the first quadrant and reasoning from their positions, such as finding a missing vertex of a figure.",
+   "assess": "Three corners of a rectangle are at (1, 2), (1, 6), and (5, 6). Plot them and find the coordinates of the fourth corner.",
+   "proposed_edges": [
+    {
+     "edge_id": "e247",
+     "prerequisite": "coordinate-plane.first-quadrant.plot",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement requires graphing the given points in the first quadrant."
+    },
+    {
+     "edge_id": "e248",
+     "prerequisite": "coordinate-plane.first-quadrant.read",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem asks for the coordinates of the fourth corner after finding its position on the grid."
+    },
+    {
+     "edge_id": "e249",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The fourth corner is found by using the right angles and sides of the rectangle formed by the three given corners."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.application.real-world",
+   "concept": "coordinate-plane",
+   "facet": "graph",
+   "level": 2,
+   "type": "application",
+   "name": "Graph paired quantities from a real-world situation",
+   "statement": "Represent a real-world situation that pairs two quantities by graphing each pair as a point in the first quadrant, the first quantity along the x-axis and the second along the y-axis.",
+   "assess": "A plant was 2 cm tall at week 0, 4 cm at week 1, 6 cm at week 2, and 8 cm at week 3. Graph these as points with weeks on the x-axis and height in centimeters on the y-axis.",
+   "proposed_edges": [
+    {
+     "edge_id": "e250",
+     "prerequisite": "coordinate-plane.first-quadrant.plot",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each pair of quantities is graphed as a point in the first quadrant."
+    },
+    {
+     "edge_id": "e251",
+     "prerequisite": "coordinate-plane.ordered-pair.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The first quantity goes along the x-axis and the second along the y-axis, as in an ordered pair."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.application.interpret",
+   "concept": "coordinate-plane",
+   "facet": "graph",
+   "level": 2,
+   "type": "application",
+   "name": "Interpret coordinate values in context",
+   "statement": "Say what each coordinate of a plotted point means in the situation the graph represents.",
+   "assess": "A graph shows hours worked on the x-axis and dollars earned on the y-axis. The point (3, 24) is plotted. What do the 3 and the 24 tell you?",
+   "proposed_edges": [
+    {
+     "edge_id": "e252",
+     "prerequisite": "coordinate-plane.ordered-pair.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Saying what each coordinate means uses the first number as the x distance and the second as the y distance."
+    }
+   ]
+  },
+  {
+   "id": "shapes.quadrilateral.parallel-sides.define",
+   "concept": "shapes",
+   "facet": "properties",
+   "level": 2,
+   "type": "concept",
+   "name": "Trapezoids and parallelograms by pairs of parallel sides",
+   "statement": "A trapezoid is a quadrilateral with at least one pair of parallel sides; a parallelogram is a quadrilateral with two pairs of parallel sides.",
+   "assess": "Quadrilateral A has exactly one pair of parallel sides, B has two pairs, and C has none. Which of A, B, and C are trapezoids? Which are parallelograms?",
+   "proposed_edges": [
+    {
+     "edge_id": "e253",
+     "prerequisite": "parallel.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The definitions count the pairs of parallel sides, so parallel must be known."
+    },
+    {
+     "edge_id": "e254",
+     "prerequisite": "shapes.quadrilateral.recognize",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Trapezoids and parallelograms are defined as kinds of quadrilateral, the figures with four straight sides."
+    }
+   ]
+  },
+  {
+   "id": "shapes.triangle.by-sides.define",
+   "concept": "shapes",
+   "facet": "properties",
+   "level": 2,
+   "type": "concept",
+   "name": "Equilateral, isosceles, and scalene triangles",
+   "statement": "An equilateral triangle has three sides of equal length; an isosceles triangle has at least two sides of equal length; a scalene triangle has no two sides of equal length.",
+   "assess": "Three triangles have sides 5, 5, 5 cm; 5, 5, 8 cm; and 4, 6, 7 cm. Which are isosceles? Which are scalene?",
+   "proposed_edges": [
+    {
+     "edge_id": "e255",
+     "prerequisite": "shapes.attribute.equal-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each category is defined by how many sides of the triangle are equal in length."
+    },
+    {
+     "edge_id": "e256",
+     "prerequisite": "shapes.polygon.name-by-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "These categories are kinds of triangle, the polygon named by having exactly three sides."
+    }
+   ]
+  },
+  {
+   "id": "shapes.triangle.by-angles.define",
+   "concept": "shapes",
+   "facet": "properties",
+   "level": 2,
+   "type": "concept",
+   "name": "Acute, right, and obtuse triangles",
+   "statement": "An acute triangle has three acute angles; a right triangle has a right angle; an obtuse triangle has an obtuse angle.",
+   "assess": "Name each of these three triangles, drawn with no angle marks, as acute, right, or obtuse.",
+   "proposed_edges": [
+    {
+     "edge_id": "e257",
+     "prerequisite": "angle.acute-obtuse.classify",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Acute and obtuse triangles are defined by whether their angles are acute or obtuse."
+    },
+    {
+     "edge_id": "e258",
+     "prerequisite": "angle.right.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A right triangle is defined as a triangle that has a right angle."
+    },
+    {
+     "edge_id": "e259",
+     "prerequisite": "shapes.polygon.name-by-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "These categories are kinds of triangle, the polygon named by having exactly three sides."
+    }
+   ]
+  },
+  {
+   "id": "shapes.category.inherit-attributes",
+   "concept": "shapes",
+   "facet": "category",
+   "level": 3,
+   "type": "concept",
+   "name": "Attributes of a category belong to all its subcategories",
+   "statement": "If every shape in a category has an attribute, then every shape in each subcategory of that category has the attribute too.",
+   "assess": "All parallelograms have diagonals that cut each other in half. Every rhombus is a parallelogram. Without measuring, must the diagonals of every rhombus cut each other in half? Explain using the categories.",
+   "proposed_edges": [
+    {
+     "edge_id": "e260",
+     "prerequisite": "shapes.category.defined-by-attribute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A subcategory is a category whose members also have the attribute that defines the larger category."
+    },
+    {
+     "edge_id": "e261",
+     "prerequisite": "shapes.quadrilateral.subcategories-included",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The test problem relies on a rhombus belonging to the larger category of parallelograms while keeping its own name."
+    }
+   ]
+  },
+  {
+   "id": "shapes.quadrilateral.classify",
+   "concept": "shapes",
+   "facet": "category",
+   "level": 3,
+   "type": "procedure",
+   "name": "Name every category a quadrilateral belongs to",
+   "statement": "Name every category among trapezoid, parallelogram, rectangle, rhombus, and square that a given quadrilateral belongs to, by checking its parallel sides, right angles, and side lengths against each definition.",
+   "assess": "A quadrilateral has four sides of 6 cm and four right angles. List every name it has among trapezoid, parallelogram, rectangle, rhombus, and square.",
+   "procedure": [
+    "Count the pairs of parallel sides; at least one pair makes it a trapezoid, two pairs make it a parallelogram.",
+    "Check the angles; four right angles (each pair of adjacent sides perpendicular) make it a rectangle.",
+    "Check the side lengths; four equal sides make it a rhombus.",
+    "Four equal sides and four right angles make it a square.",
+    "List every name whose condition holds."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e262",
+     "prerequisite": "parallel.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 counts the pairs of parallel sides of the quadrilateral."
+    },
+    {
+     "edge_id": "e263",
+     "prerequisite": "perpendicular.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 treats each pair of adjacent sides at a right angle as perpendicular."
+    },
+    {
+     "edge_id": "e264",
+     "prerequisite": "shapes.category.defined-by-attribute",
+     "relation": "procedural",
+     "points_to": "procedure.5",
+     "scope": "concept",
+     "rationale": "Step 5 lists every name whose attribute holds, since a shape belongs to every category it has the attribute of."
+    },
+    {
+     "edge_id": "e265",
+     "prerequisite": "shapes.quadrilateral.parallel-sides.define",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 applies the definitions: one pair makes a trapezoid, two pairs make a parallelogram."
+    },
+    {
+     "edge_id": "e266",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 checks the definition of a rectangle, four right angles."
+    },
+    {
+     "edge_id": "e267",
+     "prerequisite": "shapes.rhombus.define",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 checks the definition of a rhombus, four equal sides."
+    },
+    {
+     "edge_id": "e268",
+     "prerequisite": "shapes.square.define",
+     "relation": "procedural",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Step 4 checks the definition of a square, four equal sides and four right angles."
+    }
+   ]
+  },
+  {
+   "id": "shapes.quadrilateral.hierarchy",
+   "concept": "shapes",
+   "facet": "category",
+   "level": 3,
+   "type": "concept",
+   "name": "The hierarchy of quadrilateral categories",
+   "statement": "The quadrilateral categories are nested by inclusion: every square is both a rectangle and a rhombus, every rectangle and every rhombus is a parallelogram, every parallelogram is a trapezoid, and every trapezoid is a quadrilateral.",
+   "assess": "True or false, with a reason from the definitions: every square is a rhombus; every rhombus is a square; every rectangle is a parallelogram.",
+   "proposed_edges": [
+    {
+     "edge_id": "e269",
+     "prerequisite": "perpendicular.meaning",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A rectangle's opposite sides are parallel because adjacent sides are perpendicular to the same line."
+    },
+    {
+     "edge_id": "e270",
+     "prerequisite": "shapes.category.defined-by-attribute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Nesting by inclusion means each smaller category is the set of shapes with the extra defining attributes."
+    },
+    {
+     "edge_id": "e271",
+     "prerequisite": "shapes.quadrilateral.classify",
+     "relation": "justificatory",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The reasons from definitions in the test problem apply the same condition checks that naming every category of a quadrilateral uses."
+    },
+    {
+     "edge_id": "e272",
+     "prerequisite": "shapes.quadrilateral.parallel-sides.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Rectangles and rhombuses are parallelograms, and parallelograms trapezoids, by the parallel-sides definitions."
+    },
+    {
+     "edge_id": "e273",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Inclusion of the square and the rectangle in other categories is shown from the definition of a rectangle."
+    },
+    {
+     "edge_id": "e274",
+     "prerequisite": "shapes.rhombus.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Inclusion of the square and the rhombus in other categories is shown from the definition of a rhombus."
+    },
+    {
+     "edge_id": "e275",
+     "prerequisite": "shapes.square.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Every square is both a rectangle and a rhombus because its definition contains both sets of conditions."
+    }
+   ]
+  },
+  {
+   "id": "shapes.triangle.hierarchy",
+   "concept": "shapes",
+   "facet": "category",
+   "level": 3,
+   "type": "concept",
+   "name": "The hierarchy of triangle categories",
+   "statement": "Equilateral triangles are a subcategory of isosceles triangles, and the categories by sides cross the categories by angles, so one triangle can belong to both kinds, such as an isosceles right triangle.",
+   "assess": "True or false, with a reason from the definitions: every equilateral triangle is isosceles; every isosceles triangle is equilateral; a right triangle can be isosceles.",
+   "proposed_edges": [
+    {
+     "edge_id": "e276",
+     "prerequisite": "shapes.category.defined-by-attribute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A triangle that has the attribute of each category belongs to both, so categories can cross or nest."
+    },
+    {
+     "edge_id": "e277",
+     "prerequisite": "shapes.triangle.by-angles.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The crossing of categories by sides with categories by angles uses the definitions by angles."
+    },
+    {
+     "edge_id": "e278",
+     "prerequisite": "shapes.triangle.by-sides.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The nesting of equilateral inside isosceles follows from the definitions of the categories by sides."
+    }
+   ]
+  }
+ ]
+}

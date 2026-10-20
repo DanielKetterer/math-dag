@@ -1,0 +1,1473 @@
+{
+ "boundary_nodes": [
+  "area.composite-additive",
+  "coordinate-plane.four-quadrants",
+  "coordinate.ordered-pair.notation",
+  "counting.number-word.thousand",
+  "counting.number-word.thousand-million",
+  "counting.skip.twos",
+  "decimal.addition.algorithm",
+  "decimal.division.algorithm",
+  "decimal.multiplication.algorithm",
+  "decimal.subtraction.algorithm",
+  "division.nonunit-fraction-by-whole",
+  "division.standard-algorithm.long-division",
+  "division.successive-division",
+  "equations.linear.solve",
+  "equations.one-step",
+  "expressions.variables",
+  "fraction.reciprocal",
+  "fraction.subtraction.comparison",
+  "functions.definition",
+  "geometry.similar-triangles",
+  "multiples.common-multiple",
+  "number.halfway-between",
+  "rational-numbers.operations"
+ ],
+ "nodes": [
+  {
+   "id": "measurement.weight.attribute",
+   "concept": "measurement",
+   "facet": "weight",
+   "level": 1,
+   "type": "concept",
+   "name": "Weight as an attribute of an object, separate from its size",
+   "statement": "Weight is how heavy an object is, felt by holding it or shown on a balance; it is a different attribute from size, so a bigger object is not necessarily heavier.",
+   "assess": "Hold a large beach ball in one hand and a small rock in the other. Sam says the beach ball is heavier because it is bigger. Is Sam right?",
+   "proposed_edges": [
+    {
+     "edge_id": "e279",
+     "prerequisite": "comparing.weight.direct",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Weight is seen as its own attribute by holding or balancing two objects and finding which is heavier, as with the beach ball and the rock."
+    }
+   ]
+  },
+  {
+   "id": "measurement.attributes.several",
+   "concept": "measurement",
+   "facet": "core",
+   "level": 1,
+   "type": "concept",
+   "name": "One object has several measurable attributes",
+   "statement": "A single object has several different measurable attributes, such as length, height, weight and how much it holds, and each one can be described separately with its own words.",
+   "assess": "Look at this water bottle. Name two different things about it that could be measured, and give a describing word for each.",
+   "proposed_edges": [
+    {
+     "edge_id": "e280",
+     "prerequisite": "measurement.length.attribute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Length is one of the several attributes the statement names, so the learner must already see length as an attribute of an object."
+    },
+    {
+     "edge_id": "e281",
+     "prerequisite": "measurement.weight.attribute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Weight is another attribute the statement names, and the learner must see it as separate from length and size."
+    }
+   ]
+  },
+  {
+   "id": "comparing.length.describe-difference",
+   "concept": "comparing",
+   "facet": "length",
+   "level": 1,
+   "type": "representation",
+   "name": "Describe a direct length comparison with length words",
+   "statement": "After two objects are compared directly by length or height, the result is stated with the comparison words for that attribute (longer or shorter, taller or shorter) rather than a general word such as bigger.",
+   "assess": "Two children stand back to back and one is clearly taller. Tell how their heights compare, using a word that is about height.",
+   "proposed_edges": [
+    {
+     "edge_id": "e282",
+     "prerequisite": "comparing.size.direct",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement starts from two objects already compared directly by length or height, and only the wording of the result is new."
+    },
+    {
+     "edge_id": "e283",
+     "prerequisite": "measurement.length.attribute",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The words longer, shorter and taller name the length attribute, so the learner must see length as what is being compared."
+    }
+   ]
+  },
+  {
+   "id": "comparing.weight.describe-difference",
+   "concept": "comparing",
+   "facet": "weight",
+   "level": 1,
+   "type": "representation",
+   "name": "Describe a direct weight comparison with weight words",
+   "statement": "After two objects are compared directly by weight, the result is stated with the comparison words heavier or lighter rather than a general word such as bigger.",
+   "assess": "A pan balance holds a book on one side and a box of crayons on the other, and the book side is lower. Tell how the weights compare, using a word that is about weight.",
+   "proposed_edges": [
+    {
+     "edge_id": "e284",
+     "prerequisite": "comparing.weight.direct",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement starts from two objects already compared directly by weight, for example on a pan balance, and only the wording of the result is new."
+    },
+    {
+     "edge_id": "e285",
+     "prerequisite": "measurement.weight.attribute",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The words heavier and lighter name the weight attribute, so the learner must see weight as separate from size."
+    }
+   ]
+  },
+  {
+   "id": "comparing.length.indirect",
+   "concept": "comparing",
+   "facet": "length",
+   "level": 1,
+   "type": "procedure",
+   "name": "Compare two lengths indirectly using a third object",
+   "statement": "Two lengths that cannot be placed side by side are compared by matching a third object, such as a string, to one of them and then comparing that third object with the other; whichever is longer than the matched string is the longer.",
+   "assess": "The door and the bookshelf cannot be moved next to each other. Use this piece of string to find out which is wider.",
+   "procedure": [
+    "Lay a string or strip along the first object and mark or cut it at the first object's length.",
+    "Place the marked string along the second object, with one end lined up.",
+    "If the second object extends past the mark, it is longer than the first; if it stops short, it is shorter; if it ends at the mark, they are the same length."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e286",
+     "prerequisite": "comparing.length.describe-difference",
+     "relation": "representational",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 states the result of the string comparison with longer, shorter or the same length, using the comparison words."
+    },
+    {
+     "edge_id": "e287",
+     "prerequisite": "comparing.size.direct",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 sets the marked string beside the second object and compares the two lengths directly, side by side."
+    }
+   ]
+  },
+  {
+   "id": "measurement.length.tool.select",
+   "concept": "measurement",
+   "facet": "length",
+   "level": 2,
+   "type": "concept",
+   "name": "Choose a suitable tool for measuring a length",
+   "statement": "A measuring tool suits a length when it is long enough to span much of it and can follow its shape: a ruler for short straight lengths, a yardstick or meter stick for longer straight lengths, a measuring tape for very long or curved lengths.",
+   "assess": "Which tool would you use to measure the distance around a pumpkin: a 12-inch ruler, a meter stick, or a measuring tape? Why?",
+   "proposed_edges": [
+    {
+     "edge_id": "e288",
+     "prerequisite": "measurement.length.iterate-units",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A ruler, yardstick or tape is a row of equal units laid along the object, which is how the learner judges whether a tool spans the length."
+    },
+    {
+     "edge_id": "e289",
+     "prerequisite": "measurement.length.no-gaps-overlaps",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A tool suits a length when its marked units can span much of it, and length is the number of units that span the object."
+    }
+   ]
+  },
+  {
+   "id": "measurement.length.ruler.from-zero",
+   "concept": "measurement",
+   "facet": "length",
+   "level": 2,
+   "type": "concept",
+   "name": "Ruler numbers count units from the 0 mark",
+   "statement": "The number at a mark on a ruler counts the whole units from the 0 mark to that mark, so an object's length is the number of units between its two ends, which equals the number at its far end only when its near end is at 0.",
+   "assess": "A crayon lies along an inch ruler from the 2 mark to the 7 mark. How long is the crayon?",
+   "proposed_edges": [
+    {
+     "edge_id": "e290",
+     "prerequisite": "measurement.length.no-gaps-overlaps",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says an object's length is the number of whole units between its two ends, which is length as the count of spanning units."
+    },
+    {
+     "edge_id": "e291",
+     "prerequisite": "number-line.whole-number-lengths",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The ruler is a number line on which each whole number marks a length counted from 0, which is the reading the statement describes."
+    },
+    {
+     "edge_id": "e292",
+     "prerequisite": "subtraction.within-10",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The crayon from the 2 mark to the 7 mark is found as 7 minus 2, a difference within 10."
+    }
+   ]
+  },
+  {
+   "id": "measurement.length.ruler",
+   "concept": "measurement",
+   "facet": "length",
+   "level": 2,
+   "type": "procedure",
+   "name": "Measure a length in standard units with a ruler or other tool",
+   "statement": "Measure a length in inches, feet, centimeters or meters by lining up the 0 mark of a ruler, yardstick, meter stick or tape with one end of the object and reading the whole-unit mark nearest the other end, reported with the unit.",
+   "assess": "Use your centimeter ruler to measure this pencil, drawn at actual size, to the nearest centimeter.",
+   "procedure": [
+    "Choose the unit and a tool marked in that unit.",
+    "Line up the 0 mark of the tool with one end of the object, keeping the tool straight along the object.",
+    "Find the whole-unit mark nearest the other end of the object.",
+    "Report that number with the unit name."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e293",
+     "prerequisite": "measurement.length.ruler.from-zero",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Steps 2 and 3 line up the 0 mark and read the number at the far end as the count of whole units from 0."
+    }
+   ]
+  },
+  {
+   "id": "measurement.length.unit-size.inverse",
+   "concept": "measurement",
+   "facet": "length",
+   "level": 2,
+   "type": "concept",
+   "name": "A larger unit gives a smaller measurement",
+   "statement": "When the same length is measured in two different units, the measurement in the larger unit is the smaller number, because each larger unit covers more of the length.",
+   "assess": "A table is 4 feet long. Without measuring, is its length in inches a number greater than 4, less than 4, or equal to 4?",
+   "proposed_edges": [
+    {
+     "edge_id": "e294",
+     "prerequisite": "comparing.whole-numbers.numerals-within-10",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says the measurement in the larger unit is the smaller number, so the two numbers must be compared."
+    },
+    {
+     "edge_id": "e295",
+     "prerequisite": "measurement.length.iterate-units",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The reason a larger unit gives a smaller number is seen by laying larger and smaller units end to end along the same object."
+    },
+    {
+     "edge_id": "e296",
+     "prerequisite": "measurement.length.no-gaps-overlaps",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The measurement is the number of units that span the length, so a unit that covers more of it needs a smaller number."
+    },
+    {
+     "edge_id": "e297",
+     "prerequisite": "measurement.length.unit-benchmarks",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The table problem needs to know a foot is a longer unit than an inch to decide without measuring."
+    }
+   ]
+  },
+  {
+   "id": "measurement.length.unit-benchmarks",
+   "concept": "measurement",
+   "facet": "length",
+   "level": 2,
+   "type": "concept",
+   "name": "Know benchmark sizes of standard length units",
+   "statement": "Each standard length unit has a familiar benchmark of about its size: an inch is about the length of a thumb joint, a foot about the length of a sheet of paper, a centimeter about the width of a fingertip, a meter about the length of a long step or a baseball bat.",
+   "assess": "Which is about 1 meter long: a pencil, a baseball bat, or a school bus?",
+   "proposed_edges": [
+    {
+     "edge_id": "e298",
+     "prerequisite": "measurement.length.ruler",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each benchmark is an everyday thing compared with the length of an inch, foot, centimeter or meter, units the learner knows from marked rulers and tapes."
+    }
+   ]
+  },
+  {
+   "id": "measurement.length.estimate",
+   "concept": "measurement",
+   "facet": "length",
+   "level": 2,
+   "type": "procedure",
+   "name": "Estimate a length in a standard unit",
+   "statement": "Estimate a length in inches, feet, centimeters or meters by picturing copies of a benchmark for the unit laid end to end along the object and giving the whole number of units that would fit.",
+   "assess": "Without measuring, about how many inches long is this new crayon? (A new crayon is a little over 3 inches long; any estimate from 2 to 5 inches is accepted.)",
+   "procedure": [
+    "Recall a benchmark for the named unit.",
+    "Picture copies of the benchmark laid end to end along the object, with no gaps or overlaps.",
+    "Give the number of copies that would fit as the estimate, with the unit."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e299",
+     "prerequisite": "measurement.length.iterate-units",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Picturing copies of the benchmark laid end to end along the object is mental iteration of a length unit."
+    },
+    {
+     "edge_id": "e300",
+     "prerequisite": "measurement.length.no-gaps-overlaps",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 pictures copies of the benchmark laid end to end with no gaps or overlaps, which is length as the count of spanning units."
+    },
+    {
+     "edge_id": "e301",
+     "prerequisite": "measurement.length.unit-benchmarks",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 recalls a benchmark for the named unit and every later step copies that benchmark along the object."
+    }
+   ]
+  },
+  {
+   "id": "measurement.length.difference",
+   "concept": "measurement",
+   "facet": "length",
+   "level": 2,
+   "type": "procedure",
+   "name": "Measure to find how much longer one object is than another",
+   "statement": "How much longer one object is than another is the difference of their lengths measured in the same standard unit, stated in that unit.",
+   "assess": "A blue strip and a red strip lie along an inch ruler, both starting at 0. The blue strip ends at 6 and the red strip ends at 9. How many inches longer is the red strip than the blue strip?",
+   "procedure": [
+    "Measure both objects in the same standard unit.",
+    "Find the difference of the two lengths.",
+    "State the difference with the unit."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e302",
+     "prerequisite": "comparing.length.describe-difference",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "How much longer one object is than the other builds the comparison words longer and shorter into a number answer."
+    },
+    {
+     "edge_id": "e303",
+     "prerequisite": "measurement.length.ruler",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 measures both objects in the same standard unit, which is the ruler procedure applied twice."
+    },
+    {
+     "edge_id": "e304",
+     "prerequisite": "subtraction.application.compare.difference-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "How much longer one object is than another is a compare situation whose answer is the difference."
+    },
+    {
+     "edge_id": "e305",
+     "prerequisite": "subtraction.within-10",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 finds the difference of the two measured lengths, for example 9 minus 6 in the test problem."
+    },
+    {
+     "edge_id": "e306",
+     "prerequisite": "subtraction.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Finding the difference of the two measured lengths is a subtraction, and any method will do."
+    }
+   ]
+  },
+  {
+   "id": "measurement.length.application.addition",
+   "concept": "measurement",
+   "facet": "length",
+   "level": 2,
+   "type": "application",
+   "name": "Solve addition word problems about lengths within 100",
+   "statement": "A one-step word problem gives lengths in the same unit that are joined end to end or combined, with sums within 100; the learner finds the unknown length and states it with the unit.",
+   "assess": "A ribbon is 34 centimeters long. Maya tapes another ribbon 25 centimeters long to its end. How long is the ribbon now?",
+   "proposed_edges": [
+    {
+     "edge_id": "e307",
+     "prerequisite": "addition.application.add-to-story",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "One length taped on to the end of another is an add-to situation with the result unknown."
+    },
+    {
+     "edge_id": "e308",
+     "prerequisite": "addition.application.put-together.total-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Lengths that are combined into one whole length form a put-together situation with the total unknown."
+    },
+    {
+     "edge_id": "e309",
+     "prerequisite": "addition.within-100",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The unknown length is the sum of two given lengths with sums within 100, such as 34 plus 25."
+    },
+    {
+     "edge_id": "e310",
+     "prerequisite": "measurement.length.no-gaps-overlaps",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Lengths joined end to end make a total length that is the count of units spanning both, so their measures add."
+    },
+    {
+     "edge_id": "e311",
+     "prerequisite": "measurement.length.ruler",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Lengths given in centimeters or inches are measurements in standard units, and the answer is stated with the unit."
+    }
+   ]
+  },
+  {
+   "id": "measurement.length.application.subtraction",
+   "concept": "measurement",
+   "facet": "length",
+   "level": 2,
+   "type": "application",
+   "name": "Solve subtraction word problems about lengths within 100",
+   "statement": "A one-step word problem gives lengths in the same unit, within 100, where a piece is cut off or two lengths are compared; the learner finds the unknown length and states it with the unit.",
+   "assess": "A board is 72 inches long. Dad cuts off a piece 28 inches long. How long is the board that is left?",
+   "proposed_edges": [
+    {
+     "edge_id": "e312",
+     "prerequisite": "measurement.length.no-gaps-overlaps",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A piece cut off leaves a length that is the count of units remaining, so the measures subtract."
+    },
+    {
+     "edge_id": "e313",
+     "prerequisite": "measurement.length.ruler",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Lengths given in inches or centimeters are measurements in standard units, and the answer is stated with the unit."
+    },
+    {
+     "edge_id": "e314",
+     "prerequisite": "subtraction.application.compare.difference-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Comparing two lengths to find how much longer one is is a compare situation with the difference unknown."
+    },
+    {
+     "edge_id": "e315",
+     "prerequisite": "subtraction.application.take-from-story",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A piece cut off a board is a take-from situation in which the length that is left is unknown."
+    },
+    {
+     "edge_id": "e316",
+     "prerequisite": "subtraction.within-100",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The unknown length is the difference of two given lengths within 100, such as 72 minus 28."
+    }
+   ]
+  },
+  {
+   "id": "time.analog.hour",
+   "concept": "time",
+   "facet": "clock",
+   "level": 2,
+   "type": "representation",
+   "name": "Tell time to the hour on an analog clock",
+   "statement": "When the minute hand of an analog clock points to 12, the clock shows a whole hour, named by the number the hour hand points to and read as that number o'clock.",
+   "assess": "On this clock the short hand points to 3 and the long hand points to 12. What time is it?",
+   "proposed_edges": [
+    {
+     "edge_id": "e317",
+     "prerequisite": "numeral.read",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner reads the numeral that the hour hand points to on the clock face, numbers 1 to 12, to name the hour."
+    }
+   ]
+  },
+  {
+   "id": "time.analog.half-hour",
+   "concept": "time",
+   "facet": "clock",
+   "level": 2,
+   "type": "representation",
+   "name": "Tell time to the half hour on an analog clock",
+   "statement": "When the minute hand points to 6 it has gone halfway around since the hour, so the time is half past the hour; the hour hand is then halfway between two numbers, and the hour is the number it has most recently passed.",
+   "assess": "On this clock the long hand points to 6 and the short hand is halfway between 8 and 9. What time is it?",
+   "proposed_edges": [
+    {
+     "edge_id": "e318",
+     "prerequisite": "number.halfway-between",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The hour hand sits halfway between two numbers on the face, and the hour is read from the number it has passed."
+    },
+    {
+     "edge_id": "e319",
+     "prerequisite": "partitioning.equal-shares.name",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Half past means the minute hand has gone halfway around the face, a half of the circle, which uses halves as equal shares."
+    },
+    {
+     "edge_id": "e320",
+     "prerequisite": "time.analog.hour",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Reading the hour from the number the hour hand points to is the base that half past extends, and the minute hand now points to 6."
+    }
+   ]
+  },
+  {
+   "id": "time.digital.read",
+   "concept": "time",
+   "facet": "clock",
+   "level": 2,
+   "type": "representation",
+   "name": "Read a time on a digital clock",
+   "statement": "On a digital clock the number before the colon is the hour and the two digits after it are the minutes past that hour, so 7:00 is seven o'clock and 4:35 is thirty-five minutes past four.",
+   "assess": "A digital clock shows 9:30. What hour is it, and how many minutes past that hour?",
+   "proposed_edges": [
+    {
+     "edge_id": "e321",
+     "prerequisite": "numeral.read",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner reads the numeral before the colon as the hour and the two-digit numeral after it as the minutes, such as 35."
+    }
+   ]
+  },
+  {
+   "id": "time.analog.five-minutes",
+   "concept": "time",
+   "facet": "clock",
+   "level": 2,
+   "type": "procedure",
+   "name": "Tell time to the nearest five minutes on an analog clock",
+   "statement": "Read an analog clock to the nearest five minutes: the hour is the number the hour hand has most recently passed, and the minutes past the hour are found by counting by fives from 12 to the number nearest the minute hand.",
+   "assess": "On this clock the long hand points to 7 and the short hand is a little past 4. What time is it?",
+   "procedure": [
+    "Find the number the hour hand has most recently passed; that is the hour.",
+    "Find the number nearest the minute hand.",
+    "Count by fives from 12 around to that number to get the minutes past the hour.",
+    "Say or write the hour and the minutes."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e322",
+     "prerequisite": "counting.skip.fives",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 counts by fives from 12 around the face to the number nearest the minute hand to get the minutes."
+    },
+    {
+     "edge_id": "e323",
+     "prerequisite": "time.analog.half-hour",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 takes the hour from the number the hour hand has most recently passed, the reading first met with the half hour."
+    }
+   ]
+  },
+  {
+   "id": "time.analog.draw-hour",
+   "concept": "time",
+   "facet": "clock",
+   "level": 2,
+   "type": "representation",
+   "name": "Show a time to the hour on an analog clock",
+   "statement": "A time of h o'clock is shown on an analog clock face by drawing the minute hand pointing to 12 and the hour hand pointing to h.",
+   "assess": "Draw the hands on this blank clock face to show 5 o'clock.",
+   "proposed_edges": [
+    {
+     "edge_id": "e324",
+     "prerequisite": "time.analog.hour",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Showing h o'clock draws the hands for the same time that the learner reads as h o'clock, with the minute hand at 12."
+    }
+   ]
+  },
+  {
+   "id": "time.analog.draw-half-hour",
+   "concept": "time",
+   "facet": "clock",
+   "level": 2,
+   "type": "representation",
+   "name": "Show a time to the half hour on an analog clock",
+   "statement": "Half past h is shown on an analog clock face by drawing the minute hand pointing to 6 and the hour hand halfway between h and the next number.",
+   "assess": "Draw the hands on this blank clock face to show half past 2.",
+   "proposed_edges": [
+    {
+     "edge_id": "e325",
+     "prerequisite": "number.halfway-between",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The hour hand is drawn halfway between h and the next number, so the learner must find the point midway between two numbers on the face."
+    },
+    {
+     "edge_id": "e326",
+     "prerequisite": "time.analog.draw-hour",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Placing the hour hand at h and the minute hand on a numbered position is the drawing skill extended here."
+    },
+    {
+     "edge_id": "e327",
+     "prerequisite": "time.analog.half-hour",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Half past h is the time the learner reads from the minute hand at 6 and the hour hand between two numbers."
+    }
+   ]
+  },
+  {
+   "id": "time.analog.draw-five-minutes",
+   "concept": "time",
+   "facet": "clock",
+   "level": 2,
+   "type": "procedure",
+   "name": "Show a time to five minutes on an analog clock",
+   "statement": "A time h:mm, with mm a multiple of 5, is shown on an analog clock face by drawing the minute hand to the number reached by counting by fives from 12 to mm, and the hour hand between h and the next number, closer to h when mm is small and closer to the next number when mm is large.",
+   "assess": "Draw the hands on this blank clock face to show 7:20.",
+   "procedure": [
+    "Count by fives from 12 until reaching mm; draw the minute hand to that number.",
+    "Draw the hour hand between h and the next number, positioned as far along as the minute hand is around the clock."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e328",
+     "prerequisite": "counting.skip.fives",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 counts by fives from 12 until reaching mm to find where the minute hand is drawn."
+    },
+    {
+     "edge_id": "e329",
+     "prerequisite": "time.analog.draw-half-hour",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 places the hour hand part of the way between h and the next number, extending the halfway position used for half past."
+    },
+    {
+     "edge_id": "e330",
+     "prerequisite": "time.analog.five-minutes",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The drawn hands must match how minute and hour hands are read to the nearest five minutes."
+    },
+    {
+     "edge_id": "e331",
+     "prerequisite": "time.digital.read",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The time is given as h:mm, so the learner must read the hour before the colon and the minutes after it."
+    }
+   ]
+  },
+  {
+   "id": "time.digital.write",
+   "concept": "time",
+   "facet": "clock",
+   "level": 2,
+   "type": "representation",
+   "name": "Write a time described in words as a digital time",
+   "statement": "A time given in words is written as h:mm, with the hour before the colon and the minutes past the hour as two digits after it, so o'clock is written :00 and half past is written :30.",
+   "assess": "Write 'twenty-five minutes past six' the way a digital clock shows it.",
+   "proposed_edges": [
+    {
+     "edge_id": "e332",
+     "prerequisite": "numeral.write",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner writes the numerals for the hour and for the minutes spoken in words, such as twenty-five, as digits."
+    },
+    {
+     "edge_id": "e333",
+     "prerequisite": "time.digital.read",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Writing h:mm uses the same notation the learner reads on a digital clock, with the hour before the colon and two minute digits after."
+    }
+   ]
+  },
+  {
+   "id": "time.am-pm",
+   "concept": "time",
+   "facet": "day",
+   "level": 2,
+   "type": "concept",
+   "name": "a.m. and p.m. name the two halves of a day",
+   "statement": "a.m. names the times from midnight up to noon and p.m. names the times from noon up to midnight, so each clock reading happens twice a day and a.m. or p.m. tells which.",
+   "assess": "School starts at 8:00 in the morning. Is that 8:00 a.m. or 8:00 p.m.?",
+   "proposed_edges": [
+    {
+     "edge_id": "e334",
+     "prerequisite": "time.digital.read",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "a.m. and p.m. are attached to a clock reading such as 8:00, which the learner must be able to read as an hour and minutes."
+    }
+   ]
+  },
+  {
+   "id": "money.coins.value",
+   "concept": "money",
+   "facet": "core",
+   "level": 2,
+   "type": "fact",
+   "name": "Name coins and recall their values in cents",
+   "statement": "A penny, a nickel, a dime and a quarter are recognized by sight and are worth 1, 5, 10 and 25 cents, regardless of their physical size.",
+   "assess": "Here are a penny, a nickel, a dime and a quarter, mixed up. Name each coin and tell how many cents it is worth.",
+   "proposed_edges": []
+  },
+  {
+   "id": "money.coins.total-value",
+   "concept": "money",
+   "facet": "core",
+   "level": 2,
+   "type": "procedure",
+   "name": "Find the total value of a collection of coins",
+   "statement": "The total value of a collection of coins, less than 100 cents, is the sum of the values of its coins, found most easily by counting on from the coins of greatest value.",
+   "assess": "What is the total value of 1 quarter, 2 dimes, 1 nickel and 3 pennies?",
+   "procedure": [
+    "Sort the coins by kind, from greatest value to least.",
+    "Start at the value of the first coin and count on by each coin's value: by 25s for quarters, 10s for dimes, 5s for nickels, 1s for pennies.",
+    "The last number said is the total in cents."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e335",
+     "prerequisite": "addition.application.put-together.total-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The total value is the whole made by combining the values of the separate coins."
+    },
+    {
+     "edge_id": "e336",
+     "prerequisite": "comparing.whole-numbers.magnitude",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 sorts the coins from greatest value to least, which compares values such as 25 and 10."
+    },
+    {
+     "edge_id": "e337",
+     "prerequisite": "counting.sequence.count-on",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 counts on by ones for pennies from the running total, for example from 50 to 51, 52, 53."
+    },
+    {
+     "edge_id": "e338",
+     "prerequisite": "counting.skip.fives",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 counts on by fives for nickels, for example from 45 to 50."
+    },
+    {
+     "edge_id": "e339",
+     "prerequisite": "counting.skip.tens.from-any",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 counts on by tens for dimes from a number that is not a multiple of ten, such as 25."
+    },
+    {
+     "edge_id": "e340",
+     "prerequisite": "money.coins.value",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 starts at the value of the first coin and counts on by each coin's value, so each coin's cents must be known."
+    },
+    {
+     "edge_id": "e341",
+     "prerequisite": "counting.skip.twenty-fives",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Quarters are counted on by 25s, a skip count not found elsewhere in the map."
+    }
+   ]
+  },
+  {
+   "id": "money.notation",
+   "concept": "money",
+   "facet": "core",
+   "level": 2,
+   "type": "representation",
+   "name": "Write money amounts with the dollar and cents signs",
+   "statement": "A whole number of dollars is written with the dollar sign before the number ($5), and a whole number of cents is written with the cents sign after the number (35 followed by the cents sign); one amount uses one sign, not both.",
+   "assess": "Write 40 cents and 3 dollars using the money signs.",
+   "proposed_edges": [
+    {
+     "edge_id": "e342",
+     "prerequisite": "money.coins.value",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The cents sign names the unit the coins are worth in, so the learner must know what a cent is as the value of a coin."
+    },
+    {
+     "edge_id": "e343",
+     "prerequisite": "numeral.write",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each amount is the numeral for the number of cents or dollars with a sign placed before or after it."
+    }
+   ]
+  },
+  {
+   "id": "money.application.addition",
+   "concept": "money",
+   "facet": "core",
+   "level": 2,
+   "type": "application",
+   "name": "Solve addition word problems with coins and dollars",
+   "statement": "A one-step word problem combines amounts of money given as coins, cents, or whole dollars, all in one unit; the learner finds the total and writes it with the correct sign.",
+   "assess": "Jo has 3 dimes and 2 nickels. Her mom gives her a quarter. How much money does Jo have now?",
+   "proposed_edges": [
+    {
+     "edge_id": "e344",
+     "prerequisite": "addition.application.add-to-story",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Money that is given to someone who already has some is an add-to situation with the result unknown."
+    },
+    {
+     "edge_id": "e345",
+     "prerequisite": "addition.application.put-together.total-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Amounts of money that are combined into one total form a put-together situation with the total unknown."
+    },
+    {
+     "edge_id": "e346",
+     "prerequisite": "addition.within-100",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The total is found by adding amounts in one unit, for example 40 cents plus 25 cents, and any method would do."
+    },
+    {
+     "edge_id": "e347",
+     "prerequisite": "money.coins.total-value",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The amount given as coins, such as 3 dimes and 2 nickels, must be turned into a total value in cents before it is combined."
+    },
+    {
+     "edge_id": "e348",
+     "prerequisite": "money.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The answer is written with the correct sign, the cents sign after a number of cents or the dollar sign before dollars."
+    }
+   ]
+  },
+  {
+   "id": "money.application.subtraction",
+   "concept": "money",
+   "facet": "core",
+   "level": 2,
+   "type": "application",
+   "name": "Solve subtraction word problems with coins and dollars",
+   "statement": "A one-step word problem takes away or compares amounts of money given as coins, cents, or whole dollars, all in one unit; the learner finds the unknown amount and writes it with the correct sign.",
+   "assess": "Sam has 3 quarters. He buys a pencil for 40 cents. How much money does Sam have left?",
+   "proposed_edges": [
+    {
+     "edge_id": "e349",
+     "prerequisite": "money.coins.total-value",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "An amount given as coins, such as 3 quarters, must be turned into a value in cents before the cost is taken away."
+    },
+    {
+     "edge_id": "e350",
+     "prerequisite": "money.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The answer is written with the correct sign, the cents sign after a number of cents or the dollar sign before dollars."
+    },
+    {
+     "edge_id": "e351",
+     "prerequisite": "subtraction.application.compare.difference-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Comparing two amounts of money to find how much more one is is a compare situation with the difference unknown."
+    },
+    {
+     "edge_id": "e352",
+     "prerequisite": "subtraction.application.take-from-story",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Spending money so that some is taken away is a take-from situation with the amount left unknown."
+    },
+    {
+     "edge_id": "e353",
+     "prerequisite": "subtraction.within-100",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The unknown amount is the difference of two amounts in one unit, for example 75 cents minus 40 cents, and any method would do."
+    }
+   ]
+  },
+  {
+   "id": "data.categorical.count-each",
+   "concept": "data",
+   "facet": "categorical",
+   "level": 1,
+   "type": "procedure",
+   "name": "Count the objects in each category",
+   "statement": "After objects are sorted into given categories, with up to 10 in each, each category is counted separately to tell how many objects are in it.",
+   "assess": "These buttons are already sorted into a red pile, a blue pile and a yellow pile. How many buttons are in each pile?",
+   "proposed_edges": [
+    {
+     "edge_id": "e354",
+     "prerequisite": "classifying.sort.given-attribute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The objects are already sorted into categories by an attribute, so what a category is must be understood."
+    },
+    {
+     "edge_id": "e355",
+     "prerequisite": "counting.objects",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each sorted category is counted as its own collection to tell how many objects are in it, up to 10."
+    }
+   ]
+  },
+  {
+   "id": "data.categorical.order-by-count",
+   "concept": "data",
+   "facet": "categorical",
+   "level": 1,
+   "type": "procedure",
+   "name": "Order categories by their counts",
+   "statement": "Categories are put in order from the one with the most objects to the one with the fewest, or the reverse, by comparing their counts, with up to 10 in each.",
+   "assess": "The red pile has 7 buttons, the blue pile has 4 and the yellow pile has 9. Put the piles in order from most buttons to fewest.",
+   "proposed_edges": [
+    {
+     "edge_id": "e356",
+     "prerequisite": "comparing.whole-numbers.numerals-within-10",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Ordering from most to fewest compares the counts of the categories pair by pair, with counts up to 10."
+    },
+    {
+     "edge_id": "e357",
+     "prerequisite": "data.categorical.count-each",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The categories are ordered by their counts, so each category's count must already be found."
+    }
+   ]
+  },
+  {
+   "id": "data.categorical.organize",
+   "concept": "data",
+   "facet": "categorical",
+   "level": 2,
+   "type": "representation",
+   "name": "Organize data with up to three categories in a chart",
+   "statement": "A list of data points falling into up to three categories is recorded in a tally chart or table with one row for each category, one mark for each data point in its category's row, and the count for each category.",
+   "assess": "Children named their favorite fruit: apple, banana, apple, grape, apple, banana, grape, apple. Make a tally chart with one row for each fruit.",
+   "proposed_edges": [
+    {
+     "edge_id": "e358",
+     "prerequisite": "classifying.sort.given-attribute",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each data point is placed in the row for its category, such as apple or banana, by the attribute it has."
+    },
+    {
+     "edge_id": "e359",
+     "prerequisite": "data.categorical.count-each",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The chart ends with the count for each category, found by counting the marks in each row."
+    },
+    {
+     "edge_id": "e360",
+     "prerequisite": "numeral.informal-record",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A tally chart records each data point as one mark in its category's row, a mark standing for one object."
+    },
+    {
+     "edge_id": "e361",
+     "prerequisite": "numeral.record-collection",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The count for each category is recorded as a numeral beside its row."
+    }
+   ]
+  },
+  {
+   "id": "data.categorical.read-count",
+   "concept": "data",
+   "facet": "categorical",
+   "level": 2,
+   "type": "representation",
+   "name": "Read the count of a category from a chart or picture graph",
+   "statement": "The number of data points in one category is read from a tally chart, table, or picture graph with one mark or picture per data point.",
+   "assess": "A tally chart shows Apple with 4 tallies, Banana with 2 tallies and Grape with 6 tallies. How many children chose grape?",
+   "proposed_edges": [
+    {
+     "edge_id": "e362",
+     "prerequisite": "counting.objects",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner counts the marks or pictures in one category's row to find how many data points it has."
+    },
+    {
+     "edge_id": "e363",
+     "prerequisite": "numeral.informal-record",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The chart has one mark or picture per data point, so each mark stands for one object in the data."
+    }
+   ]
+  },
+  {
+   "id": "data.categorical.total",
+   "concept": "data",
+   "facet": "categorical",
+   "level": 2,
+   "type": "application",
+   "name": "Find the total number of data points in a chart",
+   "statement": "A question asks how many data points there are in all in a data set with up to three categories; the answer combines the counts of all the categories.",
+   "assess": "A chart shows that 4 children chose apple, 2 chose banana and 6 chose grape. How many children answered in all?",
+   "proposed_edges": [
+    {
+     "edge_id": "e364",
+     "prerequisite": "addition.application.three-addends",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The total combines the counts of up to three categories, a sum of up to three numbers."
+    },
+    {
+     "edge_id": "e365",
+     "prerequisite": "data.categorical.read-count",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The counts of the categories are read from the chart before they are combined."
+    }
+   ]
+  },
+  {
+   "id": "data.categorical.how-many-more",
+   "concept": "data",
+   "facet": "categorical",
+   "level": 2,
+   "type": "application",
+   "name": "Find how many more or fewer are in one category than another",
+   "statement": "A question asks how many more or how many fewer data points one category has than another, in a data set with up to three categories; the answer is the difference of the two category counts.",
+   "assess": "A chart shows that 4 children chose apple, 2 chose banana and 6 chose grape. How many more children chose grape than banana?",
+   "proposed_edges": [
+    {
+     "edge_id": "e366",
+     "prerequisite": "data.categorical.read-count",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The two category counts are read from the chart before they are compared."
+    },
+    {
+     "edge_id": "e367",
+     "prerequisite": "subtraction.application.compare.difference-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "How many more or fewer is a compare situation whose answer is the difference of the two counts."
+    },
+    {
+     "edge_id": "e368",
+     "prerequisite": "subtraction.within-20.fluency",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The difference of the two category counts is a subtraction within 20, and any method will do."
+    }
+   ]
+  },
+  {
+   "id": "data.picture-graph.draw",
+   "concept": "data",
+   "facet": "categorical",
+   "level": 2,
+   "type": "representation",
+   "name": "Draw a picture graph with one picture per data point",
+   "statement": "A data set with up to four categories is shown as a picture graph: one same-size picture for each data point, lined up in a row or column for each category from a common starting line, with each category labeled and a title.",
+   "assess": "Make a picture graph of this pet data: Cats 3, Dogs 5, Fish 2, Birds 4.",
+   "proposed_edges": [
+    {
+     "edge_id": "e369",
+     "prerequisite": "counting.produce-set",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each category's count, such as 5 dogs, is drawn as that many pictures, so the learner counts out a set of a given number."
+    },
+    {
+     "edge_id": "e370",
+     "prerequisite": "data.categorical.organize",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A picture graph keeps the layout of the tally chart, one row or column per category with one mark per data point, now with pictures."
+    },
+    {
+     "edge_id": "e371",
+     "prerequisite": "data.categorical.read-count",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A picture graph is the form in which one picture stands for one data point in each category row."
+    },
+    {
+     "edge_id": "e372",
+     "prerequisite": "numeral.read",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test data are given as numerals beside each pet, such as Cats 3, and must be read to know how many to draw."
+    }
+   ]
+  },
+  {
+   "id": "data.bar-graph.draw",
+   "concept": "data",
+   "facet": "categorical",
+   "level": 2,
+   "type": "representation",
+   "name": "Draw a bar graph with a single-unit scale",
+   "statement": "A data set with up to four categories is shown as a bar graph on a scale marked in ones from 0: one labeled bar for each category, starting at 0 and ending level with the scale number equal to that category's count, with a title.",
+   "assess": "On this grid with a scale from 0 to 10 marked by ones, draw a bar graph of this pet data: Cats 3, Dogs 5, Fish 2, Birds 4.",
+   "proposed_edges": [
+    {
+     "edge_id": "e373",
+     "prerequisite": "data.bar-graph.read",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A bar must end level with the scale number equal to the count, which is the same reading convention used to read bars."
+    },
+    {
+     "edge_id": "e374",
+     "prerequisite": "data.picture-graph.draw",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A bar graph keeps the labeled category per bar, the common starting line and the title that the learner meets in the picture graph."
+    },
+    {
+     "edge_id": "e375",
+     "prerequisite": "number-line.whole-number-lengths",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The scale in ones from 0 is a number line of lengths from 0, and each bar ends level with the scale number equal to its count."
+    }
+   ]
+  },
+  {
+   "id": "data.bar-graph.read",
+   "concept": "data",
+   "facet": "categorical",
+   "level": 2,
+   "type": "representation",
+   "name": "Read a category's count from a bar graph with a single-unit scale",
+   "statement": "The count for a category in a bar graph is the number on the scale level with the end of that category's bar.",
+   "assess": "In this bar graph the scale runs from 0 to 10 by ones, and the Dogs bar is not next to the scale. Its end is level with the scale mark labeled 6. How many children chose dogs?",
+   "proposed_edges": [
+    {
+     "edge_id": "e376",
+     "prerequisite": "data.categorical.read-count",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Reading the count of one named category from a data display is the skill first met with tally charts and picture graphs."
+    },
+    {
+     "edge_id": "e377",
+     "prerequisite": "number-line.whole-number-lengths",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The count is the number on the scale level with the end of the bar, the scale being whole-number lengths from 0."
+    }
+   ]
+  },
+  {
+   "id": "data.bar-graph.put-together",
+   "concept": "data",
+   "facet": "categorical",
+   "level": 2,
+   "type": "application",
+   "name": "Solve put-together problems using a bar graph",
+   "statement": "A one-step put-together problem asks for the combined count of categories shown in a bar graph with a single-unit scale; the learner reads the needed counts and finds the total.",
+   "assess": "A bar graph with a scale by ones shows Red 7, Blue 5 and Green 9. How many children chose red or blue?",
+   "proposed_edges": [
+    {
+     "edge_id": "e378",
+     "prerequisite": "addition.application.put-together.total-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A put-together problem asks for the combined count of the parts, the total-unknown structure."
+    },
+    {
+     "edge_id": "e379",
+     "prerequisite": "addition.within-100",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The total is found by adding the two read counts, such as 7 plus 5, and any method would do."
+    },
+    {
+     "edge_id": "e380",
+     "prerequisite": "addition.within-20.fluency",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The combined count is a sum of two counts up to 10, and any method for the sum will do."
+    },
+    {
+     "edge_id": "e381",
+     "prerequisite": "data.bar-graph.read",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner reads the counts of the needed categories from the bars before combining them."
+    }
+   ]
+  },
+  {
+   "id": "data.bar-graph.take-apart",
+   "concept": "data",
+   "facet": "categorical",
+   "level": 2,
+   "type": "application",
+   "name": "Solve take-apart problems using a bar graph",
+   "statement": "A one-step take-apart problem gives a total and a bar graph with a single-unit scale showing one part; the learner reads the known part and finds the unknown part.",
+   "assess": "There are 13 pets in Mia's class, all dogs or cats. A bar graph with a scale by ones shows 8 dogs, but the cats bar is missing. How many cats are there?",
+   "proposed_edges": [
+    {
+     "edge_id": "e382",
+     "prerequisite": "addition.application.put-together.addend-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A take-apart problem gives a total and one part and asks for the other part, the addend-unknown structure."
+    },
+    {
+     "edge_id": "e383",
+     "prerequisite": "data.bar-graph.read",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner reads the known part from the bar, such as 8 dogs, before finding the unknown part."
+    },
+    {
+     "edge_id": "e384",
+     "prerequisite": "subtraction.within-100",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The unknown part is the total minus the known part, such as 13 minus 8, and any method would do."
+    },
+    {
+     "edge_id": "e385",
+     "prerequisite": "subtraction.within-20.fluency",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The unknown part is the total minus the known part, a subtraction within 20 in the test problem."
+    }
+   ]
+  },
+  {
+   "id": "data.bar-graph.compare",
+   "concept": "data",
+   "facet": "categorical",
+   "level": 2,
+   "type": "application",
+   "name": "Solve compare problems using a bar graph",
+   "statement": "A one-step compare problem asks how many more or fewer are in one category than another in a bar graph with a single-unit scale; the learner reads both counts and finds the difference.",
+   "assess": "A bar graph with a scale by ones shows Red 7, Blue 5 and Green 9. How many more children chose green than blue?",
+   "proposed_edges": [
+    {
+     "edge_id": "e386",
+     "prerequisite": "data.bar-graph.read",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner reads both category counts from the bars before finding the difference."
+    },
+    {
+     "edge_id": "e387",
+     "prerequisite": "subtraction.application.compare.difference-unknown",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "How many more or fewer is a compare situation whose answer is the difference of the two counts."
+    },
+    {
+     "edge_id": "e388",
+     "prerequisite": "subtraction.within-10",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Both counts lie on a scale up to 10, so their difference is a subtraction within 10."
+    },
+    {
+     "edge_id": "e389",
+     "prerequisite": "subtraction.within-100",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The difference of the two read counts, such as 9 minus 5, is found by any subtraction method."
+    }
+   ]
+  },
+  {
+   "id": "data.line-plot.make",
+   "concept": "data",
+   "facet": "measurement",
+   "level": 2,
+   "type": "representation",
+   "name": "Make a line plot of whole-unit length measurements",
+   "statement": "A set of whole-number length measurements is shown on a line plot: a number line marked in whole units that spans the smallest to the largest measurement, labeled with the unit, with one X above the number for each measurement.",
+   "assess": "Seven pencils measured 5, 6, 6, 7, 5, 6 and 8 inches. Make a line plot of the lengths.",
+   "procedure": [
+    "Find the smallest and largest measurement.",
+    "Draw a number line marked in whole units covering that span, and label it with the unit.",
+    "For each measurement, draw an X above its number, stacking X's when values repeat."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e390",
+     "prerequisite": "comparing.whole-numbers.numerals-within-10",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 finds the smallest and largest measurement by comparing the measurement numbers, such as 5 and 8."
+    },
+    {
+     "edge_id": "e391",
+     "prerequisite": "measurement.length.ruler",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The data are whole-unit length measurements, such as pencils measured to the nearest inch, of the kind made with a ruler."
+    },
+    {
+     "edge_id": "e392",
+     "prerequisite": "number-line.whole-number-lengths",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The line plot is a number line marked in whole units, each mark a length counted from 0."
+    }
+   ]
+  }
+ ]
+}
