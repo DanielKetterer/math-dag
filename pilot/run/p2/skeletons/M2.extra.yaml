@@ -1,0 +1,46 @@
+new_concepts:
+  - {concept: area, facet: unit-squares, reason: "Area as the count of unit squares covering a figure (unit square, covering without gaps or overlaps, counting, tiling)."}
+  - {concept: area, facet: multiplicative, reason: "Area of a rectangle as the product of its side lengths (rows of equal squares); the reserved id area.rectangle.length-times-width lives here."}
+  - {concept: area, facet: additive, reason: "Area of a figure as the sum of the areas of non-overlapping parts (3.MD.C.7.d)."}
+  - {concept: perimeter, facet: core, reason: "Perimeter as the length of a polygon's boundary; no existing concept covers it."}
+  - {concept: data, facet: picture-graph, reason: "Picture graphs, including scaled ones where one picture stands for several data points."}
+  - {concept: data, facet: bar-graph, reason: "Bar graphs, including scaled value axes; M1 owns data.graphs.read and may need the same concept."}
+  - {concept: data, facet: line-plot, reason: "Line plots of measurement data on a scale marked in wholes, halves, or fourths."}
+  - {concept: measurement, facet: time, reason: "Telling time and measuring time intervals in minutes."}
+  - {concept: measurement, facet: liquid-volume, reason: "Measuring and estimating liquid volume in liters."}
+  - {concept: measurement, facet: mass, reason: "Measuring and estimating mass in grams and kilograms; M1 owns measurement.weight.attribute, which may sit on a weight or mass facet."}
+  - {concept: measurement, facet: measured-quantity, reason: "Operating on a measurement as a number of same units in word problems, where the arithmetic does not depend on whether the quantity is mass or liquid volume (3.MD.A.2 word problems). Used to avoid writing each operation twice."}
+retires: []
+covered_by: []
+dropped: []
+notes: >-
+  Reserved ids used: area.rectangle.tiling (L2 procedure, tiling a whole-number rectangle and counting) and
+  area.rectangle.length-times-width (L3 procedure, multiplying side lengths without a grid). This mirrors the
+  written fraction-side set multiplication.array-area.fraction-sides.tiling / .multiply / .explain / fraction-product.represent,
+  so the whole-number set is area.rectangle.tiling, area.rectangle.length-times-width, area.rectangle.tiling-product.explain
+  and multiplication.array-area.whole-number-product.represent. No separate rule concept node was written for
+  length x width; the rule is stated inside the procedure, as in the fraction-side nodes. A reviewer may want one.
+  Elapsed time is split in two (within-hour and across-hour) under the range rule: crossing the hour needs
+  the fact that an hour has 60 minutes, which the within-hour case does not; both cite 3c3c56d8. No node for
+  1 hour = 60 minutes was written (unit relationships look like M3, measurement.unit-conversion); proposers may
+  need to point at whatever M3 writes. Time word problems were kept within one hour in the assess items.
+  The standard's number-line representation of time intervals is an example method, so no node was written for it.
+  3.MD.A.2 word problems are four nodes, one per operation, because each has a different prerequisite set; each
+  covers mass and liquid volume alike (facet measured-quantity).
+  edc7c180 (bar graph with title and labeled axes, up to 25 points, 6 or fewer categories) was merged into
+  data.bar-graph.scaled.draw; if M1 writes an unscaled bar-graph drawing node, edc7c180 may belong there instead.
+  data.bar-graph.scaled.read has no learning component: it is the reading step the one- and two-step bar-graph
+  problems need, and it differs from M1's data.graphs.read (owner M1) because a scale other than 1 needs skip
+  counting or multiplying by the scale and interpolation between marks. If M1's node already covers scaled axes,
+  merge them. No scaled picture-graph reading node was written since no component asks for it.
+  data.picture-graph.scaled.draw is limited to counts that are multiples of the scale; half pictures would bring in fractions.
+  area.additive (concept, no component) and area.rectilinear.decompose (procedure) cover 3.MD.C.7.d. The reserved id
+  area.composite-additive (owner later) was not written; it may mean the same as area.additive or as
+  area.rectilinear.decompose (for rectilinear figures only), and its two referencing edges may be re-pointed to one of them.
+  perimeter.meaning has no component; it is the concept the perimeter procedures and perimeter.versus-area rest on.
+  1a101be5 and bce565cf are each cited twice: by perimeter.versus-area (telling the measures apart) and by the
+  matching exhibit-rectangles node.
+  perimeter.rectangle.* is split from perimeter.polygon.* because using only the length and width needs the fact
+  that opposite sides of a rectangle are equal.
+  The rectilinear assess items give sides in order around the figure from the bottom-left corner: 8 right, 3 up,
+  5 left, 4 up, 3 left, 7 down (area 36), and 10, 4, 6, 5, 4, 9 the same way (area 60).

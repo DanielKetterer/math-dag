@@ -5,9 +5,8 @@
 reviewer: DK
 review: pilot/run/p1/REVIEW.md, answers in REVIEW_ANSWERS.txt (2026-10-20)
 rename: {}
-pending: 'A4, A14, A17, D91: Daniel (2026-10-20) - settle with method-neutral computation nodes; re-point
-  these edges when those nodes are written (next slice). F97, F98, F100 and new nodes (expressions.order-of-operations,
-  equation.unknown-symbol, table.read-two-way, method-neutral nodes) go into the next slice.'
+pending: 'Settled 2026-10-20: A4, A14, A17, D91 re-pointed to method-neutral nodes written in phase 2
+  (pilot/run/p2/skeletons/F.yaml).'
 edges:
 - item: A1
   node: place-value.expanded-form
@@ -482,6 +481,124 @@ edges:
   action: keep
   reason: 'Daniel (2026-10-20): KEEP - the statement says ''unknown in any position'', so start-unknown
     problems are part of the node.'
+- item: F97
+  node: place-value.expanded-form
+  target: place-value.ten-times-right
+  action: drop
+  reason: 'Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its lower range;
+    the upper range is a new node in pilot/run/p2/skeletons/F.yaml.'
+- item: F97
+  node: operations.application.multistep
+  target: multiplication.partial-products.by-one-digit
+  action: drop
+  reason: 'Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its lower range;
+    the upper range is a new node in pilot/run/p2/skeletons/F.yaml. Within 100 the facts suffice.'
+- item: F97
+  node: operations.application.multistep
+  target: division.partial-quotients.one-digit-divisor
+  action: drop
+  reason: 'Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its lower range;
+    the upper range is a new node in pilot/run/p2/skeletons/F.yaml. Within 100 the facts suffice.'
+- item: F97
+  node: operations.application.multistep
+  target: subtraction.base-ten.strategy
+  action: replace
+  with: subtraction.within-1000
+  why: A step may subtract within 1000, by any method.
+  reason: 'Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its lower range;
+    the upper range is a new node in pilot/run/p2/skeletons/F.yaml.'
+- item: F97
+  node: operations.application.multistep
+  target: addition.within-1000
+  action: add
+  relation: procedural
+  points_to: statement
+  why: A step may add within 1000, by any method.
+  reason: 'Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its lower range;
+    the upper range is a new node in pilot/run/p2/skeletons/F.yaml.'
+- item: F97
+  node: operations.application.multistep
+  target: multiplication.facts.within-100
+  action: add
+  relation: procedural
+  points_to: statement
+  why: A step may multiply within 100, which is a product of single-digit factors.
+  reason: 'Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its lower range;
+    the upper range is a new node in pilot/run/p2/skeletons/F.yaml.'
+- item: F97
+  node: operations.application.multistep
+  target: division.facts.within-100
+  action: add
+  relation: procedural
+  points_to: statement
+  why: A step may divide within 100, which is a division fact.
+  reason: 'Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its lower range;
+    the upper range is a new node in pilot/run/p2/skeletons/F.yaml.'
+- item: F97
+  node: comparing.whole-numbers.magnitude
+  target: place-value.three-digit.hundreds-tens-ones
+  action: drop
+  reason: 'Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its lower range;
+    the upper range is a new node in pilot/run/p2/skeletons/F.yaml.'
+- item: F97
+  node: comparing.whole-numbers.magnitude
+  target: place-value.two-digit.tens-ones
+  action: add
+  relation: definitional
+  points_to: statement
+  why: The rule compares tens first and then ones, which reads each digit as tens or ones.
+  reason: 'Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its lower range;
+    the upper range is a new node in pilot/run/p2/skeletons/F.yaml.'
+- item: F97
+  node: place-value.ten-more-less
+  target: place-value.three-digit.hundreds-tens-ones
+  action: drop
+  reason: 'Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its lower range;
+    the upper range is a new node in pilot/run/p2/skeletons/F.yaml.'
+- item: F97
+  node: place-value.ten-more-less
+  target: place-value.hundred.unit
+  action: drop
+  reason: 'Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its lower range;
+    the upper range is a new node in pilot/run/p2/skeletons/F.yaml.'
+- item: F97
+  node: place-value.ten-more-less
+  target: place-value.two-digit.tens-ones
+  action: add
+  relation: definitional
+  points_to: statement
+  why: Adding 10 changes the tens digit by one, which reads the digits as tens and ones.
+  reason: 'Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its lower range;
+    the upper range is a new node in pilot/run/p2/skeletons/F.yaml.'
+- item: A4
+  node: addition.two-digit-plus-tens.model
+  target: addition.add-to.count-all
+  action: replace
+  with: addition.within-10
+  why: Step 2 adds the number of tens, such as 4 tens and 3 tens, a sum within 10 by any method.
+  reason: 'Daniel (2026-10-20): settle with the method-neutral computation node.'
+- item: A14
+  node: operations.application.multistep.remainder
+  target: multiplication.partial-products.by-one-digit
+  action: replace
+  with: multiplication.by-one-digit
+  why: Finding 3 classes of 26 students multiplies a two-digit number by a one-digit number, by any method.
+  reason: 'Daniel (2026-10-20): settle with the method-neutral computation node.'
+- item: A17
+  node: division.distributive.strategy
+  target: addition.base-ten.strategy
+  action: replace
+  with: addition.within-100
+  why: The last step adds the two quotients, a sum within 100, by any method.
+  reason: 'Daniel (2026-10-20): settle with the method-neutral computation node.'
+- item: D91
+  node: division.partial-quotients.one-digit-divisor
+  target: addition.base-ten.strategy
+  action: replace
+  with: addition.within-1000
+  why: Step 5 totals the partial quotients, such as 100 + 40 + 2, by any method.
+  reason: 'Daniel (2026-10-20): settle with the method-neutral computation node. Claude: quotients past
+    1000 (four-digit dividends) are not covered by within-1000; flagged in the phase 2 queue.'
 set_routes:
 - item: F95, D65, D66
   node: equation.equal-sign.meaning

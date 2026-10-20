@@ -58,16 +58,18 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: addition.add-to.count-all
+  - node: addition.within-10
     relation: procedural
     points_to: procedure.2
-    why: Step 2 adds the tens of the multiple of 10 to the tens, which is joining two small sets and counting
-      all.
+    why: Step 2 adds the number of tens, such as 4 tens and 3 tens, a sum within 10 by any method.
     evidence:
     - kind: content
       source: pass-P
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A4 replace: Daniel (2026-10-20): settle with the method-neutral computation node.'
+    status: reviewed
 status: proposed

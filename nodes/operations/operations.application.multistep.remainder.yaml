@@ -45,11 +45,11 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: multiplication.partial-products.by-one-digit
+  - node: multiplication.by-one-digit
     relation: procedural
     points_to: assess
-    why: Finding 3 classes of 26 students uses multiplying a two-digit number by one digit before dividing
-      by 8.
+    why: Finding 3 classes of 26 students multiplies a two-digit number by a one-digit number, by any
+      method.
     scope: task
     evidence:
     - kind: content
@@ -59,5 +59,8 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'task-only: Only the test problem (3 classes of 26) needs a two-digit by one-digit product.'
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A14 replace: Daniel (2026-10-20): settle with the method-neutral computation node.'
+    status: reviewed
 status: proposed

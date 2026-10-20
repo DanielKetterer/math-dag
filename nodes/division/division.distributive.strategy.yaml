@@ -33,17 +33,20 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: addition.base-ten.strategy
+  - node: addition.within-100
     relation: procedural
     points_to: procedure.3
-    why: Step 3 adds the two quotients, which may be two-digit numbers.
+    why: The last step adds the two quotients, a sum within 100, by any method.
     evidence:
     - kind: content
       source: pass-P
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A17 replace: Daniel (2026-10-20): settle with the method-neutral computation node.'
+    status: reviewed
   - node: division.partitive.meaning
     relation: definitional
     points_to: statement

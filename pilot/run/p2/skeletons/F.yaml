@@ -1,0 +1,240 @@
+# Fix-up nodes from Daniel's phase 1 review (pilot/run/p1/REVIEW_ANSWERS.txt),
+# written inline by Claude (no subagent tokens), 2026-10-20. They join batch G1
+# for the proposer and critic passes. Splits under the range rule (RULES 2.4)
+# narrow the old node, which keeps its id, and add the other half here.
+
+# ---- method-neutral computation nodes (A4, A14, A17, D91) ----
+- id: addition.within-10
+  concept: addition
+  facet: operation
+  level: 1
+  type: procedure
+  name: Find a sum within 10
+  statement: "Find the sum of two whole numbers whose total is at most 10, by any reliable method: joining objects, fingers or a drawing and counting, counting on, or a known fact."
+  assess: "What is 4 + 3? Show or tell how you know."
+  sources: {ccss: ["K.OA.A.2"], lc: ["10c58598"]}
+  strand: F
+- id: subtraction.within-10
+  concept: subtraction
+  facet: operation
+  level: 1
+  type: procedure
+  name: Find a difference within 10
+  statement: "Find a - b for whole numbers with b no greater than a and a at most 10, by any reliable method: taking objects away and counting the rest, counting back, counting up, or a known fact."
+  assess: "What is 9 - 4? Show or tell how you know."
+  sources: {ccss: ["K.OA.A.2"], lc: ["5c48ad41"]}
+  strand: F
+- id: addition.within-100
+  concept: addition
+  facet: operation
+  level: 3
+  type: procedure
+  name: Add within 100
+  statement: "Find the sum of two whole numbers when the sum is at most 100, accurately and without objects, by any reliable method; a place-value strategy, a strategy based on properties, and the standard algorithm all meet it."
+  assess: "Find 47 + 38 and 56 + 27. Use any method."
+  sources: {ccss: ["2.NBT.B.5"], lc: ["39d56ac9"]}
+  strand: F
+- id: subtraction.within-100
+  concept: subtraction
+  facet: operation
+  level: 3
+  type: procedure
+  name: Subtract within 100
+  statement: "Find a - b for whole numbers with b no greater than a and a at most 100, accurately and without objects, by any reliable method; a place-value strategy, counting up by the related addition, and the standard algorithm all meet it."
+  assess: "Find 73 - 48 and 90 - 36. Use any method."
+  sources: {ccss: ["2.NBT.B.5"], lc: ["41093be0"]}
+  strand: F
+- id: addition.within-1000
+  concept: addition
+  facet: operation
+  level: 3
+  type: procedure
+  name: Add within 1000
+  statement: "Find the sum of two whole numbers when the sum is at most 1000, accurately and without objects, by any reliable method; a place-value strategy and the standard algorithm both meet it."
+  assess: "Find 367 + 258 and 499 + 306. Use any method."
+  sources: {ccss: ["3.NBT.A.2"], lc: ["f7731421"]}
+  strand: F
+- id: subtraction.within-1000
+  concept: subtraction
+  facet: operation
+  level: 3
+  type: procedure
+  name: Subtract within 1000
+  statement: "Find a - b for whole numbers with b no greater than a and a at most 1000, accurately and without objects, by any reliable method; a place-value strategy, counting up, and the standard algorithm all meet it."
+  assess: "Find 724 - 358 and 600 - 247. Use any method."
+  sources: {ccss: ["3.NBT.A.2"], lc: ["18fca54d"]}
+  strand: F
+- id: multiplication.by-one-digit
+  concept: multiplication
+  facet: base-ten
+  level: 3
+  type: procedure
+  name: Multiply a whole number by a one-digit number
+  statement: "Find the product of a whole number of up to four digits and a one-digit number, accurately, by any reliable method; partial products, an area model with numbers, and the standard algorithm all meet it."
+  assess: "Find 3 x 26 and 7 x 408. Use any method."
+  sources: {ccss: ["4.NBT.B.5"], lc: ["57a1b686", "4e8bd7bf"]}
+  strand: F
+- id: multiplication.two-digit-by-two-digit
+  concept: multiplication
+  facet: base-ten
+  level: 3
+  type: procedure
+  name: Multiply two two-digit numbers
+  statement: "Find the product of two two-digit whole numbers, accurately, by any reliable method; partial products, an area model with numbers, and the standard algorithm all meet it."
+  assess: "Find 34 x 27. Use any method."
+  sources: {ccss: ["4.NBT.B.5"], lc: ["1e8857da"]}
+  strand: F
+- id: division.by-one-digit
+  concept: division
+  facet: base-ten
+  level: 3
+  type: procedure
+  name: Divide by a one-digit number, no remainder
+  statement: "Find the whole-number quotient of a dividend of up to four digits by a one-digit divisor that divides it exactly, by any reliable method; partial quotients, an area model with numbers, and the standard algorithm all meet it."
+  assess: "Find 852 divided by 6 and 96 divided by 4. Use any method."
+  sources: {ccss: ["4.NBT.B.6"], lc: ["d5bcfb8d", "f6809045"]}
+  strand: F
+- id: division.by-one-digit.remainder
+  concept: division
+  facet: base-ten
+  level: 3
+  type: procedure
+  name: Divide by a one-digit number with a remainder
+  statement: "Find the whole-number quotient and the remainder of a dividend of up to four digits by a one-digit divisor, with the remainder less than the divisor, by any reliable method."
+  assess: "Find the quotient and remainder of 78 divided by 8, and of 1,234 divided by 5. Use any method."
+  sources: {ccss: ["4.NBT.B.6"], lc: ["47171d80", "f7db0623"]}
+  strand: F
+
+# ---- range splits (F97, F100): the other half of each narrowed node ----
+- id: place-value.expanded-form.multi-digit
+  concept: place-value
+  facet: whole-number
+  level: 3
+  type: representation
+  name: Expanded form of multi-digit whole numbers
+  statement: "A whole number up to 1,000,000 is the sum of the values of its digits, each digit times the value of its place, and expanded form writes that sum with one term per nonzero digit (40,603 = 40,000 + 600 + 3)."
+  assess: "Write 40,603 in expanded form. Write the numeral for 300,000 + 2,000 + 50 + 4."
+  sources: {ccss: ["4.NBT.A.2"], lc: ["66dbae34", "0bfafde1"]}
+  strand: F
+- id: operations.application.multistep.multi-digit
+  concept: operations
+  facet: whole-number
+  level: 2
+  type: application
+  name: Solve multistep story problems with multi-digit numbers
+  statement: "A story problem needs two or more steps, each an addition, subtraction, multiplication or division of whole numbers, with multi-digit numbers (products and dividends beyond the facts) and a whole-number answer with no remainder; the learner chooses and carries out the steps."
+  assess: "A school buys 4 boxes of 125 pencils and gives out 290 of them. How many pencils are left?"
+  sources: {ccss: ["4.OA.A.3"], lc: ["7e561083", "cbea54a9", "3b7082f5", "6f0d3e89", "24e4f997"]}
+  strand: F
+- id: addition.two-digit.like-units
+  concept: addition
+  facet: base-ten
+  level: 2
+  type: concept
+  name: Add tens to tens and ones to ones
+  statement: "When adding with a two-digit number, the total number of tens is the sum of the tens of the addends and the total number of ones is the sum of their ones; tens are never added to ones."
+  assess: "Use base-ten blocks for 42 + 35. How many tens are there in all? How many ones?"
+  sources: {ccss: ["1.NBT.C.4"], lc: ["cf6b4ff1"]}
+  strand: F
+- id: addition.two-digit.compose-ten
+  concept: addition
+  facet: base-ten
+  level: 2
+  type: concept
+  name: Compose a ten when the ones total 10 or more
+  statement: "When the ones in a sum total 10 or more, ten of those ones are regrouped as one ten, so the sum has one more ten and 10 fewer ones; the value is unchanged."
+  assess: "Blocks for 38 + 5 show 3 tens and 13 ones. Trade 10 ones for 1 ten. How many tens and how many ones are there now?"
+  sources: {ccss: ["1.NBT.C.4"], lc: ["cf6b4ff1"]}
+  strand: F
+- id: comparing.whole-numbers.magnitude.three-digit
+  concept: comparing
+  facet: whole-number
+  level: 3
+  type: procedure
+  name: Decide which of two three-digit numbers is greater
+  statement: "Of two three-digit numbers, the one with more hundreds is greater; if the hundreds are equal, the one with more tens is greater; if the tens are also equal, the one with more ones is greater."
+  assess: "Which is greater, 706 or 760? Which is greater, 489 or 512? Say which digits decide it."
+  sources: {ccss: ["2.NBT.A.4"], lc: ["24cff8cf", "0f972f57"]}
+  strand: F
+- id: comparing.whole-numbers.magnitude.multi-digit
+  concept: comparing
+  facet: whole-number
+  level: 3
+  type: procedure
+  name: Decide which of two multi-digit numbers is greater
+  statement: "Of two whole numbers written without leading zeros, the one with more digits is greater; if they have the same number of digits, the greater is the one with the greater digit in the leftmost place where their digits differ."
+  assess: "Which is greater, 49,812 or 51,099? Which is greater, 70,605 or 70,560? Say which digits decide it."
+  sources: {ccss: ["4.NBT.A.2"], lc: ["8b7a4579", "eca9bcd8"]}
+  strand: F
+- id: numeral.write.to-120
+  concept: numeral
+  facet: core
+  level: 2
+  type: representation
+  name: Write numerals up to 120
+  statement: "Write the numeral for a number up to 120: a two-digit numeral with the tens digit first, and for 100 to 120 a 1 followed by the two-digit ending (one hundred four is 104, not 1004)."
+  assess: "Write the numerals for forty-seven, ninety, one hundred four, and one hundred twenty."
+  sources: {ccss: ["1.NBT.A.1"], lc: ["8c23a3f0"]}
+  strand: F
+- id: place-value.ten-more-less.three-digit
+  concept: place-value
+  facet: whole-number
+  level: 3
+  type: procedure
+  name: Find 10 more or 10 less than a three-digit number
+  statement: "Adding or subtracting 10 to a three-digit number changes the tens by one and leaves the ones unchanged; when the tens digit is 9 (adding) or 0 (subtracting), the hundreds change by one as well (196 + 10 = 206, 305 - 10 = 295)."
+  assess: "Without counting by ones or writing anything, say: 10 more than 196; 10 less than 305; 10 more than 742."
+  sources: {ccss: ["2.NBT.B.8"], lc: ["0dccf8c6", "f7a052d7"]}
+  strand: F
+
+# ---- nodes the review found missing (F98, D90, D94, C61-62, N1 proposers) ----
+- id: expressions.parentheses
+  concept: expressions
+  facet: numerical
+  level: 2
+  type: concept
+  name: Parentheses group a part to compute first
+  statement: "Parentheses around part of an expression make that part one number, found first and then used in the rest of the expression; moving them can change the value, as (8 - 3) - 2 = 3 but 8 - (3 - 2) = 7."
+  assess: "Find (2 x 3) x 4 and 2 x (3 x 4). Then find (8 - 3) - 2 and 8 - (3 - 2). Which pair has equal values?"
+  sources: {ccss: ["3.OA.B.5"], lc: []}
+  strand: F
+- id: expressions.order-of-operations
+  concept: expressions
+  facet: numerical
+  level: 3
+  type: concept
+  name: The conventional order of operations
+  statement: "When an expression has no parentheses to say otherwise, multiplication and division are done before addition and subtraction, and operations of the same kind are done from left to right."
+  assess: "Find 3 + 4 x 2 and 20 - 12 divided by 4 + 1."
+  sources: {ccss: ["3.OA.D.8"], lc: [], other: ["CCSS 3.OA.D.8 footnote on the conventional order"]}
+  strand: F
+- id: equation.unknown-symbol
+  concept: equation
+  facet: relational
+  level: 2
+  type: concept
+  name: A symbol for an unknown number
+  statement: "In an equation, a box, a question mark or a letter stands for one particular number that is not yet known; the equation is true when that number takes the symbol's place."
+  assess: "In 8 + [] = 13, what does the box stand for? Is the equation true if 4 goes in the box? If 5 does?"
+  sources: {ccss: ["1.OA.D.8"], lc: []}
+  strand: F
+- id: table.read-two-way
+  concept: table
+  facet: two-way
+  level: 2
+  type: representation
+  name: Read an entry in a table of rows and columns
+  statement: "Each entry of a table of rows and columns belongs to one row and one column; the entry for row a and column b is where that row and that column meet, and a whole row or column can be read in order."
+  assess: "In this addition table, find the entry in the row for 3 and the column for 5. Then read aloud the row for 3."
+  sources: {ccss: ["3.OA.D.9"], lc: []}
+  strand: F
+- id: decimal.thousandths.notation
+  concept: decimal
+  facet: decimal-fraction
+  level: 3
+  type: representation
+  name: Decimal notation for thousandths
+  statement: "The third place after the decimal point counts thousandths, so 0.007 = 7/1000 and 0.125 = 125/1000."
+  assess: "Write 43/1000 as a decimal. Write 0.205 as a fraction."
+  sources: {ccss: ["5.NBT.A.3.a"], lc: ["8c0e0d39"]}
+  strand: F

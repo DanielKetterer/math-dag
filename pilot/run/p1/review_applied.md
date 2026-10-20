@@ -6,6 +6,12 @@
 - place-value.tenth-of-left: route via-decimal removed (superset of another route); moved to related: ['place-value.ten-times-right.decimal']
 - place-value.tenth-of-left: only route left, renamed critic-route-1 -> standard
 - D81 place-value.expanded-form -> addition.notation.expression: task
+- F97 place-value.expanded-form -> place-value.ten-times-right: dropped
+- F97 comparing.whole-numbers.magnitude -> place-value.three-digit.hundreds-tens-ones: dropped
+- F97 comparing.whole-numbers.magnitude -> place-value.two-digit.tens-ones: added on every route
+- F97 place-value.ten-more-less -> place-value.three-digit.hundreds-tens-ones: dropped
+- F97 place-value.ten-more-less -> place-value.hundred.unit: dropped
+- F97 place-value.ten-more-less -> place-value.two-digit.tens-ones: added on every route
 - A9 rounding.whole-number.any-place -> rounding.whole-number.nearest-ten-hundred: moved to related (common_path)
 - A37 addition.add-to.fingers -> addition.add-to.count-all: moved to related (common_path)
 - A21 addition.notation.equation -> addition.add-to.describe: moved to related (common_path)
@@ -36,6 +42,15 @@
 - subtraction.application.compare.smaller-unknown: route critic-route-1 removed (superset of another route); moved to related: nothing
 - subtraction.application.compare.smaller-unknown: route critic-route-2 removed (superset of another route); moved to related: nothing
 - C64 equation.situation.two-step -> addition.application.two-step: dropped
+- A4 addition.two-digit-plus-tens.model -> addition.add-to.count-all: replaced by addition.within-10
+- A17 division.distributive.strategy -> addition.base-ten.strategy: replaced by addition.within-100
+- F97 operations.application.multistep -> multiplication.partial-products.by-one-digit: dropped
+- F97 operations.application.multistep -> division.partial-quotients.one-digit-divisor: dropped
+- F97 operations.application.multistep -> subtraction.base-ten.strategy: replaced by subtraction.within-1000
+- F97 operations.application.multistep -> addition.within-1000: added on every route
+- F97 operations.application.multistep -> multiplication.facts.within-100: added on every route
+- F97 operations.application.multistep -> division.facts.within-100: added on every route
+- A14 operations.application.multistep.remainder -> multiplication.partial-products.by-one-digit: replaced by multiplication.by-one-digit
 - A22 operations.application.multistep.equation -> operations.application.multistep: dropped
 - operations.application.reasonableness: route via-nearest-ten-hundred removed (superset of another route); moved to related: ['rounding.whole-number.nearest-ten-hundred']
 - operations.application.reasonableness: only route left, renamed critic-route-1 -> standard
@@ -62,6 +77,7 @@
 - multiplication.standard-algorithm: route via-by-one-digit removed (superset of another route); moved to related: ['multiplication.partial-products.by-one-digit']
 - multiplication.standard-algorithm: route via-compose-unit removed (superset of another route); moved to related: ['addition.base-ten.compose-unit']
 - multiplication.standard-algorithm: only route left, renamed critic-route-1 -> standard
+- D91 division.partial-quotients.one-digit-divisor -> addition.base-ten.strategy: replaced by addition.within-1000
 - division.power-of-ten.rule: route critic-route-1 removed (superset of another route); moved to related: nothing
 - division.power-of-ten.rule: route critic-route-2 removed (superset of another route); moved to related: nothing
 - A25 decimal.addition.model -> addition.base-ten.model: moved to related (common_path)

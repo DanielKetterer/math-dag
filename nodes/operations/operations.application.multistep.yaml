@@ -3,22 +3,17 @@ concept: operations
 facet: whole-number
 level: 2
 type: application
-name: Solve multi-step word problems with whole-number answers
-statement: A story problem needs two or more steps, each an addition, subtraction, multiplication or division
-  of whole numbers, and has a whole-number answer with no remainder; the learner chooses and carries out
-  the steps.
-assess: A school buys 4 boxes of 125 pencils and gives out 290 of them. How many pencils are left?
+name: Solve two-step story problems with the four operations
+statement: A story problem needs two steps, each an addition or subtraction within 1000 or a multiplication
+  or division within 100 of whole numbers, and has a whole-number answer; the learner chooses and carries
+  out the steps.
+assess: A class has 3 tables with 6 students at each. Then 5 more students join the class. How many students
+  are in the class now?
 sources:
   ccss:
   - 3.OA.D.8
-  - 4.OA.A.3
   learning_components:
   - 2aecfdc6
-  - 7e561083
-  - cbea54a9
-  - 3b7082f5
-  - 6f0d3e89
-  - 24e4f997
 requires:
 - clause: standard
   all_of:
@@ -62,25 +57,10 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: multiplication.partial-products.by-one-digit
+  - node: subtraction.within-1000
     relation: procedural
     points_to: assess
-    why: Finding 4 boxes of 125 pencils requires multiplying a three-digit number by a one-digit number.
-    scope: task
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'task-only: Only the test problem (4 boxes of 125) needs multi-digit by one-digit multiplication;
-        the statement does not fix the size of the numbers in a given step.'
-    status: proposed
-  - node: subtraction.base-ten.strategy
-    relation: procedural
-    points_to: assess
-    why: Finding how many pencils are left after giving out 290 requires subtracting a three-digit number.
+    why: A step may subtract within 1000, by any method.
     scope: task
     evidence:
     - kind: content
@@ -90,16 +70,39 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'task-only: Only the test problem (subtracting 290) needs a three-digit subtraction strategy.'
-    status: proposed
-  - node: division.partial-quotients.one-digit-divisor
-    relation: definitional
+    - kind: review
+      source: DK
+      note: 'F97 replace: Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its
+        lower range; the upper range is a new node in pilot/run/p2/skeletons/F.yaml.'
+    status: reviewed
+  - node: addition.within-1000
+    relation: procedural
     points_to: statement
-    why: The statement allows division steps of whole numbers with no remainder at any size (multi-digit
-      numbers appear in the test problem's other steps), so dividing a multi-digit number by a one-digit
-      number is used in such steps.
+    why: A step may add within 1000, by any method.
     evidence:
-    - kind: content
-      source: critic-sonnet
-      note: missing prerequisite
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'F97 add: Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its lower
+        range; the upper range is a new node in pilot/run/p2/skeletons/F.yaml.'
+    status: reviewed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: statement
+    why: A step may multiply within 100, which is a product of single-digit factors.
+    evidence:
+    - kind: review
+      source: DK
+      note: 'F97 add: Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its lower
+        range; the upper range is a new node in pilot/run/p2/skeletons/F.yaml.'
+    status: reviewed
+  - node: division.facts.within-100
+    relation: procedural
+    points_to: statement
+    why: A step may divide within 100, which is a division fact.
+    evidence:
+    - kind: review
+      source: DK
+      note: 'F97 add: Range split (F97, RULES 2.4, Daniel 2026-10-20): the node was narrowed to its lower
+        range; the upper range is a new node in pilot/run/p2/skeletons/F.yaml.'
+    status: reviewed
 status: proposed

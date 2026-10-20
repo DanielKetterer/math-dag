@@ -93,14 +93,18 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: addition.base-ten.strategy
+  - node: addition.within-1000
     relation: definitional
     points_to: statement
-    why: Step 5 totals partial quotients separated by place (100, 40, 2) by partial sums; this replaces
-      the over-specific edge to the column algorithm (e575).
+    why: Step 5 totals the partial quotients, such as 100 + 40 + 2, by any method.
     evidence:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D91 replace: Daniel (2026-10-20): settle with the method-neutral computation node. Claude:
+        quotients past 1000 (four-digit dividends) are not covered by within-1000; flagged in the phase
+        2 queue.'
+    status: reviewed
 status: proposed
