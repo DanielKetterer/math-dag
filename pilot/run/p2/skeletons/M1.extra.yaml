@@ -1,0 +1,43 @@
+new_concepts:
+  - {concept: measurement, facet: weight, reason: "Weight (heaviness) as a measurable attribute, distinct from length; needed for measurement.weight.attribute."}
+  - {concept: measurement, facet: core, reason: "Measurable attributes in general (an object has several), not tied to one attribute."}
+  - {concept: time, facet: clock, reason: "New concept: telling and writing time on analog and digital clocks."}
+  - {concept: time, facet: day, reason: "The day as two 12-hour halves named a.m. and p.m."}
+  - {concept: money, facet: core, reason: "New concept: coin values, money amounts in cents and dollars, money notation and money word problems."}
+  - {concept: data, facet: categorical, reason: "New concept: counts in categories, charts, picture graphs and bar graphs."}
+  - {concept: data, facet: measurement, reason: "Measurement data shown on a line plot with a numeric scale; differs from categorical data."}
+retires:
+  - {id: data.graphs.read, replaced_by: [data.categorical.read-count, data.bar-graph.read], note: "Broader than one node: reading a one-mark-per-point chart or picture graph needs only counting, while reading a bar graph needs a scale. Reading scaled picture and bar graphs (3.MD.B.3), line plots, and tables belong to later strands; a re-pointing pass should send each of the 3 old edges to the specific read node its source node needs, which may be a later-phase node."}
+covered_by:
+  - {lc: "ef4dbab2", node: comparing.size.order}
+  - {lc: "75eff216", node: comparing.size.direct}
+  - {lc: "fbd247f1", node: comparing.size.direct}
+  - {lc: "b8e1e828", node: classifying.sort.given-attribute}
+  - {lc: "2067661f", node: equation.situation.one-step}
+  - {lc: "39ec1f4b", node: equation.situation.one-step}
+  - {lc: "453e6ef8", node: equation.situation.one-step}
+dropped: []
+notes: >-
+  75eff216 and fbd247f1 (direct comparison of any measurable attribute, more of / less of) are met by
+  comparing.size.direct for length and comparing.weight.direct for weight; listed under the length node only
+  because covered_by takes one node. The K.MD.A.2 'describe the difference' components are split into a length
+  node and a weight node because their prerequisite sets differ (length attribute versus weight attribute).
+  measurement.length.ruler cites 2c71367f (measure twice with different units) and 33364bb0 (generate
+  measurement data to the nearest whole unit): neither needs anything beyond measuring once with a ruler in a
+  standard unit; the unit-size relation is its own concept node. measurement.length.ruler.from-zero,
+  data.bar-graph.read and money.notation have no lc: they come from the standard text (2.MD.A.1 tool use,
+  2.MD.D.10 reading a bar graph, 2.MD.C.8 'using $ and cents symbols'). measurement.length.unit-benchmarks and
+  measurement.length.estimate both cite 5cfd8c36: estimating needs a benchmark, and knowing the benchmark is
+  tested separately. Time: digital reading for hours, half hours and five minutes is one node (same prerequisite
+  set: reading the numerals before and after the colon); analog reading is split hour / half hour / five minutes
+  because half hours need the hour hand between numbers and halves of the clock, and five minutes need counting
+  by fives. Read and draw on an analog clock are separate nodes (inverse representations). f25112a6
+  (analog to digital and back) is cited on time.analog.five-minutes and time.analog.draw-five-minutes; the
+  digital side is time.digital.read and time.digital.write. The a.m./p.m. components are cited on time.am-pm as
+  well as on their clock node. Money: a dollar equals 100 cents is not written as a node, since 2.MD.C.8 problems
+  keep dollars and cents separate and do not use decimal notation; a later strand may need it. The 1.MD.C.4 nodes
+  (count-based charts, up to three categories) and the 2.MD.D.10 bar-graph nodes are separated by representation,
+  not by the number of categories: the bar graph adds reading a scale. The data.bar-graph application nodes reuse
+  the put-together / take-apart / compare problem types; the new part is taking the numbers from the graph.
+  Length word problems (2.MD.B.5) are split into addition and subtraction nodes; 55fefca2 is cited on both. The
+  equation components of 2.MD.B.5 are covered by equation.situation.one-step; length is only the context.
