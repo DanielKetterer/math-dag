@@ -1,0 +1,101 @@
+id: area.rectilinear.decompose
+concept: area
+facet: additive
+level: 2
+type: procedure
+name: Find the area of a rectilinear figure by decomposing it into rectangles
+statement: Find the area of a rectilinear figure with whole-number side lengths by splitting it into non-overlapping
+  rectangles, finding the area of each, and adding.
+procedure:
+- Draw a line segment that splits the figure into rectangles that do not overlap.
+- Find the side lengths of each rectangle from the labeled sides of the figure.
+- Find the area of each rectangle.
+- Add the areas of the rectangles.
+assess: An L-shaped figure, with no grid shown, has sides 8, 3, 5, 4, 3, and 7 meters going around it
+  from the bottom-left corner. Find its area.
+sources:
+  ccss:
+  - 3.MD.C.7.d
+  learning_components:
+  - 29c42ed3
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.decompose.simple
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 draws a segment that splits the figure into smaller non-overlapping shapes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.rectangle.define
+    relation: definitional
+    points_to: procedure.1
+    why: Step 1 must produce rectangles, so each piece is checked as a quadrilateral with four right angles.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds unlabeled side lengths of each rectangle as differences of the labeled sides, such
+      as 8 minus 3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 finds each rectangle's area by multiplying its two side lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.additive
+    relation: justificatory
+    points_to: procedure.4
+    why: Step 4 adds the rectangle areas because area is additive for parts that do not overlap.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 performs the sum of the separate rectangle areas.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

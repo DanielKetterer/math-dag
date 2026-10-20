@@ -1,0 +1,55 @@
+id: comparing.whole-numbers.magnitude.multi-digit
+concept: comparing
+facet: whole-number
+level: 3
+type: procedure
+name: Decide which of two multi-digit numbers is greater
+statement: Of two whole numbers written without leading zeros, the one with more digits is greater; if
+  they have the same number of digits, the greater is the one with the greater digit in the leftmost place
+  where their digits differ.
+assess: Which is greater, 49,812 or 51,099? Which is greater, 70,605 or 70,560? Say which digits decide
+  it.
+sources:
+  ccss:
+  - 4.NBT.A.2
+  learning_components:
+  - 8b7a4579
+  - eca9bcd8
+requires:
+- clause: standard
+  all_of:
+  - node: comparing.whole-numbers.numerals-within-10
+    relation: procedural
+    points_to: statement
+    why: At the leftmost place where the digits differ the learner compares two single digits to see which
+      is greater.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude.three-digit
+    relation: procedural
+    points_to: statement
+    why: The leftmost-differing-digit comparison for three-digit numbers is the same rule applied to more
+      places.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: numeral.read.periods
+    relation: definitional
+    points_to: statement
+    why: The test names deciding digits in five-digit numerals, so places beyond hundreds must be named;
+      the three-digit place-value node does not cover them.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

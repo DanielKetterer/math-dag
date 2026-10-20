@@ -1,0 +1,56 @@
+id: data.bar-graph.put-together
+concept: data
+facet: categorical
+level: 2
+type: application
+name: Solve put-together problems using a bar graph
+statement: A one-step put-together problem asks for the combined count of categories shown in a bar graph
+  with a single-unit scale; the learner reads the needed counts and finds the total.
+assess: A bar graph with a scale by ones shows Red 7, Blue 5 and Green 9. How many children chose red
+  or blue?
+sources:
+  ccss:
+  - 2.MD.D.10
+  learning_components:
+  - 5ac573e0
+requires:
+- clause: standard
+  all_of:
+  - node: data.bar-graph.read
+    relation: procedural
+    points_to: statement
+    why: The learner reads the counts of the needed categories from the bars before combining them.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.put-together.total-unknown
+    relation: definitional
+    points_to: statement
+    why: A put-together problem asks for the combined count of the parts, the total-unknown structure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: statement
+    why: The total is found by adding the two read counts, such as 7 plus 5, and any method would do.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

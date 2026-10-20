@@ -1,0 +1,85 @@
+id: expressions.parentheses
+concept: expressions
+facet: numerical
+level: 2
+type: concept
+name: Parentheses group a part to compute first
+statement: Parentheses around part of an expression make that part one number, found first and then used
+  in the rest of the expression; moving them can change the value, as (8 - 3) - 2 = 3 but 8 - (3 - 2)
+  = 7.
+assess: Find (2 x 3) x 1 and 2 x (3 x 1). Then find (8 - 3) - 2 and 8 - (3 - 2). Which pair has equal
+  values?
+sources:
+  ccss:
+  - 3.OA.B.5
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: subtraction.notation.expression
+    relation: representational
+    points_to: statement
+    why: The expressions (8 - 3) - 2 and 8 - (3 - 2) are written with the subtraction expression notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: representational
+    points_to: assess
+    why: The expressions (2 x 3) x 4 and 2 x (3 x 4) use the multiplication sign for a number of equal
+      groups.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement''s example uses subtraction; the multiplication signs appear in
+        the test, and the product can be found from an array as well as from equal groups.'
+    status: proposed
+  - node: equation.equal-sign.meaning
+    relation: definitional
+    points_to: assess
+    why: The test asks which pair has equal values, which uses the equal sign as sameness of value.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test question ''which pair has equal values'' uses the equal sign; the
+        statement does not.'
+    status: proposed
+  - node: subtraction.within-10
+    relation: procedural
+    points_to: assess
+    why: The test evaluates 8 - 3, 5 - 2 and 3 - 2, each a difference within 10.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test evaluates 8 - 3, 5 - 2 and 3 - 2.'
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The test evaluates 2 x 3, 3 x 4 and 6 x 4, products of one-digit numbers.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test evaluates 2 x 3, 3 x 4 and 6 x 4.'
+    status: proposed
+status: proposed

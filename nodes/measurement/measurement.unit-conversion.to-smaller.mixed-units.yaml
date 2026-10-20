@@ -1,0 +1,49 @@
+id: measurement.unit-conversion.to-smaller.mixed-units
+concept: measurement
+facet: unit-conversion
+level: 3
+type: procedure
+name: Write a two-unit measurement in the smaller unit
+statement: A measurement of a larger units and b smaller units, with 1 larger unit = k smaller units,
+  equals a x k + b smaller units.
+procedure:
+- Convert the a larger units to a x k smaller units.
+- Add the b smaller units.
+- Label the sum with the smaller unit.
+assess: Write 2 hours 15 minutes in minutes. (1 hr = 60 min)
+sources:
+  ccss:
+  - 4.MD.A.1
+  - 4.MD.A.2
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.unit-conversion.to-smaller.whole
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 converts the a larger units to a x k smaller units, which is exactly the whole-number
+      conversion.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds the b smaller units to the converted amount, a whole-number sum by any method.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

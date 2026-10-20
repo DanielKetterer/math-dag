@@ -46,7 +46,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: addition.count-on
+  - node: addition.within-20
     relation: procedural
     points_to: procedure.3
     why: Step 3 adds the small difference d to the double, which is a short count on from the double.
@@ -58,6 +58,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired addition.count-on: Adding d to a double gives sums past 10 by any
+        method; no add-within-20 candidate exists.'
     status: proposed
   - node: addition.notation.expression
     relation: definitional

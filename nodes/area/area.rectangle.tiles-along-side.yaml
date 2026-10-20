@@ -1,0 +1,102 @@
+id: area.rectangle.tiles-along-side
+concept: area
+facet: unit-squares
+level: 2
+type: concept
+name: The number of tiles along a side equals the side length
+statement: When a rectangle is tiled with unit squares, the number of squares along a side equals the
+  length of that side in units, since each square spans 1 unit of it.
+assess: A rectangle has a side 6 cm long. It is tiled with 1 cm square tiles. How many tiles touch that
+  side, and why?
+sources:
+  ccss:
+  - 3.MD.C.6
+  learning_components:
+  - f538df9a
+requires:
+- clause: via-rows-columns
+  all_of:
+  - node: area.unit-square
+    relation: justificatory
+    points_to: statement
+    why: Each tile spans 1 unit of the side because each unit square has side length 1 unit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.no-gaps-overlaps
+    relation: justificatory
+    points_to: statement
+    why: The tiles along a side are units laid end to end with no gaps or overlaps, so their count is
+      the side length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: partitioning.rectangle.rows-columns
+    relation: definitional
+    points_to: statement
+    why: The statement is about a rectangle already divided into rows and columns of same-size unit squares.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A learner who has tiled the rectangle (area.rectangle.tiling) sees the rows and
+        columns of squares without a separate partitioning activity. | other route: Tile the rectangle
+        with unit squares via area.rectangle.tiling.'
+    status: disputed
+- clause: via-tiling
+  all_of:
+  - node: area.unit-square
+    relation: justificatory
+    points_to: statement
+    why: Each tile spans 1 unit of the side because each unit square has side length 1 unit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.no-gaps-overlaps
+    relation: justificatory
+    points_to: statement
+    why: The tiles along a side are units laid end to end with no gaps or overlaps, so their count is
+      the side length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.tiling
+    relation: definitional
+    points_to: statement
+    why: The statement is about a rectangle that has been tiled with unit squares.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The claim concerns the squares along a side and does not use the total count;
+        a rectangle already shown as a grid of unit squares supports it equally. | other route: The rectangle
+        is presented already partitioned into rows and columns of same-size squares (partitioning.rectangle.rows-columns),
+        with no physical tiling procedure.'
+    status: disputed
+status: proposed

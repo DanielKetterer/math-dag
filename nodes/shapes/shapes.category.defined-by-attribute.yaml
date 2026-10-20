@@ -1,0 +1,64 @@
+id: shapes.category.defined-by-attribute
+concept: shapes
+facet: category
+level: 2
+type: concept
+name: A shared attribute can define a larger category
+statement: 'An attribute can define a category of shapes: every shape that has the attribute belongs to
+  the category, whatever its other attributes, size, or orientation.'
+assess: 'A ''quad-shape'' is any closed shape made of four straight sides. Which of these are quad-shapes:
+  a square, a tilted kite, a rhombus, a four-sided arrowhead with one corner pointing in, a circle, a
+  pentagon?'
+sources:
+  ccss:
+  - 3.G.A.1
+  learning_components:
+  - 57e16cea
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.attributes.shared
+    relation: definitional
+    points_to: statement
+    why: A category defined by an attribute collects shapes of different named kinds that share that one
+      attribute.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.attribute.non-defining
+    relation: definitional
+    points_to: statement
+    why: The statement says membership holds whatever the shape's other attributes, size, or orientation,
+      which are non-defining.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.identify.specified-attributes
+    relation: procedural
+    points_to: assess
+    why: The test problem asks the learner to pick out which listed shapes have the stated four-straight-sides
+      attribute.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test asks the learner to pick out which listed shapes have the stated attribute.
+        The idea that an attribute defines a category does not itself require the picking-out skill.'
+    status: proposed
+status: proposed

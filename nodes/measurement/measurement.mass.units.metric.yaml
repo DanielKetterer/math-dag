@@ -1,0 +1,41 @@
+id: measurement.mass.units.metric
+concept: measurement
+facet: mass
+level: 3
+type: fact
+name: Relative sizes of metric mass units
+statement: Know that 1 kg = 1000 g, so a kilogram is 1000 times as heavy as a gram.
+assess: 'Without computing: how many grams are in 1 kilogram? Which is heavier, 1 g or 1 kg?'
+sources:
+  ccss:
+  - 4.MD.A.1
+  learning_components:
+  - 4a130b79
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.comparison
+    relation: definitional
+    points_to: statement
+    why: The statement says a kilogram is 1000 times as heavy as a gram, which is a multiplicative comparison
+      of masses.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.weight.attribute
+    relation: definitional
+    points_to: statement
+    why: '''Which is heavier'' needs weight/mass as an attribute; no attribute edge is proposed for the
+      metric mass node.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

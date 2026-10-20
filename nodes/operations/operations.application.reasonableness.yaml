@@ -18,7 +18,7 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: operations.application.multistep
+  - node: operations.application.multistep.multi-digit
     relation: definitional
     points_to: statement
     why: The answer judged is the answer to a multi-step whole-number word problem.
@@ -30,6 +30,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired operations.application.multistep: The test has 4 x 198 and 305, multi-digit
+        numbers.'
     status: proposed
   - node: multiplication.by-multiple-of-ten
     relation: procedural

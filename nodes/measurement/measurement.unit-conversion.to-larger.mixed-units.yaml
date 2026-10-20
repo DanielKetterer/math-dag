@@ -1,0 +1,95 @@
+id: measurement.unit-conversion.to-larger.mixed-units
+concept: measurement
+facet: unit-conversion
+level: 3
+type: procedure
+name: Write a measurement in larger and smaller units together
+statement: When 1 larger unit = k smaller units, n smaller units equal q larger units and r smaller units,
+  where q and r are the whole-number quotient and remainder of n divided by k.
+procedure:
+- Find k, the number of smaller units in 1 larger unit.
+- Divide n by k to get a whole-number quotient q and remainder r.
+- Write the measurement as q larger units and r smaller units.
+assess: Write 200 minutes in hours and minutes. (1 hr = 60 min)
+sources:
+  ccss:
+  - 4.MD.A.2
+  - 5.MD.A.1
+  learning_components: []
+requires:
+- clause: via-multiplicative-relation
+  all_of:
+  - node: division.by-one-digit.remainder
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides n by k to get a whole-number quotient and a remainder.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-two-digit.remainder
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides n by k to get a whole-number quotient and remainder, such as 200 divided by 60.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.unit-conversion.multiplicative-relation
+    relation: justificatory
+    points_to: statement
+    why: Each group of k smaller units is one larger unit, which is the relation that explains why q larger
+      units and r left over result.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The relation ''each group of k smaller units is one larger unit'' explains the
+        result, but the grouping meaning of division (e605) gives the same explanation directly. | other
+        route: Read the quotient as the number of groups of k in n (division.measurement.meaning).'
+    status: disputed
+- clause: via-meaning
+  all_of:
+  - node: division.by-one-digit.remainder
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides n by k to get a whole-number quotient and a remainder.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-two-digit.remainder
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides n by k to get a whole-number quotient and remainder, such as 200 divided by 60.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.measurement.meaning
+    relation: definitional
+    points_to: statement
+    why: The quotient q counts how many whole groups of k smaller units are in n, with r units left over.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Quotient as number of whole groups of k, with r left over, explains q and r;
+        the relation n = q x k + r (e606) explains them equally well. | other route: Use the multiplicative
+        relation: n smaller units = q groups of k plus r left, each group of k being one larger unit.'
+    status: disputed
+status: proposed

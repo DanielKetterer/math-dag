@@ -1,0 +1,56 @@
+id: data.categorical.how-many-more
+concept: data
+facet: categorical
+level: 2
+type: application
+name: Find how many more or fewer are in one category than another
+statement: A question asks how many more or how many fewer data points one category has than another,
+  in a data set with up to three categories; the answer is the difference of the two category counts.
+assess: A chart shows that 4 children chose apple, 2 chose banana and 6 chose grape. How many more children
+  chose grape than banana?
+sources:
+  ccss:
+  - 1.MD.C.4
+  learning_components:
+  - 90e4775e
+  - 2ee06e08
+requires:
+- clause: standard
+  all_of:
+  - node: data.categorical.read-count
+    relation: definitional
+    points_to: statement
+    why: The two category counts are read from the chart before they are compared.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.application.compare.difference-unknown
+    relation: definitional
+    points_to: statement
+    why: How many more or fewer is a compare situation whose answer is the difference of the two counts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-10
+    relation: definitional
+    points_to: statement
+    why: The method-neutral node for the difference of the counts (test is 6 - 2); use subtraction.within-100
+      instead if counts may exceed 10. Replaces the within-20.fluency edge.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

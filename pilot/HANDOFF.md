@@ -1,6 +1,43 @@
-# Handoff: big run phase 1 reviewed and applied (2026-10-20)
+# Handoff: big run phase 2 merged, awaiting Daniel's review (2026-10-20)
 
 Read this first in a new session. Then RULES.md.
+
+## Phase 2 (K-5 measurement, data, geometry): done
+
+- 5 strands (pilot/run/p2): M1 K-2 measurement and data (41), M2 grade 3
+  measurement and data (44), M3 grades 4-5 measurement (54), G1 K-2 geometry
+  (22), G2 grades 3-5 geometry (38); plus 26 fix-up nodes written inline by
+  Claude (skeletons/F.yaml, proposed and criticized inside batch G1 via
+  prepare_phase ATTACH): method-neutral computation nodes (within 10, 20, 100,
+  1000; by one digit; two-digit by two-digit; with and without remainder),
+  the upper halves of the F97 range splits (lower halves keep their ids,
+  narrowed in pilot/run/p1 skeletons and batches, overrides there), and
+  parentheses, order of operations, unknown symbol, two-way table, thousandths,
+  angle.meaning (both G2 and M3 left it to the other).
+- Map: 675 nodes, 2,352 edges, 0 errors. Benchmark 81% direct, 92% chains.
+  Common Core order findings 15 (queue F), IM 69.
+- Retired: data.graphs.read, measurement.unit-conversion,
+  coordinate-plane.first-quadrant. p2 retarget (spec-driven: retired ids, range
+  splits, method edges, attach checks; pilot/run/p2/retarget/spec.yaml):
+  59 re-pointed, 45 kept, 13 boundary, 6 attach edges.
+- Late, by hand (pilot/run/p2/overrides.yaml, items L1-L5, flagged in queue F):
+  addition.within-20 and subtraction.within-20 routes; weight cycle broken;
+  my parentheses test problem fixed; unknown-symbol task edge made
+  method-neutral.
+- Passes agree on 69% (Jaccard 0.69). Critic: 535 necessary, 70 scaffold,
+  68 task-only, 47 route-only, 8 wrong.
+- Cost: phase 2 about 3.15M subagent tokens against an estimate of 2.8M:
+  writers 696,790; proposers 1,422,735; retarget 148,779; critics 817,577
+  (G2, M2, M3 are ESTIMATES of 160k each: the session limit stopped them after
+  their files were complete); 67,572 wasted on a placeholder agent Claude
+  launched by mistake. Running total 6,229,396.
+- Review queue: pilot/run/p2/REVIEW.md, 116 items (A-E as usual, F structural
+  and Claude's own calls). Answers go to pilot/run/p2/overrides.yaml (append;
+  L items are already there).
+- Session limits: two stops in two phases even at 4 agents. Each stop costs
+  only the unreported usage, since files are complete; resume with SendMessage.
+
+# Earlier: big run phase 1 reviewed and applied (2026-10-20)
 
 ## Phase 1 review (2026-10-20)
 

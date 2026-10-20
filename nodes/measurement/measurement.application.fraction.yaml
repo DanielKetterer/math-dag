@@ -1,0 +1,83 @@
+id: measurement.application.fraction
+concept: measurement
+facet: quantity
+level: 2
+type: application
+name: Solve measurement word problems with simple fractions
+statement: Solve word problems about distances, liquid volumes, masses, or times in which the measurements
+  are simple fractions or mixed numbers of one unit.
+assess: Lia walked 3/8 mile to school and 7/8 mile home by a longer route. How far did she walk in all?
+sources:
+  ccss:
+  - 4.MD.A.2
+  learning_components:
+  - 9432b8e1
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.application.addition-same-whole
+    relation: definitional
+    points_to: statement
+    why: The test problem adds 3/8 mile and 7/8 mile, a word problem adding fractions of the same whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.application.subtraction-same-whole
+    relation: definitional
+    points_to: statement
+    why: Problems about how much farther or longer use subtracting fractions of the same whole in a story.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.add
+    relation: procedural
+    points_to: statement
+    why: The statement includes mixed-number measurements, so adding mixed numbers with like denominators
+      is performed.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.subtract
+    relation: procedural
+    points_to: statement
+    why: The statement includes mixed-number measurements, so subtracting mixed numbers with like denominators
+      is performed.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.application.multiply-whole
+    relation: definitional
+    points_to: statement
+    why: Word problems with fractional measurements include scaling a fractional measurement (a fraction
+      times a whole number of pieces), which the add/subtract edges do not cover; confirm against the
+      intended problem set.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

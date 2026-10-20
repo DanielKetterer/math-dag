@@ -1,0 +1,47 @@
+id: shapes.attribute.equal-sides
+concept: shapes
+facet: properties
+level: 1
+type: concept
+name: Notice whether a shape's sides are equal in length
+statement: Some shapes have all their sides the same length (a square) and some do not (a long rectangle);
+  whether the sides are equal is an attribute of the shape, found by comparing side lengths.
+assess: Here are a square, a long thin rectangle, and a triangle with one long side. Which shape has all
+  its sides the same length?
+sources:
+  ccss:
+  - K.G.B.4
+  learning_components:
+  - 2b32313c
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.sides.count
+    relation: definitional
+    points_to: statement
+    why: The statement is about the sides of a shape, so the learner must already pick out what a side
+      of a shape is.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.size.direct
+    relation: procedural
+    points_to: statement
+    why: Whether sides are equal is found by comparing side lengths, which is the direct comparison of
+      two lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

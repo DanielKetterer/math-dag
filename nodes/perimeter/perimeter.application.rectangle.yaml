@@ -1,0 +1,59 @@
+id: perimeter.application.rectangle
+concept: perimeter
+facet: core
+level: 3
+type: application
+name: Solve real-world problems with the rectangle perimeter formula
+statement: Solve real-world problems that use P = 2 x l + 2 x w for a rectangle, finding either the perimeter
+  or an unknown side length.
+assess: A rectangular garden is 14 m long and needs 46 m of fence to go all the way around. How wide is
+  the garden?
+sources:
+  ccss:
+  - 4.MD.A.3
+  learning_components:
+  - 8a82f241
+requires:
+- clause: standard
+  all_of:
+  - node: perimeter.rectangle.application
+    relation: definitional
+    points_to: statement
+    why: Finding the perimeter of a rectangle in a real-world problem is one of the two cases the statement
+      names.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: perimeter.rectangle.unknown-side
+    relation: procedural
+    points_to: statement
+    why: Finding an unknown side length from the perimeter is the other case, as in the fence problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: perimeter.rectangle.formula
+    relation: definitional
+    points_to: statement
+    why: The statement is stated in terms of the formula P = 2 x l + 2 x w.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,74 @@
+id: measurement.unit-conversion.to-larger.fraction
+concept: measurement
+facet: unit-conversion
+level: 3
+type: procedure
+name: Convert a measurement to a larger unit as a fraction
+statement: When 1 larger unit = k smaller units, n smaller units equal n/k larger units, written as a
+  fraction or mixed number.
+procedure:
+- Find k, the number of smaller units in 1 larger unit.
+- Write the number of smaller units over k as the fraction n/k.
+- Label the fraction with the larger unit.
+assess: What fraction of a foot is 9 inches? (1 ft = 12 in)
+sources:
+  ccss:
+  - 5.MD.A.1
+  learning_components:
+  - 0c81b764
+requires:
+- clause: via-symbolic
+  all_of:
+  - node: fraction.mixed-number.meaning
+    relation: representational
+    points_to: statement
+    why: The statement allows the result to be a mixed number, a whole number plus a fraction.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.quotient.symbolic
+    relation: definitional
+    points_to: statement
+    why: The statement n/k larger units uses that n divided by k equals the fraction n/k.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: n divided by k = n/k yields the fraction, but so does seeing 1 smaller unit as
+        1/k of the larger unit and counting n such parts (e614). | other route: Count n parts of size
+        1/k with fraction.non-unit.part-whole.'
+    status: disputed
+- clause: via-part-whole
+  all_of:
+  - node: fraction.mixed-number.meaning
+    relation: representational
+    points_to: statement
+    why: The statement allows the result to be a mixed number, a whole number plus a fraction.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: Nine inches is 9 parts of size 1/12 of a foot, the non-unit fraction as a count of unit parts.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Nine inches as 9 parts of size 1/12 ft gives n/k through unit-fraction counting,
+        but the quotient route (n divided by k = n/k, e615) gives the same fraction. | other route: Divide
+        n by k and write the quotient as the fraction n/k using fraction.quotient.symbolic.'
+    status: disputed
+status: proposed

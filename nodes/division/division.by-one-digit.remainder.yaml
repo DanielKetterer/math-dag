@@ -1,0 +1,55 @@
+id: division.by-one-digit.remainder
+concept: division
+facet: base-ten
+level: 3
+type: procedure
+name: Divide by a one-digit number with a remainder
+statement: Find the whole-number quotient and the remainder of a dividend of up to four digits by a one-digit
+  divisor, with the remainder less than the divisor, by any reliable method.
+assess: Find the quotient and remainder of 78 divided by 8, and of 1,234 divided by 5. Use any method.
+sources:
+  ccss:
+  - 4.NBT.B.6
+  learning_components:
+  - 47171d80
+  - f7db0623
+requires:
+- clause: standard
+  all_of:
+  - node: division.by-one-digit
+    relation: definitional
+    points_to: statement
+    why: Finding a quotient with a remainder carries out the same whole-number quotient process and then
+      reports what is left over, less than the divisor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: statement
+    why: Finding the largest multiple of the divisor that does not exceed the dividend, such as 72 for
+      78 divided by 8, uses products of two one-digit numbers.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.remainder.meaning
+    relation: definitional
+    points_to: statement
+    why: The remainder as what is left after making as many whole groups as possible, always less than
+      the divisor, is not carried by the exact-division node.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

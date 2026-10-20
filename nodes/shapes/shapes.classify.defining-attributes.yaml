@@ -1,0 +1,103 @@
+id: shapes.classify.defining-attributes
+concept: shapes
+facet: properties
+level: 2
+type: procedure
+name: Decide whether a figure is a named shape by its defining attributes
+statement: A figure is a triangle, square, rectangle or trapezoid exactly when it has every defining attribute
+  of that shape, however it looks otherwise; the check is correct for any figure, so a square also passes
+  the rectangle check.
+procedure:
+- Recall the defining attributes of the named shape.
+- Check the figure for each one (closed, number of straight sides, square corners, equal sides).
+- Name the figure as that shape exactly when every defining attribute holds, ignoring color, size and
+  orientation.
+assess: Which of these are triangles? A closed three-sided figure with all sides different, a three-sided
+  figure with a gap at one corner, a figure with two straight sides and one curved side, a long thin three-sided
+  figure pointing down, a four-sided figure.
+sources:
+  ccss:
+  - 1.G.A.1
+  learning_components:
+  - baa38680
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.attribute.defining
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 recalls the defining attributes of the named shape.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.closed-boundary
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 checks that the figure is closed, as in the test item with a gap at one corner.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.sides.count
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 checks the number of straight sides of the figure against the named shape.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.attribute.equal-sides
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 checks whether the sides are equal when the named shape, such as a square, requires it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.attribute.non-defining
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 ignores color, size and orientation when naming the figure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.square-corner
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 checks for square corners, which the rectangle and square checks require.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Checking square corners is used by the rectangle and square checks, but shapes.square-corner
+        is not a node in the map index.'
+    status: disputed
+status: proposed

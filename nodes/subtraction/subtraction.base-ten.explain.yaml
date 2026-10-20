@@ -46,7 +46,7 @@ requires:
       source: DK
       note: 'A6 keep: Daniel: TASK - valid for the stated test problem, not universal (already task-scoped).'
     status: reviewed
-  - node: expressions.grouping.evaluate
+  - node: expressions.parentheses
     relation: representational
     points_to: statement
     why: The identity a - (b + c) = (a - b) - c and the test expression use parentheses, which must be
@@ -57,6 +57,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired expressions.grouping.evaluate: The test needs parentheses read as
+        do-this-first.'
     status: proposed
   - node: subtraction.take-away.count-remaining
     relation: justificatory

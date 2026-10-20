@@ -31,7 +31,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: coordinate-plane.first-quadrant
+  - node: coordinate-plane.first-quadrant.read
     relation: procedural
     points_to: procedure.1
     why: Choosing a point whose coordinates can be read exactly requires reading ordered pairs from the
@@ -44,6 +44,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired coordinate-plane.first-quadrant: Choosing a point means reading its
+        coordinates.'
     status: proposed
   - node: ratio.unit-rate.find
     relation: procedural

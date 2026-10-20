@@ -1,0 +1,64 @@
+id: shapes.name.any-orientation
+concept: shapes
+facet: core
+level: 1
+type: representation
+name: Name flat shapes whatever their size or orientation
+statement: Give the correct name (circle, triangle, square, rectangle, hexagon) to any example of the
+  shape, including tilted, very large or small, and non-typical examples such as a long thin triangle
+  or a square standing on a corner.
+assess: 'Name each shape: a square turned to stand on one corner, a long thin triangle pointing down,
+  a small hexagon, a tall narrow rectangle, a very large circle.'
+sources:
+  ccss:
+  - K.G.A.2
+  learning_components:
+  - 742ff270
+  - d6a100ad
+  - edb08bc2
+  - 0dee77b7
+  - 813238cd
+  - 2754c1cd
+  - 9a476e0a
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.recognize
+    relation: definitional
+    points_to: statement
+    why: Naming a tilted, very large or small, or non-typical example first requires recognizing it as
+      the same shape despite its size and orientation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.name.prototype
+    relation: representational
+    points_to: statement
+    why: The statement applies the names circle, square and triangle already attached to typical examples
+      to non-typical ones such as a long thin triangle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.name.receptive
+    relation: definitional
+    points_to: statement
+    why: The prototype node covers only circles, squares and triangles; the statement also names rectangle
+      and hexagon.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

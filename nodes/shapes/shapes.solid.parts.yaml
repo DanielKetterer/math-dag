@@ -1,0 +1,60 @@
+id: shapes.solid.parts
+concept: shapes
+facet: properties
+level: 1
+type: concept
+name: Identify the faces, curved surfaces and corners of a solid
+statement: The parts of a solid are its flat faces, its curved surfaces, the edges where faces meet, and
+  its corners (vertices); a cube has 6 flat faces and 8 corners, a sphere has one curved surface and no
+  corners.
+assess: Here are a cube and a cylinder. How many flat faces does each have? Which one has a curved surface?
+sources:
+  ccss:
+  - K.G.B.4
+  learning_components:
+  - 7ea56e28
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.dimension.flat-solid
+    relation: definitional
+    points_to: statement
+    why: A flat face and a curved surface are parts of a solid shape, so the learner must see the solid
+      as having flat and curved parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.objects
+    relation: procedural
+    points_to: assess
+    why: The test problem asks how many flat faces each solid has, which is found by counting the faces.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test question asks how many faces; the idea of the parts of a solid does
+        not need counting.'
+    status: proposed
+  - node: shapes.name.solids
+    relation: definitional
+    points_to: assess
+    why: The statement describes the parts of named solids, a cube and a sphere, so the solids must be
+      recognized by name.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is about parts of solids; names appear only in the test items (a
+        cube and a cylinder) which could simply be shown.'
+    status: proposed
+status: proposed

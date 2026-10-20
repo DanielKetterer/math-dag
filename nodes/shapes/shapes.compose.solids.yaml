@@ -1,0 +1,50 @@
+id: shapes.compose.solids
+concept: shapes
+facet: composition
+level: 1
+type: procedure
+name: Put solids together to make a composite solid
+statement: Join solids (cubes, rectangular prisms, cones, cylinders) face to face to build a larger composite
+  solid.
+procedure:
+- Choose a face of one solid and a matching face of another.
+- Place the two faces together so they meet fully.
+- Repeat with further solids until the composite is built.
+assess: Use these cubes to build a box shape that is 3 cubes long and 1 cube wide and tall.
+sources:
+  ccss:
+  - 1.G.A.2
+  learning_components:
+  - c9cf956f
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.solid.parts
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 chooses a face of one solid and a matching face of another, which requires knowing what
+      the flat faces of a solid are.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.produce-set
+    relation: procedural
+    points_to: assess
+    why: The test problem builds a row of exactly 3 cubes, which requires taking out a given number of
+      cubes.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test item asks for exactly 3 cubes; the idea of joining solids face to
+        face does not.'
+    status: proposed
+status: proposed

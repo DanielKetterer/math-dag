@@ -1,0 +1,53 @@
+id: angle.acute-obtuse.classify
+concept: angle
+facet: figure
+level: 2
+type: concept
+name: Acute and obtuse angles compared with a right angle
+statement: An acute angle is smaller than a right angle; an obtuse angle is larger than a right angle
+  and smaller than a straight angle.
+assess: Label each angle of this pentagon as right, acute, or obtuse.
+sources:
+  ccss:
+  - 4.G.A.1
+  learning_components:
+  - c69a41b7
+requires:
+- clause: standard
+  all_of:
+  - node: angle.right.meaning
+    relation: definitional
+    points_to: statement
+    why: Acute and obtuse angles are defined by comparing their opening with the square corner of a right
+      angle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: line.meaning
+    relation: definitional
+    points_to: statement
+    why: An obtuse angle must be smaller than a straight angle, whose two sides form a straight line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement is about acute and obtuse angles, so the learner must know what an angle is; angle.right.meaning
+      reaches it only indirectly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

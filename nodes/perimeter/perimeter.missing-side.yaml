@@ -1,0 +1,56 @@
+id: perimeter.missing-side
+concept: perimeter
+facet: core
+level: 3
+type: procedure
+name: Find an unknown side length from the perimeter
+statement: When the perimeter of a polygon and all but one of its side lengths are known, the unknown
+  side is the perimeter minus the sum of the known sides.
+assess: A quadrilateral has a perimeter of 30 cm. Three of its sides are 8 cm, 6 cm, and 9 cm. How long
+  is the fourth side?
+sources:
+  ccss:
+  - 3.MD.D.8
+  learning_components:
+  - ede10534
+requires:
+- clause: standard
+  all_of:
+  - node: perimeter.polygon.from-sides
+    relation: definitional
+    points_to: statement
+    why: The known sides are added, and the perimeter is defined as the sum of all the sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: statement
+    why: The unknown side is the perimeter minus the sum of the known sides, such as 30 minus 23.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: statement
+    why: The known side lengths are added first, such as 8 + 6 + 9.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

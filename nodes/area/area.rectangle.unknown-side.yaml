@@ -1,0 +1,75 @@
+id: area.rectangle.unknown-side
+concept: area
+facet: unit-squares
+level: 3
+type: procedure
+name: Find an unknown side of a rectangle from its area
+statement: Given the area A of a rectangle and one side length, the other side length is the unknown factor
+  in A = l x w, found by dividing A by the known side.
+procedure:
+- Write A = l x w with the known area and known side filled in.
+- Find the unknown factor by dividing the area by the known side.
+- Label the result with the length unit.
+assess: A rectangle has an area of 96 square feet and a length of 12 feet. What is its width?
+sources:
+  ccss:
+  - 4.MD.A.3
+  learning_components:
+  - 984b8dc3
+requires:
+- clause: standard
+  all_of:
+  - node: area.rectangle.length-times-width
+    relation: definitional
+    points_to: statement
+    why: The statement starts from A = l x w, the area of a rectangle as the product of its side lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement finds the other side as the unknown factor in A = l x w, found by dividing.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.unknown-symbol
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 writes A = l x w with a symbol standing for the unknown side.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-two-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides the area by the known side, such as 96 divided by 12.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: multiplication.unknown-factor.solve
+  relation: same_idea_different_form
+  note: Solving 12 x ? = 96 is another way to find the same unknown as dividing 96 by 12; the procedure's
+    step 2 specifies dividing, so the unknown-factor solving skill is not additionally required.
+status: proposed

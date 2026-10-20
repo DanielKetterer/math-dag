@@ -38,7 +38,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: comparing.whole-numbers.magnitude
+  - node: comparing.whole-numbers.magnitude.multi-digit
     relation: procedural
     points_to: procedure.2
     why: Step 2 stops when the amount left is less than the divisor, which compares two whole numbers.
@@ -50,5 +50,9 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired comparing.whole-numbers.magnitude: The amount left is compared with
+        a one-digit divisor, so numbers differ in digits.'
     status: proposed
 status: proposed

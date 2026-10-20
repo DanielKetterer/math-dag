@@ -1,0 +1,111 @@
+id: perimeter.same-area.different-perimeters
+concept: perimeter
+facet: core
+level: 2
+type: procedure
+name: Exhibit rectangles with the same area and different perimeters
+statement: Rectangles with the same area can have different perimeters; produce such rectangles by choosing
+  different whole-number side-length pairs with the same product.
+assess: Draw two rectangles on grid paper that each have an area of 12 square units but have different
+  perimeters. Give each perimeter.
+sources:
+  ccss:
+  - 3.MD.D.8
+  learning_components:
+  - 1a101be5
+requires:
+- clause: critic-route-1
+  note: Area of each rectangle from the level 3 multiplication rule.
+  all_of:
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: statement
+    why: Side-length pairs with the same product are chosen by recalling products, such as 3 x 4 and 2
+      x 6 for 12.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: perimeter.rectangle.from-length-width
+    relation: procedural
+    points_to: statement
+    why: The learner gives each rectangle's perimeter from its length and width.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: statement
+    why: Each rectangle's area is its length times its width, which must equal the chosen product.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: That each rectangle''s area equals the chosen product can come from the multiplication
+        rule or from the level 2 picture of a product as a rectangle of that area. The learner draws on
+        grid paper, so squares can also be counted. | other route: Use multiplication.array-area.whole-number-product.represent
+        so that a rectangle with sides a and b is known to have area a x b.'
+    status: disputed
+- clause: critic-route-2
+  note: Area of each rectangle from the level 2 picture of a product as a rectangle.
+  all_of:
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: statement
+    why: Side-length pairs with the same product are chosen by recalling products, such as 3 x 4 and 2
+      x 6 for 12.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: perimeter.rectangle.from-length-width
+    relation: procedural
+    points_to: statement
+    why: The learner gives each rectangle's perimeter from its length and width.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.array-area.whole-number-product.represent
+    relation: procedural
+    points_to: statement
+    why: The learner draws rectangles on grid paper whose area is a given product.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: That the rectangle with sides a and b has area a x b can instead come from the
+        level 3 rule for the area of a rectangle. | other route: Use area.rectangle.length-times-width
+        in place of the area-model representation.'
+    status: disputed
+related:
+- node: perimeter.meaning
+  relation: common_path
+  note: 'Common path, not required: route ''via-length-times-width'' needed everything another route needs
+    and more, so it was removed.'
+status: proposed

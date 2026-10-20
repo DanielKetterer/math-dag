@@ -1,0 +1,38 @@
+id: data.bar-graph.read
+concept: data
+facet: categorical
+level: 2
+type: representation
+name: Read a category's count from a bar graph with a single-unit scale
+statement: The count for a category in a bar graph is the number on the scale level with the end of that
+  category's bar.
+assess: In this bar graph the scale runs from 0 to 10 by ones, and the Dogs bar is not next to the scale.
+  Its end is level with the scale mark labeled 6. How many children chose dogs?
+sources:
+  ccss:
+  - 2.MD.D.10
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: statement
+    why: The count is the number on the scale level with the end of the bar, the scale being whole-number
+      lengths from 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: data.categorical.read-count
+  relation: same_idea_different_form
+  note: Reading a bar graph reads a number off a scale level with the bar end, not counting marks or pictures
+    as in tally charts and picture graphs; it is the same question (count for a named category) on a different
+    display.
+status: proposed

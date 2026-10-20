@@ -1,0 +1,134 @@
+id: measurement.time.elapsed.across-hour
+concept: measurement
+facet: time
+level: 2
+type: procedure
+name: Find elapsed minutes across the start of an hour
+statement: The interval from a time in one hour to a time in the next hour, at most 60 minutes, is the
+  minutes from the start time up to the hour plus the minutes past the hour at the end time, because an
+  hour has 60 minutes.
+procedure:
+- Find the minutes from the start time up to the next hour.
+- Find the minutes from the hour to the end time.
+- Add the two numbers of minutes.
+assess: One clock shows 3:45 and a later clock shows 4:10. How many minutes pass from the first time to
+  the second?
+sources:
+  ccss:
+  - 3.MD.A.1
+  learning_components:
+  - 3c3c56d8
+requires:
+- clause: via-tell-nearest-minute
+  all_of:
+  - node: measurement.time.units
+    relation: justificatory
+    points_to: statement
+    why: The statement explains the interval by saying an hour has 60 minutes, so minutes up to the next
+      hour are 60 minus the start minutes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds the minutes from the start time up to the next hour, which is 60 minus the start
+      minutes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds the minutes before the hour to the minutes after the hour to get the whole interval.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.time.tell-nearest-minute
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 reads the minutes past the hour at the end time from the clock time.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The minutes past the hour at the end time can be read from a digital time, so
+        analog reading is needed only when the times are shown on analog clocks. | other route: Times
+        are shown as digital clocks or numerals; read with time.digital.read.'
+    status: disputed
+- clause: critic-route-1
+  note: Times are shown as digital clocks or numerals, so the minutes are read without analog reading.
+  all_of:
+  - node: measurement.time.units
+    relation: justificatory
+    points_to: statement
+    why: The statement explains the interval by saying an hour has 60 minutes, so minutes up to the next
+      hour are 60 minus the start minutes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds the minutes from the start time up to the next hour, which is 60 minus the start
+      minutes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds the minutes before the hour to the minutes after the hour to get the whole interval.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: time.digital.read
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Times are shown as digital clocks or numerals, so
+      the minutes are read without analog reading.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

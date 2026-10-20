@@ -1,0 +1,81 @@
+id: data.bar-graph.application.two-step
+concept: data
+facet: bar-graph
+level: 2
+type: application
+name: Solve two-step how-many-more or how-many-fewer problems from a scaled bar graph
+statement: A question about a scaled bar graph needs two operations, such as combining two categories
+  and then comparing the total with a third.
+assess: A bar graph with a scale of 5 shows dogs 25, cats 15, fish 10, birds 20. How many more dogs and
+  cats together were counted than birds?
+sources:
+  ccss:
+  - 3.MD.B.3
+  learning_components:
+  - db9fc2c4
+requires:
+- clause: standard
+  all_of:
+  - node: data.bar-graph.application.one-step
+    relation: procedural
+    points_to: statement
+    why: The second step compares one total with another category, which is the one-step how-many-more
+      comparison from the graph.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: statement
+    why: The first step combines two category values from the graph, such as 25 plus 15.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.two-step
+    relation: definitional
+    points_to: statement
+    why: The question chains two operations in order, the structure of a two-step story solved by combining
+      and then comparing.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.bar-graph.scaled.read
+    relation: representational
+    points_to: statement
+    why: The learner reads three category values from the scaled axis before using any operation.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem subtracts the birds from the combined total, 40 - 20.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

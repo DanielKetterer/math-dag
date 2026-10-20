@@ -1,0 +1,88 @@
+id: angle.draw-by-type
+concept: angle
+facet: figure
+level: 2
+type: procedure
+name: Draw a right, acute, or obtuse angle
+statement: Draw an angle of a named type by drawing two rays from a common endpoint and checking the opening
+  against a square corner.
+procedure:
+- Draw a ray.
+- Place a square corner at the ray's endpoint with one edge along the ray.
+- For a right angle, draw the second ray along the other edge of the square corner.
+- For an acute angle, draw the second ray from the endpoint inside the square corner.
+- For an obtuse angle, draw the second ray from the endpoint between the other edge of the square corner
+  and the extension of the first ray backward through its endpoint.
+assess: Draw an obtuse angle with its vertex at point P.
+sources:
+  ccss:
+  - 4.G.A.1
+  learning_components:
+  - 27812e5c
+requires:
+- clause: standard
+  all_of:
+  - node: angle.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement defines the drawn angle as two rays from a common endpoint.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ray.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 draws a ray, and later steps draw further rays from the same endpoint.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.right.meaning
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 places a square corner at the endpoint, and step 3 draws the right angle along its edge.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.acute-obtuse.classify
+    relation: procedural
+    points_to: procedure.4
+    why: Steps 4 and 5 place the second ray inside or beyond the square corner according to the acute
+      or obtuse comparison.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: line.meaning
+    relation: definitional
+    points_to: statement
+    why: Step 5 uses the backward extension of the first ray through its endpoint, which forms a straight
+      line; the procedure itself uses it.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

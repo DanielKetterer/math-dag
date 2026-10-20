@@ -48,7 +48,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: addition.count-on
+  - node: addition.within-20
     relation: procedural
     points_to: procedure.2
     why: Step 2 finds an unknown addend by counting up from the known addend to the sum, which is counting
@@ -61,5 +61,9 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired addition.count-on: Missing addends like 8 + ? = 11 and 14 = 6 + ?
+        exceed 10 and the step allows counting up or a known fact; no add-within-20 candidate exists.'
     status: proposed
 status: proposed

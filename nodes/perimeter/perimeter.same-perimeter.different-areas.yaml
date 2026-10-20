@@ -1,0 +1,157 @@
+id: perimeter.same-perimeter.different-areas
+concept: perimeter
+facet: core
+level: 2
+type: procedure
+name: Exhibit rectangles with the same perimeter and different areas
+statement: Rectangles with the same perimeter can have different areas; produce such rectangles by choosing
+  different whole-number side-length pairs with the same sum.
+assess: Draw two rectangles on grid paper that each have a perimeter of 16 units but have different areas.
+  Give each area.
+sources:
+  ccss:
+  - 3.MD.D.8
+  learning_components:
+  - bce565cf
+requires:
+- clause: via-length-times-width
+  all_of:
+  - node: perimeter.rectangle.from-length-width
+    relation: procedural
+    points_to: statement
+    why: Each rectangle's perimeter is two lengths plus two widths, which must equal the chosen perimeter.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: statement
+    why: Side-length pairs with the same sum are chosen by adding trial lengths and widths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-20.fluency
+    relation: procedural
+    points_to: assess
+    why: Choosing whole-number pairs with the same sum, such as 8, uses recalled sums.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem uses sums within 20 (pairs adding to 8); the statement fixes
+        no number range and is covered by e564.'
+    status: proposed
+  - node: division.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem halves the perimeter 16 to get the sum 8 of length and width.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem halves the perimeter 16; the statement is about choosing
+        pairs with the same sum, which can be done by trial.'
+    status: proposed
+  - node: perimeter.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement is about rectangles with the same perimeter, so the meaning of perimeter is used
+      directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: statement
+    why: The learner gives each rectangle's area as its length times its width.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement does not say how the area of each rectangle is found; the learner
+        draws on grid paper and can count the squares. | other route: Count the unit squares of each drawn
+        rectangle with area.unit-squares.count.'
+    status: disputed
+- clause: critic-route-1
+  note: Area of each drawn rectangle found by counting the unit squares on the grid paper.
+  all_of:
+  - node: perimeter.rectangle.from-length-width
+    relation: procedural
+    points_to: statement
+    why: Each rectangle's perimeter is two lengths plus two widths, which must equal the chosen perimeter.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: statement
+    why: Side-length pairs with the same sum are chosen by adding trial lengths and widths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-20.fluency
+    relation: procedural
+    points_to: assess
+    why: Choosing whole-number pairs with the same sum, such as 8, uses recalled sums.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem uses sums within 20 (pairs adding to 8); the statement fixes
+        no number range and is covered by e564.'
+    status: proposed
+  - node: division.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem halves the perimeter 16 to get the sum 8 of length and width.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem halves the perimeter 16; the statement is about choosing
+        pairs with the same sum, which can be done by trial.'
+    status: proposed
+  - node: area.unit-squares.count
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Area of each drawn rectangle found by counting the
+      unit squares on the grid paper.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

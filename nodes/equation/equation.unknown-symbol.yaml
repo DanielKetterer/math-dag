@@ -1,0 +1,61 @@
+id: equation.unknown-symbol
+concept: equation
+facet: relational
+level: 2
+type: concept
+name: A symbol for an unknown number
+statement: In an equation, a box, a question mark or a letter stands for one particular number that is
+  not yet known; the equation is true when that number takes the symbol's place.
+assess: In 8 + [] = 13, what does the box stand for? Is the equation true if 4 goes in the box? If 5 does?
+sources:
+  ccss:
+  - 1.OA.D.8
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: equation.equal-sign.meaning
+    relation: definitional
+    points_to: statement
+    why: The equation is true when the number in the symbol's place makes both sides have the same value,
+      which is the meaning of the equal sign.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-20
+    relation: procedural
+    points_to: assess
+    why: Checking 8 + 4 and 8 + 5 against 13 finds sums within 20, by any method.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test checks 8 + 4 and 8 + 5 against 13.'
+    - kind: review
+      source: Claude
+      note: 'L5 replace: Claude: the test needs the sums, not recall (method-neutral rule); addition.within-20
+        was written after the proposers ran.'
+    status: reviewed
+  - node: equation.true-false
+    relation: procedural
+    points_to: assess
+    why: The test asks whether 8 + [] = 13 is true with 4 or 5 in the box, which is deciding whether an
+      equation is true.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test asks whether the equation is true with 4 or 5 in the box; the statement''s
+        idea is carried by the equal-sign meaning.'
+    status: proposed
+status: proposed

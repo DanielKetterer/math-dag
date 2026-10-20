@@ -1,0 +1,54 @@
+id: time.analog.half-hour
+concept: time
+facet: clock
+level: 2
+type: representation
+name: Tell time to the half hour on an analog clock
+statement: When the minute hand points to 6 it has gone halfway around since the hour, so the time is
+  half past the hour; the hour hand is then halfway between two numbers, and the hour is the number it
+  has most recently passed.
+assess: On this clock the long hand points to 6 and the short hand is halfway between 8 and 9. What time
+  is it?
+sources:
+  ccss:
+  - 1.MD.B.3
+  learning_components:
+  - 556c85d1
+requires:
+- clause: standard
+  all_of:
+  - node: time.analog.hour
+    relation: representational
+    points_to: statement
+    why: Reading the hour from the number the hour hand points to is the base that half past extends,
+      and the minute hand now points to 6.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: partitioning.equal-shares.name
+    relation: definitional
+    points_to: statement
+    why: Half past means the minute hand has gone halfway around the face, a half of the circle, which
+      uses halves as equal shares.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: number.halfway-between
+  relation: same_idea_different_form
+  note: On the clock face 'halfway between two numbers' is a position of the hand between two marks, and
+    the hour is read as the number most recently passed; this needs no numeric midpoint of two numbers,
+    which is what number.halfway-between names. Half as equal share is already covered by e319.
+status: proposed

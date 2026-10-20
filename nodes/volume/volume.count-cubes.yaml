@@ -1,0 +1,73 @@
+id: volume.count-cubes
+concept: volume
+facet: unit-cubes
+level: 1
+type: procedure
+name: Find a volume by counting unit cubes
+statement: Find the volume of a solid built from or packed with unit cubes (cubic cm, cubic in, cubic
+  ft, or an improvised cube) by counting the cubes, including cubes hidden from view.
+procedure:
+- Build or pack the solid with unit cubes, with no gaps or overlaps.
+- Count every cube, including cubes behind or under others.
+- Report the count in cubic units of the cube used.
+assess: Pack this small box with centimeter cubes. What is its volume?
+sources:
+  ccss:
+  - 5.MD.C.4
+  - 5.MD.C.5.a
+  learning_components:
+  - 7f339f4c
+  - 653ba790
+requires:
+- clause: standard
+  all_of:
+  - node: volume.packing
+    relation: definitional
+    points_to: statement
+    why: The count of unit cubes that pack the solid with no gaps or overlaps is the volume in cubic units.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The target is the concrete level 1 act of packing and counting, whose result ''the
+        count is the volume in cubic units'' is exactly what the level 2 packing concept states, so the
+        dependence may run the other way.'
+    status: disputed
+  - node: counting.objects
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 counts every cube, including hidden ones, to find how many cubes there are.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.unit-cube
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 reports the count in cubic units of the cube used.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.space-occupied
+    relation: definitional
+    points_to: statement
+    why: The procedure finds 'the volume' of a solid, so volume as the space a solid occupies is needed,
+      and no edge to it is proposed for this node.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

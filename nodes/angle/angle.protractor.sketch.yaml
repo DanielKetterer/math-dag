@@ -1,0 +1,133 @@
+id: angle.protractor.sketch
+concept: angle
+facet: measure
+level: 2
+type: procedure
+name: Draw an angle of a given measure with a protractor
+statement: Draw an angle of a given whole-number degree measure by drawing one ray, placing a protractor
+  with its center on the endpoint and 0 on the ray, marking the given measure on that scale, and drawing
+  the second ray through the mark.
+procedure:
+- Draw a ray to be one side of the angle.
+- Place the protractor's center on the ray's endpoint with the 0 mark of one scale on the ray.
+- Mark a point at the given number of degrees on that same scale.
+- Draw a ray from the endpoint through the mark.
+assess: Use a protractor to draw an angle of 70 degrees.
+sources:
+  ccss:
+  - 4.MD.C.6
+  learning_components:
+  - a25d6fc5
+requires:
+- clause: via-measure
+  all_of:
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The given measure in degrees is marked on the scale, so degrees as a count of one-degree angles
+      is used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure draws an angle from a vertex and two rays, so an angle as two rays from a common
+      endpoint is used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ray.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 draws a ray from an endpoint, which uses that a ray starts at an endpoint and extends
+      one way.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.protractor.measure
+    relation: procedural
+    points_to: procedure.2
+    why: Placing the center and 0 mark on the ray and reading the same scale are the measuring skills
+      used in reverse.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Drawing and measuring share centering, zero alignment and same-scale reading,
+        but neither logically requires the other; a learner can acquire those moves while drawing. | other
+        route: Learn the protractor moves directly in drawing, using number-line.measurement-scale to
+        find the given degree mark on the scale.'
+    status: disputed
+- clause: critic-route-1
+  note: Learn centering, zero alignment and same-scale marking directly while drawing, locating the given
+    degree mark with a measurement scale
+  all_of:
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The given measure in degrees is marked on the scale, so degrees as a count of one-degree angles
+      is used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure draws an angle from a vertex and two rays, so an angle as two rays from a common
+      endpoint is used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ray.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 draws a ray from an endpoint, which uses that a ray starts at an endpoint and extends
+      one way.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number-line.measurement-scale
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Learn centering, zero alignment and same-scale marking
+      directly while drawing, locating the given degree mark with a measurement scale'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

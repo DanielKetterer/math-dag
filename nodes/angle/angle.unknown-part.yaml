@@ -1,0 +1,50 @@
+id: angle.unknown-part
+concept: angle
+facet: measure
+level: 2
+type: procedure
+name: Find an unknown part of a decomposed angle
+statement: When an angle of known measure is split into two non-overlapping parts and one part is known,
+  the other part measures the whole minus the known part.
+procedure:
+- Identify the measure of the whole angle and of the known part on the diagram.
+- Subtract the known part from the whole.
+- Label the difference in degrees as the unknown part.
+assess: On this diagram, angle ABC is marked 90 degrees. Ray BD splits it, and angle ABD is marked 35
+  degrees. Find the measure of angle DBC.
+sources:
+  ccss:
+  - 4.MD.C.7
+  learning_components:
+  - 3a05b3ed
+requires:
+- clause: standard
+  all_of:
+  - node: angle.additive
+    relation: definitional
+    points_to: statement
+    why: The statement that the other part is the whole minus the known part comes from the whole being
+      the sum of its parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts the known part from the whole, a whole-number difference.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

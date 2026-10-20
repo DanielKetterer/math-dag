@@ -1,0 +1,64 @@
+id: data.picture-graph.draw
+concept: data
+facet: categorical
+level: 2
+type: representation
+name: Draw a picture graph with one picture per data point
+statement: 'A data set with up to four categories is shown as a picture graph: one same-size picture for
+  each data point, lined up in a row or column for each category from a common starting line, with each
+  category labeled and a title.'
+assess: 'Make a picture graph of this pet data: Cats 3, Dogs 5, Fish 2, Birds 4.'
+sources:
+  ccss:
+  - 2.MD.D.10
+  learning_components:
+  - 6cb4db86
+requires:
+- clause: standard
+  all_of:
+  - node: counting.produce-set
+    relation: procedural
+    points_to: statement
+    why: Each category's count, such as 5 dogs, is drawn as that many pictures, so the learner counts
+      out a set of a given number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.categorical.read-count
+    relation: representational
+    points_to: statement
+    why: A picture graph is the form in which one picture stands for one data point in each category row.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: numeral.read
+    relation: representational
+    points_to: assess
+    why: The test data are given as numerals beside each pet, such as Cats 3, and must be read to know
+      how many to draw.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is about drawing pictures for each data point; only the test gives
+        the counts as written numerals that must be read.'
+    status: proposed
+related:
+- node: data.categorical.organize
+  relation: same_idea_different_form
+  note: A tally chart and a picture graph both show one mark per data point in a row per category, but
+    the picture graph is drawn from given counts and does not need organizing a raw list. The layout convention
+    comes from reading picture graphs (e371).
+status: proposed

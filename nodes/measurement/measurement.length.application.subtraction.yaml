@@ -1,0 +1,81 @@
+id: measurement.length.application.subtraction
+concept: measurement
+facet: length
+level: 2
+type: application
+name: Solve subtraction word problems about lengths within 100
+statement: A one-step word problem gives lengths in the same unit, within 100, where a piece is cut off
+  or two lengths are compared; the learner finds the unknown length and states it with the unit.
+assess: A board is 72 inches long. Dad cuts off a piece 28 inches long. How long is the board that is
+  left?
+sources:
+  ccss:
+  - 2.MD.B.5
+  learning_components:
+  - 55fefca2
+  - a39e99c4
+requires:
+- clause: standard
+  all_of:
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: statement
+    why: The unknown length is the difference of two given lengths within 100, such as 72 minus 28.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.no-gaps-overlaps
+    relation: definitional
+    points_to: statement
+    why: A piece cut off leaves a length that is the count of units remaining, so the measures subtract.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.application.take-from-story
+    relation: definitional
+    points_to: statement
+    why: A piece cut off a board is a take-from situation in which the length that is left is unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.application.compare.difference-unknown
+    relation: definitional
+    points_to: statement
+    why: Comparing two lengths to find how much longer one is is a compare situation with the difference
+      unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.ruler
+    relation: definitional
+    points_to: statement
+    why: Lengths given in inches or centimeters are measurements in standard units, and the answer is
+      stated with the unit.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The problem gives lengths as numbers with units and no measuring step is performed,
+        so the ruler procedure is not used; but the lengths must mean standard-unit measurements, which
+        the map builds mainly through ruler measuring.'
+    status: disputed
+status: proposed

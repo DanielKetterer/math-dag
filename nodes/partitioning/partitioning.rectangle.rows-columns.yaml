@@ -1,0 +1,124 @@
+id: partitioning.rectangle.rows-columns
+concept: partitioning
+facet: area
+level: 1
+type: procedure
+name: Partition a rectangle into rows and columns of same-size squares
+statement: Draw lines across and down a rectangle whose sides fit a whole number of square sides, so that
+  it is split into rows and columns of same-size squares with no gaps or overlaps.
+procedure:
+- Draw lines across the rectangle, evenly spaced, to make the rows.
+- Draw lines up and down, evenly spaced at the same spacing as the rows, to make the columns.
+- Check that every part is a square and all the squares are the same size.
+assess: This rectangle is as long as 4 of these small squares and as tall as 3 of them. Draw lines to
+  split it into rows and columns of same-size squares.
+sources:
+  ccss:
+  - 2.G.A.2
+  learning_components:
+  - df455161
+requires:
+- clause: via-equal-lengths
+  all_of:
+  - node: multiplication.array.rows-columns
+    relation: definitional
+    points_to: statement
+    why: The statement is about rows and columns of squares, which is the row and column structure of
+      an array.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.compare.same-different
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 checks that all the squares are the same size by comparing them.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.name.prototype
+    relation: definitional
+    points_to: statement
+    why: Step 3 checks that every part is a square; naming typical upright squares is all that is needed.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: partitioning.segment.equal-lengths
+    relation: procedural
+    points_to: procedure.1
+    why: Steps 1 and 2 draw lines evenly spaced across and down the rectangle, which is dividing a side
+      into equal lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Setting the line spacing can be done by dividing each side into the right number
+        of equal lengths (4 and 3) instead of copying the small square''s side. | other route: Partition
+        each side into the stated number of equal lengths (folding or estimating), then draw the lines
+        and check that the parts are same-size squares.'
+    status: disputed
+- clause: via-iterate-units
+  all_of:
+  - node: multiplication.array.rows-columns
+    relation: definitional
+    points_to: statement
+    why: The statement is about rows and columns of squares, which is the row and column structure of
+      an array.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.compare.same-different
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 checks that all the squares are the same size by comparing them.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.name.prototype
+    relation: definitional
+    points_to: statement
+    why: Step 3 checks that every part is a square; naming typical upright squares is all that is needed.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: measurement.length.iterate-units
+    relation: procedural
+    points_to: procedure.1
+    why: The spacing of the lines is set by laying the small square end to end along a side, as in the
+      test item of 4 squares long and 3 tall.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Laying the small square end to end along a side is one way to set the spacing.
+        | other route: Divide each side into the stated number of equal lengths (partitioning.segment.equal-lengths)
+        without iterating the small square.'
+    status: disputed
+status: proposed

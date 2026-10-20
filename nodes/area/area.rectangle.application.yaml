@@ -1,0 +1,55 @@
+id: area.rectangle.application
+concept: area
+facet: multiplicative
+level: 2
+type: application
+name: Solve real-world problems about the area of a rectangle
+statement: A real-world story gives the whole-number side lengths of a rectangular surface and asks how
+  much area it covers; the learner multiplies the side lengths and answers in square units.
+assess: A rug is 6 feet long and 4 feet wide. How many square feet of floor does it cover?
+sources:
+  ccss:
+  - 3.MD.C.7.b
+  learning_components:
+  - aa837920
+requires:
+- clause: standard
+  all_of:
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: statement
+    why: The learner multiplies the length and width of the rug or surface to find its area.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.unit-square
+    relation: definitional
+    points_to: statement
+    why: The answer is given in square units such as square feet, the unit of area.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem multiplies 6 feet by 4 feet.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement does not fix the size of the sides; only the test problem restricts
+        the multiplication to the 6 x 4 recall range.'
+    status: proposed
+status: proposed

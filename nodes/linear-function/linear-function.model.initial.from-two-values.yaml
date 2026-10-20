@@ -34,7 +34,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: data.graphs.read
+  - node: data.table-graph.read-values
     relation: procedural
     points_to: procedure.1
     why: Reading the y-value at x = 0 from a table or graph uses reading values from graphs and tables.
@@ -49,6 +49,10 @@ requires:
     - kind: review
       source: DK
       note: 'A17 keep: Keep - Reading the initial value from a table or graph requires reading its values.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired data.graphs.read: Reading a y-value from a table or graph fits neither
+        candidate; a table-and-graph reading node is missing.'
     status: reviewed
   - node: linear-function.model.rate.from-two-values
     relation: procedural

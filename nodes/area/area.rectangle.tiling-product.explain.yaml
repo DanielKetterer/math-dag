@@ -1,0 +1,74 @@
+id: area.rectangle.tiling-product.explain
+concept: area
+facet: multiplicative
+level: 2
+type: justification
+name: Explain why tiling a rectangle and multiplying its sides give the same area
+statement: A rectangle a units by b units, tiled with unit squares, has a rows of b squares each, so the
+  count of squares is a x b; the area found by tiling equals the product of the side lengths.
+assess: This 4 by 6 rectangle is tiled with unit squares. Explain why counting the tiles gives the same
+  number as 4 x 6.
+sources:
+  ccss:
+  - 3.MD.C.7.a
+  learning_components:
+  - 0130a087
+requires:
+- clause: standard
+  all_of:
+  - node: area.rectangle.tiling
+    relation: definitional
+    points_to: statement
+    why: The explanation starts from the area found by tiling the rectangle with unit squares and counting
+      them.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.tiles-along-side
+    relation: justificatory
+    points_to: statement
+    why: Each row has b squares and there are a rows because the number of tiles along a side equals the
+      side length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: justificatory
+    points_to: statement
+    why: The count of squares is a rows of b squares each, which is a groups of b and so the product a
+      x b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.array.rows-columns
+    relation: definitional
+    points_to: statement
+    why: The tiled rectangle is an array of rows with equal numbers of squares in each row.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

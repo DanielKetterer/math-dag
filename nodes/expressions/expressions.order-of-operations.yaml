@@ -1,0 +1,89 @@
+id: expressions.order-of-operations
+concept: expressions
+facet: numerical
+level: 3
+type: concept
+name: The conventional order of operations
+statement: When an expression has no parentheses to say otherwise, multiplication and division are done
+  before addition and subtraction, and operations of the same kind are done from left to right.
+assess: Find 3 + 4 x 2 and 20 - 12 divided by 4 + 1.
+sources:
+  ccss:
+  - 3.OA.D.8
+  learning_components: []
+  other:
+  - CCSS 3.OA.D.8 footnote on the conventional order
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.parentheses
+    relation: definitional
+    points_to: statement
+    why: The convention applies when there are no parentheses to say otherwise, so the learner must know
+      that parentheses force a part to be done first.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The test evaluates 4 x 2, a product of one-digit numbers.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test evaluates 4 x 2.'
+    status: proposed
+  - node: division.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The test evaluates 12 divided by 4, a division fact.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test evaluates 12 divided by 4.'
+    status: proposed
+  - node: addition.within-20.fluency
+    relation: procedural
+    points_to: assess
+    why: The test adds 3 + 8 and 17 + 1, sums within 20.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test adds 3 + 8 and 17 + 1.'
+    status: proposed
+  - node: subtraction.within-20.fluency
+    relation: procedural
+    points_to: assess
+    why: The test subtracts 20 - 3, a difference within 20.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test subtracts 20 - 3.'
+    status: proposed
+status: proposed

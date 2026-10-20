@@ -1,0 +1,85 @@
+id: volume.application.prism
+concept: volume
+facet: unit-cubes
+level: 3
+type: application
+name: Solve real-world problems with rectangular prism volume formulas
+statement: Solve real-world problems that need the volume of a right rectangular prism with whole-number
+  edge lengths, using V = l x w x h or V = B x h.
+assess: A fish tank is 24 inches long, 12 inches wide, and 16 inches tall. How many cubic inches of water
+  does it hold when full?
+sources:
+  ccss:
+  - 5.MD.C.5.b
+  learning_components:
+  - b553c9aa
+  - 083e4a61
+requires:
+- clause: critic-route-1
+  note: Solve using V = l x w x h
+  all_of:
+  - node: multiplication.two-digit-by-two-digit
+    relation: procedural
+    points_to: assess
+    why: The fish tank problem multiplies 24 by 12 as part of the three-factor product.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Required only for the test problem''s 24 x 12 step (and it does not cover the
+        following three-digit by two-digit product); the statement does not fix factor sizes.'
+    status: proposed
+  - node: volume.prism.formula.lwh.apply
+    relation: procedural
+    points_to: statement
+    why: Many real-world problems find the volume with V = l x w x h from three given edge lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows either formula; B x h also solves problems that give edges
+        if the base area is computed from l x w. | other route: Use volume.prism.formula.base-height.apply,
+        finding the base area first when only edges are given.'
+    status: disputed
+- clause: critic-route-2
+  note: Solve using V = B x h
+  all_of:
+  - node: multiplication.two-digit-by-two-digit
+    relation: procedural
+    points_to: assess
+    why: The fish tank problem multiplies 24 by 12 as part of the three-factor product.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Required only for the test problem''s 24 x 12 step (and it does not cover the
+        following three-digit by two-digit product); the statement does not fix factor sizes.'
+    status: proposed
+  - node: volume.prism.formula.base-height.apply
+    relation: procedural
+    points_to: statement
+    why: Other real-world problems find the volume with V = B x h from a given base area and height.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows either formula; problems giving edge lengths can be solved
+        with V = l x w x h alone. | other route: Use volume.prism.formula.lwh.apply with the three edge
+        lengths.'
+    status: disputed
+related:
+- node: multiplication.multi-digit-by-two-digit
+  relation: common_path
+  note: 'Common path, not required: route ''via-apply'' needed everything another route needs and more,
+    so it was removed.'
+status: proposed

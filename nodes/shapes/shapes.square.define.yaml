@@ -1,0 +1,82 @@
+id: shapes.square.define
+concept: shapes
+facet: properties
+level: 2
+type: concept
+name: A square has four equal sides and four right angles
+statement: A square is a quadrilateral with four sides of the same length and four right angles, in any
+  orientation.
+assess: Which of these are squares? A has four sides of 4 cm and four right angles; B has four sides of
+  4 cm and no right angles; C has four right angles and sides 4, 6, 4, 6 cm; D is A turned to stand on
+  one corner.
+sources:
+  ccss:
+  - 3.G.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.quadrilateral.recognize
+    relation: definitional
+    points_to: statement
+    why: The definition names the square as a quadrilateral, the figure with exactly four straight sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.attribute.equal-sides
+    relation: definitional
+    points_to: statement
+    why: A square must have four sides of the same length, which is the equal-sides attribute.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.right.meaning
+    relation: definitional
+    points_to: statement
+    why: A square must have four right angles, so a right angle must be recognized as a square corner.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.attribute.non-defining
+    relation: definitional
+    points_to: statement
+    why: The statement says a square stays a square in any orientation, such as standing on a corner.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.attribute.defining
+    relation: definitional
+    points_to: statement
+    why: Test items B and C show that either condition alone fails, so the learner must treat both attributes
+      as defining and the others as not; rectangle.define and rhombus.define take this edge but square.define
+      does not.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

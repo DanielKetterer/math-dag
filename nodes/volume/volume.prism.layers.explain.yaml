@@ -1,0 +1,105 @@
+id: volume.prism.layers.explain
+concept: volume
+facet: unit-cubes
+level: 2
+type: justification
+name: Explain why packing, l x w x h, and B x h give the same volume
+statement: A right rectangular prism with whole-number edges l, w, h packed with unit cubes has h layers,
+  and each layer is an l by w array of l x w cubes, which is also the base area in square units; so counting
+  the cubes, l x w x h, and the base area times h give the same number.
+assess: This box is packed with unit cubes, 4 by 3 on the bottom and 5 layers high. Explain why counting
+  all the cubes, computing 4 x 3 x 5, and multiplying the area of the base by the height all give the
+  same volume.
+sources:
+  ccss:
+  - 5.MD.C.5.a
+  learning_components:
+  - 3d028b96
+requires:
+- clause: via-length-times-width
+  all_of:
+  - node: volume.packing
+    relation: justificatory
+    points_to: statement
+    why: The explanation counts the unit cubes that pack the box, and that count is the volume.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.three-factor-product
+    relation: justificatory
+    points_to: statement
+    why: The explanation shows the box as h layers of l by w cubes, so the number of cubes is l x w x
+      h.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: justificatory
+    points_to: statement
+    why: The explanation says l x w is also the base area in square units, which is the area of a rectangle
+      as length times width.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: That l x w is the base area can be shown by tiling the base with unit squares,
+        without the multiplication formula as a procedure. | other route: Use area.rectangle.tiling-product.explain
+        (tiling a rectangle and multiplying its sides give the same area) to show the base layer is l
+        x w squares.'
+    status: disputed
+- clause: critic-route-1
+  note: Base area as l x w shown by tiling the base with unit squares
+  all_of:
+  - node: volume.packing
+    relation: justificatory
+    points_to: statement
+    why: The explanation counts the unit cubes that pack the box, and that count is the volume.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.three-factor-product
+    relation: justificatory
+    points_to: statement
+    why: The explanation shows the box as h layers of l by w cubes, so the number of cubes is l x w x
+      h.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.tiling-product.explain
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Base area as l x w shown by tiling the base with unit
+      squares'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

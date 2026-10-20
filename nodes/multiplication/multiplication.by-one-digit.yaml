@@ -1,0 +1,77 @@
+id: multiplication.by-one-digit
+concept: multiplication
+facet: base-ten
+level: 3
+type: procedure
+name: Multiply a whole number by a one-digit number
+statement: Find the product of a whole number of up to four digits and a one-digit number, accurately,
+  by any reliable method; partial products, an area model with numbers, and the standard algorithm all
+  meet it.
+assess: Find 3 x 26 and 7 x 408. Use any method.
+sources:
+  ccss:
+  - 4.NBT.B.5
+  learning_components:
+  - 57a1b686
+  - 4e8bd7bf
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: statement
+    why: Every method multiplies single digits by the one-digit factor, as in 3 x 6 and 7 x 8 in the test
+      items.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-multiple-of-ten
+    relation: procedural
+    points_to: statement
+    why: Partial products, the area model and the standard algorithm all multiply the one-digit factor
+      by tens, hundreds and thousands, as with 7 x 400.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: procedural
+    points_to: assess
+    why: The test product 7 x 408 requires adding partial products such as 2800 and 56, a place-value
+      sum of the size of the add-within-1000 node.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test product 7 x 408 asks for adding partial products, and 2800 + 56
+        = 2856 is beyond 1000, so this node does not even cover it; a method-neutral multi-digit addition
+        is what the task uses.'
+    status: proposed
+  - node: place-value.expanded-form.multi-digit
+    relation: definitional
+    points_to: statement
+    why: Splitting a number of up to four digits into its place-value parts is the expanded form used
+      in partial products and area models.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

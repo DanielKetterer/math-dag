@@ -57,7 +57,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: addition.count-on
+  - node: addition.within-10
     relation: procedural
     points_to: procedure.1
     why: Steps one and two find the value of a sum on either side.
@@ -67,8 +67,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired addition.count-on: All sums in the test are within 10.'
     status: proposed
-  - node: subtraction.count-back
+  - node: subtraction.within-10
     relation: procedural
     points_to: procedure.1
     why: Steps one and two find the value of a difference on either side.
@@ -78,5 +81,9 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired subtraction.count-back: The differences in the test, 8 - 1 and 9
+        - 3, are within 10.'
     status: proposed
 status: proposed

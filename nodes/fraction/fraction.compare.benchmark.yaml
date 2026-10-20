@@ -20,7 +20,7 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: comparing.whole-numbers.magnitude
+  - node: comparing.whole-numbers.numerals-within-10
     relation: procedural
     points_to: procedure.2
     why: The test for the benchmark 1/2 decides which of the whole numbers 2 x a and b is greater.
@@ -38,6 +38,10 @@ requires:
       note: 'C12-split replace: Daniel C12 (fixes review): the edge needs deciding which whole number
         is greater, not the symbols; the boundary node is split into comparing.whole-numbers.magnitude
         and comparing.whole-numbers.symbols.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired comparing.whole-numbers.magnitude: The test compares 2 x 3 = 6 with
+        8 and 2 x 4 = 8 with 7, numerals within 10.'
     status: reviewed
   - node: fraction.as-number
     relation: definitional

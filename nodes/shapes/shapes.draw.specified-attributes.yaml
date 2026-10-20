@@ -1,0 +1,74 @@
+id: shapes.draw.specified-attributes
+concept: shapes
+facet: properties
+level: 2
+type: procedure
+name: Draw a shape with a given number of sides and angles
+statement: Draw a closed figure with straight sides that has a stated number of sides and angles.
+procedure:
+- Place as many dots as the stated number, spaced around an imaginary circle.
+- Join each dot to the next one around the circle with a straight line.
+- Join the last dot to the first, so the shape is closed with one angle at each dot.
+assess: Draw a shape that has exactly 5 sides and 5 angles.
+sources:
+  ccss:
+  - 2.G.A.1
+  learning_components:
+  - a0038c5e
+requires:
+- clause: standard
+  all_of:
+  - node: counting.produce-set
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 places as many dots as the stated number, which is counting out a set of a given size.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.closed-boundary
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 joins the last dot to the first so that the shape is closed.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.sides.count
+    relation: definitional
+    points_to: statement
+    why: The statement specifies a number of sides, so the learner must know what a side is and how sides
+      are counted.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.corners.count
+    relation: definitional
+    points_to: statement
+    why: The statement specifies a number of angles, found as the corners of the figure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

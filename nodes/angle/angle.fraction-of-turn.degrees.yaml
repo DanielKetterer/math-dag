@@ -1,0 +1,89 @@
+id: angle.fraction-of-turn.degrees
+concept: angle
+facet: measure
+level: 3
+type: procedure
+name: Find the degree measure of an angle from its fraction of a turn
+statement: An angle that turns through a/b of a full circle measures (a/b) x 360 degrees.
+procedure:
+- Identify the fraction a/b of the circle that the angle turns through.
+- Multiply a/b by 360.
+- Label the product in degrees.
+assess: An angle turns through 3/8 of a full circle. What is its measure in degrees?
+sources:
+  ccss:
+  - 4.MD.C.5.a
+  - 4.MD.C.5.b
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The statement gives the measure of the angle in degrees.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.measure.circle-fraction
+    relation: definitional
+    points_to: statement
+    why: The statement identifies the fraction a/b of a circle that the angle turns through.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.one-degree
+    relation: definitional
+    points_to: statement
+    why: The statement uses 360 degrees as the measure of a full circle, which comes from 360 one-degree
+      angles.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiply-whole.symbolic
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies the fraction a/b by 360.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: assess
+    why: The test problem 3/8 x 360 gives 1080/8, which is divided to get the degree measure.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Dividing 1080 by 8 is the test problem''s computation; the statement allows any
+        a/b.'
+    status: proposed
+status: proposed

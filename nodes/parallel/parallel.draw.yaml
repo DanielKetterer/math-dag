@@ -1,0 +1,62 @@
+id: parallel.draw
+concept: parallel
+facet: core
+level: 2
+type: procedure
+name: Draw a line parallel to a given line
+statement: Draw a line through a given point, not on a given line, that is parallel to the given line.
+procedure:
+- Slide a square corner along the given line, one edge on the line, until its other edge passes through
+  the point; draw along that edge.
+- At the point, draw a line perpendicular to the line just drawn.
+- The second line is parallel to the given line, because two lines perpendicular to the same line never
+  meet.
+assess: Draw a line through point P that is parallel to line m.
+sources:
+  ccss:
+  - 4.G.A.1
+  learning_components:
+  - 70453a52
+requires:
+- clause: standard
+  all_of:
+  - node: parallel.meaning
+    relation: definitional
+    points_to: statement
+    why: The drawn line must satisfy the definition of never meeting the given line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.right.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 slides a square corner along the line to draw a line at right angles to it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: perpendicular.draw
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 draws a line perpendicular, through the point, to the line drawn in step 1.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,62 @@
+id: subtraction.within-10
+concept: subtraction
+facet: operation
+level: 1
+type: procedure
+name: Find a difference within 10
+statement: 'Find a - b for whole numbers with b no greater than a and a at most 10, by any reliable method:
+  taking objects away and counting the rest, counting back, counting up, or a known fact.'
+assess: What is 9 - 4? Show or tell how you know.
+sources:
+  ccss:
+  - K.OA.A.2
+  learning_components:
+  - 5c48ad41
+requires:
+- clause: standard
+  all_of:
+  - node: subtraction.take-away.describe
+    relation: definitional
+    points_to: statement
+    why: A difference within 10 is what remains after taking away, whether found by taking objects away,
+      counting back or a known fact, so the taking-away meaning must already be in words and numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: A learner can take 4 from 9 objects and count the rest without narrating the action,
+        yet the difference needs the taking-away meaning of subtraction to be in place somewhere in the
+        map.'
+    status: disputed
+  - node: subtraction.notation.expression
+    relation: representational
+    points_to: assess
+    why: The test problem is written as 9 - 4, so the learner must read the subtraction expression with
+      its minus sign.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem is written with a minus sign; the statement just asks for
+        a difference by any method.'
+    status: proposed
+  - node: counting.objects
+    relation: procedural
+    points_to: statement
+    why: Every method named, from taking objects away to counting back, finds the result by counting what
+      remains.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

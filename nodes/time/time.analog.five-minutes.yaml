@@ -1,0 +1,54 @@
+id: time.analog.five-minutes
+concept: time
+facet: clock
+level: 2
+type: procedure
+name: Tell time to the nearest five minutes on an analog clock
+statement: 'Read an analog clock to the nearest five minutes: the hour is the number the hour hand has
+  most recently passed, and the minutes past the hour are found by counting by fives from 12 to the number
+  nearest the minute hand.'
+procedure:
+- Find the number the hour hand has most recently passed; that is the hour.
+- Find the number nearest the minute hand.
+- Count by fives from 12 around to that number to get the minutes past the hour.
+- Say or write the hour and the minutes.
+assess: On this clock the long hand points to 7 and the short hand is a little past 4. What time is it?
+sources:
+  ccss:
+  - 2.MD.C.7
+  learning_components:
+  - 9af7bd3c
+  - f14f23e9
+  - f25112a6
+requires:
+- clause: standard
+  all_of:
+  - node: time.analog.half-hour
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 takes the hour from the number the hour hand has most recently passed, the reading first
+      met with the half hour.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.skip.fives
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 counts by fives from 12 around the face to the number nearest the minute hand to get the
+      minutes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

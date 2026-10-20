@@ -1,0 +1,96 @@
+id: measurement.application.money
+concept: measurement
+facet: quantity
+level: 2
+type: application
+name: Solve word problems with money in dollars and cents
+statement: Solve word problems about money in which amounts are written in dollars and cents with decimal
+  notation.
+assess: A notebook costs $2.75 and a pen costs $1.40. How much do they cost together?
+sources:
+  ccss:
+  - 4.MD.A.2
+  learning_components:
+  - 9432b8e1
+  - 2abe1331
+requires:
+- clause: via-within-1000
+  all_of:
+  - node: money.notation
+    relation: representational
+    points_to: statement
+    why: Amounts are written in dollars and cents with the dollar sign, so money notation must be understood.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: procedural
+    points_to: statement
+    why: Combining amounts such as $2.75 and $1.40 is a whole-number sum when the amounts are counted
+      in cents.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Counting amounts in cents turns the sum into a whole-number sum, but decimal
+        addition of dollar amounts is a distinct way in. | other route: Add the amounts as decimals to
+        hundredths using decimal.addition.model, without converting to cents.'
+    status: disputed
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: statement
+    why: Finding change or a difference between amounts is a whole-number subtraction when the amounts
+      are counted in cents.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Subtracting in cents is a whole-number difference, but subtracting decimals to
+        hundredths is a distinct way in. | other route: Subtract the amounts as decimals to hundredths
+        using decimal.subtraction.model.'
+    status: disputed
+- clause: critic-route-2
+  note: Work with decimals to hundredths directly
+  all_of:
+  - node: money.notation
+    relation: representational
+    points_to: statement
+    why: Amounts are written in dollars and cents with the dollar sign, so money notation must be understood.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.addition.model
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Work with decimals to hundredths directly'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: decimal.subtraction.model
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Work with decimals to hundredths directly'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

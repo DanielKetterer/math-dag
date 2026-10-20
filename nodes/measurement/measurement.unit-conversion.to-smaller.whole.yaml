@@ -1,0 +1,63 @@
+id: measurement.unit-conversion.to-smaller.whole
+concept: measurement
+facet: unit-conversion
+level: 3
+type: procedure
+name: Convert a whole-number measurement to a smaller unit
+statement: A measurement of n larger units, with n a whole number and 1 larger unit = k smaller units,
+  equals n x k smaller units.
+procedure:
+- Find k, the number of smaller units in 1 larger unit.
+- Multiply the number of larger units by k.
+- Label the product with the smaller unit.
+assess: Write 7 kg in grams. (1 kg = 1000 g)
+sources:
+  ccss:
+  - 4.MD.A.1
+  learning_components:
+  - da70f59c
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.unit-conversion.multiplicative-relation
+    relation: definitional
+    points_to: statement
+    why: The statement n x k smaller units is the multiplicative relation between the counts of larger
+      and smaller units, written as a rule.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies the whole number of larger units by k, a whole-number product of the kind found
+      with one-digit factors.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-multiple-of-ten
+    relation: procedural
+    points_to: assess
+    why: The test problem 7 kg to grams is 7 x 1000, a one-digit number times a multiple of 1000.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: 7 x 1000 is the test problem''s computation; the statement covers any k and any
+        whole n.'
+    status: proposed
+status: proposed

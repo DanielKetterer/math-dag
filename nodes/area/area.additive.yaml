@@ -1,0 +1,104 @@
+id: area.additive
+concept: area
+facet: additive
+level: 2
+type: concept
+name: Area is additive
+statement: When a figure is made of parts that do not overlap, its area is the sum of the areas of the
+  parts.
+assess: A figure is cut into two pieces that do not overlap. One piece has an area of 12 square units
+  and the other 9 square units. Without measuring, what is the area of the whole figure?
+sources:
+  ccss:
+  - 3.MD.C.7.d
+  learning_components: []
+requires:
+- clause: via-combine
+  all_of:
+  - node: area.covering.meaning
+    relation: definitional
+    points_to: statement
+    why: Area counts the unit squares that cover a figure, so covering the parts covers the whole figure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem finds the whole figure's area by adding the part areas 12 and 9.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement fixes no number range; only the test problem needs a sum within
+        100 (12 + 9).'
+    status: proposed
+  - node: shapes.compose.combine
+    relation: definitional
+    points_to: statement
+    why: The figure is made by putting non-overlapping parts together into one larger figure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The part-whole relation between a figure and non-overlapping parts can be met
+        by putting parts together or by cutting a figure into parts; either gives the picture of a whole
+        made of parts. | other route: Cut a figure into non-overlapping pieces (shapes.decompose.simple)
+        instead of building it from parts.'
+    status: disputed
+- clause: via-simple
+  all_of:
+  - node: area.covering.meaning
+    relation: definitional
+    points_to: statement
+    why: Area counts the unit squares that cover a figure, so covering the parts covers the whole figure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem finds the whole figure's area by adding the part areas 12 and 9.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement fixes no number range; only the test problem needs a sum within
+        100 (12 + 9).'
+    status: proposed
+  - node: shapes.decompose.simple
+    relation: definitional
+    points_to: statement
+    why: The statement concerns a figure made of parts that do not overlap, a figure cut into pieces.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The part-whole relation between a figure and non-overlapping parts can be met
+        by cutting a figure into pieces or by putting parts together; either gives the picture of a whole
+        made of parts. | other route: Put non-overlapping parts together into a larger figure (shapes.compose.combine)
+        instead of cutting a figure apart.'
+    status: disputed
+status: proposed

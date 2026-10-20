@@ -1,0 +1,45 @@
+id: perimeter.rectangle.application
+concept: perimeter
+facet: core
+level: 2
+type: application
+name: Solve real-world perimeter problems about rectangles
+statement: A real-world story gives the length and width of a rectangular object and asks for the length
+  around it.
+assess: A picture frame is a rectangle 12 inches long and 8 inches wide. How many inches of ribbon go
+  once around its edge?
+sources:
+  ccss:
+  - 3.MD.D.8
+  learning_components:
+  - e1067102
+requires:
+- clause: standard
+  all_of:
+  - node: perimeter.rectangle.from-length-width
+    relation: procedural
+    points_to: statement
+    why: The learner finds the length around the frame by adding two lengths and two widths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem adds 12, 8, 12, and 8.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement fixes no number range; only the test problem needs the sum 12 +
+        8 + 12 + 8 within 100.'
+    status: proposed
+status: proposed

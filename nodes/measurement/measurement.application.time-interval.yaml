@@ -1,0 +1,160 @@
+id: measurement.application.time-interval
+concept: measurement
+facet: time
+level: 2
+type: application
+name: Solve word problems about time intervals that cross the hour
+statement: Solve one- and two-step word problems that find a start time, end time, or elapsed time in
+  hours and minutes, where the interval may cross an hour.
+assess: Ana leaves home at 2:50 pm. The bus ride takes 25 minutes and the walk after it takes 15 minutes.
+  What time does she arrive?
+sources:
+  ccss:
+  - 4.MD.A.2
+  learning_components:
+  - ef9f46a3
+  - 2abe1331
+requires:
+- clause: via-multistep
+  all_of:
+  - node: measurement.time.elapsed.across-hour
+    relation: definitional
+    points_to: statement
+    why: The statement includes intervals that cross the hour, and elapsed time across the start of an
+      hour is that skill.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.time.application.addition
+    relation: definitional
+    points_to: statement
+    why: Finding an end time from a start time adds an interval in minutes, which the single-step addition
+      problems introduce.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.time.application.subtraction
+    relation: definitional
+    points_to: statement
+    why: Finding a start time from an end time subtracts an interval in minutes, which the single-step
+      subtraction problems introduce.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.time.units
+    relation: definitional
+    points_to: statement
+    why: Crossing the hour and writing times in hours and minutes uses that 1 hr = 60 min.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: operations.application.multistep
+    relation: definitional
+    points_to: statement
+    why: The statement asks for two-step word problems, so combining two sequential steps in a story must
+      be understood.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The target''s two steps are additions and subtractions of time; the general four-operation
+        two-step skill is not needed if two-step add/subtract stories are known. | other route: Use addition.application.two-step
+        (two-step addition and subtraction story problems) in place of operations.application.multistep.'
+    status: disputed
+- clause: critic-route-1
+  note: Two steps handled as a two-step add/subtract story rather than the general four-operation two-step
+    skill
+  all_of:
+  - node: measurement.time.elapsed.across-hour
+    relation: definitional
+    points_to: statement
+    why: The statement includes intervals that cross the hour, and elapsed time across the start of an
+      hour is that skill.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.time.application.addition
+    relation: definitional
+    points_to: statement
+    why: Finding an end time from a start time adds an interval in minutes, which the single-step addition
+      problems introduce.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.time.application.subtraction
+    relation: definitional
+    points_to: statement
+    why: Finding a start time from an end time subtracts an interval in minutes, which the single-step
+      subtraction problems introduce.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.time.units
+    relation: definitional
+    points_to: statement
+    why: Crossing the hour and writing times in hours and minutes uses that 1 hr = 60 min.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.two-step
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Two steps handled as a two-step add/subtract story
+      rather than the general four-operation two-step skill'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

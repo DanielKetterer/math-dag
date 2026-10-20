@@ -30,7 +30,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: addition.make-ten
+  - node: addition.within-20
     relation: procedural
     points_to: assess
     why: Adding 4, 7, and 6 passes 10 in one step, so a sum across 10 must be found.
@@ -42,5 +42,9 @@ requires:
       source: critic-sonnet
       note: 'task-only: Only the test numbers cross 10; the statement (total of three amounts) does not
         need a make-ten strategy, and any method of adding works.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired addition.make-ten: 4 + 7 + 6 needs sums past 10 by any method and
+        no method-neutral add-within-20 candidate exists.'
     status: proposed
 status: proposed

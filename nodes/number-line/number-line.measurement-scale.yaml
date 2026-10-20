@@ -1,0 +1,84 @@
+id: number-line.measurement-scale
+concept: number-line
+facet: measurement-scale
+level: 2
+type: representation
+name: Represent a measurement on a number line with a measurement scale
+statement: A measurement is shown on a number line whose marks are labeled in a unit of measure as the
+  point that many units from 0, reading the size of the interval between marks when the marks are not
+  one unit apart.
+assess: A number line runs from 0 mL to 1000 mL, labeled only at 0 and 1000, with a mark every 100 mL.
+  Mark 700 mL.
+sources:
+  ccss:
+  - 4.MD.A.2
+  learning_components:
+  - a05de981
+requires:
+- clause: via-whole-number-lengths
+  all_of:
+  - node: counting.skip.hundreds
+    relation: procedural
+    points_to: assess
+    why: Marking 700 mL on a scale with a mark every 100 mL is done by counting marks by hundreds from
+      0.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Counting by hundreds is used only because the test scale has marks every 100;
+        the statement allows any interval size.'
+    status: proposed
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: statement
+    why: A measurement is shown as the point that many units from 0, which is the whole-number-as-length
+      number line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The number-line representation of a number as distance from 0 supports a measurement
+        scale, but a learner who reads units from 0 on a ruler can generalize to other scales. | other
+        route: Start from measurement.length.ruler.from-zero and extend the same reading to a number line
+        labeled in other units.'
+    status: disputed
+- clause: via-from-zero
+  all_of:
+  - node: counting.skip.hundreds
+    relation: procedural
+    points_to: assess
+    why: Marking 700 mL on a scale with a mark every 100 mL is done by counting marks by hundreds from
+      0.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Counting by hundreds is used only because the test scale has marks every 100;
+        the statement allows any interval size.'
+    status: proposed
+  - node: measurement.length.ruler.from-zero
+    relation: definitional
+    points_to: statement
+    why: Reading a labeled scale as units counted from the 0 mark is the same idea as reading a ruler.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A ruler is a physical number line and reading units from 0 is the same idea,
+        so ruler experience can lead into a labeled measurement scale. | other route: Start from number-line.whole-number-lengths
+        (whole numbers as lengths from 0 on an abstract number line) and apply it to a labeled scale.'
+    status: disputed
+status: proposed

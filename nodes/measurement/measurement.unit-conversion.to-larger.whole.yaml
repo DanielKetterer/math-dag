@@ -1,0 +1,103 @@
+id: measurement.unit-conversion.to-larger.whole
+concept: measurement
+facet: unit-conversion
+level: 3
+type: procedure
+name: Convert a measurement to a larger unit with a whole-number result
+statement: When 1 larger unit = k smaller units and n is a multiple of k, n smaller units equal n divided
+  by k larger units.
+procedure:
+- Find k, the number of smaller units in 1 larger unit.
+- Divide the number of smaller units by k.
+- Label the quotient with the larger unit.
+assess: Write 72 inches in feet. (1 ft = 12 in)
+sources:
+  ccss:
+  - 5.MD.A.1
+  learning_components:
+  - 0c81b764
+requires:
+- clause: via-multiplicative-relation
+  all_of:
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides the number of smaller units by k with no remainder, a whole-number quotient.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-two-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides the number of smaller units by k, which is often two-digit such as 72 divided
+      by 12.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.unit-conversion.multiplicative-relation
+    relation: justificatory
+    points_to: statement
+    why: Dividing n by k is justified by the relation that the smaller-unit count is k times the larger-unit
+      count.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The multiplicative relation explains why dividing converts to the larger unit,
+        but the grouping meaning of division (e601) explains it without that concept. | other route: Read
+        n divided by k as the number of groups of k smaller units in n, each group being one larger unit
+        (division.measurement.meaning).'
+    status: disputed
+- clause: via-meaning
+  all_of:
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides the number of smaller units by k with no remainder, a whole-number quotient.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-two-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides the number of smaller units by k, which is often two-digit such as 72 divided
+      by 12.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.measurement.meaning
+    relation: definitional
+    points_to: statement
+    why: The result n divided by k counts how many groups of k smaller units make up the n smaller units.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Division read as ''how many groups of k'' justifies dividing n by k, but the
+        relation n = k x q (e602) with division as finding the unknown factor justifies it equally. |
+        other route: Use the multiplicative relation (smaller-unit count is k times the larger-unit count)
+        and solve n = k x q for q, instead of reading the quotient as a count of groups.'
+    status: disputed
+status: proposed

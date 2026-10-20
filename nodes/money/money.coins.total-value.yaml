@@ -1,0 +1,88 @@
+id: money.coins.total-value
+concept: money
+facet: core
+level: 2
+type: procedure
+name: Find the total value of a collection of coins
+statement: The total value of a collection of coins, less than 100 cents, is the sum of the values of
+  its coins, found most easily by counting on from the coins of greatest value.
+procedure:
+- Sort the coins by kind, from greatest value to least.
+- 'Start at the value of the first coin and count on by each coin''s value: by 25s for quarters, 10s for
+  dimes, 5s for nickels, 1s for pennies.'
+- The last number said is the total in cents.
+assess: What is the total value of 1 quarter, 2 dimes, 1 nickel and 3 pennies?
+sources:
+  ccss:
+  - 2.MD.C.8
+  learning_components:
+  - 329aa819
+requires:
+- clause: standard
+  all_of:
+  - node: money.coins.value
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 starts at the value of the first coin and counts on by each coin's value, so each coin's
+      cents must be known.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.skip.tens.from-any
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 counts on by tens for dimes from a number that is not a multiple of ten, such as 25.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.skip.fives
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 counts on by fives for nickels, for example from 45 to 50.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.sequence.count-on
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 counts on by ones for pennies from the running total, for example from 50 to 51, 52, 53.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.skip.twenty-fives
+    relation: procedural
+    points_to: procedure.2
+    why: Quarters are counted on by 25s, a skip count not found elsewhere in the map.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'necessary: Required by step 2 for quarters. Note counting.skip.twenty-fives is not in index.txt
+        or the boundary list, so the node has to be created or the edge re-pointed.'
+    status: proposed
+status: proposed

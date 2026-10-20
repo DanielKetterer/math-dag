@@ -1,0 +1,59 @@
+id: data.bar-graph.scaled.read
+concept: data
+facet: bar-graph
+level: 2
+type: representation
+name: Read a value from a scaled bar graph
+statement: The value of a category in a bar graph whose axis counts by a scale other than 1 is the number
+  on the value axis where its bar ends, found from the scale when the bar ends between labeled marks.
+assess: A bar graph's value axis is labeled 0, 10, 20, 30, 40. The bar for soccer ends halfway between
+  20 and 30. How many students chose soccer?
+sources:
+  ccss:
+  - 3.MD.B.3
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: data.bar-graph.read
+    relation: representational
+    points_to: statement
+    why: The value of a category is read from where its bar ends against the value axis, as in a single-unit
+      bar graph.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: statement
+    why: The size of the scale is found from the difference between two neighboring labeled marks on the
+      value axis.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number.halfway-between
+    relation: definitional
+    points_to: assess
+    why: The statement covers a bar ending between labeled marks, such as halfway between 20 and 30.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement says only that a bar between labeled marks is read from the scale;
+        only the test problem puts the bar exactly halfway between 20 and 30.'
+    status: proposed
+status: proposed

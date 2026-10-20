@@ -28,7 +28,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: expressions.grouping.evaluate
+  - node: expressions.parentheses
     relation: representational
     points_to: statement
     why: The statement treats a parenthesized sum as one quantity A, which is the meaning of grouping
@@ -41,5 +41,9 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired expressions.grouping.evaluate: Only the meaning of parentheses as
+        one quantity is used, with no evaluating.'
     status: proposed
 status: proposed

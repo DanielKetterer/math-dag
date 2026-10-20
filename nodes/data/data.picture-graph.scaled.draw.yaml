@@ -1,0 +1,78 @@
+id: data.picture-graph.scaled.draw
+concept: data
+facet: picture-graph
+level: 2
+type: representation
+name: Draw a scaled picture graph
+statement: Represent a data set with several categories as a picture graph in which each picture stands
+  for a stated number of data points (a scale of 2, 5, or 10), using counts that are multiples of the
+  scale.
+procedure:
+- Write the scale in a key, such as one picture = 5 pets.
+- For each category, find how many groups of the scale make its count.
+- Draw that many pictures in the category's row.
+assess: 'Pets: dogs 10, cats 6, fish 4, birds 8. Draw a picture graph in which each picture stands for
+  2 pets.'
+sources:
+  ccss:
+  - 3.MD.B.3
+  learning_components:
+  - 78884bdd
+  - 113eb6e8
+  - fbe0d923
+requires:
+- clause: standard
+  all_of:
+  - node: data.picture-graph.draw
+    relation: representational
+    points_to: statement
+    why: The scaled graph is a picture graph with one row of pictures per category, now with each picture
+      standing for several.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.measurement.meaning
+    relation: definitional
+    points_to: procedure.2
+    why: Step 2 asks how many groups of the scale make a category's count, a quotient read as a number
+      of equal groups.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.facts.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds the number of pictures by dividing a count such as 10 by the scale such as 2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: One picture stands for a group of data points, so the count is a number of equal groups.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

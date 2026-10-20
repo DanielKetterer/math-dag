@@ -1,0 +1,122 @@
+id: shapes.quadrilateral.hierarchy
+concept: shapes
+facet: category
+level: 3
+type: concept
+name: The hierarchy of quadrilateral categories
+statement: 'The quadrilateral categories are nested by inclusion: every square is both a rectangle and
+  a rhombus, every rectangle and every rhombus is a parallelogram, every parallelogram is a trapezoid,
+  and every trapezoid is a quadrilateral.'
+assess: 'True or false, with a reason from the definitions: every square is a rhombus; every rhombus is
+  a square; every rectangle is a parallelogram.'
+sources:
+  ccss:
+  - 5.G.B.4
+  learning_components:
+  - 175a45df
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.rectangle.define
+    relation: definitional
+    points_to: statement
+    why: Inclusion of the square and the rectangle in other categories is shown from the definition of
+      a rectangle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.rhombus.define
+    relation: definitional
+    points_to: statement
+    why: Inclusion of the square and the rhombus in other categories is shown from the definition of a
+      rhombus.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.square.define
+    relation: definitional
+    points_to: statement
+    why: Every square is both a rectangle and a rhombus because its definition contains both sets of conditions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.quadrilateral.parallel-sides.define
+    relation: definitional
+    points_to: statement
+    why: Rectangles and rhombuses are parallelograms, and parallelograms trapezoids, by the parallel-sides
+      definitions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.category.defined-by-attribute
+    relation: definitional
+    points_to: statement
+    why: Nesting by inclusion means each smaller category is the set of shapes with the extra defining
+      attributes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: perpendicular.meaning
+    relation: justificatory
+    points_to: statement
+    why: A rectangle's opposite sides are parallel because adjacent sides are perpendicular to the same
+      line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.quadrilateral.subcategories-included
+    relation: definitional
+    points_to: statement
+    why: The hierarchy extends the idea that a shape keeps its specific name while belonging to a larger
+      quadrilateral category; it is the level 2 base of the nesting.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: parallel.perpendicular-to-same-line
+    relation: definitional
+    points_to: statement
+    why: Justifying that a rectangle is a parallelogram from its definition uses the fact that two lines
+      perpendicular to the same line never meet. That fact appears only inside the parallel.draw procedure
+      and has no node of its own.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -32,7 +32,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: division.partial-quotients.one-digit-divisor.remainder
+  - node: division.by-one-digit.remainder
     relation: procedural
     points_to: statement
     why: The problem includes a division with a remainder, so the quotient and remainder must be found.
@@ -44,6 +44,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired division.partial-quotients.one-digit-divisor.remainder: 78 divided
+        by 8 with a remainder, by any method.'
     status: proposed
   - node: multiplication.by-one-digit
     relation: procedural

@@ -1,0 +1,50 @@
+id: area.rectangle.length-times-width
+concept: area
+facet: multiplicative
+level: 3
+type: procedure
+name: Find the area of a rectangle by multiplying side lengths
+statement: The area of a rectangle with whole-number side lengths a and b units is a x b square units,
+  found by multiplying the side lengths without tiling or counting.
+assess: A rectangle is 7 cm long and 9 cm wide, with no grid shown. What is its area?
+sources:
+  ccss:
+  - 3.MD.C.7.b
+  learning_components:
+  - b0653180
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: statement
+    why: The learner multiplies the two side lengths, such as 7 times 9, to get the area.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.unit-square
+    relation: definitional
+    points_to: statement
+    why: The result is stated in square units, so the unit of area is used directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: area.covering.meaning
+    relation: definitional
+    points_to: statement
+    why: The rule computes the area, the number of unit squares that cover the rectangle; without that
+      meaning the product is not an area.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

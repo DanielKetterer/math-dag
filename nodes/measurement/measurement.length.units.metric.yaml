@@ -1,0 +1,43 @@
+id: measurement.length.units.metric
+concept: measurement
+facet: length
+level: 3
+type: fact
+name: Relative sizes of metric length units
+statement: Know that 1 km = 1000 m and 1 m = 100 cm, so a kilometer is 1000 times as long as a meter and
+  a meter is 100 times as long as a centimeter.
+assess: 'Without computing: how many meters are in 1 kilometer? How many centimeters are in 1 meter? Which
+  is longer, 1 m or 1 cm?'
+sources:
+  ccss:
+  - 4.MD.A.1
+  learning_components:
+  - 07e8b8c4
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.comparison
+    relation: definitional
+    points_to: statement
+    why: The statement says a kilometer is 1000 times as long as a meter, which is a multiplicative comparison
+      of two lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.attribute
+    relation: definitional
+    points_to: statement
+    why: The assess asks 'which is longer'; with benchmarks only a scaffold, length as an attribute is
+      the needed base.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

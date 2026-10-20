@@ -16,7 +16,7 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: addition.add-to.fingers
+  - node: addition.within-10
     relation: procedural
     points_to: assess
     why: Deciding whether 3 + 4 = 7 + 2 requires finding the value of each sum, which can be done on fingers.
@@ -32,6 +32,10 @@ requires:
       source: DK
       note: 'F95, D65, D66 set_routes: Daniel F95: drop the via-symbols route (it made a cycle with comparing.whole-numbers.symbols);
         keep the same-number route.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired addition.add-to.fingers: 3 + 4 and 7 + 2 are sums within 10 by any
+        method.'
     status: reviewed
   - node: addition.notation.expression
     relation: representational
@@ -44,23 +48,6 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    - kind: review
-      source: DK
-      note: 'F95, D65, D66 set_routes: Daniel F95: drop the via-symbols route (it made a cycle with comparing.whole-numbers.symbols);
-        keep the same-number route.'
-    status: reviewed
-  - node: addition.count-on
-    relation: procedural
-    points_to: assess
-    why: The test problem needs the values of 3 + 4 and 7 + 2 to see whether they are equal.
-    scope: task
-    evidence:
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'task-only: Only the test problem needs the values of the two sums; counting on is one way
-        to get them.'
     - kind: review
       source: DK
       note: 'F95, D65, D66 set_routes: Daniel F95: drop the via-symbols route (it made a cycle with comparing.whole-numbers.symbols);

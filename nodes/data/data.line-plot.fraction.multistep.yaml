@@ -1,0 +1,106 @@
+id: data.line-plot.fraction.multistep
+concept: data
+facet: line-plot
+level: 3
+type: application
+name: Solve multi-step fraction problems from a line plot
+statement: Solve multi-step problems that combine data read from a fraction line plot using fraction addition,
+  subtraction, multiplication, or division, such as finding an equal redistribution of a total.
+assess: A line plot shows the liquid in 6 identical beakers, in liters, with Xs at 1/4, 1/2, 1/2, 3/4,
+  1, and 1. If all the liquid were poured together and shared equally among the 6 beakers, how much would
+  each beaker hold?
+sources:
+  ccss:
+  - 5.MD.B.2
+  learning_components:
+  - fcae5c49
+requires:
+- clause: standard
+  all_of:
+  - node: data.line-plot.fraction.add-subtract
+    relation: definitional
+    points_to: statement
+    why: Reading a fraction line plot and combining its values by addition is the first part of each multi-step
+      problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.unlike-denominators
+    relation: procedural
+    points_to: assess
+    why: Totaling 1/4, 1/2 and 3/4 in the test problem adds fractions with unlike denominators.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test problem adds 1/4, 1/2 and 3/4, which are unlike denominators; the statement
+        does not require unlike-denominator addition when values are read on one common scale.'
+    status: proposed
+  - node: fraction.subtraction.unlike-denominators
+    relation: procedural
+    points_to: statement
+    why: The statement includes subtraction of fractions read from the plot, with denominators that may
+      differ.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Neither the statement nor the test problem fixes whether subtracted values come
+        with different denominators; on one shared scale like-denominator subtraction would do.'
+    status: disputed
+  - node: fraction.multiplication.symbolic
+    relation: procedural
+    points_to: statement
+    why: The statement includes multiplication of fractions read from the plot.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.nonunit-fraction-by-whole
+    relation: procedural
+    points_to: statement
+    why: Sharing a total equally among the beakers divides a fraction by a whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.quotient.symbolic
+    relation: definitional
+    points_to: assess
+    why: The test problem total is a whole number, shared among 6 beakers, so a divided by b equals a/b
+      gives the share.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test problem''s total is a whole number shared among 6, giving a/b; the statement''s
+        division is covered by the fraction-by-whole division edge.'
+    status: proposed
+status: proposed

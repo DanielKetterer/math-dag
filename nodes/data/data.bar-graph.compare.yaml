@@ -1,0 +1,70 @@
+id: data.bar-graph.compare
+concept: data
+facet: categorical
+level: 2
+type: application
+name: Solve compare problems using a bar graph
+statement: A one-step compare problem asks how many more or fewer are in one category than another in
+  a bar graph with a single-unit scale; the learner reads both counts and finds the difference.
+assess: A bar graph with a scale by ones shows Red 7, Blue 5 and Green 9. How many more children chose
+  green than blue?
+sources:
+  ccss:
+  - 2.MD.D.10
+  learning_components:
+  - d1013e8f
+requires:
+- clause: standard
+  all_of:
+  - node: data.bar-graph.read
+    relation: procedural
+    points_to: statement
+    why: The learner reads both category counts from the bars before finding the difference.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.application.compare.difference-unknown
+    relation: definitional
+    points_to: statement
+    why: How many more or fewer is a compare situation whose answer is the difference of the two counts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: statement
+    why: The difference of the two read counts, such as 9 minus 5, is found by any subtraction method.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Whether the method-neutral within-100 node is needed depends on how large the
+        counts get; sibling bar-graph nodes use scales to 10, which within-10 would cover.'
+    status: disputed
+  - node: subtraction.within-10
+    relation: procedural
+    points_to: assess
+    why: Both counts lie on a scale up to 10, so their difference is a subtraction within 10.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement sets no range for the counts, and only the test (9 - 5) fixes a
+        difference within 10.'
+    status: proposed
+status: proposed

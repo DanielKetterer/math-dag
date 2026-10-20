@@ -1,0 +1,86 @@
+id: symmetry.line.draw
+concept: symmetry
+facet: line
+level: 2
+type: procedure
+name: Draw all lines of symmetry of a figure
+statement: Find and draw every line of symmetry of a two-dimensional figure; for a polygon the candidate
+  lines can be listed in full.
+procedure:
+- List the candidate lines. For a polygon, every line of symmetry passes through two points that are each
+  a vertex or the midpoint of a side, so the candidates are the lines through two such points.
+- For each candidate, check whether folding along it makes the two parts match exactly.
+- Draw every candidate that passes, and no others.
+assess: Draw every line of symmetry of this rectangle that is not a square.
+sources:
+  ccss:
+  - 4.G.A.3
+  learning_components:
+  - f67e0d53
+requires:
+- clause: standard
+  all_of:
+  - node: symmetry.line.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure lists candidate lines and checks each one against the definition of a line of symmetry.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: point.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 picks out vertices and midpoints of sides as points through which candidate lines pass.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: partitioning.segment.equal-lengths
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 requires locating the midpoint of each side, which splits the side into two equal lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: line.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 forms candidate lines through two points and step 3 draws the lines that pass.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: segment.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 uses the sides of a polygon, which are segments, to find their midpoints.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

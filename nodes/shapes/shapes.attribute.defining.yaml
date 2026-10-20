@@ -1,0 +1,85 @@
+id: shapes.attribute.defining
+concept: shapes
+facet: properties
+level: 2
+type: concept
+name: Defining attributes of a named shape
+statement: A defining attribute is a feature every example of a shape must have; together they decide
+  the shape's name. A triangle is closed with three straight sides; a rectangle is closed with four straight
+  sides and four square corners; a square is a rectangle whose four sides are equal; a hexagon is closed
+  with six straight sides.
+assess: Tell what every rectangle must have, whatever its size or color.
+sources:
+  ccss:
+  - 1.G.A.1
+  learning_components:
+  - eb8d0c94
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.sides.count
+    relation: definitional
+    points_to: statement
+    why: The listed defining attributes include three, four and six straight sides, which are stated by
+      counting the sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.closed-boundary
+    relation: definitional
+    points_to: statement
+    why: Every defining attribute list begins with the figure being closed, the closed boundary with no
+      gap.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.attribute.equal-sides
+    relation: definitional
+    points_to: statement
+    why: A square is defined as a rectangle whose four sides are equal, which uses the equal-sides attribute.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.corners.count
+    relation: definitional
+    points_to: statement
+    why: The rectangle is defined by having four corners, and the square corners need corners identified
+      first.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.square-corner
+    relation: definitional
+    points_to: statement
+    why: A rectangle is defined as having four square corners, so a square corner must be recognized.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The idea of a square corner is genuinely used (a rectangle has four square corners),
+        but shapes.square-corner is not a node in the map index.'
+    status: disputed
+status: proposed

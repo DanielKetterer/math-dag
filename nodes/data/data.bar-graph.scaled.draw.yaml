@@ -1,0 +1,92 @@
+id: data.bar-graph.scaled.draw
+concept: data
+facet: bar-graph
+level: 2
+type: representation
+name: Draw a scaled bar graph
+statement: Represent a data set with several categories as a bar graph with a title, labeled axes, and
+  a value axis marked in equal steps of a stated scale (such as 2, 5, or 10), each bar ending at its category's
+  count.
+procedure:
+- Write a title and label the category axis and the value axis.
+- Mark the value axis from 0 in equal steps of the scale.
+- For each category, draw a bar that ends at its count, between marks when the count is not a multiple
+  of the scale.
+assess: 'Favorite fruit: apples 15, bananas 25, grapes 10, pears 5. Draw a bar graph whose value axis
+  counts by 5s.'
+sources:
+  ccss:
+  - 3.MD.B.3
+  learning_components:
+  - 927348fe
+  - edc7c180
+requires:
+- clause: standard
+  all_of:
+  - node: data.bar-graph.draw
+    relation: representational
+    points_to: statement
+    why: The scaled bar graph keeps the title, labeled axes, and one bar per category of the single-unit
+      bar graph.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.skip.twos
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 marks the value axis in equal steps, which for a scale of 2 means counting by twos from
+      0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.skip.fives
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 marks the value axis in equal steps, which for a scale of 5 means counting by fives from
+      0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.skip.tens.decades
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 marks the value axis in equal steps, which for a scale of 10 means counting by tens from
+      0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number-line.whole-number-lengths
+    relation: definitional
+    points_to: statement
+    why: Step 2 marks the value axis from 0 in equal steps, so the axis is a number line of lengths from
+      0.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

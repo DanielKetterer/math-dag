@@ -1,0 +1,62 @@
+id: data.bar-graph.application.one-step
+concept: data
+facet: bar-graph
+level: 2
+type: application
+name: Solve one-step how-many-more or how-many-fewer problems from a scaled bar graph
+statement: A question about a scaled bar graph asks how many more or how many fewer one category has than
+  another; the learner reads both values and finds the difference.
+assess: A bar graph with a scale of 5 shows dogs 25, cats 15, fish 10, birds 20. How many more dogs than
+  fish were counted?
+sources:
+  ccss:
+  - 3.MD.B.3
+  learning_components:
+  - 33be216e
+requires:
+- clause: standard
+  all_of:
+  - node: data.bar-graph.scaled.read
+    relation: representational
+    points_to: statement
+    why: The learner reads both category values from the scaled bar graph before comparing them.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.application.compare.difference-unknown
+    relation: definitional
+    points_to: statement
+    why: How many more or fewer is a difference between two amounts, the compare structure with the difference
+      unknown.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: statement
+    why: The learner finds the difference of the two values read from the graph, such as 25 minus 10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: data.bar-graph.compare
+  relation: specializes
+  note: The single-unit compare-from-a-graph node is the scale-1 case of this node. A learner with scaled.read
+    and the compare structure (e461, e462) can do this node without having done single-unit graph comparisons.
+status: proposed

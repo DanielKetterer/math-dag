@@ -1,0 +1,124 @@
+id: measurement.application.conversion.multistep
+concept: measurement
+facet: unit-conversion
+level: 3
+type: application
+name: Solve multi-step real-world problems that use unit conversions
+statement: Solve multi-step real-world problems in which a conversion between units of one system, in
+  either direction and with whole-number, decimal, or fraction results, is one of the steps.
+assess: Jo runs 750 m each day for 5 days. How many kilometers does she run in all? (1 km = 1000 m)
+sources:
+  ccss:
+  - 5.MD.A.1
+  learning_components:
+  - 0013fbee
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.unit-conversion.to-smaller.whole
+    relation: procedural
+    points_to: statement
+    why: The statement allows a conversion to a smaller unit with a whole-number result as one of the
+      steps.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.unit-conversion.to-smaller.decimal
+    relation: procedural
+    points_to: statement
+    why: The statement allows a decimal metric measurement converted to a smaller unit as one of the steps.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.unit-conversion.to-smaller.fraction
+    relation: procedural
+    points_to: statement
+    why: The statement allows a fractional measurement converted to a smaller unit as one of the steps.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.unit-conversion.to-larger.whole
+    relation: procedural
+    points_to: statement
+    why: The statement allows a conversion to a larger unit with a whole-number result as one of the steps.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.unit-conversion.to-larger.decimal
+    relation: procedural
+    points_to: statement
+    why: Converting 3750 m to kilometers in the test problem gives the decimal 3.75 km.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.unit-conversion.to-larger.fraction
+    relation: procedural
+    points_to: statement
+    why: The statement allows a conversion to a larger unit with a fraction result as one of the steps.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: operations.application.multistep.multi-digit
+    relation: definitional
+    points_to: statement
+    why: The test problem multiplies 750 by 5 and then converts, a multi-step problem with multi-digit
+      numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: assess
+    why: Finding the total of 750 m run on each of 5 days is a multiplication by a one-digit number.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: 750 x 5 is the test problem''s computation; the statement does not fix the operations
+        in the other steps.'
+    status: proposed
+status: proposed

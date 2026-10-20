@@ -55,7 +55,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: expressions.grouping.evaluate
+  - node: expressions.parentheses
     relation: representational
     points_to: statement
     why: The statement and the test problem use parentheses to show that the sum b + c is found first.
@@ -65,5 +65,9 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired expressions.grouping.evaluate: Only reading the sum in parentheses
+        as one quantity is used, without computing.'
     status: proposed
 status: proposed

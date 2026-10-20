@@ -1,0 +1,48 @@
+id: addition.within-20
+concept: addition
+facet: operation
+level: 2
+type: procedure
+name: Find a sum within 20
+statement: 'Find the sum of two whole numbers whose total is at most 20, by any reliable method: counting
+  on, making a ten, using doubles, or a known fact.'
+assess: What is 8 + 5? What is 9 + 7? Show or tell how you know.
+sources:
+  ccss:
+  - 1.OA.C.6
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: addition.count-on
+    relation: procedural
+    points_to: statement
+    why: Counting on from the larger addend finds any sum within 20, one route to the sum.
+    evidence:
+    - kind: review
+      source: Claude
+      note: 'L1 add: Claude: late node, routes given by hand (count on, make a ten, recall).'
+    status: reviewed
+- clause: via-make-ten
+  all_of:
+  - node: addition.make-ten
+    relation: procedural
+    points_to: statement
+    why: Making a ten finds a sum over 10 by splitting one addend, one route to the sum.
+    evidence:
+    - kind: review
+      source: Claude
+      note: 'L1 route:'
+    status: reviewed
+- clause: via-recall
+  all_of:
+  - node: addition.within-20.fluency
+    relation: procedural
+    points_to: statement
+    why: A recalled sum of two one-digit numbers gives the sum directly, one route to the sum.
+    evidence:
+    - kind: review
+      source: Claude
+      note: 'L1 route:'
+    status: reviewed
+status: proposed

@@ -1,0 +1,72 @@
+id: time.am-pm
+concept: time
+facet: day
+level: 2
+type: concept
+name: a.m. and p.m. name the two halves of a day
+statement: a.m. names the times from midnight up to noon and p.m. names the times from noon up to midnight,
+  so each clock reading happens twice a day and a.m. or p.m. tells which.
+assess: School starts at 8:00 in the morning. Is that 8:00 a.m. or 8:00 p.m.?
+sources:
+  ccss:
+  - 2.MD.C.7
+  learning_components:
+  - 9af7bd3c
+  - 54e86591
+  - fca56ad3
+  - cf3900ab
+requires:
+- clause: via-read
+  all_of:
+  - node: time.parts-of-day
+    relation: definitional
+    points_to: statement
+    why: The concept divides a day at midnight and noon, so the learner needs the order of a day (morning,
+      afternoon, evening, night); no node in the index holds this.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: time.digital.read
+    relation: representational
+    points_to: statement
+    why: a.m. and p.m. are attached to a clock reading such as 8:00, which the learner must be able to
+      read as an hour and minutes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: a.m. and p.m. attach to a clock time, but the digital display is only one way
+        to meet a time. | other route: Meet times on an analog clock read to the hour (time.analog.hour)
+        or given in words (''eight o''clock''), together with a sense of the parts of a day (morning,
+        afternoon, evening, night), with no digital reading.'
+    status: disputed
+- clause: critic-route-1
+  note: Meet times as analog hours or times in words rather than digital readings, with a sense of the
+    parts of a day.
+  all_of:
+  - node: time.analog.hour
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Meet times as analog hours or times in words rather
+      than digital readings, with a sense of the parts of a day.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: time.parts-of-day
+    relation: definitional
+    points_to: statement
+    why: The concept divides a day at midnight and noon, so the learner needs the order of a day (morning,
+      afternoon, evening, night); no node in the index holds this.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -49,7 +49,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: subtraction.count-back
+  - node: subtraction.within-20
     relation: procedural
     points_to: procedure.1
     why: Step 1 subtracts when the difference is unknown, which can be done by counting back.
@@ -61,8 +61,12 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired subtraction.count-back: 15 - 9 has a minuend past 10 by any method;
+        no subtract-within-20 candidate exists.'
     status: proposed
-  - node: addition.count-on
+  - node: addition.within-20
     relation: procedural
     points_to: procedure.3
     why: Step 3 adds b and c to find the minuend, which can be done by counting on.
@@ -74,6 +78,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired addition.count-on: Adding b and c, such as 6 + 7, goes past 10 by
+        any method; no add-within-20 candidate exists.'
     status: proposed
   - node: subtraction.unknown-addend.meaning
     relation: justificatory
@@ -123,7 +131,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: subtraction.count-back
+  - node: subtraction.within-20
     relation: procedural
     points_to: procedure.1
     why: Step 1 subtracts when the difference is unknown, which can be done by counting back.
@@ -135,8 +143,12 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired subtraction.count-back: 15 - 9 has a minuend past 10 by any method;
+        no subtract-within-20 candidate exists.'
     status: proposed
-  - node: addition.count-on
+  - node: addition.within-20
     relation: procedural
     points_to: procedure.3
     why: Step 3 adds b and c to find the minuend, which can be done by counting on.
@@ -148,6 +160,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired addition.count-on: Adding b and c, such as 6 + 7, goes past 10 by
+        any method; no add-within-20 candidate exists.'
     status: proposed
   - node: number-composition.within-10.equation
     relation: definitional

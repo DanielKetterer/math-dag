@@ -1,0 +1,46 @@
+id: measurement.application.convert-to-smaller
+concept: measurement
+facet: unit-conversion
+level: 2
+type: application
+name: Solve measurement word problems that need a larger unit written in a smaller unit
+statement: Solve word problems whose measurements are given in two units of one system, by first expressing
+  the larger-unit measurement in the smaller unit.
+assess: A rope is 3 m long. Kim cuts off a piece 85 cm long. How many centimeters of rope are left? (1
+  m = 100 cm)
+sources:
+  ccss:
+  - 4.MD.A.2
+  learning_components:
+  - a16722fd
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.unit-conversion.to-smaller.whole
+    relation: procedural
+    points_to: statement
+    why: The statement requires first expressing the larger-unit measurement in the smaller unit, as 3
+      m becomes 300 cm.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.application.whole-number
+    relation: definitional
+    points_to: statement
+    why: After converting, the rest is a one- or two-step word problem with whole numbers in one unit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

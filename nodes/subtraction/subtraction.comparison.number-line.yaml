@@ -59,7 +59,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: subtraction.base-ten.strategy
+  - node: subtraction.within-100
     relation: definitional
     points_to: statement
     why: The statement says the length of the segment is a - b, so the meaning of subtraction is needed
@@ -76,8 +76,12 @@ requires:
       source: retarget-sonnet
       note: 're-pointed from retired subtraction.whole-number: The test problem names the length from
         48 to 73 as the two-digit difference 73 - 48.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired subtraction.base-ten.strategy: 73 - 48 is a difference within 100
+        by any method.'
     status: proposed
-  - node: addition.base-ten.strategy
+  - node: addition.within-100
     relation: procedural
     points_to: procedure.3
     why: Step 3 adds the lengths of the jumps to get the total distance.
@@ -91,5 +95,9 @@ requires:
       source: retarget-sonnet
       note: 're-pointed from retired addition.whole-number: Totaling jumps like 2 + 20 + 3 is adding partial
         sums by place value.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired addition.base-ten.strategy: Adding jumps like 2 + 20 + 3 is within
+        100 by any method.'
     status: proposed
 status: proposed

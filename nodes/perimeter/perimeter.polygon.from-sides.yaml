@@ -1,0 +1,44 @@
+id: perimeter.polygon.from-sides
+concept: perimeter
+facet: core
+level: 3
+type: procedure
+name: Find the perimeter of a polygon from its side lengths
+statement: The perimeter of a polygon with all side lengths given is the sum of its side lengths.
+assess: A pentagon has sides of 4 cm, 6 cm, 3 cm, 5 cm, and 7 cm. What is its perimeter?
+sources:
+  ccss:
+  - 3.MD.D.8
+  learning_components:
+  - 7f34a6f4
+  - a278d5f2
+requires:
+- clause: standard
+  all_of:
+  - node: perimeter.meaning
+    relation: definitional
+    points_to: statement
+    why: The sum of the side lengths is the perimeter because perimeter is the total length of the boundary.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: statement
+    why: The learner sums the given side lengths, such as 4 + 6 + 3 + 5 + 7.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

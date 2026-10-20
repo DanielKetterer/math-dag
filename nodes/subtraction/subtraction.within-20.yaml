@@ -1,0 +1,60 @@
+id: subtraction.within-20
+concept: subtraction
+facet: operation
+level: 2
+type: procedure
+name: Find a difference within 20
+statement: 'Find a - b for whole numbers with b no greater than a and a at most 20, by any reliable method:
+  counting back, counting up, decomposing to ten, thinking of the related addition, or a known fact.'
+assess: What is 13 - 5? What is 16 - 9? Show or tell how you know.
+sources:
+  ccss:
+  - 1.OA.C.6
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: subtraction.count-back
+    relation: procedural
+    points_to: statement
+    why: Counting back by the subtrahend from the minuend finds any difference within 20, one route.
+    evidence:
+    - kind: review
+      source: Claude
+      note: 'L2 add: Claude: late node, routes given by hand (count back, decompose to ten, think addition,
+        recall).'
+    status: reviewed
+- clause: via-decompose-to-ten
+  all_of:
+  - node: subtraction.decompose-to-ten
+    relation: procedural
+    points_to: statement
+    why: Subtracting down to ten and then the rest finds a difference across ten, one route.
+    evidence:
+    - kind: review
+      source: Claude
+      note: 'L2 route:'
+    status: reviewed
+- clause: via-related-addition
+  all_of:
+  - node: subtraction.unknown-addend.strategy
+    relation: procedural
+    points_to: statement
+    why: Finding the missing addend in b + ? = a gives a - b, one route to the difference.
+    evidence:
+    - kind: review
+      source: Claude
+      note: 'L2 route:'
+    status: reviewed
+- clause: via-recall
+  all_of:
+  - node: subtraction.within-20.fluency
+    relation: procedural
+    points_to: statement
+    why: A recalled difference within 20 gives the answer directly, one route to the difference.
+    evidence:
+    - kind: review
+      source: Claude
+      note: 'L2 route:'
+    status: reviewed
+status: proposed

@@ -1,0 +1,167 @@
+id: subtraction.within-1000
+concept: subtraction
+facet: operation
+level: 3
+type: procedure
+name: Subtract within 1000
+statement: Find a - b for whole numbers with b no greater than a and a at most 1000, accurately and without
+  objects, by any reliable method; a place-value strategy, counting up, and the standard algorithm all
+  meet it.
+assess: Find 724 - 358 and 600 - 247. Use any method.
+sources:
+  ccss:
+  - 3.NBT.A.2
+  learning_components:
+  - 18fca54d
+requires:
+- clause: via-like-units
+  all_of:
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: definitional
+    points_to: statement
+    why: The numbers up to three digits are read as hundreds, tens and ones, which every written or mental
+      method relies on.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-20.fluency
+    relation: procedural
+    points_to: assess
+    why: The place-by-place differences in the test items, such as 14 - 8 and 17 - 5, use subtraction
+      within 20.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test items subtract single-digit places after decomposing; counting up
+        avoids it and the statement does not name it.'
+    status: proposed
+  - node: subtraction.base-ten.like-units
+    relation: definitional
+    points_to: statement
+    why: Place-value strategies and the standard algorithm subtract hundreds from hundreds, tens from
+      tens and ones from ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Counting up adds jumps and does not subtract hundreds from hundreds, tens from
+        tens, ones from ones. | other route: Count up from the subtrahend to the minuend by the related
+        addition and add the jumps.'
+    status: disputed
+- clause: via-decompose-unit
+  all_of:
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: definitional
+    points_to: statement
+    why: The numbers up to three digits are read as hundreds, tens and ones, which every written or mental
+      method relies on.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-20.fluency
+    relation: procedural
+    points_to: assess
+    why: The place-by-place differences in the test items, such as 14 - 8 and 17 - 5, use subtraction
+      within 20.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test items subtract single-digit places after decomposing; counting up
+        avoids it and the statement does not name it.'
+    status: proposed
+  - node: subtraction.base-ten.decompose-unit
+    relation: definitional
+    points_to: statement
+    why: The test differences 724 - 358 and 600 - 247 need a hundred or a ten decomposed into the next
+      smaller unit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Counting up (named in the statement) finds 724 - 358 without decomposing a hundred
+        or a ten. | other route: Count up from the subtrahend to the minuend by the related addition (358
+        to 400 to 700 to 724) and add the jumps.'
+    status: disputed
+- clause: critic-route-1
+  note: Count up from the subtrahend to the minuend by the related addition (358 to 400 to 700 to 724)
+    and add the jumps.
+  all_of:
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: definitional
+    points_to: statement
+    why: The numbers up to three digits are read as hundreds, tens and ones, which every written or mental
+      method relies on.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-20.fluency
+    relation: procedural
+    points_to: assess
+    why: The place-by-place differences in the test items, such as 14 - 8 and 17 - 5, use subtraction
+      within 20.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test items subtract single-digit places after decomposing; counting up
+        avoids it and the statement does not name it.'
+    status: proposed
+  - node: subtraction.unknown-addend.meaning
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Count up from the subtrahend to the minuend by the
+      related addition (358 to 400 to 700 to 724) and add the jumps.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: addition.within-1000
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Count up from the subtrahend to the minuend by the
+      related addition (358 to 400 to 700 to 724) and add the jumps.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

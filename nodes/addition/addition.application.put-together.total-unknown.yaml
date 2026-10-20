@@ -19,7 +19,7 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: addition.add-to.count-all
+  - node: addition.within-10
     relation: procedural
     points_to: assess
     why: Finding the total of the red and green apples means putting the two groups together and counting
@@ -33,6 +33,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired addition.add-to.count-all: 3 + 4 is a sum within 10 found by any
+        method.'
     status: proposed
   - node: counting.produce-set
     relation: procedural

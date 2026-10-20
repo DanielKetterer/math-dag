@@ -1,0 +1,78 @@
+id: data.line-plot.fraction-scale.make
+concept: data
+facet: line-plot
+level: 2
+type: representation
+name: Make a line plot of measurements in halves, fourths, and eighths
+statement: A data set of measurements in halves, fourths, or eighths of a unit is shown by marking a number
+  line in the finest of those parts and placing one X above the point for each measurement.
+procedure:
+- Draw a number line from at or below the least value to at or above the greatest value.
+- Partition each whole unit into the finest part used in the data (halves, fourths, or eighths) and label
+  the marks.
+- Place one X above the mark for each measurement, stacking Xs for repeated values.
+assess: 'Make a line plot of these pencil lengths, in inches: 5 1/2, 5 3/4, 6, 5 3/4, 5 1/8, 6 1/4, 5
+  1/2.'
+sources:
+  ccss:
+  - 4.MD.B.4
+  - 5.MD.B.2
+  learning_components:
+  - 701d2a97
+  - 613323d4
+requires:
+- clause: standard
+  all_of:
+  - node: data.line-plot.make
+    relation: representational
+    points_to: statement
+    why: A line plot places one X above the number line for each measurement, the form first met with
+      whole-unit measurements.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.number-line
+    relation: representational
+    points_to: procedure.2
+    why: Step 2 partitions each unit and labels marks such as 3/4 and 5/8 on the number line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.same-point
+    relation: procedural
+    points_to: procedure.2
+    why: Placing 1/2 and 3/4 on a scale marked in eighths uses that equivalent fractions are the same
+      point.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.meaning
+    relation: representational
+    points_to: statement
+    why: Measurements such as 5 3/4 are mixed numbers, a whole number plus a fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

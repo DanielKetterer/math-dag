@@ -1,0 +1,60 @@
+id: measurement.length.unit-size.inverse
+concept: measurement
+facet: length
+level: 2
+type: concept
+name: A larger unit gives a smaller measurement
+statement: When the same length is measured in two different units, the measurement in the larger unit
+  is the smaller number, because each larger unit covers more of the length.
+assess: A table is 4 feet long. Without measuring, is its length in inches a number greater than 4, less
+  than 4, or equal to 4?
+sources:
+  ccss:
+  - 2.MD.A.2
+  learning_components:
+  - b5092424
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.length.no-gaps-overlaps
+    relation: definitional
+    points_to: statement
+    why: The measurement is the number of units that span the length, so a unit that covers more of it
+      needs a smaller number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.numerals-within-10
+    relation: definitional
+    points_to: statement
+    why: The statement says the measurement in the larger unit is the smaller number, so the two numbers
+      must be compared.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The edge covers comparing numerals only within 10, but the test compares inches
+        in 4 feet (48) with 4, a two-digit number against a one-digit number. The statement gives no number
+        range.'
+    status: disputed
+  - node: measurement.length.unit-benchmarks
+    relation: procedural
+    points_to: assess
+    why: The table problem needs to know a foot is a longer unit than an inch to decide without measuring.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is given for any two units; only the table problem needs to know
+        that a foot is a longer unit than an inch, which is a benchmark fact about these particular units.'
+    status: proposed
+status: proposed

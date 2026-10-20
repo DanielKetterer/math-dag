@@ -1,0 +1,126 @@
+id: measurement.time.application.addition
+concept: measurement
+facet: time
+level: 2
+type: application
+name: Solve word problems by adding a time interval in minutes
+statement: A story gives a start time and a duration in minutes, or two durations, and asks for the end
+  time or the total time; the learner adds the minutes.
+assess: Recess starts at 10:20 and lasts 25 minutes. At what time does recess end?
+sources:
+  ccss:
+  - 3.MD.A.1
+  learning_components:
+  - fa9c8ad6
+requires:
+- clause: via-tell-nearest-minute
+  all_of:
+  - node: addition.within-100
+    relation: procedural
+    points_to: statement
+    why: The learner adds the minutes of the duration to the minutes of the start time or adds two durations.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.add-to-story
+    relation: definitional
+    points_to: statement
+    why: Start time plus duration giving end time is an add-to story with the result unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.put-together.total-unknown
+    relation: definitional
+    points_to: statement
+    why: Two durations asking for a total time is a put-together story with the total unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.time.tell-nearest-minute
+    relation: representational
+    points_to: statement
+    why: The start time and the end time are clock times to the minute, read and written as hours:minutes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Story problems usually give and ask for times in written h:mm form; analog reading
+        is not used to solve them. | other route: Times appear as digital numerals; the learner reads
+        them with time.digital.read and writes the end time with time.digital.write.'
+    status: disputed
+- clause: critic-route-1
+  note: Times in the story are written in h:mm form, so no analog reading is needed.
+  all_of:
+  - node: addition.within-100
+    relation: procedural
+    points_to: statement
+    why: The learner adds the minutes of the duration to the minutes of the start time or adds two durations.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.add-to-story
+    relation: definitional
+    points_to: statement
+    why: Start time plus duration giving end time is an add-to story with the result unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.put-together.total-unknown
+    relation: definitional
+    points_to: statement
+    why: Two durations asking for a total time is a put-together story with the total unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: time.digital.read
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Times in the story are written in h:mm form, so no
+      analog reading is needed.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: time.digital.write
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Times in the story are written in h:mm form, so no
+      analog reading is needed.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

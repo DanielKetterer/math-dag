@@ -1,0 +1,64 @@
+id: perimeter.rectangle.from-length-width
+concept: perimeter
+facet: core
+level: 3
+type: procedure
+name: Find the perimeter of a rectangle from its length and width
+statement: Because opposite sides of a rectangle are equal, its perimeter is the sum of two lengths and
+  two widths, so it can be found when only the length and width are given.
+assess: A rectangle is 9 cm long and 4 cm wide, and only those two sides are labeled. What is its perimeter?
+sources:
+  ccss:
+  - 3.MD.D.8
+  learning_components:
+  - 5b8696e3
+requires:
+- clause: standard
+  all_of:
+  - node: perimeter.polygon.from-sides
+    relation: procedural
+    points_to: statement
+    why: The perimeter is still the sum of the four side lengths, here two lengths and two widths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.rectangle.define
+    relation: justificatory
+    points_to: statement
+    why: The two unlabeled sides are known only because opposite sides of a rectangle are equal.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.rectangle.opposite-sides-equal
+    relation: justificatory
+    points_to: statement
+    why: The statement depends on opposite sides of a rectangle being equal, so two sides give all four.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: statement
+    why: The perimeter is a sum of two lengths and two widths, such as 9 + 4 + 9 + 4.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

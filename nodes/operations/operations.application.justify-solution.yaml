@@ -17,7 +17,7 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: operations.application.multistep
+  - node: operations.application.multistep.multi-digit
     relation: definitional
     points_to: statement
     why: The solution being justified is for a one-step or multi-step word problem whose conditions the
@@ -30,8 +30,12 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired operations.application.multistep: The test uses 156 eggs and a 13
+        x 12 product, beyond the facts.'
     status: proposed
-  - node: multiplication.partial-products.two-digit-by-two-digit
+  - node: multiplication.two-digit-by-two-digit
     relation: procedural
     points_to: assess
     why: Showing that 13 cartons of 12 give 156 eggs requires multiplying 13 by 12.
@@ -42,6 +46,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: 'task-only: Only the test problem (13 x 12) needs a two-digit by two-digit product.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired multiplication.partial-products.two-digit-by-two-digit: 13 x 12 can
+        be found by any method.'
     status: proposed
 related:
 - node: division.unknown-factor.meaning

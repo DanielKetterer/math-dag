@@ -1,0 +1,59 @@
+id: volume.additive
+concept: volume
+facet: unit-cubes
+level: 2
+type: concept
+name: Volume is additive
+statement: When a solid is made of non-overlapping parts, its volume is the sum of the volumes of the
+  parts.
+assess: A solid is made by joining a box of 24 cubic feet and a box of 18 cubic feet, with no overlap.
+  What is the volume of the solid?
+sources:
+  ccss:
+  - 5.MD.C.5.c
+  learning_components:
+  - b1240abb
+requires:
+- clause: standard
+  all_of:
+  - node: volume.packing
+    relation: definitional
+    points_to: statement
+    why: Volume of each part is the number of unit cubes that pack it, and the parts' cubes together pack
+      the whole.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.compose.solids
+    relation: definitional
+    points_to: statement
+    why: The statement concerns a solid made of non-overlapping parts, which is putting solids together
+      into a composite solid.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem adds 24 and 18 cubic feet to find the volume of the joined solid.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: 24 + 18 is the test problem''s computation; the concept is additivity of volume.'
+    status: proposed
+status: proposed

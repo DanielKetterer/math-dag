@@ -1,0 +1,72 @@
+id: counting.array.squares
+concept: counting
+facet: core
+level: 1
+type: procedure
+name: Count the squares of a rectangle partitioned into rows and columns
+statement: Find how many same-size squares fill a partitioned rectangle by counting each square exactly
+  once, keeping track of the count row by row or column by column.
+procedure:
+- Count the squares in the first row.
+- Continue the count through each next row in turn, without skipping or recounting a square.
+- The last number said is the total.
+assess: This rectangle is split into 3 rows of 5 same-size squares. How many squares are there?
+sources:
+  ccss:
+  - 2.G.A.2
+  learning_components:
+  - 2cd4f531
+requires:
+- clause: standard
+  all_of:
+  - node: counting.objects
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 counts the squares in the first row, counting each object exactly once.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.sequence.count-on
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 continues the count into each next row from the number already reached instead of starting
+      again from one.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.array.rows-columns
+    relation: definitional
+    points_to: statement
+    why: The statement counts by rows or columns of a partitioned rectangle, which uses the row and column
+      structure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.cardinal.last-word
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 takes the last number said as the total, which is the last-word principle.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,68 @@
+id: shapes.compare.by-attributes
+concept: shapes
+facet: properties
+level: 1
+type: procedure
+name: Compare two flat shapes by their parts and attributes
+statement: Say how two flat shapes are alike and how they differ by their parts (number of sides and corners)
+  and attributes (equal sides, straight or curved sides), not by size or orientation.
+procedure:
+- Count the sides and the corners of each shape.
+- Check other attributes of each shape, such as whether its sides are equal and whether they are straight
+  or curved.
+- Name the parts and attributes the two shapes share and those they do not, ignoring size and orientation.
+assess: Here are a large square and a small rectangle lying on its long side. Tell one way they are alike
+  and one way they are different, without talking about size.
+sources:
+  ccss:
+  - K.G.B.4
+  learning_components:
+  - 7dfda327
+  - 2b32313c
+  - fcecf352
+  - 040a3c85
+  - 50953a3f
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.sides.count
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 counts the sides of each of the two flat shapes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.corners.count
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 counts the corners of each of the two flat shapes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.attribute.equal-sides
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 checks whether the sides of each shape are equal in length, which is exactly noticing
+      the equal-sides attribute.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

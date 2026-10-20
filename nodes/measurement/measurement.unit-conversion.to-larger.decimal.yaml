@@ -1,0 +1,58 @@
+id: measurement.unit-conversion.to-larger.decimal
+concept: measurement
+facet: unit-conversion
+level: 3
+type: procedure
+name: Convert a metric measurement to a larger unit as a decimal
+statement: A metric measurement is converted to a larger unit by dividing it by the power of ten (10,
+  100, or 1000) that relates the two units, giving a decimal when the division is not exact.
+procedure:
+- Find the power of ten k with 1 larger unit = k smaller units.
+- Divide the measurement by k.
+- Label the quotient with the larger unit.
+assess: Write 5 cm in meters as a decimal. (1 m = 100 cm)
+sources:
+  ccss:
+  - 5.MD.A.1
+  learning_components:
+  - 0c81b764
+requires:
+- clause: standard
+  all_of:
+  - node: division.power-of-ten.rule
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides by 10, 100 or 1000, which is carried out by moving the decimal point left.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: statement
+    why: The quotient is written as a decimal such as 0.05 m, so decimal notation for tenths and hundredths
+      must be understood.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.thousandths.notation
+    relation: representational
+    points_to: statement
+    why: The result is written as a decimal in tenths, hundredths, or thousandths of the larger unit.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

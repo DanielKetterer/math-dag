@@ -1,0 +1,45 @@
+id: shapes.attribute.non-defining
+concept: shapes
+facet: properties
+level: 2
+type: concept
+name: Color, size and orientation do not decide a shape's name
+statement: Color, overall size, orientation and material are not defining attributes; changing them never
+  changes which kind of shape a figure is.
+assess: Mia says this big triangle is not a triangle because it is upside down and very big. Is she right?
+  Why?
+sources:
+  ccss:
+  - 1.G.A.1
+  learning_components:
+  - a8e2fb9e
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.attribute.defining
+    relation: definitional
+    points_to: statement
+    why: The statement says color, size, orientation and material are not defining attributes, which only
+      makes sense against the idea of a defining attribute.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.name.any-orientation
+    relation: definitional
+    points_to: statement
+    why: The general claim that size and orientation never change the name states what naming tilted,
+      large and small shapes already shows in particular cases.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

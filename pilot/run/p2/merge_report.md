@@ -1,0 +1,23 @@
+# Merge report
+
+- Node files written: 225
+- Example files superseded and removed: none
+- Union edges with no critic verdict: 0
+- necessary: 535
+- scaffold: 70
+- task-only: 68
+- route-only: 47
+- route-only split into own clause: 47
+- alt route from passes: 45
+- alt route from critic: 43
+- missing-prerequisite added: 34
+- dominated route removed: 21
+- undecided: 13
+- related: 8
+- wrong: 8
+- indirect: 7
+- review: route added: 5
+- review: add: 2
+- review: drop: 1
+- review: replace: 1
+- review: related: 1

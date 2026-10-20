@@ -1,0 +1,157 @@
+id: volume.composite.two-prisms
+concept: volume
+facet: unit-cubes
+level: 3
+type: procedure
+name: Find the volume of a solid made of two rectangular prisms
+statement: Find the volume of a solid composed of two non-overlapping right rectangular prisms by splitting
+  it into the two prisms, finding each volume, and adding.
+procedure:
+- Split the solid into two right rectangular prisms that do not overlap.
+- Find the edge lengths of each prism, subtracting given lengths where an edge is not labeled.
+- Find the volume of each prism.
+- Add the two volumes.
+assess: 'A solid is 4 cm deep. Its front face is an L shape 10 cm wide and 8 cm tall overall: the bottom
+  part is 3 cm tall across the full width, and the upright part on the left is 3 cm wide. Find the volume
+  of the solid.'
+sources:
+  ccss:
+  - 5.MD.C.5.c
+  learning_components:
+  - 978d5e05
+requires:
+- clause: via-decompose
+  all_of:
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts given lengths where an edge is not labeled, such as 10 minus 3 for the upright
+      part.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.prism.formula.lwh.apply
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 finds the volume of each prism from its edge lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.additive
+    relation: definitional
+    points_to: procedure.4
+    why: Step 4 adds the two volumes, which is valid because volume of non-overlapping parts adds.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 adds the two volumes, such as 96 and 60.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectilinear.decompose
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 splits the L-shaped solid into two prisms, found by decomposing the L-shaped face into
+      rectangles.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Splitting the L-shaped face into rectangles is one way to find the two prisms,
+        but a learner can split the solid directly into two boxes without 2-D decomposition. | other route:
+        Decompose the 3-D solid directly into two non-overlapping boxes, using shapes.compose.solids as
+        the composing/decomposing skill.'
+    status: disputed
+- clause: critic-route-1
+  note: Split the solid directly into two boxes rather than via decomposing the L-shaped face
+  all_of:
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts given lengths where an edge is not labeled, such as 10 minus 3 for the upright
+      part.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.prism.formula.lwh.apply
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 finds the volume of each prism from its edge lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.additive
+    relation: definitional
+    points_to: procedure.4
+    why: Step 4 adds the two volumes, which is valid because volume of non-overlapping parts adds.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 adds the two volumes, such as 96 and 60.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.compose.solids
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Split the solid directly into two boxes rather than
+      via decomposing the L-shaped face'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

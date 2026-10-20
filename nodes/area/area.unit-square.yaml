@@ -1,0 +1,55 @@
+id: area.unit-square
+concept: area
+facet: unit-squares
+level: 2
+type: concept
+name: The unit square and the square unit
+statement: A square with side length 1 unit is a unit square; it has an area of 1 square unit and is the
+  unit used to measure area.
+assess: 'Which of these is a unit square for measuring area in centimeters: a 1 cm by 1 cm square, a 1
+  cm by 2 cm rectangle, or a 2 cm by 2 cm square? What is its area?'
+sources:
+  ccss:
+  - 3.MD.C.5.a
+  learning_components:
+  - 6344463a
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.square.define
+    relation: definitional
+    points_to: statement
+    why: A unit square is a square, with four equal sides and four right angles, whose side is 1 unit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.iterate-units
+    relation: definitional
+    points_to: statement
+    why: The side length of 1 unit is a length measured in a chosen unit, such as 1 centimeter.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.attribute
+    relation: definitional
+    points_to: statement
+    why: The unit square is the unit for area, so the learner needs the idea of area as the amount of
+      flat surface a figure covers; no listed prerequisite gives it.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

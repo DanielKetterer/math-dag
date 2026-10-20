@@ -1,0 +1,43 @@
+id: measurement.mass.grams-kilograms.estimate
+concept: measurement
+facet: mass
+level: 2
+type: procedure
+name: Estimate mass in grams or kilograms
+statement: Estimate the mass of an object in grams or kilograms by comparing it with known benchmarks,
+  such as a paper clip of about 1 gram or a 1-liter bottle of water of about 1 kilogram.
+assess: 'A 1-liter bottle of water has a mass of about 1 kilogram. Which is the best estimate for the
+  mass of a bicycle: 1 kg, 12 kg, or 120 kg?'
+sources:
+  ccss:
+  - 3.MD.A.2
+  learning_components:
+  - bbb494e8
+  - a8d19cfc
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.weight.attribute
+    relation: definitional
+    points_to: statement
+    why: The estimate is of the mass of an object, which must be understood as a weight attribute apart
+      from size.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.mass.gram-kilogram-unit
+    relation: definitional
+    points_to: statement
+    why: The estimate is stated in grams or kilograms by comparing with a paper clip or a kilogram benchmark.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

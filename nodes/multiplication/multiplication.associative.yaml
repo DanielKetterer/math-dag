@@ -39,7 +39,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: expressions.grouping.evaluate
+  - node: expressions.parentheses
     relation: representational
     points_to: statement
     why: The statement is written with parentheses showing which adjacent pair is multiplied first.
@@ -49,6 +49,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired expressions.grouping.evaluate: The property is stated with parentheses
+        and the test says do not compute.'
     status: proposed
 related:
 - node: addition.associative.strategy

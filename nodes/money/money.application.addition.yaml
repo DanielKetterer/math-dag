@@ -1,0 +1,83 @@
+id: money.application.addition
+concept: money
+facet: core
+level: 2
+type: application
+name: Solve addition word problems with coins and dollars
+statement: A one-step word problem combines amounts of money given as coins, cents, or whole dollars,
+  all in one unit; the learner finds the total and writes it with the correct sign.
+assess: Jo has 3 dimes and 2 nickels. Her mom gives her a quarter. How much money does Jo have now?
+sources:
+  ccss:
+  - 2.MD.C.8
+  learning_components:
+  - 329aa819
+requires:
+- clause: standard
+  all_of:
+  - node: money.coins.total-value
+    relation: definitional
+    points_to: statement
+    why: The amount given as coins, such as 3 dimes and 2 nickels, must be turned into a total value in
+      cents before it is combined.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: statement
+    why: The total is found by adding amounts in one unit, for example 40 cents plus 25 cents, and any
+      method would do.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: money.notation
+    relation: representational
+    points_to: statement
+    why: The answer is written with the correct sign, the cents sign after a number of cents or the dollar
+      sign before dollars.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.add-to-story
+    relation: definitional
+    points_to: statement
+    why: Money that is given to someone who already has some is an add-to situation with the result unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.put-together.total-unknown
+    relation: definitional
+    points_to: statement
+    why: Amounts of money that are combined into one total form a put-together situation with the total
+      unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

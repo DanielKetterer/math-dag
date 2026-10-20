@@ -1,0 +1,71 @@
+id: shapes.cube.identify
+concept: shapes
+facet: properties
+level: 2
+type: concept
+name: A cube has six equal square faces
+statement: A cube is a solid with 6 flat faces that are all squares of the same size; a box whose faces
+  are not all equal squares is not a cube.
+assess: 'Which of these solids are cubes: a number cube, a cereal box, a small square-faced block, a box
+  with two square faces and four long rectangular faces?'
+sources:
+  ccss:
+  - 2.G.A.1
+  learning_components:
+  - fe364f7f
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.solid.parts
+    relation: definitional
+    points_to: statement
+    why: A cube is defined by having 6 flat faces, so the learner must know what the faces of a solid
+      are.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.name.solids
+    relation: definitional
+    points_to: statement
+    why: The statement refines the solid name cube by its faces, so the learner must already use the solid
+      names.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.name.any-orientation
+    relation: definitional
+    points_to: statement
+    why: The statement requires each face to be a square, which means naming the flat shape of each face.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.compare.same-different
+    relation: definitional
+    points_to: statement
+    why: All six square faces must be the same size, which is checked by comparing whole shapes directly.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

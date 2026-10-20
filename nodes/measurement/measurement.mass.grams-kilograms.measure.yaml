@@ -1,0 +1,88 @@
+id: measurement.mass.grams-kilograms.measure
+concept: measurement
+facet: mass
+level: 2
+type: procedure
+name: Measure mass in grams or kilograms with a scale
+statement: The mass of an object in grams or kilograms is read from a scale or balance marked in that
+  unit, including readings between labeled marks.
+procedure:
+- Find how many grams or kilograms each step between marks stands for.
+- Find the marks just below and above the pointer.
+- Read the mass from the pointer's position between those marks.
+assess: A scale is labeled 0, 100, 200, 300, 400, 500 grams. The pointer is halfway between 300 and 400.
+  What is the mass of the apple on the scale?
+sources:
+  ccss:
+  - 3.MD.A.2
+  learning_components:
+  - 872ca956
+  - a8a8a7ce
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.weight.attribute
+    relation: definitional
+    points_to: statement
+    why: The quantity read from the scale is the mass of the object, an attribute separate from its size.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: statement
+    why: The scale or balance reads like a number line, with each labeled mark a number counted from 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds how many grams or kilograms one step stands for by taking the difference of neighboring
+      labeled marks.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number.halfway-between
+    relation: definitional
+    points_to: assess
+    why: The statement includes readings between labeled marks, such as the pointer halfway between 300
+      and 400.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement only says readings between labeled marks are allowed; only the test
+        problem puts the pointer exactly halfway between 300 and 400. Other between-mark readings use
+        the step size from step 1.'
+    status: proposed
+  - node: measurement.mass.gram-kilogram-unit
+    relation: definitional
+    points_to: statement
+    why: The answer is a mass in grams or kilograms, so the learner must know what these units measure.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

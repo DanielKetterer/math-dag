@@ -1,0 +1,93 @@
+id: multiplication.array-area.distributive.tiling
+concept: multiplication
+facet: array-area
+level: 2
+type: justification
+name: Show with tiling that a x (b + c) = a x b + a x c
+statement: In a concrete case, a tiled rectangle with sides a and b + c splits into an a by b rectangle
+  and an a by c rectangle with no overlap, so its area a x (b + c) equals a x b + a x c.
+assess: A 4 by 7 rectangle is tiled with unit squares. Split it into a 4 by 5 part and a 4 by 2 part,
+  and use the tiles to show that 4 x 7 = 4 x 5 + 4 x 2.
+sources:
+  ccss:
+  - 3.MD.C.7.c
+  learning_components:
+  - a5b2425c
+requires:
+- clause: standard
+  all_of:
+  - node: area.rectangle.tiling-product.explain
+    relation: justificatory
+    points_to: statement
+    why: Each tiled part and the whole rectangle have a tile count equal to the product of their sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.additive
+    relation: justificatory
+    points_to: statement
+    why: The whole rectangle's area is the sum of the two non-overlapping parts' areas, which is why the
+      two products add.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.decompose.simple
+    relation: procedural
+    points_to: statement
+    why: The learner splits the tiled rectangle into two smaller rectangles.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem finds the products 4 x 5 and 4 x 2 from tiles.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs the products 4 x 5, 4 x 2 and 4 x 7 from recall; the
+        statement is about the tile argument for general a, b, c.'
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem adds the part products 20 and 8 and compares with 4 x 7.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem adds the part products 20 and 8; the statement concerns
+        the tiled areas and their sum without a number range.'
+    status: proposed
+  - node: expressions.parentheses
+    relation: definitional
+    points_to: statement
+    why: The statement writes a x (b + c) and asks the learner to show it equals the sum of the two products,
+      so the grouping notation is used directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

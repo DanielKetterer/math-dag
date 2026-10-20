@@ -1,0 +1,112 @@
+id: perimeter.rectangle.unknown-side
+concept: perimeter
+facet: core
+level: 3
+type: procedure
+name: Find an unknown side of a rectangle from its perimeter
+statement: Given the perimeter P and the length l of a rectangle, the width is w = P divided by 2, minus
+  l, since l + w is half the perimeter.
+procedure:
+- Divide the perimeter by 2 to get the sum of one length and one width.
+- Subtract the known side from that sum.
+- Label the result with the length unit.
+assess: A rectangle has a perimeter of 30 cm and a length of 9 cm. What is its width?
+sources:
+  ccss:
+  - 4.MD.A.3
+  learning_components:
+  - 1a91a235
+requires:
+- clause: via-formula
+  all_of:
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 divides the perimeter by 2 to get the sum of one length and one width.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts the known side from half the perimeter.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: perimeter.rectangle.formula
+    relation: justificatory
+    points_to: statement
+    why: The step l + w is half the perimeter follows from P = 2 x l + 2 x w.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Halving the perimeter is justified by the formula, but a learner can instead
+        subtract the known sides and halve what remains. | other route: Use perimeter.missing-side with
+        opposite sides equal: subtract the two known lengths from P, then divide the remainder by 2.'
+    status: disputed
+- clause: critic-route-1
+  note: Subtract the two known sides from the perimeter and halve the rest, instead of using the formula
+  all_of:
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 divides the perimeter by 2 to get the sum of one length and one width.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts the known side from half the perimeter.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: perimeter.missing-side
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Subtract the two known sides from the perimeter and
+      halve the rest, instead of using the formula'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: shapes.rectangle.opposite-sides-equal
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Subtract the two known sides from the perimeter and
+      halve the rest, instead of using the formula'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

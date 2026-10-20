@@ -1,0 +1,86 @@
+id: perimeter.versus-area
+concept: perimeter
+facet: core
+level: 2
+type: concept
+name: Tell perimeter from area
+statement: Perimeter measures the length of a figure's boundary in length units; area measures how many
+  unit squares cover it, in square units. They are different measures of the same figure.
+assess: A rectangle drawn on a grid is 5 units long and 3 units wide. One of the numbers 15 and 16 is
+  its area and the other is its perimeter. Which is which, and what is the unit of each?
+sources:
+  ccss:
+  - 3.MD.D.8
+  learning_components:
+  - 1a101be5
+  - bce565cf
+requires:
+- clause: standard
+  all_of:
+  - node: perimeter.meaning
+    relation: definitional
+    points_to: statement
+    why: One of the two measures is the length of the boundary, measured in length units.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.covering.meaning
+    relation: definitional
+    points_to: statement
+    why: The other measure is the number of unit squares that cover the figure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.unit-square
+    relation: definitional
+    points_to: statement
+    why: The units differ because area is counted in square units while perimeter is counted in length
+      units.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.unit-squares.count
+    relation: procedural
+    points_to: assess
+    why: The test problem has a rectangle on a grid whose area is found by counting squares.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem asks for the area of a rectangle on a grid, found by counting
+        squares; the concept of telling the two measures apart does not need the procedure.'
+    status: proposed
+  - node: perimeter.polygon.from-sides
+    relation: procedural
+    points_to: assess
+    why: The test problem finds the perimeter of the 5 by 3 rectangle by adding its sides.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem asks for the perimeter of the 5 by 3 rectangle, found by
+        adding the four sides (or counting the grid units around it).'
+    status: proposed
+status: proposed

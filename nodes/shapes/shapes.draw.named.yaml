@@ -1,0 +1,60 @@
+id: shapes.draw.named
+concept: shapes
+facet: core
+level: 1
+type: procedure
+name: Draw a named flat shape
+statement: Draw a named shape (circle, triangle, square, rectangle, hexagon) as a closed figure with the
+  right number of straight sides meeting at corners, or one closed curve for a circle.
+procedure:
+- Recall how many straight sides the named shape has, or that a circle has one curved side.
+- Draw the sides one after another, each starting where the last one ended.
+- Finish at the starting point so the shape is closed.
+assess: Draw a triangle. Then draw a hexagon.
+sources:
+  ccss:
+  - K.G.B.5
+  learning_components:
+  - 0c9a3738
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.sides.count
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 recalls how many straight sides the named shape has, which depends on the idea of a side
+      and counting sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.closed-boundary
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 finishes at the starting point so the shape is closed, which is the closed boundary with
+      no gap.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.name.receptive
+    relation: definitional
+    points_to: statement
+    why: The learner must know which figure each name (including hexagon and rectangle) refers to; naming
+      non-typical examples is not needed.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,62 @@
+id: measurement.application.whole-number
+concept: measurement
+facet: quantity
+level: 2
+type: application
+name: Solve one- and two-step measurement word problems with whole numbers
+statement: Solve one- and two-step word problems about distances, liquid volumes, or masses, with all
+  quantities given as whole numbers in one unit, using any of the four operations.
+assess: A ribbon 260 cm long is cut into 4 equal pieces. Then 15 cm is cut off one piece. How long is
+  that piece now?
+sources:
+  ccss:
+  - 4.MD.A.2
+  learning_components:
+  - 2abe1331
+  - e13cdaca
+  - 3d94e385
+requires:
+- clause: standard
+  all_of:
+  - node: operations.application.multistep.multi-digit
+    relation: definitional
+    points_to: statement
+    why: The statement is a one- or two-step word problem with multi-digit numbers and any of the four
+      operations.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: assess
+    why: The test problem cuts 260 cm into 4 equal pieces, which is division by a one-digit number.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test problem divides 260 by 4; the statement permits any of the four operations,
+        so no single operation node is required by the idea.'
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: assess
+    why: Cutting 15 cm off a 65 cm piece requires subtracting 65 - 15.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: 65 - 15 is within 100 and is required only by the test problem.'
+    status: proposed
+status: proposed

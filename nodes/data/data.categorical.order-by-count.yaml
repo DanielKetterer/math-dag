@@ -1,0 +1,54 @@
+id: data.categorical.order-by-count
+concept: data
+facet: categorical
+level: 1
+type: procedure
+name: Order categories by their counts
+statement: Categories are put in order from the one with the most objects to the one with the fewest,
+  or the reverse, by comparing their counts, with up to 10 in each.
+assess: The red pile has 7 buttons, the blue pile has 4 and the yellow pile has 9. Put the piles in order
+  from most buttons to fewest.
+sources:
+  ccss:
+  - K.MD.B.3
+  learning_components:
+  - 17c7558b
+requires:
+- clause: standard
+  all_of:
+  - node: data.categorical.count-each
+    relation: definitional
+    points_to: statement
+    why: The categories are ordered by their counts, so each category's count must already be found.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.numerals-within-10
+    relation: procedural
+    points_to: assess
+    why: Ordering from most to fewest compares the counts of the categories pair by pair, with counts
+      up to 10.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement orders categories by their counts, which can be compared without
+        numerals (comparing.count.by-counting or matching); only the test gives the counts as numerals
+        (7, 4, 9) to compare.'
+    status: proposed
+related:
+- node: comparing.count.by-counting
+  relation: common_path
+  note: 'Common path, not required: route ''critic-route-1'' needed everything another route needs and
+    more, so it was removed.'
+status: proposed

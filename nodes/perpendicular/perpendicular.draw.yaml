@@ -1,0 +1,73 @@
+id: perpendicular.draw
+concept: perpendicular
+facet: core
+level: 2
+type: procedure
+name: Draw a line perpendicular to a given line
+statement: Draw a line perpendicular to a given line through a given point on it, using a square corner.
+procedure:
+- Place a square corner with its vertex at the point and one edge along the given line.
+- Draw along the other edge of the square corner, through the point.
+- Extend the drawn line in both directions.
+assess: Draw a line perpendicular to line m through the point P on m.
+sources:
+  ccss:
+  - 4.G.A.1
+  learning_components:
+  - 70453a52
+requires:
+- clause: standard
+  all_of:
+  - node: perpendicular.meaning
+    relation: definitional
+    points_to: statement
+    why: The drawn line must satisfy the definition of being perpendicular to the given line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.right.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 uses a square corner to produce the right angle at the given point.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: point.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 places the vertex of the square corner at the given point on the line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: line.meaning
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 extends the drawn edge in both directions so that it becomes a line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

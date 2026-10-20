@@ -1,0 +1,59 @@
+id: multiplication.array-area.distributive.model
+concept: multiplication
+facet: array-area
+level: 2
+type: representation
+name: Represent the distributive property with an area model
+statement: An area model shows a x (b + c) = a x b + a x c as a rectangle with one side a and the other
+  side split into lengths b and c, so the whole area is the sum of the two part areas.
+assess: Draw an area model that shows 6 x 9 = 6 x 5 + 6 x 4, labeling every side length.
+sources:
+  ccss:
+  - 3.MD.C.7.c
+  learning_components:
+  - 8525ce00
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.array-area.whole-number-product.represent
+    relation: representational
+    points_to: statement
+    why: The model draws each product, such as 6 x 5, as a rectangle with those side lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.additive
+    relation: justificatory
+    points_to: statement
+    why: The whole area is the sum of the two part areas because the parts do not overlap.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.parentheses
+    relation: representational
+    points_to: statement
+    why: The notation a x (b + c) uses parentheses to group the split side.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: multiplication.array-area.distributive.tiling
+  relation: same_idea_different_form
+  note: The area model is the drawn form of the same splitting argument as the tiling justification. A
+    learner can draw the model from the product rectangles (e518) and additivity (e515) without having
+    done the tiling version.
+status: proposed

@@ -1,0 +1,58 @@
+id: data.bar-graph.take-apart
+concept: data
+facet: categorical
+level: 2
+type: application
+name: Solve take-apart problems using a bar graph
+statement: A one-step take-apart problem gives a total and a bar graph with a single-unit scale showing
+  one part; the learner reads the known part and finds the unknown part.
+assess: There are 13 pets in Mia's class, all dogs or cats. A bar graph with a scale by ones shows 8 dogs,
+  but the cats bar is missing. How many cats are there?
+sources:
+  ccss:
+  - 2.MD.D.10
+  learning_components:
+  - 51ebaa2d
+requires:
+- clause: standard
+  all_of:
+  - node: data.bar-graph.read
+    relation: procedural
+    points_to: statement
+    why: The learner reads the known part from the bar, such as 8 dogs, before finding the unknown part.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.put-together.addend-unknown
+    relation: definitional
+    points_to: statement
+    why: A take-apart problem gives a total and one part and asks for the other part, the addend-unknown
+      structure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: statement
+    why: The unknown part is the total minus the known part, such as 13 minus 8, and any method would
+      do.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

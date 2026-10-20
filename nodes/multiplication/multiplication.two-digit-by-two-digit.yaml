@@ -1,0 +1,134 @@
+id: multiplication.two-digit-by-two-digit
+concept: multiplication
+facet: base-ten
+level: 3
+type: procedure
+name: Multiply two two-digit numbers
+statement: Find the product of two two-digit whole numbers, accurately, by any reliable method; partial
+  products, an area model with numbers, and the standard algorithm all meet it.
+assess: Find 34 x 27. Use any method.
+sources:
+  ccss:
+  - 4.NBT.B.5
+  learning_components:
+  - 1e8857da
+requires:
+- clause: via-by-multiple-of-ten
+  all_of:
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: statement
+    why: Every method multiplies single digits such as 4 x 7 when forming partial products.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-multiple-of-ten
+    relation: procedural
+    points_to: statement
+    why: Partial products and the area model need a one-digit number times a multiple of 10, as in 4 x
+      20 and 7 x 30.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: procedural
+    points_to: assess
+    why: The test product 34 x 27 requires adding partial products 600, 210, 80 and 28, whose sum is within
+      1000.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test (34 x 27) adds partial products; sums for two-digit by two-digit
+        products can reach 9801, so within 1000 does not cover the idea, which does not name addition.'
+    status: proposed
+  - node: multiplication.multiple-of-ten.by-multiple-of-ten
+    relation: procedural
+    points_to: statement
+    why: Splitting both factors by place produces a multiple of 10 times a multiple of 10, as in 30 x
+      20.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The four-partial-products method forms 30 x 20; a row method computes 34 x 20
+        as 34 x 2 shifted one place and never forms a multiple of ten times a multiple of ten. | other
+        route: Row method: multiply 34 by 7 and by 2 tens (34 x 2, shifted one place) and add.'
+    status: disputed
+- clause: via-by-one-digit
+  all_of:
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: statement
+    why: Every method multiplies single digits such as 4 x 7 when forming partial products.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-multiple-of-ten
+    relation: procedural
+    points_to: statement
+    why: Partial products and the area model need a one-digit number times a multiple of 10, as in 4 x
+      20 and 7 x 30.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: procedural
+    points_to: assess
+    why: The test product 34 x 27 requires adding partial products 600, 210, 80 and 28, whose sum is within
+      1000.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test (34 x 27) adds partial products; sums for two-digit by two-digit
+        products can reach 9801, so within 1000 does not cover the idea, which does not name addition.'
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: statement
+    why: Multiplying 34 x 27 includes products like 34 x 7 and 34 x 2 tens, each a multi-digit number
+      times a one-digit number.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Multiplying 34 x 27 by a row method needs 34 x 7 as a unit, but four partial
+        products (30x20, 30x7, 4x20, 4x7) never multiply a two-digit number by a one-digit number as a
+        unit. | other route: Split both factors by place and add the four partial products (area model),
+        using multiples of ten, facts and expanded form.'
+    status: disputed
+related:
+- node: place-value.factor-of-ten
+  relation: common_path
+  note: 'Common path, not required: route ''critic-route-1'' needed everything another route needs and
+    more, so it was removed.'
+status: proposed

@@ -1,0 +1,60 @@
+id: symmetry.line.meaning
+concept: symmetry
+facet: line
+level: 2
+type: concept
+name: A line of symmetry folds a figure into matching parts
+statement: A line of symmetry of a figure is a line across it such that folding the figure along the line
+  makes the two parts match exactly; a figure with such a line is line-symmetric.
+assess: A rectangle that is not a square has a dashed line drawn along one diagonal. Is the dashed line
+  a line of symmetry? Explain by what happens when the rectangle is folded along it.
+sources:
+  ccss:
+  - 4.G.A.3
+  learning_components:
+  - a0205dfb
+requires:
+- clause: standard
+  all_of:
+  - node: line.meaning
+    relation: definitional
+    points_to: statement
+    why: A line of symmetry is a line across the figure along which the figure is folded.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: spatial.motion.turn-flip
+    relation: definitional
+    points_to: statement
+    why: Folding along the line flips one part over onto the other part.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Folding is itself a flip, but a learner can fold paper and see the match without
+        having done turn-or-flip puzzles; the question is whether the test''s mental folding needs the
+        prior flip skill.'
+    status: disputed
+  - node: shapes.compare.same-different
+    relation: definitional
+    points_to: statement
+    why: Matching exactly means the two parts, compared as whole shapes, are the same shape and size.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

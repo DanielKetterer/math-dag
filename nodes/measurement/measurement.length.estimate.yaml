@@ -1,0 +1,61 @@
+id: measurement.length.estimate
+concept: measurement
+facet: length
+level: 2
+type: procedure
+name: Estimate a length in a standard unit
+statement: Estimate a length in inches, feet, centimeters or meters by picturing copies of a benchmark
+  for the unit laid end to end along the object and giving the whole number of units that would fit.
+procedure:
+- Recall a benchmark for the named unit.
+- Picture copies of the benchmark laid end to end along the object, with no gaps or overlaps.
+- Give the number of copies that would fit as the estimate, with the unit.
+assess: Without measuring, about how many inches long is this new crayon? (A new crayon is a little over
+  3 inches long; any estimate from 2 to 5 inches is accepted.)
+sources:
+  ccss:
+  - 2.MD.A.3
+  learning_components:
+  - 5cfd8c36
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.length.unit-benchmarks
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 recalls a benchmark for the named unit and every later step copies that benchmark along
+      the object.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.no-gaps-overlaps
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 pictures copies of the benchmark laid end to end with no gaps or overlaps, which is length
+      as the count of spanning units.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.iterate-units
+    relation: procedural
+    points_to: procedure.2
+    why: Picturing copies of the benchmark laid end to end along the object is mental iteration of a length
+      unit.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

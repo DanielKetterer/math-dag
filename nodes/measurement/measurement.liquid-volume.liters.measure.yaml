@@ -1,0 +1,79 @@
+id: measurement.liquid-volume.liters.measure
+concept: measurement
+facet: liquid-volume
+level: 2
+type: procedure
+name: Measure a liquid volume in liters with a marked container
+statement: The volume of a liquid in liters is read from the level it reaches on a container whose scale
+  is marked in liters, including levels between labeled marks.
+procedure:
+- Find how many liters each step between marks on the scale stands for.
+- Find the marks just below and above the liquid level.
+- Read the volume from the level's position between those marks.
+assess: A tank's scale is labeled 0, 2, 4, 6, 8 liters. The water level is halfway between the 4 and the
+  6. How many liters of water are in the tank?
+sources:
+  ccss:
+  - 3.MD.A.2
+  learning_components:
+  - 78c89c62
+requires:
+- clause: standard
+  all_of:
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: statement
+    why: The container scale works like a number line in which each labeled mark is a number counted from
+      the 0 level.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds how many liters one step stands for by taking the difference between two neighboring
+      labeled marks.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number.halfway-between
+    relation: definitional
+    points_to: assess
+    why: The statement includes levels between labeled marks, such as the level halfway between the 4
+      and the 6.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement only says levels between labeled marks are read; only the test problem
+        puts the level exactly halfway between 4 and 6. Levels on a scale with unlabeled marks are read
+        by counting steps of the size found in step 1.'
+    status: proposed
+  - node: measurement.liquid-volume.liter-unit
+    relation: definitional
+    points_to: statement
+    why: The answer is a liquid volume stated in liters, so the learner must know what a liter measures.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

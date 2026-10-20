@@ -1,0 +1,44 @@
+id: shapes.triangle.by-sides.define
+concept: shapes
+facet: properties
+level: 2
+type: concept
+name: Equilateral, isosceles, and scalene triangles
+statement: An equilateral triangle has three sides of equal length; an isosceles triangle has at least
+  two sides of equal length; a scalene triangle has no two sides of equal length.
+assess: Three triangles have sides 5, 5, 5 cm; 5, 5, 8 cm; and 4, 6, 7 cm. Which are isosceles? Which
+  are scalene?
+sources:
+  ccss:
+  - 5.G.B.4
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.polygon.name-by-sides
+    relation: definitional
+    points_to: statement
+    why: These categories are kinds of triangle, the polygon named by having exactly three sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.attribute.equal-sides
+    relation: definitional
+    points_to: statement
+    why: Each category is defined by how many sides of the triangle are equal in length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,61 @@
+id: shapes.classify.angle-type
+concept: shapes
+facet: properties
+level: 2
+type: procedure
+name: Sort figures by angles of a named type
+statement: 'Sort two-dimensional figures by whether they have at least one angle of a named type: right,
+  acute, or obtuse.'
+procedure:
+- For each figure, decide the type of each of its angles.
+- Put the figures with at least one angle of the named type in one group and the figures with none in
+  the other.
+assess: 'Sort these six figures into two groups: those with at least one obtuse angle and those with none.'
+sources:
+  ccss:
+  - 4.G.A.2
+  learning_components:
+  - ec7e77d8
+requires:
+- clause: standard
+  all_of:
+  - node: angle.right.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 decides for each angle whether it is a right angle by comparing with a square corner.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.acute-obtuse.classify
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 also decides whether each angle is acute or obtuse compared with a right angle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: classifying.sort.given-attribute
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 puts figures with an angle of the named type in one group and the others in another.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

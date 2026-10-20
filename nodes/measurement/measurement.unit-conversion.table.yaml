@@ -1,0 +1,62 @@
+id: measurement.unit-conversion.table
+concept: measurement
+facet: unit-conversion
+level: 2
+type: representation
+name: Record measurement equivalents in a two-column table
+statement: A two-column conversion table lists a number of larger units in one column and the equal number
+  of smaller units in the other; when 1 larger unit = k smaller units, each row is (n, n x k).
+assess: '1 yd = 3 ft. Complete the table: yards 1, 2, 3, 4, 5 in the first column, feet in the second.'
+sources:
+  ccss:
+  - 4.MD.A.1
+  learning_components:
+  - 471384ea
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.unit-conversion.multiplicative-relation
+    relation: representational
+    points_to: statement
+    why: Each row of the table is (n, n x k), which records the relation that the smaller-unit count is
+      k times the larger-unit count.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: table.read-two-way
+    relation: representational
+    points_to: statement
+    why: The statement uses a two-column table of rows, so the learner must already read and fill entries
+      by row and column.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: Completing the yards-to-feet table in the test problem needs the products 1 x 3 through 5 x 3
+      recalled quickly.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s products 1x3 through 5x3 need facts; skip counting by
+        3 does the same sub-computation. The concept of the table does not.'
+    status: proposed
+status: proposed

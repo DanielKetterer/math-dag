@@ -1,0 +1,73 @@
+id: angle.protractor.measure
+concept: angle
+facet: measure
+level: 2
+type: procedure
+name: Measure an angle with a protractor
+statement: Measure an angle in whole-number degrees by placing a protractor's center on the vertex, lining
+  up 0 on one scale with one ray, and reading that same scale where the other ray crosses it.
+procedure:
+- Place the center mark of the protractor on the vertex.
+- Turn the protractor so that the 0 mark of one scale lies on one ray.
+- Follow that same scale from its 0 to where the other ray crosses it, extending the ray if it is too
+  short, and read the number of degrees.
+assess: Measure this angle with a protractor. (The drawn angle is 125 degrees, with neither ray horizontal.)
+sources:
+  ccss:
+  - 4.MD.C.6
+  learning_components:
+  - 522dfbfa
+requires:
+- clause: standard
+  all_of:
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The reading on the scale is the angle measure in degrees, so degrees as a count of one-degree
+      angles is used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure places the center mark on the vertex and aligns a ray, so the vertex and rays of
+      an angle are used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ray.meaning
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 extends a ray that is too short, which uses that a ray extends without end in one direction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number-line.measurement-scale
+    relation: representational
+    points_to: procedure.3
+    why: Step 3 reads a degree number from a scale with marks between the labeled numbers.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,46 @@
+id: perimeter.polygon.application
+concept: perimeter
+facet: core
+level: 2
+type: application
+name: Solve real-world perimeter problems with given side lengths
+statement: A real-world story gives all the side lengths of a polygon-shaped object, such as a pen or
+  a field, and asks for the length around it.
+assess: A farmer puts a fence around a triangular pen with sides of 14 m, 18 m, and 20 m. How many meters
+  of fence does she need?
+sources:
+  ccss:
+  - 3.MD.D.8
+  learning_components:
+  - 8ff532f5
+  - bba3f1fb
+requires:
+- clause: standard
+  all_of:
+  - node: perimeter.polygon.from-sides
+    relation: procedural
+    points_to: statement
+    why: The learner finds the length around the pen or field by adding all the given side lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem adds 14, 18, and 20.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement fixes no number range; only the test problem needs the sum 14 +
+        18 + 20 within 100. The addition of sides is carried by perimeter.polygon.from-sides (e538).'
+    status: proposed
+status: proposed

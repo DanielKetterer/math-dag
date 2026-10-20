@@ -1,0 +1,61 @@
+id: addition.within-10
+concept: addition
+facet: operation
+level: 1
+type: procedure
+name: Find a sum within 10
+statement: 'Find the sum of two whole numbers whose total is at most 10, by any reliable method: joining
+  objects, fingers or a drawing and counting, counting on, or a known fact.'
+assess: What is 4 + 3? Show or tell how you know.
+sources:
+  ccss:
+  - K.OA.A.2
+  learning_components:
+  - 10c58598
+requires:
+- clause: standard
+  all_of:
+  - node: addition.add-to.describe
+    relation: definitional
+    points_to: statement
+    why: A sum within 10 is the total after joining two amounts, whether found by objects, fingers, counting
+      on or a known fact, so the joining meaning must already be in words and numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: A learner can join 4 and 3 objects and count them without telling a joining story
+        in words, yet the sum needs the joining meaning of addition to be in place somewhere in the map.'
+    status: disputed
+  - node: addition.notation.expression
+    relation: representational
+    points_to: assess
+    why: The test problem is written as 4 + 3, so the learner must read the addition expression with its
+      plus sign.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem is written with a plus sign; the statement just asks for
+        the sum of two numbers by any method.'
+    status: proposed
+  - node: counting.objects
+    relation: procedural
+    points_to: statement
+    why: Every method named, from joining objects to counting on, finds the result by counting a collection
+      to find how many.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

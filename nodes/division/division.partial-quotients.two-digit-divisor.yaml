@@ -52,7 +52,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: multiplication.partial-products.by-one-digit
+  - node: multiplication.by-one-digit
     relation: procedural
     points_to: procedure.3
     why: Step 3 multiplies the two-digit divisor by a one-digit number exactly to find the multiple to
@@ -65,8 +65,12 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired multiplication.partial-products.by-one-digit: Multiplying a two-digit
+        divisor by a one-digit number can use any method.'
     status: proposed
-  - node: comparing.whole-numbers.magnitude
+  - node: comparing.whole-numbers.magnitude.multi-digit
     relation: procedural
     points_to: procedure.3
     why: Step 3 compares the multiple with the amount left to decide whether a smaller one is needed.
@@ -78,6 +82,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired comparing.whole-numbers.magnitude: Comparing multiples like 3600
+        with 7452 needs the multi-digit rule.'
     status: proposed
   - node: subtraction.standard-algorithm
     relation: procedural

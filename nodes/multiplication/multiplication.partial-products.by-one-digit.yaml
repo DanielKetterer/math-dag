@@ -24,7 +24,7 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: place-value.expanded-form
+  - node: place-value.expanded-form.multi-digit
     relation: procedural
     points_to: procedure.1
     why: Step 1 splits the multi-digit factor into thousands, hundreds, tens and ones.
@@ -36,6 +36,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired place-value.expanded-form: 3,846 is a four-digit number split into
+        thousands, hundreds, tens and ones.'
     status: proposed
   - node: multiplication.distributive
     relation: definitional

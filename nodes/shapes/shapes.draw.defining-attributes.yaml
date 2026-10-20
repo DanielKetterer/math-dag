@@ -1,0 +1,74 @@
+id: shapes.draw.defining-attributes
+concept: shapes
+facet: properties
+level: 2
+type: procedure
+name: Draw or build a non-typical example of a named shape
+statement: Draw or build a figure that has every defining attribute of a named shape while its non-defining
+  attributes (size, orientation, proportions) differ from a given example.
+procedure:
+- Recall the defining attributes of the named shape.
+- Choose a size, orientation or proportions different from the given example.
+- Draw or build the figure so that it has each defining attribute, and check it is closed.
+assess: Here is a triangle with equal sides pointing up. Draw a triangle that looks very different from
+  it but is still a triangle.
+sources:
+  ccss:
+  - 1.G.A.1
+  learning_components:
+  - 205ba874
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.attribute.defining
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 recalls the defining attributes of the named shape.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.attribute.non-defining
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 chooses a size, orientation or proportions that differ from the given example, which relies
+      on those features being non-defining.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.draw.named
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 draws the figure with the right sides and corners, which is drawing a named flat shape.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.closed-boundary
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 checks that the drawn figure is closed.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

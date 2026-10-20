@@ -1,0 +1,142 @@
+id: data.line-plot.fraction.add-subtract
+concept: data
+facet: line-plot
+level: 2
+type: application
+name: Solve addition and subtraction problems from a fraction line plot
+statement: Solve problems that add or subtract fractional measurements read from a line plot whose scale
+  is marked in fractions of a unit.
+assess: A line plot of insect lengths runs from 0 to 1 inch, marked in eighths, with Xs at 2/8, 3/8, 3/8,
+  5/8, and 7/8. How much longer is the longest insect than the shortest?
+sources:
+  ccss:
+  - 4.MD.B.4
+  learning_components:
+  - 751c388e
+requires:
+- clause: via-make
+  all_of:
+  - node: fraction.addition.like-denominators
+    relation: procedural
+    points_to: statement
+    why: Adding fractional measurements read from one scale is adding fractions with like denominators.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.like-denominators
+    relation: procedural
+    points_to: statement
+    why: Subtracting fractional measurements read from one scale is subtracting fractions with like denominators.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.comparison
+    relation: definitional
+    points_to: assess
+    why: The test problem asks how much longer the longest insect is than the shortest, a comparison subtraction.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s ''how much longer'' framing is a comparison subtraction;
+        the statement just says subtract measurements, covered by like-denominator subtraction.'
+    status: proposed
+  - node: data.line-plot.fraction-scale.make
+    relation: representational
+    points_to: statement
+    why: Reading values from a line plot marked in fractions uses the same scale conventions as making
+      one.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Reading values from a fraction scale does not require having constructed such
+        a plot; reading needs only the line plot form and fractions on a number line. | other route: Use
+        data.line-plot.make (the plot form) together with fraction.non-unit.number-line to read fractional
+        marks, without the make-a-fraction-plot node.'
+    status: disputed
+- clause: critic-route-1
+  note: Read the fractional marks from the plot form and a fraction number line, without having made a
+    fraction plot
+  all_of:
+  - node: fraction.addition.like-denominators
+    relation: procedural
+    points_to: statement
+    why: Adding fractional measurements read from one scale is adding fractions with like denominators.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.like-denominators
+    relation: procedural
+    points_to: statement
+    why: Subtracting fractional measurements read from one scale is subtracting fractions with like denominators.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.comparison
+    relation: definitional
+    points_to: assess
+    why: The test problem asks how much longer the longest insect is than the shortest, a comparison subtraction.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s ''how much longer'' framing is a comparison subtraction;
+        the statement just says subtract measurements, covered by like-denominator subtraction.'
+    status: proposed
+  - node: data.line-plot.make
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Read the fractional marks from the plot form and a
+      fraction number line, without having made a fraction plot'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: fraction.non-unit.number-line
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Read the fractional marks from the plot form and a
+      fraction number line, without having made a fraction plot'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

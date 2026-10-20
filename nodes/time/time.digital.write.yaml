@@ -1,0 +1,48 @@
+id: time.digital.write
+concept: time
+facet: clock
+level: 2
+type: representation
+name: Write a time described in words as a digital time
+statement: A time given in words is written as h:mm, with the hour before the colon and the minutes past
+  the hour as two digits after it, so o'clock is written :00 and half past is written :30.
+assess: Write 'twenty-five minutes past six' the way a digital clock shows it.
+sources:
+  ccss:
+  - 1.MD.B.3
+  - 2.MD.C.7
+  learning_components:
+  - fca56ad3
+  - 14fb1a65
+requires:
+- clause: standard
+  all_of:
+  - node: time.digital.read
+    relation: representational
+    points_to: statement
+    why: Writing h:mm uses the same notation the learner reads on a digital clock, with the hour before
+      the colon and two minute digits after.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: numeral.write
+    relation: procedural
+    points_to: statement
+    why: The learner writes the numerals for the hour and for the minutes spoken in words, such as twenty-five,
+      as digits.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,76 @@
+id: time.analog.draw-five-minutes
+concept: time
+facet: clock
+level: 2
+type: procedure
+name: Show a time to five minutes on an analog clock
+statement: A time h:mm, with mm a multiple of 5, is shown on an analog clock face by drawing the minute
+  hand to the number reached by counting by fives from 12 to mm, and the hour hand between h and the next
+  number, closer to h when mm is small and closer to the next number when mm is large.
+procedure:
+- Count by fives from 12 until reaching mm; draw the minute hand to that number.
+- Draw the hour hand between h and the next number, positioned as far along as the minute hand is around
+  the clock.
+assess: Draw the hands on this blank clock face to show 7:20.
+sources:
+  ccss:
+  - 2.MD.C.7
+  learning_components:
+  - cf3900ab
+  - f25112a6
+requires:
+- clause: standard
+  all_of:
+  - node: counting.skip.fives
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 counts by fives from 12 until reaching mm to find where the minute hand is drawn.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: time.analog.draw-half-hour
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 places the hour hand part of the way between h and the next number, extending the halfway
+      position used for half past.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: time.digital.read
+    relation: representational
+    points_to: statement
+    why: The time is given as h:mm, so the learner must read the hour before the colon and the minutes
+      after it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: time.analog.five-minutes
+    relation: representational
+    points_to: statement
+    why: The drawn hands must match how minute and hour hands are read to the nearest five minutes.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

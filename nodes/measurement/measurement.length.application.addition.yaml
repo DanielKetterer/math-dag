@@ -1,0 +1,82 @@
+id: measurement.length.application.addition
+concept: measurement
+facet: length
+level: 2
+type: application
+name: Solve addition word problems about lengths within 100
+statement: A one-step word problem gives lengths in the same unit that are joined end to end or combined,
+  with sums within 100; the learner finds the unknown length and states it with the unit.
+assess: A ribbon is 34 centimeters long. Maya tapes another ribbon 25 centimeters long to its end. How
+  long is the ribbon now?
+sources:
+  ccss:
+  - 2.MD.B.5
+  learning_components:
+  - 55fefca2
+  - 0adb13b7
+requires:
+- clause: standard
+  all_of:
+  - node: addition.within-100
+    relation: procedural
+    points_to: statement
+    why: The unknown length is the sum of two given lengths with sums within 100, such as 34 plus 25.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.no-gaps-overlaps
+    relation: definitional
+    points_to: statement
+    why: Lengths joined end to end make a total length that is the count of units spanning both, so their
+      measures add.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.add-to-story
+    relation: definitional
+    points_to: statement
+    why: One length taped on to the end of another is an add-to situation with the result unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.put-together.total-unknown
+    relation: definitional
+    points_to: statement
+    why: Lengths that are combined into one whole length form a put-together situation with the total
+      unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.ruler
+    relation: definitional
+    points_to: statement
+    why: Lengths given in centimeters or inches are measurements in standard units, and the answer is
+      stated with the unit.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The problem gives lengths as numbers with units and no measuring step is performed,
+        so the ruler procedure is not used; but the lengths must mean standard-unit measurements, which
+        the map builds mainly through ruler measuring.'
+    status: disputed
+status: proposed

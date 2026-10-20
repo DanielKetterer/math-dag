@@ -1,0 +1,74 @@
+id: addition.within-100
+concept: addition
+facet: operation
+level: 3
+type: procedure
+name: Add within 100
+statement: Find the sum of two whole numbers when the sum is at most 100, accurately and without objects,
+  by any reliable method; a place-value strategy, a strategy based on properties, and the standard algorithm
+  all meet it.
+assess: Find 47 + 38 and 56 + 27. Use any method.
+sources:
+  ccss:
+  - 2.NBT.B.5
+  learning_components:
+  - 39d56ac9
+requires:
+- clause: standard
+  all_of:
+  - node: addition.two-digit.like-units
+    relation: definitional
+    points_to: statement
+    why: Every method that meets the statement, place-value strategy or standard algorithm, adds tens
+      to tens and ones to ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.two-digit.compose-ten
+    relation: definitional
+    points_to: statement
+    why: The test sums 47 + 38 and 56 + 27 have ones that total more than 10, so ten ones must be regrouped
+      as a ten.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-20.fluency
+    relation: procedural
+    points_to: assess
+    why: Adding the ones in 47 + 38 and 56 + 27 uses sums such as 7 + 8 and 6 + 7 that go past 10.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test sums have ones that pass 10 (7+8, 6+7); a learner can also count
+        on or make a ten, and the statement does not name the fact node.'
+    status: proposed
+  - node: place-value.two-digit.tens-ones
+    relation: definitional
+    points_to: statement
+    why: Adding 47 + 38 needs 47 read as 4 tens and 7 ones, in any place-value method or the standard
+      algorithm.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

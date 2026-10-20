@@ -1,0 +1,67 @@
+id: measurement.unit-conversion.to-smaller.fraction
+concept: measurement
+facet: unit-conversion
+level: 3
+type: procedure
+name: Convert a fractional measurement to a smaller unit
+statement: A measurement of a/b larger units, with 1 larger unit = k smaller units, equals (a/b) x k smaller
+  units.
+procedure:
+- Find k, the number of smaller units in 1 larger unit.
+- Multiply the fraction a/b by k.
+- Label the product with the smaller unit.
+assess: How many minutes are in 3/4 of an hour? (1 hr = 60 min)
+sources:
+  ccss:
+  - 4.MD.A.2
+  - 5.MD.A.1
+  learning_components:
+  - 783e04ae
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.unit-conversion.multiplicative-relation
+    relation: definitional
+    points_to: statement
+    why: The statement (a/b) x k smaller units is the multiplicative relation between larger and smaller
+      unit counts for a fractional count.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiply-whole.symbolic
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies the fraction a/b by the whole number k, which is a fraction times whole number
+      product.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: assess
+    why: Finding 3/4 x 60 in the test problem gives 180/4, which must be divided to get a whole number
+      of minutes.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Dividing 180 by 4 (or 60 by 4) is required by the test problem''s numbers; the
+        statement multiplies a/b by k for any fraction and the procedure ends at a product.'
+    status: proposed
+status: proposed

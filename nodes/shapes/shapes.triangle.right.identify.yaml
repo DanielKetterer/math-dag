@@ -1,0 +1,71 @@
+id: shapes.triangle.right.identify
+concept: shapes
+facet: properties
+level: 2
+type: concept
+name: Right triangles as a category
+statement: A right triangle is a triangle with a right angle; right triangles form a category whatever
+  their size, side lengths, or orientation.
+assess: Which of these triangles, drawn at different sizes and turned different ways with no angle marks,
+  are right triangles?
+sources:
+  ccss:
+  - 4.G.A.2
+  learning_components:
+  - db42dcec
+requires:
+- clause: standard
+  all_of:
+  - node: angle.right.meaning
+    relation: definitional
+    points_to: statement
+    why: A right triangle is defined as a triangle with a right angle, a square corner.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.polygon.name-by-sides
+    relation: definitional
+    points_to: statement
+    why: The category is a kind of triangle, the polygon named by having exactly three sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.category.defined-by-attribute
+    relation: definitional
+    points_to: statement
+    why: The statement says right triangles form a category because they share the attribute of a right
+      angle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.attribute.non-defining
+    relation: definitional
+    points_to: statement
+    why: The statement says the category holds whatever the size or orientation, as in the turned triangles
+      of the test problem.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

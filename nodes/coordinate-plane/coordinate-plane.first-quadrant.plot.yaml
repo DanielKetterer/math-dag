@@ -1,0 +1,74 @@
+id: coordinate-plane.first-quadrant.plot
+concept: coordinate-plane
+facet: location
+level: 2
+type: procedure
+name: Plot a point with whole-number coordinates in the first quadrant
+statement: Plot the point with given whole-number coordinates (a, b) on a first-quadrant coordinate grid.
+procedure:
+- Start at the origin.
+- Move a units in the direction of the x-axis.
+- From there, move b units in the direction of the y-axis.
+- Mark the point reached.
+assess: Plot the points (5, 2) and (0, 3) on this grid.
+sources:
+  ccss:
+  - 5.G.A.1
+  learning_components:
+  - 9f6772f5
+requires:
+- clause: standard
+  all_of:
+  - node: coordinate-plane.axes-origin
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 starts at the origin, the crossing point of the two axes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.ordered-pair.meaning
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 and 3 move a units along the x-axis then b units in the y direction, as the pair tells.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate.ordered-pair.notation
+    relation: representational
+    points_to: statement
+    why: The given point is written as an ordered pair (a, b) whose parts must be read in order.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: point.meaning
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 marks the point reached, an exact location drawn as a dot.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

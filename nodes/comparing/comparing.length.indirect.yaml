@@ -1,0 +1,51 @@
+id: comparing.length.indirect
+concept: comparing
+facet: length
+level: 1
+type: procedure
+name: Compare two lengths indirectly using a third object
+statement: Two lengths that cannot be placed side by side are compared by matching a third object, such
+  as a string, to one of them and then comparing that third object with the other; whichever is longer
+  than the matched string is the longer.
+procedure:
+- Lay a string or strip along the first object and mark or cut it at the first object's length.
+- Place the marked string along the second object, with one end lined up.
+- If the second object extends past the mark, it is longer than the first; if it stops short, it is shorter;
+  if it ends at the mark, they are the same length.
+assess: The door and the bookshelf cannot be moved next to each other. Use this piece of string to find
+  out which is wider.
+sources:
+  ccss:
+  - 1.MD.A.1
+  learning_components:
+  - e650344b
+requires:
+- clause: standard
+  all_of:
+  - node: comparing.size.direct
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 sets the marked string beside the second object and compares the two lengths directly,
+      side by side.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.length.describe-difference
+    relation: representational
+    points_to: procedure.3
+    why: Step 3 states the result of the string comparison with longer, shorter or the same length, using
+      the comparison words.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,83 @@
+id: money.application.subtraction
+concept: money
+facet: core
+level: 2
+type: application
+name: Solve subtraction word problems with coins and dollars
+statement: A one-step word problem takes away or compares amounts of money given as coins, cents, or whole
+  dollars, all in one unit; the learner finds the unknown amount and writes it with the correct sign.
+assess: Sam has 3 quarters. He buys a pencil for 40 cents. How much money does Sam have left?
+sources:
+  ccss:
+  - 2.MD.C.8
+  learning_components:
+  - 55158b1c
+requires:
+- clause: standard
+  all_of:
+  - node: money.coins.total-value
+    relation: definitional
+    points_to: statement
+    why: An amount given as coins, such as 3 quarters, must be turned into a value in cents before the
+      cost is taken away.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: statement
+    why: The unknown amount is the difference of two amounts in one unit, for example 75 cents minus 40
+      cents, and any method would do.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: money.notation
+    relation: representational
+    points_to: statement
+    why: The answer is written with the correct sign, the cents sign after a number of cents or the dollar
+      sign before dollars.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.application.take-from-story
+    relation: definitional
+    points_to: statement
+    why: Spending money so that some is taken away is a take-from situation with the amount left unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.application.compare.difference-unknown
+    relation: definitional
+    points_to: statement
+    why: Comparing two amounts of money to find how much more one is is a compare situation with the difference
+      unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

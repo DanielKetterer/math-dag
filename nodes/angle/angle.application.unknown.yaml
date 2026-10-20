@@ -1,0 +1,58 @@
+id: angle.application.unknown
+concept: angle
+facet: measure
+level: 2
+type: application
+name: Solve real-world problems that find an unknown angle
+statement: Solve real-world problems in which an angle is made of non-overlapping parts and the whole
+  or one part is unknown, by adding or subtracting angle measures.
+assess: A lawn sprinkler turns through 160 degrees in one sweep. It has already turned through 75 degrees.
+  How many more degrees will it turn to finish the sweep?
+sources:
+  ccss:
+  - 4.MD.C.7
+  learning_components:
+  - 2d383636
+  - b9ddd899
+requires:
+- clause: standard
+  all_of:
+  - node: angle.additive
+    relation: definitional
+    points_to: statement
+    why: The statement has an angle made of non-overlapping parts, and an unknown whole is found by adding
+      measures.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.unknown-part
+    relation: procedural
+    points_to: statement
+    why: The statement has an unknown part found by subtracting a known part from the whole, as in the
+      sprinkler problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.put-together.addend-unknown
+    relation: definitional
+    points_to: statement
+    why: Real-world story problems with a part unknown need the story structure (whole and one part given);
+      the diagram-based unknown-part node does not teach reading that structure from a story.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

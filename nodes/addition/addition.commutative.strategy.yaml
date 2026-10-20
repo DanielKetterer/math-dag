@@ -33,7 +33,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: addition.count-on
+  - node: addition.within-20
     relation: procedural
     points_to: assess
     why: The test problem 2 + 9 is solved after switching by counting on from the larger addend.
@@ -46,6 +46,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired addition.count-on: 2 + 9 is past 10 and the statement offers counting
+        on or a known fact, so no method is required; no add-within-20 candidate exists.'
     status: proposed
   - node: addition.notation.expression
     relation: definitional

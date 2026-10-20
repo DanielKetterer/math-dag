@@ -1,0 +1,78 @@
+id: measurement.time.elapsed.within-hour
+concept: measurement
+facet: time
+level: 2
+type: procedure
+name: Find elapsed minutes between two times in the same hour
+statement: The time interval between two clock times in the same hour is the number of minutes from the
+  start time to the end time.
+procedure:
+- Find the minutes of the start time and of the end time.
+- Find how many minutes it takes to go from the start minutes to the end minutes.
+assess: One clock shows 2:15 and a later clock shows 2:52. How many minutes pass from the first time to
+  the second?
+sources:
+  ccss:
+  - 3.MD.A.1
+  learning_components:
+  - 3c3c56d8
+requires:
+- clause: via-tell-nearest-minute
+  all_of:
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds how many minutes lie from the start minutes up to the end minutes, which is a difference
+      within 60.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.time.tell-nearest-minute
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 reads the minutes of the start time and of the end time from the two clock times.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The minutes of the two times can be read straight from digital numerals such
+        as 2:15 and 2:52 (the test problem writes them that way), with no analog reading. | other route:
+        Times are shown as digital clocks or numerals; the minutes are read with time.digital.read.'
+    status: disputed
+- clause: critic-route-1
+  note: Times are shown as digital clocks or numerals, so the minutes are read without analog reading.
+  all_of:
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds how many minutes lie from the start minutes up to the end minutes, which is a difference
+      within 60.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: time.digital.read
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Times are shown as digital clocks or numerals, so
+      the minutes are read without analog reading.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

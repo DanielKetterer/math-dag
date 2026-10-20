@@ -1,0 +1,71 @@
+id: multiplication.array-area.whole-number-product.represent
+concept: multiplication
+facet: array-area
+level: 2
+type: representation
+name: Represent a whole-number product as a rectangular area
+statement: The product a x b of whole numbers is represented by a rectangle with side lengths a and b
+  units, whose area is a x b square units.
+assess: Draw a rectangle on grid paper whose area shows the product 3 x 8, and label its side lengths.
+sources:
+  ccss:
+  - 3.MD.C.7.b
+  learning_components:
+  - d5edcb0c
+requires:
+- clause: via-length-times-width
+  all_of:
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: The product a x b being represented is a number of equal groups, here rows of equal length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: definitional
+    points_to: statement
+    why: The representation depends on the area of a rectangle with sides a and b being the product a
+      x b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The drawn rectangle shows the product as an area whether the learner knows the
+        area equals the product from the multiplication rule or from the tiling argument. The test problem
+        asks only for a 3 by 8 rectangle with labeled sides. | other route: Learn that a rectangle a by
+        b has area a x b from the tiling argument (area.rectangle.tiling-product.explain) instead of from
+        the level 3 rule.'
+    status: disputed
+- clause: via-explain
+  all_of:
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: The product a x b being represented is a number of equal groups, here rows of equal length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.tiling-product.explain
+    relation: definitional
+    points_to: statement
+    why: The statement says the rectangle with sides a and b has area a x b, the result of that argument.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The fact that a rectangle with sides a and b has area a x b can instead be taken
+        from the multiplication rule for area. | other route: Use the level 3 rule area.rectangle.length-times-width
+        in place of the tiling explanation.'
+    status: disputed
+status: proposed

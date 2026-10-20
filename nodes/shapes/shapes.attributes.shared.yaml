@@ -1,0 +1,60 @@
+id: shapes.attributes.shared
+concept: shapes
+facet: category
+level: 2
+type: concept
+name: Shapes in different categories can share attributes
+statement: Two shapes with different category names can have an attribute in common, such as having four
+  sides; sharing an attribute does not make them the same kind of shape.
+assess: A rhombus with no right angles and a rectangle that is not a square are shown. Name one attribute
+  both shapes have.
+sources:
+  ccss:
+  - 3.G.A.1
+  learning_components:
+  - 7f057a0c
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.attribute.defining
+    relation: definitional
+    points_to: statement
+    why: The statement treats an attribute such as having four sides as a defining attribute that two
+      named shapes can have in common.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.sides.count
+    relation: definitional
+    points_to: assess
+    why: The test problem is answered by counting the sides of the rhombus and the rectangle and noting
+      both have four.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test is answered most naturally by counting sides, but the idea (different
+        shapes can share an attribute) works with any shared attribute, such as having straight sides
+        or a closed boundary.'
+    status: proposed
+  - node: shapes.compare.by-attributes
+    relation: definitional
+    points_to: statement
+    why: Finding an attribute two different shapes have in common is done by comparing the two shapes
+      part by part.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

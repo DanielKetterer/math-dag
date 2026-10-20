@@ -1,0 +1,62 @@
+id: measurement.length.ruler.from-zero
+concept: measurement
+facet: length
+level: 2
+type: concept
+name: Ruler numbers count units from the 0 mark
+statement: The number at a mark on a ruler counts the whole units from the 0 mark to that mark, so an
+  object's length is the number of units between its two ends, which equals the number at its far end
+  only when its near end is at 0.
+assess: A crayon lies along an inch ruler from the 2 mark to the 7 mark. How long is the crayon?
+sources:
+  ccss:
+  - 2.MD.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: statement
+    why: The ruler is a number line on which each whole number marks a length counted from 0, which is
+      the reading the statement describes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.no-gaps-overlaps
+    relation: definitional
+    points_to: statement
+    why: The statement says an object's length is the number of whole units between its two ends, which
+      is length as the count of spanning units.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-10
+    relation: procedural
+    points_to: assess
+    why: The crayon from the 2 mark to the 7 mark is found as 7 minus 2, a difference within 10.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is about what ruler numbers mean; only the crayon problem asks for
+        the difference 7 - 2. The same count can be made by counting the unit spaces between the marks,
+        so it is a sub-computation of the test, not of the idea.'
+    status: proposed
+status: proposed

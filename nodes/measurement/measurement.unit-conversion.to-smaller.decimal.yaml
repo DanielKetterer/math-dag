@@ -1,0 +1,62 @@
+id: measurement.unit-conversion.to-smaller.decimal
+concept: measurement
+facet: unit-conversion
+level: 3
+type: procedure
+name: Convert a decimal metric measurement to a smaller unit
+statement: A metric measurement written as a decimal is converted to a smaller unit by multiplying it
+  by the power of ten (10, 100, or 1000) that relates the two units.
+procedure:
+- Find the power of ten k with 1 larger unit = k smaller units.
+- Multiply the decimal by k.
+- Label the product with the smaller unit.
+assess: Write 3.25 kg in grams. (1 kg = 1000 g)
+sources:
+  ccss:
+  - 5.MD.A.1
+  learning_components:
+  - 783e04ae
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.unit-conversion.multiplicative-relation
+    relation: definitional
+    points_to: statement
+    why: The statement converts a measurement to smaller units by multiplying by k, the relation between
+      larger and smaller unit counts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.power-of-ten.decimal.rule
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies the decimal by 10, 100 or 1000, which is carried out by moving the decimal
+      point right.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: statement
+    why: The measurement is written as a decimal such as 3.25, so decimal notation for tenths and hundredths
+      must be understood.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

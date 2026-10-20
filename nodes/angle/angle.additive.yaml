@@ -1,0 +1,63 @@
+id: angle.additive
+concept: angle
+facet: measure
+level: 2
+type: concept
+name: Angle measure is additive
+statement: When an angle is split into non-overlapping angles that share its vertex, the measure of the
+  whole angle is the sum of the measures of the parts.
+assess: Ray BD lies inside angle ABC and splits it into angle ABD, which measures 30 degrees, and angle
+  DBC, which measures 45 degrees. Without measuring, what is the measure of angle ABC?
+sources:
+  ccss:
+  - 4.MD.C.7
+  learning_components:
+  - 4086d386
+  - 7a331eb0
+requires:
+- clause: standard
+  all_of:
+  - node: angle.measure.degrees
+    relation: justificatory
+    points_to: statement
+    why: The whole measure equals the sum of the part measures because each measure counts one-degree
+      angles.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement splits an angle into angles that share its vertex, so the vertex and rays of an
+      angle are used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem adds 30 degrees and 45 degrees to find the whole angle.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: 30 + 45 is the test problem''s computation; the concept is additivity of angle
+        measure.'
+    status: proposed
+status: proposed

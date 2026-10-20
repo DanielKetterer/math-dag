@@ -1,0 +1,89 @@
+id: data.line-plot.fractional.make
+concept: data
+facet: line-plot
+level: 2
+type: representation
+name: Make a line plot of measurements in halves and fourths
+statement: 'Show a set of measurements as a line plot: a number line whose scale is marked in whole numbers,
+  halves, or fourths, with one mark (such as an X) above the scale for each measurement.'
+procedure:
+- Choose a scale unit (whole, half, or fourth) that every measurement lands on.
+- Draw a number line covering the smallest to the largest measurement, marked in that unit.
+- Put one X above the matching point for each measurement.
+assess: 'Pencil lengths in inches: 2 1/4, 2 1/2, 2 1/2, 3, 2 3/4, 2 1/2, 2 1/4, 3. Make a line plot of
+  these lengths with the scale marked in fourths of an inch.'
+sources:
+  ccss:
+  - 3.MD.B.4
+  learning_components:
+  - 029e11a6
+requires:
+- clause: standard
+  all_of:
+  - node: data.line-plot.make
+    relation: representational
+    points_to: statement
+    why: The plot is the same display as the whole-unit line plot, a number line with one X above the
+      scale per measurement.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.mixed-number.meaning
+    relation: representational
+    points_to: statement
+    why: The measurements such as 2 1/4 are whole numbers plus fractions and must be located on the scale.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.same-point
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 picks a unit all measurements land on, so halves such as 2 1/2 must be seen as points
+      among the fourth marks.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.number-line
+    relation: representational
+    points_to: procedure.2
+    why: Step 2 draws a number line marked in halves or fourths, so fractions like 3/4 are placed on the
+      line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.unit.number-line
+    relation: representational
+    points_to: statement
+    why: The scale is marked in halves or fourths, which are unit fractions on a number line.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

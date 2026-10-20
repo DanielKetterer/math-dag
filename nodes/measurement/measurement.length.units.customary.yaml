@@ -1,0 +1,42 @@
+id: measurement.length.units.customary
+concept: measurement
+facet: length
+level: 3
+type: fact
+name: Relative sizes of customary length units
+statement: Know that 1 ft = 12 in and 1 yd = 3 ft, so a foot is 12 times as long as an inch and a yard
+  is 3 times as long as a foot.
+assess: 'Without computing: how many inches are in 1 foot? How many feet are in 1 yard? Which is longer,
+  1 ft or 1 yd?'
+sources:
+  ccss:
+  - 4.MD.A.1
+  learning_components:
+  - c1f00fc0
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.comparison
+    relation: definitional
+    points_to: statement
+    why: The statement says a foot is 12 times as long as an inch, which is a multiplicative comparison
+      of two lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.attribute
+    relation: definitional
+    points_to: statement
+    why: The assess asks 'which is longer'; length as an attribute is the needed base.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

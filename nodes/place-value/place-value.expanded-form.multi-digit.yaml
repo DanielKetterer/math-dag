@@ -1,0 +1,79 @@
+id: place-value.expanded-form.multi-digit
+concept: place-value
+facet: whole-number
+level: 3
+type: representation
+name: Expanded form of multi-digit whole numbers
+statement: A whole number up to 1,000,000 is the sum of the values of its digits, each digit times the
+  value of its place, and expanded form writes that sum with one term per nonzero digit (40,603 = 40,000
+  + 600 + 3).
+assess: Write 40,603 in expanded form. Write the numeral for 300,000 + 2,000 + 50 + 4.
+sources:
+  ccss:
+  - 4.NBT.A.2
+  learning_components:
+  - 66dbae34
+  - 0bfafde1
+requires:
+- clause: via-ten-times-right
+  all_of:
+  - node: place-value.expanded-form
+    relation: definitional
+    points_to: statement
+    why: Writing each digit times its place value as a sum with one term per nonzero digit is the smaller-number
+      expanded form extended to more places.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.ten-times-right
+    relation: definitional
+    points_to: statement
+    why: The values of the ten-thousands and hundred-thousands places in 40,603 and 300,000 come from
+      each place being ten times the place to its right.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The values of ten-thousands and hundred-thousands can be learned by extending
+        place names and values by periods, without the ten-times structure; a level 3 representation does
+        not require the structure. | other route: Learn place names and values by periods (numeral.read.periods)
+        and extend expanded form place by place.'
+    status: disputed
+- clause: critic-route-1
+  note: Learn place names and values by periods and extend expanded form place by place, without the ten-times
+    structure.
+  all_of:
+  - node: place-value.expanded-form
+    relation: definitional
+    points_to: statement
+    why: Writing each digit times its place value as a sum with one term per nonzero digit is the smaller-number
+      expanded form extended to more places.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: numeral.read.periods
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Learn place names and values by periods and extend
+      expanded form place by place, without the ten-times structure.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

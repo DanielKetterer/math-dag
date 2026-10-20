@@ -68,7 +68,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: comparing.whole-numbers.magnitude
+  - node: comparing.whole-numbers.magnitude.multi-digit
     relation: procedural
     points_to: procedure.2
     why: Step 2 requires choosing a multiple that is not more than the amount left, which compares two
@@ -79,8 +79,12 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired comparing.whole-numbers.magnitude: Comparing multiples like 600 with
+        852 and 60 with 252 differs in digits, up to four-digit dividends.'
     status: proposed
-  - node: subtraction.standard-algorithm
+  - node: subtraction.within-1000
     relation: procedural
     points_to: procedure.3
     why: Step 3 subtracts a multiple from an amount of up to four digits, often with regrouping.
@@ -92,6 +96,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired subtraction.standard-algorithm: Subtracting a multiple from the amount
+        left in the test (852, 252) is within 1000 by any method.'
     status: proposed
   - node: addition.within-1000
     relation: definitional

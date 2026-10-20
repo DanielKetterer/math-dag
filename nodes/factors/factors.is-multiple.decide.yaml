@@ -33,7 +33,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: division.partial-quotients.one-digit-divisor.remainder
+  - node: division.by-one-digit.remainder
     relation: procedural
     points_to: procedure.1
     why: Step 1 divides n by d and looks for a remainder of 0, as in 91 divided by 7.
@@ -47,6 +47,10 @@ requires:
       note: 'route-only: The statement gives two checks: divide and look for remainder 0, or skip-count
         by d up to n. Division with remainder is only the first. | other route: Skip-count by d (repeated
         addition of d) and see whether the count lands on n.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired division.partial-quotients.one-digit-divisor.remainder: n up to 100
+        divided by a one-digit number with remainder 0 or not, by any method.'
     status: disputed
 - clause: critic-route-1
   note: Skip-count by d (repeated addition of d) up to n and see whether the count lands on n, with no

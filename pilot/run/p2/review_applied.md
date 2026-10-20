@@ -1,0 +1,34 @@
+# Review verdicts applied by merge_run
+
+- partitioning.rectangle.rows-columns: route critic-route-1 removed (superset of another route); moved to related: nothing
+- multiplication.two-digit-by-two-digit: route critic-route-1 removed (superset of another route); moved to related: ['place-value.factor-of-ten']
+- L4 expressions.parentheses -> multiplication.by-one-digit: dropped
+- L5 equation.unknown-symbol -> addition.within-20.fluency: replaced by addition.within-20
+- L1 addition.within-20 -> addition.count-on: added on every route
+- L1 addition.within-20: added route via-make-ten (without ['addition.count-on'], plus ['addition.make-ten'])
+- L1 addition.within-20: added route via-recall (without ['addition.count-on'], plus ['addition.within-20.fluency'])
+- L2 subtraction.within-20 -> subtraction.count-back: added on every route
+- L2 subtraction.within-20: added route via-decompose-to-ten (without ['subtraction.count-back'], plus ['subtraction.decompose-to-ten'])
+- L2 subtraction.within-20: added route via-related-addition (without ['subtraction.count-back'], plus ['subtraction.unknown-addend.strategy'])
+- L2 subtraction.within-20: added route via-recall (without ['subtraction.count-back'], plus ['subtraction.within-20.fluency'])
+- L3 measurement.weight.attribute -> comparing.weight.direct: moved to related (common_path)
+- measurement.weight.attribute: now a root (every prerequisite dropped or moved in review)
+- data.categorical.order-by-count: route critic-route-1 removed (superset of another route); moved to related: ['comparing.count.by-counting']
+- area.rectangle.tiles-along-side: route critic-route-1 removed (superset of another route); moved to related: nothing
+- multiplication.array-area.whole-number-product.represent: route critic-route-1 removed (superset of another route); moved to related: nothing
+- multiplication.array-area.whole-number-product.represent: route critic-route-2 removed (superset of another route); moved to related: nothing
+- area.additive: route critic-route-1 removed (superset of another route); moved to related: nothing
+- area.additive: route critic-route-2 removed (superset of another route); moved to related: nothing
+- perimeter.same-area.different-perimeters: route via-length-times-width removed (superset of another route); moved to related: ['perimeter.meaning']
+- perimeter.same-area.different-perimeters: route via-represent removed (superset of another route); moved to related: nothing
+- measurement.unit-conversion.to-larger.whole: route critic-route-1 removed (superset of another route); moved to related: nothing
+- measurement.unit-conversion.to-larger.whole: route critic-route-2 removed (superset of another route); moved to related: nothing
+- measurement.unit-conversion.to-larger.mixed-units: route critic-route-1 removed (superset of another route); moved to related: nothing
+- measurement.unit-conversion.to-larger.mixed-units: route critic-route-2 removed (superset of another route); moved to related: nothing
+- measurement.unit-conversion.to-larger.fraction: route critic-route-1 removed (superset of another route); moved to related: nothing
+- measurement.unit-conversion.to-larger.fraction: route critic-route-2 removed (superset of another route); moved to related: nothing
+- number-line.measurement-scale: route critic-route-1 removed (superset of another route); moved to related: nothing
+- number-line.measurement-scale: route critic-route-2 removed (superset of another route); moved to related: nothing
+- measurement.application.money: route critic-route-1 removed (superset of another route); moved to related: nothing
+- volume.prism.formula.base-height: route critic-route-1 removed (superset of another route); moved to related: ['volume.prism.formula.lwh']
+- volume.application.prism: route via-apply removed (superset of another route); moved to related: ['multiplication.multi-digit-by-two-digit']

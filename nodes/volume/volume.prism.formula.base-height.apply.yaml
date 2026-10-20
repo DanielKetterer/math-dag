@@ -1,0 +1,72 @@
+id: volume.prism.formula.base-height.apply
+concept: volume
+facet: unit-cubes
+level: 3
+type: procedure
+name: Find the volume of a rectangular prism with V = B x h
+statement: Find the volume of a right rectangular prism by multiplying the area of its base by its height.
+procedure:
+- Find or read the area of the base in square units.
+- Multiply the base area by the height.
+- Label the product in cubic units.
+assess: A prism has a base with an area of 35 square inches and a height of 6 inches. Use V = B x h to
+  find its volume.
+sources:
+  ccss:
+  - 5.MD.C.5.b
+  learning_components:
+  - 81d8e832
+requires:
+- clause: standard
+  all_of:
+  - node: volume.prism.formula.base-height
+    relation: definitional
+    points_to: statement
+    why: The procedure applies the formula V = B x h that the statement relies on.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds the area of the base, which for a rectangular base is length times width.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies the base area by the height, for example 35 x 6 in the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.unit-cube
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 labels the product in cubic units, which are unit cubes.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

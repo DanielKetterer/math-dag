@@ -1,0 +1,58 @@
+id: perimeter.missing-side.application
+concept: perimeter
+facet: core
+level: 2
+type: application
+name: Solve real-world problems finding an unknown side from the perimeter
+statement: A real-world story gives the total length around a polygon-shaped object and all but one side
+  length, and asks for the missing side.
+assess: The fence around a triangular pen is 40 feet long. Two sides of the pen are 12 feet and 15 feet.
+  How long is the third side?
+sources:
+  ccss:
+  - 3.MD.D.8
+  learning_components:
+  - 67e309b0
+requires:
+- clause: standard
+  all_of:
+  - node: perimeter.missing-side
+    relation: procedural
+    points_to: statement
+    why: The learner subtracts the known sides from the total length around to get the missing side.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem adds the known sides 12 and 15.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs the sum 12 + 15; the statement leaves the computation
+        to perimeter.missing-side (e550).'
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem subtracts the known sides total 27 from the perimeter 40.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs 40 - 27 within 100; the statement leaves the computation
+        to perimeter.missing-side (e550).'
+    status: proposed
+status: proposed

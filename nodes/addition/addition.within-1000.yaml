@@ -1,0 +1,76 @@
+id: addition.within-1000
+concept: addition
+facet: operation
+level: 3
+type: procedure
+name: Add within 1000
+statement: Find the sum of two whole numbers when the sum is at most 1000, accurately and without objects,
+  by any reliable method; a place-value strategy and the standard algorithm both meet it.
+assess: Find 367 + 258 and 499 + 306. Use any method.
+sources:
+  ccss:
+  - 3.NBT.A.2
+  learning_components:
+  - f7731421
+requires:
+- clause: standard
+  all_of:
+  - node: addition.base-ten.like-units
+    relation: definitional
+    points_to: statement
+    why: Place-value strategies and the standard algorithm add hundreds to hundreds, tens to tens and
+      ones to ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.base-ten.compose-unit
+    relation: definitional
+    points_to: statement
+    why: The test sums 367 + 258 and 499 + 306 need ones or tens totalling 10 or more to be regrouped
+      as a ten or a hundred.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: definitional
+    points_to: statement
+    why: The addends up to three digits are read as hundreds, tens and ones, which every written or mental
+      method relies on.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-20.fluency
+    relation: procedural
+    points_to: assess
+    why: The place-by-place sums in the test items, such as 7 + 8 and 6 + 5, go past 10 with one-digit
+      addends.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test items add one-digit places past 10; the statement does not name
+        the fact node.'
+    status: proposed
+status: proposed

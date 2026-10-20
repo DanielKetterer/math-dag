@@ -19,7 +19,7 @@ sources:
 requires:
 - clause: via-between-two-points
   all_of:
-  - node: data.graphs.read
+  - node: data.table-graph.read-values
     relation: procedural
     points_to: procedure.1
     why: Reading two (x, y) pairs from a table or graph uses reading values from graphs and tables.
@@ -31,6 +31,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired data.graphs.read: Reading two (x, y) pairs from a table or graph
+        fits neither candidate; a table-and-graph reading node is missing.'
     status: proposed
   - node: rational-numbers.operations
     relation: definitional
@@ -59,7 +63,7 @@ requires:
     status: disputed
 - clause: via-constant-on-line
   all_of:
-  - node: data.graphs.read
+  - node: data.table-graph.read-values
     relation: procedural
     points_to: procedure.1
     why: Reading two (x, y) pairs from a table or graph uses reading values from graphs and tables.
@@ -71,6 +75,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired data.graphs.read: Reading two (x, y) pairs from a table or graph
+        fits neither candidate; a table-and-graph reading node is missing.'
     status: proposed
   - node: rational-numbers.operations
     relation: definitional

@@ -1,0 +1,30 @@
+id: measurement.liquid-volume.liters.estimate
+concept: measurement
+facet: liquid-volume
+level: 2
+type: procedure
+name: Estimate a liquid volume in liters
+statement: Estimate how many liters a container holds by comparing it with a known 1-liter benchmark,
+  such as a 1-liter bottle.
+assess: 'A 1-liter bottle is shown. About how many liters does a full bucket hold: 1, 10, or 100?'
+sources:
+  ccss:
+  - 3.MD.A.2
+  learning_components:
+  - 15d457bc
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.liquid-volume.liter-unit
+    relation: definitional
+    points_to: statement
+    why: The estimate is a number of liters found by comparing with a 1-liter bottle, so the unit must
+      be known.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

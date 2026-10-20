@@ -1,0 +1,43 @@
+id: measurement.weight.units.customary
+concept: measurement
+facet: mass
+level: 3
+type: fact
+name: Relative sizes of customary weight units
+statement: Know that 1 lb = 16 oz, so a pound is 16 times as heavy as an ounce.
+assess: 'Without computing: how many ounces are in 1 pound? Which is heavier, 1 oz or 1 lb?'
+sources:
+  ccss:
+  - 4.MD.A.1
+  learning_components:
+  - 08cdf68d
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.weight.attribute
+    relation: definitional
+    points_to: statement
+    why: The fact compares the weight of a pound with the weight of an ounce, so weight must already be
+      understood as an attribute.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.comparison
+    relation: definitional
+    points_to: statement
+    why: The statement says a pound is 16 times as heavy as an ounce, which is a multiplicative comparison
+      of weights.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,47 @@
+id: shapes.category.inherit-attributes
+concept: shapes
+facet: category
+level: 3
+type: concept
+name: Attributes of a category belong to all its subcategories
+statement: If every shape in a category has an attribute, then every shape in each subcategory of that
+  category has the attribute too.
+assess: All parallelograms have diagonals that cut each other in half. Every rhombus is a parallelogram.
+  Without measuring, must the diagonals of every rhombus cut each other in half? Explain using the categories.
+sources:
+  ccss:
+  - 5.G.B.3
+  learning_components:
+  - e3e2af8b
+  - 51e2d683
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.category.defined-by-attribute
+    relation: definitional
+    points_to: statement
+    why: A subcategory is a category whose members also have the attribute that defines the larger category.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.quadrilateral.subcategories-included
+    relation: definitional
+    points_to: statement
+    why: The test problem relies on a rhombus belonging to the larger category of parallelograms while
+      keeping its own name.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

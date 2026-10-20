@@ -1,0 +1,46 @@
+id: data.categorical.total
+concept: data
+facet: categorical
+level: 2
+type: application
+name: Find the total number of data points in a chart
+statement: A question asks how many data points there are in all in a data set with up to three categories;
+  the answer combines the counts of all the categories.
+assess: A chart shows that 4 children chose apple, 2 chose banana and 6 chose grape. How many children
+  answered in all?
+sources:
+  ccss:
+  - 1.MD.C.4
+  learning_components:
+  - 6cda6e52
+  - 2ee06e08
+requires:
+- clause: standard
+  all_of:
+  - node: data.categorical.read-count
+    relation: definitional
+    points_to: statement
+    why: The counts of the categories are read from the chart before they are combined.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.three-addends
+    relation: definitional
+    points_to: statement
+    why: The total combines the counts of up to three categories, a sum of up to three numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

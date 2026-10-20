@@ -1,0 +1,62 @@
+id: shapes.identify.specified-attributes
+concept: shapes
+facet: properties
+level: 2
+type: procedure
+name: Pick out the shapes that have a given attribute
+statement: From a set of flat shapes, select exactly those that have a stated attribute, such as a given
+  number of sides or angles, or all sides equal.
+procedure:
+- For each shape, count or check the stated attribute.
+- Select the shape when the attribute matches and leave it otherwise.
+assess: 'Circle every shape that has exactly 5 angles: a regular pentagon, a house-shaped pentagon, a
+  hexagon, a square, a pentagon standing on one corner.'
+sources:
+  ccss:
+  - 2.G.A.1
+  learning_components:
+  - 6c049f8a
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.sides.count
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 counts the sides of each shape when the stated attribute is a number of sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.corners.count
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 counts the angles of each shape, which are found as its corners, as in the exactly-5-angles
+      test item.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.attribute.equal-sides
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 checks whether all sides are equal when that is the stated attribute.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

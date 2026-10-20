@@ -1,0 +1,58 @@
+id: measurement.mass-volume.application.addition
+concept: measurement
+facet: measured-quantity
+level: 2
+type: application
+name: Solve one-step addition word problems with masses or volumes
+statement: A one-step story gives two masses or two liquid volumes in the same unit and asks for their
+  total; the learner adds and gives the answer in that unit.
+assess: A tub holds 18 liters of water. Ben pours in 25 more liters. How many liters of water are in the
+  tub now?
+sources:
+  ccss:
+  - 3.MD.A.2
+  learning_components:
+  - d2882c17
+requires:
+- clause: standard
+  all_of:
+  - node: addition.application.put-together.total-unknown
+    relation: definitional
+    points_to: statement
+    why: The story gives two amounts and asks for their total, which is the put-together total-unknown
+      structure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: procedural
+    points_to: statement
+    why: The learner adds two measures in the same unit, such as 18 and 25 liters or masses in the hundreds
+      of grams.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem adds 18 liters and 25 liters.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement fixes no number range; only the test problem uses a sum within 100
+        (18 + 25). The statement-level addition is covered by e430.'
+    status: proposed
+status: proposed

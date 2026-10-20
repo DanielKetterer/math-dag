@@ -82,17 +82,23 @@ missing from both.
 
 | id | meaning |
 |---|---|
+| `area.attribute` | see the nodes that reference it |
 | `area.composite-additive` | see the nodes that reference it |
 | `coordinate-plane.four-quadrants` | Plot and read points in all four quadrants |
 | `coordinate.ordered-pair.notation` | see the nodes that reference it |
 | `counting.number-word.thousand` | see the nodes that reference it |
 | `counting.number-word.thousand-million` | see the nodes that reference it |
+| `counting.skip.twenty-fives` | see the nodes that reference it |
 | `counting.skip.twos` | see the nodes that reference it |
+| `data.table-graph.read-values` | see the nodes that reference it |
 | `decimal.addition.algorithm` | Add multi-digit decimals with the standard algorithm |
 | `decimal.division.algorithm` | Divide multi-digit decimals with the standard algorithm |
 | `decimal.multiplication.algorithm` | Multiply multi-digit decimals with the standard algorithm |
 | `decimal.subtraction.algorithm` | Subtract multi-digit decimals with the standard algorithm |
+| `division.by-two-digit` | see the nodes that reference it |
+| `division.by-two-digit.remainder` | see the nodes that reference it |
 | `division.nonunit-fraction-by-whole` | Divide a non-unit fraction by a whole number |
+| `division.remainder.meaning` | see the nodes that reference it |
 | `division.standard-algorithm.long-division` | see the nodes that reference it |
 | `division.successive-division` | see the nodes that reference it |
 | `equations.linear.solve` | Solve linear equations in one variable |
@@ -102,9 +108,16 @@ missing from both.
 | `fraction.subtraction.comparison` | Subtraction of fractions as comparison (how much more) |
 | `functions.definition` | A function as a rule assigning one output to each input |
 | `geometry.similar-triangles` | Similar triangles and dilations |
+| `measurement.liquid-volume.liter-unit` | see the nodes that reference it |
+| `measurement.mass.gram-kilogram-unit` | see the nodes that reference it |
 | `multiples.common-multiple` | A common multiple of two whole numbers, including the least |
 | `number.halfway-between` | see the nodes that reference it |
+| `parallel.perpendicular-to-same-line` | see the nodes that reference it |
 | `rational-numbers.operations` | Operations with signed rational numbers |
+| `shapes.rectangle.opposite-sides-equal` | see the nodes that reference it |
+| `shapes.square-corner` | see the nodes that reference it |
+| `time.parts-of-day` | see the nodes that reference it |
+| `volume.space-occupied` | see the nodes that reference it |
 
 ## Output
 

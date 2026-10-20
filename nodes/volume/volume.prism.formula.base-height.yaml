@@ -1,0 +1,125 @@
+id: volume.prism.formula.base-height
+concept: volume
+facet: unit-cubes
+level: 3
+type: concept
+name: The volume formula V = B x h
+statement: A right rectangular prism with whole-number edge lengths has volume V = B x h cubic units,
+  where B is the area of its base in square units and h is its height.
+assess: 'A box has a base with an area of 20 square cm and a height of 4 cm. Which expression gives its
+  volume in cubic cm: 20 + 4, 20 x 4, or 20 x 4 x 4?'
+sources:
+  ccss:
+  - 5.MD.C.5.b
+  learning_components:
+  - 81d8e832
+requires:
+- clause: via-explain
+  all_of:
+  - node: area.covering.meaning
+    relation: definitional
+    points_to: statement
+    why: B is the area of the base in square units, so area as a count of unit squares is used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variables
+    relation: representational
+    points_to: statement
+    why: The formula is written with the letters B and h in an expression.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.packing
+    relation: definitional
+    points_to: statement
+    why: The formula gives the volume as the number of cubes that pack the prism.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.prism.layers.explain
+    relation: justificatory
+    points_to: statement
+    why: The formula rests on a prism being h layers each holding B cubes, as that explanation shows.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The layer explanation justifies V = B x h, but at level 3 the formula can also
+        be reached from V = l x w x h by grouping l x w as B. | other route: Start from volume.prism.formula.lwh
+        and regroup l x w x h as (l x w) x h with B = l x w, using area.rectangle.length-times-width.'
+    status: disputed
+- clause: via-length-times-width
+  all_of:
+  - node: area.covering.meaning
+    relation: definitional
+    points_to: statement
+    why: B is the area of the base in square units, so area as a count of unit squares is used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variables
+    relation: representational
+    points_to: statement
+    why: The formula is written with the letters B and h in an expression.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.packing
+    relation: definitional
+    points_to: statement
+    why: The formula gives the volume as the number of cubes that pack the prism.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: definitional
+    points_to: statement
+    why: The base B is the area of a rectangle in square units, found as length times width.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Needed only when B is obtained as l x w from the prism''s edges; via the layers
+        explanation the base area is already supplied, and B is given in the statement as an area. | other
+        route: Reach V = B x h through volume.prism.layers.explain (h layers each holding B cubes) without
+        computing B from l and w.'
+    status: disputed
+related:
+- node: volume.prism.formula.lwh
+  relation: common_path
+  note: 'Common path, not required: route ''critic-route-1'' needed everything another route needs and
+    more, so it was removed.'
+status: proposed

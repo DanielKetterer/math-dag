@@ -1,0 +1,109 @@
+id: shapes.quadrilateral.draw-other
+concept: shapes
+facet: properties
+level: 2
+type: procedure
+name: Draw a quadrilateral that is not a rhombus, rectangle, or square
+statement: Draw a quadrilateral whose sides are not all the same length and whose angles are not all right
+  angles, so it fits none of the definitions of rhombus, rectangle, or square.
+procedure:
+- Draw four straight sides that close into a figure.
+- Make at least two of the sides different in length, so it is not a rhombus or a square.
+- Make at least one angle that is not a right angle, so it is not a rectangle or a square.
+- Check the figure against each of the three definitions.
+assess: Draw a quadrilateral that is not a rhombus, not a rectangle, and not a square. Say why it is none
+  of them.
+sources:
+  ccss:
+  - 3.G.A.1
+  learning_components:
+  - 0547ded3
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.draw.specified-attributes
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 requires drawing a closed shape with four straight sides, a shape with a given number
+      of sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.rhombus.define
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 makes two sides unequal so that the figure fails the equal-sides condition of a rhombus.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.rectangle.define
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 makes one angle not right so that the figure fails the four-right-angles condition of
+      a rectangle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.square.define
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 checks the figure against the square definition of four equal sides and four right angles.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.quadrilateral.recognize
+    relation: definitional
+    points_to: statement
+    why: The statement asks for a quadrilateral, so the learner must know what counts as one.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.right.meaning
+    relation: definitional
+    points_to: statement
+    why: Step 3 makes an angle that is not a right angle, so the learner must recognize and avoid a square
+      corner; the procedure itself uses it, not only through rectangle.define.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: shapes.attribute.equal-sides
+    relation: definitional
+    points_to: statement
+    why: Step 2 makes sides of different lengths and the learner must notice whether sides are equal;
+      the procedure itself uses it.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

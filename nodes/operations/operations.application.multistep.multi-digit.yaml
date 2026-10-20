@@ -1,0 +1,91 @@
+id: operations.application.multistep.multi-digit
+concept: operations
+facet: whole-number
+level: 2
+type: application
+name: Solve multistep story problems with multi-digit numbers
+statement: A story problem needs two or more steps, each an addition, subtraction, multiplication or division
+  of whole numbers, with multi-digit numbers (products and dividends beyond the facts) and a whole-number
+  answer with no remainder; the learner chooses and carries out the steps.
+assess: A school buys 4 boxes of 125 pencils and gives out 290 of them. How many pencils are left?
+sources:
+  ccss:
+  - 4.OA.A.3
+  learning_components:
+  - 7e561083
+  - cbea54a9
+  - 3b7082f5
+  - 6f0d3e89
+  - 24e4f997
+requires:
+- clause: standard
+  all_of:
+  - node: operations.application.multistep
+    relation: definitional
+    points_to: statement
+    why: The learner must already choose and carry out the steps of a two-step story problem with the
+      four operations, now with larger numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: procedural
+    points_to: statement
+    why: A step may be an addition of multi-digit whole numbers, the nearest addition node to the numbers
+      in these problems.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: statement
+    why: A step may be a subtraction of multi-digit whole numbers, as in the 500 - 290 step of the test
+      problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: statement
+    why: A step may be a product beyond the facts, such as 4 x 125 in the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: statement
+    why: A step may be a division with a multi-digit dividend and a whole-number answer with no remainder.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

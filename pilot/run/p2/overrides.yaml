@@ -12,7 +12,7 @@ edges:
   relation: procedural
   points_to: statement
   why: Counting on from the larger addend finds any sum within 20, one route to the sum.
-  reason: "Claude: late node, routes given by hand (count on, make a ten, recall)."
+  reason: 'Claude: late node, routes given by hand (count on, make a ten, recall).'
 - item: L2
   node: subtraction.within-20
   target: subtraction.count-back
@@ -20,10 +20,76 @@ edges:
   relation: procedural
   points_to: statement
   why: Counting back by the subtrahend from the minuend finds any difference within 20, one route.
-  reason: "Claude: late node, routes given by hand (count back, decompose to ten, think addition, recall)."
+  reason: 'Claude: late node, routes given by hand (count back, decompose to ten, think addition, recall).'
+- item: L3
+  node: measurement.weight.attribute
+  target: comparing.weight.direct
+  action: related
+  reason: 'Claude: breaks a cycle with no escape. Daniel''s pre-K review requires the attribute for direct
+    weight comparison (comparing.weight.direct -> measurement.weight.attribute); this new edge ran the
+    other way. Flagged in the phase 2 queue.'
+- item: L4
+  node: expressions.parentheses
+  target: multiplication.by-one-digit
+  action: drop
+  reason: 'Claude: my own test problem used 2 x 12, which asked for more than the node (writer rule 3);
+    the test now stays within the facts.'
+- item: L5
+  node: equation.unknown-symbol
+  target: addition.within-20.fluency
+  action: replace
+  with: addition.within-20
+  why: Checking 8 + 4 and 8 + 5 against 13 finds sums within 20, by any method.
+  reason: 'Claude: the test needs the sums, not recall (method-neutral rule); addition.within-20 was written
+    after the proposers ran.'
 routes:
-- {item: L1, node: addition.within-20, name: via-make-ten, without: [addition.count-on], add: [{node: addition.make-ten, relation: procedural, points_to: statement, why: "Making a ten finds a sum over 10 by splitting one addend, one route to the sum."}]}
-- {item: L1, node: addition.within-20, name: via-recall, without: [addition.count-on], add: [{node: addition.within-20.fluency, relation: procedural, points_to: statement, why: "A recalled sum of two one-digit numbers gives the sum directly, one route to the sum."}]}
-- {item: L2, node: subtraction.within-20, name: via-decompose-to-ten, without: [subtraction.count-back], add: [{node: subtraction.decompose-to-ten, relation: procedural, points_to: statement, why: "Subtracting down to ten and then the rest finds a difference across ten, one route."}]}
-- {item: L2, node: subtraction.within-20, name: via-related-addition, without: [subtraction.count-back], add: [{node: subtraction.unknown-addend.strategy, relation: procedural, points_to: statement, why: "Finding the missing addend in b + ? = a gives a - b, one route to the difference."}]}
-- {item: L2, node: subtraction.within-20, name: via-recall, without: [subtraction.count-back], add: [{node: subtraction.within-20.fluency, relation: procedural, points_to: statement, why: "A recalled difference within 20 gives the answer directly, one route to the difference."}]}
+- item: L1
+  node: addition.within-20
+  name: via-make-ten
+  without:
+  - addition.count-on
+  add:
+  - node: addition.make-ten
+    relation: procedural
+    points_to: statement
+    why: Making a ten finds a sum over 10 by splitting one addend, one route to the sum.
+- item: L1
+  node: addition.within-20
+  name: via-recall
+  without:
+  - addition.count-on
+  add:
+  - node: addition.within-20.fluency
+    relation: procedural
+    points_to: statement
+    why: A recalled sum of two one-digit numbers gives the sum directly, one route to the sum.
+- item: L2
+  node: subtraction.within-20
+  name: via-decompose-to-ten
+  without:
+  - subtraction.count-back
+  add:
+  - node: subtraction.decompose-to-ten
+    relation: procedural
+    points_to: statement
+    why: Subtracting down to ten and then the rest finds a difference across ten, one route.
+- item: L2
+  node: subtraction.within-20
+  name: via-related-addition
+  without:
+  - subtraction.count-back
+  add:
+  - node: subtraction.unknown-addend.strategy
+    relation: procedural
+    points_to: statement
+    why: Finding the missing addend in b + ? = a gives a - b, one route to the difference.
+- item: L2
+  node: subtraction.within-20
+  name: via-recall
+  without:
+  - subtraction.count-back
+  add:
+  - node: subtraction.within-20.fluency
+    relation: procedural
+    points_to: statement
+    why: A recalled difference within 20 gives the answer directly, one route to the difference.

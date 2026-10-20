@@ -1,0 +1,58 @@
+id: time.analog.draw-half-hour
+concept: time
+facet: clock
+level: 2
+type: representation
+name: Show a time to the half hour on an analog clock
+statement: Half past h is shown on an analog clock face by drawing the minute hand pointing to 6 and the
+  hour hand halfway between h and the next number.
+assess: Draw the hands on this blank clock face to show half past 2.
+sources:
+  ccss:
+  - 1.MD.B.3
+  learning_components:
+  - ac90984d
+requires:
+- clause: standard
+  all_of:
+  - node: time.analog.half-hour
+    relation: definitional
+    points_to: statement
+    why: Half past h is the time the learner reads from the minute hand at 6 and the hour hand between
+      two numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number.halfway-between
+    relation: representational
+    points_to: statement
+    why: The hour hand is drawn halfway between h and the next number, so the learner must find the point
+      midway between two numbers on the face.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Drawing the hour hand halfway between h and the next number needs a sense of a
+        midpoint on the face, but it is not clear that the boundary node (a numeric midpoint) is the right
+        source; the spatial midpoint may come from halves (partitionin'
+    status: disputed
+  - node: time.analog.draw-hour
+    relation: procedural
+    points_to: statement
+    why: Placing the hour hand at h and the minute hand on a numbered position is the drawing skill extended
+      here.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

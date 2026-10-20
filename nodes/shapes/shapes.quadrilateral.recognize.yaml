@@ -1,0 +1,69 @@
+id: shapes.quadrilateral.recognize
+concept: shapes
+facet: properties
+level: 2
+type: concept
+name: Recognize quadrilaterals of any shape
+statement: A quadrilateral is a closed figure made of exactly four straight sides; every such figure is
+  a quadrilateral, including irregular, tilted, and inward-pointing ones.
+assess: 'Circle every quadrilateral: a square, a tilted kite, a four-sided arrowhead with one corner pointing
+  in, a trapezoid, a pentagon, a figure with three straight sides and one curved side.'
+sources:
+  ccss:
+  - 3.G.A.1
+  learning_components:
+  - 32da252f
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.polygon.name-by-sides
+    relation: definitional
+    points_to: statement
+    why: A quadrilateral is the polygon named by having exactly four sides, which this node extends to
+      any shape.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.attribute.non-defining
+    relation: definitional
+    points_to: statement
+    why: The statement includes irregular, tilted, and inward-pointing figures, so size and orientation
+      must not decide the name.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.closed-boundary
+    relation: definitional
+    points_to: statement
+    why: The statement requires a closed figure, so the test problem rejects a figure whose boundary does
+      not close in straight sides.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.sides.count
+    relation: definitional
+    points_to: statement
+    why: The statement and test turn on a figure having exactly four straight sides, so the learner must
+      identify and count sides directly (polygon.name-by-sides reaches it only indirectly).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

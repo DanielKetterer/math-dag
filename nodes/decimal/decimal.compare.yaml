@@ -47,7 +47,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: comparing.whole-numbers.magnitude
+  - node: comparing.whole-numbers.magnitude.multi-digit
     relation: procedural
     points_to: procedure.3
     why: Step 3 decides which of the two whole numbers of hundredths is greater.
@@ -64,6 +64,10 @@ requires:
       note: 'C12-split replace: Daniel C12 (fixes review): the edge needs deciding which whole number
         is greater, not the symbols; the boundary node is split into comparing.whole-numbers.magnitude
         and comparing.whole-numbers.symbols.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired comparing.whole-numbers.magnitude: Hundredths counts like 120 and
+        95 differ in digit count, and the statement covers general decimals.'
     status: reviewed
   - node: fraction.compare.same-denominator
     relation: definitional

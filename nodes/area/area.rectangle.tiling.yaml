@@ -1,0 +1,59 @@
+id: area.rectangle.tiling
+concept: area
+facet: unit-squares
+level: 2
+type: procedure
+name: Find the area of a rectangle by tiling with unit squares
+statement: Find the area of a rectangle with whole-number side lengths by covering it with unit squares,
+  with no gaps or overlaps, and counting them.
+procedure:
+- Lay unit squares along one side, edge to edge, so they fill that side.
+- Lay further rows the same way until the rectangle is covered with no gaps or overlaps.
+- Count the squares and report the area in square units.
+assess: Cover a rectangle 3 inches by 5 inches with 1-inch square tiles, with no gaps or overlaps. What
+  is its area?
+sources:
+  ccss:
+  - 3.MD.C.7.a
+  learning_components:
+  - bb0d6f97
+requires:
+- clause: standard
+  all_of:
+  - node: area.covering.meaning
+    relation: definitional
+    points_to: statement
+    why: Tiling means covering the rectangle with unit squares with no gaps or overlaps, which defines
+      its area.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.unit-squares.count
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 counts the squares and reports the area in square units, the procedure of measuring area
+      by counting.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.unit-square
+    relation: definitional
+    points_to: statement
+    why: The statement and procedure tile with unit squares, and the test uses 1-inch tiles, so the unit
+      square is used directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

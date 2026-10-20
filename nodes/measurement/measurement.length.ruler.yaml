@@ -1,0 +1,52 @@
+id: measurement.length.ruler
+concept: measurement
+facet: length
+level: 2
+type: procedure
+name: Measure a length in standard units with a ruler or other tool
+statement: Measure a length in inches, feet, centimeters or meters by lining up the 0 mark of a ruler,
+  yardstick, meter stick or tape with one end of the object and reading the whole-unit mark nearest the
+  other end, reported with the unit.
+procedure:
+- Choose the unit and a tool marked in that unit.
+- Line up the 0 mark of the tool with one end of the object, keeping the tool straight along the object.
+- Find the whole-unit mark nearest the other end of the object.
+- Report that number with the unit name.
+assess: Use your centimeter ruler to measure this pencil, drawn at actual size, to the nearest centimeter.
+sources:
+  ccss:
+  - 2.MD.A.1
+  - 2.MD.A.2
+  - 2.MD.D.9
+  learning_components:
+  - c93f5e69
+  - 2c71367f
+  - 33364bb0
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.length.ruler.from-zero
+    relation: procedural
+    points_to: procedure.3
+    why: Steps 2 and 3 line up the 0 mark and read the number at the far end as the count of whole units
+      from 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: numeral.read
+    relation: definitional
+    points_to: statement
+    why: Steps 3 and 4 read the numeral at a mark and report it; the learner must read the written numbers
+      on the tool.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

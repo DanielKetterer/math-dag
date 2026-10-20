@@ -1,0 +1,150 @@
+id: perimeter.rectangle.formula
+concept: perimeter
+facet: core
+level: 3
+type: concept
+name: The perimeter formula for a rectangle
+statement: A rectangle with length l and width w has perimeter P = 2 x l + 2 x w, because its opposite
+  sides are equal, so it has two sides of each length.
+assess: 'A rectangle has length l and width w. Which expression gives its perimeter: l x w, l + w, 2 x
+  l + 2 x w, or 4 x l?'
+sources:
+  ccss:
+  - 4.MD.A.3
+  learning_components:
+  - 1a91a235
+requires:
+- clause: via-from-length-width
+  all_of:
+  - node: perimeter.meaning
+    relation: definitional
+    points_to: statement
+    why: The formula gives the length around the rectangle, so perimeter as the distance around a figure
+      is used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.rectangle.opposite-sides-equal
+    relation: justificatory
+    points_to: statement
+    why: The because-clause says opposite sides of a rectangle are equal, so there are two sides of each
+      length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: representational
+    points_to: statement
+    why: The term 2 x l writes two equal sides of length l as two equal groups.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variables
+    relation: representational
+    points_to: statement
+    why: The formula and the test problem use letters l and w in an expression.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: perimeter.rectangle.from-length-width
+    relation: definitional
+    points_to: statement
+    why: The formula 2 x l + 2 x w generalizes adding the four side lengths of a rectangle found from
+      its length and width.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The formula generalizes adding l, w, l, w, but the same formula can be reached
+        from summing the sides of any polygon plus opposite sides being equal. | other route: Start from
+        perimeter.polygon.from-sides (add all side lengths) and shapes.rectangle.opposite-sides-equal,
+        then write the sum as 2 x l + 2 x w.'
+    status: disputed
+- clause: critic-route-1
+  note: Reach the formula by summing all four sides with opposite sides equal, without the rectangle-specific
+    length-width procedure
+  all_of:
+  - node: perimeter.meaning
+    relation: definitional
+    points_to: statement
+    why: The formula gives the length around the rectangle, so perimeter as the distance around a figure
+      is used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.rectangle.opposite-sides-equal
+    relation: justificatory
+    points_to: statement
+    why: The because-clause says opposite sides of a rectangle are equal, so there are two sides of each
+      length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: representational
+    points_to: statement
+    why: The term 2 x l writes two equal sides of length l as two equal groups.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variables
+    relation: representational
+    points_to: statement
+    why: The formula and the test problem use letters l and w in an expression.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: perimeter.polygon.from-sides
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Reach the formula by summing all four sides with opposite
+      sides equal, without the rectangle-specific length-width procedure'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

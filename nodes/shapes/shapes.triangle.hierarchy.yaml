@@ -1,0 +1,61 @@
+id: shapes.triangle.hierarchy
+concept: shapes
+facet: category
+level: 3
+type: concept
+name: The hierarchy of triangle categories
+statement: Equilateral triangles are a subcategory of isosceles triangles, and the categories by sides
+  cross the categories by angles, so one triangle can belong to both kinds, such as an isosceles right
+  triangle.
+assess: 'True or false, with a reason from the definitions: every equilateral triangle is isosceles; every
+  isosceles triangle is equilateral; a right triangle can be isosceles.'
+sources:
+  ccss:
+  - 5.G.B.4
+  learning_components:
+  - 8bd3a000
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.triangle.by-sides.define
+    relation: definitional
+    points_to: statement
+    why: The nesting of equilateral inside isosceles follows from the definitions of the categories by
+      sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.triangle.by-angles.define
+    relation: definitional
+    points_to: statement
+    why: The crossing of categories by sides with categories by angles uses the definitions by angles.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.category.defined-by-attribute
+    relation: definitional
+    points_to: statement
+    why: A triangle that has the attribute of each category belongs to both, so categories can cross or
+      nest.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

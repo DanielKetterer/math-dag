@@ -1,0 +1,145 @@
+id: measurement.length.difference
+concept: measurement
+facet: length
+level: 2
+type: procedure
+name: Measure to find how much longer one object is than another
+statement: How much longer one object is than another is the difference of their lengths measured in the
+  same standard unit, stated in that unit.
+procedure:
+- Measure both objects in the same standard unit.
+- Find the difference of the two lengths.
+- State the difference with the unit.
+assess: A blue strip and a red strip lie along an inch ruler, both starting at 0. The blue strip ends
+  at 6 and the red strip ends at 9. How many inches longer is the red strip than the blue strip?
+sources:
+  ccss:
+  - 2.MD.A.4
+  learning_components:
+  - 19ea874e
+  - f81bec09
+requires:
+- clause: via-difference-unknown
+  all_of:
+  - node: measurement.length.ruler
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 measures both objects in the same standard unit, which is the ruler procedure applied
+      twice.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-10
+    relation: procedural
+    points_to: assess
+    why: Step 2 finds the difference of the two measured lengths, for example 9 minus 6 in the test problem.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement and procedure say only ''find the difference'' with no number range;
+        the test problem (9 - 6) is the part that needs a difference within 10. The method-neutral node
+        is subtraction.within-10 for the test, whatever the range of th'
+    status: proposed
+  - node: comparing.length.describe-difference
+    relation: definitional
+    points_to: statement
+    why: How much longer one object is than the other builds the comparison words longer and shorter into
+      a number answer.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Finding the difference of the two measured lengths is a subtraction, and any method will do.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The statement and procedure set no range for the measured lengths, and only the
+        test (9 - 6) fixes one within 10. Sibling application nodes use within 100.'
+    status: disputed
+  - node: subtraction.application.compare.difference-unknown
+    relation: definitional
+    points_to: statement
+    why: How much longer one object is than another is a compare situation whose answer is the difference.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: How much longer one strip is than another is a compare situation, but the general
+        compare-story node is not the only way to see that the answer is a difference; with a ruler the
+        difference is the distance between the two end marks. | other route: Treat the difference as the
+        distance between two marks on the ruler as a number line (subtraction.comparison.number-line),
+        together with the comparison words and the ruler measurement, with no compare story structure.'
+    status: disputed
+- clause: critic-route-1
+  note: Find the difference as the distance between the two end marks of the strips on the ruler as a
+    number line, without a compare story structure.
+  all_of:
+  - node: measurement.length.ruler
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 measures both objects in the same standard unit, which is the ruler procedure applied
+      twice.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-10
+    relation: procedural
+    points_to: assess
+    why: Step 2 finds the difference of the two measured lengths, for example 9 minus 6 in the test problem.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement and procedure say only ''find the difference'' with no number range;
+        the test problem (9 - 6) is the part that needs a difference within 10. The method-neutral node
+        is subtraction.within-10 for the test, whatever the range of th'
+    status: proposed
+  - node: comparing.length.describe-difference
+    relation: definitional
+    points_to: statement
+    why: How much longer one object is than the other builds the comparison words longer and shorter into
+      a number answer.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.comparison.number-line
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Find the difference as the distance between the two
+      end marks of the strips on the ruler as a number line, without a compare story structure.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

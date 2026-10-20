@@ -1,0 +1,68 @@
+id: measurement.time.tell-nearest-minute
+concept: measurement
+facet: time
+level: 2
+type: representation
+name: Tell and write time to the nearest minute
+statement: Read the time shown on an analog clock to the nearest minute, using the hour hand for the hour
+  and the minute marks passed by the minute hand for the minutes, and write it as hours:minutes.
+assess: The hour hand is between 4 and 5 and the minute hand points to the second mark after the 7. What
+  time does the clock show?
+sources:
+  ccss:
+  - 3.MD.A.1
+  learning_components:
+  - befd3355
+requires:
+- clause: standard
+  all_of:
+  - node: time.analog.five-minutes
+    relation: definitional
+    points_to: statement
+    why: The hour hand and minute hand are read first to the nearest five minutes, and single minute marks
+      are counted from there.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: time.digital.write
+    relation: representational
+    points_to: statement
+    why: The reading is recorded in the hours:minutes form, with the minutes written as two digits.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: statement
+    why: The minutes are the count at the last five-minute mark plus the extra minute marks passed, such
+      as 35 + 2.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: time.analog.hour
+    relation: definitional
+    points_to: statement
+    why: The statement reads the hour from the hour hand; this is read directly, not only through the
+      five-minute node.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,60 @@
+id: perimeter.meaning
+concept: perimeter
+facet: core
+level: 2
+type: concept
+name: Perimeter as the length around a figure
+statement: The perimeter of a polygon is the total length of its boundary, the distance once around it,
+  measured in length units.
+assess: An ant walks once around the edge of a rectangle drawn on a centimeter grid. The rectangle is
+  5 squares long and 3 squares wide. How far does the ant walk?
+sources:
+  ccss:
+  - 3.MD.D.8
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.closed-boundary
+    relation: definitional
+    points_to: statement
+    why: Perimeter is the length of a shape's boundary, which closes with no gaps, once around it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.iterate-units
+    relation: definitional
+    points_to: statement
+    why: The distance around is a length measured in length units, such as grid squares or centimeters.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem finds the distance once around the 5 by 3 rectangle by adding the four side
+      lengths.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is about the meaning of perimeter and fixes no computation; only
+        the test problem requires adding four side lengths (or counting grid units).'
+    status: proposed
+status: proposed

@@ -1,0 +1,58 @@
+id: measurement.mass-volume.application.subtraction
+concept: measurement
+facet: measured-quantity
+level: 2
+type: application
+name: Solve one-step subtraction word problems with masses or volumes
+statement: A one-step story about masses or liquid volumes in the same unit asks for an amount left or
+  a difference; the learner subtracts and gives the answer in that unit.
+assess: A bag of flour has a mass of 900 grams. Ella uses 350 grams. What is the mass of the flour left?
+sources:
+  ccss:
+  - 3.MD.A.2
+  learning_components:
+  - a93d7dd3
+requires:
+- clause: standard
+  all_of:
+  - node: subtraction.application.take-from-story
+    relation: definitional
+    points_to: statement
+    why: The story about an amount left has the take-from structure, where a part is removed and the rest
+      is asked.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.application.compare.difference-unknown
+    relation: definitional
+    points_to: statement
+    why: The statement also covers a difference between two masses or volumes, which is the compare structure
+      with the difference unknown.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: statement
+    why: The learner subtracts one measure from another in the same unit, such as 900 grams minus 350
+      grams.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

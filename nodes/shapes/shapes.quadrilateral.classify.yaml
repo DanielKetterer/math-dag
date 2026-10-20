@@ -1,0 +1,109 @@
+id: shapes.quadrilateral.classify
+concept: shapes
+facet: category
+level: 3
+type: procedure
+name: Name every category a quadrilateral belongs to
+statement: Name every category among trapezoid, parallelogram, rectangle, rhombus, and square that a given
+  quadrilateral belongs to, by checking its parallel sides, right angles, and side lengths against each
+  definition.
+procedure:
+- Count the pairs of parallel sides; at least one pair makes it a trapezoid, two pairs make it a parallelogram.
+- Check the angles; four right angles (each pair of adjacent sides perpendicular) make it a rectangle.
+- Check the side lengths; four equal sides make it a rhombus.
+- Four equal sides and four right angles make it a square.
+- List every name whose condition holds.
+assess: A quadrilateral has four sides of 6 cm and four right angles. List every name it has among trapezoid,
+  parallelogram, rectangle, rhombus, and square.
+sources:
+  ccss:
+  - 5.G.B.4
+  learning_components:
+  - 788c4445
+  - 72357b7d
+  - ab4d63ce
+  - 67d8843b
+  - 413e97fa
+requires:
+- clause: standard
+  all_of:
+  - node: parallel.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 counts the pairs of parallel sides of the quadrilateral.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.quadrilateral.parallel-sides.define
+    relation: procedural
+    points_to: procedure.1
+    why: 'Step 1 applies the definitions: one pair makes a trapezoid, two pairs make a parallelogram.'
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.rectangle.define
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 checks the definition of a rectangle, four right angles.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.rhombus.define
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 checks the definition of a rhombus, four equal sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.square.define
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 checks the definition of a square, four equal sides and four right angles.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.category.defined-by-attribute
+    relation: procedural
+    points_to: procedure.5
+    why: Step 5 lists every name whose attribute holds, since a shape belongs to every category it has
+      the attribute of.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

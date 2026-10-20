@@ -1,0 +1,75 @@
+id: volume.unit-cube
+concept: volume
+facet: unit-cubes
+level: 2
+type: concept
+name: A unit cube has a volume of one cubic unit
+statement: A cube whose edges are each 1 unit long is a unit cube; it has a volume of one cubic unit and
+  is the unit used to measure volume.
+assess: 'Which of these is a unit for measuring volume in cubic centimeters: a square 1 cm on each side,
+  a cube 1 cm on each edge, or a cube 2 cm on each edge?'
+sources:
+  ccss:
+  - 5.MD.C.3.a
+  learning_components:
+  - 7cc9fb8e
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.cube.identify
+    relation: definitional
+    points_to: statement
+    why: The statement defines the unit cube as a cube, so a cube with six equal square faces must be
+      known.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.iterate-units
+    relation: definitional
+    points_to: statement
+    why: The statement requires edges that are each 1 unit long, so length measured in whole units must
+      be understood.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.space-occupied
+    relation: definitional
+    points_to: statement
+    why: The statement says a unit cube has a volume, so volume as the amount of space a solid occupies
+      must be known.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.dimension.flat-solid
+    relation: definitional
+    points_to: assess
+    why: The test problem asks the learner to pick the solid cube and reject the flat square as a unit
+      of volume.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Rejecting the flat square is required by the test problem; the statement defines
+        the unit cube without needing the flat/solid distinction as a separate skill.'
+    status: proposed
+status: proposed

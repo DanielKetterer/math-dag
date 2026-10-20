@@ -1,0 +1,66 @@
+id: coordinate-plane.application.mathematical
+concept: coordinate-plane
+facet: location
+level: 2
+type: application
+name: Solve a mathematical problem by graphing points
+statement: Solve a mathematical problem by graphing points in the first quadrant and reasoning from their
+  positions, such as finding a missing vertex of a figure.
+assess: Three corners of a rectangle are at (1, 2), (1, 6), and (5, 6). Plot them and find the coordinates
+  of the fourth corner.
+sources:
+  ccss:
+  - 5.G.A.2
+  learning_components:
+  - ef95113c
+requires:
+- clause: standard
+  all_of:
+  - node: coordinate-plane.first-quadrant.plot
+    relation: procedural
+    points_to: statement
+    why: The statement requires graphing the given points in the first quadrant.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.first-quadrant.read
+    relation: procedural
+    points_to: assess
+    why: The test problem asks for the coordinates of the fourth corner after finding its position on
+      the grid.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test asks for the coordinates of the fourth corner, which uses reading a point;
+        the idea of solving a problem by graphing points does not require reading as such, since the answer
+        could be reasoned from the plotted positions.'
+    status: proposed
+  - node: shapes.rectangle.define
+    relation: definitional
+    points_to: assess
+    why: The fourth corner is found by using the right angles and sides of the rectangle formed by the
+      three given corners.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Finding the fourth corner uses the properties of a rectangle (right angles, opposite
+        sides matching), required by this test problem but not by the idea of graphing points to solve
+        a problem.'
+    status: proposed
+status: proposed

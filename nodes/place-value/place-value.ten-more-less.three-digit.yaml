@@ -1,0 +1,47 @@
+id: place-value.ten-more-less.three-digit
+concept: place-value
+facet: whole-number
+level: 3
+type: procedure
+name: Find 10 more or 10 less than a three-digit number
+statement: Adding or subtracting 10 to a three-digit number changes the tens by one and leaves the ones
+  unchanged; when the tens digit is 9 (adding) or 0 (subtracting), the hundreds change by one as well
+  (196 + 10 = 206, 305 - 10 = 295).
+assess: 'Without counting by ones or writing anything, say: 10 more than 196; 10 less than 305; 10 more
+  than 742.'
+sources:
+  ccss:
+  - 2.NBT.B.8
+  learning_components:
+  - 0dccf8c6
+  - f7a052d7
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: definitional
+    points_to: statement
+    why: Changing the tens digit by one and leaving the ones unchanged depends on reading the digits as
+      hundreds, tens and ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.ten-more-less
+    relation: procedural
+    points_to: statement
+    why: Changing the tens by one and leaving the ones unchanged is the two-digit rule being applied in
+      a three-digit number.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

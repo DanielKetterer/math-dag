@@ -1,0 +1,159 @@
+id: subtraction.within-100
+concept: subtraction
+facet: operation
+level: 3
+type: procedure
+name: Subtract within 100
+statement: Find a - b for whole numbers with b no greater than a and a at most 100, accurately and without
+  objects, by any reliable method; a place-value strategy, counting up by the related addition, and the
+  standard algorithm all meet it.
+assess: Find 73 - 48 and 90 - 36. Use any method.
+sources:
+  ccss:
+  - 2.NBT.B.5
+  learning_components:
+  - 41093be0
+requires:
+- clause: via-like-units
+  all_of:
+  - node: subtraction.within-20.fluency
+    relation: procedural
+    points_to: assess
+    why: Subtracting the ones after decomposing a ten, as in 13 - 8 and 10 - 6, uses differences within
+      20.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test items subtract ones after decomposing (13 - 8); counting up avoids
+        it and the statement does not name it.'
+    status: proposed
+  - node: place-value.two-digit.tens-ones
+    relation: definitional
+    points_to: statement
+    why: Subtracting 73 - 48 needs 73 read as 7 tens and 3 ones, in any place-value method or the standard
+      algorithm.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.base-ten.like-units
+    relation: definitional
+    points_to: statement
+    why: Place-value strategies and the standard algorithm subtract tens from tens and ones from ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Counting up from the subtrahend adds jumps and does not subtract tens from tens
+        and ones from ones. | other route: Count up from the subtrahend to the minuend by the related
+        addition and add the jumps.'
+    status: disputed
+- clause: via-decompose-unit
+  all_of:
+  - node: subtraction.within-20.fluency
+    relation: procedural
+    points_to: assess
+    why: Subtracting the ones after decomposing a ten, as in 13 - 8 and 10 - 6, uses differences within
+      20.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test items subtract ones after decomposing (13 - 8); counting up avoids
+        it and the statement does not name it.'
+    status: proposed
+  - node: place-value.two-digit.tens-ones
+    relation: definitional
+    points_to: statement
+    why: Subtracting 73 - 48 needs 73 read as 7 tens and 3 ones, in any place-value method or the standard
+      algorithm.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.base-ten.decompose-unit
+    relation: definitional
+    points_to: statement
+    why: The test differences 73 - 48 and 90 - 36 have too few ones in the first number, so a ten must
+      be decomposed into ten ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Counting up by the related addition (named in the statement) finds 73 - 48 without
+        decomposing a ten. | other route: Count up from the subtrahend to the minuend by the related addition
+        (48 to 50 to 70 to 73), adding the jumps.'
+    status: disputed
+- clause: critic-route-1
+  note: Count up from the subtrahend to the minuend by the related addition and add the jumps.
+  all_of:
+  - node: subtraction.within-20.fluency
+    relation: procedural
+    points_to: assess
+    why: Subtracting the ones after decomposing a ten, as in 13 - 8 and 10 - 6, uses differences within
+      20.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test items subtract ones after decomposing (13 - 8); counting up avoids
+        it and the statement does not name it.'
+    status: proposed
+  - node: place-value.two-digit.tens-ones
+    relation: definitional
+    points_to: statement
+    why: Subtracting 73 - 48 needs 73 read as 7 tens and 3 ones, in any place-value method or the standard
+      algorithm.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.unknown-addend.meaning
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Count up from the subtrahend to the minuend by the
+      related addition and add the jumps.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: addition.within-100
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Count up from the subtrahend to the minuend by the
+      related addition and add the jumps.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

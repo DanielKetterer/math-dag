@@ -1,0 +1,128 @@
+id: measurement.time.application.subtraction
+concept: measurement
+facet: time
+level: 2
+type: application
+name: Solve word problems by subtracting a time interval in minutes
+statement: A story gives an end time and a duration in minutes, or a total time and one part of it, and
+  asks for the start time or the remaining time; the learner subtracts the minutes.
+assess: Swim practice lasted 35 minutes and ended at 5:50. At what time did it start?
+sources:
+  ccss:
+  - 3.MD.A.1
+  learning_components:
+  - 3e846152
+requires:
+- clause: via-tell-nearest-minute
+  all_of:
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: statement
+    why: The learner subtracts the minutes of the duration from the end time or the part from the total
+      time.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.add-to.start-unknown
+    relation: definitional
+    points_to: statement
+    why: Finding the start time from the end time and duration is an add-to story with the start unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.put-together.addend-unknown
+    relation: definitional
+    points_to: statement
+    why: Finding the remaining time from a total and one part is a put-together story with a part unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.time.tell-nearest-minute
+    relation: representational
+    points_to: statement
+    why: The end time and the start time are clock times to the minute, read and written as hours:minutes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Story problems usually give and ask for times in written h:mm form; analog reading
+        is not used to solve them. | other route: Times appear as digital numerals; the learner reads
+        them with time.digital.read and writes the start time with time.digital.write.'
+    status: disputed
+- clause: critic-route-1
+  note: Times in the story are written in h:mm form, so no analog reading is needed.
+  all_of:
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: statement
+    why: The learner subtracts the minutes of the duration from the end time or the part from the total
+      time.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.add-to.start-unknown
+    relation: definitional
+    points_to: statement
+    why: Finding the start time from the end time and duration is an add-to story with the start unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.put-together.addend-unknown
+    relation: definitional
+    points_to: statement
+    why: Finding the remaining time from a total and one part is a put-together story with a part unknown.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: time.digital.read
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Times in the story are written in h:mm form, so no
+      analog reading is needed.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: time.digital.write
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Times in the story are written in h:mm form, so no
+      analog reading is needed.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

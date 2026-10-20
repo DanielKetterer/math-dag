@@ -1,0 +1,46 @@
+id: money.notation
+concept: money
+facet: core
+level: 2
+type: representation
+name: Write money amounts with the dollar and cents signs
+statement: A whole number of dollars is written with the dollar sign before the number ($5), and a whole
+  number of cents is written with the cents sign after the number (35 followed by the cents sign); one
+  amount uses one sign, not both.
+assess: Write 40 cents and 3 dollars using the money signs.
+sources:
+  ccss:
+  - 2.MD.C.8
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: money.coins.value
+    relation: definitional
+    points_to: statement
+    why: The cents sign names the unit the coins are worth in, so the learner must know what a cent is
+      as the value of a coin.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: numeral.write
+    relation: representational
+    points_to: statement
+    why: Each amount is the numeral for the number of cents or dollars with a sign placed before or after
+      it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed
