@@ -1,0 +1,1244 @@
+{
+ "pass": "P",
+ "batch": "M2",
+ "nodes": {
+  "measurement.time.tell-nearest-minute": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "time.analog.five-minutes",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The hour hand and minute hand are read first to the nearest five minutes, and single minute marks are counted from there."
+      },
+      {
+       "node": "counting.sequence.count-on",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The minute marks passed beyond the last labeled five-minute number are counted forward one at a time."
+      },
+      {
+       "node": "time.digital.write",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The reading is recorded in the hours:minutes form, with the minutes written as two digits."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.time.elapsed.within-hour": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.time.tell-nearest-minute",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 reads the minutes of the start time and of the end time from the two clock times."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds how many minutes lie from the start minutes up to the end minutes, which is a difference within 60."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.time.elapsed.across-hour": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.time.tell-nearest-minute",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 reads the minutes past the hour at the end time from the clock time."
+      },
+      {
+       "node": "measurement.time.units",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement explains the interval by saying an hour has 60 minutes, so minutes up to the next hour are 60 minus the start minutes."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds the minutes from the start time up to the next hour, which is 60 minus the start minutes."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 adds the minutes before the hour to the minutes after the hour to get the whole interval."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.time.application.addition": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.time.tell-nearest-minute",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The start time and the end time are clock times to the minute, read and written as hours:minutes."
+      },
+      {
+       "node": "measurement.time.elapsed.within-hour",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The duration in minutes is a time interval, which is the number of minutes between a start time and an end time."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner adds the minutes of the duration to the minutes of the start time or adds two durations."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.time.application.subtraction": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.time.tell-nearest-minute",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The end time and the start time are clock times to the minute, read and written as hours:minutes."
+      },
+      {
+       "node": "measurement.time.elapsed.within-hour",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The duration in minutes is a time interval, which is the number of minutes between a start time and an end time."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner subtracts the minutes of the duration from the end time or the part from the total time."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.liquid-volume.liters.measure": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The container scale works like a number line in which each labeled mark is a number counted from the 0 level."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds how many liters one step stands for by taking the difference between two neighboring labeled marks."
+      },
+      {
+       "node": "number.halfway-between",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement includes levels between labeled marks, such as the level halfway between the 4 and the 6."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.liquid-volume.liters.estimate": {
+   "routes": [],
+   "root_reason": "The 1-liter benchmark is supplied with the problem, so the learner only compares the container with it by sight; no earlier skill in the map is required."
+  },
+  "measurement.mass.grams-kilograms.measure": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.weight.attribute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The quantity read from the scale is the mass of the object, an attribute separate from its size."
+      },
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The scale or balance reads like a number line, with each labeled mark a number counted from 0."
+      },
+      {
+       "node": "subtraction.within-1000",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds how many grams or kilograms one step stands for by taking the difference of neighboring labeled marks."
+      },
+      {
+       "node": "number.halfway-between",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement includes readings between labeled marks, such as the pointer halfway between 300 and 400."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.mass.grams-kilograms.estimate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.weight.attribute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The estimate is of the mass of an object, which must be understood as a weight attribute apart from size."
+      },
+      {
+       "node": "comparing.weight.direct",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner judges whether an object is heavier or lighter than a known benchmark object such as a paper clip."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.mass-volume.application.addition": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.application.put-together.total-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story gives two amounts and asks for their total, which is the put-together total-unknown structure."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner adds two measures in the same unit, such as 18 and 25 liters or masses in the hundreds of grams."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.mass-volume.application.subtraction": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.application.take-from-story",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story about an amount left has the take-from structure, where a part is removed and the rest is asked."
+      },
+      {
+       "node": "subtraction.application.compare.difference-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement also covers a difference between two masses or volumes, which is the compare structure with the difference unknown."
+      },
+      {
+       "node": "subtraction.within-1000",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner subtracts one measure from another in the same unit, such as 900 grams minus 350 grams."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.mass-volume.application.multiplication": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.application.equal-groups",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The story gives a number of equal masses or volumes and asks for the total, which is the equal-groups structure."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner multiplies the number of equal portions by the measure of each, such as 6 times 4 kilograms."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.mass-volume.application.division": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.application.partitive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement covers splitting a mass or volume into equal shares and asking the size of each share."
+      },
+      {
+       "node": "division.application.measurement",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement also covers splitting into equal-size portions and asking how many portions, the grouping structure."
+      },
+      {
+       "node": "division.facts.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner divides the total measure by the number of shares or by the size of a portion, such as 24 divided by 6."
+      }
+     ]
+    }
+   ]
+  },
+  "data.picture-graph.scaled.draw": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.picture-graph.draw",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The scaled graph is a picture graph with one row of pictures per category, now with each picture standing for several."
+      },
+      {
+       "node": "division.measurement.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 asks how many groups of the scale make a category's count, a quotient read as a number of equal groups."
+      },
+      {
+       "node": "division.facts.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds the number of pictures by dividing a count such as 10 by the scale such as 2."
+      }
+     ]
+    }
+   ]
+  },
+  "data.bar-graph.scaled.draw": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.bar-graph.draw",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The scaled bar graph keeps the title, labeled axes, and one bar per category of the single-unit bar graph."
+      },
+      {
+       "node": "counting.skip.twos",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 marks the value axis in equal steps, which for a scale of 2 means counting by twos from 0."
+      },
+      {
+       "node": "counting.skip.fives",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 marks the value axis in equal steps, which for a scale of 5 means counting by fives from 0."
+      },
+      {
+       "node": "counting.skip.tens.decades",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 marks the value axis in equal steps, which for a scale of 10 means counting by tens from 0."
+      },
+      {
+       "node": "number.halfway-between",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 ends a bar between two marks when the count is not a multiple of the scale, such as halfway between them."
+      }
+     ]
+    }
+   ]
+  },
+  "data.bar-graph.scaled.read": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.bar-graph.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The value of a category is read from where its bar ends against the value axis, as in a single-unit bar graph."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The size of the scale is found from the difference between two neighboring labeled marks on the value axis."
+      },
+      {
+       "node": "number.halfway-between",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement covers a bar ending between labeled marks, such as halfway between 20 and 30."
+      }
+     ]
+    }
+   ]
+  },
+  "data.bar-graph.application.one-step": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.bar-graph.scaled.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner reads both category values from the scaled bar graph before comparing them."
+      },
+      {
+       "node": "subtraction.application.compare.difference-unknown",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "How many more or fewer is a difference between two amounts, the compare structure with the difference unknown."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner finds the difference of the two values read from the graph, such as 25 minus 10."
+      }
+     ]
+    }
+   ]
+  },
+  "data.bar-graph.application.two-step": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.bar-graph.application.one-step",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The second step compares one total with another category, which is the one-step how-many-more comparison from the graph."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The first step combines two category values from the graph, such as 25 plus 15."
+      },
+      {
+       "node": "addition.application.two-step",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The question chains two operations in order, the structure of a two-step story solved by combining and then comparing."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.ruler.nearest-fourth-inch": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.ruler",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 lines the 0 mark of the ruler up with one end of the object, as in any ruler measurement."
+      },
+      {
+       "node": "fraction.non-unit.number-line",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The half-inch and fourth-inch marks on the ruler are fractions such as 3/4 located on a number line."
+      },
+      {
+       "node": "fraction.mixed-number.meaning",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 reports the length as whole inches plus a fraction, the form of a mixed number such as 3 3/4."
+      },
+      {
+       "node": "number.halfway-between",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 picks the fourth-inch mark nearest the end, which needs telling which of two marks is closer."
+      }
+     ]
+    }
+   ]
+  },
+  "data.line-plot.fractional.make": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.line-plot.make",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The plot is the same display as the whole-unit line plot, a number line with one X above the scale per measurement."
+      },
+      {
+       "node": "fraction.mixed-number.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The measurements such as 2 1/4 are whole numbers plus fractions and must be located on the scale."
+      },
+      {
+       "node": "fraction.equivalent.same-point",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 picks a unit all measurements land on, so halves such as 2 1/2 must be seen as points among the fourth marks."
+      },
+      {
+       "node": "fraction.non-unit.number-line",
+       "relation": "representational",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 draws a number line marked in halves or fourths, so fractions like 3/4 are placed on the line."
+      }
+     ]
+    }
+   ]
+  },
+  "area.unit-square": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.square.define",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A unit square is a square, with four equal sides and four right angles, whose side is 1 unit."
+      },
+      {
+       "node": "measurement.length.iterate-units",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The side length of 1 unit is a length measured in a chosen unit, such as 1 centimeter."
+      },
+      {
+       "node": "measurement.attributes.several",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Area is a second measurable attribute of a figure besides its length, and the unit square is the unit for it."
+      }
+     ]
+    }
+   ]
+  },
+  "area.covering.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.unit-square",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The area of n square units is defined by covering a figure with n of the unit squares."
+      }
+     ]
+    }
+   ]
+  },
+  "area.unit-squares.count": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.covering.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Counting the squares inside the figure gives its area because the figure is covered by those squares."
+      },
+      {
+       "node": "area.unit-square",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The answer names the unit of the squares, such as square centimeters or square feet."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner counts the unit squares inside an irregular figure such as an L shape to find how many."
+      }
+     ]
+    }
+   ]
+  },
+  "area.rectangle.tiling": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.covering.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Tiling means covering the rectangle with unit squares with no gaps or overlaps, which defines its area."
+      },
+      {
+       "node": "partitioning.rectangle.rows-columns",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 1 and 2 lay unit squares in rows and columns edge to edge, as when partitioning a rectangle into same-size squares."
+      },
+      {
+       "node": "area.unit-squares.count",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 counts the squares and reports the area in square units, the procedure of measuring area by counting."
+      }
+     ]
+    }
+   ]
+  },
+  "area.rectangle.tiles-along-side": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.unit-square",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each tile spans 1 unit of the side because each unit square has side length 1 unit."
+      },
+      {
+       "node": "measurement.length.no-gaps-overlaps",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The tiles along a side are units laid end to end with no gaps or overlaps, so their count is the side length."
+      },
+      {
+       "node": "partitioning.rectangle.rows-columns",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about a rectangle already divided into rows and columns of same-size unit squares."
+      }
+     ]
+    }
+   ]
+  },
+  "area.rectangle.tiling-product.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.rectangle.tiling",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation starts from the area found by tiling the rectangle with unit squares and counting them."
+      },
+      {
+       "node": "area.rectangle.tiles-along-side",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each row has b squares and there are a rows because the number of tiles along a side equals the side length."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The count of squares is a rows of b squares each, which is a groups of b and so the product a x b."
+      },
+      {
+       "node": "multiplication.array.rows-columns",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The tiled rectangle is an array of rows with equal numbers of squares in each row."
+      }
+     ]
+    }
+   ]
+  },
+  "area.rectangle.length-times-width": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.rectangle.tiling-product.explain",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule that area is a x b without tiling rests on the explanation that tile count equals the product of the sides."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner multiplies the two side lengths, such as 7 times 9, to get the area."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.array-area.whole-number-product.represent": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The representation depends on the area of a rectangle with sides a and b being the product a x b."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The product a x b being represented is a number of equal groups, here rows of equal length."
+      }
+     ]
+    }
+   ]
+  },
+  "area.rectangle.application": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner multiplies the length and width of the rug or surface to find its area."
+      },
+      {
+       "node": "area.unit-square",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The answer is given in square units such as square feet, the unit of area."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.array-area.distributive.tiling": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.rectangle.tiling-product.explain",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each tiled part and the whole rectangle have a tile count equal to the product of their sides."
+      },
+      {
+       "node": "area.additive",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The whole rectangle's area is the sum of the two non-overlapping parts' areas, which is why the two products add."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.array-area.distributive.model": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.array-area.whole-number-product.represent",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The model draws each product, such as 6 x 5, as a rectangle with those side lengths."
+      },
+      {
+       "node": "area.additive",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The whole area is the sum of the two part areas because the parts do not overlap."
+      }
+     ]
+    }
+   ]
+  },
+  "area.additive": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.covering.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Area counts the unit squares that cover a figure, so covering the parts covers the whole figure."
+      },
+      {
+       "node": "shapes.compose.combine",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The figure is made by putting non-overlapping parts together into one larger figure."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem finds the whole figure's area by adding the part areas 12 and 9."
+      }
+     ]
+    }
+   ]
+  },
+  "area.rectilinear.decompose": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.decompose.simple",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 draws a segment that splits the figure into smaller non-overlapping shapes."
+      },
+      {
+       "node": "shapes.rectangle.define",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 must produce rectangles, so each piece is checked as a quadrilateral with four right angles."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds unlabeled side lengths of each rectangle as differences of the labeled sides, such as 8 minus 3."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 finds each rectangle's area by multiplying its two side lengths."
+      },
+      {
+       "node": "area.additive",
+       "relation": "justificatory",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 adds the rectangle areas because area is additive for parts that do not overlap."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 performs the sum of the separate rectangle areas."
+      }
+     ]
+    }
+   ]
+  },
+  "area.rectilinear.application": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.rectilinear.decompose",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner decomposes the room or garden shape into non-overlapping rectangles and adds their areas."
+      }
+     ]
+    }
+   ]
+  },
+  "perimeter.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.closed-boundary",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Perimeter is the length of a shape's boundary, which closes with no gaps, once around it."
+      },
+      {
+       "node": "measurement.length.iterate-units",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The distance around is a length measured in length units, such as grid squares or centimeters."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem finds the distance once around the 5 by 3 rectangle by adding the four side lengths."
+      }
+     ]
+    }
+   ]
+  },
+  "perimeter.polygon.from-sides": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "perimeter.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sum of the side lengths is the perimeter because perimeter is the total length of the boundary."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner sums the given side lengths, such as 4 + 6 + 3 + 5 + 7."
+      }
+     ]
+    }
+   ]
+  },
+  "perimeter.polygon.application": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "perimeter.polygon.from-sides",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner finds the length around the pen or field by adding all the given side lengths."
+      }
+     ]
+    }
+   ]
+  },
+  "perimeter.rectangle.from-length-width": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "perimeter.polygon.from-sides",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The perimeter is still the sum of the four side lengths, here two lengths and two widths."
+      },
+      {
+       "node": "shapes.rectangle.define",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The two unlabeled sides are known only because opposite sides of a rectangle are equal."
+      }
+     ]
+    }
+   ]
+  },
+  "perimeter.rectangle.application": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "perimeter.rectangle.from-length-width",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner finds the length around the frame by adding two lengths and two widths."
+      }
+     ]
+    }
+   ]
+  },
+  "perimeter.missing-side": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "perimeter.polygon.from-sides",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The known sides are added, and the perimeter is defined as the sum of all the sides."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The unknown side is the perimeter minus the sum of the known sides, such as 30 minus 23."
+      }
+     ]
+    }
+   ]
+  },
+  "perimeter.missing-side.application": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "perimeter.missing-side",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner subtracts the known sides from the total length around to get the missing side."
+      }
+     ]
+    }
+   ]
+  },
+  "perimeter.versus-area": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "perimeter.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "One of the two measures is the length of the boundary, measured in length units."
+      },
+      {
+       "node": "area.covering.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The other measure is the number of unit squares that cover the figure."
+      },
+      {
+       "node": "area.unit-square",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The units differ because area is counted in square units while perimeter is counted in length units."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem needs the area of a 5 by 3 rectangle, found as 5 times 3."
+      },
+      {
+       "node": "perimeter.rectangle.from-length-width",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem needs the perimeter of a 5 by 3 rectangle, found from its length and width."
+      }
+     ]
+    }
+   ]
+  },
+  "perimeter.same-area.different-perimeters": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "perimeter.versus-area",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement contrasts the two measures, holding area fixed while the perimeter changes."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each rectangle's area is its length times its width, which must equal the chosen product."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Side-length pairs with the same product are chosen by recalling products, such as 3 x 4 and 2 x 6 for 12."
+      },
+      {
+       "node": "perimeter.rectangle.from-length-width",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner gives each rectangle's perimeter from its length and width."
+      }
+     ]
+    }
+   ]
+  },
+  "perimeter.same-perimeter.different-areas": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "perimeter.versus-area",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement contrasts the two measures, holding perimeter fixed while the area changes."
+      },
+      {
+       "node": "perimeter.rectangle.from-length-width",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each rectangle's perimeter is two lengths plus two widths, which must equal the chosen perimeter."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Side-length pairs with the same sum are chosen by adding trial lengths and widths."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner gives each rectangle's area as its length times its width."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
