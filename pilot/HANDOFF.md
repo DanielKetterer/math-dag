@@ -1,6 +1,115 @@
-# Handoff: big run phase 2 merged, awaiting Daniel's review (2026-10-20)
+# Handoff: phase 2 review applied; 5 items wait on Daniel (2026-10-20, later session)
 
 Read this first in a new session. Then RULES.md.
+
+## Phase 2 review: applied
+
+- Answers: pilot/run/p2/REVIEW_ANSWERS.txt, encoded in pilot/run/p2/overrides.yaml
+  (126 edge entries, 6 routes, 6 set_routes) and applied with `sh tools/rebuild.sh`.
+  Phase 1 side: p1/overrides.yaml (D91 re-pointed, F107 entry); N3 and N4 batches and
+  skeletons (F107, F106); p2/retarget/out.json r87 (kept on the two-step node);
+  p1/skeletons/N3.extra.yaml (LC 44a2143c moved to the reserved upper half).
+- Map: 675 nodes, 2,364 edges, 0 errors. Findings 87 -> 72: Common Core order 15 -> 7,
+  IM 67 -> 61. Unwritten ids referenced 36 -> 41 (the new reserved nodes).
+- Benchmark: 81% direct, 90% through chains (was 92%). The lost link, 3.NF.A.1 ->
+  3.G.A.2, ran 3.G.A.2 -> rectangle definition -> right angle (4.G.A.1) -> degrees
+  (4.MD.C.5) -> unit fractions, through the right-angle edge CC and IM refuted (F104).
+  The real link sits inside fraction.unit.part-whole, which cites both standards
+  (pilot item E104). 90% is the honest number.
+- Precision of kept edges, random 40: 27/40 = 68% (about 52-80%) as marked; 29/40 =
+  73% (about 57-84%) if Claude's pushback on A11 and A28 stands. Below phase 1 (30/40)
+  and the pilot (35/40); the intervals overlap. Critic drops: 18/20 upheld (B44, B54
+  restored).
+- The 13 marked edges by pattern: a definition pointing at a stronger recognition node
+  (A14, A25, A29); a teaching order taken as necessary (A4, A30, time); a method-specific
+  step inside a method-neutral node (A7, A17); an application node's class wider than its
+  test (A5, A10); other (A1, A22, and A11, A28 pending). Five of the 13 are G2 shape
+  definitions and attributes.
+- Subagent tokens this session: 0. Running total 6,229,396.
+
+## Pending Daniel
+
+1. **A11, not applied (Claude pushes back): keep parallel.meaning -> segment.meaning.**
+   The node is also about parallel sides: its statement's second clause, and its test asks
+   which sides of a trapezoid are parallel. Two segments that are not parallel can also
+   never meet, so "never meet" says nothing about sides; sides are parallel only through
+   the lines they lie on, which is what segment.meaning states (a segment is the part of a
+   line between two endpoints; sides are segments). Keep, or split parallel lines from
+   parallel sides and move the edge to the sides node.
+2. **A28, not applied: keep decimal.thousandths.notation -> decimal.hundredths.notation.**
+   The test writes 43/1000 as 0.043, a 4 in the hundredths place. Both alternatives the
+   answer names pass through hundredths in the map: "place-value structure" is
+   place-value.tenth-of-left, which requires decimal.hundredths.notation, and the
+   power-of-ten rule requires tenth-of-left or ten-times-right.decimal. A route that
+   skips hundredths has to produce 0.043 without knowing what the second place is
+   ("count the zeros"). Name it if that is the route meant.
+3. **Application-node scope.** A5, A10, C66, C69, C73 were applied as test scope (an
+   edge stays only if the test uses it). Phase 1 A35 went the other way (statement scope:
+   'unknown in any position' kept start-unknown problems). Both readings are now in the
+   map, and under test scope some statements claim more than their edges require:
+   measurement.application.conversion.multistep says "whole-number, decimal, or fraction
+   results" and still requires to-larger.fraction and both decimal conversions;
+   data.line-plot.fraction.multistep names four operations. Claude's recommendation:
+   statement scope stays the rule (the node is what its statement says), and a statement
+   that spans number types with different prerequisites is split by the range rule
+   (whole-number vs fraction results). Pick one; then Claude makes statements and edges
+   agree.
+4. **Same argument, not applied (yes or no each):**
+   a. shapes.rectangle.define -> shapes.quadrilateral.recognize: replace with
+      shapes.polygon.name-by-sides, as A14 and A29 did for rhombus and square.
+   b. shapes.quadrilateral.subcategories-included -> shapes.rectangle.define: replace
+      with shapes.name.any-orientation, as A25 did for square. rhombus.define stays: no
+      earlier node names rhombuses.
+   c. measurement.application.fraction -> fraction.application.addition-same-whole:
+      drop. It is the unlike-denominator word-problem node (grade 5); this node is grade 4
+      and its test is 3/8 + 7/8. CC and IM order both refute it; it is the only finding
+      left on the node.
+   d. division.partial-quotients.one-digit-divisor -> subtraction.within-1000, and the
+      .remainder sibling's addition and subtraction edges: the same past-1000 gap as F116,
+      which would also need subtraction.multi-digit.
+5. **D78** read as keep plus a new node (the answer says "insufficient as modeled", not
+   wrong); confirm.
+
+## Claude's calls in the encoding (reverse in the overrides files)
+
+- A4: replaced by time.analog.hour rather than dropped; dropping left the node with no
+  clock face. A25: replaced by shapes.name.any-orientation (the learner must know which
+  figures are squares).
+- A7: kept on the three meaning routes; added route via-standard-algorithm without
+  multiples of ten, pointing at division.standard-algorithm.long-division (6.NS.B.2,
+  unwritten). Method-neutral nodes were meant to take methods as routes (phase 1 F); the
+  proposers built meaning routes with method steps inside them instead.
+- set_routes: A17 coins (counting | adding), A30 nearest minute (by fives | by ones),
+  C64/D74 sum within 10 (count all | fingers | count on), C65/D81 difference within 10
+  (take away | count back | related addition). Recall is not a route into the within-10
+  nodes: fluency requires them. The verbal action nodes moved to related (common_path).
+- F111: the within-10 node joins the make-ten and decompose-to-ten routes. The statements
+  cover sums of 10 or less, which those methods do not do (direct-use rule; make-ten's
+  chain reaches within-10 only through the equal sign's meaning).
+- F113: no conversion edges were missing. Every conversion test supplies its fact in
+  parentheses ("1 ft = 12 in"), which is why the fact nodes have no dependents. The
+  system-specific difference is in prerequisites, so the mass, weight and liquid-volume
+  fact nodes now point at the F115 unit nodes, and mass/weight is no longer a merge
+  candidate. The length pair still is: both systems' units come from
+  measurement.length.ruler. Proposal: the checker should not treat two nodes as one
+  position when neither has dependents.
+- F107: narrowed to 3.OA.D.8 with a new test (412 - 189 + 6 x 8 = 271, claimed 371,
+  estimate about 250); the 4.OA.A.3 half is reserved. F106: the LC moved with the
+  citation (41093be0 is the 2.NBT.B.5 within-100 component; now 18fca54d, 3.NBT.A.2).
+- F105 recorded in RULES section 6 (inclusive trapezoid).
+
+## Next
+
+1. Daniel: the 5 pending items above.
+2. Phase 3 (grades 6-8; strands 8-11 of the big-run plan below: NS; EE and F, two strands;
+   G, two strands; SP), with the 17 reserved nodes in pilot/run/p2/next_slice.yaml written
+   inline into its F skeleton and attached to one batch, as in phase 2. Estimate: about
+   276 nodes at phase 2's measured 14k subagent tokens per node, about 3.9M (3.6-4.2M);
+   phase 2 ran 12% over its estimate. The running total would reach about 10.1M. Needs a
+   go-ahead.
+3. The published explorer copy (claude.ai/artifact/Q7RWducGX1KtkuZeSAu6Vq) is still stale.
+
+# Earlier: big run phase 2 merged (2026-10-20)
 
 ## Phase 2 (K-5 measurement, data, geometry): done
 

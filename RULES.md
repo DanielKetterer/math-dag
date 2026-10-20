@@ -232,3 +232,6 @@ Done:
    quantities by size, and recognizing shapes.
 5. **The Eedi misconceptions**: attach them to nodes as evidence of where understanding
    breaks.
+6. **Trapezoid (Daniel, 2026-10-20)**: the inclusive definition, at least one pair of
+   parallel sides, so every parallelogram is a trapezoid (the hierarchy matches squares
+   being rectangles; Illustrative Mathematics uses it too).
