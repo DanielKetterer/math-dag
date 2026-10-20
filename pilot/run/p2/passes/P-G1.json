@@ -1,0 +1,1292 @@
+{
+ "pass": "P",
+ "batch": "G1",
+ "nodes": {
+  "shapes.name.any-orientation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.recognize",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Naming a tilted, very large or small, or non-typical example first requires recognizing it as the same shape despite its size and orientation."
+      },
+      {
+       "node": "shapes.name.prototype",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement applies the names circle, square and triangle already attached to typical examples to non-typical ones such as a long thin triangle."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.name.solids": {
+   "routes": [],
+   "root_reason": "Naming cube, cone, cylinder and sphere is learned from handling real solids and hearing their names; the flat-shape nodes name a different kind of figure and the earlier solid-related nodes (flat versus solid, parts) do not have to come first."
+  },
+  "shapes.name.real-objects": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.name.solids",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement names the solid form of an object, such as calling a can a cylinder or a ball a sphere, using the solid names."
+      },
+      {
+       "node": "shapes.name.any-orientation",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement names the flat shape of a face or outline, such as the front of a door as a rectangle, using the flat shape names."
+      },
+      {
+       "node": "shapes.dimension.flat-solid",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Choosing a solid name for the whole form but a flat name for a face requires telling the solid from the flat shape on it."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.dimension.flat-solid": {
+   "routes": [],
+   "root_reason": "Telling a drawing on paper from a ball or box is a perceptual distinction made by handling objects and needs no earlier skill in the map."
+  },
+  "shapes.attribute.equal-sides": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.sides.count",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about the sides of a shape, so the learner must already pick out what a side of a shape is."
+      },
+      {
+       "node": "comparing.size.direct",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Whether sides are equal is found by comparing side lengths, which is the direct comparison of two lengths."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.compare.by-attributes": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.sides.count",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 counts the sides of each of the two flat shapes."
+      },
+      {
+       "node": "shapes.corners.count",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 counts the corners of each of the two flat shapes."
+      },
+      {
+       "node": "shapes.attribute.equal-sides",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 checks whether the sides of each shape are equal in length, which is exactly noticing the equal-sides attribute."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.solid.parts": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.dimension.flat-solid",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A flat face and a curved surface are parts of a solid shape, so the learner must see the solid as having flat and curved parts."
+      },
+      {
+       "node": "shapes.corners.count",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement names the corners of a solid, which extends the corner idea already used for flat shapes to the vertices of a solid."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks how many flat faces each solid has, which is found by counting the faces."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.compare.solids.by-attributes": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.solid.parts",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds and counts the flat faces and corners of each solid and checks for curved surfaces, which uses exactly the parts of a solid."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.draw.named": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.name.any-orientation",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner must know which figure the names circle, triangle, square, rectangle and hexagon refer to before drawing one."
+      },
+      {
+       "node": "shapes.sides.count",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 recalls how many straight sides the named shape has, which depends on the idea of a side and counting sides."
+      },
+      {
+       "node": "shapes.closed-boundary",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 finishes at the starting point so the shape is closed, which is the closed boundary with no gap."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.attribute.defining": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.sides.count",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The listed defining attributes include three, four and six straight sides, which are stated by counting the sides."
+      },
+      {
+       "node": "shapes.closed-boundary",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Every defining attribute list begins with the figure being closed, the closed boundary with no gap."
+      },
+      {
+       "node": "shapes.attribute.equal-sides",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A square is defined as a rectangle whose four sides are equal, which uses the equal-sides attribute."
+      },
+      {
+       "node": "shapes.name.any-orientation",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Defining attributes are what every example of a named shape has, so the learner must already name examples of differing size and orientation."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.attribute.non-defining": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.attribute.defining",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says color, size, orientation and material are not defining attributes, which only makes sense against the idea of a defining attribute."
+      },
+      {
+       "node": "shapes.name.any-orientation",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The general claim that size and orientation never change the name states what naming tilted, large and small shapes already shows in particular cases."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.classify.defining-attributes": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.attribute.defining",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 recalls the defining attributes of the named shape."
+      },
+      {
+       "node": "shapes.closed-boundary",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 checks that the figure is closed, as in the test item with a gap at one corner."
+      },
+      {
+       "node": "shapes.sides.count",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 checks the number of straight sides of the figure against the named shape."
+      },
+      {
+       "node": "shapes.attribute.equal-sides",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 checks whether the sides are equal when the named shape, such as a square, requires it."
+      },
+      {
+       "node": "shapes.attribute.non-defining",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 ignores color, size and orientation when naming the figure."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.draw.defining-attributes": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.attribute.defining",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 recalls the defining attributes of the named shape."
+      },
+      {
+       "node": "shapes.attribute.non-defining",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 chooses a size, orientation or proportions that differ from the given example, which relies on those features being non-defining."
+      },
+      {
+       "node": "shapes.draw.named",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 draws the figure with the right sides and corners, which is drawing a named flat shape."
+      },
+      {
+       "node": "shapes.closed-boundary",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 checks that the drawn figure is closed."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.compose.composite-unit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.compose.combine",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 puts flat shapes together to make a composite shape, which is combining shapes into a larger shape."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.compose.solids": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.solid.parts",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 chooses a face of one solid and a matching face of another, which requires knowing what the flat faces of a solid are."
+      },
+      {
+       "node": "counting.produce-set",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem builds a row of exactly 3 cubes, which requires taking out a given number of cubes."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.compose.solids.composite-unit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.compose.solids",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 joins solids face to face to make a composite solid, which is putting solids together."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.polygon.name-by-sides": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.sides.count",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The name of the polygon is chosen by its number of sides, 3, 4, 5 or 6, found by counting sides."
+      },
+      {
+       "node": "shapes.closed-boundary",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement applies to closed figures with straight sides, so the learner must tell a closed boundary from an open one."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.identify.specified-attributes": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.sides.count",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 counts the sides of each shape when the stated attribute is a number of sides."
+      },
+      {
+       "node": "shapes.corners.count",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 counts the angles of each shape, which are found as its corners, as in the exactly-5-angles test item."
+      },
+      {
+       "node": "shapes.attribute.equal-sides",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 checks whether all sides are equal when that is the stated attribute."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.draw.specified-attributes": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.produce-set",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 places as many dots as the stated number, which is counting out a set of a given size."
+      },
+      {
+       "node": "shapes.closed-boundary",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 joins the last dot to the first so that the shape is closed."
+      },
+      {
+       "node": "shapes.sides.count",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement specifies a number of sides, so the learner must know what a side is and how sides are counted."
+      },
+      {
+       "node": "shapes.corners.count",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement specifies a number of angles, found as the corners of the figure."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.cube.identify": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.solid.parts",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A cube is defined by having 6 flat faces, so the learner must know what the faces of a solid are."
+      },
+      {
+       "node": "shapes.name.solids",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement refines the solid name cube by its faces, so the learner must already use the solid names."
+      },
+      {
+       "node": "shapes.name.any-orientation",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires each face to be a square, which means naming the flat shape of each face."
+      }
+     ]
+    }
+   ]
+  },
+  "partitioning.rectangle.rows-columns": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "partitioning.segment.equal-lengths",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 2 draw lines evenly spaced across and down the rectangle, which is dividing a side into equal lengths."
+      },
+      {
+       "node": "measurement.length.iterate-units",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The spacing of the lines is set by laying the small square end to end along a side, as in the test item of 4 squares long and 3 tall."
+      },
+      {
+       "node": "multiplication.array.rows-columns",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about rows and columns of squares, which is the row and column structure of an array."
+      },
+      {
+       "node": "shapes.name.any-orientation",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 checks that every part is a square, which means naming the flat shape of each part."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.array.squares": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 counts the squares in the first row, counting each object exactly once."
+      },
+      {
+       "node": "counting.sequence.count-on",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 continues the count into each next row from the number already reached instead of starting again from one."
+      },
+      {
+       "node": "multiplication.array.rows-columns",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement counts by rows or columns of a partitioned rectangle, which uses the row and column structure."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.within-10": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.add-to.describe",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A sum within 10 is the total after joining two amounts, whether found by objects, fingers, counting on or a known fact, so the joining meaning must already be in words and numbers."
+      },
+      {
+       "node": "addition.notation.expression",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem is written as 4 + 3, so the learner must read the addition expression with its plus sign."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.within-10": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.take-away.describe",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A difference within 10 is what remains after taking away, whether found by taking objects away, counting back or a known fact, so the taking-away meaning must already be in words and numbers."
+      },
+      {
+       "node": "subtraction.notation.expression",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem is written as 9 - 4, so the learner must read the subtraction expression with its minus sign."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.within-100": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.two-digit.like-units",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Every method that meets the statement, place-value strategy or standard algorithm, adds tens to tens and ones to ones."
+      },
+      {
+       "node": "addition.two-digit.compose-ten",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The test sums 47 + 38 and 56 + 27 have ones that total more than 10, so ten ones must be regrouped as a ten."
+      },
+      {
+       "node": "addition.within-20.fluency",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Adding the ones in 47 + 38 and 56 + 27 uses sums such as 7 + 8 and 6 + 7 that go past 10."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.within-100": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.base-ten.like-units",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Place-value strategies and the standard algorithm subtract tens from tens and ones from ones."
+      },
+      {
+       "node": "subtraction.base-ten.decompose-unit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The test differences 73 - 48 and 90 - 36 have too few ones in the first number, so a ten must be decomposed into ten ones."
+      },
+      {
+       "node": "subtraction.within-20.fluency",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Subtracting the ones after decomposing a ten, as in 13 - 8 and 10 - 6, uses differences within 20."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.within-1000": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.base-ten.like-units",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Place-value strategies and the standard algorithm add hundreds to hundreds, tens to tens and ones to ones."
+      },
+      {
+       "node": "addition.base-ten.compose-unit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The test sums 367 + 258 and 499 + 306 need ones or tens totalling 10 or more to be regrouped as a ten or a hundred."
+      },
+      {
+       "node": "place-value.three-digit.hundreds-tens-ones",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The addends up to three digits are read as hundreds, tens and ones, which every written or mental method relies on."
+      },
+      {
+       "node": "addition.within-20.fluency",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The place-by-place sums in the test items, such as 7 + 8 and 6 + 5, go past 10 with one-digit addends."
+      }
+     ]
+    }
+   ]
+  },
+  "subtraction.within-1000": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.base-ten.like-units",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Place-value strategies and the standard algorithm subtract hundreds from hundreds, tens from tens and ones from ones."
+      },
+      {
+       "node": "subtraction.base-ten.decompose-unit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The test differences 724 - 358 and 600 - 247 need a hundred or a ten decomposed into the next smaller unit."
+      },
+      {
+       "node": "place-value.three-digit.hundreds-tens-ones",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The numbers up to three digits are read as hundreds, tens and ones, which every written or mental method relies on."
+      },
+      {
+       "node": "subtraction.within-20.fluency",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The place-by-place differences in the test items, such as 14 - 8 and 17 - 5, use subtraction within 20."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.by-one-digit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Every method multiplies single digits by the one-digit factor, as in 3 x 6 and 7 x 8 in the test items."
+      },
+      {
+       "node": "multiplication.by-multiple-of-ten",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Partial products, the area model and the standard algorithm all multiply the one-digit factor by tens, hundreds and thousands, as with 7 x 400."
+      },
+      {
+       "node": "multiplication.distributive",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Splitting a multi-digit factor by place and adding the partial products is justified by the distributive property."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test product 7 x 408 requires adding partial products such as 2800 and 56, a place-value sum of the size of the add-within-1000 node."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.two-digit-by-two-digit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Every method multiplies single digits such as 4 x 7 when forming partial products."
+      },
+      {
+       "node": "multiplication.by-multiple-of-ten",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Partial products and the area model need a one-digit number times a multiple of 10, as in 4 x 20 and 7 x 30."
+      },
+      {
+       "node": "multiplication.multiple-of-ten.by-multiple-of-ten",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Splitting both factors by place produces a multiple of 10 times a multiple of 10, as in 30 x 20."
+      },
+      {
+       "node": "multiplication.distributive",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Breaking both factors into tens and ones and adding the four partial products is justified by the distributive property."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test product 34 x 27 requires adding partial products 600, 210, 80 and 28, whose sum is within 1000."
+      }
+     ]
+    }
+   ]
+  },
+  "division.by-one-digit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires a divisor that divides the dividend exactly, meaning the quotient is the whole number that multiplies the divisor to give the dividend."
+      },
+      {
+       "node": "division.facts.within-100",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Every method finds each partial or digit-by-digit quotient from a division fact, as with 36 divided by 6 inside 852 divided by 6."
+      },
+      {
+       "node": "multiplication.by-multiple-of-ten",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Partial quotients and the area model remove multiples of the divisor times tens or hundreds, as with 6 x 100 and 6 x 40."
+      },
+      {
+       "node": "subtraction.within-1000",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test items remove partial products from the dividend, such as 852 - 600, which is a subtraction within 1000."
+      }
+     ]
+    }
+   ]
+  },
+  "division.by-one-digit.remainder": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.by-one-digit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding a quotient with a remainder carries out the same whole-number quotient process and then reports what is left over, less than the divisor."
+      }
+     ]
+    }
+   ]
+  },
+  "place-value.expanded-form.multi-digit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.expanded-form",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing each digit times its place value as a sum with one term per nonzero digit is the smaller-number expanded form extended to more places."
+      },
+      {
+       "node": "place-value.ten-times-right",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The values of the ten-thousands and hundred-thousands places in 40,603 and 300,000 come from each place being ten times the place to its right."
+      }
+     ]
+    }
+   ]
+  },
+  "operations.application.multistep.multi-digit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "operations.application.multistep",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner must already choose and carry out the steps of a two-step story problem with the four operations, now with larger numbers."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A step may be an addition of multi-digit whole numbers, the nearest addition node to the numbers in these problems."
+      },
+      {
+       "node": "subtraction.within-1000",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A step may be a subtraction of multi-digit whole numbers, as in the 500 - 290 step of the test problem."
+      },
+      {
+       "node": "multiplication.by-one-digit",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A step may be a product beyond the facts, such as 4 x 125 in the test problem."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A step may be a division with a multi-digit dividend and a whole-number answer with no remainder."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.two-digit.like-units": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.two-digit.tens-ones",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement treats a two-digit number as a number of tens and a number of ones that are added separately."
+      },
+      {
+       "node": "addition.within-10",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem 42 + 35 finds the total tens as 4 + 3 and the total ones as 2 + 5, each a sum within 10."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.two-digit.compose-ten": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.ten.unit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Trading ten ones for one ten rests on a ten being a bundle of ten ones."
+      },
+      {
+       "node": "addition.two-digit.like-units",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The ones total of 10 or more arises from adding the ones of the addends and the tens separately, as in 3 tens and 13 ones for 38 + 5."
+      }
+     ]
+    }
+   ]
+  },
+  "comparing.whole-numbers.magnitude.three-digit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.three-digit.hundreds-tens-ones",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule compares hundreds first, then tens, then ones, so each digit must be read as hundreds, tens or ones."
+      },
+      {
+       "node": "comparing.whole-numbers.numerals-within-10",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "At the deciding place the learner compares two single digits to see which is greater."
+      }
+     ]
+    }
+   ]
+  },
+  "comparing.whole-numbers.magnitude.multi-digit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.ten-times-right",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A number with more digits is greater because each place is ten times the place to its right, and the places go beyond hundreds."
+      },
+      {
+       "node": "comparing.whole-numbers.numerals-within-10",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "At the leftmost place where the digits differ the learner compares two single digits to see which is greater."
+      }
+     ]
+    }
+   ]
+  },
+  "numeral.write.to-120": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "numeral.write",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing a numeral for a spoken number is the base skill, here applied to two-digit names and the names from one hundred to one hundred twenty."
+      },
+      {
+       "node": "place-value.two-digit.tens-ones",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A two-digit numeral is written tens digit first, which comes from the two digits being tens and ones."
+      },
+      {
+       "node": "place-value.hundred.unit",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "In 100 to 120 the leading 1 stands for one hundred, so one hundred four is 104 rather than 1004."
+      }
+     ]
+    }
+   ]
+  },
+  "place-value.ten-more-less.three-digit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "place-value.three-digit.hundreds-tens-ones",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Changing the tens digit by one and leaving the ones unchanged depends on reading the digits as hundreds, tens and ones."
+      },
+      {
+       "node": "place-value.hundred.unit",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "When the tens digit is 9 or 0 the hundreds change as well because ten tens make a hundred, as in 196 + 10 = 206."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.parentheses": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.notation.expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The expressions (8 - 3) - 2 and 8 - (3 - 2) are written with the subtraction expression notation."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The expressions (2 x 3) x 4 and 2 x (3 x 4) use the multiplication sign for a number of equal groups."
+      },
+      {
+       "node": "equation.equal-sign.meaning",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test asks which pair has equal values, which uses the equal sign as sameness of value."
+      },
+      {
+       "node": "subtraction.within-10",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test evaluates 8 - 3, 5 - 2 and 3 - 2, each a difference within 10."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test evaluates 2 x 3, 3 x 4 and 6 x 4, products of one-digit numbers."
+      },
+      {
+       "node": "multiplication.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test evaluates 2 x 12 for the expression 2 x (3 x 4), a product of a two-digit and a one-digit number."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.order-of-operations": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.parentheses",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The convention applies when there are no parentheses to say otherwise, so the learner must know that parentheses force a part to be done first."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test evaluates 4 x 2, a product of one-digit numbers."
+      },
+      {
+       "node": "division.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test evaluates 12 divided by 4, a division fact."
+      },
+      {
+       "node": "addition.within-20.fluency",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test adds 3 + 8 and 17 + 1, sums within 20."
+      },
+      {
+       "node": "subtraction.within-20.fluency",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test subtracts 20 - 3, a difference within 20."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.unknown-symbol": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.equal-sign.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation is true when the number in the symbol's place makes both sides have the same value, which is the meaning of the equal sign."
+      },
+      {
+       "node": "addition.within-20.fluency",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test checks 8 + 4 and 8 + 5 against 13, sums within 20."
+      }
+     ]
+    }
+   ]
+  },
+  "table.read-two-way": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.array.rows-columns",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses rows and columns as lines of entries, the row and column structure first met in an array."
+      },
+      {
+       "node": "numeral.read",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test reads out an entry and the entries of a whole row, which are written numerals."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.thousandths.notation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Thousandths notation extends the decimal notation of tenths and hundredths by one more place after the decimal point."
+      },
+      {
+       "node": "place-value.tenth-of-left",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The third place after the decimal point counts thousandths because each place is one tenth of the place to its left."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equalities 0.007 = 7/1000 and 0.125 = 125/1000 give a number of parts of size 1/1000 as a fraction."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ray.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "An angle is defined as two rays that share an endpoint, so a ray with its endpoint must already be understood."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
