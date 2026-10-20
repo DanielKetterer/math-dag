@@ -27,7 +27,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A31 keep: Not marked (Daniel, 2026-10-20).'
+    status: reviewed
   - node: addition.within-20
     relation: procedural
     points_to: assess
@@ -40,9 +43,12 @@ requires:
       source: critic-sonnet
       note: 'task-only: Only the test checks 8 + 4 and 8 + 5 against 13.'
     - kind: review
-      source: Claude
+      source: DK
       note: 'L5 replace: Claude: the test needs the sums, not recall (method-neutral rule); addition.within-20
-        was written after the proposers ran.'
+        was written after the proposers ran. Daniel D95 (2026-10-20): not marked.'
+    - kind: review
+      source: DK
+      note: 'D95 keep: Daniel: route or added route accepted.'
     status: reviewed
   - node: equation.true-false
     relation: procedural

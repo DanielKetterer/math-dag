@@ -21,11 +21,10 @@ sources:
 requires:
 - clause: via-tell-nearest-minute
   all_of:
-  - node: measurement.time.units
+  - node: time.hour.sixty-minutes
     relation: justificatory
     points_to: statement
-    why: The statement explains the interval by saying an hour has 60 minutes, so minutes up to the next
-      hour are 60 minus the start minutes.
+    why: Step 1 counts the minutes up to the next hour, which uses that the hour turns over after 60 minutes.
     evidence:
     - kind: content
       source: pass-P
@@ -34,7 +33,12 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'F110 replace: Daniel F110: the direct prerequisites are reading minute marks and the hour
+        transition; the unit-conversion fact (4.MD.A.1) is needed only when hours are expressed as minutes.
+        New node in the next slice.'
+    status: reviewed
   - node: subtraction.within-100
     relation: procedural
     points_to: procedure.1
@@ -80,11 +84,10 @@ requires:
 - clause: critic-route-1
   note: Times are shown as digital clocks or numerals, so the minutes are read without analog reading.
   all_of:
-  - node: measurement.time.units
+  - node: time.hour.sixty-minutes
     relation: justificatory
     points_to: statement
-    why: The statement explains the interval by saying an hour has 60 minutes, so minutes up to the next
-      hour are 60 minus the start minutes.
+    why: Step 1 counts the minutes up to the next hour, which uses that the hour turns over after 60 minutes.
     evidence:
     - kind: content
       source: pass-P
@@ -93,7 +96,12 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'F110 replace: Daniel F110: the direct prerequisites are reading minute marks and the hour
+        transition; the unit-conversion fact (4.MD.A.1) is needed only when hours are expressed as minutes.
+        New node in the next slice.'
+    status: reviewed
   - node: subtraction.within-100
     relation: procedural
     points_to: procedure.1

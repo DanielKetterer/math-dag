@@ -13,24 +13,21 @@ sources:
   learning_components:
   - 5c48ad41
 requires:
-- clause: standard
+- clause: via-take-away
   all_of:
-  - node: subtraction.take-away.describe
-    relation: definitional
+  - node: subtraction.take-away.count-remaining
+    relation: procedural
     points_to: statement
-    why: A difference within 10 is what remains after taking away, whether found by taking objects away,
-      counting back or a known fact, so the taking-away meaning must already be in words and numbers.
+    why: Removing b objects from a and counting those left finds the difference, one route.
     evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'undecided: A learner can take 4 from 9 objects and count the rest without narrating the action,
-        yet the difference needs the taking-away meaning of subtraction to be in place somewhere in the
-        map.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'C65, D81 add: Daniel: methods named as routes to a difference within 10.'
+    - kind: review
+      source: DK
+      note: 'C65, D81 set_routes: Daniel: no unconditional verbal edge; taking away and counting the rest,
+        counting back, or related addition each find the difference.'
+    status: reviewed
   - node: subtraction.notation.expression
     relation: representational
     points_to: assess
@@ -46,7 +43,11 @@ requires:
       source: critic-sonnet
       note: 'task-only: Only the test problem is written with a minus sign; the statement just asks for
         a difference by any method.'
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'C65, D81 set_routes: Daniel: no unconditional verbal edge; taking away and counting the rest,
+        counting back, or related addition each find the difference.'
+    status: reviewed
   - node: counting.objects
     relation: procedural
     points_to: statement
@@ -58,5 +59,84 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'C65, D81 set_routes: Daniel: no unconditional verbal edge; taking away and counting the rest,
+        counting back, or related addition each find the difference.'
+    status: reviewed
+- clause: via-count-back
+  all_of:
+  - node: subtraction.count-back
+    relation: procedural
+    points_to: statement
+    why: Counting back b from a finds the difference, one route.
+    evidence:
+    - kind: review
+      source: DK
+      note: 'C65, D81 add: Daniel: methods named as routes to a difference within 10.'
+    - kind: review
+      source: DK
+      note: 'C65, D81 set_routes: Daniel: no unconditional verbal edge; taking away and counting the rest,
+        counting back, or related addition each find the difference.'
+    status: reviewed
+  - node: subtraction.notation.expression
+    relation: representational
+    points_to: assess
+    why: The test problem is written as 9 - 4, so the learner must read the subtraction expression with
+      its minus sign.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem is written with a minus sign; the statement just asks for
+        a difference by any method.'
+    - kind: review
+      source: DK
+      note: 'C65, D81 set_routes: Daniel: no unconditional verbal edge; taking away and counting the rest,
+        counting back, or related addition each find the difference.'
+    status: reviewed
+- clause: via-related-addition
+  all_of:
+  - node: subtraction.unknown-addend.strategy
+    relation: procedural
+    points_to: statement
+    why: Finding the missing addend in b + ? = a finds a - b, one route.
+    evidence:
+    - kind: review
+      source: DK
+      note: 'C65, D81 add: Daniel: methods named as routes to a difference within 10.'
+    - kind: review
+      source: DK
+      note: 'C65, D81 set_routes: Daniel: no unconditional verbal edge; taking away and counting the rest,
+        counting back, or related addition each find the difference.'
+    status: reviewed
+  - node: subtraction.notation.expression
+    relation: representational
+    points_to: assess
+    why: The test problem is written as 9 - 4, so the learner must read the subtraction expression with
+      its minus sign.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem is written with a minus sign; the statement just asks for
+        a difference by any method.'
+    - kind: review
+      source: DK
+      note: 'C65, D81 set_routes: Daniel: no unconditional verbal edge; taking away and counting the rest,
+        counting back, or related addition each find the difference.'
+    status: reviewed
+related:
+- node: subtraction.take-away.describe
+  relation: common_path
+  note: 'Common path, not required (C65, D81): Daniel: a difference within 10 can be found by removing
+    objects and counting the rest, counting back, or related addition, without narrating the action.'
 status: proposed

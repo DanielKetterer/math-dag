@@ -29,7 +29,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A24 keep: Not marked (Daniel, 2026-10-20).'
+    status: reviewed
   - node: measurement.length.no-gaps-overlaps
     relation: definitional
     points_to: statement
@@ -64,18 +67,4 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: measurement.length.ruler
-    relation: definitional
-    points_to: statement
-    why: Lengths given in inches or centimeters are measurements in standard units, and the answer is
-      stated with the unit.
-    evidence:
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'undecided: The problem gives lengths as numbers with units and no measuring step is performed,
-        so the ruler procedure is not used; but the lengths must mean standard-unit measurements, which
-        the map builds mainly through ruler measuring.'
-    status: disputed
 status: proposed

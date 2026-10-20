@@ -15,10 +15,10 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: shapes.quadrilateral.recognize
+  - node: shapes.polygon.name-by-sides
     relation: definitional
     points_to: statement
-    why: The definition names the rhombus as a quadrilateral, the figure with exactly four straight sides.
+    why: The definition names the rhombus as a quadrilateral, the polygon named by its four sides.
     evidence:
     - kind: content
       source: pass-P
@@ -27,7 +27,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A14 replace: Daniel: the definition needs the four-sided category and equal sides, not recognizing
+        quadrilaterals of every shape.'
+    status: reviewed
   - node: shapes.attribute.equal-sides
     relation: definitional
     points_to: statement

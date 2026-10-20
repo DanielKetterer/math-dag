@@ -6,18 +6,25 @@
 - necessary: 535
 - scaffold: 70
 - task-only: 68
+- review: keep: 55
 - route-only: 47
 - route-only split into own clause: 47
 - alt route from passes: 45
 - alt route from critic: 43
 - missing-prerequisite added: 34
 - dominated route removed: 21
+- review: add: 18
+- review: critic drop upheld: 17
 - undecided: 13
+- review: drop: 13
+- review: replace: 11
 - related: 8
 - wrong: 8
 - indirect: 7
-- review: route added: 5
-- review: add: 2
-- review: drop: 1
-- review: replace: 1
-- review: related: 1
+- review: set_routes: 6
+- review: route added: 6
+- review: related: 5
+- review: target not found: 5
+- review: restore: 2
+- critic indirect overruled by review: 1
+- critic scaffold overruled by review: 1

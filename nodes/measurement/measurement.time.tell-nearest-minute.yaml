@@ -14,7 +14,7 @@ sources:
   learning_components:
   - befd3355
 requires:
-- clause: standard
+- clause: via-fives
   all_of:
   - node: time.analog.five-minutes
     relation: definitional
@@ -29,7 +29,15 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A30 keep: Daniel: the nearest minute can be read by counting single minute marks; the five-minute
+        reading is a shortcut. Applied in set_routes (via fives, via ones).'
+    - kind: review
+      source: DK
+      note: 'A30 set_routes: Daniel: the five-minute reading is a shortcut; single minute marks can be
+        counted from 12.'
+    status: reviewed
   - node: time.digital.write
     relation: representational
     points_to: statement
@@ -42,7 +50,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A30 set_routes: Daniel: the five-minute reading is a shortcut; single minute marks can be
+        counted from 12.'
+    status: reviewed
   - node: addition.within-100
     relation: procedural
     points_to: statement
@@ -54,7 +66,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A30 set_routes: Daniel: the five-minute reading is a shortcut; single minute marks can be
+        counted from 12.'
+    status: reviewed
   - node: time.analog.hour
     relation: definitional
     points_to: statement
@@ -64,5 +80,68 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'A30 set_routes: Daniel: the five-minute reading is a shortcut; single minute marks can be
+        counted from 12.'
+    status: reviewed
+- clause: via-ones
+  all_of:
+  - node: counting.objects
+    relation: procedural
+    points_to: statement
+    why: Counting the single minute marks from 12 to the minute hand gives the minutes, one route.
+    evidence:
+    - kind: review
+      source: DK
+      note: 'A30 add: Daniel A30: counting single minute marks is a route.'
+    - kind: review
+      source: DK
+      note: 'A30 set_routes: Daniel: the five-minute reading is a shortcut; single minute marks can be
+        counted from 12.'
+    status: reviewed
+  - node: counting.sequence.to-100
+    relation: procedural
+    points_to: statement
+    why: Counting up to 59 minute marks says the number words past 20, one route.
+    evidence:
+    - kind: review
+      source: DK
+      note: 'A30 add: Daniel A30: counting single minute marks is a route.'
+    - kind: review
+      source: DK
+      note: 'A30 set_routes: Daniel: the five-minute reading is a shortcut; single minute marks can be
+        counted from 12.'
+    status: reviewed
+  - node: time.digital.write
+    relation: representational
+    points_to: statement
+    why: The reading is recorded in the hours:minutes form, with the minutes written as two digits.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    - kind: review
+      source: DK
+      note: 'A30 set_routes: Daniel: the five-minute reading is a shortcut; single minute marks can be
+        counted from 12.'
+    status: reviewed
+  - node: time.analog.hour
+    relation: definitional
+    points_to: statement
+    why: The statement reads the hour from the hour hand; this is read directly, not only through the
+      five-minute node.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    - kind: review
+      source: DK
+      note: 'A30 set_routes: Daniel: the five-minute reading is a shortcut; single minute marks can be
+        counted from 12.'
+    status: reviewed
 status: proposed

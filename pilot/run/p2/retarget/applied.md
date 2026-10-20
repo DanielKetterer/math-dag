@@ -86,7 +86,7 @@
 - r84 operations.application.justify-solution (standard): multiplication.partial-products.two-digit-by-two-digit -> ['multiplication.two-digit-by-two-digit']
 - r85 operations.application.multistep.remainder (standard): operations.application.multistep -> ['operations.application.multistep']
 - r86 operations.application.multistep.remainder (standard): division.partial-quotients.one-digit-divisor.remainder -> ['division.by-one-digit.remainder']
-- r87 operations.application.reasonableness (standard): operations.application.multistep -> ['operations.application.multistep.multi-digit']
+- r87 operations.application.reasonableness (standard): operations.application.multistep -> ['operations.application.multistep']
 - r88 patterns.numerical.graph-pairs (standard): coordinate-plane.first-quadrant -> ['coordinate-plane.first-quadrant.plot']
 - r89 place-value.expanded-form.decimal (standard): place-value.expanded-form -> ['place-value.expanded-form']
 - r90 proportional-relationship.constant.graph (standard): coordinate-plane.first-quadrant -> ['coordinate-plane.first-quadrant.read']

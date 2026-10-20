@@ -3,22 +3,22 @@ concept: operations
 facet: whole-number
 level: 2
 type: justification
-name: Judge whether the answer to a multi-step word problem is reasonable by estimating
-statement: An answer to a multi-step whole-number word problem is judged reasonable or not by estimating
-  the answer with rounded numbers or mental computation and comparing.
-assess: Lee says 4 boxes of 198 nails, minus 305 nails used, leaves 1,097 nails. Without computing exactly,
-  use rounding to decide whether his answer is reasonable, and explain.
+name: Judge whether the answer to a two-step word problem is reasonable by estimating
+statement: An answer to a two-step whole-number word problem, each step an addition or subtraction within
+  1000 or a multiplication or division within 100, is judged reasonable or not by estimating the answer
+  with rounded numbers or mental computation and comparing.
+assess: Ana had 412 beads. She used 189 of them, then bought 6 packs of 8 beads. She says she now has
+  371 beads. Without computing exactly, use rounding or mental math to decide whether her answer is reasonable,
+  and explain.
 sources:
   ccss:
   - 3.OA.D.8
-  - 4.OA.A.3
   learning_components:
   - 88ab95a4
-  - 44a2143c
 requires:
 - clause: standard
   all_of:
-  - node: operations.application.multistep.multi-digit
+  - node: operations.application.multistep
     relation: definitional
     points_to: statement
     why: The answer judged is the answer to a multi-step whole-number word problem.
@@ -30,25 +30,6 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    - kind: content
-      source: retarget-sonnet
-      note: 're-pointed from retired operations.application.multistep: The test has 4 x 198 and 305, multi-digit
-        numbers.'
-    status: proposed
-  - node: multiplication.by-multiple-of-ten
-    relation: procedural
-    points_to: assess
-    why: The estimate of 4 boxes of about 200 nails is a one-digit number times a multiple of 100.
-    scope: task
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'task-only: Only the test problem (4 x 198 estimated as 4 x 200) needs multiplying by a multiple
-        of ten or hundred.'
     status: proposed
 related:
 - node: rounding.whole-number.nearest-ten-hundred

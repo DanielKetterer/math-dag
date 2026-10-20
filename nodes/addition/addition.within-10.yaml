@@ -13,23 +13,21 @@ sources:
   learning_components:
   - 10c58598
 requires:
-- clause: standard
+- clause: via-count-all
   all_of:
-  - node: addition.add-to.describe
-    relation: definitional
+  - node: addition.add-to.count-all
+    relation: procedural
     points_to: statement
-    why: A sum within 10 is the total after joining two amounts, whether found by objects, fingers, counting
-      on or a known fact, so the joining meaning must already be in words and numbers.
+    why: Joining two sets of objects and counting them all finds the sum, one route.
     evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'undecided: A learner can join 4 and 3 objects and count them without telling a joining story
-        in words, yet the sum needs the joining meaning of addition to be in place somewhere in the map.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'C64, D74 add: Daniel: methods named as routes to a sum within 10.'
+    - kind: review
+      source: DK
+      note: 'C64, D74 set_routes: Daniel: no unconditional verbal edge; count all, fingers, or count on
+        each find the sum. Recall is not a route: fluency needs this node.'
+    status: reviewed
   - node: addition.notation.expression
     relation: representational
     points_to: assess
@@ -45,7 +43,11 @@ requires:
       source: critic-sonnet
       note: 'task-only: Only the test problem is written with a plus sign; the statement just asks for
         the sum of two numbers by any method.'
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'C64, D74 set_routes: Daniel: no unconditional verbal edge; count all, fingers, or count on
+        each find the sum. Recall is not a route: fluency needs this node.'
+    status: reviewed
   - node: counting.objects
     relation: procedural
     points_to: statement
@@ -57,5 +59,84 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'C64, D74 set_routes: Daniel: no unconditional verbal edge; count all, fingers, or count on
+        each find the sum. Recall is not a route: fluency needs this node.'
+    status: reviewed
+- clause: via-fingers
+  all_of:
+  - node: addition.add-to.fingers
+    relation: procedural
+    points_to: statement
+    why: Raising fingers for each addend and finding how many in all finds the sum, one route.
+    evidence:
+    - kind: review
+      source: DK
+      note: 'C64, D74 add: Daniel: methods named as routes to a sum within 10.'
+    - kind: review
+      source: DK
+      note: 'C64, D74 set_routes: Daniel: no unconditional verbal edge; count all, fingers, or count on
+        each find the sum. Recall is not a route: fluency needs this node.'
+    status: reviewed
+  - node: addition.notation.expression
+    relation: representational
+    points_to: assess
+    why: The test problem is written as 4 + 3, so the learner must read the addition expression with its
+      plus sign.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem is written with a plus sign; the statement just asks for
+        the sum of two numbers by any method.'
+    - kind: review
+      source: DK
+      note: 'C64, D74 set_routes: Daniel: no unconditional verbal edge; count all, fingers, or count on
+        each find the sum. Recall is not a route: fluency needs this node.'
+    status: reviewed
+- clause: via-count-on
+  all_of:
+  - node: addition.count-on
+    relation: procedural
+    points_to: statement
+    why: Counting on from the first addend finds the sum, one route.
+    evidence:
+    - kind: review
+      source: DK
+      note: 'C64, D74 add: Daniel: methods named as routes to a sum within 10.'
+    - kind: review
+      source: DK
+      note: 'C64, D74 set_routes: Daniel: no unconditional verbal edge; count all, fingers, or count on
+        each find the sum. Recall is not a route: fluency needs this node.'
+    status: reviewed
+  - node: addition.notation.expression
+    relation: representational
+    points_to: assess
+    why: The test problem is written as 4 + 3, so the learner must read the addition expression with its
+      plus sign.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem is written with a plus sign; the statement just asks for
+        the sum of two numbers by any method.'
+    - kind: review
+      source: DK
+      note: 'C64, D74 set_routes: Daniel: no unconditional verbal edge; count all, fingers, or count on
+        each find the sum. Recall is not a route: fluency needs this node.'
+    status: reviewed
+related:
+- node: addition.add-to.describe
+  relation: common_path
+  note: 'Common path, not required (C64, D74): Daniel: a sum within 10 can be found by counting all, counting
+    on, or a known fact without telling the joining action in words.'
 status: proposed

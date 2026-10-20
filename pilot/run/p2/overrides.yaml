@@ -1,8 +1,11 @@
-# Phase 2 overrides. Until Daniel reviews phase 2, this holds only Claude's
-# prerequisites for the two late method-neutral nodes (no proposer pass ran on
-# them); they are flagged in the review queue.
-reviewer: Claude
-review: pilot/run/p2/REVIEW.md
+# Daniel's review of big run phase 2 (pilot/run/p2/REVIEW.md), answers in REVIEW_ANSWERS.txt
+# (2026-10-20). L1-L5 are Claude's late hand-made edges, confirmed or left by the review. Claude
+# decisions on conditional answers are marked "Claude"; they are Daniel's to reverse. Edges to
+# ids not yet written (shapes.square-corner and the rest) are reserved for the next slice.
+reviewer: DK
+review: pilot/run/p2/REVIEW.md, answers in REVIEW_ANSWERS.txt (2026-10-20)
+pending: 'Claude pushed back (not applied, edges left as proposed): A11 parallel.meaning -> segment.meaning, A28
+  decimal.thousandths.notation -> decimal.hundredths.notation. See pilot/HANDOFF.md.'
 rename: {}
 edges:
 - item: L1
@@ -12,7 +15,8 @@ edges:
   relation: procedural
   points_to: statement
   why: Counting on from the larger addend finds any sum within 20, one route to the sum.
-  reason: 'Claude: late node, routes given by hand (count on, make a ten, recall).'
+  reason: 'Claude: late node, routes given by hand (count on, make a ten, recall). Daniel F111 (2026-10-20): confirmed,
+    with the scope caveat applied in set_routes.'
 - item: L2
   node: subtraction.within-20
   target: subtraction.count-back
@@ -20,28 +24,749 @@ edges:
   relation: procedural
   points_to: statement
   why: Counting back by the subtrahend from the minuend finds any difference within 20, one route.
-  reason: 'Claude: late node, routes given by hand (count back, decompose to ten, think addition, recall).'
+  reason: 'Claude: late node, routes given by hand (count back, decompose to ten, think addition, recall). Daniel
+    F111 (2026-10-20): confirmed, with the scope caveat applied in set_routes.'
 - item: L3
   node: measurement.weight.attribute
   target: comparing.weight.direct
   action: related
-  reason: 'Claude: breaks a cycle with no escape. Daniel''s pre-K review requires the attribute for direct
-    weight comparison (comparing.weight.direct -> measurement.weight.attribute); this new edge ran the
-    other way. Flagged in the phase 2 queue.'
+  reason: 'Claude: breaks a cycle with no escape. Daniel''s pre-K review requires the attribute for direct weight
+    comparison (comparing.weight.direct -> measurement.weight.attribute); this new edge ran the other way. Flagged
+    in the phase 2 queue. Daniel F112 (2026-10-20): confirmed.'
 - item: L4
   node: expressions.parentheses
   target: multiplication.by-one-digit
   action: drop
-  reason: 'Claude: my own test problem used 2 x 12, which asked for more than the node (writer rule 3);
-    the test now stays within the facts.'
+  reason: 'Claude: my own test problem used 2 x 12, which asked for more than the node (writer rule 3); the test
+    now stays within the facts. Daniel B48 (2026-10-20): drop not reversed.'
 - item: L5
   node: equation.unknown-symbol
   target: addition.within-20.fluency
   action: replace
   with: addition.within-20
   why: Checking 8 + 4 and 8 + 5 against 13 finds sums within 20, by any method.
-  reason: 'Claude: the test needs the sums, not recall (method-neutral rule); addition.within-20 was written
-    after the proposers ran.'
+  reason: 'Claude: the test needs the sums, not recall (method-neutral rule); addition.within-20 was written after
+    the proposers ran. Daniel D95 (2026-10-20): not marked.'
+- item: A2
+  node: measurement.unit-conversion.table
+  target: multiplication.facts.within-100
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A3
+  node: measurement.unit-conversion.to-larger.decimal
+  target: division.power-of-ten.rule
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A6
+  node: data.bar-graph.application.two-step
+  target: addition.within-100
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A8
+  node: area.rectangle.tiling-product.explain
+  target: multiplication.equal-groups.meaning
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A9
+  node: shapes.quadrilateral.hierarchy
+  target: shapes.quadrilateral.parallel-sides.define
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A12
+  node: measurement.application.conversion.multistep
+  target: operations.application.multistep.multi-digit
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A13
+  node: perimeter.missing-side.application
+  target: subtraction.within-100
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A15
+  node: area.rectilinear.application
+  target: area.rectilinear.decompose
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A16
+  node: shapes.square.define
+  target: shapes.attribute.equal-sides
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A18
+  node: measurement.application.whole-number
+  target: subtraction.within-100
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A19
+  node: multiplication.array-area.distributive.model
+  target: multiplication.array-area.whole-number-product.represent
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A20
+  node: measurement.unit-conversion.to-smaller.mixed-units
+  target: addition.within-1000
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A21
+  node: time.analog.hour
+  target: numeral.read
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A23
+  node: volume.prism.formula.base-height.apply
+  target: volume.unit-cube
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A24
+  node: measurement.length.application.subtraction
+  target: subtraction.within-100
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A26
+  node: coordinate-plane.first-quadrant.read
+  target: coordinate-plane.ordered-pair.meaning
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A27
+  node: segment.meaning
+  target: line.meaning
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A31
+  node: equation.unknown-symbol
+  target: equation.equal-sign.meaning
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A32
+  node: shapes.triangle.right.identify
+  target: angle.right.meaning
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A33
+  node: measurement.length.unit-size.inverse
+  target: measurement.length.no-gaps-overlaps
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A34
+  node: angle.draw-by-type
+  target: angle.right.meaning
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A35
+  node: measurement.liquid-volume.units.metric
+  target: multiplication.comparison
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A36
+  node: measurement.length.ruler.nearest-fourth-inch
+  target: measurement.length.ruler
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A37
+  node: data.line-plot.fractional.make
+  target: fraction.unit.number-line
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A38
+  node: expressions.order-of-operations
+  target: subtraction.within-20.fluency
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A39
+  node: shapes.classify.parallel-perpendicular
+  target: perpendicular.meaning
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A40
+  node: perimeter.rectangle.unknown-side
+  target: division.by-one-digit
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A1
+  node: shapes.attributes.shared
+  target: shapes.attribute.defining
+  action: drop
+  reason: 'Daniel: shapes in different categories can share attributes without the general concept of defining attributes;
+    direct comparison of examples supplies a credible route.'
+- item: A4
+  node: time.analog.five-minutes
+  target: time.analog.half-hour
+  action: replace
+  with: time.analog.hour
+  why: Step 1 reads the hour from the hour hand on the clock face, as in telling time to the hour.
+  reason: 'Daniel: five-minute time can be taught from the five-minute marks and the hour hand''s position; the
+    half hour is a scaffold. Claude: the edge points at the clock face itself, so the node is not left without one.'
+- item: A5
+  node: measurement.application.fraction
+  target: fraction.application.subtraction-same-whole
+  action: drop
+  reason: 'Daniel: measurement word problems with simple fractions need not involve subtraction. Claude: also, this
+    node is grade 4 (like denominators) and the target is the unlike-denominator word-problem node; like-denominator
+    subtraction is reached through fraction.mixed-number.subtract. IM 360 places this node before the target (order
+    finding, step 84).'
+- item: A7
+  node: division.by-one-digit
+  target: multiplication.by-multiple-of-ten
+  action: keep
+  reason: 'Daniel: route-specific; it belongs to partial quotients and the area model, not to every method. Claude:
+    kept on the three existing routes (all use those methods) and a standard-algorithm route without it is added
+    (routes, A7).'
+- item: A10
+  node: measurement.application.conversion.multistep
+  target: measurement.unit-conversion.to-smaller.fraction
+  action: drop
+  reason: 'Daniel: multi-step conversion problems need not involve fractional measurements; keep fraction conversion
+    only for the problem type that uses it.'
+- item: A14
+  node: shapes.rhombus.define
+  target: shapes.quadrilateral.recognize
+  action: replace
+  with: shapes.polygon.name-by-sides
+  why: The definition names the rhombus as a quadrilateral, the polygon named by its four sides.
+  reason: 'Daniel: the definition needs the four-sided category and equal sides, not recognizing quadrilaterals
+    of every shape.'
+- item: A17
+  node: money.coins.total-value
+  target: counting.sequence.count-on
+  action: keep
+  reason: 'Daniel: counting on by ones is one route (pennies); collections can be totaled by addition. Applied in
+    set_routes (counting route, adding route).'
+- item: A22
+  node: multiplication.array-area.distributive.model
+  target: expressions.parentheses
+  action: drop
+  reason: 'Daniel: the area model can introduce the grouping of b + c directly; the test (6 x 9 = 6 x 5 + 6 x 4)
+    uses no parentheses.'
+- item: A25
+  node: shapes.quadrilateral.subcategories-included
+  target: shapes.square.define
+  action: replace
+  with: shapes.name.any-orientation
+  why: The statement says squares are quadrilaterals, so the learner must know which figures, in any orientation,
+    are called squares.
+  reason: 'Daniel: a learner can establish that squares are quadrilaterals by counting four sides without the full
+    definition of a square. Claude: the node still has to know which figures are called squares, so the edge points
+    at naming them.'
+- item: A29
+  node: shapes.square.define
+  target: shapes.quadrilateral.recognize
+  action: replace
+  with: shapes.polygon.name-by-sides
+  why: The definition names the square as a quadrilateral, the polygon named by its four sides.
+  reason: 'Daniel: the square can be defined by four equal sides and four right angles; recognizing arbitrary quadrilaterals
+    need not come first.'
+- item: A30
+  node: measurement.time.tell-nearest-minute
+  target: time.analog.five-minutes
+  action: keep
+  reason: 'Daniel: the nearest minute can be read by counting single minute marks; the five-minute reading is a
+    shortcut. Applied in set_routes (via fives, via ones).'
+- item: B41
+  node: shapes.attribute.defining
+  target: shapes.name.any-orientation
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B42
+  node: shapes.attribute.non-defining
+  target: shapes.recognize
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B43
+  node: shapes.polygon.name-by-sides
+  target: shapes.attribute.defining
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B44
+  node: area.unit-square
+  target: measurement.attributes.several
+  action: restore
+  reason: 'Daniel: keep; the unit square as a measure of area is separated from its shape by knowing an object has
+    several measurable attributes. area.attribute (D83) is also required.'
+- item: B45
+  node: area.covering.meaning
+  target: shapes.compose.fill-outline
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B46
+  node: area.rectangle.tiling
+  target: partitioning.rectangle.rows-columns
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B47
+  node: area.rectangle.tiling
+  target: counting.array.squares
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B49
+  node: area.rectangle.length-times-width
+  target: area.rectangle.tiling-product.explain
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B50
+  node: area.rectangle.length-times-width
+  target: area.rectangle.tiles-along-side
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B51
+  node: multiplication.by-one-digit
+  target: multiplication.distributive
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B52
+  node: shapes.solid.parts
+  target: shapes.corners.count
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B53
+  node: partitioning.rectangle.rows-columns
+  target: shapes.name.any-orientation
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B54
+  node: coordinate-plane.ordered-pair.meaning
+  target: number-line.whole-number-lengths
+  action: restore
+  reason: 'Daniel: keep; the statement itself uses coordinates as distances from 0, so the direct-use rule keeps
+    the edge even though axes-origin reaches it.'
+- item: B55
+  node: perimeter.meaning
+  target: shapes.polygon.name-by-sides
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B56
+  node: multiplication.array-area.whole-number-product.represent
+  target: multiplication.array.rows-columns
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B57
+  node: measurement.unit-conversion.multiplicative-relation
+  target: measurement.length.unit-size.inverse
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B58
+  node: shapes.compare.by-attributes
+  target: shapes.recognize
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B59
+  node: coordinate-plane.first-quadrant.read
+  target: parallel.meaning
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B60
+  node: volume.three-factor-product
+  target: multiplication.associative
+  action: uphold
+  reason: Not marked (Daniel, 2026-10-20).
+- item: C61
+  node: symmetry.line.meaning
+  target: spatial.motion.turn-flip
+  action: related
+  reason: 'Daniel: physical folding shows symmetry without mentally turning or flipping a shape; turning and flipping
+    stays as a related spatial skill.'
+- item: C62
+  node: shapes.attribute.defining
+  target: shapes.square-corner
+  action: keep
+  reason: 'Daniel: write shapes.square-corner, an informal square-corner concept (next slice).'
+- item: C63
+  node: shapes.classify.defining-attributes
+  target: shapes.square-corner
+  action: keep
+  reason: 'Daniel: same decision as C62.'
+- item: C66
+  node: data.line-plot.fraction.multistep
+  target: fraction.subtraction.unlike-denominators
+  action: drop
+  reason: 'Daniel: keep unlike-denominator subtraction only where the test needs it; this test adds and divides.'
+- item: C67
+  node: volume.count-cubes
+  target: volume.packing
+  action: related
+  reason: 'Daniel: counting unit cubes is itself a credible route to the idea that volume is the number of unit
+    cubes; do not require the packing concept first.'
+- item: C68
+  node: measurement.length.unit-size.inverse
+  target: comparing.whole-numbers.numerals-within-10
+  action: drop
+  reason: 'Daniel: the qualitative relation between unit size and measurement does not depend on comparing numerals
+    1 to 10.'
+- item: C69
+  node: measurement.length.difference
+  target: subtraction.within-100
+  action: drop
+  reason: 'Daniel: no unconditional within-100 edge; the test (9 - 6) is within 10, which the task edge covers.'
+- item: C70
+  node: measurement.length.application.addition
+  target: measurement.length.ruler
+  action: drop
+  reason: 'Daniel: the test gives the lengths with units; ruler measurement is needed only when the learner must
+    measure.'
+- item: C71
+  node: measurement.length.application.subtraction
+  target: measurement.length.ruler
+  action: drop
+  reason: 'Daniel: same as C70.'
+- item: C72
+  node: time.analog.draw-half-hour
+  target: number.halfway-between
+  action: drop
+  reason: 'Daniel: no edge to a numerical midpoint node; the half-hour position is in time.analog.half-hour.'
+- item: C73
+  node: data.bar-graph.compare
+  target: subtraction.within-100
+  action: drop
+  reason: 'Daniel: within 100 only when the scale allows differences past 10; this test (9 - 5, scale by ones) is
+    within 10, which the task edge covers.'
+- item: C64, D74
+  node: addition.within-10
+  target: addition.add-to.describe
+  action: related
+  reason: 'Daniel: a sum within 10 can be found by counting all, counting on, or a known fact without telling the
+    joining action in words.'
+- item: C64, D74
+  node: addition.within-10
+  target: addition.add-to.count-all
+  action: add
+  relation: procedural
+  points_to: statement
+  why: Joining two sets of objects and counting them all finds the sum, one route.
+  reason: 'Daniel: methods named as routes to a sum within 10.'
+- item: C64, D74
+  node: addition.within-10
+  target: addition.add-to.fingers
+  action: add
+  relation: procedural
+  points_to: statement
+  why: Raising fingers for each addend and finding how many in all finds the sum, one route.
+  reason: 'Daniel: methods named as routes to a sum within 10.'
+- item: C64, D74
+  node: addition.within-10
+  target: addition.count-on
+  action: add
+  relation: procedural
+  points_to: statement
+  why: Counting on from the first addend finds the sum, one route.
+  reason: 'Daniel: methods named as routes to a sum within 10.'
+- item: C65, D81
+  node: subtraction.within-10
+  target: subtraction.take-away.describe
+  action: related
+  reason: 'Daniel: a difference within 10 can be found by removing objects and counting the rest, counting back,
+    or related addition, without narrating the action.'
+- item: C65, D81
+  node: subtraction.within-10
+  target: subtraction.take-away.count-remaining
+  action: add
+  relation: procedural
+  points_to: statement
+  why: Removing b objects from a and counting those left finds the difference, one route.
+  reason: 'Daniel: methods named as routes to a difference within 10.'
+- item: C65, D81
+  node: subtraction.within-10
+  target: subtraction.count-back
+  action: add
+  relation: procedural
+  points_to: statement
+  why: Counting back b from a finds the difference, one route.
+  reason: 'Daniel: methods named as routes to a difference within 10.'
+- item: C65, D81
+  node: subtraction.within-10
+  target: subtraction.unknown-addend.strategy
+  action: add
+  relation: procedural
+  points_to: statement
+  why: Finding the missing addend in b + ? = a finds a - b, one route.
+  reason: 'Daniel: methods named as routes to a difference within 10.'
+- item: D75
+  node: addition.within-20
+  target: addition.count-on
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D76
+  node: addition.within-20
+  target: addition.make-ten
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D77
+  node: addition.within-20
+  target: addition.within-20.fluency
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D78
+  node: shapes.name.any-orientation
+  target: shapes.name.receptive
+  action: keep
+  reason: 'Daniel: insufficient as modeled; keep shape naming, but the prototype and receptive nodes cover only
+    circles, squares and triangles. A naming node for typical rectangles and hexagons is added (next slice).'
+- item: D79
+  node: shapes.attribute.defining
+  target: shapes.square-corner
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: D80
+  node: shapes.quadrilateral.recognize
+  target: shapes.sides.count
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: D82
+  node: shapes.square.define
+  target: shapes.attribute.defining
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: D83
+  node: area.unit-square
+  target: area.attribute
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: D84
+  node: area.rectangle.tiling
+  target: area.unit-square
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: D85
+  node: place-value.expanded-form.multi-digit
+  target: place-value.ten-times-right
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D86
+  node: place-value.expanded-form.multi-digit
+  target: numeral.read.periods
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D87
+  node: subtraction.within-100
+  target: subtraction.base-ten.like-units
+  action: keep
+  reason: 'Daniel: the alternative subtraction routes are credible; Fuson and Willis showed children count up for
+    multidigit subtraction, including problems that usually need regrouping.'
+- item: D88
+  node: subtraction.within-100
+  target: subtraction.base-ten.decompose-unit
+  action: keep
+  reason: 'Daniel: the alternative subtraction routes are credible; Fuson and Willis showed children count up for
+    multidigit subtraction, including problems that usually need regrouping.'
+- item: D89
+  node: subtraction.within-100
+  target: subtraction.unknown-addend.meaning
+  action: keep
+  reason: 'Daniel: the alternative subtraction routes are credible; Fuson and Willis showed children count up for
+    multidigit subtraction, including problems that usually need regrouping.'
+- item: D90
+  node: subtraction.within-100
+  target: addition.within-100
+  action: keep
+  reason: 'Daniel: the alternative subtraction routes are credible; Fuson and Willis showed children count up for
+    multidigit subtraction, including problems that usually need regrouping.'
+- item: D91
+  node: subtraction.within-1000
+  target: subtraction.base-ten.like-units
+  action: keep
+  reason: 'Daniel: the alternative subtraction routes are credible; Fuson and Willis showed children count up for
+    multidigit subtraction, including problems that usually need regrouping.'
+- item: D92
+  node: subtraction.within-1000
+  target: subtraction.base-ten.decompose-unit
+  action: keep
+  reason: 'Daniel: the alternative subtraction routes are credible; Fuson and Willis showed children count up for
+    multidigit subtraction, including problems that usually need regrouping.'
+- item: D93
+  node: subtraction.within-1000
+  target: subtraction.unknown-addend.meaning
+  action: keep
+  reason: 'Daniel: the alternative subtraction routes are credible; Fuson and Willis showed children count up for
+    multidigit subtraction, including problems that usually need regrouping.'
+- item: D94
+  node: subtraction.within-1000
+  target: addition.within-1000
+  action: keep
+  reason: 'Daniel: the alternative subtraction routes are credible; Fuson and Willis showed children count up for
+    multidigit subtraction, including problems that usually need regrouping.'
+- item: D95
+  node: equation.unknown-symbol
+  target: addition.within-20
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D96
+  node: subtraction.within-20
+  target: subtraction.count-back
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D97
+  node: subtraction.within-20
+  target: subtraction.decompose-to-ten
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D98
+  node: subtraction.within-20
+  target: subtraction.unknown-addend.strategy
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D99
+  node: subtraction.within-20
+  target: subtraction.within-20.fluency
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D100
+  node: area.rectangle.length-times-width
+  target: area.unit-square
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D101
+  node: area.rectangle.length-times-width
+  target: area.covering.meaning
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D102
+  node: division.by-one-digit
+  target: division.unknown-factor.meaning
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D103
+  node: division.by-one-digit
+  target: division.measurement.meaning
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D78
+  node: shapes.name.any-orientation
+  target: shapes.name.prototype.rectangle-hexagon
+  action: add
+  relation: representational
+  points_to: statement
+  why: The statement names rectangles and hexagons, which the circle, square and triangle naming nodes do not cover.
+  reason: 'Daniel D78: add the shape-specific naming node the statement needs (written in the next slice).'
+- item: F104
+  node: shapes.rectangle.define
+  target: angle.right.meaning
+  action: replace
+  with: shapes.square-corner
+  why: The figure is judged by whether its corners are square corners, as a sheet of paper's corner is.
+  reason: 'Daniel F104: grade 3 definitions use an informal square corner; the formal right angle (4.G.A.1) refines
+    it. draw-other qualifies: step 3 and the test check that a corner is not square.'
+- item: F104
+  node: shapes.square.define
+  target: angle.right.meaning
+  action: replace
+  with: shapes.square-corner
+  why: The figure is judged by whether its corners are square corners, as a sheet of paper's corner is.
+  reason: 'Daniel F104: grade 3 definitions use an informal square corner; the formal right angle (4.G.A.1) refines
+    it. draw-other qualifies: step 3 and the test check that a corner is not square.'
+- item: F104
+  node: shapes.quadrilateral.draw-other
+  target: angle.right.meaning
+  action: replace
+  with: shapes.square-corner
+  why: The figure is judged by whether its corners are square corners, as a sheet of paper's corner is.
+  reason: 'Daniel F104: grade 3 definitions use an informal square corner; the formal right angle (4.G.A.1) refines
+    it. draw-other qualifies: step 3 and the test check that a corner is not square.'
+- item: F104
+  node: angle.right.meaning
+  target: shapes.square-corner
+  action: add
+  relation: definitional
+  points_to: statement
+  why: A right angle is defined as an angle whose two sides form a square corner, so the square corner is used.
+  reason: 'Daniel F104: the formal right angle depends on the informal square corner.'
+- item: F108
+  node: numeral.write.to-120
+  target: place-value.hundred.unit
+  action: drop
+  reason: 'Daniel F108: writing 104 follows the pattern a 1 then the two-digit ending, without a hundred as ten
+    tens.'
+- item: F109
+  node: measurement.length.ruler.nearest-fourth-inch
+  target: fraction.mixed-number.meaning
+  action: replace
+  with: measurement.length.whole-plus-fraction
+  why: A length such as 2 1/4 inches is read and plotted as whole inches plus a fraction of an inch past them.
+  reason: 'Daniel F109: grade 3 reads whole-plus-fraction measurements as positions on a ruler or line plot; the
+    grade 4 mixed-number concept is not required. New node in the next slice.'
+- item: F109
+  node: data.line-plot.fractional.make
+  target: fraction.mixed-number.meaning
+  action: replace
+  with: measurement.length.whole-plus-fraction
+  why: A length such as 2 1/4 inches is read and plotted as whole inches plus a fraction of an inch past them.
+  reason: 'Daniel F109: grade 3 reads whole-plus-fraction measurements as positions on a ruler or line plot; the
+    grade 4 mixed-number concept is not required. New node in the next slice.'
+- item: F110
+  node: measurement.time.elapsed.across-hour
+  target: measurement.time.units
+  action: replace
+  with: time.hour.sixty-minutes
+  why: Step 1 counts the minutes up to the next hour, which uses that the hour turns over after 60 minutes.
+  reason: 'Daniel F110: the direct prerequisites are reading minute marks and the hour transition; the unit-conversion
+    fact (4.MD.A.1) is needed only when hours are expressed as minutes. New node in the next slice.'
+- item: F113, F115
+  node: measurement.mass.units.metric
+  target: measurement.mass.gram-kilogram-unit
+  action: add
+  relation: definitional
+  points_to: statement
+  why: The fact compares a kilogram and a gram, so both must be known as units of mass.
+  reason: 'Daniel F113: keep the unit systems apart; F115 writes the unit nodes. Claude: the system-specific difference
+    is in these prerequisites. No conversion edges were missing: every conversion test supplies its fact in parentheses.'
+- item: F113, F115
+  node: measurement.weight.units.customary
+  target: measurement.weight.ounces-pounds.measure
+  action: add
+  relation: definitional
+  points_to: statement
+  why: The fact compares a pound and an ounce, so both must be known as units of weight.
+  reason: 'Daniel F113: keep the unit systems apart; F115 writes the unit nodes. Claude: the system-specific difference
+    is in these prerequisites. No conversion edges were missing: every conversion test supplies its fact in parentheses.'
+- item: F113, F115
+  node: measurement.liquid-volume.units.metric
+  target: measurement.liquid-volume.liter-unit
+  action: add
+  relation: definitional
+  points_to: statement
+  why: The fact compares a liter and a milliliter, so the liter must be known as a unit of liquid volume.
+  reason: 'Daniel F113: keep the unit systems apart; F115 writes the unit nodes. Claude: the system-specific difference
+    is in these prerequisites. No conversion edges were missing: every conversion test supplies its fact in parentheses.'
+- item: F111
+  node: addition.within-20
+  target: addition.within-10
+  action: add
+  relation: procedural
+  points_to: statement
+  why: Sums of 10 or less, and the ones of a teen plus a one-digit number, are found within 10, which making a ten
+    does not do.
+  reason: 'Daniel F111: making a ten solves only sums over 10; the route needs sums within 10 for the rest.'
+- item: F111
+  node: subtraction.within-20
+  target: subtraction.within-10
+  action: add
+  relation: procedural
+  points_to: statement
+  why: Differences with a at most 10, and teen differences that stay above 10, are found within 10, which decomposing
+    to ten does not do.
+  reason: 'Daniel F111: decomposing to ten solves only differences across 10; the route needs differences within
+    10 for the rest.'
+- item: A17
+  node: money.coins.total-value
+  target: addition.within-100
+  action: add
+  relation: procedural
+  points_to: statement
+  why: The total is the sum of the coin values, found by adding them within 100, one route.
+  reason: 'Daniel A17: addition of the coin values is a route.'
+- item: A30
+  node: measurement.time.tell-nearest-minute
+  target: counting.objects
+  action: add
+  relation: procedural
+  points_to: statement
+  why: Counting the single minute marks from 12 to the minute hand gives the minutes, one route.
+  reason: 'Daniel A30: counting single minute marks is a route.'
+- item: A30
+  node: measurement.time.tell-nearest-minute
+  target: counting.sequence.to-100
+  action: add
+  relation: procedural
+  points_to: statement
+  why: Counting up to 59 minute marks says the number words past 20, one route.
+  reason: 'Daniel A30: counting single minute marks is a route.'
 routes:
 - item: L1
   node: addition.within-20
@@ -93,3 +818,115 @@ routes:
     relation: procedural
     points_to: statement
     why: A recalled difference within 20 gives the answer directly, one route to the difference.
+- item: A7
+  node: division.by-one-digit
+  name: via-standard-algorithm
+  note: 'Daniel A7: multiplying by multiples of ten belongs to partial quotients and the area model; the standard
+    algorithm divides place by place with the facts.'
+  without:
+  - multiplication.by-multiple-of-ten
+  add:
+  - node: division.standard-algorithm.long-division
+    relation: procedural
+    points_to: statement
+    why: The standard algorithm, named in the statement, divides each place by the divisor with a fact and carries
+      the remainder to the next place.
+set_routes:
+- item: C64, D74
+  node: addition.within-10
+  reason: 'Daniel: no unconditional verbal edge; count all, fingers, or count on each find the sum. Recall is not
+    a route: fluency needs this node.'
+  routes:
+  - name: via-count-all
+    nodes:
+    - addition.add-to.count-all
+    - addition.notation.expression:task
+    - counting.objects
+  - name: via-fingers
+    nodes:
+    - addition.add-to.fingers
+    - addition.notation.expression:task
+  - name: via-count-on
+    nodes:
+    - addition.count-on
+    - addition.notation.expression:task
+- item: C65, D81
+  node: subtraction.within-10
+  reason: 'Daniel: no unconditional verbal edge; taking away and counting the rest, counting back, or related addition
+    each find the difference.'
+  routes:
+  - name: via-take-away
+    nodes:
+    - subtraction.take-away.count-remaining
+    - subtraction.notation.expression:task
+    - counting.objects
+  - name: via-count-back
+    nodes:
+    - subtraction.count-back
+    - subtraction.notation.expression:task
+  - name: via-related-addition
+    nodes:
+    - subtraction.unknown-addend.strategy
+    - subtraction.notation.expression:task
+- item: F111, L1
+  node: addition.within-20
+  reason: 'Daniel F111: routes confirmed; make-ten is a complete route only with sums within 10.'
+  routes:
+  - name: standard
+    nodes:
+    - addition.count-on
+  - name: via-make-ten
+    nodes:
+    - addition.make-ten
+    - addition.within-10
+  - name: via-recall
+    nodes:
+    - addition.within-20.fluency
+- item: F111, L2
+  node: subtraction.within-20
+  reason: 'Daniel F111: routes confirmed; decompose-to-ten is a complete route only with differences within 10.'
+  routes:
+  - name: standard
+    nodes:
+    - subtraction.count-back
+  - name: via-decompose-to-ten
+    nodes:
+    - subtraction.decompose-to-ten
+    - subtraction.within-10
+  - name: via-related-addition
+    nodes:
+    - subtraction.unknown-addend.strategy
+  - name: via-recall
+    nodes:
+    - subtraction.within-20.fluency
+- item: A17
+  node: money.coins.total-value
+  reason: 'Daniel: counting on by ones is route-specific; the coin values can be added instead.'
+  routes:
+  - name: via-counting
+    nodes:
+    - money.coins.value
+    - counting.skip.tens.from-any
+    - counting.skip.fives
+    - counting.skip.twenty-fives
+    - counting.sequence.count-on
+  - name: via-adding
+    nodes:
+    - money.coins.value
+    - addition.within-100
+- item: A30
+  node: measurement.time.tell-nearest-minute
+  reason: 'Daniel: the five-minute reading is a shortcut; single minute marks can be counted from 12.'
+  routes:
+  - name: via-fives
+    nodes:
+    - time.analog.five-minutes
+    - time.digital.write
+    - addition.within-100
+    - time.analog.hour
+  - name: via-ones
+    nodes:
+    - counting.objects
+    - counting.sequence.to-100
+    - time.digital.write
+    - time.analog.hour

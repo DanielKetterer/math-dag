@@ -20,9 +20,16 @@ requires:
     why: Counting back by the subtrahend from the minuend finds any difference within 20, one route.
     evidence:
     - kind: review
-      source: Claude
+      source: DK
       note: 'L2 add: Claude: late node, routes given by hand (count back, decompose to ten, think addition,
-        recall).'
+        recall). Daniel F111 (2026-10-20): confirmed, with the scope caveat applied in set_routes.'
+    - kind: review
+      source: DK
+      note: 'D96 keep: Daniel: route or added route accepted.'
+    - kind: review
+      source: DK
+      note: 'F111, L2 set_routes: Daniel F111: routes confirmed; decompose-to-ten is a complete route
+        only with differences within 10.'
     status: reviewed
 - clause: via-decompose-to-ten
   all_of:
@@ -32,8 +39,27 @@ requires:
     why: Subtracting down to ten and then the rest finds a difference across ten, one route.
     evidence:
     - kind: review
-      source: Claude
+      source: DK
       note: 'L2 route:'
+    - kind: review
+      source: DK
+      note: 'F111, L2 set_routes: Daniel F111: routes confirmed; decompose-to-ten is a complete route
+        only with differences within 10.'
+    status: reviewed
+  - node: subtraction.within-10
+    relation: procedural
+    points_to: statement
+    why: Differences with a at most 10, and teen differences that stay above 10, are found within 10,
+      which decomposing to ten does not do.
+    evidence:
+    - kind: review
+      source: DK
+      note: 'F111 add: Daniel F111: decomposing to ten solves only differences across 10; the route needs
+        differences within 10 for the rest.'
+    - kind: review
+      source: DK
+      note: 'F111, L2 set_routes: Daniel F111: routes confirmed; decompose-to-ten is a complete route
+        only with differences within 10.'
     status: reviewed
 - clause: via-related-addition
   all_of:
@@ -43,8 +69,12 @@ requires:
     why: Finding the missing addend in b + ? = a gives a - b, one route to the difference.
     evidence:
     - kind: review
-      source: Claude
+      source: DK
       note: 'L2 route:'
+    - kind: review
+      source: DK
+      note: 'F111, L2 set_routes: Daniel F111: routes confirmed; decompose-to-ten is a complete route
+        only with differences within 10.'
     status: reviewed
 - clause: via-recall
   all_of:
@@ -54,7 +84,11 @@ requires:
     why: A recalled difference within 20 gives the answer directly, one route to the difference.
     evidence:
     - kind: review
-      source: Claude
+      source: DK
       note: 'L2 route:'
+    - kind: review
+      source: DK
+      note: 'F111, L2 set_routes: Daniel F111: routes confirmed; decompose-to-ten is a complete route
+        only with differences within 10.'
     status: reviewed
 status: proposed

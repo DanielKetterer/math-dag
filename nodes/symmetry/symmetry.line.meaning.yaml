@@ -29,21 +29,6 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: spatial.motion.turn-flip
-    relation: definitional
-    points_to: statement
-    why: Folding along the line flips one part over onto the other part.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'undecided: Folding is itself a flip, but a learner can fold paper and see the match without
-        having done turn-or-flip puzzles; the question is whether the test''s mental folding needs the
-        prior flip skill.'
-    status: disputed
   - node: shapes.compare.same-different
     relation: definitional
     points_to: statement
@@ -57,4 +42,9 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+related:
+- node: spatial.motion.turn-flip
+  relation: common_path
+  note: 'Common path, not required (C61): Daniel: physical folding shows symmetry without mentally turning
+    or flipping a shape; turning and flipping stays as a related spatial skill.'
 status: proposed

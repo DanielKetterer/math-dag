@@ -34,10 +34,11 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: fraction.mixed-number.meaning
+  - node: measurement.length.whole-plus-fraction
     relation: representational
     points_to: statement
-    why: The measurements such as 2 1/4 are whole numbers plus fractions and must be located on the scale.
+    why: A length such as 2 1/4 inches is read and plotted as whole inches plus a fraction of an inch
+      past them.
     evidence:
     - kind: content
       source: pass-P
@@ -46,7 +47,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'F109 replace: Daniel F109: grade 3 reads whole-plus-fraction measurements as positions on
+        a ruler or line plot; the grade 4 mixed-number concept is not required. New node in the next slice.'
+    status: reviewed
   - node: fraction.equivalent.same-point
     relation: procedural
     points_to: procedure.1
@@ -85,5 +90,8 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A37 keep: Not marked (Daniel, 2026-10-20).'
+    status: reviewed
 status: proposed

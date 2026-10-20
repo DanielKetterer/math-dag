@@ -23,11 +23,10 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: time.analog.half-hour
+  - node: time.analog.hour
     relation: procedural
     points_to: procedure.1
-    why: Step 1 takes the hour from the number the hour hand has most recently passed, the reading first
-      met with the half hour.
+    why: Step 1 reads the hour from the hour hand on the clock face, as in telling time to the hour.
     evidence:
     - kind: content
       source: pass-P
@@ -36,7 +35,12 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A4 replace: Daniel: five-minute time can be taught from the five-minute marks and the hour
+        hand''s position; the half hour is a scaffold. Claude: the edge points at the clock face itself,
+        so the node is not left without one.'
+    status: reviewed
   - node: counting.skip.fives
     relation: procedural
     points_to: procedure.3

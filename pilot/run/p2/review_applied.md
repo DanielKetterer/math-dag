@@ -1,26 +1,78 @@
 # Review verdicts applied by merge_run
 
+- D78 shapes.name.any-orientation -> shapes.name.prototype.rectangle-hexagon: added on every route
 - partitioning.rectangle.rows-columns: route critic-route-1 removed (superset of another route); moved to related: nothing
+- C64, D74 addition.within-10 -> addition.add-to.describe: moved to related (common_path)
+- C64, D74 addition.within-10 -> addition.add-to.count-all: added on every route
+- C64, D74 addition.within-10 -> addition.add-to.fingers: added on every route
+- C64, D74 addition.within-10 -> addition.count-on: added on every route
+- C64, D74 addition.within-10: routes set to [('via-count-all', ['addition.add-to.count-all', 'addition.notation.expression:task', 'counting.objects']), ('via-fingers', ['addition.add-to.fingers', 'addition.notation.expression:task']), ('via-count-on', ['addition.count-on', 'addition.notation.expression:task'])]; related []; dropped []
+- C65, D81 subtraction.within-10 -> subtraction.take-away.describe: moved to related (common_path)
+- C65, D81 subtraction.within-10 -> subtraction.take-away.count-remaining: added on every route
+- C65, D81 subtraction.within-10 -> subtraction.count-back: added on every route
+- C65, D81 subtraction.within-10 -> subtraction.unknown-addend.strategy: added on every route
+- C65, D81 subtraction.within-10: routes set to [('via-take-away', ['subtraction.take-away.count-remaining', 'subtraction.notation.expression:task', 'counting.objects']), ('via-count-back', ['subtraction.count-back', 'subtraction.notation.expression:task']), ('via-related-addition', ['subtraction.unknown-addend.strategy', 'subtraction.notation.expression:task'])]; related []; dropped []
 - multiplication.two-digit-by-two-digit: route critic-route-1 removed (superset of another route); moved to related: ['place-value.factor-of-ten']
+- A7 division.by-one-digit: added route via-standard-algorithm (without ['multiplication.by-multiple-of-ten'], plus ['division.standard-algorithm.long-division'])
+- F108 numeral.write.to-120 -> place-value.hundred.unit: dropped
 - L4 expressions.parentheses -> multiplication.by-one-digit: dropped
 - L5 equation.unknown-symbol -> addition.within-20.fluency: replaced by addition.within-20
 - L1 addition.within-20 -> addition.count-on: added on every route
+- D76 addition.within-20 -> addition.make-ten: keep NOT APPLIED (edge not found)
+- D77 addition.within-20 -> addition.within-20.fluency: keep NOT APPLIED (edge not found)
+- F111 addition.within-20 -> addition.within-10: added on every route
 - L1 addition.within-20: added route via-make-ten (without ['addition.count-on'], plus ['addition.make-ten'])
 - L1 addition.within-20: added route via-recall (without ['addition.count-on'], plus ['addition.within-20.fluency'])
+- F111, L1 addition.within-20: routes set to [('standard', ['addition.count-on']), ('via-make-ten', ['addition.make-ten', 'addition.within-10']), ('via-recall', ['addition.within-20.fluency'])]; related []; dropped []
 - L2 subtraction.within-20 -> subtraction.count-back: added on every route
+- D97 subtraction.within-20 -> subtraction.decompose-to-ten: keep NOT APPLIED (edge not found)
+- D98 subtraction.within-20 -> subtraction.unknown-addend.strategy: keep NOT APPLIED (edge not found)
+- D99 subtraction.within-20 -> subtraction.within-20.fluency: keep NOT APPLIED (edge not found)
+- F111 subtraction.within-20 -> subtraction.within-10: added on every route
 - L2 subtraction.within-20: added route via-decompose-to-ten (without ['subtraction.count-back'], plus ['subtraction.decompose-to-ten'])
 - L2 subtraction.within-20: added route via-related-addition (without ['subtraction.count-back'], plus ['subtraction.unknown-addend.strategy'])
 - L2 subtraction.within-20: added route via-recall (without ['subtraction.count-back'], plus ['subtraction.within-20.fluency'])
+- F111, L2 subtraction.within-20: routes set to [('standard', ['subtraction.count-back']), ('via-decompose-to-ten', ['subtraction.decompose-to-ten', 'subtraction.within-10']), ('via-related-addition', ['subtraction.unknown-addend.strategy']), ('via-recall', ['subtraction.within-20.fluency'])]; related []; dropped []
+- A1 shapes.attributes.shared -> shapes.attribute.defining: dropped
+- F104 shapes.rectangle.define -> angle.right.meaning: replaced by shapes.square-corner
+- A14 shapes.rhombus.define -> shapes.quadrilateral.recognize: replaced by shapes.polygon.name-by-sides
+- A29 shapes.square.define -> shapes.quadrilateral.recognize: replaced by shapes.polygon.name-by-sides
+- F104 shapes.square.define -> angle.right.meaning: replaced by shapes.square-corner
+- A25 shapes.quadrilateral.subcategories-included -> shapes.square.define: replaced by shapes.name.any-orientation
+- F104 shapes.quadrilateral.draw-other -> angle.right.meaning: replaced by shapes.square-corner
+- F104 angle.right.meaning -> shapes.square-corner: added on every route
+- C61 symmetry.line.meaning -> spatial.motion.turn-flip: moved to related (common_path)
+- B54 coordinate-plane.ordered-pair.meaning -> number-line.whole-number-lengths: restore
 - L3 measurement.weight.attribute -> comparing.weight.direct: moved to related (common_path)
 - measurement.weight.attribute: now a root (every prerequisite dropped or moved in review)
+- C68 measurement.length.unit-size.inverse -> comparing.whole-numbers.numerals-within-10: dropped
+- C69 measurement.length.difference -> subtraction.within-100: dropped
+- C70 measurement.length.application.addition -> measurement.length.ruler: dropped
+- C71 measurement.length.application.subtraction -> measurement.length.ruler: dropped
+- A4 time.analog.five-minutes -> time.analog.half-hour: replaced by time.analog.hour
+- C72 time.analog.draw-half-hour -> number.halfway-between: dropped
+- A17 money.coins.total-value -> addition.within-100: added on every route
+- A17 money.coins.total-value: routes set to [('via-counting', ['money.coins.value', 'counting.skip.tens.from-any', 'counting.skip.fives', 'counting.skip.twenty-fives', 'counting.sequence.count-on']), ('via-adding', ['money.coins.value', 'addition.within-100'])]; related []; dropped []
 - data.categorical.order-by-count: route critic-route-1 removed (superset of another route); moved to related: ['comparing.count.by-counting']
+- C73 data.bar-graph.compare -> subtraction.within-100: dropped
+- A30 measurement.time.tell-nearest-minute -> counting.objects: added on every route
+- A30 measurement.time.tell-nearest-minute -> counting.sequence.to-100: added on every route
+- A30 measurement.time.tell-nearest-minute: routes set to [('via-fives', ['time.analog.five-minutes', 'time.digital.write', 'addition.within-100', 'time.analog.hour']), ('via-ones', ['counting.objects', 'counting.sequence.to-100', 'time.digital.write', 'time.analog.hour'])]; related []; dropped []
+- F110 measurement.time.elapsed.across-hour -> measurement.time.units: replaced by time.hour.sixty-minutes
+- F109 measurement.length.ruler.nearest-fourth-inch -> fraction.mixed-number.meaning: replaced by measurement.length.whole-plus-fraction
+- F109 data.line-plot.fractional.make -> fraction.mixed-number.meaning: replaced by measurement.length.whole-plus-fraction
+- B44 area.unit-square -> measurement.attributes.several: restore
 - area.rectangle.tiles-along-side: route critic-route-1 removed (superset of another route); moved to related: nothing
 - multiplication.array-area.whole-number-product.represent: route critic-route-1 removed (superset of another route); moved to related: nothing
 - multiplication.array-area.whole-number-product.represent: route critic-route-2 removed (superset of another route); moved to related: nothing
+- A22 multiplication.array-area.distributive.model -> expressions.parentheses: dropped
 - area.additive: route critic-route-1 removed (superset of another route); moved to related: nothing
 - area.additive: route critic-route-2 removed (superset of another route); moved to related: nothing
 - perimeter.same-area.different-perimeters: route via-length-times-width removed (superset of another route); moved to related: ['perimeter.meaning']
 - perimeter.same-area.different-perimeters: route via-represent removed (superset of another route); moved to related: nothing
+- F113, F115 measurement.mass.units.metric -> measurement.mass.gram-kilogram-unit: added on every route
+- F113, F115 measurement.weight.units.customary -> measurement.weight.ounces-pounds.measure: added on every route
+- F113, F115 measurement.liquid-volume.units.metric -> measurement.liquid-volume.liter-unit: added on every route
 - measurement.unit-conversion.to-larger.whole: route critic-route-1 removed (superset of another route); moved to related: nothing
 - measurement.unit-conversion.to-larger.whole: route critic-route-2 removed (superset of another route); moved to related: nothing
 - measurement.unit-conversion.to-larger.mixed-units: route critic-route-1 removed (superset of another route); moved to related: nothing
@@ -29,6 +81,10 @@
 - measurement.unit-conversion.to-larger.fraction: route critic-route-2 removed (superset of another route); moved to related: nothing
 - number-line.measurement-scale: route critic-route-1 removed (superset of another route); moved to related: nothing
 - number-line.measurement-scale: route critic-route-2 removed (superset of another route); moved to related: nothing
+- A5 measurement.application.fraction -> fraction.application.subtraction-same-whole: dropped
 - measurement.application.money: route critic-route-1 removed (superset of another route); moved to related: nothing
+- A10 measurement.application.conversion.multistep -> measurement.unit-conversion.to-smaller.fraction: dropped
+- C66 data.line-plot.fraction.multistep -> fraction.subtraction.unlike-denominators: dropped
+- C67 volume.count-cubes -> volume.packing: moved to related (common_path)
 - volume.prism.formula.base-height: route critic-route-1 removed (superset of another route); moved to related: ['volume.prism.formula.lwh']
 - volume.application.prism: route via-apply removed (superset of another route); moved to related: ['multiplication.multi-digit-by-two-digit']

@@ -26,5 +26,19 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A35 keep: Not marked (Daniel, 2026-10-20).'
+    status: reviewed
+  - node: measurement.liquid-volume.liter-unit
+    relation: definitional
+    points_to: statement
+    why: The fact compares a liter and a milliliter, so the liter must be known as a unit of liquid volume.
+    evidence:
+    - kind: review
+      source: DK
+      note: 'F113, F115 add: Daniel F113: keep the unit systems apart; F115 writes the unit nodes. Claude:
+        the system-specific difference is in these prerequisites. No conversion edges were missing: every
+        conversion test supplies its fact in parentheses.'
+    status: reviewed
 status: proposed

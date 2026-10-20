@@ -21,21 +21,6 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: volume.packing
-    relation: definitional
-    points_to: statement
-    why: The count of unit cubes that pack the solid with no gaps or overlaps is the volume in cubic units.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'undecided: The target is the concrete level 1 act of packing and counting, whose result ''the
-        count is the volume in cubic units'' is exactly what the level 2 packing concept states, so the
-        dependence may run the other way.'
-    status: disputed
   - node: counting.objects
     relation: procedural
     points_to: procedure.2
@@ -70,4 +55,9 @@ requires:
       source: critic-sonnet
       note: missing prerequisite
     status: disputed
+related:
+- node: volume.packing
+  relation: common_path
+  note: 'Common path, not required (C67): Daniel: counting unit cubes is itself a credible route to the
+    idea that volume is the number of unit cubes; do not require the packing concept first.'
 status: proposed

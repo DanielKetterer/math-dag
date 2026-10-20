@@ -18,7 +18,7 @@ sources:
   learning_components:
   - 329aa819
 requires:
-- clause: standard
+- clause: via-counting
   all_of:
   - node: money.coins.value
     relation: procedural
@@ -33,7 +33,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A17 set_routes: Daniel: counting on by ones is route-specific; the coin values can be added
+        instead.'
+    status: reviewed
   - node: counting.skip.tens.from-any
     relation: procedural
     points_to: procedure.2
@@ -46,7 +50,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A17 set_routes: Daniel: counting on by ones is route-specific; the coin values can be added
+        instead.'
+    status: reviewed
   - node: counting.skip.fives
     relation: procedural
     points_to: procedure.2
@@ -59,7 +67,27 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A17 set_routes: Daniel: counting on by ones is route-specific; the coin values can be added
+        instead.'
+    status: reviewed
+  - node: counting.skip.twenty-fives
+    relation: procedural
+    points_to: procedure.2
+    why: Quarters are counted on by 25s, a skip count not found elsewhere in the map.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'necessary: Required by step 2 for quarters. Note counting.skip.twenty-fives is not in index.txt
+        or the boundary list, so the node has to be created or the edge re-pointed.'
+    - kind: review
+      source: DK
+      note: 'A17 set_routes: Daniel: counting on by ones is route-specific; the coin values can be added
+        instead.'
+    status: reviewed
   - node: counting.sequence.count-on
     relation: procedural
     points_to: procedure.2
@@ -72,17 +100,46 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
-  - node: counting.skip.twenty-fives
+    - kind: review
+      source: DK
+      note: 'A17 keep: Daniel: counting on by ones is one route (pennies); collections can be totaled
+        by addition. Applied in set_routes (counting route, adding route).'
+    - kind: review
+      source: DK
+      note: 'A17 set_routes: Daniel: counting on by ones is route-specific; the coin values can be added
+        instead.'
+    status: reviewed
+- clause: via-adding
+  all_of:
+  - node: money.coins.value
     relation: procedural
     points_to: procedure.2
-    why: Quarters are counted on by 25s, a skip count not found elsewhere in the map.
+    why: Step 2 starts at the value of the first coin and counts on by each coin's value, so each coin's
+      cents must be known.
     evidence:
+    - kind: content
+      source: pass-P
     - kind: content
       source: pass-Q
     - kind: content
       source: critic-sonnet
-      note: 'necessary: Required by step 2 for quarters. Note counting.skip.twenty-fives is not in index.txt
-        or the boundary list, so the node has to be created or the edge re-pointed.'
-    status: proposed
+      note: necessary
+    - kind: review
+      source: DK
+      note: 'A17 set_routes: Daniel: counting on by ones is route-specific; the coin values can be added
+        instead.'
+    status: reviewed
+  - node: addition.within-100
+    relation: procedural
+    points_to: statement
+    why: The total is the sum of the coin values, found by adding them within 100, one route.
+    evidence:
+    - kind: review
+      source: DK
+      note: 'A17 add: Daniel A17: addition of the coin values is a route.'
+    - kind: review
+      source: DK
+      note: 'A17 set_routes: Daniel: counting on by ones is route-specific; the coin values can be added
+        instead.'
+    status: reviewed
 status: proposed

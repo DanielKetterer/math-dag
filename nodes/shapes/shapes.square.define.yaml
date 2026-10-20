@@ -16,10 +16,10 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: shapes.quadrilateral.recognize
+  - node: shapes.polygon.name-by-sides
     relation: definitional
     points_to: statement
-    why: The definition names the square as a quadrilateral, the figure with exactly four straight sides.
+    why: The definition names the square as a quadrilateral, the polygon named by its four sides.
     evidence:
     - kind: content
       source: pass-P
@@ -28,7 +28,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A29 replace: Daniel: the square can be defined by four equal sides and four right angles;
+        recognizing arbitrary quadrilaterals need not come first.'
+    status: reviewed
   - node: shapes.attribute.equal-sides
     relation: definitional
     points_to: statement
@@ -41,11 +45,15 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
-  - node: angle.right.meaning
+    - kind: review
+      source: DK
+      note: 'A16 keep: Not marked (Daniel, 2026-10-20).'
+    status: reviewed
+  - node: shapes.square-corner
     relation: definitional
     points_to: statement
-    why: A square must have four right angles, so a right angle must be recognized as a square corner.
+    why: The figure is judged by whether its corners are square corners, as a sheet of paper's corner
+      is.
     evidence:
     - kind: content
       source: pass-P
@@ -54,7 +62,12 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'F104 replace: Daniel F104: grade 3 definitions use an informal square corner; the formal
+        right angle (4.G.A.1) refines it. draw-other qualifies: step 3 and the test check that a corner
+        is not square.'
+    status: reviewed
   - node: shapes.attribute.non-defining
     relation: definitional
     points_to: statement
@@ -78,5 +91,8 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D82 keep: Not marked (Daniel, 2026-10-20).'
+    status: reviewed
 status: proposed

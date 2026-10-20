@@ -29,10 +29,11 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: angle.right.meaning
+  - node: shapes.square-corner
     relation: definitional
     points_to: statement
-    why: The defining attribute of a rectangle is that all four of its angles are right angles.
+    why: The figure is judged by whether its corners are square corners, as a sheet of paper's corner
+      is.
     evidence:
     - kind: content
       source: pass-P
@@ -41,7 +42,12 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'F104 replace: Daniel F104: grade 3 definitions use an informal square corner; the formal
+        right angle (4.G.A.1) refines it. draw-other qualifies: step 3 and the test check that a corner
+        is not square.'
+    status: reviewed
   - node: shapes.attribute.defining
     relation: definitional
     points_to: statement

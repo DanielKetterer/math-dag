@@ -42,19 +42,6 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: measurement.unit-conversion.to-smaller.fraction
-    relation: procedural
-    points_to: statement
-    why: The statement allows a fractional measurement converted to a smaller unit as one of the steps.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
   - node: measurement.unit-conversion.to-larger.whole
     relation: procedural
     points_to: statement
@@ -107,7 +94,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A12 keep: Not marked (Daniel, 2026-10-20).'
+    status: reviewed
   - node: multiplication.by-one-digit
     relation: procedural
     points_to: assess

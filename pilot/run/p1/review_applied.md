@@ -54,6 +54,7 @@
 - A22 operations.application.multistep.equation -> operations.application.multistep: dropped
 - operations.application.reasonableness: route via-nearest-ten-hundred removed (superset of another route); moved to related: ['rounding.whole-number.nearest-ten-hundred']
 - operations.application.reasonableness: only route left, renamed critic-route-1 -> standard
+- F107 (p2) operations.application.reasonableness -> multiplication.by-multiple-of-ten: dropped
 - operations.application.justify-solution: route via-meaning removed (superset of another route); moved to related: ['division.unknown-factor.meaning', 'subtraction.unknown-addend.meaning']
 - operations.application.justify-solution: only route left, renamed critic-route-1 -> standard
 - multiplication.comparison.application.divide: route via-statement-to-equation removed (superset of another route); moved to related: ['multiplication.comparison.statement-to-equation']
@@ -77,7 +78,7 @@
 - multiplication.standard-algorithm: route via-by-one-digit removed (superset of another route); moved to related: ['multiplication.partial-products.by-one-digit']
 - multiplication.standard-algorithm: route via-compose-unit removed (superset of another route); moved to related: ['addition.base-ten.compose-unit']
 - multiplication.standard-algorithm: only route left, renamed critic-route-1 -> standard
-- D91 division.partial-quotients.one-digit-divisor -> addition.base-ten.strategy: replaced by addition.within-1000
+- D91 division.partial-quotients.one-digit-divisor -> addition.base-ten.strategy: replaced by addition.multi-digit
 - division.power-of-ten.rule: route critic-route-1 removed (superset of another route); moved to related: nothing
 - division.power-of-ten.rule: route critic-route-2 removed (superset of another route); moved to related: nothing
 - A25 decimal.addition.model -> addition.base-ten.model: moved to related (common_path)
