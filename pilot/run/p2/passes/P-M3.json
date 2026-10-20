@@ -1,0 +1,1598 @@
+{
+ "pass": "P",
+ "batch": "M3",
+ "nodes": {
+  "measurement.length.units.metric": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.unit-benchmarks",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The fact compares kilometers, meters and centimeters, so the learner must already know what size each of these length units is."
+      },
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says a kilometer is 1000 times as long as a meter, which is a multiplicative comparison of two lengths."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.units.customary": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.unit-benchmarks",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The fact compares inches, feet and yards, so the learner must already know what size each of these length units is."
+      },
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says a foot is 12 times as long as an inch, which is a multiplicative comparison of two lengths."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.mass.units.metric": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.mass.grams-kilograms.measure",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The fact relates the gram and the kilogram, so the learner must already use both as units of mass on a scale."
+      },
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says a kilogram is 1000 times as heavy as a gram, which is a multiplicative comparison of masses."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.weight.units.customary": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.weight.attribute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The fact compares the weight of a pound with the weight of an ounce, so weight must already be understood as an attribute."
+      },
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says a pound is 16 times as heavy as an ounce, which is a multiplicative comparison of weights."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.liquid-volume.units.metric": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.liquid-volume.liters.measure",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The fact relates the liter and the milliliter, so the learner must already measure liquid in a marked container in liters."
+      },
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says a liter is 1000 times as much liquid as a milliliter, which is a multiplicative comparison."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.time.units": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.time.tell-nearest-minute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The fact relates hours, minutes and seconds, so the learner must already read minutes on a clock as a unit of time."
+      },
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says an hour is 60 times as long as a minute, which is a multiplicative comparison of durations."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.unit-conversion.multiplicative-relation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation replaces each larger unit by k smaller units, so n larger units become n equal groups of k smaller units."
+      },
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement and the test problem say the count of smaller units is k times as large as the count of larger units."
+      },
+      {
+       "node": "measurement.length.unit-size.inverse",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks whether the number of inches is more or less than the number of feet, which uses that a smaller unit gives a larger number."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.unit-conversion.table": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.unit-conversion.multiplicative-relation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each row of the table is (n, n x k), which records the relation that the smaller-unit count is k times the larger-unit count."
+      },
+      {
+       "node": "table.read-two-way",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses a two-column table of rows, so the learner must already read and fill entries by row and column."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Completing the yards-to-feet table in the test problem needs the products 1 x 3 through 5 x 3 recalled quickly."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.unit-conversion.to-smaller.whole": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.unit-conversion.multiplicative-relation",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement n x k smaller units is the multiplicative relation between the counts of larger and smaller units, written as a rule."
+      },
+      {
+       "node": "multiplication.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the whole number of larger units by k, a whole-number product of the kind found with one-digit factors."
+      },
+      {
+       "node": "multiplication.by-multiple-of-ten",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem 7 kg to grams is 7 x 1000, a one-digit number times a multiple of 1000."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.unit-conversion.to-smaller.mixed-units": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.unit-conversion.to-smaller.whole",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 converts the a larger units to a x k smaller units, which is exactly the whole-number conversion."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds the b smaller units to the converted amount, a whole-number sum by any method."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.unit-conversion.to-smaller.decimal": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.unit-conversion.multiplicative-relation",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement converts a measurement to smaller units by multiplying by k, the relation between larger and smaller unit counts."
+      },
+      {
+       "node": "multiplication.power-of-ten.decimal.rule",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the decimal by 10, 100 or 1000, which is carried out by moving the decimal point right."
+      },
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The measurement is written as a decimal such as 3.25, so decimal notation for tenths and hundredths must be understood."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.unit-conversion.to-smaller.fraction": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.unit-conversion.multiplicative-relation",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement (a/b) x k smaller units is the multiplicative relation between larger and smaller unit counts for a fractional count."
+      },
+      {
+       "node": "fraction.multiply-whole.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the fraction a/b by the whole number k, which is a fraction times whole number product."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Finding 3/4 x 60 in the test problem gives 180/4, which must be divided to get a whole number of minutes."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.unit-conversion.to-larger.whole": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.unit-conversion.multiplicative-relation",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Dividing n by k is justified by the relation that the smaller-unit count is k times the larger-unit count."
+      },
+      {
+       "node": "division.measurement.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The result n divided by k counts how many groups of k smaller units make up the n smaller units."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 divides the number of smaller units by k with no remainder, a whole-number quotient."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.unit-conversion.to-larger.mixed-units": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.unit-conversion.multiplicative-relation",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each group of k smaller units is one larger unit, which is the relation that explains why q larger units and r left over result."
+      },
+      {
+       "node": "division.measurement.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The quotient q counts how many whole groups of k smaller units are in n, with r units left over."
+      },
+      {
+       "node": "division.by-one-digit.remainder",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 divides n by k to get a whole-number quotient and a remainder."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.unit-conversion.to-larger.decimal": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.unit-conversion.multiplicative-relation",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Dividing by the power of ten is justified by the relation that the smaller-unit count is k times the larger-unit count."
+      },
+      {
+       "node": "division.power-of-ten.rule",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 divides by 10, 100 or 1000, which is carried out by moving the decimal point left."
+      },
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The quotient is written as a decimal such as 0.05 m, so decimal notation for tenths and hundredths must be understood."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.unit-conversion.to-larger.fraction": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.unit-conversion.multiplicative-relation",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing n smaller units as n/k larger units is justified by the relation that each larger unit is k smaller units."
+      },
+      {
+       "node": "fraction.quotient.symbolic",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement n/k larger units uses that n divided by k equals the fraction n/k."
+      }
+     ]
+    }
+   ]
+  },
+  "number-line.measurement-scale": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A measurement is shown as the point that many units from 0, which is the whole-number-as-length number line."
+      },
+      {
+       "node": "counting.skip.hundreds",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Marking 700 mL on a scale with a mark every 100 mL is done by counting marks by hundreds from 0."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.application.whole-number": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "operations.application.multistep.multi-digit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is a one- or two-step word problem with multi-digit numbers and any of the four operations."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem cuts 260 cm into 4 equal pieces, which is division by a one-digit number."
+      },
+      {
+       "node": "subtraction.within-1000",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem then cuts 15 cm off one piece, a whole-number subtraction."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.application.time-interval": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.time.elapsed.across-hour",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement includes intervals that cross the hour, and elapsed time across the start of an hour is that skill."
+      },
+      {
+       "node": "measurement.time.application.addition",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding an end time from a start time adds an interval in minutes, which the single-step addition problems introduce."
+      },
+      {
+       "node": "measurement.time.application.subtraction",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding a start time from an end time subtracts an interval in minutes, which the single-step subtraction problems introduce."
+      },
+      {
+       "node": "measurement.time.units",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Crossing the hour and writing times in hours and minutes uses that 1 hr = 60 min."
+      },
+      {
+       "node": "operations.application.multistep",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement asks for two-step word problems, so combining two sequential steps in a story must be understood."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.application.fraction": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.application.addition-same-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The test problem adds 3/8 mile and 7/8 mile, a word problem adding fractions of the same whole."
+      },
+      {
+       "node": "fraction.application.subtraction-same-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Problems about how much farther or longer use subtracting fractions of the same whole in a story."
+      },
+      {
+       "node": "fraction.mixed-number.add",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement includes mixed-number measurements, so adding mixed numbers with like denominators is performed."
+      },
+      {
+       "node": "fraction.mixed-number.subtract",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement includes mixed-number measurements, so subtracting mixed numbers with like denominators is performed."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.application.money": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "money.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Amounts are written in dollars and cents with the dollar sign, so money notation must be understood."
+      },
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement writes cents as hundredths of a dollar in decimal notation such as $2.75."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Combining amounts such as $2.75 and $1.40 is a whole-number sum when the amounts are counted in cents."
+      },
+      {
+       "node": "subtraction.within-1000",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding change or a difference between amounts is a whole-number subtraction when the amounts are counted in cents."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.application.convert-to-smaller": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.unit-conversion.to-smaller.whole",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires first expressing the larger-unit measurement in the smaller unit, as 3 m becomes 300 cm."
+      },
+      {
+       "node": "measurement.application.whole-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "After converting, the rest is a one- or two-step word problem with whole numbers in one unit."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.application.conversion.multistep": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.unit-conversion.to-smaller.whole",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement allows a conversion to a smaller unit with a whole-number result as one of the steps."
+      },
+      {
+       "node": "measurement.unit-conversion.to-smaller.decimal",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement allows a decimal metric measurement converted to a smaller unit as one of the steps."
+      },
+      {
+       "node": "measurement.unit-conversion.to-smaller.fraction",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement allows a fractional measurement converted to a smaller unit as one of the steps."
+      },
+      {
+       "node": "measurement.unit-conversion.to-larger.whole",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement allows a conversion to a larger unit with a whole-number result as one of the steps."
+      },
+      {
+       "node": "measurement.unit-conversion.to-larger.decimal",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Converting 3750 m to kilometers in the test problem gives the decimal 3.75 km."
+      },
+      {
+       "node": "measurement.unit-conversion.to-larger.fraction",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement allows a conversion to a larger unit with a fraction result as one of the steps."
+      },
+      {
+       "node": "measurement.application.convert-to-smaller",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement extends word problems that convert between units of one system to multi-step problems."
+      },
+      {
+       "node": "operations.application.multistep.multi-digit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The test problem multiplies 750 by 5 and then converts, a multi-step problem with multi-digit numbers."
+      }
+     ]
+    }
+   ]
+  },
+  "area.rectangle.unknown-side": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement starts from A = l x w, the area of a rectangle as the product of its side lengths."
+      },
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement finds the other side as the unknown factor in A = l x w, found by dividing."
+      },
+      {
+       "node": "multiplication.unknown-factor.solve",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem 12 x ? = 96 is solved by finding the unknown factor in a multiplication equation."
+      }
+     ]
+    }
+   ]
+  },
+  "area.application.rectangle": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.rectangle.application",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding the area of a rectangle in a real-world problem is one of the two cases the statement names."
+      },
+      {
+       "node": "area.rectangle.unknown-side",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding an unknown side length from the area is the other case, as in the flooring problem."
+      }
+     ]
+    }
+   ]
+  },
+  "perimeter.rectangle.formula": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "perimeter.rectangle.from-length-width",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula 2 x l + 2 x w generalizes adding the four side lengths of a rectangle found from its length and width."
+      },
+      {
+       "node": "perimeter.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula gives the length around the rectangle, so perimeter as the distance around a figure is used."
+      },
+      {
+       "node": "new:shapes.rectangle.opposite-sides-equal",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The because-clause says opposite sides of a rectangle are equal, so there are two sides of each length."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The term 2 x l writes two equal sides of length l as two equal groups."
+      },
+      {
+       "node": "expressions.variables",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula and the test problem use letters l and w in an expression."
+      }
+     ]
+    }
+   ]
+  },
+  "perimeter.rectangle.unknown-side": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "perimeter.rectangle.formula",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The step l + w is half the perimeter follows from P = 2 x l + 2 x w."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 divides the perimeter by 2 to get the sum of one length and one width."
+      },
+      {
+       "node": "subtraction.within-1000",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 subtracts the known side from half the perimeter."
+      }
+     ]
+    }
+   ]
+  },
+  "perimeter.application.rectangle": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "perimeter.rectangle.application",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding the perimeter of a rectangle in a real-world problem is one of the two cases the statement names."
+      },
+      {
+       "node": "perimeter.rectangle.unknown-side",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding an unknown side length from the perimeter is the other case, as in the fence problem."
+      },
+      {
+       "node": "perimeter.rectangle.formula",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is stated in terms of the formula P = 2 x l + 2 x w."
+      }
+     ]
+    }
+   ]
+  },
+  "data.line-plot.fraction-scale.make": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.line-plot.make",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A line plot places one X above the number line for each measurement, the form first met with whole-unit measurements."
+      },
+      {
+       "node": "fraction.non-unit.number-line",
+       "relation": "representational",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 partitions each unit and labels marks such as 3/4 and 5/8 on the number line."
+      },
+      {
+       "node": "fraction.equivalent.same-point",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Placing 1/2 and 3/4 on a scale marked in eighths uses that equivalent fractions are the same point."
+      },
+      {
+       "node": "fraction.mixed-number.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Measurements such as 5 3/4 are mixed numbers, a whole number plus a fraction."
+      }
+     ]
+    }
+   ]
+  },
+  "data.line-plot.fraction.add-subtract": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.line-plot.fraction-scale.make",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Reading values from a line plot marked in fractions uses the same scale conventions as making one."
+      },
+      {
+       "node": "fraction.addition.like-denominators",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Adding fractional measurements read from one scale is adding fractions with like denominators."
+      },
+      {
+       "node": "fraction.subtraction.like-denominators",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Subtracting fractional measurements read from one scale is subtracting fractions with like denominators."
+      },
+      {
+       "node": "fraction.subtraction.comparison",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks how much longer the longest insect is than the shortest, a comparison subtraction."
+      }
+     ]
+    }
+   ]
+  },
+  "data.line-plot.fraction.multistep": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.line-plot.fraction.add-subtract",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Reading a fraction line plot and combining its values by addition is the first part of each multi-step problem."
+      },
+      {
+       "node": "fraction.addition.unlike-denominators",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Totaling 1/4, 1/2 and 3/4 in the test problem adds fractions with unlike denominators."
+      },
+      {
+       "node": "fraction.subtraction.unlike-denominators",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement includes subtraction of fractions read from the plot, with denominators that may differ."
+      },
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement includes multiplication of fractions read from the plot."
+      },
+      {
+       "node": "division.nonunit-fraction-by-whole",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Sharing a total equally among the beakers divides a fraction by a whole number."
+      },
+      {
+       "node": "fraction.quotient.symbolic",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem total is a whole number, shared among 6 beakers, so a divided by b equals a/b gives the share."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.measure.circle-fraction": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement measures an angle between its two rays at a common vertex, so an angle as two rays must be understood."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The measure is a fraction of the circle, such as 1/8, so fractions as parts of a whole are used."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.one-degree": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.measure.circle-fraction",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A one-degree angle is defined as the angle that turns through a particular fraction of a circle."
+      },
+      {
+       "node": "fraction.unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The fraction 1/360 is a unit fraction, one of 360 equal parts of the circle."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.measure.degrees": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.one-degree",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The measure in degrees counts how many one-degree angles fill the angle with no gaps or overlaps."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.fraction-of-turn.degrees": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement gives the measure of the angle in degrees."
+      },
+      {
+       "node": "angle.measure.circle-fraction",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement identifies the fraction a/b of a circle that the angle turns through."
+      },
+      {
+       "node": "angle.one-degree",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses 360 degrees as the measure of a full circle, which comes from 360 one-degree angles."
+      },
+      {
+       "node": "fraction.multiply-whole.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the fraction a/b by 360."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem 3/8 x 360 gives 1080/8, which is divided to get the degree measure."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.protractor.measure": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The reading on the scale is the angle measure in degrees, so degrees as a count of one-degree angles is used."
+      },
+      {
+       "node": "angle.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure places the center mark on the vertex and aligns a ray, so the vertex and rays of an angle are used."
+      },
+      {
+       "node": "ray.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 extends a ray that is too short, which uses that a ray extends without end in one direction."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.protractor.sketch": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The given measure in degrees is marked on the scale, so degrees as a count of one-degree angles is used."
+      },
+      {
+       "node": "angle.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure draws an angle from a vertex and two rays, so an angle as two rays from a common endpoint is used."
+      },
+      {
+       "node": "ray.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 draws a ray from an endpoint, which uses that a ray starts at an endpoint and extends one way."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.additive": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.measure.degrees",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The whole measure equals the sum of the part measures because each measure counts one-degree angles."
+      },
+      {
+       "node": "angle.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement splits an angle into angles that share its vertex, so the vertex and rays of an angle are used."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem adds 30 degrees and 45 degrees to find the whole angle."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.unknown-part": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.additive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement that the other part is the whole minus the known part comes from the whole being the sum of its parts."
+      },
+      {
+       "node": "subtraction.within-1000",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 subtracts the known part from the whole, a whole-number difference."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.unknown.equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.additive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation expresses that the parts of the decomposed angle add up to the whole angle measure."
+      },
+      {
+       "node": "equation.unknown-symbol",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses a symbol such as a letter or box for the unknown measure."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.application.unknown": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.additive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement has an angle made of non-overlapping parts, and an unknown whole is found by adding measures."
+      },
+      {
+       "node": "angle.unknown-part",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement has an unknown part found by subtracting a known part from the whole, as in the sprinkler problem."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.unit-cube": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.cube.identify",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement defines the unit cube as a cube, so a cube with six equal square faces must be known."
+      },
+      {
+       "node": "measurement.length.iterate-units",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires edges that are each 1 unit long, so length measured in whole units must be understood."
+      },
+      {
+       "node": "new:volume.space-occupied",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says a unit cube has a volume, so volume as the amount of space a solid occupies must be known."
+      },
+      {
+       "node": "shapes.dimension.flat-solid",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks the learner to pick the solid cube and reject the flat square as a unit of volume."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.packing": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.unit-cube",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says n unit cubes pack the solid, and each unit cube has a volume of one cubic unit."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.count-cubes": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.packing",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The count of unit cubes that pack the solid with no gaps or overlaps is the volume in cubic units."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 counts every cube, including hidden ones, to find how many cubes there are."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.three-factor-product": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.array-area.whole-number-product.represent",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The bottom layer of the prism is an array of a by b cubes, which represents the product a x b as a rectangle."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The prism stacks c equal layers of a x b cubes, which is the product as a number of equal groups."
+      },
+      {
+       "node": "volume.packing",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says the number of unit cubes in the prism is the product, which is its volume in cubic units."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.prism.layers.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.packing",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation counts the unit cubes that pack the box, and that count is the volume."
+      },
+      {
+       "node": "volume.three-factor-product",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation shows the box as h layers of l by w cubes, so the number of cubes is l x w x h."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation says l x w is also the base area in square units, which is the area of a rectangle as length times width."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.prism.formula.lwh": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.three-factor-product",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula states the number of unit cubes in a prism with edges l, w and h as the product of the three edges."
+      },
+      {
+       "node": "volume.packing",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The volume is the number of unit cubes that pack the prism, so volume as packing is used."
+      },
+      {
+       "node": "expressions.variables",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula is written with the letters l, w and h in an expression."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.prism.formula.lwh.apply": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.prism.formula.lwh",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure applies the formula V = l x w x h that the statement relies on."
+      },
+      {
+       "node": "multiplication.associative.strategy",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies three edge lengths, a product of three factors found by choosing which two to multiply first."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.prism.formula.base-height": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.prism.layers.explain",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula rests on a prism being h layers each holding B cubes, as that explanation shows."
+      },
+      {
+       "node": "area.covering.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "B is the area of the base in square units, so area as a count of unit squares is used."
+      },
+      {
+       "node": "expressions.variables",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula is written with the letters B and h in an expression."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.prism.formula.base-height.apply": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.prism.formula.base-height",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure applies the formula V = B x h that the statement relies on."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds the area of the base, which for a rectangular base is length times width."
+      },
+      {
+       "node": "multiplication.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the base area by the height, for example 35 x 6 in the test problem."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.application.prism": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.prism.formula.lwh.apply",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Many real-world problems find the volume with V = l x w x h from three given edge lengths."
+      },
+      {
+       "node": "volume.prism.formula.base-height.apply",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Other real-world problems find the volume with V = B x h from a given base area and height."
+      },
+      {
+       "node": "multiplication.two-digit-by-two-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The fish tank problem multiplies 24 by 12 as part of the three-factor product."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.additive": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.packing",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Volume of each part is the number of unit cubes that pack it, and the parts' cubes together pack the whole."
+      },
+      {
+       "node": "shapes.compose.solids",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement concerns a solid made of non-overlapping parts, which is putting solids together into a composite solid."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem adds 24 and 18 cubic feet to find the volume of the joined solid."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.composite.two-prisms": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.rectilinear.decompose",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 splits the L-shaped solid into two prisms, found by decomposing the L-shaped face into rectangles."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 subtracts given lengths where an edge is not labeled, such as 10 minus 3 for the upright part."
+      },
+      {
+       "node": "volume.prism.formula.lwh.apply",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 finds the volume of each prism from its edge lengths."
+      },
+      {
+       "node": "volume.additive",
+       "relation": "definitional",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 adds the two volumes, which is valid because volume of non-overlapping parts adds."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.application.composite": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.composite.two-prisms",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement needs the volume of a solid made of two prisms, found by splitting, finding each volume and adding."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
