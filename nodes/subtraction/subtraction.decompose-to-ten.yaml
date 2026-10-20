@@ -1,0 +1,84 @@
+id: subtraction.decompose-to-ten
+concept: subtraction
+facet: take-away
+level: 2
+type: procedure
+name: Subtract across 10 by decomposing to ten
+statement: When a teen number a is reduced by a one-digit number b larger than the ones of a, split b
+  into the ones of a and the rest; subtracting the ones reaches 10, and then the rest is subtracted from
+  10.
+procedure:
+- Let r be the ones in a (a = 10 + r), with b greater than r.
+- Split b into r and b - r.
+- Subtract r from a to reach 10, then subtract b - r from 10.
+assess: Find 13 - 4 by first subtracting down to 10. Show how you split the 4.
+sources:
+  ccss:
+  - 1.OA.C.6
+  - 1.OA.B.3
+  learning_components:
+  - e1cb5730
+  - 4309ce5e
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.teen.ten-and-ones
+    relation: definitional
+    points_to: procedure.1
+    why: Step 1 reads the teen number a as 10 and r ones, which is the meaning of a teen number as ten
+      and some ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number-composition.within-10.decompose
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 splits b into the ones r and the rest, which is breaking a number into two parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.notation.expression
+    relation: representational
+    points_to: assess
+    why: The test problem is written 13 - 4, so the expression must be read as taking 4 from 13.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is in words; only the test problem is written as 13 - 4.'
+    status: proposed
+  - node: place-value.teen.equation
+    relation: representational
+    points_to: procedure.1
+    why: Step one writes the teen number a as 10 plus its r ones.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.take-away.count-remaining
+    relation: procedural
+    points_to: procedure.3
+    why: Subtracting the rest from 10 is taking objects away from a ten and finding what is left.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

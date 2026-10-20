@@ -1,0 +1,62 @@
+id: multiplication.distributive.strategy
+concept: multiplication
+facet: array-area
+level: 3
+type: procedure
+name: Find a product by breaking apart a factor
+statement: Find a x b by writing b as a sum of two numbers whose products with a are known, multiplying
+  a by each part, and adding the two products.
+procedure:
+- Write one factor b as a sum c + d of numbers whose products with a are known.
+- Find a x c and a x d.
+- Add the two products; the sum is a x b.
+assess: You know 8 x 5 = 40 and 8 x 2 = 16. Use the distributive property to find 8 x 7, and show the
+  break-apart.
+sources:
+  ccss:
+  - 3.OA.B.5
+  learning_components:
+  - 270da5c5
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.distributive
+    relation: definitional
+    points_to: statement
+    why: The strategy is justified by a x (c + d) = a x c + a x d, the distributive property.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number-composition.within-10.decompose
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 writes a factor as a sum of two numbers, a decomposition of that number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.base-ten.strategy
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds two products, often two-digit numbers, by a place-value addition strategy.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

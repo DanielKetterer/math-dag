@@ -1,0 +1,50 @@
+id: number-composition.make-ten.find
+concept: number-composition
+facet: part-whole
+level: 1
+type: procedure
+name: Find the number that makes 10 with a given number
+statement: For a number n from 1 to 9, the partner that makes 10 is the number of objects that must be
+  added to n objects to have 10, shown for example by the empty spaces of a ten frame.
+procedure:
+- Show n objects, for example in a ten frame.
+- Add objects one at a time, or look at the empty spaces, until there are 10.
+- The number of objects added is the partner of n.
+assess: This ten frame has 6 dots. How many more dots are needed to make 10?
+sources:
+  ccss:
+  - K.OA.A.4
+  learning_components:
+  - af9a99a3
+  - e3d2b02c
+  - d20e2e5e
+requires:
+- clause: standard
+  all_of:
+  - node: counting.produce-set
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 shows n objects in a ten frame, which is counting out a set of n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.objects
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 counts the objects added, or the empty spaces, to get the partner of n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

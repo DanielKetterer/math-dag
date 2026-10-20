@@ -1,0 +1,45 @@
+id: subtraction.base-ten.decompose-unit
+concept: subtraction
+facet: base-ten
+level: 2
+type: concept
+name: Decompose a ten or a hundred when subtracting
+statement: When a place has too few units to subtract from, 1 unit of the next larger place can be traded
+  for 10 units of this place without changing the number.
+assess: You have 4 tens and 2 ones and must take away 7 ones. Trade 1 ten. How many tens and ones do you
+  have now, and is it the same number?
+sources:
+  ccss:
+  - 2.NBT.B.7
+  learning_components:
+  - 961d4025
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.ten.unit
+    relation: definitional
+    points_to: statement
+    why: The statement trades 1 ten for 10 ones, which is the meaning of a ten as a bundle of ten ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.hundred.unit
+    relation: definitional
+    points_to: statement
+    why: The statement also trades 1 hundred for 10 tens, which is the meaning of a hundred as ten tens.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

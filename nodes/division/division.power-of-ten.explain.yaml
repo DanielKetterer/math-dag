@@ -1,0 +1,70 @@
+id: division.power-of-ten.explain
+concept: division
+facet: base-ten
+level: 4
+type: justification
+name: Explain why dividing by 10^k moves the decimal point k places left
+statement: Each place is worth 1/10 of the place to its left, so dividing by 10 makes every digit worth
+  1/10 as much, which moves it one place right relative to the decimal point; doing this k times moves
+  every digit k places right, so the point appears k places to the left.
+assess: Explain, using place value, why 52.7 divided by 100 = 0.527.
+sources:
+  ccss:
+  - 5.NBT.A.2
+  learning_components:
+  - 39c782cc
+  - c4a38f79
+requires:
+- clause: standard
+  all_of:
+  - node: division.power-of-ten.rule
+    relation: definitional
+    points_to: statement
+    why: The statement explains why the decimal point moves k places left, so the rule is what is justified.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.tenth-of-left
+    relation: justificatory
+    points_to: statement
+    why: The explanation says each place is worth 1/10 of the place to its left.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.power-of-ten.notation
+    relation: justificatory
+    points_to: statement
+    why: The explanation repeats the dividing-by-10 step k times, which is the meaning of 10^k as k factors
+      of 10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.successive-division
+    relation: definitional
+    points_to: statement
+    why: The explanation divides by 10 k times and treats that as dividing by 10^k; this needs that dividing
+      by a and then by b equals dividing by a x b (the division counterpart of associativity used in e613).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,76 @@
+id: addition.count-on
+concept: addition
+facet: add-to
+level: 2
+type: procedure
+name: Add by counting on
+statement: To find a + b, start from the number a without recounting it and say the next b number words,
+  keeping track of how many have been said; the last word said is a + b.
+procedure:
+- Say the first addend a.
+- Say the next number word and track it as 1 counted on; continue, tracking 2, 3, and so on.
+- Stop when b words have been counted on; the last word said is the sum.
+assess: Find 8 + 3 by counting on from 8. Do not count out 8 first.
+sources:
+  ccss:
+  - 1.OA.C.5
+  learning_components:
+  - 60239d6d
+requires:
+- clause: standard
+  all_of:
+  - node: counting.sequence.count-on
+    relation: procedural
+    points_to: procedure.1
+    why: Steps 1 and 2 say the first addend and then the next number words forward from it without recounting.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.produce-set
+    relation: procedural
+    points_to: procedure.3
+    why: Stopping after exactly b words are counted on is the same stopping rule as counting out a set
+      of b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.cardinal.last-word
+    relation: definitional
+    points_to: procedure.3
+    why: The last word said gives the sum because the last word of a count tells how many there are.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.notation.expression
+    relation: representational
+    points_to: assess
+    why: The test problem is written 8 + 3, so the expression must be read as adding 3 to 8.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

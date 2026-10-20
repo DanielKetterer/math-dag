@@ -1,0 +1,52 @@
+id: addition.two-digit-plus-tens.split-tens
+concept: addition
+facet: operation
+level: 3
+type: procedure
+name: Add a multiple of 10 by splitting off the ones
+statement: 'Write the two-digit number as its tens plus its ones, add the multiple of 10 to the tens,
+  then add back the ones: (t + u) + m = (t + m) + u, which holds by the commutative and associative properties.'
+procedure:
+- Write the two-digit number as tens plus ones (46 = 40 + 6).
+- Add the multiple of 10 to the tens (40 + 30 = 70).
+- Add the ones back on (70 + 6 = 76).
+assess: Find 46 + 30 without blocks by splitting 46 into tens and ones. Show the split.
+sources:
+  ccss:
+  - 1.NBT.C.4
+  learning_components:
+  - 125bff3f
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.two-digit.tens-ones
+    relation: definitional
+    points_to: procedure.1
+    why: Step 1 writes the two-digit number as tens plus ones, such as 46 = 40 + 6.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.decade.tens
+    relation: definitional
+    points_to: procedure.2
+    why: Step 2 adds the multiple of 10 to the tens, such as 40 + 30 = 70, using decade numbers as numbers
+      of tens.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: place-value.expanded-form
+  relation: generalizes
+  note: Expanded form generalizes the two-digit split 46 = 40 + 6 used here; place-value.two-digit.tens-ones
+    and decade.tens already supply what step 1 needs.
+status: proposed

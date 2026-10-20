@@ -1,0 +1,44 @@
+id: multiplication.power-of-ten.whole-number.rule
+concept: multiplication
+facet: base-ten
+level: 3
+type: concept
+name: Multiplying a whole number by 10^k appends k zeros
+statement: For a whole number n and a whole number k, n x 10^k is written as the digits of n followed
+  by k zeros.
+assess: Without a written algorithm, find 368 x 10^3 and 4,050 x 100.
+sources:
+  ccss:
+  - 5.NBT.A.2
+  learning_components:
+  - a275a470
+requires:
+- clause: standard
+  all_of:
+  - node: exponent.power-of-ten.notation
+    relation: representational
+    points_to: statement
+    why: The statement is written with 10^k, the exponent notation for a power of ten.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.factor-of-ten
+    relation: definitional
+    points_to: statement
+    why: Multiplying by 10 and appending one zero is the one-step case that the k-zeros rule repeats.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

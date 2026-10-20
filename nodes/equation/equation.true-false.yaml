@@ -1,0 +1,82 @@
+id: equation.true-false
+concept: equation
+facet: relational
+level: 2
+type: procedure
+name: Decide whether an addition or subtraction equation is true
+statement: An equation built from whole numbers, sums, and differences is true when the two sides have
+  the same value and false otherwise.
+procedure:
+- Find the value of the left side.
+- Find the value of the right side.
+- The equation is true if the two values are equal, and false if they are not.
+assess: 'True or false: 6 = 6;  7 = 8 - 1;  5 + 2 = 2 + 5;  4 + 1 = 5 + 2;  9 - 3 = 4 + 2.'
+sources:
+  ccss:
+  - 1.OA.D.7
+  learning_components:
+  - 32458a68
+  - 5d2ed8f0
+requires:
+- clause: standard
+  all_of:
+  - node: equation.equal-sign.meaning
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 compares the values of the two sides, which is the relational meaning of the equal sign.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.notation.expression
+    relation: representational
+    points_to: procedure.1
+    why: Steps 1 and 2 find the value of sides written as sums such as 5 + 2, so sum expressions must
+      be read.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.notation.expression
+    relation: representational
+    points_to: procedure.2
+    why: Steps 1 and 2 find the value of sides written as differences such as 8 - 1, so difference expressions
+      must be read.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.count-on
+    relation: procedural
+    points_to: procedure.1
+    why: Steps one and two find the value of a sum on either side.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.count-back
+    relation: procedural
+    points_to: procedure.1
+    why: Steps one and two find the value of a difference on either side.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

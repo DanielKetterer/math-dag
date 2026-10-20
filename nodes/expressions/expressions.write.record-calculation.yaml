@@ -1,0 +1,83 @@
+id: expressions.write.record-calculation
+concept: expressions
+facet: numerical
+level: 3
+type: representation
+name: Write a numerical expression that records a calculation
+statement: A calculation of two or more steps described in words is recorded as one numerical expression,
+  with grouping symbols around each step that must be done before the operation applied to it.
+assess: 'Write an expression, without evaluating it, for: add 8 and 7, then multiply by 2.'
+sources:
+  ccss:
+  - 5.OA.A.2
+  learning_components:
+  - 4f28828c
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.grouping.evaluate
+    relation: representational
+    points_to: statement
+    why: The statement uses grouping symbols to show which step is done first, which is the meaning of
+      grouping symbols in an expression.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.notation.expression
+    relation: representational
+    points_to: assess
+    why: The test problem writes the step add 8 and 7 as the expression 8 + 7.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.situation-to-expression
+    relation: representational
+    points_to: assess
+    why: The test problem writes the step multiply by 2 as a product expression with a group around the
+      sum.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.notation.expression
+    relation: representational
+    points_to: statement
+    why: The statement covers any two-step calculation, so a step of taking away is recorded as a subtraction
+      expression.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.measurement.situation-to-expression
+    relation: definitional
+    points_to: statement
+    why: The statement covers any two-step calculation, and a division step must be recorded as a division
+      expression; the proposed edges cover only addition, subtraction and multiplication.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

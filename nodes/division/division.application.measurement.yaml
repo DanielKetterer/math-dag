@@ -1,0 +1,105 @@
+id: division.application.measurement
+concept: division
+facet: measurement
+level: 2
+type: application
+name: Solve one-step grouping division word problems within 100
+statement: A story gives a total within 100 and the size of each equal group or piece (including the length
+  of a row of an array, or an equal measure); the learner finds the number of groups, using a drawing
+  or an equation.
+assess: Jo has 30 centimeters of ribbon and cuts it into pieces 5 centimeters long. How many pieces does
+  she get?
+sources:
+  ccss:
+  - 3.OA.A.3
+  learning_components:
+  - 754f84dd
+  - 076bb94c
+  - 1843505b
+requires:
+- clause: via-make
+  all_of:
+  - node: division.measurement.meaning
+    relation: definitional
+    points_to: statement
+    why: The story gives the size of each group and asks for the number of groups, the grouping meaning
+      of a quotient.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.measurement.situation-to-expression
+    relation: representational
+    points_to: statement
+    why: A drawing or equation requires modeling the grouping story and writing its division expression.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.make
+    relation: procedural
+    points_to: statement
+    why: A drawing solution makes groups of the given size from the total until none is left.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Making groups of the given size from the total is the drawing route; the equation
+        route does not need it. | other route: Write the division equation and find the number of groups
+        by recalling division facts (division.facts.within-100).'
+    status: disputed
+- clause: critic-route-1
+  note: 'Equation route: write the division equation and find the number of groups by recalling division
+    facts, with no group-making.'
+  all_of:
+  - node: division.measurement.meaning
+    relation: definitional
+    points_to: statement
+    why: The story gives the size of each group and asks for the number of groups, the grouping meaning
+      of a quotient.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.measurement.situation-to-expression
+    relation: representational
+    points_to: statement
+    why: A drawing or equation requires modeling the grouping story and writing its division expression.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.facts.within-100
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Equation route: write the division equation and find
+      the number of groups by recalling division facts, with no group-making.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

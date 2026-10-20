@@ -1,0 +1,73 @@
+id: addition.two-digit-plus-tens.model
+concept: addition
+facet: operation
+level: 2
+type: procedure
+name: Add a multiple of 10 to a two-digit number with a base-ten model
+statement: To add a multiple of 10 to a two-digit number with base-ten blocks or a drawing, join the tens
+  to the tens; the ones do not change. The sum is within 100.
+procedure:
+- Show the two-digit number as tens and ones.
+- Add the tens of the multiple of 10 to the tens.
+- Read the new number of tens and the unchanged ones.
+assess: Use base-ten blocks or a drawing of tens and ones to find 46 + 30.
+sources:
+  ccss:
+  - 1.NBT.C.4
+  learning_components:
+  - aeefe1ac
+  - 2e678cee
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.two-digit.tens-ones
+    relation: definitional
+    points_to: procedure.1
+    why: Step 1 shows the two-digit number as tens and ones, and step 3 reads the new tens and the unchanged
+      ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.decade.tens
+    relation: definitional
+    points_to: statement
+    why: The multiple of 10 being added is a number of tens, so 30 is joined as 3 tens.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.ten.unit
+    relation: representational
+    points_to: procedure.1
+    why: The base-ten blocks show each ten as a rod, a bundle of ten ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.add-to.count-all
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds the tens of the multiple of 10 to the tens, which is joining two small sets and counting
+      all.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

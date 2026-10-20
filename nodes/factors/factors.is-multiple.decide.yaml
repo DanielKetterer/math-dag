@@ -1,0 +1,78 @@
+id: factors.is-multiple.decide
+concept: factors
+facet: core
+level: 3
+type: procedure
+name: Decide whether a whole number within 100 is a multiple of a one-digit number
+statement: A whole number n from 1 to 100 is a multiple of a one-digit number d exactly when d x k = n
+  for some whole number k, which is checked by skip-counting by d or by dividing n by d and looking for
+  a remainder of 0.
+procedure:
+- Divide n by d, or skip-count by d up to n.
+- If the division has remainder 0, or the skip-count lands on n, then n is a multiple of d.
+- Otherwise n is not a multiple of d.
+assess: Is 91 a multiple of 7? Is 58 a multiple of 6?
+sources:
+  ccss:
+  - 4.OA.B.4
+  learning_components:
+  - 6c81abb2
+requires:
+- clause: via-remainder
+  all_of:
+  - node: factors.multiple-of-each-factor
+    relation: definitional
+    points_to: statement
+    why: The statement defines multiple through d x k = n, the relation between a number and its factor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.partial-quotients.one-digit-divisor.remainder
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 divides n by d and looks for a remainder of 0, as in 91 divided by 7.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement gives two checks: divide and look for remainder 0, or skip-count
+        by d up to n. Division with remainder is only the first. | other route: Skip-count by d (repeated
+        addition of d) and see whether the count lands on n.'
+    status: disputed
+- clause: critic-route-1
+  note: Skip-count by d (repeated addition of d) up to n and see whether the count lands on n, with no
+    division.
+  all_of:
+  - node: factors.multiple-of-each-factor
+    relation: definitional
+    points_to: statement
+    why: The statement defines multiple through d x k = n, the relation between a number and its factor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.two-digit-plus-one-digit.next-ten
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Skip-count by d (repeated addition of d) up to n and
+      see whether the count lands on n, with no division.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

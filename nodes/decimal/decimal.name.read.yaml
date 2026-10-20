@@ -1,0 +1,79 @@
+id: decimal.name.read
+concept: decimal
+facet: decimal-fraction
+level: 3
+type: representation
+name: Read a decimal to thousandths as a number name
+statement: Name a decimal to thousandths by naming the whole-number part, saying and, then naming the
+  digits after the decimal point as one whole number followed by the name of the last place (42.07 is
+  forty-two and seven hundredths).
+procedure:
+- Name the whole-number part, if it is not 0, and say and.
+- Read the digits after the decimal point as a whole number.
+- 'Say the name of the place of the last digit: tenths, hundredths, or thousandths.'
+assess: 'Write these decimals in words: 5.408 and 0.06.'
+sources:
+  ccss:
+  - 5.NBT.A.3.a
+  learning_components:
+  - 2f4e3bac
+  - b6add9b5
+requires:
+- clause: standard
+  all_of:
+  - node: numeral.read.to-1000
+    relation: procedural
+    points_to: procedure.2
+    why: The digits after the decimal point are read as one whole number up to 999, as in seven for 0.07
+      or four hundred eight for 5.408.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.tenths.notation
+    relation: representational
+    points_to: procedure.3
+    why: The last place named, tenths, must be recognised from the position of the digit after the decimal
+      point.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: procedure.3
+    why: The last place named, hundredths, must be recognised from the second position after the decimal
+      point.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.thousandths.notation
+    relation: representational
+    points_to: procedure.3
+    why: The last place named, thousandths, must be recognised from the third position after the decimal
+      point, as in 5.408.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'necessary: Genuinely required (statement and test reach thousandths), but decimal.thousandths.notation
+        does not appear in index.txt or boundary_nodes; the node must be created.'
+    status: proposed
+status: proposed

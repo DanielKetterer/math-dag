@@ -1,0 +1,109 @@
+id: multiplication.multiple-of-ten.by-multiple-of-ten
+concept: multiplication
+facet: base-ten
+level: 3
+type: procedure
+name: Multiply a multiple of 10 by a multiple of 10
+statement: 'A product of two multiples of 10 such as 30 x 40 equals (3 x 4) x (10 x 10), so it is that
+  many hundreds: 30 x 40 = 12 hundreds = 1200.'
+procedure:
+- Write each factor as a one-digit number times 10 (30 = 3 x 10, 40 = 4 x 10).
+- Multiply the one-digit numbers (3 x 4 = 12).
+- Since 10 x 10 = 100, the product is that many hundreds (1200).
+assess: Find 30 x 40 and 60 x 50 by multiplying the tens digits and naming the unit; do not use a written
+  algorithm.
+sources:
+  ccss:
+  - 4.NBT.B.5
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.decade.tens
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 writes each factor such as 30 as a one-digit number of tens.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies the one-digit numbers, such as 3 x 4.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.commutative
+    relation: justificatory
+    points_to: statement
+    why: The statement regroups 30 x 40 as (3 x 4) x (10 x 10), which swaps the order of factors.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.associative
+    relation: justificatory
+    points_to: statement
+    why: The statement regroups the four factors 3, 10, 4 and 10 into two products, which uses associativity.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.hundred.unit
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 uses 10 x 10 = 100, a hundred as ten tens.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.base-ten.compose-unit
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 reads 12 hundreds as 1200, which regroups ten hundreds as a thousand.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.hundreds.multiples
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 reads 12 hundreds as 1200, since 10 x 10 = 100 makes the product a number of hundreds.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: hundreds.multiples covers 100 to 900 as 1 to 9 hundreds, but step 3 reads counts
+        like 12 hundreds as 1200. For counts above 9 the work is done by compose-unit (e542), so this
+        edge may add nothing.'
+    status: disputed
+status: proposed

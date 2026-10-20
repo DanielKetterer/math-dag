@@ -1,0 +1,65 @@
+id: decimal.division.relate-written
+concept: decimal
+facet: decimal-fraction
+level: 2
+type: representation
+name: Relate decimal division models to a written method
+statement: Sharing a decimal in a model, trading leftover ones for tenths and leftover tenths for hundredths,
+  matches written long division where the decimal point of the quotient is placed directly above the decimal
+  point of the dividend and each leftover is brought down into the next smaller place.
+assess: A block model shows 3.48 shared into 4 equal groups, with 3 ones traded for 30 tenths. Write 3.48
+  divided by 4 as long division and point to where the model's trade appears and why the quotient's decimal
+  point sits above the dividend's.
+sources:
+  ccss:
+  - 5.NBT.B.7
+  learning_components:
+  - c2ad2555
+requires:
+- clause: standard
+  all_of:
+  - node: decimal.division.by-whole.model
+    relation: representational
+    points_to: statement
+    why: The statement matches sharing in the decimal model to written long division, so the model is
+      one of the two things related.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.standard-algorithm.long-division
+    relation: representational
+    points_to: statement
+    why: The statement relates the model to written long division with bring-down and a quotient digit
+      above each dividend digit, which is not in the map.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'necessary: Genuinely required (the target relates the model to written long division), but
+        division.standard-algorithm.long-division is not in index.txt: this is a gap in the map.'
+    status: proposed
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: assess
+    why: The test problem writes 3.48 in long division and places the quotient's decimal point above the
+      dividend's.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

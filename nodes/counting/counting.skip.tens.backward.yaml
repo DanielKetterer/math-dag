@@ -1,0 +1,46 @@
+id: counting.skip.tens.backward
+concept: counting
+facet: sequence
+level: 1
+type: procedure
+name: Count backward by tens from any number within 120
+statement: Count backward by tens from any starting number up to 120, so that the ones stay the same and
+  the tens decrease by one each step (117, 107, 97, 87).
+procedure:
+- Say the starting number.
+- Say the number with the same ones and one less ten.
+- Repeat until the stopping number.
+assess: Count aloud backward by tens starting at 117 and stopping at 37.
+sources:
+  ccss:
+  - 1.NBT.A.1
+  learning_components:
+  - 3c1df05c
+requires:
+- clause: standard
+  all_of:
+  - node: counting.skip.tens.decades
+    relation: procedural
+    points_to: procedure.2
+    why: Saying the number with one less ten uses the decade word order, run in reverse, from one hundred
+      down to ten.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.sequence.within-1000
+    relation: definitional
+    points_to: statement
+    why: The test starts at 117 and the procedure passes through 107 and 97, so number names past 100
+      are used directly; the proposed edges do not supply them (forward tens has this as e10).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,112 @@
+id: division.power-of-ten.rule
+concept: division
+facet: base-ten
+level: 3
+type: concept
+name: Dividing by 10^k moves the decimal point k places left
+statement: Dividing a whole number or a decimal by 10^k gives the number whose decimal point is k places
+  to the left, writing zeros in any empty places between the point and the first digit.
+assess: Without a written algorithm, find 52.7 divided by 10^2 and 3.4 divided by 1,000.
+sources:
+  ccss:
+  - 5.NBT.A.2
+  learning_components:
+  - 39c782cc
+  - c4a38f79
+requires:
+- clause: via-tenth-of-left
+  all_of:
+  - node: exponent.power-of-ten.notation
+    relation: representational
+    points_to: statement
+    why: The statement is written with 10^k, the exponent notation for a power of ten.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.ten-times-right.decimal
+    relation: definitional
+    points_to: statement
+    why: The statement moves the decimal point of a decimal, which relies on decimal places being related
+      by factors of ten.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.tenth-of-left
+    relation: definitional
+    points_to: statement
+    why: Dividing by 10 moves each digit to a place one tenth the size, the place that is one tenth of
+      the place to its left.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Each-place-is-one-tenth-of-the-left is one route to the left-moving rule. | other
+        route: Treat division by 10^k as undoing multiplication by 10^k (unknown-factor meaning plus the
+        right-moving decimal rule).'
+    status: disputed
+- clause: inverse
+  all_of:
+  - node: exponent.power-of-ten.notation
+    relation: representational
+    points_to: statement
+    why: The statement is written with 10^k, the exponent notation for a power of ten.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.ten-times-right.decimal
+    relation: definitional
+    points_to: statement
+    why: The statement moves the decimal point of a decimal, which relies on decimal places being related
+      by factors of ten.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.power-of-ten.decimal.rule
+    relation: definitional
+    points_to: statement
+    why: Dividing by 10^k undoes multiplying by 10^k, so the right-moving point rule gives the left-moving
+      one.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Deriving the left-moving rule by undoing the right-moving one is one route.'
+    status: disputed
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: Finding 52.7 divided by 100 as the number that times 100 gives 52.7 uses a quotient as an unknown
+      factor.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Reading division by 10^k as finding the number that times 10^k gives the dividend
+        is the ''undo multiplication'' route.'
+    status: disputed
+status: proposed

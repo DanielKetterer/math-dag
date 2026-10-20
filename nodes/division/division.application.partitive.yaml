@@ -1,0 +1,105 @@
+id: division.application.partitive
+concept: division
+facet: partitive
+level: 2
+type: application
+name: Solve one-step sharing division word problems within 100
+statement: A story gives a total within 100 shared equally among a given number of groups (including the
+  rows of an array); the learner finds the size of each group, using a drawing or an equation.
+assess: 28 stickers are shared equally among 4 friends. How many stickers does each friend get?
+sources:
+  ccss:
+  - 3.OA.A.3
+  learning_components:
+  - 754f84dd
+  - 076bb94c
+  - 1843505b
+requires:
+- clause: via-deal-out
+  all_of:
+  - node: division.partitive.meaning
+    relation: definitional
+    points_to: statement
+    why: The story shares a total equally among groups and asks for the size of each share, which is the
+      sharing meaning of division.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.partitive.situation-to-expression
+    relation: representational
+    points_to: statement
+    why: Using a drawing or an equation means modeling the sharing story and writing the division expression
+      for it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: partitioning.set.deal-out
+    relation: procedural
+    points_to: statement
+    why: A drawing of the sharing is carried out by dealing the total out one at a time to each group.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A drawing solution is one way in and uses dealing out; the equation route finds
+        the group size without dealing. | other route: Write the division equation and find the share
+        by recalling division facts (division.facts.within-100) or the unknown factor.'
+    status: disputed
+- clause: critic-route-1
+  note: 'Equation route: write the division equation and find the share by recalling division facts, with
+    no dealing out.'
+  all_of:
+  - node: division.partitive.meaning
+    relation: definitional
+    points_to: statement
+    why: The story shares a total equally among groups and asks for the size of each share, which is the
+      sharing meaning of division.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.partitive.situation-to-expression
+    relation: representational
+    points_to: statement
+    why: Using a drawing or an equation means modeling the sharing story and writing the division expression
+      for it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.facts.within-100
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Equation route: write the division equation and find
+      the share by recalling division facts, with no dealing out.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

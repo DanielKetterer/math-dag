@@ -1,0 +1,76 @@
+id: subtraction.base-ten.model
+concept: subtraction
+facet: base-ten
+level: 2
+type: procedure
+name: Subtract within 1000 with base-ten models
+statement: Find a difference within 1000 with base-ten blocks or a drawing by taking away like units,
+  trading 1 ten for 10 ones or 1 hundred for 10 tens where needed.
+procedure:
+- Show the minuend with hundreds, tens, and ones (blocks or a drawing).
+- For each place, starting with the ones, if there are fewer units than must be taken away, trade 1 unit
+  of the next larger place for 10 of this unit; if that place is empty, first trade a hundred for 10 tens.
+- Take away the ones, tens, and hundreds of the subtrahend.
+- Count the hundreds, tens, and ones left to read the difference.
+assess: Use base-ten blocks or a drawing to find 503 - 268.
+sources:
+  ccss:
+  - 2.NBT.B.7
+  learning_components:
+  - 5dfb9a7e
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 shows the minuend as hundreds, tens and ones with blocks or a drawing.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.base-ten.decompose-unit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 trades 1 unit of the next larger place for 10 of this unit when there are too few to take
+      away.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.base-ten.like-units
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 takes away ones, tens and hundreds of the subtrahend from like units.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-20.fluency
+    relation: procedural
+    points_to: procedure.3
+    why: Counting the units left in a place, such as 13 ones minus 8 ones, is a subtraction fact within
+      20.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

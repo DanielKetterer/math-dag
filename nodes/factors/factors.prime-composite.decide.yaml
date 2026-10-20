@@ -1,0 +1,49 @@
+id: factors.prime-composite.decide
+concept: factors
+facet: core
+level: 3
+type: procedure
+name: Decide whether a whole number within 100 is prime or composite
+statement: A whole number from 2 to 100 is composite if it is a multiple of some number from 2 to 9 other
+  than itself, and prime otherwise, because any factor pair of a number up to 100 contains a factor no
+  greater than 10.
+procedure:
+- Test whether the number is a multiple of 2, 3, 5 or 7, the primes less than 10.
+- If it is a multiple of one of them and is not that prime itself, it is composite.
+- If it is a multiple of none of them, it is prime.
+assess: Decide whether 91 is prime or composite, and whether 89 is prime or composite.
+sources:
+  ccss:
+  - 4.OA.B.4
+  learning_components:
+  - f548ce1a
+requires:
+- clause: standard
+  all_of:
+  - node: factors.prime-composite.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure decides which class a number belongs to, using the meanings of prime and composite.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: factors.is-multiple.decide
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 tests whether the number is a multiple of 2, 3, 5 or 7.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

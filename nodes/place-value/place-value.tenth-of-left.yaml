@@ -1,0 +1,68 @@
+id: place-value.tenth-of-left
+concept: place-value
+facet: decimal
+level: 3
+type: concept
+name: Each place is one tenth of the place to its left
+statement: In a multi-digit number, including one with decimal places, a digit in one place represents
+  1/10 of what the same digit represents in the place to its left.
+assess: In 4.44, the value of the 4 in the hundredths place is what fraction of the value of the 4 in
+  the tenths place?
+sources:
+  ccss:
+  - 5.NBT.A.1
+  learning_components:
+  - 051034c9
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.multiplication.parts-of-partition.whole-number
+    relation: definitional
+    points_to: statement
+    why: One tenth of a value is one part when that value is split into ten equal parts, which is how
+      1/10 of a quantity is formed.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.parts-of-partition.fraction
+    relation: definitional
+    points_to: statement
+    why: The value of a decimal digit is one tenth of a fraction of the place to its left, as in 1/10
+      of 4/10.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.tenths.notation
+    relation: definitional
+    points_to: statement
+    why: The test reads the tenths place of 4.44 directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: decimal.hundredths.notation
+    relation: definitional
+    points_to: statement
+    why: The test reads the hundredths place of 4.44 directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: place-value.ten-times-right.decimal
+  relation: common_path
+  note: 'Common path, not required: route ''via-decimal'' needed everything another route needs and more,
+    so it was removed.'
+status: proposed

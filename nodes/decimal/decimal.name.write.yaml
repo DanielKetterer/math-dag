@@ -1,0 +1,78 @@
+id: decimal.name.write
+concept: decimal
+facet: decimal-fraction
+level: 3
+type: representation
+name: Write a decimal to thousandths from its number name
+statement: Write the decimal for a number name to thousandths, placing the digits after the decimal point
+  so that the last one falls in the named place, with zeros filling any places before it (forty-two and
+  seven thousandths is 42.007).
+procedure:
+- Write the numeral for the whole-number part, or 0 if there is none, then a decimal point.
+- Write the number said after and, with leading zeros so that it uses one digit for tenths, two for hundredths,
+  or three for thousandths.
+assess: Write the decimal for six and fifty-four thousandths.
+sources:
+  ccss:
+  - 5.NBT.A.3.a
+  learning_components:
+  - 2f4e3bac
+  - b6add9b5
+requires:
+- clause: standard
+  all_of:
+  - node: numeral.write.to-1000
+    relation: procedural
+    points_to: procedure.2
+    why: The number said after and, such as fifty-four, is written as a numeral and then padded with leading
+      zeros to fill the named place.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.tenths.notation
+    relation: representational
+    points_to: procedure.2
+    why: A named place of tenths needs one digit after the decimal point, which is the notation for tenths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: procedure.2
+    why: A named place of hundredths needs two digits after the decimal point, which is the notation for
+      hundredths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.thousandths.notation
+    relation: representational
+    points_to: procedure.2
+    why: A named place of thousandths needs three digits after the decimal point, as in six and fifty-four
+      thousandths, 6.054.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'necessary: Genuinely required (statement and test reach thousandths), but decimal.thousandths.notation
+        does not appear in index.txt or boundary_nodes; the node must be created.'
+    status: proposed
+status: proposed

@@ -1,0 +1,115 @@
+id: subtraction.unknown-addend.meaning
+concept: subtraction
+facet: unknown-addend
+level: 2
+type: concept
+name: A difference as an unknown addend
+statement: a - b is the number that must be added to b to make a, so a - b = c exactly when b + c = a.
+assess: Which equation has the same missing number as 12 - 5 = ?  (a) 5 + ? = 12  (b) 12 + 5 = ?  (c)
+  ? - 5 = 12
+sources:
+  ccss:
+  - 1.OA.B.4
+  learning_components:
+  - fb04b29a
+requires:
+- clause: via-equation
+  all_of:
+  - node: subtraction.notation.equation
+    relation: representational
+    points_to: statement
+    why: The statement is about equations of the form a - b = c and what they say about the numbers a,
+      b, and c.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.notation.equation
+    relation: representational
+    points_to: statement
+    why: The statement links a - b = c to the addition equation b + c = a, which must be read as a joining
+      record.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number-composition.within-10.equation
+    relation: justificatory
+    points_to: statement
+    why: That c left after taking b from a means a splits into the parts b and c, recorded as a = b +
+      c.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Reading a = b + c as a split of a is one way into the equivalence (part-whole
+        route). | other route: Number-line route: a forward jump of c from b ends at a (addition.add-to.number-line)
+        and a - b is the distance from b to a (subtraction.comparison.number-line).'
+    status: disputed
+- clause: distance
+  all_of:
+  - node: subtraction.notation.equation
+    relation: representational
+    points_to: statement
+    why: The statement is about equations of the form a - b = c and what they say about the numbers a,
+      b, and c.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.notation.equation
+    relation: representational
+    points_to: statement
+    why: The statement links a - b = c to the addition equation b + c = a, which must be read as a joining
+      record.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.comparison.number-line
+    relation: definitional
+    points_to: statement
+    why: The difference a - b is the distance from b to a, which is the number that must be added to b
+      to reach a.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Seeing a - b as the distance from b to a is one way into the equivalence (number-line
+        route).'
+    status: disputed
+  - node: addition.add-to.number-line
+    relation: representational
+    points_to: statement
+    why: Adding c to b is a jump of length c forward on the number line, ending at a.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Adding c to b as a forward jump is one way to link a - b = c to b + c = a (number-line
+        route).'
+    status: disputed
+status: proposed

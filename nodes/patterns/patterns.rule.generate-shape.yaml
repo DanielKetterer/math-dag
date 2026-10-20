@@ -1,0 +1,63 @@
+id: patterns.rule.generate-shape
+concept: patterns
+facet: rule
+level: 1
+type: procedure
+name: Generate a shape pattern from a given rule
+statement: Given a starting shape arrangement and a rule for changing it, such as "add one square to each
+  arm" or "repeat circle, triangle, triangle", draw or build the next terms by applying the rule.
+procedure:
+- Draw or build the starting term.
+- Apply the rule to the last term to make the next term.
+- Repeat until the asked-for number of terms is made.
+assess: The first figure is 1 square. The rule is "add one square to the right end and one to the top".
+  Draw the next three figures.
+sources:
+  ccss:
+  - 4.OA.C.5
+  learning_components:
+  - a679c3b7
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.compose.combine
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 applies the rule by putting a shape on the last term to make the next figure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: spatial.position.relative
+    relation: representational
+    points_to: assess
+    why: The rule in the test problem uses position words, to the right end and to the top.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem states its rule with position words (right end, top).'
+    status: proposed
+  - node: shapes.name.receptive
+    relation: definitional
+    points_to: assess
+    why: A rule such as repeat circle, triangle, triangle names shapes that the learner must pick out.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Applying a rule needs only copying or extending shapes; only the test problem
+        needs picking out the shape named square.'
+    status: proposed
+status: proposed

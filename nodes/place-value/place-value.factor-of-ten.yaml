@@ -1,0 +1,63 @@
+id: place-value.factor-of-ten
+concept: place-value
+facet: whole-number
+level: 3
+type: procedure
+name: Use place value to multiply or divide by a factor of 10
+statement: Multiplying a whole number by 10 moves each digit one place to the left, so a x 10 is a with
+  a 0 written after it; hence when b = a x 10, b divided by a = 10 and b divided by 10 = a.
+procedure:
+- For a x 10, write the digits of a followed by one 0.
+- For a quotient, find whether the dividend is the divisor with one 0 written after it, or the divisor
+  is 10.
+- If the dividend is the divisor times 10, the quotient is 10; if the divisor is 10 and the dividend ends
+  in 0, the quotient is the dividend with its final 0 removed (this node covers only quotients with no
+  remainder).
+assess: Without long division, use place value to find 700 divided by 70.
+sources:
+  ccss:
+  - 4.NBT.A.1
+  learning_components:
+  - cb2cec73
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.ten-times-right
+    relation: definitional
+    points_to: procedure.1
+    why: Multiplying by 10 moves each digit one place left because each place is ten times the place to
+      its right.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: procedure.2
+    why: Finding b divided by a as the number that times a gives b is how 700 divided by 70 becomes the
+      question of what times 70 is 700.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement defines a x 10 and claims its digits shift; the learner must know what multiplying
+      by 10 means (ten groups of a).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

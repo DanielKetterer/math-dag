@@ -1,0 +1,70 @@
+id: addition.make-ten
+concept: addition
+facet: operation
+level: 2
+type: procedure
+name: Add across 10 by making a ten
+statement: When a + b is more than 10 with a and b at most 9, split b into the part that completes a to
+  10 and the rest; then a + b = 10 + the rest.
+procedure:
+- Find the partner of a that makes 10, namely 10 - a.
+- Split b into 10 - a and the rest, b - (10 - a).
+- 'Add 10 - a to a to make 10, then add the rest: the sum is 10 + (b - (10 - a)).'
+assess: Find 8 + 6 by making a ten. Show how you split the 6.
+sources:
+  ccss:
+  - 1.OA.C.6
+  learning_components:
+  - 690addcb
+requires:
+- clause: standard
+  all_of:
+  - node: number-composition.make-ten.find
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds the partner of a that makes 10, which is finding the number that makes 10 with a
+      given number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number-composition.within-10.decompose
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 splits b into the part that completes a to 10 and the rest, which is breaking a number
+      into two parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.teen.equation
+    relation: representational
+    points_to: procedure.3
+    why: The result 10 + the rest is recorded and read as a teen number written as 10 plus ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.notation.expression
+    relation: definitional
+    points_to: statement
+    why: The statement is about a + b, read as joining two amounts.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

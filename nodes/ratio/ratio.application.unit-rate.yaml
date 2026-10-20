@@ -44,7 +44,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: decimal.operations
+  - node: decimal.division.algorithm
     relation: procedural
     points_to: statement
     why: Using the unit rate to find another amount at the same rate multiplies or divides decimal quantities,
@@ -56,6 +56,12 @@ requires:
       source: critic-sonnet
       note: 'route-only: Decimal unit prices are a route to the rate; the test problem (4/7 lawn per hour,
         35 hours) is done in fractions. | other route: Carry the rate as a fraction and multiply (fraction.multiplication.symbolic).'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired decimal.operations: A unit rate of 7 hours for 4 lawns is 7 / 4 =
+        1.75, a whole number divided by a one-digit number to hundredths. Claude: the source is symbolic
+        (L3), so the skill is the 6.NS.B.3 standard algorithm, a later-phase boundary id, not the L2 model
+        node.'
     status: disputed
 - clause: via-symbolic
   all_of:

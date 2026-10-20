@@ -1,0 +1,76 @@
+id: decimal.addition.model
+concept: decimal
+facet: decimal-fraction
+level: 2
+type: procedure
+name: Add decimals to hundredths with a place-value model
+statement: Find a sum of decimals to hundredths with base-ten blocks or grids by joining like units (ones,
+  tenths, hundredths) and trading 10 hundredths for 1 tenth and 10 tenths for 1 one where needed.
+procedure:
+- Show each addend as ones, tenths, and hundredths with blocks or grids.
+- Put the like units together.
+- If there are 10 or more hundredths, trade 10 hundredths for 1 tenth; then if there are 10 or more tenths,
+  trade 10 tenths for 1 one.
+- Count the ones, tenths, and hundredths to read the sum.
+assess: Use base-ten blocks or hundredths grids to find 2.47 + 1.85.
+sources:
+  ccss:
+  - 5.NBT.B.7
+  learning_components:
+  - 425dce77
+requires:
+- clause: standard
+  all_of:
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: statement
+    why: The statement shows addends as ones, tenths and hundredths, and the test problem is written as
+      the decimals 2.47 and 1.85.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.ten-times-right.decimal
+    relation: definitional
+    points_to: statement
+    why: The statement trades 10 hundredths for 1 tenth and 10 tenths for 1 one, which is decimal places
+      related by factors of ten.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.base-ten.model
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 to 4 join like units, trade up and read the sum exactly as in the whole-number base-ten
+      model, applied to smaller units.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-20.fluency
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds the counts in each place, such as 7 hundredths plus 5 hundredths, which are one-digit
+      sums.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

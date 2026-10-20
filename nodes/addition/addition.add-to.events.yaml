@@ -1,0 +1,64 @@
+id: addition.add-to.events
+concept: addition
+facet: add-to
+level: 1
+type: procedure
+name: Join two runs of sounds or actions
+statement: The total of two runs of sounds or actions is found by keeping the count of the first run and
+  continuing it through the second, since the first run is gone when the second is heard.
+procedure:
+- Count the first run of sounds as it happens and keep the last number.
+- Continue the count from that number through the second run.
+- The last number said is the total.
+assess: 'Listen: I clap 3 times, then 2 more times. How many claps were there in all?'
+sources:
+  ccss:
+  - K.OA.A.1
+  learning_components:
+  - 9dd0efd5
+requires:
+- clause: standard
+  all_of:
+  - node: counting.events
+    relation: procedural
+    points_to: procedure.1
+    why: The first run of sounds or actions must be counted as it happens, which is counting events with
+      no objects to point at.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.sequence.count-on
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 continues the count from the kept last number through the second run instead of restarting
+      at one.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.cardinal.last-word
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 says the last number said is the total, which is the rule that the last word of a count
+      tells how many.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

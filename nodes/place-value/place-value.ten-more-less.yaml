@@ -1,0 +1,56 @@
+id: place-value.ten-more-less
+concept: place-value
+facet: whole-number
+level: 3
+type: procedure
+name: Find 10 more or 10 less than a number mentally
+statement: Adding or subtracting 10 changes the tens by one and leaves the ones unchanged; when the tens
+  digit is 9 (adding) or 0 (subtracting), the hundreds change by one as well (196 + 10 = 206, 305 - 10
+  = 295).
+procedure:
+- Keep the ones digit.
+- Add one ten or take away one ten from the tens.
+- If the tens become ten tens, write them as one more hundred and 0 tens; if there are no tens to take,
+  take one hundred as ten tens first.
+assess: 'Without counting by ones or writing anything, say: 10 more than 46; 10 less than 305.'
+sources:
+  ccss:
+  - 1.NBT.C.5
+  - 2.NBT.B.8
+  learning_components:
+  - 2626d399
+  - 00c5755b
+  - 0dccf8c6
+  - f7a052d7
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: definitional
+    points_to: statement
+    why: Adding 10 changes the tens digit and leaves the ones, and can change the hundreds, as in 196
+      + 10 = 206 and 305 - 10 = 295.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.hundred.unit
+    relation: procedural
+    points_to: procedure.3
+    why: When the tens reach ten tens they are written as one more hundred, and a hundred is taken as
+      ten tens when there are no tens to remove.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

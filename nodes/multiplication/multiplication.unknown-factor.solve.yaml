@@ -1,0 +1,49 @@
+id: multiplication.unknown-factor.solve
+concept: multiplication
+facet: equal-groups
+level: 3
+type: procedure
+name: Find the unknown factor in a multiplication equation
+statement: In an equation a x ? = c or ? x b = c with whole numbers, factors through 10 and c within 100,
+  the unknown is the whole number whose product with the known factor is c.
+procedure:
+- Identify the known factor and the product.
+- Find the number whose product with the known factor is the product, by recalling the multiplication
+  fact or by dividing the product by the known factor.
+- Check by multiplying the number found by the known factor.
+assess: 'Find the number that makes each equation true: 8 x ? = 48, and ? x 6 = 54.'
+sources:
+  ccss:
+  - 3.OA.A.4
+  learning_components:
+  - 26f02245
+  - 007dac47
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: procedure.3
+    why: Checking by multiplying the number found by the known factor uses the product as a number of
+      equal groups.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: definitional
+    points_to: statement
+    why: Step 2 finds the number by recalling the multiplication fact (or skip counting or dividing);
+      recalled products for factors through 10 are the main way in. Dependence direction against that
+      node should be checked, since both are level 3.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

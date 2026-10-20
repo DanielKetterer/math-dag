@@ -1,0 +1,47 @@
+id: numeral.read.periods
+concept: numeral
+facet: core
+level: 3
+type: representation
+name: Read multi-digit numerals up to 1,000,000
+statement: Give the number name for a whole number up to 1,000,000 by splitting its digits into periods
+  of three from the right and naming each period's value followed by the period name (304,050 is three
+  hundred four thousand fifty).
+procedure:
+- Split the digits into groups of three from the right.
+- Read the leftmost group as a number up to 999 and say thousand (or million for 1,000,000).
+- Read the last group as a number up to 999, saying nothing if it is 000.
+assess: 'Write these numbers in words: 304,050 and 90,009.'
+sources:
+  ccss:
+  - 4.NBT.A.2
+  learning_components:
+  - 8b6dc1d3
+requires:
+- clause: standard
+  all_of:
+  - node: numeral.read.to-1000
+    relation: procedural
+    points_to: procedure.2
+    why: Each group of three digits is read as a number up to 999, exactly the skill of reading numerals
+      up to 1000.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.number-word.thousand-million
+    relation: definitional
+    points_to: statement
+    why: The procedure says 'thousand' and 'million' after a group; these period words are not covered
+      by any node in the map.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

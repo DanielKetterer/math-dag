@@ -1,0 +1,59 @@
+id: place-value.ten-times-right.decimal
+concept: place-value
+facet: decimal
+level: 3
+type: concept
+name: Each place, including decimal places, is ten times the place to its right
+statement: In a multi-digit number with decimal places, a digit in any place represents ten times what
+  the same digit represents in the place to its right, including across the decimal point (ones to tenths,
+  tenths to hundredths).
+assess: In 3.33, the 3 in the tenths place is how many times the value of the 3 in the hundredths place?
+sources:
+  ccss:
+  - 5.NBT.A.1
+  learning_components:
+  - ba0b5da7
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.ten-times-right
+    relation: definitional
+    points_to: statement
+    why: The decimal-place version of ten times the place to the right extends the same whole-number relation
+      across the decimal point.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.tenths.notation
+    relation: representational
+    points_to: statement
+    why: The tenths place is the first place after the decimal point and must be known to compare ones
+      with tenths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: statement
+    why: The assessed comparison, 3 in the tenths place and 3 in the hundredths place of 3.33, needs hundredths
+      notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

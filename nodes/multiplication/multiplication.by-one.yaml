@@ -1,0 +1,45 @@
+id: multiplication.by-one
+concept: multiplication
+facet: core
+level: 3
+type: concept
+name: Multiplying by 1 leaves a number unchanged
+statement: For any number a, a x 1 = a and 1 x a = a.
+assess: Without computing, what is 1 x 87? What is 3/5 x 1? Say what rule you used.
+sources:
+  ccss:
+  - 3.OA.B.5
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: The rule follows from 1 group of a being a, and a groups of 1 being a, the meaning of a product
+      as equal groups.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.as-number
+    relation: definitional
+    points_to: assess
+    why: The test problem applies the rule to 3/5, which must be a number to be multiplied.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem applies the rule to 3/5; the rule a x 1 = a for whole numbers
+        does not need fractions to be numbers.'
+    status: proposed
+status: proposed

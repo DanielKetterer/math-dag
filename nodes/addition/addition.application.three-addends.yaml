@@ -1,0 +1,46 @@
+id: addition.application.three-addends
+concept: addition
+facet: put-together
+level: 2
+type: application
+name: Solve story problems that add three numbers
+statement: A story combines three amounts and asks for the total, which is the sum of all three.
+assess: Max has 4 red cars, 7 blue cars, and 6 green cars. How many cars does he have? Use objects, a
+  drawing, or an equation.
+sources:
+  ccss:
+  - 1.OA.A.2
+  learning_components:
+  - 686ee785
+  - 74008d2f
+  - 04b5868f
+requires:
+- clause: standard
+  all_of:
+  - node: addition.application.put-together.total-unknown
+    relation: definitional
+    points_to: statement
+    why: The story combines three amounts into a total, which extends combining two parts into a total.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.make-ten
+    relation: procedural
+    points_to: assess
+    why: Adding 4, 7, and 6 passes 10 in one step, so a sum across 10 must be found.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test numbers cross 10; the statement (total of three amounts) does not
+        need a make-ten strategy, and any method of adding works.'
+    status: proposed
+status: proposed

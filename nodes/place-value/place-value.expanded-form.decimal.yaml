@@ -1,0 +1,81 @@
+id: place-value.expanded-form.decimal
+concept: place-value
+facet: decimal
+level: 3
+type: representation
+name: Move between a decimal numeral and its expanded form
+statement: A decimal to thousandths is the sum of its digits times their place values, including 1/10,
+  1/100, and 1/1000 (347.392 = 3 x 100 + 4 x 10 + 7 x 1 + 3 x (1/10) + 9 x (1/100) + 2 x (1/1000)).
+procedure:
+- To expand, write each nonzero digit times the value of its place, and join these with plus signs.
+- To write the numeral, put each digit in the place its multiplier names, and write 0 in every place between
+  the leftmost and rightmost named places that no term names.
+assess: Write 52.406 in expanded form using fractions for the decimal places. Write the decimal for 6
+  x 10 + 3 x (1/10) + 8 x (1/1000).
+sources:
+  ccss:
+  - 5.NBT.A.3.a
+  learning_components:
+  - 364bf4c1
+  - 8c0e0d39
+  - a96daa57
+  - a8282e62
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.expanded-form
+    relation: definitional
+    points_to: statement
+    why: The whole-number part of 347.392 is expanded in the same way as a whole number, one term per
+      digit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiple-of-unit
+    relation: representational
+    points_to: statement
+    why: A term such as 3 x (1/10) writes three tenths as a whole-number multiple of the unit fraction
+      1/10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: statement
+    why: The digits in the tenths and hundredths places of a decimal numeral must be known as 1/10 and
+      1/100 places.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'necessary: Required (the decimal places to hundredths).'
+    status: proposed
+  - node: decimal.thousandths.notation
+    relation: representational
+    points_to: statement
+    why: The statement and assessment reach the thousandths place, which no earlier decimal notation node
+      in the map covers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'necessary: Genuinely required (the statement and test reach thousandths), but decimal.thousandths.notation
+        does not appear in index.txt or boundary_nodes; the node must be created.'
+    status: proposed
+status: proposed

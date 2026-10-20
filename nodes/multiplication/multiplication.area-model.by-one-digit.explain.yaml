@@ -1,0 +1,71 @@
+id: multiplication.area-model.by-one-digit.explain
+concept: multiplication
+facet: array-area
+level: 2
+type: justification
+name: Explain multi-digit by one-digit multiplication with an area model
+statement: A rectangle with side lengths n and a multi-digit number, with the long side split into its
+  place-value parts, is cut into smaller rectangles whose areas are the partial products; the areas together
+  make the whole area, so the partial products add to the product.
+assess: Draw an area model for 4 x 2,365 and use it to explain why 4 x 2,365 = 8,000 + 1,200 + 240 + 20.
+sources:
+  ccss:
+  - 4.NBT.B.5
+  learning_components:
+  - 095babd2
+  - 30ca2946
+requires:
+- clause: standard
+  all_of:
+  - node: area.rectangle.length-times-width
+    relation: definitional
+    points_to: statement
+    why: The statement treats each piece of the rectangle as having area equal to its side lengths multiplied.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.expanded-form
+    relation: representational
+    points_to: statement
+    why: The statement splits the long side into its place-value parts, which is expanded form drawn as
+      segments.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-multiple-of-ten
+    relation: justificatory
+    points_to: assess
+    why: The test problem needs areas such as 4 x 2000 = 8000 and 4 x 300 = 1200 for the pieces.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs the piece areas 4 x 2000 and 4 x 300; the explanation
+        idea needs only that piece areas add.'
+    status: proposed
+related:
+- node: area.composite-additive
+  relation: common_path
+  note: 'Common path, not required: route ''via-by-one-digit'' needed everything another route needs and
+    more, so it was removed.'
+- node: multiplication.partial-products.by-one-digit
+  relation: common_path
+  note: 'Common path, not required: route ''via-by-one-digit'' needed everything another route needs and
+    more, so it was removed.'
+status: proposed

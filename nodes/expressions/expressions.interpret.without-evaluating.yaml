@@ -1,0 +1,45 @@
+id: expressions.interpret.without-evaluating
+concept: expressions
+facet: numerical
+level: 3
+type: concept
+name: Interpret a numerical expression without evaluating it
+statement: 'The structure of a numerical expression tells how its value relates to its parts: n x (A)
+  is n times as large as A, and (A) + n is n more than A, whatever the value of A.'
+assess: Without calculating, how does 3 x (18,932 + 921) compare with 18,932 + 921?
+sources:
+  ccss:
+  - 5.OA.A.2
+  learning_components:
+  - fe00d7de
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.comparison
+    relation: definitional
+    points_to: statement
+    why: The statement reads n x (A) as n times as large as A, a multiplication equation as a comparison.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.grouping.evaluate
+    relation: representational
+    points_to: statement
+    why: The statement treats a parenthesized sum as one quantity A, which is the meaning of grouping
+      symbols.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

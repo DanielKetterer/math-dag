@@ -47,7 +47,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: factors-multiples.whole-number
+  - node: multiples.common-multiple
     relation: procedural
     points_to: procedure.1
     why: Step 1 finds a common multiple n of the two denominators b and d.
@@ -61,6 +61,10 @@ requires:
       note: 'route-only: The procedure explicitly allows n = b x d, which needs no analysis of factors
         or multiples; the factors-and-multiples concept is only needed to choose a smaller common multiple.
         | other route: Always take the common multiple n = b x d.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired factors-multiples.whole-number: Step 1 needs a common multiple of
+        two denominators, which no candidate covers.'
     status: disputed
 - clause: via-multi-digit
   all_of:
@@ -92,7 +96,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: division.multi-digit
+  - node: division.facts.within-100
     relation: procedural
     points_to: procedure.2
     why: Step 2 computes the multiplier n/b and n/d, which are whole-number quotients of the common multiple
@@ -106,6 +110,10 @@ requires:
         n/d are just d and b, so no division is performed. Multi-digit division is also far heavier than
         needed for small denominators. | other route: Use n = b x d, so the multipliers are d and b with
         no division.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired division.multi-digit: The multipliers n/b and n/d for 5/6 + 3/8 are
+        facts like 24 / 6 = 4 and 24 / 8 = 3.'
     status: disputed
 - clause: critic-route-1
   note: Take n = b x d as the common multiple, so the multipliers are d and b and no division or multiples
@@ -139,7 +147,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: multiplication.multi-digit
+  - node: multiplication.facts.within-100
     relation: definitional
     points_to: statement
     why: 'Alternative route proposed by the critic: Take n = b x d as the common multiple, so the multipliers
@@ -148,5 +156,9 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing route
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired multiplication.multi-digit: Taking n = b x d for 5/6 + 3/8 uses 6
+        x 8 = 48, a one-digit product.'
     status: disputed
 status: proposed

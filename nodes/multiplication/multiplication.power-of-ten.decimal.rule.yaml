@@ -1,0 +1,50 @@
+id: multiplication.power-of-ten.decimal.rule
+concept: multiplication
+facet: base-ten
+level: 3
+type: concept
+name: Multiplying a decimal by 10^k moves the decimal point k places right
+statement: Multiplying a decimal by 10^k gives the number whose decimal point is k places to the right,
+  writing zeros in any empty places between the last digit and the point.
+assess: Without a written algorithm, find 0.035 x 10^2 and 4.6 x 10^3.
+sources:
+  ccss:
+  - 5.NBT.A.2
+  learning_components:
+  - 53dba7fb
+requires:
+- clause: standard
+  all_of:
+  - node: exponent.power-of-ten.notation
+    relation: representational
+    points_to: statement
+    why: The statement is written with 10^k, the exponent notation for a power of ten.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.ten-times-right.decimal
+    relation: definitional
+    points_to: statement
+    why: The statement moves the decimal point, which relies on decimal places also being ten times the
+      place to the right.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: multiplication.power-of-ten.whole-number.rule
+  relation: specializes
+  note: The whole-number rule is the special case of the decimal rule where the point is at the right
+    end; the decimal rule can be learned directly from decimal place value.
+status: proposed

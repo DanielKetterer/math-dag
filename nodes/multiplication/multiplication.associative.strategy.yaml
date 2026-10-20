@@ -1,0 +1,64 @@
+id: multiplication.associative.strategy
+concept: multiplication
+facet: core
+level: 3
+type: procedure
+name: Use the associative property to find a product of three factors
+statement: Find a product of three factors by regrouping them so that an adjacent pair with a known or
+  easy product, such as 10, is multiplied first.
+procedure:
+- Look for two adjacent factors whose product is known or easy.
+- Regroup with parentheses around that pair.
+- Multiply that pair, then multiply the result by the remaining factor.
+assess: Find 7 x 5 x 2 by multiplying 5 x 2 first. Show the regrouping with parentheses.
+sources:
+  ccss:
+  - 3.OA.B.5
+  learning_components:
+  - 3d90c554
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.associative
+    relation: definitional
+    points_to: procedure.2
+    why: Step 2 regroups the factors with parentheses, which is using the associative property.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.factor-of-ten
+    relation: procedural
+    points_to: assess
+    why: Multiplying 7 by 10 after finding 5 x 2 uses the rule for multiplying by a factor of 10.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem (7 x 10 after 5 x 2) uses multiplying by 10; the strategy
+        itself does not.'
+    status: proposed
+  - node: expressions.grouping.evaluate
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 puts parentheses around a pair and step 3 multiplies the parenthesized pair first.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: addition.associative.strategy
+  relation: same_idea_different_form
+  note: Regrouping addends and regrouping factors are parallel strategies for different operations; the
+    parenthesis writing needed here is supplied by expressions.grouping.evaluate (e383).
+status: proposed

@@ -1,0 +1,79 @@
+id: addition.two-digit-plus-one-digit.next-ten
+concept: addition
+facet: operation
+level: 3
+type: procedure
+name: Add a one-digit number by making the next ten
+statement: To add a one-digit number b to a two-digit number a whose ones plus b is more than 10, split
+  b into the amount that brings a up to the next multiple of 10 and the rest, then add the rest to that
+  multiple of 10.
+procedure:
+- Find how much brings a to the next multiple of 10 (for 38, that is 2, reaching 40).
+- Split b into that amount and the rest (5 = 2 + 3).
+- Add the rest to the multiple of 10 (40 + 3 = 43).
+assess: Find 38 + 5 by first making 40. Show how you split the 5.
+sources:
+  ccss:
+  - 1.NBT.C.4
+  learning_components:
+  - 890139d1
+requires:
+- clause: standard
+  all_of:
+  - node: number-composition.make-ten.find
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds how much brings a to the next ten, which is the partner of the ones digit that makes
+      10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number-composition.within-10.decompose
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 splits b into the amount that reaches the next ten and the rest, which is breaking a number
+      into two parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.decade.tens
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 adds the rest to a multiple of 10, such as 40 + 3, using the multiple of 10 as a number
+      of tens.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.two-digit.tens-ones
+    relation: definitional
+    points_to: procedure.3
+    why: The result 43 is read as 4 tens and 3 ones, the two digits of a two-digit number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: place-value.expanded-form
+  relation: generalizes
+  note: Expanded form generalizes reading 40 + 3 as 43; place-value.two-digit.tens-ones and decade.tens
+    already supply that.
+status: proposed

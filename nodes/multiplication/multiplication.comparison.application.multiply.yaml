@@ -1,0 +1,73 @@
+id: multiplication.comparison.application.multiply
+concept: multiplication
+facet: comparison
+level: 2
+type: application
+name: Solve multiplicative comparison word problems by multiplying
+statement: A story says one quantity is a times as many as a known quantity b and asks for the larger
+  quantity; the learner finds a x b, using a drawing or an equation.
+assess: A blue scarf costs $6. A red scarf costs 4 times as much. How much does the red scarf cost?
+sources:
+  ccss:
+  - 4.OA.A.2
+  learning_components:
+  - b8565b5b
+requires:
+- clause: via-statement-to-equation
+  all_of:
+  - node: multiplication.comparison
+    relation: definitional
+    points_to: statement
+    why: The story says one quantity is a times as many as another, the comparison meaning of a product.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.comparison.statement-to-equation
+    relation: representational
+    points_to: statement
+    why: Using an equation to solve means writing the statement as c = a x b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows a drawing or an equation; a drawing route (a bar or groups
+        showing a copies of b) needs no written equation. | other route: Draw a bar or groups model of
+        a copies of b and add or count them.'
+    status: disputed
+- clause: critic-route-1
+  note: 'Drawing route: draw a bar or groups model of a copies of b and add or count, with no written
+    equation.'
+  all_of:
+  - node: multiplication.comparison
+    relation: definitional
+    points_to: statement
+    why: The story says one quantity is a times as many as another, the comparison meaning of a product.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Drawing route: draw a bar or groups model of a copies
+      of b and add or count, with no written equation.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

@@ -1,0 +1,48 @@
+id: patterns.rule.generate-number
+concept: patterns
+facet: rule
+level: 2
+type: procedure
+name: Generate a number pattern from a given rule
+statement: Given a starting number and a rule such as "add 3" or "multiply by 2", produce the terms of
+  the sequence by applying the rule to each term to get the next.
+procedure:
+- Write the starting number as the first term.
+- Apply the rule to the last term written to get the next term.
+- Repeat until the asked-for number of terms is written.
+assess: Start at 4 and use the rule "add 5". Write the first six terms.
+sources:
+  ccss:
+  - 4.OA.C.5
+  learning_components:
+  - f14ddf6b
+requires:
+- clause: standard
+  all_of:
+  - node: addition.within-20.fluency
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 applies a rule such as add 3 to the last term, which uses single-digit sums.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.two-digit-plus-one-digit.next-ten
+    relation: procedural
+    points_to: assess
+    why: Writing 4, 9, 14, 19, 24, 29 requires adding a one-digit number to a two-digit number.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem (add 5 from 4 up to 29) passes into two-digit sums; the
+        rule-application procedure itself does not fix the size of the terms.'
+    status: proposed
+status: proposed

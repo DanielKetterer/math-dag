@@ -1,0 +1,87 @@
+id: decimal.multiplication.by-whole.model
+concept: decimal
+facet: decimal-fraction
+level: 2
+type: procedure
+name: Multiply a decimal by a whole number with a place-value model
+statement: Find n x d, for a whole number n and a decimal d to hundredths, by making n copies of d with
+  blocks or grids, combining like units, and trading 10 hundredths for 1 tenth and 10 tenths for 1 one.
+procedure:
+- Show d as ones, tenths, and hundredths with blocks or grids, n times.
+- Combine the like units.
+- Trade 10 hundredths for 1 tenth and 10 tenths for 1 one where possible.
+- Count the ones, tenths, and hundredths to read the product.
+assess: Use base-ten blocks or hundredths grids to find 4 x 0.36.
+sources:
+  ccss:
+  - 5.NBT.B.7
+  learning_components:
+  - 486045b7
+requires:
+- clause: standard
+  all_of:
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: statement
+    why: The statement works with a decimal d to hundredths shown as ones, tenths and hundredths, such
+      as 0.36.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement makes n copies of d, a product as a number of equal groups.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.addition.model
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 and 3 combine like units and trade 10 hundredths for a tenth and 10 tenths for a one,
+      as in the decimal addition model.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.ten-times-right.decimal
+    relation: definitional
+    points_to: statement
+    why: The trades in the statement rely on 10 hundredths making 1 tenth and 10 tenths making 1 one.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 combines n copies of a unit count, such as 4 groups of 6 hundredths, which is a one-digit
+      product.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

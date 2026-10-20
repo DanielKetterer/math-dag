@@ -1,0 +1,62 @@
+id: division.unknown-dividend-divisor.solve
+concept: division
+facet: unknown-factor
+level: 3
+type: procedure
+name: Find an unknown dividend or divisor in a division equation
+statement: In a division equation c divided by a = b with whole numbers and a nonzero quotient, an unknown
+  dividend is the product a x b, and an unknown divisor is the unknown factor in ? x b = c.
+procedure:
+- Rewrite the division equation c divided by a = b as the multiplication equation a x b = c, keeping the
+  symbol for the unknown.
+- If the dividend c is unknown, multiply a x b.
+- If the divisor a is unknown, find the number that times b gives c.
+- Check by putting the number found into the division equation.
+assess: 'Find the number that makes each equation true: ? divided by 3 = 5, and 48 divided by ? = 6.'
+sources:
+  ccss:
+  - 3.OA.A.4
+  learning_components:
+  - 26cdecbb
+  - 32c5d5d7
+requires:
+- clause: standard
+  all_of:
+  - node: division.unknown-factor.rewrite
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites c divided by a = b as a x b = c, keeping the symbol for the unknown.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.unknown-factor.solve
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 finds an unknown divisor as the unknown factor in ? x b = c.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: procedure.2
+    why: Step 2 multiplies a x b for an unknown dividend, using the product as a number of equal groups.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

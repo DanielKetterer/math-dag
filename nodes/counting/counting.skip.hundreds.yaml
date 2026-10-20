@@ -1,0 +1,42 @@
+id: counting.skip.hundreds
+concept: counting
+facet: sequence
+level: 1
+type: fact
+name: Count by hundreds from 0 to 1000
+statement: 'Say the multiples of one hundred in order from zero: one hundred, two hundred, ..., nine hundred,
+  one thousand.'
+assess: Count aloud by hundreds from 0 to 1,000.
+sources:
+  ccss:
+  - 2.NBT.A.2
+  learning_components:
+  - 3b089bbf
+requires:
+- clause: standard
+  all_of:
+  - node: counting.sequence.to-100
+    relation: definitional
+    points_to: statement
+    why: The words one hundred and the digit words one to nine, combined into two hundred and three hundred,
+      come from the sequence to 100.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.number-word.thousand
+    relation: definitional
+    points_to: statement
+    why: The statement ends at 'one thousand', a word not covered by the count to 100 or by counting within
+      1000.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,134 @@
+id: rounding.whole-number.nearest-ten-hundred
+concept: rounding
+facet: whole-number
+level: 2
+type: procedure
+name: Round a whole number to the nearest 10 or 100
+statement: Rounding to the nearest 10 (or 100) gives the multiple of 10 (or 100) closest to the number;
+  a number exactly halfway is rounded up.
+procedure:
+- Find the two multiples of 10 (or 100) that the number lies between, using place value or a number line.
+- Find the halfway number between them.
+- Choose the nearer multiple; if the number is at or past halfway, choose the greater one.
+assess: Round 347 to the nearest 10 and to the nearest 100. Mark 347 and both multiples you chose on a
+  number line.
+sources:
+  ccss:
+  - 3.NBT.A.1
+  learning_components:
+  - 567ffbd5
+  - b490803e
+  - c9115f50
+requires:
+- clause: via-hundreds-tens-ones
+  all_of:
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: assess
+    why: The assessment marks 347 and the chosen multiples on a number line, with whole numbers as lengths
+      from zero.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement and procedure allow place value or a number line to bracket the
+        number; only the test problem requires marking numbers on a number line.'
+    status: proposed
+  - node: comparing.whole-numbers.magnitude
+    relation: procedural
+    points_to: procedure.3
+    why: Deciding whether the number is at or past the halfway number is a comparison of two whole numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number.halfway-between
+    relation: definitional
+    points_to: statement
+    why: Procedure step 2 finds the halfway number between two multiples of 10 or 100 (345, 350); no node
+      covers halving 10 or 100.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: procedural
+    points_to: procedure.1
+    why: Finding the multiples of 10 and 100 that 347 lies between uses the tens and hundreds digits of
+      the numeral.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Procedure step 1 says to find the bracketing multiples ''using place value or
+        a number line'', so reading the tens and hundreds digits is one of two ways. | other route: Locate
+        347 on a number line and find the neighbouring multiples of 10 and 100 by skip counting by tens
+        and hundreds from a known point.'
+    status: disputed
+- clause: critic-route-1
+  note: Bracket the number on a number line by skip counting by tens and hundreds, then decide the nearer
+    multiple by comparing with the halfway number.
+  all_of:
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: assess
+    why: The assessment marks 347 and the chosen multiples on a number line, with whole numbers as lengths
+      from zero.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement and procedure allow place value or a number line to bracket the
+        number; only the test problem requires marking numbers on a number line.'
+    status: proposed
+  - node: comparing.whole-numbers.magnitude
+    relation: procedural
+    points_to: procedure.3
+    why: Deciding whether the number is at or past the halfway number is a comparison of two whole numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.skip.tens.from-any
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Bracket the number on a number line by skip counting
+      by tens and hundreds, then decide the nearer multiple by comparing with the halfway number.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: counting.skip.hundreds
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Bracket the number on a number line by skip counting
+      by tens and hundreds, then decide the nearer multiple by comparing with the halfway number.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

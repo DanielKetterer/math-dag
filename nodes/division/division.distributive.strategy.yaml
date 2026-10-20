@@ -1,0 +1,58 @@
+id: division.distributive.strategy
+concept: division
+facet: partitive
+level: 3
+type: procedure
+name: Find a quotient by breaking apart the dividend
+statement: Find c divided by a by writing c as a sum of two multiples of a, dividing each part by a, and
+  adding the two quotients; this works because (p + q) divided by a = (p divided by a) + (q divided by
+  a).
+procedure:
+- Write the dividend as a sum of two numbers that are each a multiple of the divisor.
+- Divide each part by the divisor.
+- Add the two quotients; the sum is the quotient of the whole dividend.
+assess: Find 56 divided by 4 by splitting 56 into 40 + 16. Show each step.
+sources:
+  ccss:
+  - 3.OA.B.5
+  learning_components:
+  - f75f123d
+requires:
+- clause: standard
+  all_of:
+  - node: division.unknown-factor.find-quotient
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides each part by the divisor, finding each quotient.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.base-ten.strategy
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds the two quotients, which may be two-digit numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.partitive.meaning
+    relation: definitional
+    points_to: statement
+    why: The quotient of each part is the size of an equal share, and the shares of the parts are added.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

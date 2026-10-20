@@ -1,0 +1,59 @@
+id: subtraction.unknown-addend.rewrite
+concept: subtraction
+facet: unknown-addend
+level: 2
+type: representation
+name: Rewrite a subtraction as an addition with an unknown addend
+statement: The subtraction a - b = ? is rewritten as the addition b + ? = a, with the unknown in the addend
+  position.
+assess: Write an addition equation with a box for the missing number that has the same answer as 15 -
+  7 = ?. Do not solve it.
+sources:
+  ccss:
+  - 1.OA.B.4
+  learning_components:
+  - 4abe18e7
+requires:
+- clause: standard
+  all_of:
+  - node: subtraction.unknown-addend.meaning
+    relation: definitional
+    points_to: statement
+    why: The rewrite of a - b = ? as b + ? = a is justified by a difference being an unknown addend.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.notation.equation
+    relation: representational
+    points_to: assess
+    why: The given problem 15 - 7 = ? is a subtraction equation that must be read as taking 7 from 15.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.notation.equation
+    relation: representational
+    points_to: statement
+    why: The rewritten form b + ? = a is an addition equation with a box in the addend position.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

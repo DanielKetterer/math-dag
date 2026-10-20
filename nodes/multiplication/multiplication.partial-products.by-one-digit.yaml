@@ -1,0 +1,104 @@
+id: multiplication.partial-products.by-one-digit
+concept: multiplication
+facet: base-ten
+level: 3
+type: procedure
+name: Multiply a multi-digit number by a one-digit number with partial products
+statement: Multiply a whole number of up to four digits by a one-digit number by splitting the multi-digit
+  factor into place-value parts, multiplying each part by the one-digit factor, and adding the partial
+  products (the distributive property).
+procedure:
+- Split the multi-digit factor into thousands, hundreds, tens, and ones (3,846 = 3000 + 800 + 40 + 6).
+- Multiply each part by the one-digit factor.
+- Add the partial products.
+assess: Find 7 x 3,846 by splitting 3,846 into thousands, hundreds, tens, and ones, multiplying each part
+  by 7, and adding.
+sources:
+  ccss:
+  - 4.NBT.B.5
+  learning_components:
+  - 57a1b686
+  - 4e8bd7bf
+  - 17023c31
+  - 9a93208c
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.expanded-form
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 splits the multi-digit factor into thousands, hundreds, tens and ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.distributive
+    relation: definitional
+    points_to: statement
+    why: The statement says multiplying each part and adding the partial products is the distributive
+      property.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-multiple-of-ten
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies a part such as 800 or 3000 by the one-digit factor, a one-digit by multiple-of-ten
+      product.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies the ones part by the one-digit factor, using a recalled fact.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.standard-algorithm
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds partial products such as 21000 + 5600 + 280 + 42, which exceed 1000.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.distributive.strategy
+    relation: definitional
+    points_to: statement
+    why: The procedure is the place-value case of finding a product by breaking apart a factor; that skill
+      is the direct level 3 precursor of the concept-only edge e551.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

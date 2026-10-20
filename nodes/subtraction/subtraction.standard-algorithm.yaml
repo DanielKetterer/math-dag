@@ -1,0 +1,71 @@
+id: subtraction.standard-algorithm
+concept: subtraction
+facet: base-ten
+level: 3
+type: procedure
+name: Subtract multi-digit whole numbers with the standard algorithm
+statement: Subtract a whole number from a larger or equal one column by column from the ones, regrouping
+  from the nearest nonzero place to the left whenever a top digit is smaller than the digit below it.
+procedure:
+- Write the minuend above the subtrahend with digits of the same place value aligned on the right.
+- In the current column, starting with the ones, if the top digit is at least the bottom digit, subtract
+  and write the result.
+- Otherwise take 1 from the nearest nonzero top digit to the left, change each 0 passed over to 9, add
+  10 to the current top digit, then subtract.
+- Move one column left and repeat until every column is done.
+assess: Use the standard algorithm to find 60,402 - 18,756.
+sources:
+  ccss:
+  - 4.NBT.B.4
+  - 3.NBT.A.2
+  learning_components:
+  - 7d5e2ea9
+  - 18fca54d
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.ten-times-right
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 aligns digits of the same place value, and multi-digit numbers have places each ten times
+      the place to the right.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-20.fluency
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 and step 3 subtract single digits, including results such as 12 - 8 after regrouping.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.numerals-within-10
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 asks whether the top digit is at least the bottom digit, which is a comparison of two
+      single-digit numerals.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: subtraction.base-ten.decompose-unit
+  relation: common_path
+  note: 'Common path, not required: route ''via-decompose-unit'' needed everything another route needs
+    and more, so it was removed.'
+status: proposed

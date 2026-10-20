@@ -1,0 +1,89 @@
+id: addition.base-ten.explain
+concept: addition
+facet: base-ten
+level: 4
+type: justification
+name: Explain a place-value addition strategy with properties
+statement: Adding by place value gives the correct sum because splitting the addends into place-value
+  parts and regrouping those parts uses only the commutative and associative properties of addition, which
+  never change a sum.
+assess: Explain why 47 + 38 = (40 + 30) + (7 + 8), naming the property of addition used at each step.
+sources:
+  ccss:
+  - 2.NBT.B.9
+  learning_components:
+  - 87aec89a
+requires:
+- clause: standard
+  all_of:
+  - node: addition.base-ten.strategy
+    relation: definitional
+    points_to: statement
+    why: The statement explains why adding by place value gives the correct sum, so the place-value strategy
+      is the thing being justified.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.expanded-form
+    relation: justificatory
+    points_to: assess
+    why: The test problem splits 47 and 38 into 40 + 7 and 30 + 8, which is expanded form.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.commutative
+    relation: justificatory
+    points_to: statement
+    why: The statement names the commutative property as one of the two properties that justify regrouping
+      the parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.associative.strategy
+    relation: justificatory
+    points_to: statement
+    why: The statement names the associative property, here met as choosing which numbers to add first,
+      as the second justifying property.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.grouping.evaluate
+    relation: representational
+    points_to: assess
+    why: The test equation uses parentheses to mark which parts are added first, so the learner must read
+      grouping symbols as do-this-first.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test equation is written with parentheses; the statement''s justification
+        (commutative and associative properties) does not need evaluating grouped expressions.'
+    status: proposed
+status: proposed

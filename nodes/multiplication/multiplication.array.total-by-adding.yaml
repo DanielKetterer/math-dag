@@ -1,0 +1,63 @@
+id: multiplication.array.total-by-adding
+concept: multiplication
+facet: array-area
+level: 2
+type: procedure
+name: Find the total of an array by adding its rows
+statement: The total number of objects in a rectangular array with up to 5 rows and 5 columns is found
+  by adding the number in one row once for each row.
+procedure:
+- Count the objects in one row.
+- Count the rows.
+- Add the row amount once for each row; the sum is the total.
+assess: This array has 4 rows of 5 dots. Find the total by adding the rows, not by counting the dots one
+  by one.
+sources:
+  ccss:
+  - 2.OA.C.4
+  learning_components:
+  - 4de8aad6
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.array.rows-columns
+    relation: definitional
+    points_to: statement
+    why: The statement is about a rectangular array with equal rows, so the learner must know what rows
+      and columns of an array are.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.objects
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 counts the objects in one row and step 2 counts the rows.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-20.fluency
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds the row amount repeatedly, with partial sums in the range of the within-20 sums.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

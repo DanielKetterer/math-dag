@@ -1,0 +1,82 @@
+id: decimal.multiplication.by-decimal.model
+concept: decimal
+facet: decimal-fraction
+level: 2
+type: procedure
+name: Multiply two decimals with an area model
+statement: Find the product of two decimals, with a product to hundredths, as the area of a rectangle
+  with those side lengths on a grid where the unit square is split into 100 hundredths, so a tenth times
+  a tenth is one hundredth.
+procedure:
+- Draw a rectangle whose side lengths are the two factors, using a grid whose unit square is split into
+  10 by 10 small squares.
+- Split each side into ones and tenths and divide the rectangle into the matching parts.
+- 'Find each part''s area: ones x ones in ones, ones x tenths in tenths, tenths x tenths in hundredths.'
+- Add the areas of the parts.
+assess: Use an area model on a hundredths grid to find 1.2 x 0.3.
+sources:
+  ccss:
+  - 5.NBT.B.7
+  learning_components:
+  - 486045b7
+requires:
+- clause: standard
+  all_of:
+  - node: area.rectangle.length-times-width
+    relation: definitional
+    points_to: statement
+    why: The statement defines the product as the area of a rectangle with the two factors as side lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: statement
+    why: The statement uses a grid whose unit square is split into 100 hundredths and a product given
+      to hundredths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.addition.model
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 adds the areas of the parts, which are ones, tenths and hundredths added as decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.tenths.notation
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 splits each side into ones and tenths, such as 1.2 = 1 + 0.2, which uses decimal notation
+      for tenths.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: multiplication.array-area.fraction-sides.tiling
+  relation: common_path
+  note: 'Common path, not required: route ''via-tiling'' needed everything another route needs and more,
+    so it was removed.'
+status: proposed

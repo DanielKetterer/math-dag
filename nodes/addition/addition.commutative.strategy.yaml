@@ -1,0 +1,59 @@
+id: addition.commutative.strategy
+concept: addition
+facet: operation
+level: 3
+type: procedure
+name: Switch the order of addends to make a sum easier
+statement: Replace a + b by b + a when the second form is easier, for example to count on from the larger
+  addend or to use a known fact.
+procedure:
+- Look at a + b and decide whether b + a is easier (larger number first, or a known fact).
+- Rewrite the sum as b + a.
+- Find b + a; it equals a + b.
+assess: Find 2 + 9 by first switching the order of the addends. Tell what you switched it to.
+sources:
+  ccss:
+  - 1.OA.B.3
+  learning_components:
+  - 108ea2f2
+requires:
+- clause: standard
+  all_of:
+  - node: addition.commutative
+    relation: justificatory
+    points_to: procedure.3
+    why: Step 3 claims b + a equals a + b, which is the property that the order of two addends does not
+      change the sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.count-on
+    relation: procedural
+    points_to: assess
+    why: The test problem 2 + 9 is solved after switching by counting on from the larger addend.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.notation.expression
+    relation: definitional
+    points_to: statement
+    why: The statement and procedure rewrite a + b as b + a, so the written sum must be read as a joining.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

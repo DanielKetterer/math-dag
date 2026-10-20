@@ -1,0 +1,81 @@
+id: addition.near-doubles
+concept: addition
+facet: operation
+level: 3
+type: procedure
+name: Add by using a known double
+statement: 'When two addends are close, rewrite the sum as the double of the smaller addend plus the difference
+  between them: a + (a + d) = (a + a) + d.'
+procedure:
+- Identify the smaller addend a and how much larger the other addend is, d.
+- Recall the double a + a.
+- Add d to the double.
+assess: Find 6 + 7 by using 6 + 6. Show the steps.
+sources:
+  ccss:
+  - 1.OA.C.6
+  learning_components:
+  - 690addcb
+requires:
+- clause: standard
+  all_of:
+  - node: addition.doubles.fact
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 recalls the double a + a, which is a recalled doubles fact.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.associative.strategy
+    relation: justificatory
+    points_to: statement
+    why: The rewriting a + (a + d) = (a + a) + d regroups the addends, so the sum may be formed from either
+      pair first.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.count-on
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds the small difference d to the double, which is a short count on from the double.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.notation.expression
+    relation: definitional
+    points_to: statement
+    why: The statement rewrites a + (a + d) as (a + a) + d, read as sums.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: subtraction.within-10.fluency
+    relation: definitional
+    points_to: statement
+    why: Step 1 needs d, how much larger one addend is, which is a small difference; with the unknown-addend
+      edge only a scaffold, some way of finding it is needed.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

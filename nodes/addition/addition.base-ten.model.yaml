@@ -1,0 +1,75 @@
+id: addition.base-ten.model
+concept: addition
+facet: base-ten
+level: 2
+type: procedure
+name: Add within 1000 with base-ten models
+statement: Find a sum within 1000 with base-ten blocks or a drawing by joining like units and trading
+  10 ones for a ten and 10 tens for a hundred where needed.
+procedure:
+- Show each addend with hundreds, tens, and ones (blocks or a drawing).
+- Put the like units together.
+- If there are 10 or more ones, trade 10 ones for 1 ten; then if there are 10 or more tens, trade 10 tens
+  for 1 hundred.
+- Count the hundreds, tens, and ones to read the sum.
+assess: Use base-ten blocks or a drawing to find 278 + 156.
+sources:
+  ccss:
+  - 2.NBT.B.7
+  learning_components:
+  - 03fe171c
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 shows each addend as hundreds, tens and ones with blocks or a drawing.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.base-ten.like-units
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 puts like units together, which is the rule that only like base-ten units are combined.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.base-ten.compose-unit
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 trades 10 ones for a ten and 10 tens for a hundred, the composing move.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-20.fluency
+    relation: procedural
+    points_to: procedure.2
+    why: Totaling the units in a place, such as 8 ones plus 6 ones, is a one-digit sum made while joining
+      like units.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

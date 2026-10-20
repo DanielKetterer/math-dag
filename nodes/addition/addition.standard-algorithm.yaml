@@ -1,0 +1,69 @@
+id: addition.standard-algorithm
+concept: addition
+facet: base-ten
+level: 3
+type: procedure
+name: Add multi-digit whole numbers with the standard algorithm
+statement: Add multi-digit whole numbers by adding column by column from the ones, writing each column's
+  ones digit and carrying its tens digit to the next column left.
+procedure:
+- Write the numbers in columns with digits of the same place value aligned on the right.
+- Add the digits in the ones column.
+- If a column's total is 10 or more, write its ones digit in that column and carry its tens digit to the
+  next column to the left.
+- Move one column left, add its digits and any carried digit, and repeat the previous step.
+- After the leftmost column, write any carried digit as the leading digit of the sum.
+assess: Use the standard algorithm to find 48,679 + 7,856.
+sources:
+  ccss:
+  - 4.NBT.B.4
+  - 3.NBT.A.2
+  learning_components:
+  - bd0c4c17
+  - f7731421
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.ten-times-right
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 aligns digits of the same place value, and multi-digit numbers have places each ten times
+      the place to the right.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-20.fluency
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds the digits of a column, and with a carried digit a column total is at most 19.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.two-digit.tens-ones
+    relation: definitional
+    points_to: statement
+    why: Step 3 splits a column total into a tens digit to carry and a ones digit to write; this reading
+      of a two-digit number is needed on every route.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: addition.base-ten.compose-unit
+  relation: common_path
+  note: 'Common path, not required: route ''via-compose-unit'' needed everything another route needs and
+    more, so it was removed.'
+status: proposed

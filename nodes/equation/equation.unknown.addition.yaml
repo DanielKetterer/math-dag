@@ -1,0 +1,65 @@
+id: equation.unknown.addition
+concept: equation
+facet: relational
+level: 2
+type: procedure
+name: Find the unknown in an addition equation
+statement: In an equation relating three whole numbers by addition (a + b = c, written either way round),
+  the unknown may be either addend or the sum; it is the number that makes the equation true.
+procedure:
+- If the sum is unknown, add the two addends.
+- If an addend is unknown, find the number that added to the known addend makes the sum, by counting up
+  or a known fact.
+- Check that the number makes the two sides equal.
+assess: 'Find the number that makes each equation true: 8 + ? = 11;  ? + 5 = 12;  14 = 6 + ?;  6 + 6 =
+  ?.'
+sources:
+  ccss:
+  - 1.OA.D.8
+  learning_components:
+  - b9ab4f32
+requires:
+- clause: standard
+  all_of:
+  - node: equation.equal-sign.meaning
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 checks that the two sides are equal, and equations such as 14 = 6 + ? put the sum on the
+      left.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.notation.equation
+    relation: representational
+    points_to: statement
+    why: The equations are read as three whole numbers related by addition, with a box for the unknown.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.count-on
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds an unknown addend by counting up from the known addend to the sum, which is counting
+      on.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

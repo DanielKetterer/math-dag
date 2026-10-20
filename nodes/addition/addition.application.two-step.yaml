@@ -1,0 +1,182 @@
+id: addition.application.two-step
+concept: addition
+facet: operation
+level: 2
+type: application
+name: Solve two-step addition and subtraction story problems
+statement: A story requires two addition or subtraction steps, the result of the first step being a quantity
+  used in the second, with the unknown in any position.
+assess: A bus had 23 people. At the first stop 8 got off. At the second stop 15 got on. How many people
+  are on the bus now? Use a drawing or equations.
+sources:
+  ccss:
+  - 2.OA.A.1
+  learning_components:
+  - f298b8b3
+  - 38ae28b9
+  - a12524cd
+requires:
+- clause: standard
+  all_of:
+  - node: addition.application.add-to.change-unknown
+    relation: definitional
+    points_to: statement
+    why: Each step may be an add-to story with the change unknown, which must be solved as a one-step
+      problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.add-to.start-unknown
+    relation: definitional
+    points_to: statement
+    why: Each step may be an add-to story with the start unknown, which must be solved as a one-step problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.application.take-from.change-unknown
+    relation: definitional
+    points_to: statement
+    why: Each step may be a take-from story with the change unknown, which must be solved as a one-step
+      problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.application.take-from.start-unknown
+    relation: definitional
+    points_to: statement
+    why: Each step may be a take-from story with the start unknown, which must be solved as a one-step
+      problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.put-together.addend-unknown
+    relation: definitional
+    points_to: statement
+    why: Each step may be a put-together story with one part unknown, which must be solved as a one-step
+      problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.application.compare.difference-unknown
+    relation: definitional
+    points_to: statement
+    why: Each step may be a compare story with the difference unknown, which must be solved as a one-step
+      problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.application.compare.bigger-unknown
+    relation: definitional
+    points_to: statement
+    why: Each step may be a compare story with the larger amount unknown, which must be solved as a one-step
+      problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.application.compare.smaller-unknown
+    relation: definitional
+    points_to: statement
+    why: Each step may be a compare story with the smaller amount unknown, which must be solved as a one-step
+      problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.base-ten.model
+    relation: procedural
+    points_to: assess
+    why: The first step 23 - 8 is a subtraction of a one-digit number from a two-digit number done with
+      a base-ten model.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test''s first step uses a base-ten model; any subtraction method serves.'
+    status: proposed
+  - node: addition.base-ten.model
+    relation: procedural
+    points_to: assess
+    why: The second step 15 + 15 is a sum of two two-digit numbers done with a base-ten model.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test''s second step uses a base-ten model; the idea of two-step problems
+        does not, and any addition method serves.'
+    status: proposed
+  - node: addition.application.add-to-story
+    relation: definitional
+    points_to: statement
+    why: The statement allows the unknown in any position, including the result, and the test's second
+      step is a result-unknown add-to story.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: subtraction.application.take-from-story
+    relation: definitional
+    points_to: statement
+    why: The test's first step is a result-unknown take-from story; it is otherwise reached only through
+      the change-unknown node.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

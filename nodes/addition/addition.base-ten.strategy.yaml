@@ -1,0 +1,81 @@
+id: addition.base-ten.strategy
+concept: addition
+facet: base-ten
+level: 3
+type: procedure
+name: Add within 1000 by partial sums, without a model
+statement: Add two to four numbers within 1000, without blocks or drawings, by adding the hundreds, the
+  tens, and the ones separately and then combining the partial sums.
+procedure:
+- Split each addend into hundreds, tens, and ones.
+- Add all the hundreds, add all the tens, and add all the ones.
+- Add the partial sums.
+assess: 'Without blocks or drawings, find 367 + 258 by partial sums: add the hundreds, the tens, and the
+  ones, then combine.'
+sources:
+  ccss:
+  - 2.NBT.B.5
+  - 2.NBT.B.6
+  - 3.NBT.A.2
+  learning_components:
+  - 39d56ac9
+  - ff414985
+  - f7731421
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.expanded-form
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 splits each addend into hundreds, tens and ones, which is writing it in expanded form.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.base-ten.like-units
+    relation: definitional
+    points_to: statement
+    why: The statement adds the hundreds, the tens and the ones separately, which relies on adding like
+      units only.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-20.fluency
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds the digits in each place, and the digit sums run up to 18 and must be recalled quickly.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.base-ten.compose-unit
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 combines partial sums such as 500 + 110 + 15, which requires regrouping tens and ones
+      into larger units.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

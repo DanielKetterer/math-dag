@@ -1,0 +1,37 @@
+id: counting.sequence.count-on
+concept: counting
+facet: sequence
+level: 1
+type: procedure
+name: Count forward from a given number within 100
+statement: Begin the count at a given number within 100 and continue forward by ones, without first counting
+  up from one.
+procedure:
+- Say the given number.
+- Say the next number word in the sequence after it.
+- Keep saying each next number word until told to stop.
+assess: Start at 57 and count forward by ones to 64. Do not start from 1.
+sources:
+  ccss:
+  - K.CC.A.2
+  learning_components:
+  - 85bcacad
+  - 0f188ee6
+requires:
+- clause: standard
+  all_of:
+  - node: counting.sequence.to-100
+    relation: definitional
+    points_to: statement
+    why: Counting on from a given number such as 57 uses the known sequence of number words to 100, entered
+      in the middle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

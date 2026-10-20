@@ -1,0 +1,103 @@
+id: multiplication.partial-products.two-digit-by-two-digit
+concept: multiplication
+facet: base-ten
+level: 3
+type: procedure
+name: Multiply two two-digit numbers with partial products
+statement: Multiply two two-digit numbers by splitting both into tens and ones, finding the four products
+  of a part of one factor with a part of the other, and adding them.
+procedure:
+- Split each factor into tens and ones (47 = 40 + 7, 36 = 30 + 6).
+- 'Multiply each part of the first factor by each part of the second: tens x tens, tens x ones, ones x
+  tens, ones x ones.'
+- Add the four partial products.
+assess: Find 47 x 36 by splitting both factors into tens and ones, finding the four partial products,
+  and adding them.
+sources:
+  ccss:
+  - 4.NBT.B.5
+  learning_components:
+  - 1e8857da
+  - bb6ce866
+  - a0cdda07
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.expanded-form
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 splits each factor into tens and ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.distributive
+    relation: definitional
+    points_to: statement
+    why: The statement multiplies each part of one factor by each part of the other and adds, applying
+      the distributive property twice.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.multiple-of-ten.by-multiple-of-ten
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 includes the tens x tens product, such as 40 x 30.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-multiple-of-ten
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 includes ones x tens products such as 6 x 40.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.standard-algorithm
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds four partial products that can total over 1000.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds the ones x ones partial product, such as 7 x 6, by recall.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

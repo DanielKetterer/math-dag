@@ -1,0 +1,55 @@
+id: operations.application.justify-solution
+concept: operations
+facet: whole-number
+level: 2
+type: justification
+name: Justify that a solution answers a word problem
+statement: A proposed solution to a one-step or multi-step whole-number word problem is justified by showing
+  it satisfies every condition of the story, for example by working back with the inverse operation.
+assess: A farmer packs 156 eggs into cartons of 12 and says he needs 13 cartons. Show that 13 is correct
+  by working back from the answer.
+sources:
+  ccss:
+  - 4.OA.A.3
+  learning_components:
+  - '29217307'
+  - f81ccf8a
+requires:
+- clause: standard
+  all_of:
+  - node: operations.application.multistep
+    relation: definitional
+    points_to: statement
+    why: The solution being justified is for a one-step or multi-step word problem whose conditions the
+      learner must understand.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.partial-products.two-digit-by-two-digit
+    relation: procedural
+    points_to: assess
+    why: Showing that 13 cartons of 12 give 156 eggs requires multiplying 13 by 12.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem (13 x 12) needs a two-digit by two-digit product.'
+    status: proposed
+related:
+- node: division.unknown-factor.meaning
+  relation: common_path
+  note: 'Common path, not required: route ''via-meaning'' needed everything another route needs and more,
+    so it was removed.'
+- node: subtraction.unknown-addend.meaning
+  relation: common_path
+  note: 'Common path, not required: route ''via-meaning'' needed everything another route needs and more,
+    so it was removed.'
+status: proposed

@@ -1,0 +1,47 @@
+id: equation.situation.two-step
+concept: equation
+facet: relational
+level: 2
+type: representation
+name: Write equations with a symbol for the unknown for a two-step story
+statement: A two-step addition or subtraction story is represented by equations (one per step, or one
+  with two operations) in which a symbol stands for each unknown quantity.
+assess: Write equations, using boxes for unknowns, for this story. Do not solve them. A bus had 23 people.
+  At the first stop 8 got off. At the second stop 15 got on. How many people are on the bus now?
+sources:
+  ccss:
+  - 2.OA.A.1
+  learning_components:
+  - 85d030b7
+  - d57ecfb9
+requires:
+- clause: standard
+  all_of:
+  - node: equation.situation.one-step
+    relation: representational
+    points_to: statement
+    why: Each step of the story is written as an equation with a symbol for the unknown, as in a one-step
+      story.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.application.two-step
+    relation: definitional
+    points_to: statement
+    why: The equations follow the two steps of the story, the first result being used as a quantity in
+      the second.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Writing the equations does not need the answer, but the structure that the first
+        result feeds the second may be taught only inside the solving node.'
+    status: disputed
+status: proposed

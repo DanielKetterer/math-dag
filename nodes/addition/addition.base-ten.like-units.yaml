@@ -1,0 +1,49 @@
+id: addition.base-ten.like-units
+concept: addition
+facet: base-ten
+level: 2
+type: concept
+name: Add like base-ten units
+statement: Adding two numbers written in base ten means adding hundreds to hundreds, tens to tens, and
+  ones to ones; units of different sizes are never combined directly.
+assess: Lee says 325 + 40 = 725 because 3 + 4 = 7. Is he right? Use hundreds, tens, and ones to say what
+  325 + 40 is.
+sources:
+  ccss:
+  - 2.NBT.B.7
+  - 1.NBT.C.4
+  learning_components:
+  - 0bbb2352
+  - cf6b4ff1
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: definitional
+    points_to: statement
+    why: The statement adds hundreds to hundreds, tens to tens and ones to ones, so the three digits must
+      already be read as hundreds, tens and ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-10.fluency
+    relation: definitional
+    points_to: assess
+    why: In the test problem 325 + 40 the learner must find 2 tens plus 4 tens, a single-digit sum of
+      units.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem (2 tens + 4 tens, 5 ones + 0 ones) needs single-digit sums;
+        the idea of adding like units does not.'
+    status: proposed
+status: proposed

@@ -1,0 +1,91 @@
+id: place-value.two-digit.tens-ones
+concept: place-value
+facet: whole-number
+level: 2
+type: concept
+name: The two digits of a two-digit number are tens and ones
+statement: In a two-digit numeral, the left digit counts tens and the right digit counts ones, so the
+  number is that many tens plus that many ones (47 is 4 tens and 7 ones, 40 + 7).
+assess: How many ones in all does the 4 in 47 stand for?
+sources:
+  ccss:
+  - 1.NBT.B.2
+  learning_components: []
+requires:
+- clause: via-digits
+  all_of:
+  - node: place-value.decade.tens
+    relation: definitional
+    points_to: statement
+    why: The left digit of 47 counts tens as in 40 being four tens, giving the 40 part of 40 + 7.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: numeral.read
+    relation: definitional
+    points_to: statement
+    why: The statement interprets the digits of two-digit numerals such as 47, so the learner must be
+      able to identify the numeral as that number.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: place-value.teen.digits
+    relation: definitional
+    points_to: statement
+    why: The right digit counts further ones, and a teen numeral already showed one ten with the second
+      digit counting ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The special case of one ten is not needed to see that the right digit counts
+        ones in a general two-digit numeral; it can be learned directly with tens and ones blocks. | other
+        route: Interpret 47 directly as 4 tens and 7 ones with base-ten blocks, using decade.tens for
+        the tens digit and ten.unit and counting for the ones, reading the numeral with numeral.read.'
+    status: disputed
+- clause: critic-route-1
+  note: Interpret 47 directly as 4 tens and 7 ones with base-ten blocks, without the teen special case.
+  all_of:
+  - node: place-value.decade.tens
+    relation: definitional
+    points_to: statement
+    why: The left digit of 47 counts tens as in 40 being four tens, giving the 40 part of 40 + 7.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.ten.unit
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Interpret 47 directly as 4 tens and 7 ones with base-ten
+      blocks, without the teen special case.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: numeral.read
+    relation: definitional
+    points_to: statement
+    why: The statement interprets the digits of two-digit numerals such as 47, so the learner must be
+      able to identify the numeral as that number.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

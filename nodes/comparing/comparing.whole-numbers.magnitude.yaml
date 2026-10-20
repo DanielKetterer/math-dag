@@ -1,0 +1,59 @@
+id: comparing.whole-numbers.magnitude
+concept: comparing
+facet: whole-number
+level: 3
+type: procedure
+name: Decide which of two whole numbers is greater by place value
+statement: Of two whole numbers written without leading zeros, the one with more digits is greater; if
+  they have the same number of digits, the greater is the one with the greater digit in the leftmost place
+  where their digits differ.
+procedure:
+- If one numeral has more digits, it names the greater number.
+- Otherwise, compare the digits place by place from the left.
+- At the first place where the digits differ, the number with the greater digit is greater; if no place
+  differs, the numbers are equal.
+assess: Which is greater, 49,812 or 51,099? Which is greater, 706 or 760? Say which digits decide it.
+sources:
+  ccss:
+  - 1.NBT.B.3
+  - 2.NBT.A.4
+  - 4.NBT.A.2
+  learning_components:
+  - b2b4888f
+  - 24cff8cf
+  - 8b7a4579
+  - eca9bcd8
+  - fd3f3ed6
+  - 0f972f57
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: definitional
+    points_to: statement
+    why: Deciding 706 against 760 by the digit in the leftmost place that differs uses the hundreds, tens,
+      and ones meaning of each digit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.numerals-within-10
+    relation: procedural
+    points_to: procedure.3
+    why: At the first differing place, deciding which single digit is greater is comparing two numerals
+      from 1 to 10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,48 @@
+id: numeral.write.periods
+concept: numeral
+facet: core
+level: 3
+type: representation
+name: Write multi-digit numerals up to 1,000,000 from number names
+statement: Write the numeral for a number name up to 1,000,000, writing the thousands part and then exactly
+  three digits for the part after the word thousand, filling empty places with 0 (forty thousand six is
+  40,006).
+procedure:
+- Write the numeral for the number said before the word thousand.
+- Write the numeral for the number said after thousand as exactly three digits, using leading zeros if
+  needed.
+- Join the two parts, separated by a comma.
+assess: Write the numeral for two hundred eight thousand forty.
+sources:
+  ccss:
+  - 4.NBT.A.2
+  learning_components:
+  - 8b6dc1d3
+requires:
+- clause: standard
+  all_of:
+  - node: numeral.write.to-1000
+    relation: procedural
+    points_to: procedure.1
+    why: The number said before thousand and the three-digit part after it are each written as a numeral
+      up to 999.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.number-word.thousand-million
+    relation: definitional
+    points_to: statement
+    why: The learner must recognise the words 'thousand' and 'million' in the number name to split it
+      into periods; no node covers them.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

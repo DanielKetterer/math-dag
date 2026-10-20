@@ -1,0 +1,50 @@
+id: subtraction.within-10.fluency
+concept: subtraction
+facet: operation
+level: 3
+type: fact
+name: Subtract within 10 fluently
+statement: Give any difference a - b with a at most 10 and b at most a quickly and accurately, without
+  counting.
+assess: 'Answer each within about 3 seconds, without counting or computing aloud: 9 - 4, 7 - 7, 10 - 3,
+  6 - 2, 5 - 1.'
+sources:
+  ccss:
+  - K.OA.A.5
+  - 1.OA.C.6
+  learning_components:
+  - c7ac60b3
+  - 7d8ac59e
+requires:
+- clause: standard
+  all_of:
+  - node: subtraction.notation.expression
+    relation: representational
+    points_to: assess
+    why: The test differences are given as expressions such as 9 - 4, which must be read as taking one
+      amount from another.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.take-away.count-remaining
+    relation: definitional
+    points_to: statement
+    why: Each fact to be recalled is the amount left after taking away, which fluent recall replaces counting
+      what is left of.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

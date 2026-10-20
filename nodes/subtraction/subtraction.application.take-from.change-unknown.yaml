@@ -1,0 +1,91 @@
+id: subtraction.application.take-from.change-unknown
+concept: subtraction
+facet: take-away
+level: 2
+type: application
+name: Solve take-from story problems with the change unknown
+statement: A story gives a starting amount and the amount left after some were taken away, and asks how
+  many were taken; the answer is the start minus what is left.
+assess: There were 14 cookies on a plate. Some were eaten. Now there are 6 cookies. How many were eaten?
+  Use objects, a drawing, or an equation.
+sources:
+  ccss:
+  - 1.OA.A.1
+  - 2.OA.A.1
+  learning_components:
+  - 17aaf480
+  - fe904c98
+  - c1129849
+  - ecfbb806
+requires:
+- clause: equation
+  all_of:
+  - node: subtraction.application.take-from-story
+    relation: definitional
+    points_to: statement
+    why: The story is a take-from situation that the learner already solves with objects when the result
+      is unknown.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.unknown.subtraction
+    relation: procedural
+    points_to: statement
+    why: The answer is the start minus what is left, which is the unknown subtrahend in a subtraction
+      equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Solving the unknown-subtrahend equation is needed only on the equation route.'
+    status: disputed
+  - node: equation.situation.one-step
+    relation: representational
+    points_to: statement
+    why: The learner writes 14 - ? = 6 with a symbol in the position of the amount taken.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Writing the equation is needed only on the equation route.'
+    status: disputed
+- clause: via-count-back
+  all_of:
+  - node: subtraction.application.take-from-story
+    relation: definitional
+    points_to: statement
+    why: The story is a take-from situation that the learner already solves with objects when the result
+      is unknown.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.count-back
+    relation: procedural
+    points_to: statement
+    why: The amount taken is found by counting back from the start to the amount left while tracking how
+      many were counted.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Counting back from the start to the amount left is one way to find the amount
+        taken. | other route: Equation route: equation.situation.one-step and equation.unknown.subtraction.'
+    status: disputed
+status: proposed

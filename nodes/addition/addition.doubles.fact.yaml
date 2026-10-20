@@ -1,0 +1,43 @@
+id: addition.doubles.fact
+concept: addition
+facet: operation
+level: 3
+type: fact
+name: Recall the doubles to 9 + 9
+statement: Recall each sum n + n for n from 1 to 9 without counting.
+assess: 'Answer each within about 3 seconds, without counting or computing aloud: 6 + 6, 8 + 8, 7 + 7,
+  9 + 9.'
+sources:
+  ccss:
+  - 1.OA.C.6
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: addition.notation.expression
+    relation: representational
+    points_to: assess
+    why: The test doubles are given as expressions such as 6 + 6, which must be read as joining two equal
+      amounts.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.add-to.count-all
+    relation: definitional
+    points_to: statement
+    why: The recalled double is the total of joining two equal sets and counting all of them.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

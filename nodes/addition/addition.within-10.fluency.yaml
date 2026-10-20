@@ -1,0 +1,50 @@
+id: addition.within-10.fluency
+concept: addition
+facet: operation
+level: 3
+type: fact
+name: Add within 10 fluently
+statement: Give any sum of two whole numbers with a total of 10 or less quickly and accurately, without
+  counting.
+assess: 'Answer each within about 3 seconds, without counting or computing aloud: 4 + 3, 2 + 6, 5 + 5,
+  0 + 7, 3 + 2.'
+sources:
+  ccss:
+  - K.OA.A.5
+  - 1.OA.C.6
+  learning_components:
+  - a00966f2
+  - ed56ad51
+requires:
+- clause: standard
+  all_of:
+  - node: addition.notation.expression
+    relation: representational
+    points_to: assess
+    why: The test sums are given as expressions such as 4 + 3, which must be read as joining two amounts.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement speaks of sums of two whole numbers in words; only the test problem
+        presents them as written expressions.'
+    status: proposed
+  - node: addition.add-to.count-all
+    relation: definitional
+    points_to: statement
+    why: Each fact to be recalled is the total of two joined sets, which fluent recall replaces counting
+      all of.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

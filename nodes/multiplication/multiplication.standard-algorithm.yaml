@@ -1,0 +1,73 @@
+id: multiplication.standard-algorithm
+concept: multiplication
+facet: base-ten
+level: 3
+type: procedure
+name: Multiply multi-digit whole numbers with the standard algorithm
+statement: Multiply multi-digit whole numbers by finding, for each digit of one factor, a shifted row
+  that multiplies the other factor by that digit with carrying, and adding the rows.
+procedure:
+- Write one factor above the other with digits aligned on the right.
+- Take the ones digit of the bottom factor. Multiply it by each digit of the top factor from right to
+  left, adding any carried digit; write the ones digit of each result and carry its tens digit to the
+  next product. Write the final carry at the left of the row.
+- Repeat for each next digit of the bottom factor, starting its row one more place to the left (fill the
+  places on the right with zeros).
+- Add all the rows with the standard addition algorithm.
+assess: Use the standard algorithm to find 3,407 x 286.
+sources:
+  ccss:
+  - 5.NBT.B.5
+  learning_components:
+  - 39c3502c
+  - c944c44a
+  - f71f6845
+  - 39865eff
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies single digits and recalls each product as a fact.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.standard-algorithm
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 adds all the rows with the standard addition algorithm.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.two-digit.tens-ones
+    relation: definitional
+    points_to: statement
+    why: Step 2 splits each product plus carry into a tens digit to carry and a ones digit to write.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: multiplication.partial-products.by-one-digit
+  relation: common_path
+  note: 'Common path, not required: route ''via-by-one-digit'' needed everything another route needs and
+    more, so it was removed.'
+- node: addition.base-ten.compose-unit
+  relation: common_path
+  note: 'Common path, not required: route ''via-compose-unit'' needed everything another route needs and
+    more, so it was removed.'
+status: proposed

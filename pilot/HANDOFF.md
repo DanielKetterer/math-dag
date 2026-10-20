@@ -1,6 +1,51 @@
-# Handoff: state after the fixes-run review (2026-10-19, second session)
+# Handoff: big run phase 1 complete, awaiting Daniel's review (2026-10-20)
 
-Read this first in a new session. Then RULES.md. The reviews themselves are in
+Read this first in a new session. Then RULES.md.
+
+## Phase 1 (K-5 number and operations): done
+
+- 4 strands (pilot/run/p1): N1 counting and place value (42 nodes), N2 K-2
+  addition and subtraction (56 -> 54 after 2 range merges into N4), N3
+  multiplication and division (47), N4 multi-digit, decimals, expressions,
+  patterns (53). 196 new nodes; map now 450 nodes, 1,556 edges, 0 errors.
+- Pipeline: tools/build_phase.py (inputs), writers (Opus, pilot/run/p1/writer.md),
+  tools/prepare_phase.py (id and concept checks, batches, index, packets),
+  2 Sonnet proposers per strand, 1 blinded Sonnet critic per strand, then
+  `sh tools/rebuild.sh` (every merge in order, then retarget, then check),
+  tools/benchmark.py (also rebuilds pathways/), tools/build_explorer.py,
+  tools/review_queue.py.
+- 8 broad ids retired (addition.whole-number, subtraction.whole-number,
+  place-value.base-ten, multiplication.properties, multiplication.multi-digit,
+  division.multi-digit, decimal.operations, factors-multiples.whole-number);
+  pilot/run/p1/retired.json. 67 old edges re-pointed by one Sonnet agent
+  (tools/retarget.py, out.json); 10 symbolic decimal edges moved by Claude to
+  later-phase ids decimal.*.algorithm (6.NS.B.3); 9 fraction edges held at
+  multiples.common-multiple (6.NS.B.4). retarget apply MUST run after every
+  merge_run; rebuild.sh does it.
+- Passes agree on 68% of edges (Jaccard 0.68). Critic: 475 necessary,
+  88 scaffold, 75 route-only, 38 task-only, 2 wrong.
+- Benchmark unchanged (81% direct, 90% chains): the Coherence slice is the
+  pilot slice. Pathway findings: Common Core order 17, IM 52 (new; see queue F).
+- Cost: writers 444,590; proposers 1,053,645; retarget 105,649; critics
+  662,108 (N4 is an ESTIMATE of 160k: the agent wrote a complete file, then
+  hit a session rate limit before reporting usage). Phase 1 total 2,265,992;
+  running total 3,075,943 subagent tokens. Estimate was 2.4M for phase 1 alone
+  (the estimate excluded retarget).
+- Review queue: pilot/run/p1/REVIEW.md, 100 items (A 40 sample, B drops,
+  C 4 questions, D disputed, E benchmark, F structural findings with Claude's
+  proposals). Answers go to pilot/run/p1/overrides.yaml.
+
+Open for the next slice:
+- Range-merge rule (queue F): a range changes the mathematics exactly when it
+  changes the prerequisite set. Splits pending Daniel.
+- Proposers found two missing nodes: decimal.thousandths.notation (5.NBT.A.3)
+  and division.standard-algorithm.long-division (6.NS.B.2).
+- The rate limit stopped 2 critics mid-run: run at most ~6 agents at a time.
+- Phases 2 (K-5 measurement, data, geometry) and 3 (6-8) not started.
+
+# Earlier: state after the fixes-run review (2026-10-19, second session)
+
+The reviews themselves are in
 pilot/run/review-daniel.md (pilot, K-8) and pilot/run/prek/REVIEW_ANSWERS.txt
 (pre-K); both are now encoded in `overrides.yaml` files (see below).
 

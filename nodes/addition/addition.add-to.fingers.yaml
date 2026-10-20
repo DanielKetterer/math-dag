@@ -1,0 +1,61 @@
+id: addition.add-to.fingers
+concept: addition
+facet: add-to
+level: 1
+type: procedure
+name: Add within 10 on fingers
+statement: Show each addend as a set of raised fingers and find the total of all the raised fingers; the
+  total is the sum.
+procedure:
+- Raise fingers for the first number.
+- Raise more fingers for the second number.
+- Find how many fingers are raised in all, by counting or by recognizing the finger pattern.
+assess: Use your fingers to find 4 + 3.
+sources:
+  ccss:
+  - K.OA.A.1
+  learning_components:
+  - 98ade912
+requires:
+- clause: standard
+  all_of:
+  - node: addition.add-to.count-all
+    relation: definitional
+    points_to: statement
+    why: The sum is the total of two joined sets, which is the meaning of joining two sets and counting
+      all, here with fingers as the sets.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.produce-set
+    relation: procedural
+    points_to: procedure.1
+    why: Steps 1 and 2 raise exactly the given number of fingers, which is counting out a set of a given
+      number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.objects
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 finds how many fingers are raised in all by counting the raised fingers one by one.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,151 @@
+id: subtraction.application.compare.difference-unknown
+concept: subtraction
+facet: comparison
+level: 2
+type: application
+name: Solve compare story problems with the difference unknown
+statement: A story gives two amounts and asks how many more one has than the other (or how many fewer);
+  the answer is the larger minus the smaller.
+assess: Lucy has 12 stickers. Julie has 7 stickers. How many more stickers does Lucy have than Julie?
+  Use objects, a drawing, or an equation.
+sources:
+  ccss:
+  - 1.OA.A.1
+  - 2.OA.A.1
+  learning_components:
+  - 951e92fc
+  - cf1426e3
+  - c1129849
+  - ecfbb806
+requires:
+- clause: via-matching
+  all_of:
+  - node: comparing.more-than
+    relation: definitional
+    points_to: statement
+    why: The question how many more means a greater number, not bigger things, so the stickers are compared
+      by number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.count.matching
+    relation: definitional
+    points_to: statement
+    why: The difference is the part of the larger set left unmatched when the two sets are matched one
+      to one.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Matching the two sets one to one and seeing what is left over is one way to find
+        how many more. | other route: Equation route: equation.situation.one-step and equation.unknown.subtraction,
+        with no matching.'
+    status: disputed
+- clause: via-meaning
+  all_of:
+  - node: comparing.more-than
+    relation: definitional
+    points_to: statement
+    why: The question how many more means a greater number, not bigger things, so the stickers are compared
+      by number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.unknown-addend.meaning
+    relation: justificatory
+    points_to: statement
+    why: The larger minus the smaller is the number that added to the smaller makes the larger.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Seeing the difference as the number added to the smaller to make the larger is
+        one framing; the task also allows matching or an equation. | other route: Matching route: comparing.count.matching
+        and counting.objects.'
+    status: disputed
+- clause: equation
+  all_of:
+  - node: comparing.more-than
+    relation: definitional
+    points_to: statement
+    why: The question how many more means a greater number, not bigger things, so the stickers are compared
+      by number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.unknown.subtraction
+    relation: procedural
+    points_to: assess
+    why: Finding the larger minus the smaller is finding the unknown difference in a subtraction equation.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Solving the equation is needed only on the equation route.'
+    status: disputed
+  - node: equation.situation.one-step
+    relation: representational
+    points_to: statement
+    why: The learner writes 12 - 7 = ? or 7 + ? = 12 with a symbol for the difference.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Writing the equation is needed only on the equation route.'
+    status: disputed
+- clause: via-objects
+  all_of:
+  - node: comparing.more-than
+    relation: definitional
+    points_to: statement
+    why: The question how many more means a greater number, not bigger things, so the stickers are compared
+      by number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.objects
+    relation: procedural
+    points_to: statement
+    why: The difference is found by counting the unmatched objects.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Counting the unmatched objects is needed only on the objects route. | other route:
+        Equation route: write 12 - 7 = ? (equation.situation.one-step) and solve it (equation.unknown.subtraction).'
+    status: disputed
+status: proposed

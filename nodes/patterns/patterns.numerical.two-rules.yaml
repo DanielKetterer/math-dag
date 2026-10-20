@@ -1,0 +1,50 @@
+id: patterns.numerical.two-rules
+concept: patterns
+facet: numerical
+level: 3
+type: procedure
+name: Generate two numerical patterns from two rules
+statement: Given two rules and a starting number for each, produce the terms of each pattern by applying
+  its rule repeatedly to the previous term.
+procedure:
+- Write the starting number of the first pattern as its first term.
+- Apply the first rule to the last term written to get the next term; repeat for as many terms as needed.
+- Do the same for the second pattern with its own starting number and rule.
+assess: Pattern A starts at 0 with the rule 'add 3'. Pattern B starts at 0 with the rule 'add 6'. Write
+  the first five terms of each.
+sources:
+  ccss:
+  - 5.OA.B.3
+  learning_components:
+  - 8a9af9bf
+requires:
+- clause: standard
+  all_of:
+  - node: patterns.rule.generate-number
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 and 3 apply a rule repeatedly to the previous term, which is generating a number pattern
+      from a rule.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-20.fluency
+    relation: procedural
+    points_to: assess
+    why: The test problem repeats add 3 and add 6 to reach 12 and 24, which are sums of whole numbers.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs sums such as 12 + 6 and 18 + 6; the generation procedure
+        applies whatever the rule is.'
+    status: proposed
+status: proposed

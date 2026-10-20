@@ -1,0 +1,71 @@
+id: expressions.grouping.evaluate
+concept: expressions
+facet: numerical
+level: 3
+type: procedure
+name: Evaluate expressions with one level of grouping symbols
+statement: In a numerical expression with parentheses, brackets, or braces that are not nested, compute
+  each grouped part first, then finish the rest of the expression.
+procedure:
+- Compute the value inside each pair of grouping symbols.
+- Replace each group by its value.
+- Compute the resulting expression, doing multiplication and division before addition and subtraction.
+assess: Evaluate (12 - 4) x (3 + 2) and 20 - [6 + 9].
+sources:
+  ccss:
+  - 5.OA.A.1
+  learning_components:
+  - 9355ee95
+requires:
+- clause: standard
+  all_of:
+  - node: addition.within-20.fluency
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 computes sums inside grouping symbols such as 3 + 2 and 6 + 9.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-20.fluency
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 computes differences inside grouping symbols such as 12 - 4.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 finishes the expression with a product such as 8 x 5.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.order-of-operations
+    relation: definitional
+    points_to: statement
+    why: Step 3 finishes with multiplication and division before addition and subtraction; no node in
+      the map teaches that convention.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

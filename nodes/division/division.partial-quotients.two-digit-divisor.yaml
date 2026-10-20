@@ -1,0 +1,110 @@
+id: division.partial-quotients.two-digit-divisor
+concept: division
+facet: measurement
+level: 3
+type: procedure
+name: Divide by a two-digit number with partial quotients
+statement: Find the whole-number quotient (and remainder, if any) of a dividend of up to four digits by
+  a two-digit divisor by partial quotients, estimating each multiple of the divisor to subtract and choosing
+  a smaller one when the estimate is more than the amount left.
+procedure:
+- Start with the dividend as the amount left.
+- Estimate a multiple of the divisor not more than the amount left, by rounding the divisor (36 is about
+  40) or using a known product such as 100 x 36 or 10 x 36.
+- Multiply to find that multiple exactly; if it is more than the amount left, choose a smaller one.
+- Subtract it and record the partial quotient.
+- Repeat until the amount left is less than the divisor; add the partial quotients for the quotient, and
+  the amount left is the remainder.
+assess: Find 7,452 divided by 36 by partial quotients, subtracting multiples of 36.
+sources:
+  ccss:
+  - 5.NBT.B.6
+  learning_components:
+  - 05283aa2
+  - e8d8c43a
+requires:
+- clause: via-nearest-ten-hundred
+  all_of:
+  - node: division.partial-quotients.one-digit-divisor.remainder
+    relation: procedural
+    points_to: procedure.1
+    why: The statement carries out the same subtract-multiples and track-remainder procedure with a larger
+      divisor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.power-of-ten.whole-number.rule
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 uses known products such as 100 x 36 and 10 x 36, which append zeros.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.partial-products.by-one-digit
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 multiplies the two-digit divisor by a one-digit number exactly to find the multiple to
+      subtract.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 compares the multiple with the amount left to decide whether a smaller one is needed.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.standard-algorithm
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 subtracts the multiple from the amount left in up to four digits.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rounding.whole-number.nearest-ten-hundred
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 estimates a multiple by rounding the divisor, such as 36 to about 40.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Step 2 offers two ways to pick a multiple: round the divisor, or use known products
+        such as 10 x 36 and 100 x 36. | other route: Choose each multiple from known products (10 x 36,
+        100 x 36, 2 x 36 and so on) and compare with the amount left, with no rounding.'
+    status: disputed
+status: proposed

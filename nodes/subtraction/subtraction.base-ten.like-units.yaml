@@ -1,0 +1,46 @@
+id: subtraction.base-ten.like-units
+concept: subtraction
+facet: base-ten
+level: 2
+type: concept
+name: Subtract like base-ten units
+statement: Subtracting numbers written in base ten means subtracting hundreds from hundreds, tens from
+  tens, and ones from ones; units of different sizes are never subtracted from each other directly.
+assess: Kai says 586 - 30 = 286 because 5 - 3 = 2. Is he right? Use hundreds, tens, and ones to say what
+  586 - 30 is.
+sources:
+  ccss:
+  - 2.NBT.B.7
+  learning_components:
+  - 0bbb2352
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: definitional
+    points_to: statement
+    why: The statement subtracts hundreds from hundreds, tens from tens and ones from ones, so each digit
+      must be read by its place.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-10.fluency
+    relation: definitional
+    points_to: assess
+    why: In the test problem 586 - 30 the learner must find 8 tens minus 3 tens, a single-digit difference
+      of units.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem (8 tens - 3 tens, 6 ones - 0 ones) needs single-digit differences.'
+    status: proposed
+status: proposed

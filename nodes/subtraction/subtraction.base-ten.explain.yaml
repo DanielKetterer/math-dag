@@ -1,0 +1,72 @@
+id: subtraction.base-ten.explain
+concept: subtraction
+facet: base-ten
+level: 4
+type: justification
+name: Explain a place-value subtraction strategy with properties
+statement: 'Taking away a number in place-value parts gives the correct difference because taking away
+  b + c is the same as taking away b and then c: a - (b + c) = (a - b) - c.'
+assess: Explain why 724 - 358 = ((724 - 300) - 50) - 8.
+sources:
+  ccss:
+  - 2.NBT.B.9
+  learning_components:
+  - 37366bc7
+requires:
+- clause: via-count-remaining
+  all_of:
+  - node: subtraction.base-ten.strategy
+    relation: definitional
+    points_to: statement
+    why: The statement explains why taking away place-value parts gives the correct difference, so that
+      strategy is what is justified.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.expanded-form
+    relation: justificatory
+    points_to: assess
+    why: The test problem splits 358 into 300 + 50 + 8, which is expanded form.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.grouping.evaluate
+    relation: representational
+    points_to: statement
+    why: The identity a - (b + c) = (a - b) - c and the test expression use parentheses, which must be
+      read as do-this-first.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.take-away.count-remaining
+    relation: justificatory
+    points_to: statement
+    why: The identity a - (b + c) = (a - b) - c is justified by taking away b and then taking away c from
+      what is left.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Taking away b then c from what is left is one way to justify a - (b + c) = (a
+        - b) - c. | other route: Justify the identity through the unknown-addend meaning: (b + c) + x
+        = a means b + (c + x) = a, so x = (a - b) - c; or with jumps back on a number line.'
+    status: disputed
+status: proposed

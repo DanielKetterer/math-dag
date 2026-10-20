@@ -1,0 +1,61 @@
+id: parity.even-odd.skip-count
+concept: parity
+facet: pairing
+level: 1
+type: procedure
+name: Decide even or odd by counting a collection by 2s
+statement: Count a collection of up to 20 objects by moving them two at a time while saying 2, 4, 6, ...;
+  the number is even if the count ends with no object left, and odd if one object is left.
+procedure:
+- Move two objects aside and say 2.
+- Keep moving two objects at a time, saying the next number in the count by 2s.
+- If no object is left, the number is even; if one object is left, it is odd.
+assess: Count these 14 counters by 2s, moving two at a time. Is 14 even or odd?
+sources:
+  ccss:
+  - 2.OA.C.3
+  learning_components:
+  - 4d79797d
+requires:
+- clause: standard
+  all_of:
+  - node: parity.even-odd.pairing
+    relation: definitional
+    points_to: statement
+    why: The rule that the number is even when no object is left and odd when one is left is the pairing
+      meaning of even and odd.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.skip.twos
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 says the next number in the count by 2s each time two objects are moved, which needs counting
+      by twos.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.unitize
+    relation: procedural
+    points_to: procedure.1
+    why: Moving two objects aside and saying one number treats each pair as a single counted unit.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,85 @@
+id: place-value.hundred.unit
+concept: place-value
+facet: whole-number
+level: 2
+type: concept
+name: A hundred is a bundle of ten tens
+statement: Ten tens grouped together form one unit called a hundred, equal to one hundred ones.
+assess: How many ten-rods are needed to make one hundred-flat?
+sources:
+  ccss:
+  - 2.NBT.A.1.a
+  learning_components:
+  - e24232f5
+requires:
+- clause: via-decades
+  all_of:
+  - node: place-value.ten.unit
+    relation: definitional
+    points_to: statement
+    why: A hundred is built from ten of the units called tens, so the idea of a ten as one unit is used
+      directly.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.skip.tens.decades
+    relation: justificatory
+    points_to: statement
+    why: Counting by tens, ten, twenty, up to one hundred, reaches 100 on the tenth count, showing ten
+      tens make one hundred.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Skip counting to 100 is one way to see that ten tens is one hundred ones; the
+        equivalence can also be shown by stacking ten rods against a flat and counting the ones. | other
+        route: Put ten ten-rods together, count all the ones to 100 (counting.sequence.to-100), and name
+        the result a hundred.'
+    status: disputed
+- clause: critic-route-1
+  note: Stack ten ten-rods against a hundred-flat and count all the ones to 100.
+  all_of:
+  - node: place-value.ten.unit
+    relation: definitional
+    points_to: statement
+    why: A hundred is built from ten of the units called tens, so the idea of a ten as one unit is used
+      directly.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.objects
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Stack ten ten-rods against a hundred-flat and count
+      all the ones to 100.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: counting.sequence.to-100
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Stack ten ten-rods against a hundred-flat and count
+      all the ones to 100.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

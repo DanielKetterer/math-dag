@@ -1,0 +1,86 @@
+id: subtraction.within-20.fluency
+concept: subtraction
+facet: operation
+level: 3
+type: fact
+name: Subtract within 20 fluently
+statement: Give any difference a - b in which b and a - b are both one-digit numbers (so a is at most
+  18), including those that cross 10, quickly and accurately without counting.
+assess: 'Answer each within about 3 seconds, without counting or computing aloud: 14 - 6, 11 - 8, 17 -
+  9, 12 - 5, 15 - 7.'
+sources:
+  ccss:
+  - 2.OA.B.2
+  learning_components:
+  - 7ded9ec8
+requires:
+- clause: via-decompose-to-ten
+  all_of:
+  - node: subtraction.within-10.fluency
+    relation: definitional
+    points_to: statement
+    why: The differences to be recalled include all differences within 10 and crossing-10 differences
+      are derived from them.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.decompose-to-ten
+    relation: procedural
+    points_to: statement
+    why: The differences that cross 10 are first found by subtracting down to 10 and then recalled without
+      counting.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Subtracting down to 10 is one way differences across 10 are found before recall.
+        | other route: Thinking-addition route: addition.within-20.fluency with subtraction.unknown-addend.strategy.'
+    status: disputed
+- clause: related-addition
+  all_of:
+  - node: subtraction.within-10.fluency
+    relation: definitional
+    points_to: statement
+    why: The differences to be recalled include all differences within 10 and crossing-10 differences
+      are derived from them.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.unknown-addend.strategy
+    relation: procedural
+    points_to: statement
+    why: A difference such as 14 - 6 is reached by thinking of the addition 6 + ? = 14.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Thinking 6 + ? = 14 is one way differences are found before recall.'
+    status: disputed
+  - node: addition.within-20.fluency
+    relation: definitional
+    points_to: statement
+    why: The thinking-addition route uses known sums of one-digit numbers, including those over 10.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The thinking-addition route needs known sums of one-digit numbers over 10.'
+    status: disputed
+status: proposed

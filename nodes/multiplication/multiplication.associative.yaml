@@ -1,0 +1,59 @@
+id: multiplication.associative
+concept: multiplication
+facet: core
+level: 3
+type: concept
+name: The associative property of multiplication
+statement: 'For any numbers a, b and c, (a x b) x c = a x (b x c): when three numbers are multiplied,
+  the product does not depend on which adjacent pair is multiplied first.'
+assess: Without computing either side, is (6 x 5) x 2 = 6 x (5 x 2) true? Which property tells you?
+sources:
+  ccss:
+  - 3.OA.B.5
+  learning_components:
+  - 3d90c554
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement is about a product of three numbers, each product being a number of equal groups.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.equal-sign.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement is an equation (a x b) x c = a x (b x c) read as two sides with the same value.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.grouping.evaluate
+    relation: representational
+    points_to: statement
+    why: The statement is written with parentheses showing which adjacent pair is multiplied first.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: addition.associative.strategy
+  relation: same_idea_different_form
+  note: Associativity of addition and of multiplication are parallel properties of different operations;
+    neither is needed to learn the other. The parenthesis notation is covered by expressions.grouping.evaluate
+    (e380).
+status: proposed

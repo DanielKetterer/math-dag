@@ -1,0 +1,75 @@
+id: multiplication.array.rows-columns
+concept: multiplication
+facet: array-area
+level: 1
+type: concept
+name: An array as rows of equal columns
+statement: A rectangular array is an arrangement of objects in rows and columns in which every row has
+  the same number of objects and every column has the same number of objects.
+assess: Here are three arrangements of dots. Which one is an array? For the array, how many rows are there
+  and how many dots are in each row?
+sources:
+  ccss:
+  - 2.OA.C.4
+  learning_components: []
+requires:
+- clause: via-matching
+  all_of:
+  - node: counting.objects
+    relation: procedural
+    points_to: assess
+    why: Telling how many rows and how many dots are in each row of the array requires counting the collection.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is about structure (equal rows and columns); only the test question
+        how many rows and how many dots in each row needs counting.'
+    status: proposed
+  - node: comparing.count.matching
+    relation: definitional
+    points_to: statement
+    why: Every row having the same number of objects is checked by lining rows up one-to-one with each
+      other.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Checking that every row has the same number can be done by lining rows up one-to-one,
+        or by counting each row and comparing the counts. | other route: Count the objects in each row
+        and compare the counts (comparing.count.by-counting with counting.objects).'
+    status: disputed
+- clause: critic-route-1
+  note: Check equal rows by counting each row and comparing the counts instead of matching rows one-to-one.
+  all_of:
+  - node: counting.objects
+    relation: procedural
+    points_to: assess
+    why: Telling how many rows and how many dots are in each row of the array requires counting the collection.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is about structure (equal rows and columns); only the test question
+        how many rows and how many dots in each row needs counting.'
+    status: proposed
+  - node: comparing.count.by-counting
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Check equal rows by counting each row and comparing
+      the counts instead of matching rows one-to-one.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

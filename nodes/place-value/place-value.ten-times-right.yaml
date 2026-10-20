@@ -1,0 +1,69 @@
+id: place-value.ten-times-right
+concept: place-value
+facet: whole-number
+level: 3
+type: concept
+name: Each whole-number place is ten times the place to its right
+statement: In a multi-digit whole number, a digit in one place represents ten times what the same digit
+  represents in the place to its right.
+assess: In 5,550, the 5 in the hundreds place is how many times the value of the 5 in the tens place?
+sources:
+  ccss:
+  - 4.NBT.A.1
+  learning_components:
+  - 10c7a285
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.ten.unit
+    relation: definitional
+    points_to: statement
+    why: A digit in the tens place is worth ten times the same digit in the ones place because a ten is
+      ten ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.hundred.unit
+    relation: definitional
+    points_to: statement
+    why: A digit in the hundreds place is worth ten times the same digit in the tens place because a hundred
+      is ten tens.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: representational
+    points_to: statement
+    why: The relation between neighbouring places is stated for the place structure of digits in a numeral,
+      as in 5,550.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.comparison
+    relation: definitional
+    points_to: statement
+    why: The phrase ten times what the same digit represents is a multiplicative comparison of two values.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

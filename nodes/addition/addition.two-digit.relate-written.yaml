@@ -1,0 +1,73 @@
+id: addition.two-digit.relate-written
+concept: addition
+facet: operation
+level: 2
+type: representation
+name: Match an addition done with a model to a written record
+statement: Each step of an addition done with base-ten blocks or a drawing corresponds to a step of a
+  written record, such as adding the tens in an equation.
+assess: 'Ben found 46 + 30 with blocks: he put 3 more ten-rods with his 4 ten-rods and kept the 6 ones.
+  Which written line matches what he did?  (a) 40 + 30 + 6 = 76  (b) 46 + 3 = 49  (c) 4 + 3 + 6 = 13'
+sources:
+  ccss:
+  - 1.NBT.C.4
+  learning_components:
+  - 3b761770
+requires:
+- clause: standard
+  all_of:
+  - node: addition.two-digit-plus-tens.model
+    relation: definitional
+    points_to: statement
+    why: The steps matched are the steps of an addition done with base-ten blocks, such as adding the
+      tens to the tens.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.notation.equation
+    relation: representational
+    points_to: statement
+    why: The written record is an addition equation such as 40 + 30 + 6 = 76 that must be read as joining
+      amounts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.two-digit.tens-ones
+    relation: representational
+    points_to: assess
+    why: The line 40 + 30 + 6 writes 46 as 40 + 6, which is reading the two digits as tens and ones.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.decade.tens
+    relation: definitional
+    points_to: statement
+    why: The match 3 ten-rods with + 30 requires reading 30 as 3 tens.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: addition.two-digit-plus-tens.split-tens
+  relation: same_idea_different_form
+  note: The written equation is the symbolic form of the tens-to-tens model step; the level 3 procedure
+    of doing the split is not needed to read the matching line.
+status: proposed

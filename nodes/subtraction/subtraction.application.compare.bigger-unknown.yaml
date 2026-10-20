@@ -1,0 +1,143 @@
+id: subtraction.application.compare.bigger-unknown
+concept: subtraction
+facet: comparison
+level: 2
+type: application
+name: Solve compare story problems with the larger amount unknown
+statement: A story gives the smaller amount and how many more (or fewer) the other has, and asks for the
+  larger amount; the answer is the smaller plus the difference.
+assess: Julie has 7 stickers. Lucy has 5 more stickers than Julie. How many stickers does Lucy have? Use
+  objects, a drawing, or an equation.
+sources:
+  ccss:
+  - 1.OA.A.1
+  - 2.OA.A.1
+  learning_components:
+  - cf1426e3
+  - 951e92fc
+  - c1129849
+  - ecfbb806
+requires:
+- clause: via-matching
+  all_of:
+  - node: comparing.more-than
+    relation: definitional
+    points_to: statement
+    why: The phrase 5 more means a greater number by 5, not bigger things, so the larger amount is a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.count.matching
+    relation: definitional
+    points_to: statement
+    why: The larger set is the matched set of the smaller amount together with the extra items that remain.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Matching the smaller set against the larger is one way to picture the larger
+        amount, not needed on every route. | other route: Objects route without matching: make the smaller
+        set, make 5 more, count all; or the equation route.'
+    status: disputed
+- clause: equation
+  all_of:
+  - node: comparing.more-than
+    relation: definitional
+    points_to: statement
+    why: The phrase 5 more means a greater number by 5, not bigger things, so the larger amount is a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.unknown.addition
+    relation: procedural
+    points_to: statement
+    why: The answer is the smaller plus the difference, which is finding the unknown sum in an addition
+      equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Solving the equation is needed only on the equation route.'
+    status: disputed
+  - node: equation.situation.one-step
+    relation: representational
+    points_to: statement
+    why: The learner writes 7 + 5 = ? with a symbol for the larger amount.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Writing the equation is needed only on the equation route.'
+    status: disputed
+- clause: via-produce-set
+  all_of:
+  - node: comparing.more-than
+    relation: definitional
+    points_to: statement
+    why: The phrase 5 more means a greater number by 5, not bigger things, so the larger amount is a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.produce-set
+    relation: procedural
+    points_to: statement
+    why: With objects, make a set for the smaller amount and then a set of 5 more.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Making sets with objects is needed only on the objects route. | other route:
+        Equation route: equation.situation.one-step and equation.unknown.addition.'
+    status: disputed
+- clause: via-count-all
+  all_of:
+  - node: comparing.more-than
+    relation: definitional
+    points_to: statement
+    why: The phrase 5 more means a greater number by 5, not bigger things, so the larger amount is a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.add-to.count-all
+    relation: procedural
+    points_to: statement
+    why: The larger amount is found by joining the smaller amount and the difference and counting all.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Joining the smaller amount and the difference and counting all is the objects
+        route. | other route: Equation route: equation.situation.one-step and equation.unknown.addition.'
+    status: disputed
+status: proposed

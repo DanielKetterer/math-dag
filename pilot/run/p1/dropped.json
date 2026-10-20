@@ -1,0 +1,1068 @@
+[
+ {
+  "node": "counting.skip.tens.from-any",
+  "target": "counting.sequence.count-on",
+  "verdict": "scaffold",
+  "reason": "Counting forward by tens from 24 steps through the tens, not through ones; count-on by ones within 100 is a different sequence skill. Starting mid-sequence is only a shared surface feature. What is needed is the decade order (e11) and the words past 100 (e10).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The count starts at a given number such as 24 instead of at zero."
+ },
+ {
+  "node": "counting.skip.tens.backward",
+  "target": "counting.sequence.backward.across-decades",
+  "verdict": "scaffold",
+  "reason": "Counting back by tens does not pass through the by-ones predecessor of each number; the step is 'same ones, one less ten'. Backward-by-ones across decades is a different skill. What the target needs is the number names past 100 (117, 107), which this edge does not supply.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Counting back from 117 to 107 to 97 crosses the hundred change, needing the names of numbers just before each hundred and decade."
+ },
+ {
+  "node": "numeral.read.to-1000",
+  "target": "place-value.three-digit.hundreds-tens-ones",
+  "verdict": "wrong",
+  "reason": "Circular: place-value.three-digit.hundreds-tens-ones depends on place-value.hundreds.multiples, which depends on numeral.read.to-1000 (e56). Reading a numeral aloud is a positional naming rule that comes before the place-value meaning, not after it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step one says the first digit followed by hundred, which treats that digit as counting hundreds in a three-digit numeral."
+ },
+ {
+  "node": "numeral.read.to-1000",
+  "target": "place-value.two-digit.tens-ones",
+  "verdict": "scaffold",
+  "reason": "Step 2 names the two-digit number as a number name (known from the count sequence and numeral.read); it does not require interpreting the digits as tens and ones. Place-value meaning explains the naming rule but reading can be done without it.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step two names the number formed by the last two digits as tens and ones, with nothing said for a zero tens digit."
+ },
+ {
+  "node": "numeral.record-collection",
+  "target": "place-value.two-digit.tens-ones",
+  "verdict": "indirect",
+  "reason": "Writing 73 for a counted collection is done with the positional writing skill, which already rests on the tens-and-ones structure through numeral.write.to-1000 (and three-digit place value). The target does not itself ask for the tens/ones interpretation.",
+  "via": "numeral.write.to-1000",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Writing 73 for seventy-three requires knowing the left digit counts tens and the right digit counts ones."
+ },
+ {
+  "node": "place-value.teen.compose",
+  "target": "place-value.teen.ten-and-ones",
+  "verdict": "scaffold",
+  "reason": "The task itself states the structure to build (a full ten and some ones), so the concept is not needed to carry out the procedure. Doing compose is how the concept is usually built, so the dependency runs at best the other way.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The target is a group of ten ones plus some further ones, which is what each teen number is made of."
+ },
+ {
+  "node": "place-value.teen.decompose",
+  "target": "place-value.teen.ten-and-ones",
+  "verdict": "scaffold",
+  "reason": "Splitting 17 counters into a ten and the rest, and reporting how many remain, can be done without already holding the concept that a teen is ten and some ones; the procedure builds that concept. Saying 'ten and seven' restates the outcome.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The result is said as ten and that many ones, which is the make-up of a teen number as ten ones and some more ones."
+ },
+ {
+  "node": "place-value.ten.unit",
+  "target": "place-value.teen.ten-and-ones",
+  "verdict": "scaffold",
+  "reason": "A ten as a bundle of ten ones comes from counting ten ones and treating them as one unit (counting.objects, counting.unitize). The teen concept reuses a group of ten but is not needed to form the unit; in the usual sequence it motivates it.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The bundle of ten ones is the same group of ten that makes up each teen number together with some more ones."
+ },
+ {
+  "node": "place-value.two-digit.tens-ones",
+  "target": "addition.notation.expression",
+  "verdict": "scaffold",
+  "reason": "The concept is that the left digit counts tens and the right digit counts ones; the written sum 40 + 7 is an illustration, and the idea holds in words ('4 tens and 7 ones') without addition notation.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The number is written as the sum of tens and ones, as in 47 = 40 + 7."
+ },
+ {
+  "node": "place-value.ten-times-right",
+  "target": "numeral.read.periods",
+  "verdict": "scaffold",
+  "reason": "The ten-times relation between neighbouring places does not require reading the number aloud or knowing period names; only the place structure of the digits is used. The comma grouping in 5,550 is notation, not a reading skill.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The statement covers multi-digit numbers like 5,550 with thousands and beyond, whose place names and comma grouping come from period reading."
+ },
+ {
+  "node": "place-value.ten-times-right.decimal",
+  "target": "fraction.tenths-to-hundredths",
+  "verdict": "indirect",
+  "reason": "That one tenth equals ten hundredths is already built into hundredths notation (0.1 = 0.10), which this node requires directly. The rewrite procedure is not itself used by the target.",
+  "via": "decimal.hundredths.notation",
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "One tenth equals ten hundredths, shown by rewriting tenths as hundredths, which is why the tenths digit is ten times the hundredths digit."
+ },
+ {
+  "node": "place-value.factor-of-ten",
+  "target": "division.unknown-factor.find-quotient",
+  "verdict": "scaffold",
+  "reason": "The procedure only checks whether the dividend is the divisor with a zero appended; it does not carry out a search for an unknown factor. The meaning of division as an unknown factor (e73) is what the statement 'hence b divided by a = 10' uses.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The quotient of 700 divided by 70 is found by asking what times 70 makes 700."
+ },
+ {
+  "node": "place-value.expanded-form.decimal",
+  "target": "place-value.ten-times-right.decimal",
+  "verdict": "scaffold",
+  "reason": "The multipliers 1/10, 1/100, 1/1000 are supplied by the tenths, hundredths and thousandths notation nodes; the ten-times relation between places is not used to expand a decimal.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Each decimal digit is multiplied by the value of its place, which is found from each place being one tenth of the place to its left."
+ },
+ {
+  "node": "place-value.expanded-form.decimal",
+  "target": "place-value.tenth-of-left",
+  "verdict": "scaffold",
+  "reason": "The place values 1/10, 1/100, 1/1000 are given by the decimal notation nodes; the one-tenth-of-the-left relation is not applied in the expansion or the reverse conversion.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The place values 1/10, 1/100, and 1/1000 are each one tenth of the place to the left."
+ },
+ {
+  "node": "comparing.whole-numbers.magnitude",
+  "target": "place-value.ten-times-right",
+  "verdict": "scaffold",
+  "reason": "The rule 'more digits means greater' is a level 3 procedure and can be applied without knowing why; the ten-times relation only justifies it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "A numeral with more digits is greater because each higher place is worth ten times the place to its right, as with 51,099 versus 9,812."
+ },
+ {
+  "node": "rounding.whole-number.nearest-ten-hundred",
+  "target": "subtraction.comparison.number-line",
+  "verdict": "scaffold",
+  "reason": "The procedure decides by comparing the number with the halfway number, not by computing or comparing distances. Difference as distance explains why this works but is not used.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Closest means the smaller distance on the number line, which is a whole-number difference shown as a distance."
+ },
+ {
+  "node": "addition.add-to.describe",
+  "target": "addition.add-to.count-all",
+  "verdict": "scaffold",
+  "reason": "Naming how many there are now only needs counting the final collection (counting.objects); the describe task does not require seeing the total as join-and-count-all.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Naming how many there are now requires joining the two groups and counting all of them to find the total."
+ },
+ {
+  "node": "subtraction.take-away.describe",
+  "target": "subtraction.take-away.count-remaining",
+  "verdict": "scaffold",
+  "reason": "Naming how many are left only needs counting the remaining birds that are in view; the take-away-and-count procedure is the action being described, not a skill the description requires.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Naming how many are left requires taking the flown-away birds out of the set and counting what remains."
+ },
+ {
+  "node": "number-composition.within-10.decompose",
+  "target": "number-composition.part-whole.inexact",
+  "verdict": "scaffold",
+  "reason": "The procedure and test (separate 7 cubes into two groups, draw them) can be carried out physically without the idea that each part is less than the whole; that idea is something the activity builds.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Each split names two parts of a set, and each part is smaller than the whole set that was separated."
+ },
+ {
+  "node": "number-composition.make-ten.find",
+  "target": "counting.sequence.count-on",
+  "verdict": "scaffold",
+  "reason": "Step 2 can be done by looking at the empty spaces and counting them (counting.objects, already required); counting on from n is another way of getting the same partner, not a separate requirement.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 2 adds objects one at a time from n up to 10, which is counting forward from the given number."
+ },
+ {
+  "node": "addition.commutative",
+  "target": "counting.cardinal.order-irrelevance",
+  "verdict": "scaffold",
+  "reason": "Why order does not matter is a justification, a level 4 matter; the level 3 statement and test (say true or false and name the rule) can be met from facts and examples without it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The reason the order of the addends does not matter is that a count of the joined collection does not depend on the order of counting."
+ },
+ {
+  "node": "addition.associative.strategy",
+  "target": "counting.cardinal.order-irrelevance",
+  "verdict": "scaffold",
+  "reason": "Why the grouping does not change the total is a justification; the level 3 procedure of choosing a pair first does not require it.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The total of three collections is the same whichever two are counted together first, since a count does not depend on order."
+ },
+ {
+  "node": "subtraction.unknown-addend.strategy",
+  "target": "subtraction.unknown-addend.meaning",
+  "verdict": "indirect",
+  "reason": "Step 1 is the rewrite, and the equivalence (a - b = c exactly when b + c = a) enters the procedure only through that rewrite; a level 3 procedure does not need the why.",
+  "via": "subtraction.unknown-addend.rewrite",
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The difference is the missing addend because a - b = c exactly when b + c = a."
+ },
+ {
+  "node": "addition.make-ten",
+  "target": "number-composition.within-10.equation",
+  "verdict": "scaffold",
+  "reason": "The split of b can be shown with a drawing or ten frame at level 2; recording it as an equation is one way to show it, not required.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step two splits b into two parts, 10 - a and the rest, and records b as their sum."
+ },
+ {
+  "node": "addition.doubles.fact",
+  "target": "addition.count-on",
+  "verdict": "scaffold",
+  "reason": "Count-on is one way the doubles are first found; counting all (already required) gets the same sums, so count-on is a teaching sequence, not a requirement.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Each double is a sum that is first found by counting on and then recalled without counting."
+ },
+ {
+  "node": "addition.near-doubles",
+  "target": "subtraction.unknown-addend.meaning",
+  "verdict": "scaffold",
+  "reason": "Finding d needs some way to get the difference of two close numbers (counting up, subtraction); the unknown-addend meaning is one framing but not required.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Finding how much larger the other addend is, d, is finding the number that added to the smaller addend gives the larger."
+ },
+ {
+  "node": "subtraction.decompose-to-ten",
+  "target": "subtraction.within-10.fluency",
+  "verdict": "scaffold",
+  "reason": "Subtracting the rest from 10 can be done by taking away and counting (count-remaining, already required); recalled fluency at level 3 is helpful but not required at this level 2 node.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 3 subtracts the rest from 10, a difference of two numbers within 10."
+ },
+ {
+  "node": "subtraction.decompose-to-ten",
+  "target": "number-composition.within-10.equation",
+  "verdict": "scaffold",
+  "reason": "The split of b can be shown with a model or drawing; recording it as an equation is not required.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step two splits b into r and b - r and records b as their sum."
+ },
+ {
+  "node": "equation.unknown.addition",
+  "target": "equation.true-false",
+  "verdict": "scaffold",
+  "reason": "Step 3 is a verification; finding the number does not need it, and the meaning of = (already required) is enough to carry out the check on one equation.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step three checks that the two sides have equal values."
+ },
+ {
+  "node": "equation.unknown.subtraction",
+  "target": "equation.true-false",
+  "verdict": "scaffold",
+  "reason": "Step 4 is a verification; the meaning of = (already required) suffices to do the check.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step four checks that the two sides have equal values."
+ },
+ {
+  "node": "addition.application.three-addends",
+  "target": "addition.associative.strategy",
+  "verdict": "scaffold",
+  "reason": "Choosing which pair to add first is a strategy; the total of three amounts can be found by joining and counting all with objects, or adding two then the third.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The total of three amounts is found by adding two of them first and then the third."
+ },
+ {
+  "node": "addition.application.three-addends",
+  "target": "addition.count-on",
+  "verdict": "scaffold",
+  "reason": "Counting on is one way to carry out each join; counting all the objects (already required) finds the same total.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The total of three groups is found by joining one group at a time and counting on."
+ },
+ {
+  "node": "equation.situation.one-step",
+  "target": "subtraction.application.compare.difference-unknown",
+  "verdict": "wrong",
+  "reason": "Circular: subtraction.application.compare.difference-unknown lists this node (equation.situation.one-step, e254) as a prerequisite. The compare structure needed here is already covered by comparing.more-than.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "One-step compare stories must be understood as a larger, a smaller, and a difference to place the unknown correctly."
+ },
+ {
+  "node": "addition.two-digit-plus-tens.model",
+  "target": "addition.count-on",
+  "verdict": "scaffold",
+  "reason": "Joining the tens by counting all the rods (already required) gives the same total; count-on is another way to carry out the same join.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Joining the tens to the tens is adding two small numbers of tens, which can be done by counting on."
+ },
+ {
+  "node": "addition.two-digit-plus-tens.split-tens",
+  "target": "addition.commutative",
+  "verdict": "scaffold",
+  "reason": "The property explains why the ones can be added back last; the procedure can be carried out from place value without naming commutativity.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The equation (t + u) + m = (t + m) + u swaps the order of u and m, which holds by the commutative property."
+ },
+ {
+  "node": "addition.two-digit-plus-tens.split-tens",
+  "target": "addition.associative.strategy",
+  "verdict": "scaffold",
+  "reason": "The property explains why splitting off the ones is valid; the level 3 procedure can be carried out from place value without naming associativity.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The equation (t + u) + m = (t + m) + u regroups the three addends, which holds by the associative property."
+ },
+ {
+  "node": "addition.two-digit-plus-tens.split-tens",
+  "target": "addition.within-10.fluency",
+  "verdict": "scaffold",
+  "reason": "Adding the tens needs some way to get 4 + 3 (count-all, count-on, recall); recalled fluency is not the only way.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The tens are added with a one-digit fact such as 4 + 3."
+ },
+ {
+  "node": "addition.two-digit-plus-one-digit.model",
+  "target": "addition.count-on",
+  "verdict": "scaffold",
+  "reason": "Joining the ones by counting all (already required) gives the same total; count-on is another way to carry out the same join.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Joining the ones of the number to the one-digit number is adding two small numbers."
+ },
+ {
+  "node": "addition.two-digit-plus-one-digit.next-ten",
+  "target": "number-composition.within-10.equation",
+  "verdict": "scaffold",
+  "reason": "The split can be shown with a model or drawing at this level; recording it as an equation is not required.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step two splits b into the amount to the next ten and the rest, and records it as a sum."
+ },
+ {
+  "node": "addition.two-digit-plus-one-digit.next-ten",
+  "target": "addition.make-ten",
+  "verdict": "scaffold",
+  "reason": "The strategy is self-contained from the partner of the ones digit and a split of b; adding across 10 for one-digit numbers is a teaching step toward it.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The strategy extends adding across 10 by making a ten from one-digit numbers to a two-digit number."
+ },
+ {
+  "node": "subtraction.tens-minus-tens.related-addition",
+  "target": "subtraction.unknown-addend.meaning",
+  "verdict": "indirect",
+  "reason": "The difference as unknown addend enters through the rewrite in step 1; a level 3 procedure does not need the why.",
+  "via": "subtraction.unknown-addend.rewrite",
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The difference is the multiple of 10 that added to b makes a, because a difference is an unknown addend."
+ },
+ {
+  "node": "subtraction.tens-minus-tens.related-addition",
+  "target": "addition.within-10.fluency",
+  "verdict": "scaffold",
+  "reason": "The one-digit fact in tens can be recalled or counted up; recalled fluency is not required.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 2 uses a known one-digit fact such as 5 + 3 = 8, which is recalled addition within 10."
+ },
+ {
+  "node": "parity.even-odd.pairing",
+  "target": "counting.objects",
+  "verdict": "scaffold",
+  "reason": "Pairing objects off and seeing whether one is left needs no counting; the statement and the test problem are about the pairing outcome. Counting only supplies the number 13 (given in the task) and links the idea to a numeral.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Even and odd are properties of the number of objects in a collection, so the learner must count how many objects there are."
+ },
+ {
+  "node": "multiplication.array.equal-addends-equation",
+  "target": "equation.equal-sign.meaning",
+  "verdict": "scaffold",
+  "reason": "The record 5 + 5 + 5 + 5 = 20 has the sum on the left and the total on the right, so it can be written with an operational reading of the equal sign (the answer comes next). The relational meaning (same value on both sides) is not required to write this form.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The equation states that the sum of the row addends equals the total, which uses the equal sign as sameness of value."
+ },
+ {
+  "node": "multiplication.array.equal-addends-equation",
+  "target": "multiplication.array.total-by-adding",
+  "verdict": "scaffold",
+  "reason": "The test problem gives the total (12 stars in all), so the learner need only record one addend per row; performing the row-by-row addition is not required to write the equation, although it is what makes the equation checkable.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The equation records the adding of rows that gives the total of the array."
+ },
+ {
+  "node": "multiplication.application.equal-groups",
+  "target": "multiplication.array.rows-columns",
+  "verdict": "scaffold",
+  "reason": "Rows of an array are one of three listed contexts and are just equal groups; the equal-groups meaning already covers them, and the test problem (boxes of muffins) does not involve an array.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The statement lists rows of an array as one kind of equal group, so the array structure is used."
+ },
+ {
+  "node": "multiplication.application.equal-groups",
+  "target": "multiplication.array.total-by-adding",
+  "verdict": "scaffold",
+  "reason": "Total-by-adding is the array-restricted (up to 5 by 5) version of repeated addition; this node's totals go to 100 and any way of finding the total works, so the array procedure is rehearsal, not a requirement.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Stories with rows of an array are solved by adding the equal rows to find the total."
+ },
+ {
+  "node": "division.application.partitive",
+  "target": "multiplication.array.rows-columns",
+  "verdict": "scaffold",
+  "reason": "Sharing among the rows of an array is one listed context; rows are equal groups and the sharing meaning covers them. The test problem (stickers among friends) uses no array.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The statement includes sharing among the rows of an array, so rows of an array must be understood."
+ },
+ {
+  "node": "division.application.measurement",
+  "target": "partitioning.segment.equal-lengths",
+  "verdict": "scaffold",
+  "reason": "Equal-measure stories give the piece size and ask how many pieces; that is repeated measuring of a length, not partitioning a segment into a given number of equal parts. Partitioning helps picture a cut ribbon but is not required.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Cutting a length into equal pieces, such as the ribbon, is the equal-measure case in the statement."
+ },
+ {
+  "node": "division.unknown-factor.equation-from-story",
+  "target": "multiplication.equal-groups.equation-unknown",
+  "verdict": "scaffold",
+  "reason": "a x b = ? with the total unknown is the easier case of the same notation. The symbol-in-a-factor-place equation can be learned without first writing the unknown-total equation, given the symbol notation (e363) and the expression (e365).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The unknown-factor equation 4 x ? = 28 uses the same symbol-for-unknown multiplication equation form, with the symbol in a factor place."
+ },
+ {
+  "node": "multiplication.unknown-factor.solve",
+  "target": "division.unknown-factor.equation-from-story",
+  "verdict": "scaffold",
+  "reason": "The target solves bare equations a x ? = c and ? x b = c; writing such equations from stories is a different skill (a representation from a story), not needed to solve the given equation.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The equations a x ? = c and ? x b = c are the forms in which the unknown factor appears in a story-based equation."
+ },
+ {
+  "node": "multiplication.unknown-factor.solve",
+  "target": "division.measurement.meaning",
+  "verdict": "scaffold",
+  "reason": "Finding the unknown number by dividing is one way to carry out step 2; recalling the multiplication fact or skip counting does the same computation without the division meaning. A procedure at level 3 does not require the grouping interpretation of the quotient.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Dividing the product by the known factor to find the unknown number of groups is the grouping division."
+ },
+ {
+  "node": "multiplication.unknown-factor.solve",
+  "target": "division.partitive.meaning",
+  "verdict": "scaffold",
+  "reason": "Same as e366: dividing the product by the known factor is one way to carry out step 2, and the sharing interpretation of the quotient is not needed to find the number by recall or skip counting.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Dividing the product by the known factor to find the unknown group size is the sharing division."
+ },
+ {
+  "node": "multiplication.commutative.strategy",
+  "target": "multiplication.array.total-by-adding",
+  "verdict": "scaffold",
+  "reason": "The test problem supplies the known product 3 x 9 = 27, and step 2 says from a known fact or an easier count; counting an array by adding rows is only one optional way to get the switched product.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 2 may find the product with the factors switched from an easier count of an array by adding rows."
+ },
+ {
+  "node": "multiplication.distributive",
+  "target": "addition.associative.strategy",
+  "verdict": "scaffold",
+  "reason": "Reading (b + c) as a sum found first is supplied by expressions.grouping.evaluate (e388); the addition regrouping strategy is a related but different skill (changing which pair is added first).",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The factor (b + c) in parentheses is read as a sum found first, the same grouping notation as in addition."
+ },
+ {
+  "node": "division.distributive.strategy",
+  "target": "multiplication.distributive",
+  "verdict": "scaffold",
+  "reason": "This justifies the procedure; a level 3 procedure does not require knowing why it works. Also multiplication.distributive is a x (b + c), not division over a sum; the needed fact (p + q) divided by a is the sum of the shares follows from the sharing meaning (e395).",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The reason (p + q) divided by a = (p divided by a) + (q divided by a) works is the distributive property applied to the multiplication of the quotient by a."
+ },
+ {
+  "node": "multiplication.facts.within-100",
+  "target": "multiplication.by-one",
+  "verdict": "scaffold",
+  "reason": "The rule for 1 is a strategy for a subset of the facts; the products can be recalled individually without knowing the rule. It helps learning but is not required to know the facts.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "All products of one-digit numbers include those with 1, which are known by the rule for multiplying by 1."
+ },
+ {
+  "node": "multiplication.facts.within-100",
+  "target": "multiplication.by-zero",
+  "verdict": "scaffold",
+  "reason": "The rule for 0 is a strategy for a subset of the facts; the products can be recalled individually without knowing the rule.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "All products of one-digit numbers include those with 0, which are known by the rule for multiplying by 0."
+ },
+ {
+  "node": "operations.application.multistep",
+  "target": "addition.application.two-step",
+  "verdict": "scaffold",
+  "reason": "Two-step addition and subtraction stories are a special case of this node; the skill of choosing and ordering steps can be learned in a multiplication or mixed context, so the add/subtract version is a stepping stone, not a requirement.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The statement extends two-step addition and subtraction stories to stories that also use multiplication and division."
+ },
+ {
+  "node": "multiplication.comparison",
+  "target": "comparing.more-than",
+  "verdict": "scaffold",
+  "reason": "Times as many as is read from the equal-groups meaning of the product; the additive comparison more than is a contrasting idea (taught as a contrast in multiplication.comparison.vs-additive), not something this reading needs.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The phrase times as many as extends the comparison of how many more or less in a set."
+ },
+ {
+  "node": "multiplication.comparison.application.multiply",
+  "target": "multiplication.comparison.vs-additive",
+  "verdict": "scaffold",
+  "reason": "The comparison meaning (e433) already makes times as much a x b; the contrast with the additive reading prevents errors but is not needed to carry out the multiplication.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The learner must choose multiplication rather than addition for the phrase times as much."
+ },
+ {
+  "node": "multiplication.comparison.application.divide",
+  "target": "multiplication.comparison.vs-additive",
+  "verdict": "scaffold",
+  "reason": "Telling division by a multiplier from subtracting an amount more is error prevention; the comparison meaning plus the division meanings already determine the operation.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The learner must tell division by a multiplier from subtraction of an amount more."
+ },
+ {
+  "node": "multiplication.comparison.application.equation",
+  "target": "multiplication.equal-groups.equation-unknown",
+  "verdict": "scaffold",
+  "reason": "It covers only one of the three unknown positions (the larger quantity) in an equal-groups setting; the target is met via statement-to-equation (e443) and the one-step unknown notation (e442).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "A symbol stands for the unknown larger quantity in the equation, as in a multiplication equation with a symbol for the total."
+ },
+ {
+  "node": "patterns.addition-table.identify",
+  "target": "addition.within-20.fluency",
+  "verdict": "scaffold",
+  "reason": "The table is given with its entries; noticing that an entry is one more than its left neighbour needs reading numerals and seeing a difference of one, not fluent recall of the sums.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The entries are sums of two one-digit numbers, and the patterns concern the values of these sums."
+ },
+ {
+  "node": "patterns.multiplication-table.identify",
+  "target": "multiplication.commutative",
+  "verdict": "scaffold",
+  "reason": "Noticing that the table is symmetric across its diagonal is an observation at level 2; the commutative property (level 3) is the explanation of the symmetry, not a requirement for seeing it.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The table being symmetric across its diagonal is the commutative property of the entries."
+ },
+ {
+  "node": "patterns.multiplication-table.identify",
+  "target": "parity.even-odd.pairing",
+  "verdict": "scaffold",
+  "reason": "Every entry in the 4s row is even is one of several example patterns (the node also lists a constant row increase and symmetry), and the test problem can be met with the other patterns.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The pattern that every entry in the 4s row is even uses the meaning of even."
+ },
+ {
+  "node": "patterns.arithmetic.explain",
+  "target": "patterns.multiplication-table.identify",
+  "verdict": "scaffold",
+  "reason": "The test problem states the claim directly (4 times any whole number is even) and does not mention the table; noticing the pattern in the table motivates the explanation but is not needed to give it.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The test problem asks why a pattern seen in the row for 4 of the multiplication table holds."
+ },
+ {
+  "node": "factors.factor-pairs.find-all",
+  "target": "division.facts.within-100",
+  "verdict": "scaffold",
+  "reason": "Step 2 is the multiple test, which factors.is-multiple.decide (e460) covers; recalled division facts are one way to carry it out, as are multiplication facts and skip counting, so none of them is required alone.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 2 decides whether n divided by d is a whole number, using division facts."
+ },
+ {
+  "node": "factors.factor-pairs.find-all",
+  "target": "multiplication.commutative",
+  "verdict": "scaffold",
+  "reason": "The commutative property justifies why the list can stop at d x d greater than n; carrying out the procedure at level 3 does not require knowing why it works.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The reason any further pair would repeat one already recorded is that a x b = b x a."
+ },
+ {
+  "node": "factors.prime-composite.decide",
+  "target": "factors.factor-pairs.find-all",
+  "verdict": "scaffold",
+  "reason": "It justifies why testing 2, 3, 5 and 7 is enough; the procedure itself lists those tests, and a level 3 procedure does not require the reason.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The reason a factor pair of a number up to 100 has a factor no greater than 10 comes from stopping once d x d exceeds n."
+ },
+ {
+  "node": "patterns.rule.generate-number",
+  "target": "multiplication.equal-groups.meaning",
+  "verdict": "scaffold",
+  "reason": "Multiply by 2 is one of two example rules and can be applied by doubling with addition; the test problem uses add 5. The equal-groups meaning helps but is not needed to apply a rule to the last term.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The statement allows rules such as multiply by 2, which must be understood as equal groups."
+ },
+ {
+  "node": "patterns.rule.generate-shape",
+  "target": "shapes.recognize",
+  "verdict": "scaffold",
+  "reason": "Producing the next terms of a repeating or growing shape pattern needs identical copies of the shapes; recognizing a shape whatever its size or orientation (shapes.match is enough for copying) is not required.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Repeating circle, triangle, triangle requires recognizing each shape whatever its size or position."
+ },
+ {
+  "node": "addition.base-ten.like-units",
+  "target": "addition.within-20.fluency",
+  "verdict": "scaffold",
+  "reason": "The concept is that only like units combine; unit counts can be found by counting blocks, and the test uses sums within 10 only, so fluency to 20 is not required.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Adding like units means adding the two counts of that unit, such as 2 tens plus 4 tens or 5 ones plus 0 ones, which are one-digit sums."
+ },
+ {
+  "node": "addition.base-ten.compose-unit",
+  "target": "place-value.two-digit.tens-ones",
+  "verdict": "scaffold",
+  "reason": "The test gives the quantities as '5 tens and 13 ones', not as digits; sameness follows from the trade itself (ten.unit). Reading digits by place is not needed.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The test problem asks whether 5 tens and 13 ones is the same number as the traded form, which needs the value of tens and ones digits."
+ },
+ {
+  "node": "addition.base-ten.relate-written",
+  "target": "addition.two-digit.relate-written",
+  "verdict": "scaffold",
+  "reason": "Same model-to-column mapping at smaller scale. The three-digit node can introduce the column record and carried 1 directly; the earlier node is preparation, not a requirement.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The column record and the carried 1 are the notation first matched to a model with two-digit numbers, then extended here."
+ },
+ {
+  "node": "addition.standard-algorithm",
+  "target": "addition.base-ten.like-units",
+  "verdict": "scaffold",
+  "reason": "The procedure only needs digits of the same place aligned (step 1); knowing why only like units are added explains the algorithm but is not needed to run it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Adding column by column is adding like units, with ones added to ones and tens to tens."
+ },
+ {
+  "node": "addition.standard-algorithm",
+  "target": "addition.base-ten.relate-written",
+  "verdict": "scaffold",
+  "reason": "Knowing the carried 1 records a model trade explains the mark; the L3 procedure can be run without that link.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The carried 1 as a written mark is introduced as the record of a trade in the model-to-written relation."
+ },
+ {
+  "node": "subtraction.base-ten.like-units",
+  "target": "subtraction.within-20.fluency",
+  "verdict": "scaffold",
+  "reason": "The concept is that only like units are subtracted; counts can be found by taking away blocks, and the test uses differences within 10 only.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Subtracting like units means subtracting one count from another, such as 8 tens minus 3 tens or 6 ones minus 0 ones."
+ },
+ {
+  "node": "subtraction.base-ten.decompose-unit",
+  "target": "place-value.two-digit.tens-ones",
+  "verdict": "scaffold",
+  "reason": "The test gives '4 tens and 2 ones' in units, not digits; sameness follows from the trade (ten.unit). Reading digits by place is not needed.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The test problem asks whether the traded form of 4 tens and 2 ones is the same number, which needs the values of tens and ones digits."
+ },
+ {
+  "node": "subtraction.base-ten.relate-written",
+  "target": "subtraction.tens-minus-tens.relate-written",
+  "verdict": "scaffold",
+  "reason": "Same model-to-column mapping in a simpler case (tens only, no regrouping). The regrouping marks can be introduced directly; the earlier node is preparation, not a requirement.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The written subtraction record in columns is first matched to a model with tens, then extended to regrouping here."
+ },
+ {
+  "node": "subtraction.standard-algorithm",
+  "target": "subtraction.base-ten.like-units",
+  "verdict": "scaffold",
+  "reason": "The procedure needs only aligned columns; knowing that only like units are subtracted explains the algorithm but is not needed to run it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Subtracting column by column is subtracting like units, with ones from ones and tens from tens."
+ },
+ {
+  "node": "subtraction.standard-algorithm",
+  "target": "subtraction.base-ten.relate-written",
+  "verdict": "scaffold",
+  "reason": "Knowing that the crossed-out digit and added 10 record a model trade explains the marks; the L3 procedure can be run without that link.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The crossed-out digit and the added 10 are the written marks that record a trade."
+ },
+ {
+  "node": "multiplication.partial-products.two-digit-by-two-digit",
+  "target": "multiplication.commutative",
+  "verdict": "scaffold",
+  "reason": "A tens-by-ones part such as 40 x 7 can be found directly as 4 tens x 7 by place value; swapping the factors is one convenience, not a requirement.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 2 includes tens x ones products such as 40 x 7, found by swapping the factors."
+ },
+ {
+  "node": "multiplication.standard-algorithm",
+  "target": "multiplication.power-of-ten.whole-number.rule",
+  "verdict": "scaffold",
+  "reason": "Step 3 gives the zero placeholder as an instruction; knowing it equals multiplying by a power of ten explains it but is not needed to run it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 3 starts each later row one place left and fills the places on the right with zeros, which is multiplying by a power of ten."
+ },
+ {
+  "node": "division.partial-quotients.one-digit-divisor",
+  "target": "addition.standard-algorithm",
+  "verdict": "scaffold",
+  "reason": "Partial quotients such as 100, 40, 2 are separated by place and total by place value or partial sums; the column algorithm is not needed. The real prerequisite is addition.base-ten.strategy.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 5 adds the partial quotients such as 100, 40 and 2 to get the quotient."
+ },
+ {
+  "node": "division.partial-quotients.one-digit-divisor.remainder",
+  "target": "multiplication.distributive",
+  "verdict": "scaffold",
+  "reason": "The distributive property explains why q x divisor adds back to the amount removed, but at level 3 the identity is accepted from repeated subtraction; knowing the property is not required.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The statement dividend = q x divisor + r is the distributive splitting of the dividend into multiples of the divisor plus a leftover."
+ },
+ {
+  "node": "division.partial-quotients.one-digit-divisor.remainder",
+  "target": "division.unknown-factor.meaning",
+  "verdict": "scaffold",
+  "reason": "The identity dividend = q x divisor + r follows from the grouping story (q divisors removed, r left) already in the measurement route; the unknown-factor meaning gives a second reading but is not required.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement gives dividend = q x divisor + r, which extends the quotient as an unknown factor to include a leftover amount."
+ },
+ {
+  "node": "division.area-model.two-digit-divisor.explain",
+  "target": "division.area-model.one-digit-divisor.explain",
+  "verdict": "scaffold",
+  "reason": "Same picture with a larger divisor; it can be built directly from rectangle area and the unknown-factor meaning. The one-digit case is preparation, not a requirement.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The same picture, a rectangle with one side d cut into strips that are multiples of d, is first used with a one-digit divisor."
+ },
+ {
+  "node": "exponent.power-of-ten.notation",
+  "target": "numeral.write.periods",
+  "verdict": "scaffold",
+  "reason": "The test never asks the learner to write a numeral beyond 1000: 10,000 is given and 10^3 = 1000 is within numeral.write.to-1000.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The test problem writes 10,000 as a numeral with a comma, a multi-digit numeral beyond 1000."
+ },
+ {
+  "node": "multiplication.power-of-ten.decimal.rule",
+  "target": "decimal.name.read",
+  "verdict": "scaffold",
+  "reason": "Moving the point is positional and needs place structure, not the number name of the decimal. The name is a support for seeing which place each digit is in.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Reading a decimal such as 0.035 as a number name shows which place each digit is in before the point moves."
+ },
+ {
+  "node": "division.power-of-ten.rule",
+  "target": "decimal.name.read",
+  "verdict": "scaffold",
+  "reason": "Moving the point is positional and needs place structure, not the number name of the decimal.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Reading a decimal such as 52.7 or 3.4 as a number name shows which place each digit is in before the point moves."
+ },
+ {
+  "node": "expressions.interpret.without-evaluating",
+  "target": "multiplication.comparison.vs-additive",
+  "verdict": "scaffold",
+  "reason": "The statement needs the meanings 'n times as large' and 'n more than', not the skill of telling the two kinds of comparison apart.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The statement contrasts n times as large with n more than, which is telling multiplicative from additive comparison."
+ },
+ {
+  "node": "patterns.numerical.corresponding-pairs",
+  "target": "patterns.numerical.two-rules",
+  "verdict": "scaffold",
+  "reason": "The test gives both patterns, and the statement pairs given terms; generating the patterns from rules is not needed to form the pairs.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The statement pairs the terms of two patterns, so each pattern's terms must be generated first."
+ },
+ {
+  "node": "patterns.numerical.relationship",
+  "target": "patterns.numerical.corresponding-pairs",
+  "verdict": "scaffold",
+  "reason": "Comparing terms in the same position needs only position-wise reading of the two lists, not ordered-pair notation.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The statement compares the corresponding terms of two patterns position by position."
+ }
+]

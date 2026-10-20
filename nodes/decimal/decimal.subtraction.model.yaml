@@ -1,0 +1,77 @@
+id: decimal.subtraction.model
+concept: decimal
+facet: decimal-fraction
+level: 2
+type: procedure
+name: Subtract decimals to hundredths with a place-value model
+statement: Find a difference of decimals to hundredths with base-ten blocks or grids by taking away like
+  units, trading 1 tenth for 10 hundredths or 1 one for 10 tenths where needed.
+procedure:
+- Show the minuend as ones, tenths, and hundredths with blocks or grids.
+- For each place, starting with the hundredths, if there are fewer units than must be taken away, trade
+  1 unit of the next larger place for 10 of this unit; if that place is empty, first trade a one for 10
+  tenths.
+- Take away the hundredths, tenths, and ones of the subtrahend.
+- Count what is left to read the difference.
+assess: Use base-ten blocks or hundredths grids to find 4.05 - 1.37.
+sources:
+  ccss:
+  - 5.NBT.B.7
+  learning_components:
+  - 445dd0dd
+requires:
+- clause: standard
+  all_of:
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: statement
+    why: The statement shows the minuend as ones, tenths and hundredths, and the test problem is written
+      as the decimals 4.05 and 1.37.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.ten-times-right.decimal
+    relation: definitional
+    points_to: statement
+    why: The statement trades 1 tenth for 10 hundredths and 1 one for 10 tenths, which is decimal places
+      related by factors of ten.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.base-ten.model
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 to 4 trade down, take away and read what is left exactly as in the whole-number base-ten
+      model, applied to smaller units.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-20.fluency
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 takes away the counts in each place, such as 15 hundredths minus 7 hundredths, which are
+      subtraction facts within 20.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

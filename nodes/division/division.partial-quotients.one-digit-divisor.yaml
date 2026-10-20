@@ -1,0 +1,106 @@
+id: division.partial-quotients.one-digit-divisor
+concept: division
+facet: measurement
+level: 3
+type: procedure
+name: Divide by a one-digit number with partial quotients, no remainder
+statement: Find the whole-number quotient of a dividend of up to four digits by a one-digit divisor, when
+  it divides exactly, by repeatedly subtracting easy multiples of the divisor (such as 100 or 10 times
+  it) and adding up how many divisors were subtracted.
+procedure:
+- Start with the dividend as the amount left.
+- Choose a multiple of the divisor, such as divisor x 100, divisor x 10, or divisor x a one-digit number,
+  that is not more than the amount left.
+- Subtract it from the amount left and record the number of divisors used (100, 10, ...) as a partial
+  quotient.
+- Repeat until the amount left is 0.
+- Add the partial quotients; the sum is the quotient.
+assess: 'Find 852 divided by 6 by partial quotients: subtract multiples of 6 such as 100 x 6 and 10 x
+  6, then add the partial quotients.'
+sources:
+  ccss:
+  - 4.NBT.B.6
+  learning_components:
+  - d5bcfb8d
+  - 437e6968
+  - f6809045
+requires:
+- clause: standard
+  all_of:
+  - node: division.measurement.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement repeatedly subtracts multiples of the divisor and counts how many divisors were
+      removed, a quotient as a number of equal groups.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 chooses multiples of the divisor such as divisor x a one-digit number, using recalled
+      products.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-multiple-of-ten
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 uses divisor x 10 and divisor x 100, a one-digit number times a multiple of ten or a hundred.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 requires choosing a multiple that is not more than the amount left, which compares two
+      whole numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.standard-algorithm
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 subtracts a multiple from an amount of up to four digits, often with regrouping.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.base-ten.strategy
+    relation: definitional
+    points_to: statement
+    why: Step 5 totals partial quotients separated by place (100, 40, 2) by partial sums; this replaces
+      the over-specific edge to the column algorithm (e575).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

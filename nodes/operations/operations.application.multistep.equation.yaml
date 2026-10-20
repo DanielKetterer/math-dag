@@ -1,0 +1,112 @@
+id: operations.application.multistep.equation
+concept: operations
+facet: whole-number
+level: 3
+type: representation
+name: Represent a multi-step word problem with an equation using a letter for the unknown
+statement: A multi-step story problem with whole numbers is written as one equation in which a letter
+  stands for the unknown quantity and the operations appear in the order the story requires.
+assess: Mia buys 3 packs of 12 cards and gives away 9 cards. Write one equation, using the letter c for
+  the number of cards she has left. Do not solve it.
+sources:
+  ccss:
+  - 3.OA.D.8
+  - 4.OA.A.3
+  learning_components:
+  - e434c015
+  - 140c9070
+  - d26c9161
+  - 8457dbae
+  - 432f50a0
+  - 7c9d2f64
+requires:
+- clause: via-two-step
+  all_of:
+  - node: operations.application.multistep
+    relation: definitional
+    points_to: statement
+    why: The equation represents a multi-step story whose steps the learner has already chosen and ordered.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.write.record-calculation
+    relation: representational
+    points_to: statement
+    why: The operations appear in one expression in the order the story requires, which records the calculation
+      as a numerical expression.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.situation.two-step
+    relation: representational
+    points_to: statement
+    why: Writing equations with a symbol for the unknown for a two-step story is the representation extended
+      to a single equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Writing separate equations with a symbol for each step is one way to reach a
+        single equation; the single equation can also be built by recording the calculation in order as
+        an expression and setting it equal to the letter. | other route: Record the story''s calculation
+        as one expression (expressions.write.record-calculation) and set it equal to the unknown letter,
+        using the one-step unknown notation.'
+    status: disputed
+- clause: critic-route-1
+  note: Record the story's calculation in order as one expression and set it equal to the unknown letter,
+    using the one-step unknown notation instead of writing step-by-step equations.
+  all_of:
+  - node: operations.application.multistep
+    relation: definitional
+    points_to: statement
+    why: The equation represents a multi-step story whose steps the learner has already chosen and ordered.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.write.record-calculation
+    relation: representational
+    points_to: statement
+    why: The operations appear in one expression in the order the story requires, which records the calculation
+      as a numerical expression.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.situation.one-step
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Record the story''s calculation in order as one expression
+      and set it equal to the unknown letter, using the one-step unknown notation instead of writing step-by-step
+      equations.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

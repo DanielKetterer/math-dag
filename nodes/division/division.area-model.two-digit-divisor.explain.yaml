@@ -1,0 +1,167 @@
+id: division.area-model.two-digit-divisor.explain
+concept: division
+facet: unknown-factor
+level: 2
+type: justification
+name: Explain division by a two-digit number with an area model
+statement: Dividing n by a two-digit d is finding the unknown side of a rectangle with area n and one
+  side d; cutting the area into parts that are multiples of d gives side pieces that add to the unknown
+  side.
+assess: Draw an area model with one side 24 and area 1,512, and use it to explain why 1,512 divided by
+  24 = 60 + 3.
+sources:
+  ccss:
+  - 5.NBT.B.6
+  learning_components:
+  - 3e1d35e9
+  - 5a571ee0
+requires:
+- clause: via-two-digit-divisor
+  all_of:
+  - node: area.rectangle.length-times-width
+    relation: definitional
+    points_to: statement
+    why: The statement uses a rectangle whose area is its two sides multiplied, with area n and one side
+      d.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement defines dividing n by d as finding the unknown side of the rectangle, an unknown
+      factor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-multiple-of-ten
+    relation: procedural
+    points_to: assess
+    why: The test problem needs the area piece 24 x 60 = 1440 built from 4 x 60, a one-digit times a multiple
+      of ten.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs 24 x 60 built from 4 x 60.'
+    status: proposed
+  - node: multiplication.multiple-of-ten.by-multiple-of-ten
+    relation: procedural
+    points_to: assess
+    why: The test problem needs 20 x 60 = 1200 as part of the area piece 24 x 60.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs 20 x 60.'
+    status: proposed
+  - node: area.composite-additive
+    relation: definitional
+    points_to: statement
+    why: The statement says the cut pieces make up the whole area; additivity of area is not covered by
+      length-times-width.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: division.partial-quotients.two-digit-divisor
+    relation: definitional
+    points_to: statement
+    why: The statement cuts the area into multiples of d whose side pieces are the partial quotients,
+      so that method is justified.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The area picture can introduce the partial quotients itself; the symbolic procedure
+        need not come first. | other route: Build the model from rectangle area, the unknown-factor meaning
+        of division, and breaking the dividend into multiples of the divisor.'
+    status: disputed
+- clause: critic-route-1
+  note: Build the model from rectangle area and the unknown-factor meaning of division, cutting the area
+    into multiples of the divisor by breaking apart the dividend.
+  all_of:
+  - node: area.rectangle.length-times-width
+    relation: definitional
+    points_to: statement
+    why: The statement uses a rectangle whose area is its two sides multiplied, with area n and one side
+      d.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement defines dividing n by d as finding the unknown side of the rectangle, an unknown
+      factor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-multiple-of-ten
+    relation: procedural
+    points_to: assess
+    why: The test problem needs the area piece 24 x 60 = 1440 built from 4 x 60, a one-digit times a multiple
+      of ten.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs 24 x 60 built from 4 x 60.'
+    status: proposed
+  - node: multiplication.multiple-of-ten.by-multiple-of-ten
+    relation: procedural
+    points_to: assess
+    why: The test problem needs 20 x 60 = 1200 as part of the area piece 24 x 60.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs 20 x 60.'
+    status: proposed
+  - node: division.distributive.strategy
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Build the model from rectangle area and the unknown-factor
+      meaning of division, cutting the area into multiples of the divisor by breaking apart the dividend.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

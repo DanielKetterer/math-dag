@@ -1,0 +1,58 @@
+id: parity.even.equal-addends
+concept: parity
+facet: equal-addends
+level: 2
+type: representation
+name: Write an even number as a sum of two equal addends
+statement: An even number n can be written as an equation n = a + a, the sum of two equal whole numbers.
+assess: Write 18 as the sum of two equal numbers.
+sources:
+  ccss:
+  - 2.OA.C.3
+  learning_components:
+  - 2a88d495
+requires:
+- clause: standard
+  all_of:
+  - node: parity.even-odd.pairing
+    relation: definitional
+    points_to: statement
+    why: An even number is one whose collection splits into pairs with none left, which is what makes
+      it two equal halves a + a.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.notation.equation
+    relation: representational
+    points_to: statement
+    why: The statement writes the number as an addition equation n = a + a, so the learner must write
+      and read addition equations.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.doubles.fact
+    relation: procedural
+    points_to: assess
+    why: Finding that 18 is 9 + 9 uses the double of 9 recalled or checked as a doubles fact.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem (18) uses a doubles fact; the idea that an even number is
+        a + a does not require recalling doubles, since a could be found by halving or trial.'
+    status: proposed
+status: proposed

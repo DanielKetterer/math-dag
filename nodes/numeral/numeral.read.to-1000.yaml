@@ -1,0 +1,84 @@
+id: numeral.read.to-1000
+concept: numeral
+facet: core
+level: 2
+type: representation
+name: Read numerals up to 1000
+statement: 'Give the number name, spoken or written in words, for a numeral up to 1000: name the hundreds,
+  then the tens-and-ones name, saying nothing for a place whose digit is 0.'
+procedure:
+- If there are three digits, say the first digit followed by hundred.
+- Say the name of the two-digit number formed by the last two digits, or of the last digit if the tens
+  digit is 0, or nothing if both are 0.
+assess: 'Read these numerals aloud: 406, 117, 860.'
+sources:
+  ccss:
+  - 1.NBT.A.1
+  - 2.NBT.A.3
+  learning_components:
+  - 5a704f63
+  - be537a94
+requires:
+- clause: via-within-1000
+  all_of:
+  - node: numeral.read
+    relation: definitional
+    points_to: statement
+    why: Reading a numeral up to 1000 extends the basic skill of reading a single written numeral as its
+      number name.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.sequence.within-1000
+    relation: definitional
+    points_to: statement
+    why: The spoken names produced, such as four hundred six, are the number names of the counting sequence
+      within 1000.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Reading 406 as ''four hundred six'' needs only the words already in the sequence
+        to 100 plus the rule of naming hundreds then the two-digit name; the ability to count across hundred
+        boundaries is not used in reading a numeral. | other route: Compose the name by rule from digit
+        words, ''hundred'', and the two-digit names learned in the count to 100, with numeral.read for
+        the numeral-to-word link.'
+    status: disputed
+- clause: critic-route-1
+  note: Compose the number name by rule from the digit words, 'hundred', and the two-digit names learned
+    in the count to 100, without counting across hundreds.
+  all_of:
+  - node: numeral.read
+    relation: definitional
+    points_to: statement
+    why: Reading a numeral up to 1000 extends the basic skill of reading a single written numeral as its
+      number name.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.sequence.to-100
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Compose the number name by rule from the digit words,
+      ''hundred'', and the two-digit names learned in the count to 100, without counting across hundreds.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

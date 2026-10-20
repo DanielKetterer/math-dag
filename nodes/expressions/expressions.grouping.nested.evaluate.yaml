@@ -1,0 +1,37 @@
+id: expressions.grouping.nested.evaluate
+concept: expressions
+facet: numerical
+level: 3
+type: procedure
+name: Evaluate expressions with nested grouping symbols
+statement: In a numerical expression with grouping symbols inside other grouping symbols, compute the
+  innermost group first and work outward.
+procedure:
+- Find the innermost pair of grouping symbols and compute its value.
+- Replace that group by its value.
+- Repeat with the new innermost group until no grouping symbols remain.
+- Compute the remaining expression.
+assess: Evaluate 2 x {5 + [12 - (3 + 1)]}.
+sources:
+  ccss:
+  - 5.OA.A.1
+  learning_components:
+  - '79506838'
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.grouping.evaluate
+    relation: procedural
+    points_to: procedure.2
+    why: Each step replaces an innermost group by its value, the same compute-the-group-first move applied
+      repeatedly.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

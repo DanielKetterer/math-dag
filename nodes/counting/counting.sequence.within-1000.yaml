@@ -1,0 +1,54 @@
+id: counting.sequence.within-1000
+concept: counting
+facet: sequence
+level: 1
+type: procedure
+name: Count forward by ones within 1000, across hundreds
+statement: Count forward by ones from any number to any number within 1000, continuing correctly across
+  decades and hundreds (ninety-nine, one hundred, one hundred one; three hundred ninety-nine, four hundred).
+procedure:
+- Say the starting number.
+- For each next number, keep the hundreds name and say the next tens-and-ones name.
+- After a number ending in ninety-nine, say the next hundred (for example, four hundred), then continue
+  with one, two, and so on after the hundred.
+assess: Count aloud by ones from 296 to 305.
+sources:
+  ccss:
+  - 1.NBT.A.1
+  - 2.NBT.A.2
+  learning_components:
+  - 18d6b278
+  - da04a9ac
+  - 49fe9974
+requires:
+- clause: standard
+  all_of:
+  - node: counting.sequence.to-100
+    relation: definitional
+    points_to: statement
+    why: Counting within 1000 extends the number word sequence to 100 past the hundred boundary using
+      the same decade pattern.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.sequence.count-on
+    relation: procedural
+    points_to: procedure.1
+    why: The procedure starts at any given number, not at one, which is the skill of beginning a count
+      at a given number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,91 @@
+id: addition.application.add-to.change-unknown
+concept: addition
+facet: add-to
+level: 2
+type: application
+name: Solve add-to story problems with the change unknown
+statement: A story gives a starting amount and the amount after more were added, and asks how many were
+  added; the answer is the number that joined to the start makes the result.
+assess: Ana had 7 shells. She found some more. Now she has 12 shells. How many shells did she find? Use
+  objects, a drawing, or an equation.
+sources:
+  ccss:
+  - 1.OA.A.1
+  - 2.OA.A.1
+  learning_components:
+  - fe904c98
+  - 17aaf480
+  - c1129849
+  - ecfbb806
+requires:
+- clause: equation
+  all_of:
+  - node: addition.application.add-to-story
+    relation: definitional
+    points_to: statement
+    why: The story is an add-to situation that the learner already solves with objects when the result
+      is unknown.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.unknown.addition
+    relation: procedural
+    points_to: statement
+    why: The answer is the number that joined to the start makes the result, which is the unknown addend
+      in an addition equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Solving the unknown-addend equation is needed only on the equation route.'
+    status: disputed
+  - node: equation.situation.one-step
+    relation: representational
+    points_to: statement
+    why: The learner writes 7 + ? = 12 with a symbol in the position of the amount that was added.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Writing the equation is needed only on the equation route.'
+    status: disputed
+- clause: via-count-on
+  all_of:
+  - node: addition.application.add-to-story
+    relation: definitional
+    points_to: statement
+    why: The story is an add-to situation that the learner already solves with objects when the result
+      is unknown.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.count-on
+    relation: procedural
+    points_to: statement
+    why: The number joined is found by counting up from the start to the result while tracking how many
+      were counted.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Counting up from the start is one way to find the amount joined. | other route:
+        Equation route: equation.situation.one-step and equation.unknown.addition, with no objects.'
+    status: disputed
+status: proposed

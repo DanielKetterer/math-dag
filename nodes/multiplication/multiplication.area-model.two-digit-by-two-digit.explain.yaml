@@ -1,0 +1,81 @@
+id: multiplication.area-model.two-digit-by-two-digit.explain
+concept: multiplication
+facet: array-area
+level: 2
+type: justification
+name: Explain two-digit by two-digit multiplication with an area model
+statement: A rectangle whose side lengths are two two-digit numbers, each split into tens and ones, is
+  cut into four smaller rectangles whose areas are the four partial products; together they make the whole
+  area, so the four partial products add to the product.
+assess: Draw an area model for 23 x 45 and use it to explain why 23 x 45 = 800 + 100 + 120 + 15.
+sources:
+  ccss:
+  - 4.NBT.B.5
+  learning_components:
+  - cb82dee4
+requires:
+- clause: standard
+  all_of:
+  - node: area.rectangle.length-times-width
+    relation: definitional
+    points_to: statement
+    why: The statement treats each of the four pieces as a rectangle whose area is its two side lengths
+      multiplied.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.expanded-form
+    relation: representational
+    points_to: statement
+    why: The statement splits each side into tens and ones, which is expanded form drawn as segments.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.multiple-of-ten.by-multiple-of-ten
+    relation: justificatory
+    points_to: assess
+    why: The test problem needs the tens-by-tens piece, 20 x 40 = 800, as a product of multiples of 10.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs the tens-by-tens piece 20 x 40.'
+    status: proposed
+  - node: multiplication.by-multiple-of-ten
+    relation: procedural
+    points_to: assess
+    why: The test problem needs mixed partial products such as 20 x 5 = 100 and 3 x 40 = 120.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs mixed pieces such as 20 x 5 and 3 x 40.'
+    status: proposed
+related:
+- node: area.composite-additive
+  relation: common_path
+  note: 'Common path, not required: route ''via-two-digit-by-two-digit'' needed everything another route
+    needs and more, so it was removed.'
+- node: multiplication.partial-products.two-digit-by-two-digit
+  relation: common_path
+  note: 'Common path, not required: route ''via-two-digit-by-two-digit'' needed everything another route
+    needs and more, so it was removed.'
+status: proposed

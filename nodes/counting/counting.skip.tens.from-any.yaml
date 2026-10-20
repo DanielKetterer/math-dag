@@ -1,0 +1,48 @@
+id: counting.skip.tens.from-any
+concept: counting
+facet: sequence
+level: 1
+type: procedure
+name: Count forward by tens from any number within 120
+statement: Count forward by tens from any starting number up to 120, so that the ones stay the same and
+  the tens increase by one each step (24, 34, 44, ..., 94, 104).
+procedure:
+- Say the starting number.
+- Say the number with the same ones and one more ten.
+- Repeat until the stopping number.
+assess: Count aloud by tens starting at 24 and stopping at 114.
+sources:
+  ccss:
+  - 1.NBT.A.1
+  learning_components:
+  - c497e2ee
+requires:
+- clause: standard
+  all_of:
+  - node: counting.skip.tens.decades
+    relation: procedural
+    points_to: procedure.2
+    why: Saying the number with one more ten uses the decade word order ten, twenty, thirty that is practised
+      when counting by tens from zero.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.sequence.within-1000
+    relation: definitional
+    points_to: statement
+    why: Counting by tens from 24 reaches 104 and 114, so the learner must name numbers past one hundred
+      correctly.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

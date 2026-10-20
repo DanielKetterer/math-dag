@@ -1,0 +1,129 @@
+id: equation.equal-sign.meaning
+concept: equation
+facet: relational
+level: 2
+type: concept
+name: The equal sign means both sides have the same value
+statement: The equal sign states that the number or expression on its left has the same value as the number
+  or expression on its right; it does not mean 'the answer comes next'.
+assess: Sam says 3 + 4 = 7 + 2 is true because 3 + 4 makes 7. Is Sam right? Explain what the = sign tells
+  you.
+sources:
+  ccss:
+  - 1.OA.D.7
+  learning_components:
+  - 93ef1daf
+requires:
+- clause: via-symbols
+  all_of:
+  - node: addition.add-to.fingers
+    relation: procedural
+    points_to: assess
+    why: Deciding whether 3 + 4 = 7 + 2 requires finding the value of each sum, which can be done on fingers.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs the values of 3 + 4 and 7 + 2; fingers are one way
+        to get them, and the idea of the equal sign does not require it.'
+    status: proposed
+  - node: addition.notation.expression
+    relation: representational
+    points_to: statement
+    why: Both sides in the examples are sums, so the learner must read an expression as standing for a
+      value.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.count-on
+    relation: procedural
+    points_to: assess
+    why: The test problem needs the values of 3 + 4 and 7 + 2 to see whether they are equal.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs the values of the two sums; counting on is one way
+        to get them.'
+    status: proposed
+  - node: comparing.whole-numbers.symbols
+    relation: definitional
+    points_to: statement
+    why: The equal sign states that two numbers have the same value, as the = in a comparison of two whole
+      numbers does.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Using = for ''same number'' in a whole-number comparison is one way into the
+        relational meaning. | other route: Same-number route: recognizing two sets as the same number
+        (comparing.count.small-equal) together with reading sums as values (addition.notation.expression).'
+    status: disputed
+- clause: critic-route-2
+  note: 'Same-number route: two sets recognized as the same number, sums read as values.'
+  all_of:
+  - node: addition.add-to.fingers
+    relation: procedural
+    points_to: assess
+    why: Deciding whether 3 + 4 = 7 + 2 requires finding the value of each sum, which can be done on fingers.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs the values of 3 + 4 and 7 + 2; fingers are one way
+        to get them, and the idea of the equal sign does not require it.'
+    status: proposed
+  - node: addition.notation.expression
+    relation: representational
+    points_to: statement
+    why: Both sides in the examples are sums, so the learner must read an expression as standing for a
+      value.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.count-on
+    relation: procedural
+    points_to: assess
+    why: The test problem needs the values of 3 + 4 and 7 + 2 to see whether they are equal.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs the values of the two sums; counting on is one way
+        to get them.'
+    status: proposed
+  - node: comparing.count.small-equal
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Same-number route: two sets recognized as the same
+      number, sums read as values.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+related:
+- node: addition.notation.equation
+  relation: contrasts_with
+  note: The operational reading of = in a + b = c (answer comes next) is the misconception this node corrects,
+    so the equation-writing node contrasts with, rather than supports, the relational meaning.
+status: proposed

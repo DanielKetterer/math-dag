@@ -1,0 +1,148 @@
+id: division.area-model.one-digit-divisor.explain
+concept: division
+facet: unknown-factor
+level: 2
+type: justification
+name: Explain division by a one-digit number with an area model
+statement: Dividing n by a one-digit d is finding the unknown side of a rectangle with area n and one
+  side d; cutting the area into parts that are each a multiple of d gives side pieces (the partial quotients)
+  that add to the unknown side, and any area too small to make another full strip of width d is the remainder.
+assess: Draw an area model with one side 6 and area 852, and use it to explain why 852 divided by 6 =
+  100 + 40 + 2.
+sources:
+  ccss:
+  - 4.NBT.B.6
+  learning_components:
+  - 6e0b8067
+  - 9d81bd35
+  - d98ddefd
+requires:
+- clause: via-remainder
+  all_of:
+  - node: area.rectangle.length-times-width
+    relation: definitional
+    points_to: statement
+    why: The statement uses a rectangle whose area is its two sides multiplied, with area n and one side
+      d.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement defines dividing n by d as finding the unknown side of the rectangle, an unknown
+      factor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-multiple-of-ten
+    relation: justificatory
+    points_to: assess
+    why: The test problem needs areas such as 6 x 100 = 600 and 6 x 40 = 240 for the strips.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs the strip areas 6 x 100 and 6 x 40.'
+    status: proposed
+  - node: area.composite-additive
+    relation: definitional
+    points_to: statement
+    why: The statement says the cut pieces make up the whole area; additivity of area is not covered by
+      length-times-width.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: division.partial-quotients.one-digit-divisor.remainder
+    relation: definitional
+    points_to: statement
+    why: The statement says the side pieces are the partial quotients and leftover area is the remainder.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The area picture can introduce partial quotients and the remainder itself; the
+        symbolic procedure need not come first. | other route: Build the model from rectangle area, the
+        unknown-factor meaning of division, and breaking the dividend into multiples of the divisor; the
+        side pieces and leftover area come out of the picture.'
+    status: disputed
+- clause: critic-route-1
+  note: Build the model from rectangle area and the unknown-factor meaning of division, cutting the area
+    into multiples of the divisor by breaking apart the dividend.
+  all_of:
+  - node: area.rectangle.length-times-width
+    relation: definitional
+    points_to: statement
+    why: The statement uses a rectangle whose area is its two sides multiplied, with area n and one side
+      d.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement defines dividing n by d as finding the unknown side of the rectangle, an unknown
+      factor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-multiple-of-ten
+    relation: justificatory
+    points_to: assess
+    why: The test problem needs areas such as 6 x 100 = 600 and 6 x 40 = 240 for the strips.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs the strip areas 6 x 100 and 6 x 40.'
+    status: proposed
+  - node: division.distributive.strategy
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Build the model from rectangle area and the unknown-factor
+      meaning of division, cutting the area into multiples of the divisor by breaking apart the dividend.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+related:
+- node: multiplication.area-model.by-one-digit.explain
+  relation: same_idea_different_form
+  note: The division picture is the multiplication area model read backward (unknown side instead of unknown
+    area); it can be built from rectangle area and the unknown-factor meaning without the multiplication
+    explanation.
+status: proposed

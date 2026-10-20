@@ -1,0 +1,52 @@
+id: subtraction.unknown-addend.strategy
+concept: subtraction
+facet: unknown-addend
+level: 3
+type: procedure
+name: Subtract by finding the missing addend
+statement: To find a - b, find the number c with b + c = a, using a known addition fact or by counting
+  up from b to a; c is the difference.
+procedure:
+- Rewrite a - b = ? as b + ? = a.
+- Find the missing addend from a known addition fact, or count up from b to a and track how many were
+  counted.
+- The missing addend is a - b.
+assess: Find 13 - 9 by thinking of 9 + ? = 13. Tell the addition fact you used.
+sources:
+  ccss:
+  - 1.OA.B.4
+  - 1.OA.C.6
+  learning_components:
+  - 304a8bf8
+  - e1cb5730
+requires:
+- clause: standard
+  all_of:
+  - node: subtraction.unknown-addend.rewrite
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites a - b = ? as b + ? = a, which is exactly the rewrite of a subtraction as an unknown-addend
+      addition.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.unknown.addition
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds the missing addend in b + ? = a, which is finding the unknown in an addition equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,111 @@
+id: numeral.write.to-1000
+concept: numeral
+facet: core
+level: 2
+type: representation
+name: Write numerals up to 1000 from number names
+statement: Write the numeral for a number name up to 1000 using one digit for each place, with 0 in any
+  place that has no units (four hundred six is 406, not 4006).
+procedure:
+- Write the number of hundreds as the first digit, if there are hundreds.
+- Write the number of tens next, writing 0 if there are hundreds but no tens.
+- Write the number of ones last, writing 0 if there are none.
+assess: 'Write the numeral for each number: four hundred six; one hundred twelve; seven hundred.'
+sources:
+  ccss:
+  - 1.NBT.A.1
+  - 2.NBT.A.3
+  learning_components:
+  - 8c23a3f0
+  - be537a94
+requires:
+- clause: via-within-1000
+  all_of:
+  - node: numeral.write
+    relation: definitional
+    points_to: statement
+    why: Writing a numeral for a number name up to 1000 extends the basic skill of writing a numeral for
+      a spoken number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: procedural
+    points_to: procedure.1
+    why: The steps put hundreds, tens, and ones in separate digit places, with 0 holding any empty place,
+      as in 406.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.sequence.within-1000
+    relation: definitional
+    points_to: statement
+    why: The number names being written, such as one hundred twelve, are number words of the counting
+      sequence within 1000.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Parsing ''one hundred twelve'' needs only the words in the count to 100 and the
+        hundred-plus-two-digit pattern; counting across hundreds is not used when writing a numeral from
+        a name. | other route: Parse the name into its hundreds word and two-digit name using the words
+        from the count to 100, then write digits with numeral.write and the three-digit place structure.'
+    status: disputed
+- clause: critic-route-1
+  note: Parse the given name into its hundreds word and its two-digit name using the words from the count
+    to 100, then write one digit per place.
+  all_of:
+  - node: numeral.write
+    relation: definitional
+    points_to: statement
+    why: Writing a numeral for a number name up to 1000 extends the basic skill of writing a numeral for
+      a spoken number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: procedural
+    points_to: procedure.1
+    why: The steps put hundreds, tens, and ones in separate digit places, with 0 holding any empty place,
+      as in 406.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.sequence.to-100
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Parse the given name into its hundreds word and its
+      two-digit name using the words from the count to 100, then write one digit per place.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

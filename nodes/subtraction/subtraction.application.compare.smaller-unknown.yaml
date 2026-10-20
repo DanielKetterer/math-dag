@@ -1,0 +1,119 @@
+id: subtraction.application.compare.smaller-unknown
+concept: subtraction
+facet: comparison
+level: 2
+type: application
+name: Solve compare story problems with the smaller amount unknown
+statement: A story gives the larger amount and how many fewer (or more) the other has, and asks for the
+  smaller amount; the answer is the larger minus the difference.
+assess: Lucy has 13 stickers. Julie has 4 fewer stickers than Lucy. How many stickers does Julie have?
+  Use objects, a drawing, or an equation.
+sources:
+  ccss:
+  - 1.OA.A.1
+  - 2.OA.A.1
+  learning_components:
+  - 951e92fc
+  - cf1426e3
+  - c1129849
+  - ecfbb806
+requires:
+- clause: via-matching
+  all_of:
+  - node: comparing.more-than
+    relation: definitional
+    points_to: statement
+    why: The phrase 4 fewer means a number lower by 4, so the comparison is by number and not by size
+      of things.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.count.matching
+    relation: definitional
+    points_to: statement
+    why: The smaller set is the larger set with the unmatched extra items removed.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Matching to find which items to remove is one picture of the smaller set, not
+        needed on every route. | other route: Objects route without matching: make the larger amount,
+        take away the difference, count what is left; or the equation route.'
+    status: disputed
+- clause: equation
+  all_of:
+  - node: comparing.more-than
+    relation: definitional
+    points_to: statement
+    why: The phrase 4 fewer means a number lower by 4, so the comparison is by number and not by size
+      of things.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.unknown.subtraction
+    relation: procedural
+    points_to: statement
+    why: The answer is the larger minus the difference, which is finding the unknown difference in a subtraction
+      equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Solving the equation is needed only on the equation route.'
+    status: disputed
+  - node: equation.situation.one-step
+    relation: representational
+    points_to: statement
+    why: The learner writes 13 - 4 = ? with a symbol for the smaller amount.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Writing the equation is needed only on the equation route.'
+    status: disputed
+- clause: via-count-remaining
+  all_of:
+  - node: comparing.more-than
+    relation: definitional
+    points_to: statement
+    why: The phrase 4 fewer means a number lower by 4, so the comparison is by number and not by size
+      of things.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.take-away.count-remaining
+    relation: procedural
+    points_to: statement
+    why: With objects, make the larger amount and take away the difference, then count what is left.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Taking away with objects is needed only on the objects route. | other route:
+        Equation route: equation.situation.one-step and equation.unknown.subtraction.'
+    status: disputed
+status: proposed

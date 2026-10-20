@@ -1,0 +1,105 @@
+id: operations.application.multistep
+concept: operations
+facet: whole-number
+level: 2
+type: application
+name: Solve multi-step word problems with whole-number answers
+statement: A story problem needs two or more steps, each an addition, subtraction, multiplication or division
+  of whole numbers, and has a whole-number answer with no remainder; the learner chooses and carries out
+  the steps.
+assess: A school buys 4 boxes of 125 pencils and gives out 290 of them. How many pencils are left?
+sources:
+  ccss:
+  - 3.OA.D.8
+  - 4.OA.A.3
+  learning_components:
+  - 2aecfdc6
+  - 7e561083
+  - cbea54a9
+  - 3b7082f5
+  - 6f0d3e89
+  - 24e4f997
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.application.equal-groups
+    relation: definitional
+    points_to: statement
+    why: A step in the story can be an equal-groups multiplication, and the learner chooses and solves
+      it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.application.partitive
+    relation: definitional
+    points_to: statement
+    why: A step in the story can be a sharing division, which the learner must recognize and carry out.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.application.measurement
+    relation: definitional
+    points_to: statement
+    why: A step in the story can be a grouping division, which the learner must recognize and carry out.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.partial-products.by-one-digit
+    relation: procedural
+    points_to: assess
+    why: Finding 4 boxes of 125 pencils requires multiplying a three-digit number by a one-digit number.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem (4 boxes of 125) needs multi-digit by one-digit multiplication;
+        the statement does not fix the size of the numbers in a given step.'
+    status: proposed
+  - node: subtraction.base-ten.strategy
+    relation: procedural
+    points_to: assess
+    why: Finding how many pencils are left after giving out 290 requires subtracting a three-digit number.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem (subtracting 290) needs a three-digit subtraction strategy.'
+    status: proposed
+  - node: division.partial-quotients.one-digit-divisor
+    relation: definitional
+    points_to: statement
+    why: The statement allows division steps of whole numbers with no remainder at any size (multi-digit
+      numbers appear in the test problem's other steps), so dividing a multi-digit number by a one-digit
+      number is used in such steps.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,75 @@
+id: subtraction.base-ten.add-up
+concept: subtraction
+facet: comparison
+level: 3
+type: procedure
+name: Subtract within 1000 by adding up from the subtrahend
+statement: Find a - b, without blocks or drawings, as the missing addend in b + ? = a by adding up from
+  b to a in place-value jumps (to the next ten, the next hundred, then on to a) and totaling the jumps.
+procedure:
+- Start at the subtrahend b.
+- Add on to reach the next ten, then the next hundred, then hundreds and tens and ones until you reach
+  a.
+- Add all the amounts you added on; the total is a - b.
+assess: Without blocks or drawings, find 603 - 278 by adding up from 278 to 603 and totaling the jumps.
+sources:
+  ccss:
+  - 2.NBT.B.5
+  learning_components:
+  - 41093be0
+requires:
+- clause: standard
+  all_of:
+  - node: subtraction.unknown-addend.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement finds a - b as the missing addend in b + ? = a, a difference as an unknown addend.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number-composition.make-ten.find
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds on to reach the next ten, such as 2 from 278 to 280, which is finding what makes
+      ten.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.base-ten.strategy
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 totals the jumps such as 2 + 20 + 300 + 3, a partial-sums addition without a model.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.three-digit.hundreds-tens-ones
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 jumps to the next hundred and then by hundreds, tens, and ones, so the learner must work
+      in those three place values.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

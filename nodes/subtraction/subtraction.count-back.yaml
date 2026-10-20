@@ -1,0 +1,75 @@
+id: subtraction.count-back
+concept: subtraction
+facet: take-away
+level: 2
+type: procedure
+name: Subtract by counting back
+statement: To find a - b, start from a and say the next b number words backward, keeping track of how
+  many have been said; the last word said is a - b (the starting word a is not counted).
+procedure:
+- Start at the number a.
+- Say the number one less and track it as 1 counted back; continue, tracking 2, 3, and so on.
+- Stop when b words have been counted back; the last word said is the difference.
+assess: Find 12 - 3 by counting back from 12.
+sources:
+  ccss:
+  - 1.OA.C.5
+  learning_components:
+  - 1f109af5
+requires:
+- clause: standard
+  all_of:
+  - node: counting.sequence.backward
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 says number words one less at a time, which is counting backward by ones from a starting
+      number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.produce-set
+    relation: procedural
+    points_to: procedure.3
+    why: Stopping after exactly b words are counted back is the same stopping rule as counting out a set
+      of b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.take-away.count-remaining
+    relation: definitional
+    points_to: statement
+    why: The last word said is a - b because b were taken away and the number left is what remains.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.notation.expression
+    relation: representational
+    points_to: assess
+    why: The test problem is written 12 - 3, so the expression must be read as taking 3 from 12.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

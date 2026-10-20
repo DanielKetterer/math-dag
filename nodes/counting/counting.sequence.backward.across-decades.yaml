@@ -1,0 +1,63 @@
+id: counting.sequence.backward.across-decades
+concept: counting
+facet: sequence
+level: 1
+type: procedure
+name: Count backward by ones within 120, across decades
+statement: Count backward by ones from any number up to 120 to any smaller number, continuing correctly
+  across decade and hundred changes (forty-one, forty, thirty-nine; one hundred one, one hundred, ninety-nine).
+procedure:
+- Say the starting number.
+- Say the number word just before it in the counting sequence.
+- After a number ending in zero, say the previous decade name with nine (after forty, thirty-nine).
+- Continue until the stopping number.
+assess: Count backward by ones from 103 to 96.
+sources:
+  ccss:
+  - 1.NBT.A.1
+  learning_components:
+  - c753e6c1
+requires:
+- clause: standard
+  all_of:
+  - node: counting.sequence.backward
+    relation: definitional
+    points_to: statement
+    why: Counting backward across decades extends the basic skill of counting backward by ones, saying
+      the word just before each number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.sequence.within-1000
+    relation: procedural
+    points_to: procedure.2
+    why: Finding the word before 103 or 101 uses the known forward sequence past one hundred and the hundred
+      change.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.sequence.to-100
+    relation: definitional
+    points_to: statement
+    why: The decade names and the nine-to-ten word changes (forty, thirty-nine) must be known to step
+      back across them.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

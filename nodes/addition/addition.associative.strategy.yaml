@@ -1,0 +1,67 @@
+id: addition.associative.strategy
+concept: addition
+facet: operation
+level: 3
+type: procedure
+name: Add three numbers by choosing which two to add first
+statement: When adding three numbers, any adjacent two may be added first without changing the total,
+  so add the pair that is easier (for example, a pair that makes 10) first.
+procedure:
+- Look for two adjacent addends whose sum is easy, such as a pair that makes 10.
+- Add that pair first.
+- Add the third number to their sum.
+assess: Find 3 + 8 + 2 by first adding the two numbers that make 10.
+sources:
+  ccss:
+  - 1.OA.B.3
+  learning_components:
+  - 108ea2f2
+requires:
+- clause: standard
+  all_of:
+  - node: addition.notation.expression
+    relation: representational
+    points_to: assess
+    why: The problem is a written sum of three numbers, and adjacent pairs must be read as two-addend
+      sums.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is in words (adding three numbers); only the test problem is written
+        as 3 + 8 + 2.'
+    status: proposed
+  - node: number-composition.make-ten.find
+    relation: procedural
+    points_to: assess
+    why: Step 1 looks for a pair that makes 10, which uses the partner of a number that makes 10.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement says ''for example, a pair that makes 10''; only the test problem
+        requires finding the pair that makes 10. Any easy pair (doubles, known fact) serves the idea.'
+    status: proposed
+  - node: addition.count-on
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds the third number to the sum of the first pair, which is a two-addend sum found by
+      counting on.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,58 @@
+id: patterns.multiplication-table.identify
+concept: patterns
+facet: table
+level: 2
+type: concept
+name: Identify a pattern in the multiplication table
+statement: The entries of the multiplication table follow regular patterns, such as each row increasing
+  by the same amount, the table being symmetric across its diagonal, and every entry in the 4s row being
+  even.
+assess: Look at this multiplication table for 1 to 10. Describe one pattern in the row for 4 and one pattern
+  that compares the row for 3 with the column for 3.
+sources:
+  ccss:
+  - 3.OA.D.9
+  learning_components:
+  - a0846564
+  - 11d23252
+requires:
+- clause: standard
+  all_of:
+  - node: data.graphs.read
+    relation: representational
+    points_to: statement
+    why: The patterns are seen by reading values along rows and across a diagonal of a table.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Same issue as e446: the target reads a multiplication table, not a data graph.'
+    status: disputed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: The entries are products, and a row increasing by the same amount is groups of equal size being
+      added one at a time.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: table.read-two-way
+    relation: definitional
+    points_to: statement
+    why: 'The learner must read a two-way table: an entry is the product of its row and column labels,
+      and rows, columns and diagonals are lines of entries. data.graphs.read may or may not cover this.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,72 @@
+id: factors.factor-pairs.find-all
+concept: factors
+facet: core
+level: 3
+type: procedure
+name: Find all factor pairs of a whole number within 100
+statement: List every factor pair of a whole number n from 1 to 100 by testing each whole number d from
+  1 upward as a factor, stopping once d x d is greater than n, because in every pair the smaller factor
+  d has d x d no greater than n.
+procedure:
+- Start with 1 x n.
+- For each next whole number d, decide whether n divided by d is a whole number; if it is, record d x
+  (n divided by d).
+- Stop as soon as d x d is greater than n; any further pair would repeat one already recorded.
+assess: Find all the factor pairs of 48.
+sources:
+  ccss:
+  - 4.OA.B.4
+  learning_components:
+  - 8970cb2b
+requires:
+- clause: standard
+  all_of:
+  - node: factors.factor-pair.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure lists every pair of whole numbers whose product is n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 compares d x d with n, which uses the product of d with itself.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 stops when d x d is greater than n, which compares two whole numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: factors.is-multiple.decide
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 decides for each d whether n divided by d is a whole number, which is the multiple test.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

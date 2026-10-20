@@ -1,0 +1,66 @@
+id: rounding.whole-number.any-place
+concept: rounding
+facet: whole-number
+level: 3
+type: procedure
+name: Round a multi-digit whole number to any place
+statement: To round a whole number to a given place, keep the digits to the left of that place, add one
+  unit of that place if the digit to its right is 5 or more, and write 0 in every place to its right.
+procedure:
+- Find the digit in the rounding place.
+- Look at the digit just to its right.
+- If that digit is 5 or more, add one unit of the rounding place, regrouping if the digit was 9.
+- Write 0 in every place to the right of the rounding place.
+assess: Round 296,513 to the nearest thousand and to the nearest ten thousand. Round 9,962 to the nearest
+  hundred.
+sources:
+  ccss:
+  - 4.NBT.A.3
+  learning_components:
+  - 8f3e372f
+requires:
+- clause: standard
+  all_of:
+  - node: rounding.whole-number.nearest-ten-hundred
+    relation: definitional
+    points_to: statement
+    why: Rounding to any place generalises rounding to the nearest ten or hundred, with the same rule
+      that halfway rounds up.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.ten-times-right
+    relation: procedural
+    points_to: procedure.1
+    why: Naming the rounding place and its unit in numbers like 296,513 uses the place structure of multi-digit
+      whole numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.base-ten.compose-unit
+    relation: procedural
+    points_to: procedure.3
+    why: Adding one unit of the rounding place when the digit is 9, as in 9,962 to the nearest hundred,
+      needs composing a unit of the next place.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

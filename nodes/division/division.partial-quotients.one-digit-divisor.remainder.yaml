@@ -1,0 +1,54 @@
+id: division.partial-quotients.one-digit-divisor.remainder
+concept: division
+facet: measurement
+level: 3
+type: procedure
+name: Find a quotient and remainder for a one-digit divisor with partial quotients
+statement: When a one-digit divisor does not divide a dividend of up to four digits exactly, partial quotients
+  stop when the amount left is less than the divisor; the sum of the partial quotients is the whole-number
+  quotient q and the amount left is the remainder r, with dividend = q x divisor + r and r less than the
+  divisor.
+procedure:
+- Subtract multiples of the divisor from the dividend as in partial quotients, recording each partial
+  quotient.
+- Stop when the amount left is less than the divisor.
+- The sum of the partial quotients is the quotient; the amount left is the remainder.
+assess: Find the whole-number quotient and the remainder of 2,347 divided by 5 by partial quotients.
+sources:
+  ccss:
+  - 4.NBT.B.6
+  learning_components:
+  - 47171d80
+  - 81aefb08
+  - f7db0623
+requires:
+- clause: standard
+  all_of:
+  - node: division.partial-quotients.one-digit-divisor
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 subtracts multiples of the divisor as in partial quotients, so that method is carried
+      out first.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 stops when the amount left is less than the divisor, which compares two whole numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

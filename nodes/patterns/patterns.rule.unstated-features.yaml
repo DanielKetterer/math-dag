@@ -1,0 +1,48 @@
+id: patterns.rule.unstated-features
+concept: patterns
+facet: rule
+level: 2
+type: concept
+name: Identify a feature of a pattern not stated in its rule
+statement: The terms produced by a rule can show regularities the rule does not state, such as alternating
+  between odd and even, and such a feature can be noticed and explained from the rule.
+assess: 'Start at 1 and use the rule "add 3": 1, 4, 7, 10, 13, ... What do you notice about odd and even
+  numbers in this list? Explain why it will keep happening.'
+sources:
+  ccss:
+  - 4.OA.C.5
+  learning_components:
+  - d76ac695
+requires:
+- clause: standard
+  all_of:
+  - node: patterns.rule.generate-number
+    relation: definitional
+    points_to: statement
+    why: The terms in which a feature is noticed are produced by applying a rule to a starting number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: parity.even-odd.pairing
+    relation: justificatory
+    points_to: assess
+    why: The explanation that adding 3 flips odd to even is given by the pairing meaning, where adding
+      one extra changes whether one is left over.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The idea is that a rule can produce regularities it does not state; only the test
+        problem (and the odd/even example) uses parity to name and explain the feature.'
+    status: proposed
+status: proposed

@@ -1,0 +1,72 @@
+id: addition.two-digit-plus-one-digit.model
+concept: addition
+facet: operation
+level: 2
+type: procedure
+name: Add a one-digit number to a two-digit number with a base-ten model
+statement: To add a one-digit number to a two-digit number with base-ten blocks or a drawing, join ones
+  to ones; if there are 10 or more ones, trade ten ones for a ten. The sum is within 100.
+procedure:
+- Show the two-digit number as tens and ones, and the one-digit number as ones.
+- Join the ones.
+- If there are 10 or more ones, trade ten of them for one ten.
+- Read the number of tens and ones.
+assess: Use base-ten blocks or a drawing of tens and ones to find 38 + 5.
+sources:
+  ccss:
+  - 1.NBT.C.4
+  learning_components:
+  - 09d7e1f0
+  - 5b26e3e4
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.two-digit.tens-ones
+    relation: definitional
+    points_to: procedure.1
+    why: Step 1 shows the two-digit number as tens and ones and step 4 reads the result as tens and ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.ten.unit
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 trades ten ones for one ten, which uses a ten as a bundle of ten ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.add-to.count-all
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 joins the ones to the ones, which is joining two small sets and counting all.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.teen.decompose
+    relation: procedural
+    points_to: procedure.3
+    why: Taking ten out of a teen number of ones is splitting a teen number into ten ones and some ones.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,56 @@
+id: exponent.power-of-ten.notation
+concept: exponent
+facet: power-of-ten
+level: 3
+type: representation
+name: Write powers of 10 with whole-number exponents
+statement: For a whole number k at least 1, 10 to the power k (written 10^k) is the product of k factors
+  of 10, which is 1 followed by k zeros.
+assess: Write 10,000 as a power of 10. Write 10^3 as a whole number.
+sources:
+  ccss:
+  - 5.NBT.A.2
+  learning_components:
+  - 14c9562d
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.ten-times-right
+    relation: definitional
+    points_to: statement
+    why: The statement says 10^k is 1 followed by k zeros, which is the place values each ten times the
+      place to the right.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: numeral.read.periods
+    relation: definitional
+    points_to: assess
+    why: The test problem starts from the numeral 10,000, a five-digit numeral with a comma period.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem hands the learner the numeral 10,000 to read as a power
+        of ten; the definition of 10^k does not need it.'
+    status: proposed
+  - node: multiplication.multiple-of-ten.by-multiple-of-ten
+    relation: procedural
+    points_to: statement
+    why: Evaluating 10^3 as 10 x 10 x 10 starts with 10 x 10 = 100, a product of two multiples of ten.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

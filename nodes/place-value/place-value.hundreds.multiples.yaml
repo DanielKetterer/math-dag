@@ -1,0 +1,49 @@
+id: place-value.hundreds.multiples
+concept: place-value
+facet: whole-number
+level: 2
+type: concept
+name: 100, 200, ..., 900 are a number of hundreds
+statement: The numbers 100, 200, ..., 900 are one, two, ..., nine hundreds with 0 tens and 0 ones; the
+  first digit counts the hundreds.
+assess: How many hundred-flats make 600? How many ten-rods and single cubes are needed besides the flats?
+sources:
+  ccss:
+  - 2.NBT.A.1.b
+  learning_components:
+  - 91fb37cd
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.hundred.unit
+    relation: definitional
+    points_to: statement
+    why: The numbers 100 to 900 are counts of the unit called a hundred, which is ten tens or one hundred
+      ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: numeral.read.to-1000
+    relation: representational
+    points_to: statement
+    why: The statement says the first digit of the numerals 100 to 900 counts the hundreds, so those numerals
+      must be read.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: counting.skip.hundreds
+  relation: common_path
+  note: 'Common path, not required: route ''via-hundreds'' needed everything another route needs and more,
+    so it was removed.'
+status: proposed

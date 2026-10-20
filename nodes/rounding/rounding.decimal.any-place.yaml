@@ -1,0 +1,90 @@
+id: rounding.decimal.any-place
+concept: rounding
+facet: decimal
+level: 3
+type: procedure
+name: Round a decimal to any place
+statement: To round a decimal to a given place, keep the digits to the left of that place, add one unit
+  of that place if the digit to its right is 5 or more, and drop every digit to its right after the decimal
+  point.
+procedure:
+- Find the digit in the rounding place.
+- Look at the digit just to its right.
+- If that digit is 5 or more, add one unit of the rounding place, regrouping if the digit was 9.
+- Drop the digits to the right of the rounding place that are after the decimal point, and write 0 in
+  any to its right that are before it.
+assess: Round 2.968 to the nearest tenth and to the nearest hundredth. Round 14.7 to the nearest whole
+  number.
+sources:
+  ccss:
+  - 5.NBT.A.4
+  learning_components:
+  - 6a3040b7
+requires:
+- clause: standard
+  all_of:
+  - node: rounding.whole-number.any-place
+    relation: definitional
+    points_to: statement
+    why: The decimal rule is the whole-number rule, keep digits to the left, add one unit if the next
+      digit is 5 or more, applied to decimal places.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.ten-times-right.decimal
+    relation: procedural
+    points_to: procedure.1
+    why: Finding the digit in the rounding place and its unit, such as a tenth or a hundredth, uses decimal
+      place value.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.thousandths.notation
+    relation: representational
+    points_to: assess
+    why: The assessed number 2.968 has a thousandths digit that decides the rounding to the hundredth,
+      so thousandths notation is read.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test number 2.968 forces reading a thousandths digit; the statement works
+        for any decimal place. The node decimal.thousandths.notation is also absent from index.txt and
+        boundary_nodes.'
+    status: proposed
+  - node: decimal.tenths.notation
+    relation: definitional
+    points_to: statement
+    why: The statement and test name and read the tenths place directly; it is reached only indirectly
+      through e114.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: decimal.hundredths.notation
+    relation: definitional
+    points_to: statement
+    why: The test rounds to the nearest hundredth, reading the hundredths place directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

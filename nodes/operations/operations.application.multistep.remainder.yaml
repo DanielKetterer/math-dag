@@ -1,0 +1,63 @@
+id: operations.application.multistep.remainder
+concept: operations
+facet: whole-number
+level: 2
+type: application
+name: Solve multi-step word problems in which a remainder must be interpreted
+statement: 'A multi-step story problem includes a division with a remainder, and the answer depends on
+  the situation: round the quotient up, drop the remainder, or give the remainder itself.'
+assess: 3 classes of 26 students each go on a trip. Each van holds 8 students. How many vans are needed?
+sources:
+  ccss:
+  - 4.OA.A.3
+  learning_components:
+  - e1589f99
+  - ec3925a3
+  - 165bed09
+  - 4eaabd84
+  - b17b134d
+requires:
+- clause: standard
+  all_of:
+  - node: operations.application.multistep
+    relation: definitional
+    points_to: statement
+    why: The statement is a multi-step problem in which the learner chooses and carries out the steps.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.partial-quotients.one-digit-divisor.remainder
+    relation: procedural
+    points_to: statement
+    why: The problem includes a division with a remainder, so the quotient and remainder must be found.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.partial-products.by-one-digit
+    relation: procedural
+    points_to: assess
+    why: Finding 3 classes of 26 students uses multiplying a two-digit number by one digit before dividing
+      by 8.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem (3 classes of 26) needs a two-digit by one-digit product.'
+    status: proposed
+status: proposed

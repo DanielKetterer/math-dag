@@ -1,0 +1,50 @@
+id: subtraction.tens-minus-tens.related-addition
+concept: subtraction
+facet: unknown-addend
+level: 3
+type: procedure
+name: Subtract a multiple of 10 by finding the missing ten addend
+statement: To find a - b for multiples of 10, find the multiple of 10 that added to b makes a, for example
+  from a known fact in tens.
+procedure:
+- Rewrite a - b = ? as b + ? = a.
+- Find the missing multiple of 10, using the matching one-digit fact in tens (5 + 3 = 8, so 50 + 30 =
+  80).
+- The missing addend is the difference.
+assess: Find 80 - 50 by thinking of 50 + ? = 80. Tell the fact you used.
+sources:
+  ccss:
+  - 1.NBT.C.6
+  learning_components:
+  - 0a9701cd
+requires:
+- clause: standard
+  all_of:
+  - node: subtraction.unknown-addend.rewrite
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites a - b = ? as b + ? = a, which is the rewrite of a subtraction as an unknown-addend
+      addition.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.decade.tens
+    relation: definitional
+    points_to: procedure.2
+    why: Step 2 uses the one-digit fact in tens, reading 50 and 30 as 5 tens and 3 tens.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

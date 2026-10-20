@@ -1,0 +1,112 @@
+id: multiplication.application.equal-groups
+concept: multiplication
+facet: equal-groups
+level: 2
+type: application
+name: Solve one-step multiplication word problems within 100
+statement: A story gives a number of equal groups (objects in bags, rows of an array, or equal measures)
+  and the size of each, with a total within 100; the learner finds the total, using a drawing or an equation.
+assess: A baker puts 6 muffins in each box and fills 7 boxes. How many muffins does she pack?
+sources:
+  ccss:
+  - 3.OA.A.3
+  learning_components:
+  - 2b280d60
+  - fc8751b8
+requires:
+- clause: via-next-ten
+  all_of:
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: The story gives a number of equal groups and the size of each, and the total is the product of
+      the two.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.situation-to-expression
+    relation: representational
+    points_to: statement
+    why: Using a drawing or an equation to find the total means modeling the equal-groups story and writing
+      a multiplication expression.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.two-digit-plus-one-digit.next-ten
+    relation: procedural
+    points_to: statement
+    why: Totals within 100 are found by repeated addition of the group size, which passes 20 and needs
+      two-digit sums.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Repeated addition past 20 is one way to find a total within 100; a drawing of
+        the groups can be counted instead of added. | other route: Draw the equal groups and count all
+        the objects (counting.objects, counting.sequence.to-100), with no addition strategy.'
+    status: disputed
+- clause: critic-route-1
+  note: Draw the equal groups and count all the objects instead of adding.
+  all_of:
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: The story gives a number of equal groups and the size of each, and the total is the product of
+      the two.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.situation-to-expression
+    relation: representational
+    points_to: statement
+    why: Using a drawing or an equation to find the total means modeling the equal-groups story and writing
+      a multiplication expression.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.objects
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Draw the equal groups and count all the objects instead
+      of adding.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: counting.sequence.to-100
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Draw the equal groups and count all the objects instead
+      of adding.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

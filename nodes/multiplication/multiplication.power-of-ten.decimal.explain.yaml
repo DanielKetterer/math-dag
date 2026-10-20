@@ -1,0 +1,71 @@
+id: multiplication.power-of-ten.decimal.explain
+concept: multiplication
+facet: base-ten
+level: 4
+type: justification
+name: Explain why multiplying by 10^k moves the decimal point k places right
+statement: Each place is worth 10 times the place to its right, so multiplying by 10 makes every digit
+  worth 10 times as much, which moves it one place left relative to the decimal point; doing this k times
+  moves every digit k places left, so the point appears k places to the right.
+assess: Explain, using place value, why 0.47 x 100 = 47.
+sources:
+  ccss:
+  - 5.NBT.A.2
+  learning_components:
+  - 53dba7fb
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.power-of-ten.decimal.rule
+    relation: definitional
+    points_to: statement
+    why: The statement explains why the decimal point moves k places right, so the rule is what is justified.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.ten-times-right.decimal
+    relation: justificatory
+    points_to: statement
+    why: The explanation says each place is worth 10 times the place to its right, including decimal places.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.power-of-ten.notation
+    relation: justificatory
+    points_to: statement
+    why: The explanation repeats the multiplying-by-10 step k times, which is the meaning of 10^k as k
+      factors of 10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.associative
+    relation: justificatory
+    points_to: statement
+    why: Multiplying by 10^k as k separate multiplications by 10 regroups the factors, which is the associative
+      property.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

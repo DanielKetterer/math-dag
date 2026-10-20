@@ -1,0 +1,159 @@
+id: equation.unknown.subtraction
+concept: equation
+facet: relational
+level: 2
+type: procedure
+name: Find the unknown in a subtraction equation
+statement: In an equation relating three whole numbers by subtraction (a - b = c, written either way round),
+  the unknown may be the minuend, the subtrahend, or the difference; it is the number that makes the equation
+  true.
+procedure:
+- If the difference is unknown, subtract.
+- If the subtrahend is unknown, find how many must be taken from a to leave c (a - c).
+- If the minuend is unknown, find the number that b and c together make (b + c).
+- Check that the number makes the two sides equal.
+assess: 'Find the number that makes each equation true: 5 = ? - 3;  12 - ? = 8;  ? - 6 = 7;  15 - 9 =
+  ?.'
+sources:
+  ccss:
+  - 1.OA.D.8
+  learning_components:
+  - fb83f538
+requires:
+- clause: via-meaning
+  all_of:
+  - node: equation.equal-sign.meaning
+    relation: definitional
+    points_to: procedure.4
+    why: Step 4 checks both sides are equal, and equations such as 5 = ? - 3 put the difference on the
+      left.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.notation.equation
+    relation: representational
+    points_to: statement
+    why: The equations are read as three whole numbers related by subtraction, with a box for the unknown.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.count-back
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 subtracts when the difference is unknown, which can be done by counting back.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.count-on
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds b and c to find the minuend, which can be done by counting on.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.unknown-addend.meaning
+    relation: justificatory
+    points_to: procedure.3
+    why: Step 3 finds an unknown minuend as b + c, which holds because a difference is an unknown addend.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Knowing the minuend is b + c can come from the unknown-addend meaning. | other
+        route: Part-whole route: the start splits into the amount taken and the amount left (number-composition.within-10.equation),
+        with count-on and count-back for the arithmetic.'
+    status: disputed
+- clause: critic-route-1
+  note: 'Part-whole route: the start is the left plus the taken, from a split of the start.'
+  all_of:
+  - node: equation.equal-sign.meaning
+    relation: definitional
+    points_to: procedure.4
+    why: Step 4 checks both sides are equal, and equations such as 5 = ? - 3 put the difference on the
+      left.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.notation.equation
+    relation: representational
+    points_to: statement
+    why: The equations are read as three whole numbers related by subtraction, with a box for the unknown.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.count-back
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 subtracts when the difference is unknown, which can be done by counting back.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.count-on
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds b and c to find the minuend, which can be done by counting on.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number-composition.within-10.equation
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Part-whole route: the start is the left plus the taken,
+      from a split of the start.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

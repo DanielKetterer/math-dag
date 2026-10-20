@@ -1,0 +1,79 @@
+id: subtraction.base-ten.strategy
+concept: subtraction
+facet: base-ten
+level: 3
+type: procedure
+name: Subtract within 1000 by taking away place-value parts, without a model
+statement: Subtract within 1000, without blocks or drawings, by taking away the subtrahend's hundreds,
+  then its tens, then its ones, one part at a time.
+procedure:
+- Split the subtrahend into hundreds, tens, and ones.
+- Subtract the hundreds part from the minuend.
+- Subtract the tens part from that result.
+- Subtract the ones part from that result; this is the difference.
+assess: Without blocks or drawings, find 724 - 358 by subtracting 300, then 50, then 8.
+sources:
+  ccss:
+  - 2.NBT.B.5
+  - 3.NBT.A.2
+  learning_components:
+  - 41093be0
+  - 18fca54d
+requires:
+- clause: standard
+  all_of:
+  - node: place-value.expanded-form
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 splits the subtrahend into hundreds, tens and ones, which is writing it in expanded form.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.base-ten.like-units
+    relation: definitional
+    points_to: statement
+    why: The statement takes away the hundreds, then the tens, then the ones, each part being a like-unit
+      subtraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.base-ten.decompose-unit
+    relation: procedural
+    points_to: procedure.3
+    why: Steps 3 and 4 often need a ten or hundred broken into smaller units, as in 424 - 50 and 374 -
+      8.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-20.fluency
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 subtracts a ones part such as 14 - 8 from a number whose ones digit is smaller.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

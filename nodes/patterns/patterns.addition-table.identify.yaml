@@ -1,0 +1,44 @@
+id: patterns.addition-table.identify
+concept: patterns
+facet: table
+level: 2
+type: concept
+name: Identify a pattern in the addition table
+statement: The entries of the addition table follow regular patterns, such as each entry being one more
+  than the entry to its left, and equal sums lying along diagonals.
+assess: Look at this addition table for 0 to 9. Describe one pattern you see along a row and one along
+  a diagonal.
+sources:
+  ccss:
+  - 3.OA.D.9
+  learning_components:
+  - d340a239
+  - 11d23252
+requires:
+- clause: standard
+  all_of:
+  - node: data.graphs.read
+    relation: representational
+    points_to: statement
+    why: The patterns are seen by reading values along rows and diagonals of a table.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The name suggests reading data from graphs, but the target reads a two-way arithmetic
+        table (rows, diagonals).'
+    status: disputed
+  - node: table.read-two-way
+    relation: definitional
+    points_to: statement
+    why: 'The learner must read a two-way table: an entry is the sum of its row and column labels, and
+      rows, columns and diagonals are lines of entries. data.graphs.read may or may not cover this.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed
