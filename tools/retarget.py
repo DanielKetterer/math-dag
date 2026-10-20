@@ -56,28 +56,60 @@ def batch_nodes(d):
     return out
 
 
-def packet(d):
-    retired = json.load(open(os.path.join(d, "retired.json")))
+def node_info(d):
+    """Every node a candidate may name: on disk, in this run's batches, or in its skeletons."""
     new = batch_nodes(d)
+    for p in glob.glob(os.path.join(d, "skeletons", "*.yaml")):
+        if not p.endswith(".extra.yaml"):
+            for n in yaml.safe_load(open(p, encoding="utf-8")) or []:
+                new.setdefault(n["id"], n)
     for nid, p in nodes_on_disk().items():
         new.setdefault(nid, yaml.safe_load(open(p, encoding="utf-8")))
+    return new
+
+
+def packet(d):
+    """Re-point map: retired ids (retired.json) plus <dir>/retarget/spec.yaml `repoint`
+    (old target -> candidates; the old target itself may be kept). `attach` lists new
+    nodes and candidate dependents that may need an edge to them."""
+    retired = json.load(open(os.path.join(d, "retired.json"))) if os.path.exists(os.path.join(d, "retired.json")) else {}
+    spec_p = os.path.join(d, "retarget", "spec.yaml")
+    spec = yaml.safe_load(open(spec_p, encoding="utf-8")) if os.path.exists(spec_p) else {}
+    repoint = {rid: r["replaced_by"] + ALSO.get(rid, []) for rid, r in retired.items()}
+    for old, cands in (spec.get("repoint") or {}).items():
+        repoint[old] = list(dict.fromkeys(repoint.get(old, []) + cands))
+    new = node_info(d)
+
+    def card(t):
+        n = new[t]
+        return {"id": t, "level": n["level"], "type": n["type"], "name": n["name"], "statement": n["statement"]}
+
     edges, k = {}, 0
     for nid, p in sorted(nodes_on_disk().items()):
         n = yaml.safe_load(open(p, encoding="utf-8"))
         for c in n.get("requires") or []:
             for e in c["all_of"]:
-                if e["node"] in retired:
+                if e["node"] in repoint:
                     k += 1
                     edges[f"r{k}"] = {"node": nid, "route": c["clause"], "old_target": e["node"],
                                       "statement": n["statement"], "procedure": n.get("procedure"),
                                       "assess": n["assess"], "points_to": e.get("points_to"),
                                       "scope": e.get("scope", "concept"), "why": e.get("why")}
-    cands = {rid: [{"id": t, "level": new[t]["level"], "type": new[t]["type"], "name": new[t]["name"],
-                    "statement": new[t]["statement"]} for t in r["replaced_by"] + ALSO.get(rid, []) if t in new]
-             for rid, r in retired.items()}
+    cands = {rid: [card(t) for t in ts if t in new] for rid, ts in repoint.items()}
+    attach, j = {}, 0
+    for newid, deps in (spec.get("attach") or {}).items():
+        for nid in deps:
+            n = new[nid]
+            j += 1
+            attach[f"a{j}"] = {"new": newid, "node": nid, "statement": n["statement"],
+                               "procedure": n.get("procedure"), "assess": n["assess"]}
+    for newid in (spec.get("attach") or {}):
+        cands.setdefault("_attach", []).append(card(newid))
     os.makedirs(os.path.join(d, "retarget"), exist_ok=True)
-    json.dump({"candidates": cands, "edges": edges}, open(os.path.join(d, "retarget", "in.json"), "w"), indent=1)
-    print(f"{len(edges)} edges to re-point, {sum(len(v) for v in cands.values())} candidate nodes")
+    json.dump({"candidates": cands, "edges": edges, "attach": attach},
+              open(os.path.join(d, "retarget", "in.json"), "w"), indent=1)
+    print(f"{len(edges)} edges to re-point, {len(attach)} attach checks, "
+          f"{sum(len(v) for v in cands.values())} candidate cards")
 
 
 def apply(d):
@@ -107,8 +139,11 @@ def apply(d):
                 if x["node"] != e["old_target"]:
                     outl.append(x)
                     continue
-                for t in new_targets:
-                    if any(y["node"] == t for y in outl) or any(y["node"] == t for y in c["all_of"]):
+                if e["old_target"] in new_targets:
+                    outl.append(x)  # the old target is kept
+                for t in [t for t in new_targets if t != e["old_target"]]:
+                    if any(y["node"] == t for y in outl) or any(y["node"] == t for y in c["all_of"]
+                                                                   if y["node"] != e["old_target"]):
                         continue
                     y = copy.deepcopy(x)
                     y["node"] = t
@@ -121,6 +156,32 @@ def apply(d):
             yaml.dump(n, f, Dumper=NoAlias, sort_keys=False, width=100, allow_unicode=False)
         changed.add(e["node"])
         log.append(f"- {eid} {e['node']} ({e['route']}): {e['old_target']} -> {new_targets}")
+    for aid, a in (inp.get("attach") or {}).items():
+        v = out.get(aid)
+        if not v or not v.get("add"):
+            continue
+        p = paths.get(a["node"])
+        if not p or a["new"] not in node_info(d):
+            log.append(f"- {aid} {a['node']} -> {a['new']}: NOT APPLIED (node missing)")
+            continue
+        n = yaml.safe_load(open(p, encoding="utf-8"))
+        pt = v.get("points_to") or "statement"
+        edge = {"node": a["new"], "relation": v.get("relation") or "definitional", "points_to": pt,
+                "why": v.get("why") or v.get("reason"),
+                "evidence": [{"kind": "content", "source": "retarget-sonnet", "note": "attach to a new node"}],
+                "status": "disputed"}
+        if v.get("scope") == "task":
+            edge["scope"], edge["points_to"] = "task", "assess"
+        if not n.get("requires"):
+            n["requires"] = [{"clause": "standard", "all_of": []}]
+            n.pop("root_reason", None)
+        for c in n["requires"]:
+            if not any(x["node"] == a["new"] for x in c["all_of"]):
+                c["all_of"].append(copy.deepcopy(edge))
+        with open(p, "w", encoding="utf-8") as f:
+            yaml.dump(n, f, Dumper=NoAlias, sort_keys=False, width=100, allow_unicode=False)
+        changed.add(a["node"])
+        log.append(f"- {aid} {a['node']}: added edge to {a['new']}")
     open(os.path.join(d, "retarget", "applied.md"), "w").write(
         "# Retarget applied\n\n" + "\n".join(log) + "\n")
     print(f"{len(changed)} node files changed; log in {os.path.join(d, 'retarget', 'applied.md')}")

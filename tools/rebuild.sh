@@ -5,13 +5,15 @@
 # retired ids and must come after every merge.
 set -e
 cd "$(dirname "$0")/.."
-for r in pilot/run pilot/run/prek pilot/run/fixes pilot/run/p1; do
+for r in pilot/run pilot/run/prek pilot/run/fixes pilot/run/p1 pilot/run/p2; do
   if [ -f "$r/critic/_mapping.json" ] && ls "$r"/critic/verdicts-*.json >/dev/null 2>&1; then
     python3 tools/merge_run.py "$r" > /dev/null
     echo "merged $r"
   fi
 done
-if [ -f pilot/run/p1/retarget/out.json ]; then
-  python3 tools/retarget.py apply pilot/run/p1
-fi
+for r in pilot/run/p1 pilot/run/p2; do
+  if [ -f "$r/retarget/out.json" ]; then
+    python3 tools/retarget.py apply "$r"
+  fi
+done
 python3 tools/check.py | sed -n '1,14p'
