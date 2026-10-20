@@ -86,6 +86,11 @@ A candidate is a node only if all three hold:
    **(checked: reported as merge candidates)**
 3. **It is learnable.** See 3.4.
 
+4. **Range rule** (Daniel, 2026-10-20). A number range changes the mathematics
+   exactly when it changes the prerequisite set. Two range variants that need
+   different prerequisites (adding within 100 needs tens; within 1000 needs
+   hundreds) are two nodes; variants with the same prerequisites are one.
+
 Nodes are never split for convenience and never merged for tidiness. Splits
 and merges come from rules 1-3 or from a reviewer's call.
 

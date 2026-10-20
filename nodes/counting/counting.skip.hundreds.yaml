@@ -15,11 +15,11 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: counting.sequence.to-100
+  - node: counting.number-words.vocabulary
     relation: definitional
     points_to: statement
-    why: The words one hundred and the digit words one to nine, combined into two hundred and three hundred,
-      come from the sequence to 100.
+    why: The names one hundred, two hundred, ..., nine hundred are the digit words one to nine followed
+      by the word hundred.
     evidence:
     - kind: content
       source: pass-P
@@ -28,7 +28,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A24 replace: Daniel: counting by ones to 100 is not required for counting hundreds. Claude:
+        the node uses only the digit words one to nine with hundred, so the edge points at those words.'
+    status: reviewed
   - node: counting.number-word.thousand
     relation: definitional
     points_to: statement

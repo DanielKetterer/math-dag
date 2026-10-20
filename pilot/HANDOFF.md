@@ -1,6 +1,31 @@
-# Handoff: big run phase 1 complete, awaiting Daniel's review (2026-10-20)
+# Handoff: big run phase 1 reviewed and applied (2026-10-20)
 
 Read this first in a new session. Then RULES.md.
+
+## Phase 1 review (2026-10-20)
+
+- Answers: pilot/run/p1/REVIEW_ANSWERS.txt, encoded in pilot/run/p1/overrides.yaml
+  and applied (sh tools/rebuild.sh). Precision of kept edges, random 40:
+  30/40 = 75% (about 60-86%), below the pilot (35/40) and pre-K (32/40).
+  Critic drops: 19/20 upheld (B56 restored).
+- 7 of the 10 wrong edges name one method for a sub-computation (count all,
+  partial products, partial sums, base-ten model) where any method would do.
+  Cause: retiring addition.whole-number etc. left no method-neutral node to
+  point at, and the N4 writer folded fluency into strategy nodes. Proposed:
+  method-neutral computation nodes by range (add/subtract within 100 and
+  within 1000, multiply and divide by a one-digit number), with strategy and
+  algorithm as routes into them.
+- Pending Daniel (Claude pushed back): A4, A14, A17, D91 (a method edge
+  dropped or made a route leaves the sub-computation with no prerequisite;
+  point at the method-neutral node instead), A35 (two-step node says 'unknown
+  in any position', so either keep the subtype edges or narrow the statement).
+- Applied: cycles of F95 and F96 removed (set_routes); F99 regrouping edges now
+  point at compose-unit/decompose-unit; C63 now points at ten-times-right.
+- Next slice (fold into phase 2 rather than run alone): splits of F97 by the
+  new range rule (RULES 2.4, accepted), expressions.parentheses (F98),
+  expressions.order-of-operations (D90), equation.unknown-symbol (D94),
+  table.read-two-way (C61-62), decimal.thousandths.notation, the
+  method-neutral computation nodes, and the F100 multistep split.
 
 ## Phase 1 (K-5 number and operations): done
 

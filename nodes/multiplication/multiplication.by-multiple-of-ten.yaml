@@ -45,11 +45,10 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: place-value.ten-times-right
+  - node: addition.base-ten.compose-unit
     relation: procedural
     points_to: procedure.1
-    why: Step 1 also writes a multiple of 1000 as a number of thousands, which needs the higher whole-number
-      places.
+    why: Naming 42 tens as 420 trades ten tens for a hundred, which is composing a unit.
     evidence:
     - kind: content
       source: pass-P
@@ -58,7 +57,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'F99 replace: Daniel F99: as for addition.'
+    status: reviewed
   - node: multiplication.facts.within-100
     relation: procedural
     points_to: procedure.2
@@ -71,22 +73,14 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A39 keep: Not marked (Daniel, 2026-10-20).'
+    status: reviewed
   - node: multiplication.equal-groups.meaning
     relation: definitional
     points_to: statement
     why: The statement reads 9 x 80 as 9 groups of 8 tens, which uses a product as a number of equal groups.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
-  - node: addition.base-ten.compose-unit
-    relation: procedural
-    points_to: procedure.3
-    why: Step 3 turns 72 tens into 720, which regroups ten tens as a hundred.
     evidence:
     - kind: content
       source: pass-P

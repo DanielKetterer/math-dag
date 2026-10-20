@@ -1,0 +1,69 @@
+# Review verdicts applied by merge_run
+
+- A24 counting.skip.hundreds -> counting.sequence.to-100: replaced by counting.number-words.vocabulary
+- place-value.hundreds.multiples: route via-hundreds removed (superset of another route); moved to related: ['counting.skip.hundreds']
+- place-value.hundreds.multiples: only route left, renamed critic-route-1 -> standard
+- place-value.tenth-of-left: route via-decimal removed (superset of another route); moved to related: ['place-value.ten-times-right.decimal']
+- place-value.tenth-of-left: only route left, renamed critic-route-1 -> standard
+- D81 place-value.expanded-form -> addition.notation.expression: task
+- A9 rounding.whole-number.any-place -> rounding.whole-number.nearest-ten-hundred: moved to related (common_path)
+- A37 addition.add-to.fingers -> addition.add-to.count-all: moved to related (common_path)
+- A21 addition.notation.equation -> addition.add-to.describe: moved to related (common_path)
+- subtraction.unknown-addend.meaning: route critic-route-1 removed (superset of another route); moved to related: nothing
+- subtraction.unknown-addend.meaning: route critic-route-2 removed (superset of another route); moved to related: nothing
+- F96, D82-D84 subtraction.unknown-addend.meaning: routes set to [('standard', ['subtraction.notation.equation', 'addition.notation.equation', 'number-composition.within-10.equation'])]; related ['subtraction.comparison.number-line', 'addition.add-to.number-line']; dropped []
+- B56 subtraction.unknown-addend.strategy -> subtraction.unknown-addend.meaning: restore
+- D68 addition.make-ten -> addition.notation.expression: dropped
+- subtraction.within-20.fluency: route critic-route-1 removed (superset of another route); moved to related: nothing
+- subtraction.within-20.fluency: route critic-route-2 removed (superset of another route); moved to related: nothing
+- equation.equal-sign.meaning: route critic-route-1 removed (superset of another route); moved to related: nothing
+- F95, D65, D66 equation.equal-sign.meaning: routes set to [('via-same-number', ['addition.add-to.fingers:task', 'addition.notation.expression', 'addition.count-on:task', 'comparing.count.small-equal'])]; related []; dropped ['comparing.whole-numbers.symbols']
+- equation.equal-sign.meaning: only route left, renamed via-same-number -> standard
+- addition.application.add-to.change-unknown: route critic-route-1 removed (superset of another route); moved to related: nothing
+- addition.application.add-to.change-unknown: route critic-route-2 removed (superset of another route); moved to related: nothing
+- addition.application.add-to.start-unknown: route critic-route-1 removed (superset of another route); moved to related: nothing
+- addition.application.add-to.start-unknown: route critic-route-2 removed (superset of another route); moved to related: nothing
+- subtraction.application.take-from.change-unknown: route critic-route-1 removed (superset of another route); moved to related: nothing
+- subtraction.application.take-from.change-unknown: route critic-route-2 removed (superset of another route); moved to related: nothing
+- subtraction.application.take-from.start-unknown: route critic-route-1 removed (superset of another route); moved to related: nothing
+- subtraction.application.take-from.start-unknown: route critic-route-2 removed (superset of another route); moved to related: nothing
+- addition.application.put-together.addend-unknown: route critic-route-1 removed (superset of another route); moved to related: nothing
+- addition.application.put-together.addend-unknown: route critic-route-2 removed (superset of another route); moved to related: nothing
+- subtraction.application.compare.difference-unknown: route critic-route-1 removed (superset of another route); moved to related: nothing
+- subtraction.application.compare.difference-unknown: route critic-route-2 removed (superset of another route); moved to related: nothing
+- subtraction.application.compare.bigger-unknown: route critic-route-1 removed (superset of another route); moved to related: nothing
+- subtraction.application.compare.bigger-unknown: route critic-route-2 removed (superset of another route); moved to related: nothing
+- subtraction.application.compare.smaller-unknown: route critic-route-1 removed (superset of another route); moved to related: nothing
+- subtraction.application.compare.smaller-unknown: route critic-route-2 removed (superset of another route); moved to related: nothing
+- C64 equation.situation.two-step -> addition.application.two-step: dropped
+- A22 operations.application.multistep.equation -> operations.application.multistep: dropped
+- operations.application.reasonableness: route via-nearest-ten-hundred removed (superset of another route); moved to related: ['rounding.whole-number.nearest-ten-hundred']
+- operations.application.reasonableness: only route left, renamed critic-route-1 -> standard
+- operations.application.justify-solution: route via-meaning removed (superset of another route); moved to related: ['division.unknown-factor.meaning', 'subtraction.unknown-addend.meaning']
+- operations.application.justify-solution: only route left, renamed critic-route-1 -> standard
+- multiplication.comparison.application.divide: route via-statement-to-equation removed (superset of another route); moved to related: ['multiplication.comparison.statement-to-equation']
+- multiplication.comparison.application.divide: only route left, renamed critic-route-1 -> standard
+- multiplication.comparison.application.equation: route via-equation-from-story removed (superset of another route); moved to related: ['division.unknown-factor.equation-from-story']
+- multiplication.comparison.application.equation: only route left, renamed critic-route-1 -> standard
+- C61 patterns.addition-table.identify -> data.graphs.read: dropped
+- C62 patterns.multiplication-table.identify -> data.graphs.read: dropped
+- addition.standard-algorithm: route via-compose-unit removed (superset of another route); moved to related: ['addition.base-ten.compose-unit']
+- addition.standard-algorithm: only route left, renamed critic-route-1 -> standard
+- F99 addition.standard-algorithm -> place-value.ten-times-right: replaced by addition.base-ten.compose-unit
+- subtraction.standard-algorithm: route via-decompose-unit removed (superset of another route); moved to related: ['subtraction.base-ten.decompose-unit']
+- subtraction.standard-algorithm: only route left, renamed critic-route-1 -> standard
+- F99 subtraction.standard-algorithm -> place-value.ten-times-right: replaced by subtraction.base-ten.decompose-unit
+- F99 multiplication.by-multiple-of-ten -> place-value.ten-times-right: replaced by addition.base-ten.compose-unit
+- C63 multiplication.multiple-of-ten.by-multiple-of-ten -> place-value.hundreds.multiples: replaced by place-value.ten-times-right
+- multiplication.area-model.by-one-digit.explain: route via-by-one-digit removed (superset of another route); moved to related: ['area.composite-additive', 'multiplication.partial-products.by-one-digit']
+- multiplication.area-model.by-one-digit.explain: only route left, renamed critic-route-1 -> standard
+- multiplication.area-model.two-digit-by-two-digit.explain: route via-two-digit-by-two-digit removed (superset of another route); moved to related: ['area.composite-additive', 'multiplication.partial-products.two-digit-by-two-digit']
+- multiplication.area-model.two-digit-by-two-digit.explain: only route left, renamed critic-route-1 -> standard
+- multiplication.standard-algorithm: route via-by-one-digit removed (superset of another route); moved to related: ['multiplication.partial-products.by-one-digit']
+- multiplication.standard-algorithm: route via-compose-unit removed (superset of another route); moved to related: ['addition.base-ten.compose-unit']
+- multiplication.standard-algorithm: only route left, renamed critic-route-1 -> standard
+- division.power-of-ten.rule: route critic-route-1 removed (superset of another route); moved to related: nothing
+- division.power-of-ten.rule: route critic-route-2 removed (superset of another route); moved to related: nothing
+- A25 decimal.addition.model -> addition.base-ten.model: moved to related (common_path)
+- decimal.multiplication.by-decimal.model: route via-tiling removed (superset of another route); moved to related: ['multiplication.array-area.fraction-sides.tiling']
+- decimal.multiplication.by-decimal.model: only route left, renamed critic-route-1 -> standard

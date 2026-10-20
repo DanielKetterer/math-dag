@@ -24,11 +24,11 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: place-value.ten-times-right
+  - node: subtraction.base-ten.decompose-unit
     relation: representational
     points_to: procedure.1
-    why: Step 1 aligns digits of the same place value, and multi-digit numbers have places each ten times
-      the place to the right.
+    why: Each regrouping trades one unit of a place for ten units of the next smaller place, which is
+      decomposing a unit.
     evidence:
     - kind: content
       source: pass-P
@@ -37,7 +37,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'F99 replace: Daniel F99: as for addition.'
+    status: reviewed
   - node: subtraction.within-20.fluency
     relation: procedural
     points_to: procedure.2

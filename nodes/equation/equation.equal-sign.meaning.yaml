@@ -14,7 +14,7 @@ sources:
   learning_components:
   - 93ef1daf
 requires:
-- clause: via-symbols
+- clause: standard
   all_of:
   - node: addition.add-to.fingers
     relation: procedural
@@ -28,7 +28,11 @@ requires:
       source: critic-sonnet
       note: 'task-only: Only the test problem needs the values of 3 + 4 and 7 + 2; fingers are one way
         to get them, and the idea of the equal sign does not require it.'
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'F95, D65, D66 set_routes: Daniel F95: drop the via-symbols route (it made a cycle with comparing.whole-numbers.symbols);
+        keep the same-number route.'
+    status: reviewed
   - node: addition.notation.expression
     relation: representational
     points_to: statement
@@ -40,7 +44,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'F95, D65, D66 set_routes: Daniel F95: drop the via-symbols route (it made a cycle with comparing.whole-numbers.symbols);
+        keep the same-number route.'
+    status: reviewed
   - node: addition.count-on
     relation: procedural
     points_to: assess
@@ -53,64 +61,11 @@ requires:
       source: critic-sonnet
       note: 'task-only: Only the test problem needs the values of the two sums; counting on is one way
         to get them.'
-    status: proposed
-  - node: comparing.whole-numbers.symbols
-    relation: definitional
-    points_to: statement
-    why: The equal sign states that two numbers have the same value, as the = in a comparison of two whole
-      numbers does.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Using = for ''same number'' in a whole-number comparison is one way into the
-        relational meaning. | other route: Same-number route: recognizing two sets as the same number
-        (comparing.count.small-equal) together with reading sums as values (addition.notation.expression).'
-    status: disputed
-- clause: critic-route-2
-  note: 'Same-number route: two sets recognized as the same number, sums read as values.'
-  all_of:
-  - node: addition.add-to.fingers
-    relation: procedural
-    points_to: assess
-    why: Deciding whether 3 + 4 = 7 + 2 requires finding the value of each sum, which can be done on fingers.
-    scope: task
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: critic-sonnet
-      note: 'task-only: Only the test problem needs the values of 3 + 4 and 7 + 2; fingers are one way
-        to get them, and the idea of the equal sign does not require it.'
-    status: proposed
-  - node: addition.notation.expression
-    relation: representational
-    points_to: statement
-    why: Both sides in the examples are sums, so the learner must read an expression as standing for a
-      value.
-    evidence:
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
-  - node: addition.count-on
-    relation: procedural
-    points_to: assess
-    why: The test problem needs the values of 3 + 4 and 7 + 2 to see whether they are equal.
-    scope: task
-    evidence:
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'task-only: Only the test problem needs the values of the two sums; counting on is one way
-        to get them.'
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'F95, D65, D66 set_routes: Daniel F95: drop the via-symbols route (it made a cycle with comparing.whole-numbers.symbols);
+        keep the same-number route.'
+    status: reviewed
   - node: comparing.count.small-equal
     relation: definitional
     points_to: statement
@@ -120,7 +75,14 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing route
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D66 keep: Daniel: route or added route accepted.'
+    - kind: review
+      source: DK
+      note: 'F95, D65, D66 set_routes: Daniel F95: drop the via-symbols route (it made a cycle with comparing.whole-numbers.symbols);
+        keep the same-number route.'
+    status: reviewed
 related:
 - node: addition.notation.equation
   relation: contrasts_with

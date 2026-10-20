@@ -81,7 +81,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'A3 keep: Not marked (Daniel, 2026-10-20).'
+    status: reviewed
   - node: addition.base-ten.compose-unit
     relation: procedural
     points_to: procedure.3
@@ -93,10 +96,11 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: place-value.hundreds.multiples
+  - node: place-value.ten-times-right
     relation: procedural
     points_to: procedure.3
-    why: Step 3 reads 12 hundreds as 1200, since 10 x 10 = 100 makes the product a number of hundreds.
+    why: Naming 12 hundreds as 1200 uses ten hundreds making one thousand, a place being ten times the
+      place to its right.
     evidence:
     - kind: content
       source: pass-Q
@@ -105,5 +109,10 @@ requires:
       note: 'undecided: hundreds.multiples covers 100 to 900 as 1 to 9 hundreds, but step 3 reads counts
         like 12 hundreds as 1200. For counts above 9 the work is done by compose-unit (e542), so this
         edge may add nothing.'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'C63 replace: Daniel C63: hundreds.multiples covers only one to nine hundreds, so it does
+        not cover 12 hundreds = 1200. Claude: the product needs ten hundreds as a thousand, which is place-value.ten-times-right
+        (same grade).'
+    status: reviewed
 status: proposed

@@ -21,20 +21,6 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: rounding.whole-number.nearest-ten-hundred
-    relation: definitional
-    points_to: statement
-    why: Rounding to any place generalises rounding to the nearest ten or hundred, with the same rule
-      that halfway rounds up.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
   - node: place-value.ten-times-right
     relation: procedural
     points_to: procedure.1
@@ -63,4 +49,9 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
+related:
+- node: rounding.whole-number.nearest-ten-hundred
+  relation: common_path
+  note: 'Common path, not required (A9): Daniel: ROUTE - rounding to tens or hundreds is a common route,
+    not strictly necessary.'
 status: proposed

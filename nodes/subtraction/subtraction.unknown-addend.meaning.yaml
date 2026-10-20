@@ -13,7 +13,7 @@ sources:
   learning_components:
   - fb04b29a
 requires:
-- clause: via-equation
+- clause: standard
   all_of:
   - node: subtraction.notation.equation
     relation: representational
@@ -28,7 +28,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'F96, D82-D84 set_routes: Daniel F96: the distance route made a cycle; number-line reasoning
+        stays as an optional instructional route (related, common_path).'
+    status: reviewed
   - node: addition.notation.equation
     relation: representational
     points_to: statement
@@ -42,7 +46,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
-    status: proposed
+    - kind: review
+      source: DK
+      note: 'F96, D82-D84 set_routes: Daniel F96: the distance route made a cycle; number-line reasoning
+        stays as an optional instructional route (related, common_path).'
+    status: reviewed
   - node: number-composition.within-10.equation
     relation: justificatory
     points_to: statement
@@ -56,60 +64,21 @@ requires:
       note: 'route-only: Reading a = b + c as a split of a is one way into the equivalence (part-whole
         route). | other route: Number-line route: a forward jump of c from b ends at a (addition.add-to.number-line)
         and a - b is the distance from b to a (subtraction.comparison.number-line).'
-    status: disputed
-- clause: distance
-  all_of:
-  - node: subtraction.notation.equation
-    relation: representational
-    points_to: statement
-    why: The statement is about equations of the form a - b = c and what they say about the numbers a,
-      b, and c.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
-  - node: addition.notation.equation
-    relation: representational
-    points_to: statement
-    why: The statement links a - b = c to the addition equation b + c = a, which must be read as a joining
-      record.
-    evidence:
-    - kind: content
-      source: pass-P
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: necessary
-    status: proposed
-  - node: subtraction.comparison.number-line
-    relation: definitional
-    points_to: statement
-    why: The difference a - b is the distance from b to a, which is the number that must be added to b
-      to reach a.
-    evidence:
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Seeing a - b as the distance from b to a is one way into the equivalence (number-line
-        route).'
-    status: disputed
-  - node: addition.add-to.number-line
-    relation: representational
-    points_to: statement
-    why: Adding c to b is a jump of length c forward on the number line, ending at a.
-    evidence:
-    - kind: content
-      source: pass-Q
-    - kind: content
-      source: critic-sonnet
-      note: 'route-only: Adding c to b as a forward jump is one way to link a - b = c to b + c = a (number-line
-        route).'
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'D82 keep: Daniel: route or added route accepted.'
+    - kind: review
+      source: DK
+      note: 'F96, D82-D84 set_routes: Daniel F96: the distance route made a cycle; number-line reasoning
+        stays as an optional instructional route (related, common_path).'
+    status: reviewed
+related:
+- node: subtraction.comparison.number-line
+  relation: common_path
+  note: 'Common path, not required (F96, D82-D84): Daniel F96: the distance route made a cycle; number-line
+    reasoning stays as an optional instructional route (related, common_path).'
+- node: addition.add-to.number-line
+  relation: common_path
+  note: 'Common path, not required (F96, D82-D84): Daniel F96: the distance route made a cycle; number-line
+    reasoning stays as an optional instructional route (related, common_path).'
 status: proposed

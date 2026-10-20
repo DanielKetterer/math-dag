@@ -1,0 +1,503 @@
+# Daniel's review of big run phase 1 (pilot/run/p1/REVIEW.md), answers in
+# REVIEW_ANSWERS.txt (2026-10-20). Claude decisions on conditional answers are
+# marked "Claude"; they are Daniel's to reverse. ROUTE verdicts with no other
+# named route are applied as related (common_path): RULES 3.5.
+reviewer: DK
+review: pilot/run/p1/REVIEW.md, answers in REVIEW_ANSWERS.txt (2026-10-20)
+rename: {}
+pending: A4, A14, A17, A35, D91 (Claude pushed back, awaiting Daniel); F97, F98, F100 and new nodes (expressions.order-of-operations,
+  equation.unknown-symbol, table.read-two-way, method-neutral computation nodes) go into the next slice.
+edges:
+- item: A1
+  node: place-value.expanded-form
+  target: place-value.ten-times-right
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A2
+  node: addition.application.two-step
+  target: addition.base-ten.model
+  action: keep
+  reason: 'Daniel: TASK - valid for the stated test problem, not universal (already task-scoped).'
+- item: A3
+  node: multiplication.multiple-of-ten.by-multiple-of-ten
+  target: place-value.hundred.unit
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A5
+  node: parity.even.equal-addends
+  target: parity.even-odd.pairing
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A6
+  node: subtraction.base-ten.explain
+  target: place-value.expanded-form
+  action: keep
+  reason: 'Daniel: TASK - valid for the stated test problem, not universal (already task-scoped).'
+- item: A7
+  node: decimal.addition.model
+  target: place-value.ten-times-right.decimal
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A8
+  node: multiplication.partial-products.two-digit-by-two-digit
+  target: place-value.expanded-form
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A9
+  node: rounding.whole-number.any-place
+  target: rounding.whole-number.nearest-ten-hundred
+  action: related
+  reason: 'Daniel: ROUTE - rounding to tens or hundreds is a common route, not strictly necessary.'
+- item: A10
+  node: place-value.ten-times-right.decimal
+  target: decimal.tenths.notation
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A11
+  node: expressions.write.record-calculation
+  target: multiplication.equal-groups.situation-to-expression
+  action: keep
+  reason: 'Daniel: TASK - valid for the stated test problem, not universal (already task-scoped).'
+- item: A12
+  node: number-composition.within-10.equation
+  target: number-composition.within-10.decompose
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A13
+  node: addition.within-20.fluency
+  target: addition.within-10.fluency
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A15
+  node: addition.application.two-step
+  target: subtraction.base-ten.model
+  action: keep
+  reason: 'Daniel: TASK - valid for the stated test problem, not universal (already task-scoped).'
+- item: A16
+  node: division.by-zero.undefined
+  target: multiplication.by-zero
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A18
+  node: addition.two-digit-plus-tens.split-tens
+  target: place-value.two-digit.tens-ones
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A19
+  node: subtraction.base-ten.decompose-unit
+  target: place-value.ten.unit
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A20
+  node: addition.two-digit.relate-written
+  target: place-value.two-digit.tens-ones
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A21
+  node: addition.notation.equation
+  target: addition.add-to.describe
+  action: related
+  reason: 'Daniel: ROUTE - verbally describing joining is not necessary before writing an equation.'
+- item: A22
+  node: operations.application.multistep.equation
+  target: operations.application.multistep
+  action: drop
+  reason: 'Daniel: a learner can model an equation without first solving its story problem.'
+- item: A23
+  node: expressions.write.record-calculation
+  target: addition.notation.expression
+  action: keep
+  reason: 'Daniel: TASK - valid for the stated test problem, not universal (already task-scoped).'
+- item: A24
+  node: counting.skip.hundreds
+  target: counting.sequence.to-100
+  action: replace
+  reason: 'Daniel: counting by ones to 100 is not required for counting hundreds. Claude: the node uses
+    only the digit words one to nine with hundred, so the edge points at those words.'
+  with: counting.number-words.vocabulary
+  why: The names one hundred, two hundred, ..., nine hundred are the digit words one to nine followed
+    by the word hundred.
+- item: A25
+  node: decimal.addition.model
+  target: addition.base-ten.model
+  action: related
+  reason: 'Daniel: ROUTE - whole-number model addition helps, but direct decimal modeling is possible.'
+- item: A26
+  node: patterns.numerical.relationship
+  target: multiplication.comparison.vs-additive
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A27
+  node: addition.add-to.fingers
+  target: counting.produce-set
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A28
+  node: decimal.division.by-whole.model
+  target: decimal.hundredths.notation
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A29
+  node: multiplication.comparison.statement-to-equation
+  target: multiplication.comparison
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A30
+  node: place-value.hundreds.multiples
+  target: numeral.read.to-1000
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A31
+  node: place-value.teen.ten-and-ones
+  target: counting.objects
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A32
+  node: decimal.subtraction.model
+  target: place-value.ten-times-right.decimal
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A33
+  node: place-value.tenth-of-left
+  target: fraction.multiplication.parts-of-partition.whole-number
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A34
+  node: subtraction.application.compare.bigger-unknown
+  target: comparing.more-than
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A36
+  node: addition.base-ten.model
+  target: place-value.three-digit.hundreds-tens-ones
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A37
+  node: addition.add-to.fingers
+  target: addition.add-to.count-all
+  action: related
+  reason: 'Daniel: ROUTE - counting all is a strategy, not a prerequisite for finger addition (the route
+    keeps counting the raised fingers).'
+- item: A38
+  node: subtraction.decompose-to-ten
+  target: place-value.teen.ten-and-ones
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A39
+  node: multiplication.by-multiple-of-ten
+  target: multiplication.facts.within-100
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: A40
+  node: subtraction.base-ten.decompose-unit
+  target: place-value.hundred.unit
+  action: keep
+  reason: Not marked (Daniel, 2026-10-20).
+- item: B41
+  node: addition.add-to.describe
+  target: addition.add-to.count-all
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B42
+  node: number-composition.within-10.decompose
+  target: number-composition.part-whole.inexact
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B43
+  node: number-composition.make-ten.find
+  target: counting.sequence.count-on
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B44
+  node: addition.make-ten
+  target: number-composition.within-10.equation
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B45
+  node: place-value.ten.unit
+  target: place-value.teen.ten-and-ones
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B46
+  node: place-value.two-digit.tens-ones
+  target: addition.notation.expression
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B47
+  node: numeral.read.to-1000
+  target: place-value.three-digit.hundreds-tens-ones
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B48
+  node: numeral.read.to-1000
+  target: place-value.two-digit.tens-ones
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B49
+  node: multiplication.comparison
+  target: comparing.more-than
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B50
+  node: place-value.ten-times-right
+  target: numeral.read.periods
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B51
+  node: addition.base-ten.compose-unit
+  target: place-value.two-digit.tens-ones
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B52
+  node: addition.base-ten.like-units
+  target: addition.within-20.fluency
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B53
+  node: multiplication.facts.within-100
+  target: multiplication.by-one
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B54
+  node: multiplication.facts.within-100
+  target: multiplication.by-zero
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B55
+  node: subtraction.take-away.describe
+  target: subtraction.take-away.count-remaining
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B56
+  node: subtraction.unknown-addend.strategy
+  target: subtraction.unknown-addend.meaning
+  action: restore
+  reason: 'Daniel: KEEP - the missing-addend strategy depends on viewing a difference as an unknown addend;
+    its statement says c is the difference.'
+- item: B57
+  node: subtraction.decompose-to-ten
+  target: subtraction.within-10.fluency
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B58
+  node: subtraction.decompose-to-ten
+  target: number-composition.within-10.equation
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B59
+  node: equation.unknown.addition
+  target: equation.true-false
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: B60
+  node: subtraction.base-ten.like-units
+  target: subtraction.within-20.fluency
+  action: uphold
+  reason: Critic drop upheld (not marked).
+- item: C61
+  node: patterns.addition-table.identify
+  target: data.graphs.read
+  action: drop
+  reason: 'Daniel C61: data.graphs.read is reading graphs of data; the table structure is table.read-two-way,
+    which the node already needs.'
+- item: C62
+  node: patterns.multiplication-table.identify
+  target: data.graphs.read
+  action: drop
+  reason: 'Daniel C62: same decision as 61.'
+- item: C63
+  node: multiplication.multiple-of-ten.by-multiple-of-ten
+  target: place-value.hundreds.multiples
+  action: replace
+  reason: 'Daniel C63: hundreds.multiples covers only one to nine hundreds, so it does not cover 12 hundreds
+    = 1200. Claude: the product needs ten hundreds as a thousand, which is place-value.ten-times-right
+    (same grade).'
+  with: place-value.ten-times-right
+  why: Naming 12 hundreds as 1200 uses ten hundreds making one thousand, a place being ten times the place
+    to its right.
+- item: C64
+  node: equation.situation.two-step
+  target: addition.application.two-step
+  action: drop
+  reason: 'Daniel C64: writing linked equations can precede solving; the node says do not solve them.'
+- item: D66
+  node: equation.equal-sign.meaning
+  target: comparing.count.small-equal
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D67
+  node: place-value.teen.equation
+  target: equation.equal-sign.meaning
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D69
+  node: addition.within-20.fluency
+  target: addition.make-ten
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D70
+  node: addition.within-20.fluency
+  target: addition.count-on
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D71
+  node: place-value.ten.unit
+  target: counting.objects
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D72
+  node: place-value.decade.tens
+  target: counting.skip.tens.decades
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D73
+  node: place-value.two-digit.tens-ones
+  target: numeral.read
+  action: keep
+  reason: 'Daniel: KEEP, scope note - the dependency is numeral recognition, not fluent reading.'
+- item: D74
+  node: place-value.two-digit.tens-ones
+  target: place-value.teen.digits
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D75
+  node: place-value.two-digit.tens-ones
+  target: place-value.ten.unit
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D76
+  node: place-value.hundred.unit
+  target: counting.skip.tens.decades
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D77
+  node: place-value.hundred.unit
+  target: counting.objects
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D78
+  node: place-value.hundred.unit
+  target: counting.sequence.to-100
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D79
+  node: numeral.read.to-1000
+  target: counting.sequence.within-1000
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D80
+  node: numeral.read.to-1000
+  target: counting.sequence.to-100
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D82
+  node: subtraction.unknown-addend.meaning
+  target: number-composition.within-10.equation
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D85
+  node: subtraction.within-20.fluency
+  target: subtraction.decompose-to-ten
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D86
+  node: subtraction.within-20.fluency
+  target: subtraction.unknown-addend.strategy
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D87
+  node: subtraction.within-20.fluency
+  target: addition.within-20.fluency
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D88
+  node: multiplication.array.rows-columns
+  target: comparing.count.matching
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D89
+  node: multiplication.array.rows-columns
+  target: comparing.count.by-counting
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D90
+  node: expressions.grouping.evaluate
+  target: expressions.order-of-operations
+  action: keep
+  reason: 'Daniel: KEEP - step 3 uses the conventional order; write expressions.order-of-operations (3.OA.D.8
+    note).'
+- item: D92
+  node: equation.unknown.subtraction
+  target: subtraction.unknown-addend.meaning
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D93
+  node: equation.unknown.subtraction
+  target: number-composition.within-10.equation
+  action: keep
+  reason: 'Daniel: route or added route accepted.'
+- item: D94
+  node: equation.situation.one-step
+  target: equation.unknown-symbol
+  action: keep
+  reason: 'Daniel: KEEP - write equation.unknown-symbol: the symbol stands for an unspecified number.'
+- item: D68
+  node: addition.make-ten
+  target: addition.notation.expression
+  action: drop
+  reason: 'Daniel: making a ten can be introduced directly through an expression, a ten-frame, or objects.'
+- item: D81
+  node: place-value.expanded-form
+  target: addition.notation.expression
+  action: task
+  reason: 'Daniel: expanded form uses addition notation in the test task; place-value decomposition does
+    not depend on it in general.'
+- item: F99
+  node: addition.standard-algorithm
+  target: place-value.ten-times-right
+  action: replace
+  with: addition.base-ten.compose-unit
+  why: Each carry trades ten units of a place for one unit of the next place, which is composing a unit.
+  reason: 'Daniel F99: regrouping is grounded in ten units composing one of the next place, not the general
+    tenfold relation.'
+- item: F99
+  node: subtraction.standard-algorithm
+  target: place-value.ten-times-right
+  action: replace
+  with: subtraction.base-ten.decompose-unit
+  why: Each regrouping trades one unit of a place for ten units of the next smaller place, which is decomposing
+    a unit.
+  reason: 'Daniel F99: as for addition.'
+- item: F99
+  node: multiplication.by-multiple-of-ten
+  target: place-value.ten-times-right
+  action: replace
+  with: addition.base-ten.compose-unit
+  why: Naming 42 tens as 420 trades ten tens for a hundred, which is composing a unit.
+  reason: 'Daniel F99: as for addition.'
+set_routes:
+- item: F95, D65, D66
+  node: equation.equal-sign.meaning
+  reason: 'Daniel F95: drop the via-symbols route (it made a cycle with comparing.whole-numbers.symbols);
+    keep the same-number route.'
+  routes:
+  - name: via-same-number
+    note: Two sets recognized as the same number, sums read as values.
+    nodes:
+    - addition.add-to.fingers:task
+    - addition.notation.expression
+    - addition.count-on:task
+    - comparing.count.small-equal
+- item: F96, D82-D84
+  node: subtraction.unknown-addend.meaning
+  reason: 'Daniel F96: the distance route made a cycle; number-line reasoning stays as an optional instructional
+    route (related, common_path).'
+  routes:
+  - name: standard
+    nodes:
+    - subtraction.notation.equation
+    - addition.notation.equation
+    - number-composition.within-10.equation
+  to_related:
+  - subtraction.comparison.number-line
+  - addition.add-to.number-line
