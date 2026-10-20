@@ -24,7 +24,7 @@
 #   python3 tools/run_state.py --mark UNIT done --tokens N --commit SHA
 #   python3 tools/run_state.py --mark UNIT running
 
-run: prek + fixes + big run phase 1
+run: prek + fixes + big run phases 1-2
 description: Pre-K floor of the map, from developmental sources; then the fixes run
   (12 nodes the pilot and pre-K reviews found missing, 2026-10-19).
 
@@ -115,3 +115,11 @@ units:
   - {id: p1.N4.critic, stage: critic, strand: N4, after: [p1.N1.proposer-a, p1.N1.proposer-b, p1.N2.proposer-a, p1.N2.proposer-b, p1.N3.proposer-a, p1.N3.proposer-b, p1.N4.proposer-a, p1.N4.proposer-b], output: pilot/run/p1/critic/verdicts-N4.json, validate: critic, status: done, tokens: 160000, note: "ESTIMATE: agent stopped at a session rate limit after writing a complete file, so no usage was reported; 160k from the other critics", commit: pending}
   - {id: p1.merge, stage: merge, after: [p1.N1.critic, p1.N2.critic, p1.N3.critic, p1.N4.critic], output: pilot/run/p1/merge_report.md, validate: check, status: done, tokens: 0, commit: pending}
   - {id: p1.retarget, stage: review, strand: retarget, after: [p1.N1.writer, p1.N2.writer, p1.N3.writer, p1.N4.writer], output: pilot/run/p1/retarget/out.json, validate: exists, status: done, tokens: 105649, note: "10 decimal edges moved by Claude from L2 model nodes to later-phase algorithm ids"}
+
+  # ---------- big run, phase 2 (2026-10-20): K-5 measurement, data, geometry ----------
+  # At most 4 agents at a time (Daniel, 2026-10-20).
+  - {id: p2.M1.writer, stage: writer, strand: M1, after: [p1.merge], input: pilot/run/p2/input/M1.json, output: pilot/run/p2/skeletons/M1.yaml, validate: writer-lc, status: pending, tokens: 0}
+  - {id: p2.M2.writer, stage: writer, strand: M2, after: [p1.merge], input: pilot/run/p2/input/M2.json, output: pilot/run/p2/skeletons/M2.yaml, validate: writer-lc, status: pending, tokens: 0}
+  - {id: p2.M3.writer, stage: writer, strand: M3, after: [p1.merge], input: pilot/run/p2/input/M3.json, output: pilot/run/p2/skeletons/M3.yaml, validate: writer-lc, status: pending, tokens: 0}
+  - {id: p2.G1.writer, stage: writer, strand: G1, after: [p1.merge], input: pilot/run/p2/input/G1.json, output: pilot/run/p2/skeletons/G1.yaml, validate: writer-lc, status: pending, tokens: 0}
+  - {id: p2.G2.writer, stage: writer, strand: G2, after: [p1.merge], input: pilot/run/p2/input/G2.json, output: pilot/run/p2/skeletons/G2.yaml, validate: writer-lc, status: pending, tokens: 0}

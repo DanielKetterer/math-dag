@@ -37,6 +37,23 @@ PHASES = {
                ["2.NBT.B.5", "2.NBT.B.6", "2.NBT.B.7", "2.NBT.B.9", "3.NBT.A.2", "4.NBT.B.4",
                 "3.NBT.A.3", "4.NBT.B.5", "4.NBT.B.6", "5.NBT.A.2", "5.NBT.B", "5.OA"]),
     },
+    "p2": {
+        "M1": ("K-2 measurement and data: attributes, length units and tools, estimating length, time, money, "
+               "picture and bar graphs, line plots of lengths",
+               ["K.MD", "1.MD", "2.MD"]),
+        "M2": ("Grade 3 measurement and data: time intervals, liquid volume and mass, scaled graphs, line plots, "
+               "area (unit squares, tiling, length times width, decomposing), perimeter",
+               ["3.MD"]),
+        "M3": ("Grades 4-5 measurement and data: unit conversion, area and perimeter formulas, line plots with "
+               "fractions, angles and protractors, volume (unit cubes, length times width times height)",
+               ["4.MD", "5.MD"]),
+        "G1": ("K-2 geometry: naming, describing, analyzing, comparing and composing shapes; attributes; "
+               "partitioning rectangles into rows and columns",
+               ["K.G", "1.G", "2.G"]),
+        "G2": ("Grades 3-5 geometry: categories of shapes and their attributes, lines, rays, angles, "
+               "perpendicular and parallel, symmetry, the first-quadrant coordinate plane, classifying 2D figures",
+               ["3.G", "4.G", "5.G"]),
+    },
 }
 
 # Referenced-but-unwritten ids: meaning and the strand that writes them.
@@ -57,6 +74,13 @@ RESERVED = {
     "division.multi-digit": ("Divide multi-digit whole numbers, with remainders", "N4"),
     "decimal.operations": ("Add, subtract, multiply, divide decimals", "N4"),
     "patterns.numerical.two-rules": ("Generate two numerical patterns and form ordered pairs", "N4"),
+    # phase 2 owners
+    "area.rectangle.tiling": ("Area of a rectangle by tiling with unit squares", "M2"),
+    "area.rectangle.length-times-width": ("Area of a rectangle as length times width", "M2"),
+    "measurement.unit-conversion": ("Convert measurements within one system", "M3"),
+    "measurement.weight.attribute": ("Weight as an attribute of an object, separate from its size", "M1"),
+    "data.graphs.read": ("Read values from graphs and tables", "M1"),
+    "coordinate-plane.first-quadrant": ("Plot and read points in the first quadrant", "G2"),
     # left by the p1 retarget pass for skills a later phase writes (6.NS.B.3, 6.NS.B.4)
     "decimal.addition.algorithm": ("Add multi-digit decimals with the standard algorithm", "later"),
     "decimal.subtraction.algorithm": ("Subtract multi-digit decimals with the standard algorithm", "later"),
