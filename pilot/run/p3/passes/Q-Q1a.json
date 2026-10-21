@@ -1,0 +1,1156 @@
+{
+ "pass": "Q",
+ "batch": "Q1a",
+ "nodes": {
+  "division.standard-algorithm.long-division": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.whole-numbers.magnitude.multi-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 takes the fewest leading digits that form a number at least the divisor, which means comparing multi-digit numbers."
+      },
+      {
+       "node": "multiplication.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 forms q x divisor for a digit q and a divisor of any length, a whole number times a one-digit number."
+      },
+      {
+       "node": "subtraction.standard-algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 subtracts the product q x divisor from the current multi-digit number, and the last difference is the remainder."
+      },
+      {
+       "node": "division.remainder.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement asks for the whole-number quotient and the remainder, the amount left after making as many whole groups as possible."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.addition.algorithm": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.standard-algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Adding each column right to left with regrouping is the whole-number column algorithm carried out on aligned decimal columns."
+      },
+      {
+       "node": "decimal.thousandths.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Aligning digits of the same place value requires reading the place of every digit in decimals such as 4.385."
+      },
+      {
+       "node": "place-value.ten-times-right.decimal",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Regrouping 10 of a place as 1 of the next place to the left, even across the decimal point, uses each decimal place being ten times the place to its right."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.subtraction.algorithm": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.standard-algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Subtracting each column right to left and decomposing from the next place is the whole-number column algorithm applied to decimal columns."
+      },
+      {
+       "node": "decimal.thousandths.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Lining up decimal points so digits of the same place share a column requires reading the place of each decimal digit."
+      },
+      {
+       "node": "place-value.ten-times-right.decimal",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Writing zeros on the right to match decimal places and decomposing 1 of a place into 10 of the next both use each decimal place being ten times the one to its right."
+      },
+      {
+       "node": "decimal.compare",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes the greater number above the smaller, so the learner must decide which of two decimals is greater."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.multiplication.algorithm": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.standard-algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 multiplies the two factors as whole numbers with the standard algorithm, ignoring the decimal points."
+      },
+      {
+       "node": "decimal.thousandths.notation",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule counts decimal places in each factor, which means knowing what the digits to the right of the decimal point are."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.division.by-whole.algorithm": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.standard-algorithm.long-division",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 divides as with whole numbers, bringing down one digit at a time, which is the long-division algorithm itself."
+      },
+      {
+       "node": "decimal.thousandths.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The decimal point of the quotient is placed above the dividend's point, and the quotient digits after it are tenths, hundredths and so on."
+      },
+      {
+       "node": "place-value.ten-times-right.decimal",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Writing a 0 after the last digit of the dividend and continuing keeps the dividend's value only because each decimal place is ten times the one to its right."
+      }
+     ]
+    }
+   ]
+  },
+  "decimal.division.by-decimal.algorithm": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.equal-scaling.quotient-unchanged",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says that multiplying the divisor and the dividend by the same power of 10 leaves the quotient unchanged."
+      },
+      {
+       "node": "exponent.power-of-ten.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement and step 2 name the multiplier as a power of 10, written 10^k with a whole-number exponent."
+      },
+      {
+       "node": "decimal.thousandths.notation",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 counts the decimal places k in the divisor, which means reading the places of its digits."
+      },
+      {
+       "node": "multiplication.power-of-ten.decimal.rule",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies by 10^k by moving each decimal point k places to the right, writing zeros in the dividend if needed."
+      },
+      {
+       "node": "decimal.division.by-whole.algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 divides the new decimal or whole-number dividend by the new whole-number divisor and places the decimal point of the quotient."
+      }
+     ]
+    }
+   ]
+  },
+  "factors.common-factor.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors.factor-pair.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A common factor is defined as a factor of each of two numbers, so what a factor of a whole number is must be known."
+      },
+      {
+       "node": "factors.is-multiple.decide",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Deciding whether 4 is a factor of 18 amounts to deciding whether 18 is a multiple of 4, as the test problem requires for each candidate."
+      }
+     ]
+    }
+   ]
+  },
+  "factors.gcf.find": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors.common-factor.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The greatest common factor is the largest of the common factors of two numbers, so a common factor must be understood."
+      },
+      {
+       "node": "factors.factor-pairs.find-all",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 2 list all factors of each number from its factor pairs, for numbers up to 100."
+      }
+     ]
+    }
+   ]
+  },
+  "factors.common-multiple.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors.is-multiple.decide",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A common multiple is a number that is a multiple of each of two numbers, so what it means to be a multiple of a number must be known."
+      }
+     ]
+    }
+   ]
+  },
+  "factors.lcm.find": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors.common-multiple.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The least common multiple is the smallest nonzero common multiple, so a common multiple must be understood."
+      },
+      {
+       "node": "multiplication.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 lists the multiples of the greater number in order, each found as that number times 1, 2, 3 and so on."
+      },
+      {
+       "node": "factors.is-multiple.decide",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 decides for each listed multiple whether it is also a multiple of the smaller number."
+      }
+     ]
+    }
+   ]
+  },
+  "multiplication.distributive.factor-common": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors.gcf.find",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds the greatest common factor g of the two addends."
+      },
+      {
+       "node": "multiplication.unknown-factor.solve",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds c and d so that a = g x c and b = g x d, each an unknown factor in a multiplication equation."
+      },
+      {
+       "node": "factors.common-factor.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The result requires c and d to have no common factor greater than 1, which restates the meaning of a common factor."
+      },
+      {
+       "node": "multiplication.distributive",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 rewrites g x c + g x d as g x (c + d) by the distributive property of multiplication over addition."
+      },
+      {
+       "node": "expressions.parentheses",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The target form g x (c + d) uses parentheses to show that the sum is computed first and then multiplied by g."
+      }
+     ]
+    }
+   ]
+  },
+  "division.nonunit-fraction-by-whole": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.unit-fraction-by-whole.rule",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule (a/b) divided by n = a/(b x n) generalizes the unit-fraction case (1/b) divided by n = 1/(b x n), which is the case a = 1."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the denominator b by n, a product of whole numbers such as 4 x 2 in the test problem."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.reciprocal": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.multiplication.product-rule",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The reciprocal is defined as the number whose product with a/b is 1, which uses the product rule (a/b) x (c/d) = (a x c)/(b x d)."
+      },
+      {
+       "node": "fraction.whole-number.as-fraction",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem pairs the whole number 5 with 1/5 and a fraction with 4/1, which requires writing whole numbers as fractions."
+      }
+     ]
+    }
+   ]
+  },
+  "division.equal-scaling.quotient-unchanged": {
+   "routes": [
+    {
+     "clause": "groups-scaling",
+     "edges": [
+      {
+       "node": "division.measurement.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The quotient is read as the number of equal groups of the divisor in the dividend, and that count is what stays unchanged."
+      },
+      {
+       "node": "multiplication.scaling.resize",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Multiplying the dividend and the divisor by the same number k resizes the whole and every group alike, so the number of groups is unchanged."
+      },
+      {
+       "node": "multiplication.power-of-ten.decimal.rule",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem requires seeing that 7.38 and 0.6 become 73.8 and 6, or 738 and 60, by moving decimal points."
+      }
+     ]
+    },
+    {
+     "clause": "fraction-form",
+     "edges": [
+      {
+       "node": "fraction.quotient.symbolic",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing a divided by b as the fraction a/b lets the quotient be treated as a fraction whose numerator and denominator are the two numbers."
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Multiplying numerator and denominator by the same number gives an equal fraction, which is the claim a divided by b = (a x k) divided by (b x k)."
+      },
+      {
+       "node": "multiplication.power-of-ten.decimal.rule",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem requires seeing that 7.38 and 0.6 become 73.8 and 6, or 738 and 60, by moving decimal points."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.signed.meaning": {
+   "routes": [],
+   "root_reason": "It introduces signs as a way to record opposite directions of quantities already measured by whole numbers, such as deposits and withdrawals or heights above and below sea level; no earlier map node supplies the idea of opposite directions from a reference value."
+  },
+  "rational-number.signed.represent-context": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.signed.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Choosing the sign of a quantity by its direction from 0 uses the meaning of positive and negative numbers as opposite directions from a reference value."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.zero.meaning-in-context": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.signed.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement describes 0 as the reference value in a context already described with positive and negative numbers."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.integer.number-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 marks a positive integer n at n units from 0, which is placing a whole number as a length from 0 on the line."
+      },
+      {
+       "node": "rational-number.signed.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Negative integers are marked on the side of 0 opposite the positive integers, which uses the idea of opposite directions from 0."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.fraction-decimal.number-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.integer.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A negative number is placed on the negative side of 0, left on a horizontal line and below on a vertical one, as for negative integers."
+      },
+      {
+       "node": "fraction.non-unit.number-line",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 locates the positive fraction a on the number line, as in the test problem's 3/4."
+      },
+      {
+       "node": "decimal.number-line",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 locates the positive decimal a on the number line, as in the test problem's 2.5."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.opposite.number-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.integer.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement places a number such as 5 and its opposite -5 on the two sides of 0, which requires locating negative integers on the line."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.opposite.of-zero": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.opposite.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement applies the idea that opposites lie at the same distance from 0 on opposite sides, to the case of distance 0."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.opposite.of-opposite": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.opposite.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Taking the opposite twice crosses to the other side of 0 at the same distance and then back, which uses the number line meaning of opposite."
+      },
+      {
+       "node": "rational-number.opposite.of-zero",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement holds for every number a, including 0, whose opposite is 0 so that -(-0) = 0."
+      },
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem gives a = -3 and asks for -(-a), which requires reading the letter a as standing for a number."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.quadrants.signs": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.four-quadrants.plot",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sign of each coordinate tells the direction of movement from the origin, right or left and up or down, which fixes the quadrant."
+      },
+      {
+       "node": "coordinate-plane.axes-origin",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The quadrants are the four regions the axes cut the plane into, and a point with a coordinate 0 lies on an axis."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.reflection.signs": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.four-quadrants.plot",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement compares where points such as (a, b) and (a, -b) lie in the plane, which requires locating points with signed coordinates."
+      },
+      {
+       "node": "rational-number.opposite.number-line",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Changing b to -b moves the point to the opposite side of the x-axis at the same distance, because opposite numbers lie at the same distance from 0 on opposite sides."
+      },
+      {
+       "node": "symmetry.line.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Mirror images across an axis are points that match when the plane is folded along that axis, the informal meaning of a line of symmetry."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.four-quadrants.plot": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.axes-origin",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The procedure starts at the origin and moves along the x-axis and parallel to the y-axis."
+      },
+      {
+       "node": "coordinate-plane.ordered-pair.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement moves a units along the x-axis and then b units parallel to the y-axis, reading the two coordinates as signed distances from the origin."
+      },
+      {
+       "node": "coordinate.ordered-pair.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The point is given as an ordered pair (a, b), with the first number for horizontal position and the second for vertical position."
+      },
+      {
+       "node": "rational-number.integer.number-line",
+       "relation": "definitional",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Moving left for a negative first coordinate and down for a negative second coordinate uses the placement of negative integers on a number line."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.four-quadrants.read": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.axes-origin",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 2 read numbers on the x-axis and y-axis and use which side of the origin the point is on to decide the sign."
+      },
+      {
+       "node": "rational-number.integer.number-line",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The number read on an axis is negative to the left of the y-axis or below the x-axis, as negative integers are placed on a number line."
+      },
+      {
+       "node": "coordinate-plane.ordered-pair.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The first coordinate is the signed horizontal position and the second the signed vertical position, each a distance from the origin."
+      },
+      {
+       "node": "coordinate.ordered-pair.notation",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 writes the two numbers as an ordered pair (first, second)."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.four-quadrants.fraction-decimal.plot": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.four-quadrants.plot",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The point is plotted by the same two moves from the origin as for integer coordinates, along the x-axis and then parallel to the y-axis."
+      },
+      {
+       "node": "rational-number.fraction-decimal.number-line",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each coordinate is located on its axis as on a number line, including negative fractions and decimals such as -2.5."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.four-quadrants.fraction-decimal.read": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.four-quadrants.read",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The coordinates are found by the same two readings from the axes as for integer coordinates, with the sign from the side of the origin."
+      },
+      {
+       "node": "rational-number.fraction-decimal.number-line",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each coordinate is read from the scale of its axis as a position on a number line, including negative fractions and decimals."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.order.number-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.whole-numbers.symbols",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement gives the meaning of the symbols > and < for two numbers, which are first learned for whole-number comparisons."
+      },
+      {
+       "node": "rational-number.integer.number-line",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The test problem compares -3 and -7 by their positions, which requires locating negative integers on a number line oriented left to right."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.compare.integers": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.order.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Greater means farther right on the number line, which is why every positive integer is greater than 0 and 0 is greater than every negative integer."
+      },
+      {
+       "node": "comparing.whole-numbers.magnitude.multi-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 compares two positive integers as whole numbers, which may have several digits."
+      },
+      {
+       "node": "rational-number.opposite.number-line",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 compares the opposites of two negative integers, so the learner must be able to name the opposite of an integer."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.compare.rationals": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.order.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Greater means farther right on the number line, which underlies negative < 0 < positive and the rule for two negative numbers."
+      },
+      {
+       "node": "rational-number.fraction-decimal.number-line",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 compares the opposites of two negative fractions or decimals, which are the positive numbers at the same distance from 0."
+      },
+      {
+       "node": "decimal.compare",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 2 and 3 compare positive decimals, such as 4.5 and 4.05 in the test problem."
+      },
+      {
+       "node": "fraction.compare.common-denominator",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 2 and 3 compare positive fractions with unlike denominators, such as 2/3 and 3/4 in the test problem."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.order.context.write": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.signed.represent-context",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The two quantities in the context are stood for by signed numbers such as -12 m and -5 m."
+      },
+      {
+       "node": "rational-number.compare.integers",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Writing a correct inequality for the two town elevations requires deciding which of -12 and -5 is greater."
+      },
+      {
+       "node": "comparing.whole-numbers.symbols",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement records the comparison with the symbol > or <, as first learned for whole numbers."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.order.context.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.signed.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation reads a negative number in context as an amount in the opposite direction, such as money owed."
+      },
+      {
+       "node": "rational-number.order.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation says what less than means for the two quantities, for example farther below 0 and so lower, which is the relative position idea."
+      }
+     ]
+    }
+   ]
+  },
+  "absolute-value.distance.integer": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.integer.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The absolute value of an integer is its distance from 0, which requires placing negative and positive integers on the number line."
+      }
+     ]
+    }
+   ]
+  },
+  "absolute-value.distance.rational": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "absolute-value.distance.integer",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement extends the meaning of |a| as distance from 0 on the number line, with its notation, from integers to fractions and decimals."
+      },
+      {
+       "node": "rational-number.fraction-decimal.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The distance from 0 is read off from where a fraction or decimal, including a negative one, is located on the number line."
+      }
+     ]
+    }
+   ]
+  },
+  "absolute-value.magnitude.context": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "absolute-value.distance.integer",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement gives the absolute value |-30| = 30 of a signed quantity, using the notation and the meaning of absolute value."
+      },
+      {
+       "node": "rational-number.signed.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sign of a quantity in context records its direction, and the absolute value is what remains once the direction is set aside."
+      }
+     ]
+    }
+   ]
+  },
+  "absolute-value.vs-order": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "absolute-value.distance.integer",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement contrasts a comparison of absolute values, which are distances from 0, with a comparison of the numbers."
+      },
+      {
+       "node": "rational-number.compare.integers",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement concerns which of two negative numbers is the lesser, as in deciding that -8 < -3."
+      },
+      {
+       "node": "rational-number.order.number-line",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Explaining why -8 < -3 is true while |-8| < |-3| is false uses the positions of the two points on the number line."
+      }
+     ]
+    }
+   ]
+  },
+  "absolute-value.vs-order.context": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "absolute-value.magnitude.context",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The debt is the absolute value of a negative balance, the size of the quantity without its direction."
+      },
+      {
+       "node": "rational-number.order.context.explain",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A balance less than -30 dollars must be read in context as owing more, which is the meaning of an inequality between signed quantities."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.application.real-world.four-quadrants": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.four-quadrants.plot",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement asks to plot places given as ordered pairs of either sign on the map grid."
+      },
+      {
+       "node": "rational-number.signed.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "West and south are the negative directions from the landmark at the origin, so a negative coordinate is read as the opposite direction from a positive one."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.opposites.combine-to-zero.context": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.signed.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement concerns a quantity and an opposite quantity of the same size, such as a gain and a loss, in opposite directions from a reference value."
+      }
+     ]
+    }
+   ]
+  },
+  "factors.common-multiple.product": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors.common-multiple.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement claims that a x b is a common multiple of a and b, so a common multiple must be understood."
+      },
+      {
+       "node": "factors.multiple-of-each-factor",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A x b is a multiple of each of a and b because a whole number is a multiple of each of its factors."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks for a common multiple of 7 and 9, found as the product 7 x 9."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.addition.number-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.integer.number-line",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sum is a point on the number line to the positive or negative side of p, with p and the result possibly negative integers."
+      },
+      {
+       "node": "absolute-value.distance.integer",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement moves a distance |q| from p, so the absolute value notation and its meaning as a distance are used directly."
+      },
+      {
+       "node": "addition.add-to.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "For positive q the sum p + q is the point reached by moving q units in the positive direction, as when a whole-number sum is shown on a number line."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.additive-inverse": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.addition.number-line",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Starting at a and moving a distance |a| toward 0 on the side where -a lies reaches 0, which is why a + (-a) = 0."
+      },
+      {
+       "node": "rational-number.opposite.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement concerns a number and its opposite, which lie at the same distance from 0 on opposite sides."
+      },
+      {
+       "node": "rational-number.fraction-decimal.number-line",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem includes pairs of fractions and decimals such as 4.5 and -4.5, so the opposite of a fraction or decimal must be located."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
