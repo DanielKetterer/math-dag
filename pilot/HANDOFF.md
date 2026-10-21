@@ -2,7 +2,9 @@
 
 Read this first in a new session. Then RULES.md.
 
-## HOLD (2026-10-21): proposers paused pending Daniel
+## Hold lifted (2026-10-21, evening): Daniel chose to continue with both passes at ~6.5M more
+
+Was: proposers paused pending Daniel.
 
 The first four proposers (Q1a, Q1b) averaged 196k tokens, 1.30x the fitted 151k
 (more edges per node: 2.3-3.6 versus phase 2). Re-estimate at that ratio: the 20
