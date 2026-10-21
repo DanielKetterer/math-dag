@@ -2,6 +2,16 @@
 
 Read this first in a new session. Then RULES.md.
 
+## HOLD (2026-10-21): proposers paused pending Daniel
+
+The first four proposers (Q1a, Q1b) averaged 196k tokens, 1.30x the fitted 151k
+(more edges per node: 2.3-3.6 versus phase 2). Re-estimate at that ratio: the 20
+remaining proposers ~3.8M plus 12 critics ~2.8M = ~6.7M more; proposers and critics
+together ~7.5M against the 5.7M Daniel approved (option A); phase 3 ~9M; running total
+~15.3M at the end. Claude stopped launching new agents; E1a (P, Q) and E1b P were
+already running and are committed as they finish. Resume only on Daniel's answer
+(next unit: p3.E1b.proposer-b).
+
 ## Phase 3 (grades 6-8): writers done, retarget done, proposers running
 
 - Daniel approved phase 3 at ~3.9M (2026-10-20); the writers produced 491 nodes, not
