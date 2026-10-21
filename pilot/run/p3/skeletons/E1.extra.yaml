@@ -1,0 +1,64 @@
+new_concepts:
+  - {concept: exponent, facet: whole-number-power, reason: "a^b for any base and a whole-number exponent; the existing facet power-of-ten covers only 10^k."}
+  - {concept: expressions, facet: algebraic, reason: "Expressions with letters standing for numbers (writing, reading, evaluating, rewriting, equivalence); the existing facet numerical covers expressions of numbers only."}
+  - {concept: equation, facet: open-sentence, reason: "An equation with a variable whose truth depends on the value substituted, and the solutions that make it true; the existing facet relational covers the meaning of the equal sign."}
+  - {concept: inequality, facet: open-sentence, reason: "New concept: inequalities with a variable (x > c, x >= c, px + q > r), their solutions, solution sets on the number line, and the properties used to solve them."}
+  - {concept: relationship, facet: dependent-independent, reason: "New concept: two quantities that change together, one determined by the other (6.EE.C.9), shown by an equation, a table and a graph. It is the informal stage before proportional-relationship, slope and linear-function."}
+retires:
+  - id: expressions.variables
+    replaced_by: [expressions.variable.meaning, expressions.variable.write-from-words, expressions.variable.write-for-situation, expressions.variable.evaluate, expressions.formula.evaluate]
+    note: "The id covers four skills. Re-point each old edge by what the node uses: only that a letter stands for a number (an equation or formula with a letter) -> expressions.variable.meaning; writing an expression from words -> expressions.variable.write-from-words; writing an expression for a real-world quantity -> expressions.variable.write-for-situation; substituting values into an expression -> expressions.variable.evaluate; using a formula such as A = l x w or V = s^3 in a problem -> expressions.formula.evaluate."
+  - id: equations.one-step
+    replaced_by: [equation.one-step.addition.solve, equation.one-step.multiplication.solve]
+    note: "x + p = q and px = q need different prerequisites for nonnegative rationals (fraction or decimal subtraction versus division), so they are two nodes. Re-point an old edge to the form it needs, or to both if it needs both. The word-problem versions are equation.one-step.addition.application and equation.one-step.multiplication.application."
+covered_by: []
+dropped: []
+notes: >-
+  Coverage: all 58 input components are cited by written nodes; nothing went to covered_by or dropped.
+  Components cited by more than one node: fe47029d is split by base (whole number, fraction, decimal),
+  because each needs a different multiplication. ceb07b7c is split into powers-before-multiplication
+  (concept), whole-number evaluation with powers, and fraction/decimal evaluation. The written node
+  expressions.order-of-operations already covers the order with no exponents. e1d1c595 and a629106a
+  (associative, commutative) are split by operation, not by property: rearranging the terms of a sum,
+  regrouping the factors of a product, and combining like terms, because the tests differ by operation.
+  12b69651 is cited by expressions.variable.meaning and expressions.variable.unknown-vs-varying.
+  cc56ee36 is split into additive (y = x + c) and rate (y = rx) relationships, by rule 4. d29c0749 is
+  split into table-from-equation, equation-from-table, graph with the independent variable on the
+  horizontal axis, and constant change related to the equation. 35c2f57a is split into the
+  properties-as-strategy node and the mixed-forms node. 9d36a76f ('fluently') is folded into the two
+  two-step procedure nodes; there is no recall fact here, so there is no separate fluency node.
+  4d78d954 is cited by inequality.symbols.inclusive and inequality.two-step.solve.
+  Merges I was unsure of: the 'mathematical' and 'real-world' versions of writing x + p = q, px = q
+  and x > c / x < c are merged into one representation node per form, tested with a real-world
+  problem. The 'solve mathematical problems' components for 6.EE.B.7 (e50eda80, 1981017a) go on the
+  procedure nodes, and the real-world ones on the application nodes. 115636bf (identify the
+  expression) and 16e16ca9 (write it) are merged into expressions.variable.write-from-words.
+  Partial overlaps with written nodes (only the new part is written):
+  expressions.variable.write-from-words extends expressions.write.record-calculation to letters.
+  equation.one-step.* extends equation.unknown.addition and multiplication.unknown-factor.solve
+  (whole numbers, reasoning) to nonnegative rationals solved by doing the same operation to both sides.
+  relationship.equation.write.rate overlaps proportional-relationship.equation.write; it is kept as
+  the informal node (rule 7) that needs only a rate per unit, not the constant of proportionality.
+  relationship.graph.plot overlaps coordinate-plane.application.real-world; the new part is the
+  independent variable on the horizontal axis. relationship.change.relate-equation is the informal
+  precursor of slope.unit-rate and linear-function.model.rate.*. rational-number.estimate.reasonableness
+  extends operations.application.reasonableness and fraction.estimate.benchmark.* to signed rationals
+  in mixed forms. The arithmetic solution in 7.EE.B.4.a is operations.application.multistep, so only
+  the comparison node (equation.two-step.compare-arithmetic-algebraic) is written.
+  The 6.EE.B.7 standard does not ask for both a reasoning strategy and inverse operations, so there is
+  one solve node per form (rule 9). Solving p(x + q) = r by distributing first is a second route to
+  equation.two-step.p-times-sum.solve; the statement names only the divide-first method.
+  47e19034 (graph the solution set of a multi-step inequality) is cited by
+  inequality.solution-set.number-line.inclusive: graphing it means solving (inequality.two-step.solve)
+  and then graphing x >= c or x <= c; the strict case is inequality.simple.number-line. Nodes with no
+  input component (supporting concepts, or the standard's own word-problem sentence):
+  exponent.whole-number-power.meaning, expressions.notation.implicit-multiplication,
+  expressions.like-terms.meaning, expressions.equivalent.meaning,
+  equation.equality-preserved.same-operation, relationship.dependent-independent.meaning,
+  expressions.opposite-of-sum, inequality.same-operation.preserved, inequality.multiply-negative.reverse,
+  inequality.two-step.application.
+  Cross-strand: equations.linear.solve (owner E2) and rational-numbers.operations (owner Q1) are not
+  written here. E2 should point at equation.equality-preserved.same-operation and the inequality
+  property nodes rather than rewrite them. If Q1 writes -(a + b) = -a + (-b) for numbers,
+  expressions.opposite-of-sum should be merged with it. The test for
+  rational-number.application.multistep.mathematical uses number.halfway-between (owner F).
