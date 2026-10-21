@@ -61,6 +61,16 @@ the index in your reason (Add within 100, Multiply a whole number by a
 one-digit number, and so on). Keep the method only when the node's statement,
 procedure or test problem requires it.
 
+An edge to a stronger node than the target uses is `wrong` for that target;
+name the weaker node in your reason. Examples: a definition that only says
+"a quadrilateral" needs naming four-sided figures, not recognizing every
+quadrilateral; a statement that only needs to know which figures are squares
+needs naming squares, not the full definition of a square; a node that uses a
+square corner informally needs the square corner, not the formal right angle.
+An earlier, narrower node in a typical teaching order (telling time to the half
+hour before five minutes) is `scaffold` when the target's own procedure carries
+the skill. (Daniel's phase 2 review: 7 of 13 wrong edges were of these kinds.)
+
 Do not infer necessity from shared vocabulary, from a skill appearing in an
 example, or from a curriculum's ordering. Judge the relationship, not the
 quality of its explanation: a fluent, specific rationale is not evidence that an

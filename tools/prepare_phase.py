@@ -150,7 +150,23 @@ missing from both.
   the fact nodes). Point at a method (count all, partial products, the standard
   algorithm, a base-ten model) only when this node's statement, procedure or
   test problem requires that method. (Daniel's phase 1 review: 7 of 10 wrong
-  edges named a method.)
+  edges named a method.) For signed, fraction or decimal arithmetic inside an
+  algebra, geometry or statistics node, the same holds: point at the
+  method-neutral operation node, not at a model or a rule's explanation.
+- **Point at the weakest node that supplies what is used.** When a statement
+  only names a category ("a square is a quadrilateral with ..."), point at the
+  node that gives that much (naming four-sided figures), not at a stronger one
+  (recognizing every quadrilateral, including concave ones). When a statement
+  only needs to know which figures are squares, point at naming squares, not
+  at the full definition of a square. (Daniel's phase 2 review: 5 of 13 wrong
+  edges.)
+- **Informal before formal.** When a node uses a concept informally (a square
+  corner, "the same shape", a rate in a table), point at the informal node, not
+  at the later formal one (a right angle, similarity, slope).
+- **A teaching order is not a chain of prerequisites.** When this node's own
+  procedure carries a skill (reading the hour hand, counting minute marks),
+  the earlier, narrower node that first teaches it (the half hour, the five
+  minutes) is not required; point at what the procedure actually uses.
 
 ## Boundary list (referenced, not yet written)
 
