@@ -1,12 +1,19 @@
-# Handoff: phase 3 written, waiting on Daniel's go-ahead for proposers (2026-10-21)
+# Handoff: phase 3 proposers running (2026-10-21)
 
 Read this first in a new session. Then RULES.md.
 
-## Phase 3 (grades 6-8): writers done, script pass done, proposers NOT started
+## Phase 3 (grades 6-8): writers done, retarget done, proposers running
 
-- Daniel approved phase 3 at an estimate of ~3.9M (2026-10-20). The writers produced
-  491 nodes, not ~276, so the proposer and critic stages were re-estimated and are
-  waiting on Daniel (see "Cost" below). Do not launch proposers without his answer.
+- Daniel approved phase 3 at ~3.9M (2026-10-20); the writers produced 491 nodes, not
+  ~276, and on the re-estimate below he chose option A, 12 batches (2026-10-21).
+  Batches pilot/run/p3/batches/<strand>a|b.yaml (33-45 nodes, consecutive standards).
+  Proposers (Sonnet, passes P and Q) run 4 at a time; then 12 critics; then
+  `sh tools/rebuild.sh` (p3 is in it), benchmark, explorer, review queue.
+  `python3 tools/run_state.py` shows what is done and what can run next.
+- Retarget done inline by Claude (pilot/run/p3/retarget/out.json, 0 tokens). Flagged
+  for Daniel's queue: r19, r27, r43 probably not prerequisites; r2 points at
+  equation.unknown-symbol, not a listed candidate; the 9 common-multiple edges now
+  point at a grade 6 node from grade 4-5 fraction nodes (as before, an order finding).
 - Strands (pilot/run/p3/skeletons): Q1 number system 86, E1 6-7 expressions and
   equations 77, E2 grade 8 expressions, equations, functions 74, G3 6-7 geometry 88,
   G4 grade 8 geometry 73, S1 statistics and probability 67; F1 (16) and F2 (10) are
