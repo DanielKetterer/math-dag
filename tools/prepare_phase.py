@@ -26,7 +26,7 @@ from build_phase import RESERVED, written_nodes  # noqa: E402
 
 # Extra skeleton files proposed and criticized inside another strand's batch
 # (fix-up nodes written inline are too few to pay an agent's start-up cost).
-ATTACH = {"p2": {"F": "G1"}}
+ATTACH = {"p2": {"F": "G1"}, "p3": {"F1": "E2", "F2": "G4"}}
 FIELDS = ("id", "concept", "facet", "level", "type", "name", "statement", "procedure", "assess", "sources",
           "strand")
 LATER_MEANINGS = {}  # boundary meanings from earlier proposer packets

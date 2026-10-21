@@ -1,0 +1,176 @@
+# Fix-up nodes, part 1, written inline by Claude (no subagent tokens), 2026-10-20.
+# Daniel's phase 2 review (pilot/run/p2/next_slice.yaml) and K-5 ids that written
+# nodes point at but no strand wrote. Edges already point at these ids. They join
+# batch E2 for the proposer and critic passes.
+
+# ---- method-neutral computation past the earlier ranges (F116, F115) ----
+- id: addition.multi-digit
+  concept: addition
+  facet: operation
+  level: 3
+  type: procedure
+  name: Add multi-digit whole numbers
+  statement: "Find the sum of multi-digit whole numbers, with sums up to 1,000,000, accurately and without objects, by any reliable method; place-value strategies and the standard algorithm both meet it."
+  assess: "Find 4,827 + 3,596 and 26,054 + 8,968. Use any method."
+  sources: {ccss: ["4.NBT.B.4"], lc: []}
+  strand: F1
+- id: division.by-two-digit
+  concept: division
+  facet: base-ten
+  level: 3
+  type: procedure
+  name: Divide by a two-digit number, no remainder
+  statement: "Find the whole-number quotient of a dividend of up to four digits by a two-digit divisor that divides it exactly, by any reliable method; partial quotients, an area model with numbers, and the standard algorithm all meet it."
+  assess: "Find 7,452 divided by 36 and 96 divided by 12. Use any method."
+  sources: {ccss: ["5.NBT.B.6"], lc: []}
+  strand: F1
+- id: division.by-two-digit.remainder
+  concept: division
+  facet: base-ten
+  level: 3
+  type: procedure
+  name: Divide by a two-digit number with a remainder
+  statement: "Find the whole-number quotient and the remainder of a dividend of up to four digits by a two-digit divisor, with the remainder less than the divisor, by any reliable method."
+  assess: "Find the quotient and remainder of 200 divided by 60, and of 1,000 divided by 24. Use any method."
+  sources: {ccss: ["5.NBT.B.6"], lc: []}
+  strand: F1
+- id: division.remainder.meaning
+  concept: division
+  facet: measurement
+  level: 2
+  type: concept
+  name: A remainder is what is left after making as many whole groups as possible
+  statement: "When a whole number of objects is put into as many groups of a given size as possible, the objects left over are the remainder; the remainder is always less than the group size, since otherwise one more group could be made."
+  assess: "17 cubes are put into towers of 5 cubes. How many full towers are made, and how many cubes are left over? Could 6 cubes be left over? Why or why not?"
+  sources: {ccss: ["4.NBT.B.6"], lc: []}
+  strand: F1
+- id: division.successive-division
+  concept: division
+  facet: unknown-factor
+  level: 3
+  type: concept
+  name: Dividing by a and then by b is dividing by a x b
+  statement: "For nonzero whole numbers a and b, dividing a number by a and then dividing the result by b gives the same quotient as dividing the number by a x b."
+  assess: "Maya divides 720 by 8 and then divides that answer by 10. Without computing, what single division gives the same answer?"
+  sources: {ccss: ["5.NBT.A.2"], lc: []}
+  strand: F1
+
+# ---- the F107 split: upper half ----
+- id: operations.application.reasonableness.multi-digit
+  concept: operations
+  facet: whole-number
+  level: 2
+  type: justification
+  name: Judge whether the answer to a multistep word problem is reasonable by estimating
+  statement: "An answer to a multistep whole-number word problem with multi-digit numbers and the four operations is judged reasonable or not by estimating the answer with rounded numbers or mental computation and comparing."
+  assess: "Lee says 4 boxes of 198 nails, minus 305 nails used, leaves 1,097 nails. Without computing exactly, use rounding to decide whether his answer is reasonable, and explain."
+  sources: {ccss: ["4.OA.A.3"], lc: ["44a2143c"]}
+  strand: F1
+
+# ---- fractions, number line ----
+- id: fraction.subtraction.comparison
+  concept: fraction
+  facet: part-whole
+  level: 2
+  type: concept
+  name: Subtracting fractions as comparing parts of the same whole
+  statement: "Subtracting one fraction from another also tells how much more the first amount is than the second: the difference is the part that would have to be joined to the smaller amount to make the larger, where both fractions refer to the same whole."
+  assess: "Using one bar as the whole, show how much more 5/6 is than 2/6, and say what the difference counts."
+  sources: {ccss: ["4.NF.B.3.d"], lc: []}
+  strand: F1
+- id: number.halfway-between
+  concept: number-line
+  facet: core
+  level: 2
+  type: concept
+  name: The number halfway between two numbers
+  statement: "The number halfway between two numbers is the point of the number line at the same distance from both: the smaller number plus half of the distance from it to the larger."
+  assess: "What number is halfway between 40 and 50? Between 200 and 300? Between 4 and 6?"
+  sources: {ccss: ["3.NBT.A.1"], lc: []}
+  strand: F1
+
+# ---- counting and number words ----
+- id: counting.skip.twos
+  concept: counting
+  facet: sequence
+  level: 1
+  type: fact
+  name: Count by twos from 0 to 20
+  statement: "Say the multiples of two in order from zero: two, four, six, ..., twenty."
+  assess: "Count aloud by twos from 0 to 20."
+  sources: {ccss: ["2.OA.C.3"], lc: []}
+  strand: F1
+- id: counting.skip.twenty-fives
+  concept: counting
+  facet: sequence
+  level: 1
+  type: fact
+  name: Count by twenty-fives from 0 to 100
+  statement: "Say the multiples of twenty-five in order from zero: twenty-five, fifty, seventy-five, one hundred."
+  assess: "Count aloud by twenty-fives from 0 to 100."
+  sources: {ccss: ["2.MD.C.8"], lc: []}
+  strand: F1
+- id: counting.number-word.thousand
+  concept: counting
+  facet: sequence
+  level: 1
+  type: fact
+  name: The number after nine hundred ninety-nine is one thousand
+  statement: "The number after nine hundred ninety-nine is one thousand, written 1000; counting by hundreds, one thousand comes after nine hundred."
+  assess: "What number comes right after 999? Count by hundreds from seven hundred: what comes after nine hundred?"
+  sources: {ccss: ["2.NBT.A.2"], lc: []}
+  strand: F1
+- id: counting.number-word.thousand-million
+  concept: counting
+  facet: core
+  level: 2
+  type: concept
+  name: The period names thousand and million
+  statement: "In the name of a large whole number, the words thousand and million name periods: the number said before thousand counts thousands, and the number said before million counts millions."
+  assess: "In the number name six million, two hundred thousand, fifteen, which number counts the millions and which counts the thousands?"
+  sources: {ccss: ["4.NBT.A.2"], lc: []}
+  strand: F1
+
+# ---- pairs, tables and graphs ----
+- id: coordinate.ordered-pair.notation
+  concept: coordinate-plane
+  facet: location
+  level: 2
+  type: representation
+  name: Ordered pair notation
+  statement: "An ordered pair (a, b) writes two numbers in parentheses, separated by a comma, in a fixed order, first a and then b; (a, b) and (b, a) are different pairs unless a = b."
+  assess: "Write the ordered pair whose first number is 3 and whose second number is 7. Is (3, 7) the same pair as (7, 3)?"
+  sources: {ccss: ["5.G.A.1", "5.OA.B.3"], lc: []}
+  strand: F1
+- id: data.table-graph.read-values
+  concept: data
+  facet: paired-values
+  level: 2
+  type: representation
+  name: Read paired values from a table or a graph
+  statement: "When pairs of values of two quantities are shown, the value of the second quantity that goes with a given value of the first is read in the same row of a table, or at the point of the graph above that value on the horizontal axis."
+  assess: "A table shows hours 1, 2, 3, 4 and miles 6, 12, 18, 24. How many miles go with 3 hours? On a graph of the same pairs, what is the y-value of the point above x = 4?"
+  sources: {ccss: ["5.G.A.2"], lc: []}
+  strand: F1
+
+# ---- time ----
+- id: time.parts-of-day
+  concept: time
+  facet: day
+  level: 1
+  type: concept
+  name: The parts of a day in order
+  statement: "A day goes in order through morning, afternoon, evening and night, and then the next morning begins; events of a day can be placed in that order."
+  assess: "Which comes first in a day, waking up in the morning or eating lunch in the afternoon? Which part of the day comes after the evening?"
+  sources: {ccss: [], lc: []}
+  strand: F1
+- id: time.hour.sixty-minutes
+  concept: time
+  facet: clock
+  level: 2
+  type: concept
+  name: An hour is 60 minutes
+  statement: "In one hour the minute hand goes once around the clock, passing 60 minute marks, so an hour is 60 minutes; the minutes past an hour run from 0 to 59, and at 60 minutes the next hour begins."
+  assess: "A clock shows 7:59. What time does it show one minute later? How many minutes are in one hour?"
+  sources: {ccss: ["3.MD.A.1"], lc: []}
+  strand: F1
