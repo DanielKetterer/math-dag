@@ -285,7 +285,12 @@ def edit_unit(unit_id, status=None, tokens=None, commit=None):
     if status:
         seg = re.sub(r"status: \S+?(?=[,\s}])", f"status: {status}", seg, count=1)
     if tokens is not None:
-        seg = re.sub(r"tokens: \d+", f"tokens: {tokens}", seg, count=1)
+        if re.search(r"tokens: \d+", seg):
+            seg = re.sub(r"tokens: \d+", f"tokens: {tokens}", seg, count=1)
+        elif flow:  # the unit had no tokens field yet: add one rather than drop the value
+            seg = re.sub(r"(status: \S+?)(?=[,}])", r"\1, tokens: " + str(tokens), seg, count=1)
+        else:
+            sys.exit(f"{unit_id}: no tokens field to update in a block-style entry")
     if commit:
         if "commit:" in seg:
             seg = re.sub(r"commit: \S+?(?=[,\s}])", f"commit: {commit}", seg, count=1)
