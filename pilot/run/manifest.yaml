@@ -143,3 +143,16 @@ units:
   - {id: p2.M3.critic, stage: critic, strand: M3, after: [p2.G1.proposer-a, p2.G1.proposer-b, p2.G2.proposer-a, p2.G2.proposer-b, p2.M1.proposer-a, p2.M1.proposer-b, p2.M2.proposer-a, p2.M2.proposer-b, p2.M3.proposer-a, p2.M3.proposer-b], output: pilot/run/p2/critic/verdicts-M3.json, validate: critic, status: done, tokens: 160000, note: "ESTIMATE: complete file written, then the agent hit the session limit before reporting usage", commit: pending}
   - {id: p2.merge, stage: merge, after: [p2.G1.critic, p2.G2.critic, p2.M1.critic, p2.M2.critic, p2.M3.critic, p2.retarget], output: pilot/run/p2/merge_report.md, validate: check, status: done, tokens: 0, commit: pending}
   - {id: p2.wasted, stage: review, strand: none, after: [], output: pilot/run/manifest.yaml, validate: exists, status: done, tokens: 67572, note: "Claude launched a placeholder agent by mistake (2026-10-20); it did nothing but its start-up cost counts"}
+
+  # ---------- big run, phase 3 (2026-10-20): grades 6-8 ----------
+  # Daniel's go-ahead 2026-10-20, estimate ~3.9M. At most 4 agents at a time.
+  # F1 and F2: fix-up nodes written inline by Claude (Daniel's phase 2 review,
+  # pilot/run/p2/next_slice.yaml, plus 10 K-5 orphan ids); attached to E2 and G4.
+  - {id: p3.Q1.writer, stage: writer, strand: Q1, after: [p2.merge], input: pilot/run/p3/input/Q1.json, output: pilot/run/p3/skeletons/Q1.yaml, validate: writer-lc, status: pending}
+  - {id: p3.E1.writer, stage: writer, strand: E1, after: [p2.merge], input: pilot/run/p3/input/E1.json, output: pilot/run/p3/skeletons/E1.yaml, validate: writer-lc, status: pending}
+  - {id: p3.E2.writer, stage: writer, strand: E2, after: [p2.merge], input: pilot/run/p3/input/E2.json, output: pilot/run/p3/skeletons/E2.yaml, validate: writer-lc, status: pending}
+  - {id: p3.G3.writer, stage: writer, strand: G3, after: [p2.merge], input: pilot/run/p3/input/G3.json, output: pilot/run/p3/skeletons/G3.yaml, validate: writer-lc, status: pending}
+  - {id: p3.G4.writer, stage: writer, strand: G4, after: [p2.merge], input: pilot/run/p3/input/G4.json, output: pilot/run/p3/skeletons/G4.yaml, validate: writer-lc, status: pending}
+  - {id: p3.S1.writer, stage: writer, strand: S1, after: [p2.merge], input: pilot/run/p3/input/S1.json, output: pilot/run/p3/skeletons/S1.yaml, validate: writer-lc, status: pending}
+  - {id: p3.F1.writer, stage: writer, strand: F1, after: [p2.merge], output: pilot/run/p3/skeletons/F1.yaml, validate: exists, status: pending, tokens: 0}
+  - {id: p3.F2.writer, stage: writer, strand: F2, after: [p2.merge], output: pilot/run/p3/skeletons/F2.yaml, validate: exists, status: pending, tokens: 0}

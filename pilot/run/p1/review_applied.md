@@ -79,6 +79,8 @@
 - multiplication.standard-algorithm: route via-compose-unit removed (superset of another route); moved to related: ['addition.base-ten.compose-unit']
 - multiplication.standard-algorithm: only route left, renamed critic-route-1 -> standard
 - D91 division.partial-quotients.one-digit-divisor -> addition.base-ten.strategy: replaced by addition.multi-digit
+- p3-orphan division.area-model.one-digit-divisor.explain -> area.composite-additive: replaced by area.additive
+- p3-orphan division.area-model.two-digit-divisor.explain -> area.composite-additive: replaced by area.additive
 - division.power-of-ten.rule: route critic-route-1 removed (superset of another route); moved to related: nothing
 - division.power-of-ten.rule: route critic-route-2 removed (superset of another route); moved to related: nothing
 - A25 decimal.addition.model -> addition.base-ten.model: moved to related (common_path)

@@ -71,16 +71,19 @@ requires:
       source: critic-sonnet
       note: 'task-only: Only the test problem needs 20 x 60.'
     status: proposed
-  - node: area.composite-additive
+  - node: area.additive
     relation: definitional
     points_to: statement
-    why: The statement says the cut pieces make up the whole area; additivity of area is not covered by
-      length-times-width.
+    why: The statement says the cut pieces make up the whole area, which is that area is additive.
     evidence:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
-    status: disputed
+    - kind: review
+      source: DK
+      note: 'p3-orphan replace: Claude (2026-10-20, phase 3 set-up): the critic named an unwritten id
+        with the meaning of the written area.additive (3.MD.C.7.d); same node, re-pointed by script.'
+    status: reviewed
   - node: division.partial-quotients.two-digit-divisor
     relation: definitional
     points_to: statement

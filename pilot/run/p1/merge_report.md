@@ -14,8 +14,8 @@
 - task-only: 38
 - dominated route removed: 36
 - review: critic drop upheld: 19
+- review: replace: 12
 - review: drop: 12
-- review: replace: 10
 - related: 8
 - review: add: 5
 - indirect: 4
