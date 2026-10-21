@@ -1,0 +1,91 @@
+new_concepts:
+  - {concept: transformation, facet: geometric, reason: "Translations, reflections, rotations, and dilations as motions or mappings of the plane defined by distances, directions, and angles (8.G.A.1-4); spatial.motion is the informal L1 turn-and-flip, not these definitions."}
+  - {concept: transformation, facet: coordinate, reason: "The same transformations as rules on ordered pairs, such as (x, y) -> (x + a, y + b) or (x, y) -> (-y, x) (8.G.A.3); a different meaning from the geometric one, so a different facet."}
+  - {concept: congruence, facet: rigid-motion, reason: "Congruence defined as a sequence of translations, reflections, and rotations taking one figure onto another (8.G.A.2)."}
+  - {concept: similarity, facet: transformation, reason: "Similarity defined as a sequence of rigid motions and dilations (8.G.A.4); also used for the angle-angle criterion nodes."}
+  - {concept: similarity, facet: proportional-sides, reason: "Similar triangles read as triangles whose corresponding sides are proportional, the meaning the reserved id geometry.similar-triangles and slope.constant-on-line.explain use."}
+  - {concept: pythagorean-theorem, facet: area, reason: "The theorem as a relation among areas of the squares built on the sides; the meaning the rearrangement proof uses."}
+  - {concept: pythagorean-theorem, facet: length, reason: "The theorem as the equation a^2 + b^2 = c^2 in side lengths; the meaning used to compute unknown sides and distances."}
+retires: []
+covered_by: []
+dropped: []
+notes: |
+  Reserved id geometry.similar-triangles is used exactly, for the claim that
+  corresponding sides of similar triangles are proportional (one scale factor
+  k for all three pairs). The one existing reference, slope.constant-on-line.explain,
+  likely also needs similarity.triangle.angle-angle (to show the slope
+  triangles are similar); a later pass may add that edge.
+
+  Nodes written with no learning component, because the standards presuppose
+  them and the proposers need a target: transformation.translation.meaning,
+  transformation.reflection.meaning, transformation.rotation.meaning (8.G.A.1
+  verifies properties of motions it never defines), transformation.dilation.preserves-angle
+  (needed for the angle-angle argument and for similar figures having equal
+  angles), geometry.similar-triangles, pythagorean-theorem.squares-on-sides and
+  pythagorean-theorem.statement (no component states the theorem itself).
+
+  Components cited by more than one node, because each carries a fact, its
+  justification, and its use: 715f7b83, 2d077eff, d3571b9e (fact + experimental
+  verification); e8c6b8a4 (dilation definition + lengths times k, not rigid);
+  6f4e508f (criterion, informal argument, decide); 2b003d7c (corresponding,
+  alternate interior, their two explanations, find all eight angles); b9325562
+  (angle sum, exterior angle, their explanations, third angle); 54ee8a5e
+  (converse and its proof); cac68ba0, b922397f (split by answer type and by 2D
+  versus 3D); ba4daaa8, 2249c3b7, 73140379, 6d9c6fbd, 74823f49, 8e127d06
+  (formula, forward computation, and finding a dimension).
+
+  Interpretations a reviewer should check:
+  - 4815a989 (rotations not by multiples of 90 degrees, in the coordinate plane)
+    is written as drawing the image with protractor and ruler
+    (transformation.rotation.draw); exact image coordinates need trigonometry.
+  - 402e7eef (reflection across lines other than the axes) is limited to the
+    lines y = x and y = -x; reflection across an arbitrary drawn line is covered
+    only by the geometric definition transformation.reflection.meaning.
+  - c169f8f0 (dilation in the coordinate plane, not only at the origin) is read
+    as a dilation with a center other than the origin, since b6e6ec4d is the
+    origin case.
+  - transformation.dilation.origin.coordinates writes the rule as
+    (x, y) -> (k x x, k x y), following the "x for multiplication" rule; read it
+    as (kx, ky).
+  - Range splits (RULES 2.4): image coordinates on the grid (L2) versus the
+    algebraic rule (L3) for translations and axis reflections, since the input
+    has separate components for each; rotation and dilation about the origin
+    (symbolic rule) versus about another grid point (offsets from the center);
+    sequences of rigid motions versus sequences that include a dilation;
+    Pythagorean unknown side with a whole-number answer versus an exact
+    irrational answer sqrt(n); real-world 2D answers that are whole versus
+    rounded to the nearest tenth; cylinder height (division) versus radius
+    (square root); sphere radius (cube root).
+  - pythagorean-theorem.unknown-side.3d and pythagorean-theorem.distance.coordinates
+    have whole-number answers in their tests and do not restrict number type in
+    their statements; irrational versions would route through
+    pythagorean-theorem.unknown-side.irrational. The 3D nodes cover only the
+    interior diagonal of a rectangular prism, not slant heights of cones or
+    pyramids.
+  - Not written (no component asks for them, or a later node would be needed):
+    same-side interior angles (derivable from corresponding angles and a linear
+    pair), angle problems with measures given as expressions in x (would need
+    equation solving), cone radius from volume, real-world cone height and
+    sphere radius problems, composite solids and hemispheres.
+  - Volume nodes use the existing facet unit-cubes (volume as cubic units of
+    space); there is no separate facet for curved solids.
+
+  Expected from other strands (named, not written):
+  - Q1: coordinate-plane.four-quadrants (all coordinate transformation and
+    distance nodes); signed-number operations, rational-numbers.operations
+    (offsets, reflections, distance across an axis); square roots of perfect
+    squares, cube roots of perfect cubes, sqrt(n) as an exact irrational
+    length, approximating sqrt(n) to the nearest tenth (Pythagorean nodes,
+    cylinder and sphere radius nodes, distance application).
+  - G3: vertical angles and adjacent angles on a line adding to 180 degrees
+    (transversal nodes and their explanations); pi and the circle area pi x r^2
+    (cylinder and cone formulas); three side lengths determining a unique
+    triangle (used in pythagorean-theorem.converse.explain); scale drawings and
+    scale factor as the informal "same shape" before similarity.transformation.meaning.
+  - E1/E2: whole-number exponents for r^2 and r^3; one-step equations
+    (equations.one-step) for the find-height nodes; the graphs of x = h and
+    y = k as vertical and horizontal lines and the lines y = x and y = -x (for
+    the reflection coordinate nodes).
+  - Existing: perpendicular.meaning, parallel.meaning, angle.measure.degrees,
+    angle.protractor.sketch, shapes.triangle.right.identify,
+    coordinate-plane.first-quadrant.read, volume.prism.formula.base-height.
