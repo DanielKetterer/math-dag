@@ -1,6 +1,48 @@
-# Handoff: phase 2 review applied; 5 items wait on Daniel (2026-10-20, later session)
+# Handoff: phase 3 written, waiting on Daniel's go-ahead for proposers (2026-10-21)
 
 Read this first in a new session. Then RULES.md.
+
+## Phase 3 (grades 6-8): writers done, script pass done, proposers NOT started
+
+- Daniel approved phase 3 at an estimate of ~3.9M (2026-10-20). The writers produced
+  491 nodes, not ~276, so the proposer and critic stages were re-estimated and are
+  waiting on Daniel (see "Cost" below). Do not launch proposers without his answer.
+- Strands (pilot/run/p3/skeletons): Q1 number system 86, E1 6-7 expressions and
+  equations 77, E2 grade 8 expressions, equations, functions 74, G3 6-7 geometry 88,
+  G4 grade 8 geometry 73, S1 statistics and probability 67; F1 (16) and F2 (10) are
+  Claude's fix-up nodes (Daniel's phase 2 review, pilot/run/p2/next_slice.yaml, plus 10
+  K-5 orphan ids), attached to E2 and G4.
+- Script pass done (prepare_phase --apply-concepts): batches, index (119 KB), prompts,
+  retired.json, retarget packet (47 edges). 0 problems; 0 boundary ids left: every id
+  the map references is now written or retired. Six ids retired:
+  expressions.variables, equations.one-step, rational-numbers.operations,
+  multiples.common-multiple, decimal.division.algorithm, coordinate-plane.four-quadrants.
+- Merges by Claude after the writers: pilot/run/p3/merges.md (3 cross-strand
+  duplicates; Daniel's to reverse).
+- New rules in the prompts from the phase 2 review: weakest node that supplies what a
+  statement uses; informal before formal; a teaching order is not a chain (proposer
+  template in tools/prepare_phase.py, critic template pilot/run/critic/critic.md);
+  application statement and test name the same class (pilot/run/p3/writer.md).
+- area.composite-additive re-pointed to area.additive (p1 override, same node).
+- Session limits stopped all four first-wave writers about 30 minutes in; each was
+  resumed with SendMessage. A resume replays the transcript (100-150k each); the
+  unreported first segments are ESTIMATED at 60k + 1.2k per node written (noted on
+  each manifest unit). tools/run_state.py now adds a tokens field when a unit lacks one.
+- Cost so far, phase 3 writers: 1,565,275 (Q1 287,328, E1 280,690, G3 276,242,
+  S1 282,543 incl. estimates; E2 218,225, G4 220,247 complete). Running total
+  7,794,671.
+
+### Cost of the rest (fitted to the 23 measured phase 1 and 2 agents)
+
+proposer = 48k + 1.37k per node + 0.37k per KB of index (rmse 3.5k);
+critic = 95k + 1.4k per node + index (only 5 measured). With the 119 KB index:
+- A. 12 batches (each strand halved, 33-45 nodes, inside the 30-60 rule): proposers
+  ~3.55M, critics ~2.19M, total ~5.7M.
+- B. 6 batches (one per strand, 67-90 nodes, outside the rule and outside the measured
+  range): ~3.9M, perhaps 4.4M if cost grows faster than linearly.
+- Retarget: 47 edges, small enough for Claude to do inline (0 subagent tokens).
+- Session limits will interrupt agents; each resume replays the transcript, so add
+  10-25% unless waves are kept small.
 
 ## Phase 2 review: applied
 
