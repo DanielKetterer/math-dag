@@ -1,0 +1,1534 @@
+{
+ "pass": "Q",
+ "batch": "E2a",
+ "nodes": {
+  "exponent.whole-number.product-rule": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a^m and a^n are read as m and n equal factors of a, so joining them gives m + n factors of a"
+      }
+     ]
+    }
+   ]
+  },
+  "exponent.whole-number.quotient-rule": {
+   "routes": [
+    {
+     "clause": "unknown-factor",
+     "edges": [
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a^m and a^n are read as products of equal factors of a, so the quotient is itself a power of a"
+      },
+      {
+       "node": "exponent.whole-number.product-rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a^(m - n) is the factor that multiplies a^n to give a^m, found by adding exponents"
+      },
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a quotient is read as the unknown factor that times the divisor gives the dividend"
+      }
+     ]
+    },
+    {
+     "clause": "cancel-common-factors",
+     "edges": [
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a^m and a^n are read as products of equal factors of a, which are then cancelled in pairs"
+      },
+      {
+       "node": "fraction.quotient.symbolic",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a^m divided by a^n is written as the fraction a^m over a^n so that common factors can be crossed out"
+      },
+      {
+       "node": "fraction.equivalent.multiply-principle",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "crossing out n common factors of a from numerator and denominator keeps the fraction equal and leaves m - n factors"
+      }
+     ]
+    }
+   ]
+  },
+  "exponent.whole-number.power-of-power": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "(a^m)^n is n equal factors that are each a^m, so the power has a power as its base and counts n groups of m factors of a"
+      }
+     ]
+    }
+   ]
+  },
+  "exponent.whole-number.power-of-product": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "(a x b)^n is n equal factors of the product a x b, which the rule splits into n factors of a and n factors of b"
+      },
+      {
+       "node": "expressions.product.regroup-factors",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the n copies of (a x b) are reordered and regrouped into n copies of a times n copies of b"
+      }
+     ]
+    }
+   ]
+  },
+  "exponent.whole-number.power-of-quotient": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "(a/b)^n is n equal factors of the quotient a/b, which the rule rewrites as a^n over b^n"
+      },
+      {
+       "node": "fraction.multiplication.product-rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "multiplying n copies of a/b multiplies the numerators and the denominators, giving a^n over b^n"
+      }
+     ]
+    }
+   ]
+  },
+  "exponent.zero": {
+   "routes": [
+    {
+     "clause": "extend-quotient-rule",
+     "edges": [
+      {
+       "node": "exponent.whole-number.quotient-rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a^n divided by a^n equals 1, and the quotient rule carried to equal exponents gives a^(n - n) = a^0"
+      }
+     ]
+    },
+    {
+     "clause": "keep-product-rule",
+     "edges": [
+      {
+       "node": "exponent.whole-number.product-rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "for a^0 x a^n to equal a^(0 + n) = a^n, the factor a^0 must leave a^n unchanged"
+      },
+      {
+       "node": "multiplication.by-one",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the factor that leaves any number unchanged on multiplication is 1, so a^0 = 1"
+      }
+     ]
+    }
+   ]
+  },
+  "exponent.negative": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.zero",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a^(-n) x a^n = a^(-n + n) = a^0 = 1 uses the zero exponent to get the product 1"
+      },
+      {
+       "node": "exponent.whole-number.product-rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the product a^(-n) x a^n is found by adding the exponents, as the product rule says"
+      },
+      {
+       "node": "fraction.reciprocal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a^(-n) = 1/a^n says a^(-n) is the reciprocal of a^n, the number whose product with a^n is 1"
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.whole-base",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "the test problem asks which value equals 2^-3, so 2^3 must be evaluated as 8"
+      }
+     ]
+    }
+   ]
+  },
+  "exponent.integer.properties": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.whole-number.product-rule",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the product rule for whole-number exponents is the rule extended to all integer exponents"
+      },
+      {
+       "node": "exponent.whole-number.quotient-rule",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the quotient rule for whole-number exponents is the rule extended to all integer exponents"
+      },
+      {
+       "node": "exponent.whole-number.power-of-power",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the power-of-a-power rule for whole-number exponents is the rule extended to all integer exponents"
+      },
+      {
+       "node": "exponent.whole-number.power-of-product",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the power-of-a-product rule for whole-number exponents is the rule extended to all integer exponents"
+      },
+      {
+       "node": "exponent.whole-number.power-of-quotient",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the power-of-a-quotient rule for whole-number exponents is the rule extended to all integer exponents"
+      },
+      {
+       "node": "exponent.zero",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the statement assumes a^0 = 1 so that exponent 0 is allowed in every rule"
+      },
+      {
+       "node": "exponent.negative",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the statement assumes a^(-n) = 1/a^n so that negative exponents are allowed in every rule"
+      },
+      {
+       "node": "rational-number.addition.integers",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the exponent m + n in the product rule is a sum of integers that may be negative"
+      },
+      {
+       "node": "rational-number.subtraction.integers",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the exponent m - n in the quotient rule is a difference of integers that may be negative"
+      },
+      {
+       "node": "rational-number.multiplication.integers",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the exponent m x n in the power-of-a-power rule is a product of integers that may be negative"
+      }
+     ]
+    }
+   ]
+  },
+  "exponent.integer.equivalent-expressions": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.integer.properties",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "combining powers by the product, quotient and power-of-a-power rules is done with integer exponents"
+      },
+      {
+       "node": "rational-number.addition.integers",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "the product rule adds exponents, as in 2 + (-5) in the test problem, which includes a negative integer"
+      },
+      {
+       "node": "rational-number.subtraction.integers",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "the quotient rule subtracts exponents, which may be negative integers"
+      },
+      {
+       "node": "rational-number.multiplication.integers",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "the power-of-a-power rule multiplies exponents, which may be negative integers"
+      },
+      {
+       "node": "exponent.negative",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "step 3 rewrites a^(-n) as the reciprocal 1/a^n to remove a negative exponent"
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.whole-base",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "step 4 evaluates the remaining whole-number power, such as 3^3 = 27, to give a value"
+      }
+     ]
+    }
+   ]
+  },
+  "root.square.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the square of a number is the number multiplied by itself, a power with exponent 2, which the root must equal p"
+      },
+      {
+       "node": "rational-number.compare.integers",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the condition that the root is 0 or greater picks the positive number over its negative opposite"
+      },
+      {
+       "node": "rational-number.multiplication.integers",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "the choice -6 also has square 36, so the learner must see that a product of two negatives is positive"
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.whole-base",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "deciding among 18, 6 and -6 means squaring each candidate and comparing with 36"
+      }
+     ]
+    }
+   ]
+  },
+  "root.cube.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the cube of a number is the number used as a factor three times, a power with exponent 3, which the root must equal p"
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.whole-base",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "deciding among 8, 4 and 64/3 means cubing each candidate and comparing with 64"
+      }
+     ]
+    }
+   ]
+  },
+  "root.square.perfect-square.evaluate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "root.square.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the answer is the 0 or greater number whose square is p, the meaning the search and the check test"
+      },
+      {
+       "node": "comparing.whole-numbers.magnitude.three-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "locating p up to 625 between two known squares compares p with three-digit squares"
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.whole-base",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "the check squares the number found, a power with exponent 2, such as 14^2 = 196"
+      }
+     ]
+    }
+   ]
+  },
+  "root.cube.perfect-cube.evaluate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "root.cube.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the answer is the whole number whose cube is p, the meaning the search and the check test"
+      },
+      {
+       "node": "comparing.whole-numbers.magnitude.multi-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "locating p up to 1000 between two known cubes compares p with cubes of up to four digits"
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.whole-base",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "the check cubes the number found, a power with exponent 3, such as 7^3 = 343"
+      }
+     ]
+    }
+   ]
+  },
+  "root.square.solve-x-squared": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "root.square.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 writes each solution with the square root symbol sqrt(p), whose meaning is the 0 or greater number with square p"
+      },
+      {
+       "node": "equation.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the claim of exactly two solutions is about the values of x that make x^2 = p true"
+      },
+      {
+       "node": "rational-number.multiplication.sign-rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "-sqrt(p) is also a solution because the product of two negative numbers is positive"
+      },
+      {
+       "node": "root.square.perfect-square.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "step 2 replaces sqrt(p) by its value when p is a perfect square"
+      }
+     ]
+    }
+   ]
+  },
+  "root.cube.solve-x-cubed": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "root.cube.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 writes the solution as the cube root of p, whose meaning is the number with cube p"
+      },
+      {
+       "node": "equation.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the claim of exactly one solution is about the values of x that make x^3 = p true"
+      },
+      {
+       "node": "root.cube.perfect-cube.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "step 2 replaces the cube root by its value when p is a perfect cube"
+      }
+     ]
+    }
+   ]
+  },
+  "root.square.sqrt2-irrational": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "root.square.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "sqrt(2) is the 0 or greater number whose square is 2, the number the claim is about"
+      },
+      {
+       "node": "rational-number.definition",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "irrational is stated as not equal to any fraction of integers, which negates the definition of a rational number"
+      },
+      {
+       "node": "decimal.thousandths.notation",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a finite decimal such as 1.414 is the fraction 1414/1000 of integers, so it cannot equal sqrt(2)"
+      }
+     ]
+    }
+   ]
+  },
+  "exponent.power-of-ten.negative": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.negative",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "10^-n = 1/10^n is the negative exponent rule applied with the base 10"
+      },
+      {
+       "node": "exponent.power-of-ten.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "10^n with a positive exponent is 1 followed by n zeros, which is the denominator of 1/10^n"
+      },
+      {
+       "node": "division.power-of-ten.rule",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "dividing 1 by 10^n moves the decimal point n places left, putting the digit 1 in the n-th place"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.power-of-ten.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the factor 10^n with a positive exponent n is written as a power of ten"
+      },
+      {
+       "node": "exponent.negative",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the exponent n may be a negative integer, as in 4.5 x 10^-3 where 10^-3 is 1/10^3"
+      },
+      {
+       "node": "decimal.compare",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the leading factor a must be at least 1 and less than 10, which compares the decimal a with 1 and 10"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.from-decimal.large": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scientific-notation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the result must have the form a x 10^n with a at least 1 and less than 10"
+      },
+      {
+       "node": "multiplication.power-of-ten.decimal.rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a x 10^n moves the decimal point of a n places right, so the places moved left give n"
+      },
+      {
+       "node": "exponent.power-of-ten.notation",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "step 3 writes the power 10^n with a positive whole-number exponent"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.from-decimal.small": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scientific-notation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the result must have the form a x 10^n with a at least 1 and less than 10"
+      },
+      {
+       "node": "division.power-of-ten.rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a x 10^-k equals a divided by 10^k, which moves the point left k places and undoes the right moves counted"
+      },
+      {
+       "node": "exponent.power-of-ten.negative",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "step 3 writes the power 10^n with a negative exponent, the decimal with 1 in the k-th place"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.to-decimal.large": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scientific-notation.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the number being written as a decimal is given in the form a x 10^n"
+      },
+      {
+       "node": "multiplication.power-of-ten.decimal.rule",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "moving the decimal point of a n places right is the rule for multiplying a decimal by 10^n"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.to-decimal.small": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scientific-notation.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the number being written as a decimal is given in the form a x 10^-k"
+      },
+      {
+       "node": "exponent.power-of-ten.negative",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "a x 10^-k is a times 1/10^k, the decimal with 1 in the k-th place, which is why the point moves left"
+      },
+      {
+       "node": "division.power-of-ten.rule",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "moving the decimal point of a k places left is the rule for dividing a decimal by 10^k"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.estimate.large": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rounding.whole-number.any-place",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 rounds the number to its greatest place, as 4,120,000,000 to 4,000,000,000"
+      },
+      {
+       "node": "multiplication.power-of-ten.whole-number.rule",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "d followed by n zeros equals d x 10^n, so n is the count of places after d"
+      },
+      {
+       "node": "exponent.power-of-ten.notation",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "step 3 writes the power 10^n with a positive whole-number exponent"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.estimate.small": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rounding.decimal.any-place",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 rounds the decimal to the place of its first nonzero digit"
+      },
+      {
+       "node": "exponent.power-of-ten.negative",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "a digit d in the k-th decimal place is d x 10^-k, the decimal with 1 in that place"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.compare.order": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scientific-notation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the rule that the greater exponent decides holds for leading factors at least 1 and less than 10"
+      },
+      {
+       "node": "rational-number.compare.integers",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 compares exponents such as -6 and -5, which may be negative integers"
+      },
+      {
+       "node": "decimal.compare",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "when exponents are equal, step 2 compares leading factors, which are decimals"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.compare.times-as-much": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scientific-notation.divide",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "dividing the leading factors and subtracting the exponents is the same computation as dividing in scientific notation"
+      },
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "saying the first number is a number of times as large as the second reads their quotient as a multiplicative comparison"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.normalize": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scientific-notation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the target is the form a x 10^n with a at least 1 and less than 10"
+      },
+      {
+       "node": "exponent.integer.properties",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "moving the point k places left multiplies the power by 10^k, using 10^k x 10^n = 10^(n + k) with integer n"
+      },
+      {
+       "node": "division.power-of-ten.rule",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "moving the decimal point of a left is dividing a by a power of ten, as 34.5 becomes 3.45"
+      },
+      {
+       "node": "multiplication.power-of-ten.decimal.rule",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "moving the decimal point of a right is multiplying a by a power of ten, as 0.6 becomes 6"
+      },
+      {
+       "node": "rational-number.addition.integers",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "step 2 adds k to the exponent when the point moved left"
+      },
+      {
+       "node": "rational-number.subtraction.integers",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "step 2 subtracts k from the exponent when the point moved right, as -2 - 1 = -3"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.add.same-exponent": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scientific-notation.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the addends and the sum are numbers in the form a x 10^n"
+      },
+      {
+       "node": "multiplication.distributive",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "(a + b) x 10^n = a x 10^n + b x 10^n takes the common power of ten out of the sum"
+      },
+      {
+       "node": "rational-number.addition.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 adds the leading factors, which are decimals such as 3.2 and 4.5"
+      },
+      {
+       "node": "scientific-notation.normalize",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "step 3 rewrites the result in scientific notation when the new leading factor is 10 or more"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.subtract.same-exponent": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scientific-notation.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the numbers and the difference are in the form a x 10^n"
+      },
+      {
+       "node": "multiplication.distributive",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "(a - b) x 10^n = a x 10^n - b x 10^n takes the common power of ten out of the difference"
+      },
+      {
+       "node": "rational-number.subtraction.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 subtracts the leading factors, which are decimals such as 8.6 and 2.3"
+      },
+      {
+       "node": "scientific-notation.normalize",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "step 3 rewrites the result in scientific notation when the new leading factor is less than 1"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.add.different-exponents": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.compare.integers",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 picks the smaller exponent, which may be a negative integer"
+      },
+      {
+       "node": "rational-number.subtraction.integers",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "the number of places the point moves equals the difference of the two exponents, such as 6 - 5"
+      },
+      {
+       "node": "division.power-of-ten.rule",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "moving the decimal point one place left per 1 added to the exponent is dividing by 10 each time"
+      },
+      {
+       "node": "scientific-notation.add.same-exponent",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "after rewriting, step 2 adds the leading factors and keeps the common power of 10"
+      },
+      {
+       "node": "scientific-notation.normalize",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "step 3 rewrites the result in scientific notation when needed"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.subtract.different-exponents": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.compare.integers",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 picks the smaller exponent, such as -4 against -3, a comparison of negative integers"
+      },
+      {
+       "node": "rational-number.subtraction.integers",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "the number of places the point moves equals the difference of the two exponents"
+      },
+      {
+       "node": "division.power-of-ten.rule",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "moving the decimal point one place left per 1 added to the exponent is dividing by 10 each time"
+      },
+      {
+       "node": "scientific-notation.subtract.same-exponent",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "after rewriting, step 2 subtracts the leading factors and keeps the common power of 10"
+      },
+      {
+       "node": "scientific-notation.normalize",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "step 3 rewrites the result in scientific notation when needed"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.multiply": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scientific-notation.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the factors and the product are numbers in the form a x 10^n"
+      },
+      {
+       "node": "expressions.product.regroup-factors",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "(a x 10^m) x (b x 10^n) = (a x b) x (10^m x 10^n) by reordering and regrouping the four factors"
+      },
+      {
+       "node": "rational-number.multiplication.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 multiplies the leading factors, which are decimals"
+      },
+      {
+       "node": "exponent.integer.properties",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "adding the exponents is the product rule for powers of 10 with integer exponents"
+      },
+      {
+       "node": "rational-number.addition.integers",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "step 2 adds exponents such as 3 + (-5), which may include a negative integer"
+      },
+      {
+       "node": "scientific-notation.normalize",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "step 3 rewrites the result in scientific notation when the new leading factor is 10 or more"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.divide": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scientific-notation.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the dividend, divisor and quotient are numbers in the form a x 10^n"
+      },
+      {
+       "node": "fraction.multiplication.product-rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the quotient of two products splits into (a/b) x (10^m / 10^n) by the rule for multiplying fractions read backward"
+      },
+      {
+       "node": "rational-number.division.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 divides the leading factors, which are decimals"
+      },
+      {
+       "node": "exponent.integer.properties",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "subtracting the exponents is the quotient rule for powers of 10 with integer exponents"
+      },
+      {
+       "node": "rational-number.subtraction.integers",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "step 2 subtracts exponents such as 4 - (-2), which may include a negative integer"
+      },
+      {
+       "node": "scientific-notation.normalize",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "step 3 rewrites the result in scientific notation when the new leading factor is less than 1"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.multiply.mixed-forms": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scientific-notation.from-decimal.large",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 writes a decimal of 10 or more in scientific notation"
+      },
+      {
+       "node": "scientific-notation.from-decimal.small",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 writes a decimal less than 1, such as 0.0003, in scientific notation"
+      },
+      {
+       "node": "scientific-notation.multiply",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "step 2 multiplies the two numbers once both are in scientific notation"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.divide.mixed-forms": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scientific-notation.from-decimal.large",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 writes a decimal of 10 or more, such as 4,800,000, in scientific notation"
+      },
+      {
+       "node": "scientific-notation.from-decimal.small",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 writes a decimal less than 1 in scientific notation"
+      },
+      {
+       "node": "scientific-notation.divide",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "step 2 divides the two numbers once both are in scientific notation"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.units.choose": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.units.metric",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 writes each offered unit as a power of 10 times the given unit, using the relative sizes of kilometers, meters and millimeters"
+      },
+      {
+       "node": "measurement.unit-conversion.multiplicative-relation",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "a measure in a smaller unit is k times its number in the larger unit, so converting multiplies or divides by a power of 10"
+      },
+      {
+       "node": "scientific-notation.divide",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "step 2 divides a measurement written in scientific notation by a power of 10"
+      },
+      {
+       "node": "decimal.compare",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "deciding whether a converted number is from 1 to 1000 compares decimals such as 0.025 with 1"
+      }
+     ]
+    }
+   ]
+  },
+  "scientific-notation.technology.interpret": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scientific-notation.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the display 4.7E-6 stands for the number in the form a x 10^n with a = 4.7 and n = -6"
+      }
+     ]
+    }
+   ]
+  },
+  "equation.linear.variable-both-sides": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.equality-preserved.same-operation",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 subtracts a variable term from both sides, an operation done to both sides of the equation"
+      },
+      {
+       "node": "expressions.linear.subtract.rational",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "subtracting cx from both sides leaves (a - c)x on one side, a difference of linear expressions"
+      },
+      {
+       "node": "equation.two-step.px-plus-q.solve",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "step 2 solves the resulting equation of the form px + q = r"
+      }
+     ]
+    }
+   ]
+  },
+  "equation.linear.expand-collect": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.linear.expand.rational",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 expands products such as 3(x - 2) with the distributive property"
+      },
+      {
+       "node": "expressions.linear.add.rational",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "step 2 collects like terms on each side, such as 3x + 4x, into a single expression"
+      },
+      {
+       "node": "equation.two-step.px-plus-q.solve",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "step 3 solves the resulting equation of the form px + q = r"
+      }
+     ]
+    }
+   ]
+  },
+  "equation.linear.clear-fractions": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "factors.common-multiple.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 finds a common multiple of all the denominators in the equation"
+      },
+      {
+       "node": "equation.equality-preserved.same-operation",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "multiplying every term on both sides by the same number gives an equation with the same solutions"
+      },
+      {
+       "node": "expressions.linear.expand.rational",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "multiplying a side made of several terms by the common multiple distributes it over every term"
+      },
+      {
+       "node": "rational-number.multiplication.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "step 3 simplifies each product, such as 6 x (2/3), so the coefficient is an integer"
+      }
+     ]
+    }
+   ]
+  },
+  "equation.linear.rational-coefficients": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.linear.variable-both-sides",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "the same moves of a variable term and a constant solve the equation, here with integer coefficients"
+      },
+      {
+       "node": "expressions.linear.subtract.rational",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 combines fractional or decimal coefficients, as (2/3 - 1/6)x, after subtracting a variable term"
+      },
+      {
+       "node": "rational-number.addition.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "step 2 adds a fraction or decimal constant to both sides"
+      },
+      {
+       "node": "rational-number.subtraction.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "step 2 subtracts a fraction or decimal constant from both sides"
+      },
+      {
+       "node": "rational-number.division.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "step 3 divides both sides by a fraction or decimal coefficient of x"
+      }
+     ]
+    }
+   ]
+  },
+  "equations.linear.solve": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.linear.expand.rational",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 expands products with rational factors, such as (1/2)(4x - 6)"
+      },
+      {
+       "node": "expressions.linear.add.rational",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "step 2 collects like terms with rational coefficients on each side"
+      },
+      {
+       "node": "equation.linear.rational-coefficients",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "steps 3 and 4 move variable terms to one side and divide by the coefficient, with fraction or decimal coefficients"
+      }
+     ]
+    }
+   ]
+  },
+  "equation.linear.solution-count.cases": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "one value, no value, and every value are counts of the numbers that make the equation true"
+      },
+      {
+       "node": "equation.solution.check-substitution",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "the test problem tries values of x in each equation to see whether it comes out true"
+      }
+     ]
+    }
+   ]
+  },
+  "equation.linear.solution-count.reduce": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.linear.solution-count.cases",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the ending equations x = a, a = a and a = b are read as one, infinitely many and no solutions"
+      },
+      {
+       "node": "expressions.linear.expand.rational",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 expands products such as 3(x + 2) on each side"
+      },
+      {
+       "node": "expressions.linear.add.rational",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 collects like terms on each side before the variable terms are moved"
+      },
+      {
+       "node": "equation.linear.variable-both-sides",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "step 2 subtracts a variable term from both sides, and step 4 isolates the variable when it remains"
+      }
+     ]
+    }
+   ]
+  },
+  "equation.linear.solution-count.inspection": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.linear.solution-count.cases",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "the three outcomes named by the comparison are one solution, no solution, and infinitely many"
+      },
+      {
+       "node": "equation.linear.solution-count.reduce",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "subtracting the variable term from both sides explains why equal coefficients leave only a comparison of constants"
+      },
+      {
+       "node": "expressions.linear.expand.rational",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 expands products such as 2(2x + 3) mentally so each side has the form px + q"
+      },
+      {
+       "node": "expressions.linear.add.rational",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "step 1 collects like terms mentally so each side has the form px + q"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
