@@ -148,7 +148,7 @@ units:
   # Daniel's go-ahead 2026-10-20, estimate ~3.9M. At most 4 agents at a time.
   # F1 and F2: fix-up nodes written inline by Claude (Daniel's phase 2 review,
   # pilot/run/p2/next_slice.yaml, plus 10 K-5 orphan ids); attached to E2 and G4.
-  - {id: p3.Q1.writer, stage: writer, strand: Q1, after: [p2.merge], input: pilot/run/p3/input/Q1.json, output: pilot/run/p3/skeletons/Q1.yaml, validate: writer-lc, status: running}
+  - {id: p3.Q1.writer, stage: writer, strand: Q1, after: [p2.merge], input: pilot/run/p3/input/Q1.json, output: pilot/run/p3/skeletons/Q1.yaml, validate: writer-lc, status: done, tokens: 287328, commit: d33da6c, note: "193,328 reported for the resumed segment plus an ESTIMATED 94k for the first segment (28 nodes), stopped by the session limit before it reported"}
   - {id: p3.E1.writer, stage: writer, strand: E1, after: [p2.merge], input: pilot/run/p3/input/E1.json, output: pilot/run/p3/skeletons/E1.yaml, validate: writer-lc, status: done, tokens: 280690, commit: f274d65, note: "180,690 reported for the resumed segment plus an ESTIMATED 100k for the first segment (33 nodes), stopped by the session limit before it reported"}
   - {id: p3.E2.writer, stage: writer, strand: E2, after: [p2.merge], input: pilot/run/p3/input/E2.json, output: pilot/run/p3/skeletons/E2.yaml, validate: writer-lc, status: running}
   - {id: p3.G3.writer, stage: writer, strand: G3, after: [p2.merge], input: pilot/run/p3/input/G3.json, output: pilot/run/p3/skeletons/G3.yaml, validate: writer-lc, status: done, tokens: 276242, commit: 2d6ae23, note: "182,242 reported for the resumed segment plus an ESTIMATED 94k for the first segment (28 nodes), stopped by the session limit before it reported"}
