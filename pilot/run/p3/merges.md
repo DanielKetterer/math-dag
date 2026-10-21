@@ -18,8 +18,7 @@ two range variants that later had to be split back (F97).
 - rational-number.compute.properties-strategy (E1, 7.EE.B.3) dropped: same test as
   Q1's rational-number.multiplication.properties-strategy (4 x (-3.7) x 25 versus
   -4 x 2.7 x (-25)); Q1 split the strategy by operation. Component 35c2f57a
-  stays cited by E1's rational-number.compute.mixed-forms and is added to Q1's
-  multiplication node.
+  stays cited by E1's rational-number.compute.mixed-forms.
 
 Kept apart: the real-world and mathematical versions of the same task
 (rational-number.application.multistep.*, coordinate-plane.application.*):
