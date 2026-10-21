@@ -1,0 +1,88 @@
+new_concepts:
+  - {concept: exponent, facet: whole-number-power, reason: "Exponent rules for positive whole-number exponents, which follow from counting factors and come before zero and negative exponents are defined (E1 may propose the same facet for 6.EE.A.1 evaluation)."}
+  - {concept: exponent, facet: integer-power, reason: "Zero and negative exponents and the exponent properties extended to all integer exponents; needs the definitions a^0 = 1 and a^(-n) = 1/a^n, which the whole-number facet does not."}
+  - {concept: root, facet: square, reason: "Square roots: sqrt(p) as the non-negative number whose square is p, evaluation, solutions of x^2 = p, and the irrationality of sqrt(2)."}
+  - {concept: root, facet: cube, reason: "Cube roots: the number whose cube is p, evaluation, and the single solution of x^3 = p."}
+  - {concept: scientific-notation, facet: core, reason: "Numbers written as a x 10^n with 1 <= a < 10; conversion, estimation, comparison, operations, unit choice, calculator display."}
+  - {concept: equation, facet: linear-one-variable, reason: "Solving linear equations in one variable beyond two-step, and the number of solutions (one, none, infinitely many)."}
+  - {concept: equation, facet: two-variable, reason: "The graph of an equation in x and y as the set of its solution pairs, needed for systems."}
+  - {concept: linear-system, facet: algebraic, reason: "A system of two linear equations in two variables read as two conditions a pair must meet at once; inspection, substitution, elimination, applications."}
+  - {concept: linear-system, facet: graphical, reason: "A system read as two lines; solutions as intersection points, reading and estimating from graphs, counting solutions from slopes."}
+  - {concept: functions, facet: rule, reason: "A function as a rule assigning exactly one output to each input (matches the reserved id functions.definition)."}
+  - {concept: functions, facet: graph, reason: "A function as its graph, the set of (input, output) points."}
+  - {concept: functions, facet: covariation, reason: "A function as the way one quantity changes with another, read and sketched qualitatively from graphs."}
+retires: []
+covered_by: []
+dropped: []
+notes: >
+  Reserved ids used: functions.definition (exactly the concept node) and
+  equations.linear.solve. The reserved description of equations.linear.solve
+  says "two-step and multi-step"; I wrote it as the general multi-step node
+  (rational coefficients, expanding, collecting like terms, variable on both
+  sides), which includes two-step equations as a special case. The one edge
+  that points at it should be re-pointed to E1's two-step node (7.EE.B.4.a,
+  px + q = r and p(x + q) = r) if that edge only needs two-step equations. Its
+  id prefix is "equations" while its concept is "equation"; I kept the id
+  exactly as reserved.
+  Expected from E1 (named, not written): expressions.variables and its finer
+  nodes (writing and evaluating expressions with a letter), equations.one-step,
+  the two-step equation node (used by step 2 of
+  equation.linear.variable-both-sides and by equations.linear.solve),
+  expanding and collecting like terms with rational coefficients (7.EE.A.1),
+  evaluating whole-number powers (6.EE.A.1), and a solution of an equation as a
+  value that makes it true (6.EE.B.5).
+  Expected from Q1 (named, not written): rational-numbers.operations (signed and
+  fraction arithmetic in every equation, exponent and scientific-notation node
+  that meets negatives or fractions), ordering integers (scientific-notation.
+  compare.order compares integer exponents), coordinate-plane.four-quadrants
+  (all graphing nodes), fraction.reciprocal (exponent.negative), the decimal
+  algorithms, and, if Q1 owns 8.NS.A.1, the meaning of an irrational number,
+  which root.square.sqrt2-irrational relies on. That node could move to Q1's
+  irrational-number concept if Q1 proposes one.
+  Range splits (rule 6): exponent rules are written twice, for positive
+  whole-number exponents (reachable by counting factors) and for all integer
+  exponents (exponent.integer.properties, which needs exponent.zero and
+  exponent.negative). Merging them would force the integer rule to depend on
+  definitions that the whole-number quotient rule is usually used to motivate,
+  a likely cycle. Scientific-notation conversions and estimates are split into
+  large (positive exponent) and small (negative exponent) because the small
+  case needs negative exponents and decimal places the large case does not.
+  System applications are split simple (slope-intercept, integer answer, from
+  lcs d77eb62e and 237c924f) versus general (any two points or any two linear
+  conditions, fraction answers or parallel lines possible).
+  Merges: 619c552c (perfect squares to 225) and 62ce8911 (to 625) are one node;
+  the larger range only adds more whole-number squares.
+  Components cited by more than one node because they name several skills:
+  4e8760e7 (squares and cubes), 1c9b3eef (x^2 = p and x^3 = p), 97d917b6 (order
+  and how-many-times), 36effa5a (large and small), 2687e8fb (four operations,
+  cited by four nodes), 47943e2b (direct rational-coefficient solving and the
+  general solve), c219ca3a (the solution-count concept and the reduce
+  procedure), 9cdd3a07 (inspection of ax + by = c forms and of slopes), c7a43025
+  (three algebraic methods), f50b9fed, d37fc186, 74b65cd2, 469afc42, 13cc406a.
+  Nodes with no lc, written because the standard text or a cited component
+  needs them and no written node supplies them: the five whole-number exponent
+  rules, exponent.zero, exponent.negative, exponent.integer.properties,
+  exponent.power-of-ten.negative, root.square.meaning, root.cube.meaning,
+  scientific-notation.meaning, the four from/to-decimal conversions,
+  scientific-notation.normalize, equation.linear.variable-both-sides,
+  equation.linear.expand-collect, equation.linear.clear-fractions,
+  equation.two-variable.graph-as-solutions, linear-system.graph.estimate,
+  linear-function.line.graph.
+  Unsure, for review: (1) equation.linear.clear-fractions is a strategy node,
+  meant as a route alternative to equation.linear.rational-coefficients (which
+  is the direct method); the standard does not name it. (2)
+  linear-system.solution-count.slopes and linear-system.inspection both come
+  from "solve simple cases by inspection"; they differ in the form read
+  (y = mx + b versus ax + by = c). (3) linear-system.graph.estimate and
+  linear-function.line.graph are limited to y = mx + b; graphing ax + by = c
+  is not written. (4) Square roots of fraction perfect squares (sqrt(4/9)) are
+  not written; the lcs are all whole numbers. (5) No justification nodes for
+  why a^0 = 1 and a^(-n) = 1/a^n are the right definitions; the standard says
+  "know and apply", with no explain component. (6) root.square.solve-x-squared
+  asks for both sqrt(p) and -sqrt(p); some grade 8 curricula accept only the
+  positive root.
+  Partial overlap: proportional-relationship.compare.representations already
+  covers comparing two proportional relationships; the two
+  linear-function.compare nodes cover linear functions with any initial value,
+  which that node does not. Function notation f(x) is not used anywhere
+  (8.F.A.1 does not require it).
