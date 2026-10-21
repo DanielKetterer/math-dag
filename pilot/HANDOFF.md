@@ -12,6 +12,12 @@ together ~7.5M against the 5.7M Daniel approved (option A); phase 3 ~9M; running
 already running and are committed as they finish. Resume only on Daniel's answer
 (next unit: p3.E1b.proposer-b).
 
+Single-pass option, measured: on Q1a, Q1b, E1a the passes agree at Jaccard 0.68 (as in
+phases 1 and 2); pass P alone carries 84% of the union. In phases 1-2 the critic kept
+93-94% of two-pass edges and 68-75% of one-pass edges, so dropping pass Q would lose
+about 10-11% of the edges that survive the critic. Saves ~1.9M (10 fewer proposers).
+Done when the hold began: Q1a, Q1b, E1a (both passes), E1b (P). Running total 9,141,423.
+
 ## Phase 3 (grades 6-8): writers done, retarget done, proposers running
 
 - Daniel approved phase 3 at ~3.9M (2026-10-20); the writers produced 491 nodes, not
