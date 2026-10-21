@@ -1,0 +1,1316 @@
+{
+ "pass": "P",
+ "batch": "E1a",
+ "nodes": {
+  "exponent.whole-number-power.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A power is a product of b equal factors, so reading each multiplication in 4 x 4 x 4 uses a product as a number of equal groups."
+      }
+     ]
+    }
+   ]
+  },
+  "exponent.whole-number-power.write": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing 6 x 6 x 6 x 6 x 6 as 6^5 uses the roles of base and exponent and the meaning of a^b as b equal factors."
+      }
+     ]
+    }
+   ]
+  },
+  "exponent.whole-number-power.evaluate.whole-base": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 rewrites a^b as a product of b factors of a, which is exactly what the power means."
+      },
+      {
+       "node": "multiplication.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the factors one at a time, as in 9 x 3 and then 27 x 3 for 3^4, each a whole number times a one-digit factor."
+      }
+     ]
+    }
+   ]
+  },
+  "exponent.whole-number-power.evaluate.fraction-base": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 rewrites (a/c)^b as a product of b factors of the fraction a/c, which is what the power means."
+      },
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies b copies of a fraction two at a time, as in (2/3) x (2/3) x (2/3)."
+      },
+      {
+       "node": "expressions.parentheses",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The base is written (a/c) inside parentheses so that the exponent applies to the whole fraction, not just to the denominator."
+      }
+     ]
+    }
+   ]
+  },
+  "exponent.whole-number-power.evaluate.decimal-base": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 rewrites d^b as a product of b factors of the decimal d, which is what the power means."
+      },
+      {
+       "node": "decimal.multiplication.algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies b copies of a decimal two at a time and places the decimal point in each product, as in 0.2 x 0.2 x 0.2."
+      },
+      {
+       "node": "expressions.parentheses",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem writes the base as (0.2) in parentheses, so the exponent 3 applies to the whole decimal."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.order-of-operations.exponents": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.order-of-operations",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement places powers inside the existing conventional order, after grouping symbols and before multiplication and division."
+      },
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Deciding when a power is evaluated requires knowing that a power is an operation that makes a product of equal factors."
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.whole-base",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Telling whether 2 x 3^2 is 36 or 18 requires evaluating 3^2 as 9 before multiplying."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.exponents.evaluate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.grouping.nested.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 evaluates inside grouping symbols, innermost first, which is the nested-grouping evaluation procedure."
+      },
+      {
+       "node": "expressions.order-of-operations.exponents",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 evaluates powers after grouping and before multiplication and division, which is where the rule places them."
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.whole-base",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds the value of each power of a whole number, such as 3^2 = 9 in the test problem."
+      },
+      {
+       "node": "expressions.order-of-operations",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Steps 3 and 4 apply the left-to-right convention to multiplication and division and then to addition and subtraction."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.variable.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.unknown-symbol",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A letter that stands for a number extends the symbol that stands for an unknown number in an equation like 8 + _ = 11."
+      },
+      {
+       "node": "expressions.write.record-calculation",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement speaks of operations written with the letter, so the learner must already see an expression as a record of operations on numbers."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks what 3 x b stands for, which reads 3 x b as three groups of b books each."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.notation.implicit-multiplication": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "4y means 4 times the number that y stands for, so the letter must already be read as a number."
+      },
+      {
+       "node": "expressions.parentheses",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "In 5(2 + n) a number sits directly before a parenthesized group, which must be read as one quantity computed first."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.variable.read": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A phrase for 5 - y describes operations on the number y stands for, so the letter must be read as a number."
+      },
+      {
+       "node": "expressions.interpret.without-evaluating",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Choosing a phrase for 5 - y reads the operations of an expression in words without computing it, as is first done with numbers."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.variable.write-from-words": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.write.record-calculation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing an expression for '7 less than 3 times a number n' repeats the numerical skill of recording described operations in the order given."
+      },
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The letter n in the phrase 'a number n' is written into the expression as a number the operations act on."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.parts.name": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.notation.implicit-multiplication",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding the coefficient of y and the two factors of 5x requires reading 5x as 5 times x."
+      },
+      {
+       "node": "expressions.order-of-operations",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The names sum, product and quotient depend on which operation is last, as in seeing 5x + 2y + 8 as a sum of three terms."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.parts.single-entity": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.parts.name",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Describing 2(8 + 7) as a product of two factors and then its second factor as a sum of two terms uses the words factor and term."
+      },
+      {
+       "node": "expressions.parentheses",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Treating (8 + 7) as one quantity extends the idea that parentheses group a part to be computed first."
+      },
+      {
+       "node": "expressions.notation.implicit-multiplication",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The expression 2(8 + 7) is written with a number directly before a parenthesis, which means 2 x (8 + 7)."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.variable.evaluate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 replaces each letter with a given number, which treats the letter as standing for that number."
+      },
+      {
+       "node": "expressions.notation.implicit-multiplication",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes out the multiplication the notation hides, turning 4a with a = 5 into 4 x 5."
+      },
+      {
+       "node": "expressions.order-of-operations",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 evaluates the resulting numerical expression in the conventional order, as in 4 x 5 + 3 x 2."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.formula.evaluate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.variable.evaluate",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding the quantity a formula names means replacing the letters in V = s^3 or A = 6s^2 with the given measurements and evaluating."
+      },
+      {
+       "node": "expressions.exponents.evaluate",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formulas V = s^3 and A = 6s^2 contain powers, so evaluating them after substitution puts the power before the multiplication by 6."
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.fraction-base",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem evaluates (1/2)^3 for an edge of 1/2 inch, a power of a fraction."
+      },
+      {
+       "node": "volume.unit-cube",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The answer to the cube problem must be stated in cubic inches, the unit that comes from a unit cube."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.numerical.fractions-decimals.evaluate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.grouping.nested.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 evaluates inside grouping symbols, innermost first, now in expressions whose numbers are fractions or decimals."
+      },
+      {
+       "node": "expressions.order-of-operations.exponents",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 puts powers before multiplication and division, as in 3 x (1/2)^2 in the test problem."
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.fraction-base",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 evaluates a power of a fraction, such as (1/2)^2."
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.decimal-base",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 evaluates a power of a decimal when the expression's numbers are decimals."
+      },
+      {
+       "node": "expressions.order-of-operations",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Steps 3 and 4 apply the left-to-right convention to multiplication and division and then to addition and subtraction."
+      },
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 multiplies fractions, as in 3 x (1/4) in the test problem."
+      },
+      {
+       "node": "fraction.division.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 divides fractions when the expression has a division."
+      },
+      {
+       "node": "decimal.multiplication.algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 multiplies decimals when the expression's numbers are decimals."
+      },
+      {
+       "node": "decimal.division.by-decimal.algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 divides decimals when the expression has a division."
+      },
+      {
+       "node": "fraction.addition.unlike-denominators",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 adds fractions, as in 1/2 + 3/4 in the test problem, where the denominators differ."
+      },
+      {
+       "node": "fraction.subtraction.unlike-denominators",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 subtracts fractions when the expression has a subtraction."
+      },
+      {
+       "node": "decimal.addition.algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 adds decimals when the expression's numbers are decimals."
+      },
+      {
+       "node": "decimal.subtraction.algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 subtracts decimals when the expression has a subtraction."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.sum.rearrange-terms": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.commutative",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes the terms in a new order, which is allowed because the order of addends does not change the sum."
+      },
+      {
+       "node": "addition.associative.strategy",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 groups the terms differently, which relies on choosing which two numbers to add first."
+      },
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The properties apply to a sum with a letter because the letter stands for a number."
+      },
+      {
+       "node": "expressions.parts.name",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement speaks of the terms of a sum, which uses the word term for each part added."
+      },
+      {
+       "node": "expressions.parentheses",
+       "relation": "representational",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 groups the terms to be combined by putting parentheses around them."
+      },
+      {
+       "node": "addition.within-10",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Rewriting 3 + x + 7 as x plus a single number requires finding 3 + 7."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.product.regroup-factors": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.commutative",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes the number factors next to each other, which is allowed because the order of factors does not change the product."
+      },
+      {
+       "node": "multiplication.associative",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 groups the number factors with parentheses, which relies on the associative property of multiplication."
+      },
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The properties apply to a product with a letter because the letter stands for a number."
+      },
+      {
+       "node": "expressions.parts.name",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement speaks of the factors of a product, which uses the word factor for each part multiplied."
+      },
+      {
+       "node": "expressions.notation.implicit-multiplication",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The goal 'a single number times y' is written as a number next to a letter, such as 20y."
+      },
+      {
+       "node": "expressions.parentheses",
+       "relation": "representational",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 groups the number factors by putting parentheses around them."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Rewriting 4 x (y x 5) as a single number times y requires finding 4 x 5."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.like-terms.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.parts.name",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Like terms are defined as terms that differ only in their coefficient, which uses the words term and coefficient."
+      },
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The same letters raised to the same powers requires reading x^2 as x times x, which the test pair 2x^2 and 2x uses."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.like-terms.combine": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.like-terms.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 identifies which terms are like terms before any coefficients are added."
+      },
+      {
+       "node": "expressions.parts.name",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement adds coefficients in ax + bx = (a + b)x, which uses the word coefficient for the number factor of a term."
+      },
+      {
+       "node": "multiplication.distributive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The identity ax + bx = (a + b)x is the distributive property of multiplication over addition read from right to left."
+      },
+      {
+       "node": "multiplication.by-one",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Counting a term written x as 1x relies on multiplying by 1 leaving a number unchanged."
+      },
+      {
+       "node": "addition.multi-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds the coefficients, which are whole numbers that may have more than one digit."
+      },
+      {
+       "node": "fraction.addition.unlike-denominators",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds the coefficients when they are fractions, which may have unlike denominators."
+      },
+      {
+       "node": "decimal.addition.algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds the coefficients when they are decimals, as in 2.5 + 4 in the test problem."
+      },
+      {
+       "node": "multiplication.equal-groups.meaning",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Writing y + y + y as a single term 3y reads three equal addends as three groups of y."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.distributive.expand": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.distributive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement rewrites a(b + c) as ab + ac, which is the distributive property of multiplication over addition."
+      },
+      {
+       "node": "new:multiplication.distributive-over-subtraction",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement also rewrites a(b - c) as ab - ac, which is the distributive property over subtraction."
+      },
+      {
+       "node": "expressions.parts.single-entity",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 multiplies the outside factor by each term, treating the parenthesized sum as one factor that is also a sum of terms."
+      },
+      {
+       "node": "expressions.notation.implicit-multiplication",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The expression 3(2 + x) and the product 3x both hide the multiplication sign, so the notation must be read as multiplication."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Rewriting 3(2 + x) as 6 + 3x requires finding 3 x 2."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.distributive.factor": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.distributive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses the distributive property in reverse to write a sum as a common factor times a sum."
+      },
+      {
+       "node": "factors.common-factor.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The terms must share a whole-number factor f, which is a common factor of the coefficients such as 6 for 24 and 18."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 divides each term's coefficient by f exactly, as in 24 / 6 and 18 / 6."
+      },
+      {
+       "node": "expressions.notation.implicit-multiplication",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The terms 24x and 18y and the result 6(4x + 3y) are all written with a hidden multiplication sign."
+      },
+      {
+       "node": "expressions.parts.single-entity",
+       "relation": "definitional",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 writes f times a sum, treating the sum of the quotients as a single factor."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.equivalent.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.variable.evaluate",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Equivalence is defined by comparing the values of two expressions after a number is substituted for the variable, which is evaluating each one."
+      },
+      {
+       "node": "expressions.variable.unknown-vs-varying",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "'Every number substituted for the variable' treats the letter as standing for any number in a set, not one fixed unknown."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.equivalent.test-substitution": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.equivalent.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Showing that two expressions are not equivalent means finding one value at which they differ, which is what equivalence requires at every value."
+      },
+      {
+       "node": "expressions.variable.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 chooses a value for the variable and evaluates both expressions at it."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.equivalent.test-properties": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.equivalent.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The decision is whether two expressions have the same value for every number, which is the meaning of equivalent."
+      },
+      {
+       "node": "expressions.distributive.expand",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 expands products such as 3(x + 4) with the distributive property."
+      },
+      {
+       "node": "expressions.like-terms.combine",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 combines like terms, as in 3x + 2x = 5x in the test problem."
+      },
+      {
+       "node": "expressions.sum.rearrange-terms",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Combining 3x and 2x in 3x + 12 + 2x requires first reordering the terms so the like terms sit together."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.equivalent.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.equivalent.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The argument must show equal values for every number, or one value where they differ, which is the meaning of equivalent."
+      },
+      {
+       "node": "expressions.equivalent.test-properties",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The argument for equivalence rewrites one expression into the other with properties of operations, as in y + y + y = 3y."
+      },
+      {
+       "node": "expressions.equivalent.test-substitution",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The argument for non-equivalence gives one value at which the expressions differ, as for y + 3 and 3y."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.solution.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.equal-sign.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "An equation is true when both sides have the same value, which is what the equal sign says and what makes a value a solution."
+      },
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A solution is a value of the variable, so the letter must already be read as standing for a number."
+      }
+     ]
+    }
+   ]
+  },
+  "inequality.solution.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.whole-numbers.symbols",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "An inequality such as x + 1 > 5 is written with a comparison symbol, which must be read to tell when it is true."
+      },
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A solution is a value of the variable, so the letter must already be read as standing for a number."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.solution.check-substitution": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A number is kept as a solution only when substituting it makes the equation true, which is the meaning of a solution."
+      },
+      {
+       "node": "expressions.variable.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 1 and 2 substitute a number for the variable and evaluate each side, as in 2x + 1 with x = 3."
+      }
+     ]
+    }
+   ]
+  },
+  "inequality.solution.check-substitution": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "inequality.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A number is kept as a solution only when substituting it makes the inequality true, which is the meaning of a solution."
+      },
+      {
+       "node": "expressions.variable.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 1 and 2 substitute a number for the variable and evaluate each side, as in 2x - 1 with x = 5."
+      },
+      {
+       "node": "comparing.whole-numbers.magnitude.multi-digit",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 decides whether the comparison of the two evaluated sides is true, such as 13 > 6, by judging which number is greater."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.variable.unknown-vs-varying": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Both uses of a letter, an unknown number and any number in a set, start from the letter standing for a number."
+      },
+      {
+       "node": "equation.unknown-symbol",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The first use, one unknown number fixed by a condition as in n + 3 = 10, extends the symbol for an unknown number in an equation."
+      },
+      {
+       "node": "equation.unknown.addition",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Telling which numbers n can be in n + 3 = 10 requires finding the unknown in an addition equation."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.variable.situation-from-expression": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner must say what the variable stands for, which uses the letter as a number."
+      },
+      {
+       "node": "expressions.variable.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A situation for 20 - 3x must match the operations in the right order, which is what describing the expression in words does."
+      },
+      {
+       "node": "expressions.variable.unknown-vs-varying",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The situation must let the variable take any number in a set, such as a count of items, rather than one fixed unknown."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.variable.write-for-situation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.variable.unknown-vs-varying",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The letter stands for a number that can vary, such as the number of pencils, rather than one fixed unknown."
+      },
+      {
+       "node": "expressions.variable.write-from-words",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Once the operations of the situation are stated, writing 2p + 3 uses the skill of writing an expression with a letter from a phrase."
+      },
+      {
+       "node": "multiplication.equal-groups.situation-to-expression",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The cost of p pencils at $2 each is an equal-groups situation written as 2 x p."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.equality-preserved.same-operation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says the new equation has exactly the same solutions, which uses what a solution of an equation is."
+      },
+      {
+       "node": "equation.equal-sign.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Doing the same operation to both sides keeps the two sides equal in value, which is what the equal sign says."
+      },
+      {
+       "node": "division.by-zero.undefined",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement allows dividing both sides only by a nonzero number, because division by zero is undefined."
+      },
+      {
+       "node": "multiplication.by-zero",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test option 0 x (n + 5) = 0 x 12 reduces to 0 = 0, so multiplying by 0 changes the solutions."
+      },
+      {
+       "node": "equation.solution.check-substitution",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Deciding which listed equations share the solution of n + 5 = 12 can be done by substituting n = 7 into each."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.one-step.addition.solve": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.equality-preserved.same-operation",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 subtracts p from both sides, which is justified because the same operation on both sides keeps the solutions."
+      },
+      {
+       "node": "subtraction.within-1000",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes q - p, which is a whole-number difference when p and q are whole numbers."
+      },
+      {
+       "node": "fraction.subtraction.unlike-denominators",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes q - p for fractions, as in 7/6 - 2/3 in the test problem, where the denominators differ."
+      },
+      {
+       "node": "decimal.subtraction.algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes q - p when p and q are decimals."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.one-step.multiplication.solve": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.equality-preserved.same-operation",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 divides both sides by p, which is justified because dividing both sides by the same nonzero number keeps the solutions."
+      },
+      {
+       "node": "expressions.notation.implicit-multiplication",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation px = q and the test equation (3/4)x = 6 write the product of p and x with the multiplication sign hidden."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes q divided by p for whole numbers when p is a one-digit number that divides q evenly."
+      },
+      {
+       "node": "fraction.quotient.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes q divided by p for whole numbers when the quotient is not a whole number, writing it as a fraction."
+      },
+      {
+       "node": "fraction.division.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes q divided by p for a fraction p, as in 6 divided by 3/4 in the test problem."
+      },
+      {
+       "node": "decimal.division.by-decimal.algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes q divided by p when p is a decimal."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.one-step.write.addition": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.situation.one-step",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing x + p = q for a story extends writing an equation with a symbol for the unknown in a one-step story."
+      },
+      {
+       "node": "expressions.variable.unknown-vs-varying",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The letter stands for one unknown quantity fixed by the story, and the learner must say what it stands for."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.one-step.write.multiplication": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.unknown-factor.equation-from-story",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing px = q for a story extends writing a multiplication equation with an unknown factor for a story."
+      },
+      {
+       "node": "expressions.variable.unknown-vs-varying",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The letter stands for one unknown quantity fixed by the story, and the learner must say what it stands for."
+      },
+      {
+       "node": "expressions.notation.implicit-multiplication",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation is written as px or (3/4)b, a number next to a letter meaning multiplication."
+      },
+      {
+       "node": "fraction.multiplication.parts-of-partition.whole-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A phrase like 'three-fourths of a bag' means the fraction times the quantity, as in (3/4) x b."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.one-step.addition.application": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.one-step.write.addition",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement solves a problem by writing x + p = q first, which is writing the equation for the story."
+      },
+      {
+       "node": "equation.one-step.addition.solve",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement then solves x + p = q, which is the solving procedure for that equation."
+      },
+      {
+       "node": "fraction.mixed-number.subtraction.unlike-denominators",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem solves with 10 1/2 - 2 3/4, a subtraction of mixed numbers with unlike denominators."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
