@@ -44,6 +44,8 @@ critic = 95k + 1.4k per node + index (only 5 measured). With the 119 KB index:
 - Session limits will interrupt agents; each resume replays the transcript, so add
   10-25% unless waves are kept small.
 
+# Earlier: phase 2 review applied; 5 items wait on Daniel (2026-10-20, later session)
+
 ## Phase 2 review: applied
 
 - Answers: pilot/run/p2/REVIEW_ANSWERS.txt, encoded in pilot/run/p2/overrides.yaml
