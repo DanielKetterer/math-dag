@@ -2,6 +2,15 @@
 
 Read this first in a new session. Then RULES.md.
 
+## WAITING for the weekly limit (resets Oct 26, 6am New York time)
+
+The weekly usage limit stopped four Sonnet proposers on 2026-10-21 before they wrote
+output: E2b P and Q, G3a P and Q (manifest status failed, with a note). Daniel chose to
+wait for the reset rather than switch models (2026-10-21). After the reset, resume those
+four (SendMessage to the same agents if this session lives; otherwise relaunch fresh),
+then G3b, G4a, G4b, S1a, S1b (both passes each), then the 12 critics. Done so far: Q1a,
+Q1b, E1a, E1b, E2a (both passes). Running total 9,716,843.
+
 ## Hold lifted (2026-10-21, evening): Daniel chose to continue with both passes at ~6.5M more
 
 Was: proposers paused pending Daniel.
