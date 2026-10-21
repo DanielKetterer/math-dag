@@ -1,0 +1,1181 @@
+{
+ "pass": "P",
+ "batch": "E1b",
+ "nodes": {
+  "equation.one-step.multiplication.application": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.one-step.write.multiplication",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires writing the equation px = q from the ribbon situation, with the unknown quantity as x."
+      },
+      {
+       "node": "equation.one-step.multiplication.solve",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "After writing px = q, the statement requires solving it, here 0.75x = 4.50, for the unknown quantity."
+      }
+     ]
+    }
+   ]
+  },
+  "inequality.simple.infinitely-many-solutions": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "inequality.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Counting the solutions of x > c or x < c uses the meaning of a solution as a value that makes the inequality true."
+      },
+      {
+       "node": "rational-number.order.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Every number on one side of c is a solution because greater or less means farther right or left of c on the number line."
+      }
+     ]
+    }
+   ]
+  },
+  "inequality.simple.number-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "inequality.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The open circle at c records that c itself is not a solution of x > c or x < c, while points on the ray are solutions."
+      },
+      {
+       "node": "rational-number.fraction-decimal.number-line",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 locates c, such as -1.5, on the number line, which can mean placing a negative decimal or fraction."
+      },
+      {
+       "node": "rational-number.order.number-line",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 chooses the ray direction from the symbol, since x > c lies to the right of c and x < c to the left."
+      },
+      {
+       "node": "ray.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement shows the solutions as a ray from c, a part of a line starting at c and going on without end one way."
+      }
+     ]
+    }
+   ]
+  },
+  "inequality.simple.write-constraint": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The inequality uses a letter such as h to stand for the unknown quantity, here the height of a rider."
+      },
+      {
+       "node": "comparing.whole-numbers.symbols",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The written inequality records 'more than' and 'less than' between the quantity and the number with the symbols > and <."
+      },
+      {
+       "node": "inequality.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The inequality must have as its solutions exactly the values that satisfy the stated condition, which is what a solution is."
+      }
+     ]
+    }
+   ]
+  },
+  "relationship.dependent-independent.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.variable.unknown-vs-varying",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Both quantities are letters that stand for any of many values that change together, not for one unknown number."
+      }
+     ]
+    }
+   ]
+  },
+  "relationship.equation.write.additive": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "relationship.dependent-independent.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation puts the dependent variable alone on one side, so the learner must tell which quantity is determined by the other."
+      },
+      {
+       "node": "expressions.variable.write-for-situation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing the side x + c or x - c is writing an expression with a letter for a quantity, such as b + 3 for Maya's age."
+      }
+     ]
+    }
+   ]
+  },
+  "relationship.equation.write.rate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "relationship.dependent-independent.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation puts the dependent variable alone on one side, so the learner must tell which quantity is determined by the other."
+      },
+      {
+       "node": "expressions.variable.write-for-situation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Writing the side rx is writing an expression with a letter for a quantity, such as 65t for the distance in t hours."
+      }
+     ]
+    }
+   ]
+  },
+  "relationship.table.from-equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.variable.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 substitutes each chosen value of the independent variable into the equation and evaluates it to get the dependent value."
+      },
+      {
+       "node": "relationship.dependent-independent.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner chooses values of the independent variable and computes the dependent variable, so must know which variable is which."
+      },
+      {
+       "node": "data.table-graph.read-values",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 records each pair of values side by side in a table, which is the table of paired values."
+      }
+     ]
+    }
+   ]
+  },
+  "relationship.equation.from-table": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "patterns.numerical.relationship",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding the fixed number added to, or multiplying, the independent values is identifying a relationship between corresponding terms."
+      },
+      {
+       "node": "relationship.equation.write.additive",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "In the plus-a-fixed-number case the result is an equation y = x + c with the dependent variable alone on one side."
+      },
+      {
+       "node": "relationship.equation.write.rate",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "In the fixed-number-times case the result is an equation y = rx with the dependent variable alone on one side."
+      },
+      {
+       "node": "expressions.variable.evaluate",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation must fit every row, so each row's independent value is substituted to confirm the dependent value."
+      }
+     ]
+    }
+   ]
+  },
+  "relationship.graph.plot": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.first-quadrant.plot",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each pair of values from the table, such as (1, 25), is plotted as one point on the coordinate grid."
+      },
+      {
+       "node": "relationship.dependent-independent.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement puts the independent variable on the horizontal axis and the dependent variable on the vertical axis."
+      },
+      {
+       "node": "data.table-graph.read-values",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The points come from reading each pair of paired values off the table of the relationship."
+      }
+     ]
+    }
+   ]
+  },
+  "relationship.change.relate-equation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "relationship.table.from-equation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement reads the constant change off consecutive rows of a table made from the equation, as in the table for d = 65t."
+      },
+      {
+       "node": "relationship.equation.write.rate",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The meaning of r in y = rx as a fixed amount for each unit of x is why each increase of 1 in x adds r."
+      }
+     ]
+    }
+   ]
+  },
+  "relationship.application.find-dependent": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.formula.evaluate",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding d from d = 65t at t = 2.5 is substituting into a given formula to find a quantity in a real-world problem."
+      },
+      {
+       "node": "relationship.dependent-independent.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The task gives a value of the independent variable and asks for the dependent variable, so the two roles must be told apart."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.linear.add.rational": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.like-terms.combine",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 combines the terms with the variable by adding their coefficients, as in combining like terms."
+      },
+      {
+       "node": "expressions.sum.rearrange-terms",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 1 and 2 remove the parentheses and group the variable terms and the constants by reordering and regrouping the terms of a sum."
+      },
+      {
+       "node": "rational-number.addition.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 adds signed fraction or decimal coefficients and constants, such as (1/2) + (-1/4) and -3 + 5."
+      },
+      {
+       "node": "rational-number.subtraction.add-inverse",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Grouping a subtracted constant such as the 3 in x/2 - 3 treats it as adding its opposite, -3."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.opposite-of-sum": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.subtraction.add-inverse",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The identities c - (a + b) = c - a - b start from subtracting the sum being the same as adding its opposite."
+      },
+      {
+       "node": "rational-number.additive-inverse",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "-a + (-b) is the opposite of a + b because the two sums together make 0, which is the meaning of additive inverses."
+      },
+      {
+       "node": "rational-number.opposite.of-opposite",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The identity c - (a - b) = c - a + b uses that the opposite of the opposite of b is b."
+      },
+      {
+       "node": "expressions.parts.single-entity",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The opposite is taken of the whole sum a + b, or of x - 4, viewed as a single quantity."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.linear.subtract.rational": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.opposite-of-sum",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 replaces subtracting the second expression by adding the opposite of each of its terms, which is the opposite of a sum."
+      },
+      {
+       "node": "expressions.linear.add.rational",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 2 and 3 group the variable terms and constants and add them, exactly as when adding linear expressions."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.linear.expand.rational": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.distributive.expand",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Rewriting a(bx + c) as (ab)x + ac applies the distributive property to a product that contains a variable term."
+      },
+      {
+       "node": "expressions.product.regroup-factors",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 turns a times (b times x) into (ab) times x by regrouping the factors of a product."
+      },
+      {
+       "node": "rational-number.multiplication.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 2 multiply the signed fraction or decimal numbers a and b, and a and c."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.linear.factor.rational": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.division.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 divides the coefficient and the constant by a, which may be negative or a fraction, as in 9 divided by -3."
+      },
+      {
+       "node": "expressions.distributive.factor",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 writes the expression as a times a sum, which is factoring a common factor out of a sum."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.rewrite.in-context": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.equivalent.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rewritten expression must be equivalent to the original, giving the same value for every value of the letter."
+      },
+      {
+       "node": "expressions.like-terms.combine",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Writing a + 0.05a as a single number times a combines the two terms in a, whose coefficients are 1 and 0.05."
+      }
+     ]
+    }
+   ]
+  },
+  "expressions.interpret.equivalent-forms": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.equivalent.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement treats a + 0.05a and 1.05a as two expressions for the same quantity, which is what equivalent means."
+      },
+      {
+       "node": "expressions.variable.situation-from-expression",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Reading what a form says about the quantities is describing the situation that an expression with a letter represents."
+      },
+      {
+       "node": "expressions.parts.name",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Seeing 1.05a as a multiple of a and a + 0.05a as a plus a part uses the names product, sum, term and factor."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.compute.mixed-forms": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.mixed-number.to-fraction",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 rewrites a mixed number such as 2 1/4 as a fraction when fraction form is chosen."
+      },
+      {
+       "node": "rational-number.fraction-to-decimal.long-division",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 rewrites a fraction such as 3/4 as a decimal when decimal form is chosen."
+      },
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 rewrites a decimal such as 1.5 as a fraction, tenths or hundredths, when fraction form is chosen."
+      },
+      {
+       "node": "rational-number.addition.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 adds the numbers once they are in one form, as in the sum in 3/4 - 1.5 + 2 1/4."
+      },
+      {
+       "node": "rational-number.subtraction.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 subtracts the numbers once they are in one form, as in 3/4 - 1.5."
+      },
+      {
+       "node": "rational-number.multiplication.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 multiplies signed fractions or decimals once they are in one form."
+      },
+      {
+       "node": "rational-number.division.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 divides signed fractions or decimals once they are in one form."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.estimate.reasonableness": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.estimate.benchmark.sum",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Estimating a sum of fractions or mixed numbers with benchmark or rounded values is the mental estimate the answer is compared with."
+      },
+      {
+       "node": "fraction.estimate.benchmark.difference",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Estimating a difference of fractions or mixed numbers, such as 27 1/2 minus 9 3/4, uses benchmarks and judges reasonableness."
+      },
+      {
+       "node": "rounding.decimal.any-place",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A decimal in the computation is replaced by a rounded or friendly number to make the mental estimate."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.application.multistep.real-world": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.compute.mixed-forms",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The numbers in the problem, such as -4.5, 1 1/2 and 2.25, are in different forms and must be computed with together."
+      },
+      {
+       "node": "rational-number.application.addition",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Adding a signed change to a signed value, as when the temperature rises, is one of the operations the problem takes."
+      },
+      {
+       "node": "rational-number.application.subtraction",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding a signed change between two values is one of the operations the problem may take."
+      },
+      {
+       "node": "rational-number.application.multiplication",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Multiplying a signed change per unit, such as 1 1/2 degrees an hour for 4 hours, is one of the operations the problem takes."
+      },
+      {
+       "node": "rational-number.application.division",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Sharing a signed change equally is one of the operations the problem may take."
+      }
+     ]
+    }
+   ]
+  },
+  "rational-number.application.multistep.mathematical": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.compute.mixed-forms",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The numbers, such as -2.4 and 1 3/5, are in different forms and must be computed with together in each operation."
+      },
+      {
+       "node": "number.halfway-between",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks for the number halfway between -2.4 and 1 3/5, which uses the idea of halfway between two numbers."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.two-step.px-plus-q.solve": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.equality-preserved.same-operation",
+       "relation": "justificatory",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Subtracting q from both sides, then dividing both sides by p, is valid because the same operation on both sides keeps the solutions."
+      },
+      {
+       "node": "rational-number.subtraction.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 computes r - q for signed rational numbers, as in -5 - 7 for the test problem."
+      },
+      {
+       "node": "rational-number.division.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 divides r - q by p, which may be negative or a fraction, as in -12 divided by -4."
+      },
+      {
+       "node": "expressions.notation.implicit-multiplication",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation is written px + q = r, with the number p next to the letter x meaning p times x."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.two-step.p-times-sum.solve": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.equality-preserved.same-operation",
+       "relation": "justificatory",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Dividing both sides by p, then subtracting q from both sides, is valid because the same operation on both sides keeps the solutions."
+      },
+      {
+       "node": "rational-number.division.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 divides r by p, which may be negative or a fraction, as in 10 divided by -2."
+      },
+      {
+       "node": "rational-number.subtraction.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 subtracts q from the quotient for signed rational numbers, as in -5 - (-3)."
+      },
+      {
+       "node": "expressions.parts.single-entity",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Dividing both sides by p leaves x + q, which step 1 treats as a single quantity multiplied by p."
+      },
+      {
+       "node": "expressions.notation.implicit-multiplication",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation is written p(x + q) = r, with the number p next to the parenthesis meaning p times the sum."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.two-step.compare-arithmetic-algebraic": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "operations.application.multistep",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The arithmetic solution is a two-step solution of a word problem, worked backward from the known result."
+      },
+      {
+       "node": "equation.two-step.px-plus-q.solve",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The algebraic solution being compared is the solution of px + q = r by subtracting from and dividing both sides."
+      },
+      {
+       "node": "equation.two-step.p-times-sum.solve",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement also covers the algebraic solution of p(x + q) = r, which divides first and then subtracts."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.two-step.write.px-plus-q": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.one-step.write.multiplication",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The part p times the unknown quantity, such as $12.50 per month for m months, is written as in px = q."
+      },
+      {
+       "node": "equation.one-step.write.addition",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The added known amount q, such as the $25 sign-up fee, is written as in x + p = q, with the total set equal to r."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.two-step.write.p-times-sum": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.one-step.write.addition",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The unknown increased or decreased by a known amount q, such as ticket price plus $3.50, is written as x + q."
+      },
+      {
+       "node": "equation.one-step.write.multiplication",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The multiplication by the known number p, such as 4 friends, and the setting equal to the total are written as in px = q."
+      },
+      {
+       "node": "expressions.parts.single-entity",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sum x + q is treated as a single quantity that is multiplied by p."
+      },
+      {
+       "node": "expressions.notation.implicit-multiplication",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation is written p(x + q) = r, with the number p next to the parenthesis meaning p times the sum."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.two-step.application.px-plus-q": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.two-step.write.px-plus-q",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires writing px + q = r for the word problem, saying what x stands for."
+      },
+      {
+       "node": "equation.two-step.px-plus-q.solve",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires solving the written equation, as in 22.5x + 35 = 80, for the unknown quantity."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.two-step.application.p-times-sum": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.two-step.write.p-times-sum",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires writing p(x + q) = r for the word problem, saying what x stands for."
+      },
+      {
+       "node": "equation.two-step.p-times-sum.solve",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires solving the written equation, as in 5(x - 1.20) = 14, for the unknown quantity."
+      }
+     ]
+    }
+   ]
+  },
+  "inequality.symbols.inclusive": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "inequality.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says whether the boundary value c is a solution, which uses the meaning of a solution of an inequality."
+      },
+      {
+       "node": "comparing.whole-numbers.symbols",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The symbols >= and <= are read as the symbols > or < together with =, and contrasted with the strict symbols."
+      },
+      {
+       "node": "inequality.solution.check-substitution",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Deciding which of 4, 5 and 6 are solutions of x >= 5 and of x > 5 is checking values by substitution."
+      }
+     ]
+    }
+   ]
+  },
+  "inequality.same-operation.preserved": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "inequality.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says the new inequality has the same solutions, which uses the meaning of a solution of an inequality."
+      },
+      {
+       "node": "rational-number.order.number-line",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The direction of an inequality is the relative position of two numbers on the number line, and adding or scaling by a positive number keeps it."
+      },
+      {
+       "node": "rational-number.addition.integers",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem computes 3 + (-10) and 7 + (-10), which are sums of integers."
+      },
+      {
+       "node": "rational-number.multiplication.integers",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem computes 3 x (-2) and 7 x (-2), which are products of integers with a negative factor."
+      },
+      {
+       "node": "rational-number.compare.integers",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem asks whether each new inequality is true, which means deciding which of two integers is greater."
+      }
+     ]
+    }
+   ]
+  },
+  "inequality.multiply-negative.reverse": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "inequality.same-operation.preserved",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The reversal is the contrast with multiplying or dividing by a positive number, which keeps the direction."
+      },
+      {
+       "node": "rational-number.multiplication.integers",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement compares the products a x c and b x c where c is negative, so products with a negative factor must be known."
+      },
+      {
+       "node": "rational-number.division.integers",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement also covers dividing both sides by a negative number, so quotients with a negative divisor must be known."
+      },
+      {
+       "node": "rational-number.compare.integers",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Choosing the symbol between -6 and -15 means deciding which of two negative integers is greater."
+      }
+     ]
+    }
+   ]
+  },
+  "inequality.two-step.solve": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "inequality.same-operation.preserved",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 2 subtract q from both sides and divide both sides by a positive p, which keep the direction of the inequality."
+      },
+      {
+       "node": "inequality.multiply-negative.reverse",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 reverses the symbol when p is negative, because dividing both sides by a negative number reverses the inequality."
+      },
+      {
+       "node": "inequality.symbols.inclusive",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement covers the forms px + q >= r and px + q <= r, which use the symbols >= and <=."
+      },
+      {
+       "node": "rational-number.subtraction.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 computes r - q for signed rational numbers, as in 11 - 5."
+      },
+      {
+       "node": "rational-number.division.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 divides r - q by p, which may be negative or a fraction, as in 6 divided by -2."
+      }
+     ]
+    }
+   ]
+  },
+  "inequality.solution-set.number-line.inclusive": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "rational-number.fraction-decimal.number-line",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 locates c, such as 2.5, on the number line, which can mean placing a decimal or fraction."
+      },
+      {
+       "node": "rational-number.order.number-line",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 chooses the ray direction from the symbol, since x >= c lies to the right of c and x <= c to the left."
+      },
+      {
+       "node": "inequality.symbols.inclusive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The filled circle at c shows that c is a solution, which is the meaning of the symbols >= and <=."
+      },
+      {
+       "node": "ray.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement shows the solutions as a ray from c, a part of a line starting at c and going on without end one way."
+      }
+     ]
+    }
+   ]
+  },
+  "inequality.solution-set.interpret": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "inequality.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement starts from the solution set of the inequality, the set of all values that make it true."
+      },
+      {
+       "node": "rational-number.compare.rationals",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Deciding which allowed values satisfy the condition means comparing candidate values with the boundary, such as 16 and 17 with 16 2/3."
+      },
+      {
+       "node": "fraction.between-whole-numbers",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem places 16 2/3 between 16 and 17 to find the least whole number of sales that meets the goal."
+      }
+     ]
+    }
+   ]
+  },
+  "inequality.two-step.write": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.two-step.write.px-plus-q",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The left side px + q is written from the word problem the same way as in the equation px + q = r."
+      },
+      {
+       "node": "inequality.simple.write-constraint",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The relation between the quantity and the known amount is written from words such as 'more than' or 'less than'."
+      },
+      {
+       "node": "inequality.symbols.inclusive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "'At least' and 'at most' are written with the symbols >= and <=, as in the test problem."
+      }
+     ]
+    }
+   ]
+  },
+  "inequality.two-step.application": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "inequality.two-step.write",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires writing the inequality for the word problem before solving it."
+      },
+      {
+       "node": "inequality.two-step.solve",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires solving the written inequality, as in 3 + 2.5m <= 18, for the unknown quantity."
+      },
+      {
+       "node": "inequality.solution-set.interpret",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires describing the solutions the context allows, such as the distances that are possible."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
