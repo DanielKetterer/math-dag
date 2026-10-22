@@ -1,0 +1,1660 @@
+{
+ "pass": "P",
+ "batch": "G3a",
+ "nodes": {
+  "height.base-height": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "perpendicular.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The height is defined as a segment perpendicular to the line that contains the base."
+      },
+      {
+       "node": "line.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The base is extended into a whole line, and the height may meet that line outside the figure."
+      },
+      {
+       "node": "shapes.polygon.name-by-sides",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The height is defined for a triangle, which must be recognized by its three sides and vertices."
+      },
+      {
+       "node": "shapes.quadrilateral.parallel-sides.define",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The height is also defined for a parallelogram, which is identified by its two pairs of parallel sides."
+      }
+     ]
+    }
+   ]
+  },
+  "area.triangle.right.half-rectangle": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.triangle.right.identify",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about right triangles, with two legs forming the right angle and the hypotenuse opposite it."
+      },
+      {
+       "node": "shapes.rectangle.define",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Drawing the rectangle that has the two legs as sides requires knowing a rectangle has four right angles."
+      },
+      {
+       "node": "shapes.rectangle.opposite-sides-equal",
+       "relation": "justificatory",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The two missing sides of the rectangle equal the legs, which is why the diagonal cuts off two matching triangles."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The area of the rectangle is found from its two side lengths, which are the legs."
+      },
+      {
+       "node": "area.additive",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rectangle's area is the sum of its two equal triangular halves, so each triangle has half of it."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Taking half of the rectangle's area of 24 square cm is dividing by 2."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The rectangle's area 6 x 4 is a single-digit product."
+      }
+     ]
+    }
+   ]
+  },
+  "area.parallelogram.rearrange": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.quadrilateral.parallel-sides.define",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about parallelograms, which are defined by two pairs of parallel sides."
+      },
+      {
+       "node": "perpendicular.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The cut is made perpendicular to the base, so the learner must know what perpendicular means."
+      },
+      {
+       "node": "height.base-height",
+       "relation": "representational",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "The resulting rectangle has the base and the height as its sides, and the height is the perpendicular cut."
+      },
+      {
+       "node": "area.additive",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Moving the cut-off piece keeps the total area, so the parallelogram has the same area as the rectangle."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "The area of the resulting rectangle is its base times its height."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The rectangle on the grid is 7 by 4, which is a single-digit product."
+      }
+     ]
+    }
+   ]
+  },
+  "area.triangle.half-parallelogram": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.parallelogram.rearrange",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The area of the joined parallelogram is found from its base and height by rearranging it into a rectangle."
+      },
+      {
+       "node": "height.base-height",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The parallelogram has the same base and height as the triangle, including a height drawn outside."
+      },
+      {
+       "node": "shapes.quadrilateral.parallel-sides.define",
+       "relation": "definitional",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The two joined copies form a parallelogram, recognized by its two pairs of parallel sides."
+      },
+      {
+       "node": "spatial.motion.turn-flip",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The copy of the triangle is turned halfway around so that it fits against the original."
+      },
+      {
+       "node": "area.additive",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The parallelogram's area is the sum of the two equal triangles, so the triangle has half of it."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Half of the parallelogram's area of 24 square cm is found by dividing by 2."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The parallelogram's area 8 x 3 is a single-digit product."
+      }
+     ]
+    }
+   ]
+  },
+  "area.parallelogram.formula": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.parallelogram.rearrange",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rearrangement into a rectangle with the same base and height is why the area is base times height."
+      },
+      {
+       "node": "height.base-height",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula uses a base and the height to that base, for any side chosen as the base."
+      },
+      {
+       "node": "shapes.quadrilateral.parallel-sides.define",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule is stated for any parallelogram, a quadrilateral with two pairs of parallel sides."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Checking 6 x 4 against the claimed area of 30 is a single-digit product."
+      }
+     ]
+    }
+   ]
+  },
+  "area.parallelogram.formula.apply": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.parallelogram.formula",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure applies the rule that the area is a base times the height to that base."
+      },
+      {
+       "node": "height.base-height",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 identifies the height to the chosen base and sets aside the slanted side."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The base times height product 9 x 4 is a single-digit product."
+      }
+     ]
+    }
+   ]
+  },
+  "area.triangle.formula": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.triangle.half-parallelogram",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Two copies of the triangle form a parallelogram, which is why the area is half of base times height."
+      },
+      {
+       "node": "height.base-height",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula uses a base and the height to that base, for any side chosen as the base."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Checking the product 6 x 8 against the claimed area is a single-digit product."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Half of the product 48 is found by dividing by 2."
+      }
+     ]
+    }
+   ]
+  },
+  "area.triangle.formula.apply": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.triangle.formula",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure applies the rule that the area is half of a base times the height to that base."
+      },
+      {
+       "node": "height.base-height",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 identifies the height to the base, which may lie outside the triangle."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The base times height product 6 x 4 is a single-digit product."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Taking half of the product 24 is dividing by 2."
+      }
+     ]
+    }
+   ]
+  },
+  "area.polygon.decompose": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.additive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The area of the polygon is the sum of the areas of the non-overlapping pieces."
+      },
+      {
+       "node": "height.base-height",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The pieces must have bases and heights that are given or can be found from the given lengths."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The area of each rectangular piece is its length times its width."
+      },
+      {
+       "node": "area.triangle.half-parallelogram",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The area of each triangular piece is found from its base and height."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The triangles' bases come from subtracting 4 from 10 in the picture."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The difference 6 is split between two equal triangles by dividing by 2."
+      },
+      {
+       "node": "fraction.addition.like-denominators",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The two triangles each have area 9/2 square cm, and these halves are added."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The rectangle's area and the triangle areas are added to a total under 100."
+      }
+     ]
+    }
+   ]
+  },
+  "area.polygon.subtract": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.additive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The larger figure's area is the sum of the given figure and the outside pieces, so subtracting recovers it."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The enclosing figure is usually a rectangle whose area is its length times its width."
+      },
+      {
+       "node": "area.triangle.right.half-rectangle",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Each outside piece in the test problem is a right triangle with given legs, whose area is half a rectangle."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The enclosing rectangle's area 6 x 5 is a single-digit product."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The three outside areas 6, 6 and 5 are added."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The sum of the outside areas is subtracted from the rectangle's area of 30."
+      }
+     ]
+    }
+   ]
+  },
+  "area.application.triangle": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.triangle.formula.apply",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner finds the area of a triangular region from its given base and height with the triangle area rule."
+      }
+     ]
+    }
+   ]
+  },
+  "area.application.polygon": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.polygon.decompose",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner cuts the region into rectangles and triangles, finds each area, and adds the areas."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.unit-fraction-cube": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.unit-cube",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The volume of the small cube is compared with the volume of one cubic unit."
+      },
+      {
+       "node": "volume.packing",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Volume is the number of unit cubes that pack a solid, and here the small cubes pack a unit cube."
+      },
+      {
+       "node": "volume.three-factor-product",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The count of n x n x n small cubes in a unit cube is a product of three whole numbers modeled as a prism."
+      },
+      {
+       "node": "shapes.cube.identify",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The solid being measured is a cube, with equal edges and square faces."
+      },
+      {
+       "node": "fraction.unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The edge 1/n is a unit fraction of a unit length, and the volume 1/(n x n x n) is also a unit fraction."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.prism.fraction-edges.packing": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.multiple-of-unit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each edge is a whole number of 1/n lengths, and the volume is a whole number of unit-fraction cubic units."
+      },
+      {
+       "node": "volume.packing",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The volume is the number of cubes that pack the prism, each with a known volume."
+      },
+      {
+       "node": "volume.three-factor-product",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The number of cubes that pack the prism is the product of the three counts along the edges."
+      },
+      {
+       "node": "volume.unit-fraction-cube",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The volume of one packing cube, 1/(n x n x n) cubic unit, is multiplied by the number of cubes."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.prism.fraction-edges.packing-equals-product": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.prism.fraction-edges.packing",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement compares the volume found by packing with unit-fraction cubes to the product of the edge lengths."
+      },
+      {
+       "node": "fraction.multiplication.product-rule",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Multiplying (a/n) x (b/n) x (c/n) gives (a x b x c)/(n x n x n), the cube count times one cube's volume."
+      },
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The product 3/4 x 1/2 x 1 must be computed to compare it with the packing result."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.prism.fraction-edges.lwh.apply": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.prism.formula.lwh",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The volume rule l x w x h for a rectangular prism is applied here with fractional edges."
+      },
+      {
+       "node": "volume.prism.fraction-edges.packing-equals-product",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Packing with unit-fraction cubes shows the product of fractional edge lengths still gives the volume."
+      },
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies three lengths, at least one of them a fraction."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.prism.fraction-edges.base-height.apply": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.prism.formula.base-height",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The volume rule B x h for a rectangular prism is applied here with a fractional base area or height."
+      },
+      {
+       "node": "volume.prism.fraction-edges.packing-equals-product",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Packing with unit-fraction cubes shows that multiplying fractional measures still gives the volume."
+      },
+      {
+       "node": "multiplication.array-area.fraction-sides.multiply",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Finding the base area from the fractional length and width of the base is multiplying the side lengths."
+      },
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the base area by the height, and at least one of them is a fraction."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.application.prism.fraction-edges.lwh": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.prism.fraction-edges.lwh.apply",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner finds the volume of a box from its length, width and height with fractional edges."
+      },
+      {
+       "node": "fraction.mixed-number.multiplication",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement allows an edge given as a mixed number, which must be multiplied with the others."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.application.prism.fraction-edges.base-height": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.prism.fraction-edges.base-height.apply",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner multiplies the given base area by the height, at least one of them a fraction."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.polygon.draw": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.four-quadrants.plot",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Each vertex given as an ordered pair in any quadrant is plotted on the grid."
+      },
+      {
+       "node": "segment.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Consecutive vertices are joined with line segments, each the part of a line between two endpoints."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.polygon.missing-vertex": {
+   "routes": [
+    {
+     "clause": "plot-and-complete",
+     "edges": [
+      {
+       "node": "coordinate-plane.four-quadrants.plot",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The three given vertices, with coordinates of any sign, are plotted on the plane."
+      },
+      {
+       "node": "shapes.rectangle.define",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The fourth corner is found by completing a rectangle, a quadrilateral with four right angles."
+      },
+      {
+       "node": "coordinate-plane.four-quadrants.read",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The coordinates of the completed fourth corner are read from the plane."
+      }
+     ]
+    },
+    {
+     "clause": "shared-coordinates",
+     "edges": [
+      {
+       "node": "coordinate-plane.segment-length.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Points sharing a first or second coordinate lie on one vertical or horizontal line, which fixes the shared coordinates."
+      },
+      {
+       "node": "shapes.rectangle.define",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A rectangle with sides parallel to the axes has vertical and horizontal sides meeting at right angles."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.segment-length.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.ordered-pair.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Points with the same first coordinate are the same distance from the vertical axis, so they lie on one vertical line."
+      },
+      {
+       "node": "coordinate-plane.four-quadrants.plot",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The points have coordinates of any sign, and the segment joining them is seen by plotting them."
+      },
+      {
+       "node": "rational-number.integer.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The length is the distance between two coordinates, which are positions on a number line."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.segment-length.same-sign": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.segment-length.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The length is the distance between the two differing coordinates of points on one horizontal or vertical line."
+      },
+      {
+       "node": "absolute-value.distance.integer",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 takes the absolute value of each differing coordinate, which is its distance from 0."
+      },
+      {
+       "node": "rational-number.integer.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Coordinates with the same sign lie on the same side of 0 on the number line."
+      },
+      {
+       "node": "subtraction.within-10",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The absolute values 7 and 3 are subtracted to give 4."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.segment-length.opposite-sign": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.segment-length.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The length is the distance between the two differing coordinates of points on one horizontal or vertical line."
+      },
+      {
+       "node": "absolute-value.distance.integer",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 takes the absolute value of each differing coordinate, which is its distance from 0."
+      },
+      {
+       "node": "rational-number.integer.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Coordinates with opposite signs lie on opposite sides of 0, so the segment crosses the axis."
+      },
+      {
+       "node": "addition.within-10",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The absolute values 3 and 5 are added to give 8."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.application.perimeter": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.segment-length.same-sign",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Sides whose differing coordinates share a sign are measured by the difference of absolute values."
+      },
+      {
+       "node": "coordinate-plane.segment-length.opposite-sign",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Sides whose differing coordinates have opposite signs are measured by the sum of absolute values."
+      },
+      {
+       "node": "perimeter.polygon.from-sides",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The perimeter is the sum of the side lengths found from the coordinates."
+      },
+      {
+       "node": "coordinate-plane.polygon.draw",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Consecutive vertices in the list are joined by sides, as when a polygon is drawn from its vertices."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.application.rectangle-area": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.segment-length.same-sign",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Sides whose differing coordinates share a sign are measured by the difference of absolute values."
+      },
+      {
+       "node": "coordinate-plane.segment-length.opposite-sign",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Sides whose differing coordinates have opposite signs are measured by the sum of absolute values."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The area is the product of the rectangle's length and width found from the coordinates."
+      },
+      {
+       "node": "coordinate-plane.polygon.draw",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Consecutive vertices in the list are joined by sides, as when a polygon is drawn from its vertices."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The side lengths 6 and 4 give a single-digit product."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.application.distance.real-world": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.segment-length.same-sign",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Places in one quadrant that share a coordinate are separated by the difference of absolute values."
+      },
+      {
+       "node": "coordinate-plane.segment-length.opposite-sign",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Places in different quadrants that share a coordinate are separated by the sum of absolute values."
+      },
+      {
+       "node": "coordinate-plane.application.real-world.four-quadrants",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Places on the town map are located by signed coordinates on the map grid."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.application.missing-corner.real-world": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.polygon.missing-vertex",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The fourth corner of the rectangular region is found as the missing vertex of an axis-parallel rectangle."
+      },
+      {
+       "node": "coordinate-plane.application.real-world.four-quadrants",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The corners are places on a map grid located by signed coordinates."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.prism.right.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.solid.parts",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A prism is described by its faces and bases, which are the flat surfaces of a solid."
+      },
+      {
+       "node": "shapes.polygon.name-by-sides",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The bases are polygons, such as triangles and quadrilaterals, named by their number of sides."
+      },
+      {
+       "node": "shapes.rectangle.define",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The side faces must be rectangles, with four right angles, to tell right prisms from leaning ones."
+      },
+      {
+       "node": "perpendicular.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rectangular faces are perpendicular to the bases, meeting them at right angles."
+      },
+      {
+       "node": "parallel.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The two bases lie in parallel positions and never meet, however far they are extended."
+      },
+      {
+       "node": "shapes.compare.same-different",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The two bases must be the same shape and size, which is found by comparing the whole shapes."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.pyramid.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.solid.parts",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A pyramid is described by its base face, its triangular faces and the apex corner where they meet."
+      },
+      {
+       "node": "shapes.polygon.name-by-sides",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The base is a polygon and the side faces are triangles, each named by its number of sides."
+      }
+     ]
+    }
+   ]
+  },
+  "net.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.solid.parts",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A net contains every face of the solid, so the learner must be able to identify the faces."
+      },
+      {
+       "node": "shapes.dimension.flat-solid",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A net is a flat figure that folds up into a solid shape."
+      },
+      {
+       "node": "shapes.cube.identify",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test asks which arrangements of six equal squares fold into a cube, which has six equal square faces."
+      }
+     ]
+    }
+   ]
+  },
+  "net.draw": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "net.meaning",
+       "relation": "justificatory",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Checking that the net folds into the solid with no gaps or overlaps uses what a net is."
+      },
+      {
+       "node": "shapes.prism.right.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Drawing the net of a right prism requires knowing its bases and its rectangular side faces."
+      },
+      {
+       "node": "shapes.pyramid.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Drawing the net of a pyramid requires knowing its polygon base and its triangular faces."
+      },
+      {
+       "node": "measurement.length.ruler",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Faces are drawn with their dimensions and labeled with edge lengths, using a ruler."
+      },
+      {
+       "node": "height.base-height",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Each triangular face is drawn with a base of 4 cm and a height of 3 cm."
+      },
+      {
+       "node": "perpendicular.draw",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The triangle's height of 3 cm is drawn perpendicular to its base."
+      }
+     ]
+    }
+   ]
+  },
+  "surface-area.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.covering.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each face has an area, the number of unit squares that cover it."
+      },
+      {
+       "node": "area.additive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The surface area is the sum of the areas of the faces."
+      },
+      {
+       "node": "shapes.solid.parts",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The surface area is defined over all the faces of a solid."
+      },
+      {
+       "node": "volume.packing",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test tells surface area apart from the number of unit cubes that fill the box."
+      }
+     ]
+    }
+   ]
+  },
+  "surface-area.net.rectangular-prism": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "surface-area.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The surface area is the sum of the areas of all the faces."
+      },
+      {
+       "node": "net.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The six rectangles are read from a net, a flat figure of all the faces."
+      },
+      {
+       "node": "shapes.prism.right.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The solid is a right rectangular prism whose faces are rectangles."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The area of each rectangle in the net is its length times its width."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Each rectangle's area, such as 5 x 3, is a single-digit product."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The six rectangle areas 15, 15, 10, 10, 6 and 6 are added."
+      }
+     ]
+    }
+   ]
+  },
+  "surface-area.net.triangle-faces": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "surface-area.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The surface area is the sum of the areas of all the faces."
+      },
+      {
+       "node": "net.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rectangles and triangles are read from a net, a flat figure of all the faces."
+      },
+      {
+       "node": "shapes.prism.right.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The solid may be a triangular prism, a right prism with triangular bases."
+      },
+      {
+       "node": "shapes.pyramid.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The solid may be a pyramid, with a polygon base and triangular faces."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The area of each rectangle in the net is its length times its width."
+      },
+      {
+       "node": "area.triangle.half-parallelogram",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The area of each triangle in the net is found from its base and height."
+      },
+      {
+       "node": "height.base-height",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Each triangle's base and the height to that base are identified from the net."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The square base 4 x 4 and the triangle product 4 x 3 are single-digit products."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The areas of the square and the four triangles are added."
+      }
+     ]
+    }
+   ]
+  },
+  "surface-area.rectangular-prism.from-dimensions": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "surface-area.net.rectangular-prism",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A net shows six rectangles in three identical pairs, so the surface area is twice the sum of three areas."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The areas l x w, l x h and w x h are areas of rectangles."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The products 5 x 3, 5 x 2 and 3 x 2 are single-digit products."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The three face areas 15, 10 and 6 are added to 31."
+      },
+      {
+       "node": "multiplication.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Doubling the sum 31 multiplies a two-digit number by 2."
+      }
+     ]
+    }
+   ]
+  },
+  "surface-area.prism.from-dimensions": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "surface-area.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The surface area is the sum of the areas of the two bases and the side faces."
+      },
+      {
+       "node": "shapes.prism.right.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The solid is a right prism with congruent bases and rectangular side faces whose other dimension is the prism's height."
+      },
+      {
+       "node": "area.polygon.decompose",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The area of the base, a polygon, is found before it is doubled."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Each side face is a rectangle with a side of the base and the prism's height as its dimensions."
+      },
+      {
+       "node": "multiplication.by-multiple-of-ten",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The side faces 3 x 10, 4 x 10 and 5 x 10 multiply a one-digit number by a multiple of 10."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The doubled base area and the three side-face areas total 132, a sum within 1000."
+      }
+     ]
+    }
+   ]
+  },
+  "surface-area.application.rectangular-prism": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "surface-area.rectangular-prism.from-dimensions",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner finds the surface area of a box from its length, width and height."
+      },
+      {
+       "node": "surface-area.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The paper that covers the closed box exactly is its surface area, the total area of all faces."
+      }
+     ]
+    }
+   ]
+  },
+  "surface-area.application.triangle-faces": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "surface-area.net.triangle-faces",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner adds the areas of the rectangles and triangles of an object such as a triangular prism or pyramid."
+      },
+      {
+       "node": "surface-area.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The material that covers the object exactly is its surface area, the total area of its faces."
+      },
+      {
+       "node": "height.base-height",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The tent's triangular end has a given height of 4 ft that must be chosen over the slanted side of 5 ft."
+      }
+     ]
+    }
+   ]
+  },
+  "scale-drawing.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "multiplication.scaling.resize",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Every length in the drawing is the actual length multiplied by one and the same factor, a resizing."
+      },
+      {
+       "node": "angle.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The drawing has the same angles as the figure, so the learner must know what an angle is."
+      },
+      {
+       "node": "ratio.equivalent",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test checks whether pairs of corresponding side lengths have equivalent ratios, such as 4:6 and 6:9."
+      }
+     ]
+    }
+   ]
+  },
+  "scale-drawing.actual-length": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scale-drawing.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The scale states which actual length one drawing length stands for."
+      },
+      {
+       "node": "ratio.equivalent",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Drawing length and actual length are in the same ratio as the two lengths named in the scale."
+      },
+      {
+       "node": "ratio.table.missing-value",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Scaling up the scale's pair of lengths to the given drawing length finds the missing actual length."
+      }
+     ]
+    }
+   ]
+  },
+  "scale-drawing.actual-area": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scale-drawing.actual-length",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Each drawing length that the area calculation uses is converted to an actual length with the scale."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The room is a rectangle, so its area is the product of its actual length and width."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The actual room area 8 x 6 is a single-digit product."
+      }
+     ]
+    }
+   ]
+  },
+  "scale-drawing.area.scale-factor-squared": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scale-drawing.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement multiplies every length of a figure by k, as a scale drawing does."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Area as length times width shows that multiplying both lengths by k multiplies the area by k x k."
+      },
+      {
+       "node": "expressions.product.regroup-factors",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Rewriting (k x l) x (k x w) as (k x k) x (l x w) reorders and regroups the factors."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test's factor 3 gives the product 3 x 3, a single-digit product."
+      }
+     ]
+    }
+   ]
+  },
+  "scale-drawing.reproduce": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "scale-drawing.actual-length",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The actual length of each side is found from the old scale."
+      },
+      {
+       "node": "ratio.table.missing-value",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The new drawing length is the missing value in the new scale's pair of corresponding lengths."
+      },
+      {
+       "node": "scale-drawing.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The redrawn figure is a scale drawing with the same angles and all lengths multiplied by one factor."
+      },
+      {
+       "node": "measurement.length.ruler",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The figure is drawn with the new lengths, measured out with a ruler."
+      },
+      {
+       "node": "angle.draw-by-type",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The garden's corners are right angles that must be drawn again."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
