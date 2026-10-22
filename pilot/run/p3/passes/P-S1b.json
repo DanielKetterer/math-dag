@@ -1,0 +1,162 @@
+{"pass": "P", "batch": "S1b",
+ "nodes": {
+  "probability.likelihood.zero-to-one": {"routes": [{"clause": "standard", "edges": [
+    {"node": "fraction.as-number", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement places probabilities such as 1/5 as numbers on a scale from 0 to 1, so a fraction must already be a number."},
+    {"node": "fraction.compare.to-one", "relation": "procedural", "points_to": "assess", "scope": "task", "why": "The test problem asks whether 4/3 can be a probability, which needs seeing that 4/3 is greater than 1."},
+    {"node": "decimal.tenths.notation", "relation": "representational", "points_to": "assess", "scope": "task", "why": "The test problem lists 0.7 as a possible probability, which is read as 7 tenths and so lies between 0 and 1."},
+    {"node": "rational-number.signed.meaning", "relation": "procedural", "points_to": "assess", "scope": "task", "why": "The test problem lists -0.2, a negative number on the opposite side of 0 from every probability, so it is ruled out."}
+  ]}]},
+
+  "probability.likelihood.interpret": {"routes": [{"clause": "standard", "edges": [
+    {"node": "probability.likelihood.zero-to-one", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement reads a probability as a number on the 0 to 1 scale of likelihood, with 0 impossible and 1 certain."},
+    {"node": "fraction.compare.benchmark", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "Deciding whether a probability is near 0, around 1/2, or near 1 compares a fraction with benchmark fractions."},
+    {"node": "decimal.compare", "relation": "procedural", "points_to": "assess", "scope": "task", "why": "The test problem gives 0.9 and 0.05 and asks which event is most likely, which compares these two decimals."}
+  ]}]},
+
+  "probability.relative-frequency.estimate": {"routes": [{"clause": "standard", "edges": [
+    {"node": "probability.likelihood.zero-to-one", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement approximates a probability, a number from 0 to 1 measuring likelihood, by a relative frequency of trials."},
+    {"node": "fraction.quotient.symbolic", "relation": "procedural", "points_to": "procedure.3", "scope": "concept", "why": "Step 3 divides the count of trials with the event by the number of trials, which is written as the fraction count over trials."}
+  ]}]},
+
+  "probability.relative-frequency.more-trials": {"routes": [{"clause": "standard", "edges": [
+    {"node": "probability.relative-frequency.estimate", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement is about how the relative frequency over a number of trials approaches the probability, so relative frequency as an estimate is used."}
+  ]}]},
+
+  "probability.relative-frequency.predict-count": {"routes": [{"clause": "standard", "edges": [
+    {"node": "probability.relative-frequency.estimate", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "Expecting about p x n occurrences uses the relative frequency, count over n, being close to the probability p but not equal to it."},
+    {"node": "fraction.multiply-whole.symbolic", "relation": "procedural", "points_to": "statement", "scope": "concept", "why": "Finding p x n for a fractional probability such as 1/3 and n = 600 multiplies a fraction by a whole number."}
+  ]}]},
+
+  "probability.model.uniform.develop": {"routes": [{"clause": "standard", "edges": [
+    {"node": "probability.likelihood.zero-to-one", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The model assigns each outcome a probability, a number from 0 to 1 that says how likely that outcome is."},
+    {"node": "fraction.unit.part-whole", "relation": "representational", "points_to": "statement", "scope": "concept", "why": "The probability assigned to each of n equally likely outcomes is written as the unit fraction 1/n, one of n equal parts."}
+  ]}]},
+
+  "probability.model.uniform.event": {"routes": [{"clause": "standard", "edges": [
+    {"node": "probability.model.uniform.develop", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement works inside a uniform probability model, whose list of n equally likely outcomes supplies the total in the division."},
+    {"node": "fraction.quotient.symbolic", "relation": "procedural", "points_to": "procedure.3", "scope": "concept", "why": "Step 3 divides the number of outcomes in the event by the total number of outcomes, written as the fraction event over total."}
+  ]}]},
+
+  "probability.model.from-frequencies": {"routes": [{"clause": "standard", "edges": [
+    {"node": "probability.relative-frequency.estimate", "relation": "procedural", "points_to": "procedure.2", "scope": "concept", "why": "Steps 2 and 3 find each outcome's relative frequency by the same count over trials division used to estimate one probability."},
+    {"node": "probability.model.uniform.develop", "relation": "definitional", "points_to": "procedure.4", "scope": "concept", "why": "Step 4 judges whether outcomes appear equally likely, using the meaning of equally likely outcomes that share the same probability."}
+  ]}]},
+
+  "probability.model.nonuniform.event": {"routes": [{"clause": "standard", "edges": [
+    {"node": "probability.model.uniform.event", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement treats an event as the outcomes that make it up and contrasts its sum rule with the count over total rule for uniform models."},
+    {"node": "decimal.addition.algorithm", "relation": "procedural", "points_to": "assess", "scope": "task", "why": "The test problem adds P(red) = 0.5 and P(green) = 0.2, which is a sum of two decimals."}
+  ]}]},
+
+  "probability.sample-space.list": {"routes": [], "root_reason": "The outcomes of each stage are read straight off the described spinner or coin, and the organized listing method (fix the first stage, run through the later stages) is taught in this node itself, so no earlier skill in the map is used."},
+
+  "probability.sample-space.table": {"routes": [{"clause": "standard", "edges": [
+    {"node": "table.read-two-way", "relation": "representational", "points_to": "statement", "scope": "concept", "why": "The statement is stated in a table whose rows are first-stage outcomes and columns second-stage outcomes, with one cell per outcome."},
+    {"node": "probability.sample-space.list", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement counts one cell per outcome in the sample space, the set of all combinations of stage outcomes defined with the organized list."}
+  ]}]},
+
+  "probability.sample-space.tree": {"routes": [{"clause": "standard", "edges": [
+    {"node": "probability.sample-space.list", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "Each path of the tree is one outcome in the sample space, the set of all combinations of stage outcomes defined with the organized list."}
+  ]}]},
+
+  "probability.compound.event-outcomes": {"routes": [{"clause": "standard", "edges": [
+    {"node": "probability.sample-space.list", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement picks the outcomes that make up an event from the sample space, the set of all combinations of the stages' outcomes."},
+    {"node": "probability.sample-space.table", "relation": "representational", "points_to": "assess", "scope": "task", "why": "The test problem gives the sample space of two number cubes as a 6-by-6 table in which each cell is one outcome."}
+  ]}]},
+
+  "probability.compound.fraction-of-outcomes": {"routes": [{"clause": "standard", "edges": [
+    {"node": "probability.model.uniform.event", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement says the probability is outcomes in the event over outcomes in the sample space 'just as for a simple event', the uniform rule."},
+    {"node": "probability.compound.event-outcomes", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The numerator counts the outcomes in which the compound event occurs, found by checking each outcome against the event's description."}
+  ]}]},
+
+  "probability.simulation.design": {"routes": [{"clause": "standard", "edges": [
+    {"node": "probability.model.uniform.event", "relation": "procedural", "points_to": "procedure.1", "scope": "concept", "why": "Step 1 assigns k of n equally likely digits to an outcome so that its probability is k over n, as in a uniform model."},
+    {"node": "probability.compound.event-outcomes", "relation": "procedural", "points_to": "procedure.3", "scope": "concept", "why": "Step 3 states a rule that decides whether a trial's draws satisfy the event's description, which is checking an outcome against that description."},
+    {"node": "percent.rate-per-100", "relation": "procedural", "points_to": "assess", "scope": "task", "why": "The test problem gives the probability as 40%, which must be read as 40 per 100 and turned into 4 of the 10 digits."}
+  ]}]},
+
+  "probability.simulation.use": {"routes": [{"clause": "standard", "edges": [
+    {"node": "probability.relative-frequency.estimate", "relation": "procedural", "points_to": "procedure.3", "scope": "concept", "why": "Steps 2 and 3 count the trials in which the event occurred and divide by the number of trials, the relative frequency estimate itself."}
+  ]}]},
+
+  "data.scatter-plot.make": {"routes": [{"clause": "standard", "edges": [
+    {"node": "coordinate-plane.first-quadrant.plot", "relation": "procedural", "points_to": "procedure.3", "scope": "concept", "why": "Step 3 plots the point (first value, second value) for each individual, which is plotting a point with whole-number coordinates in the first quadrant."},
+    {"node": "data.bar-graph.scaled.draw", "relation": "procedural", "points_to": "procedure.2", "scope": "concept", "why": "Step 2 chooses and marks a scale on each axis that covers the range of the values, as when choosing the scale of a bar graph."}
+  ]}]},
+
+  "association.numerical.direction": {"routes": [{"clause": "standard", "edges": [
+    {"node": "data.scatter-plot.make", "relation": "representational", "points_to": "statement", "scope": "concept", "why": "The statement describes tendencies shown by a scatter plot, where each point is a pair of values of the two quantities."}
+  ]}]},
+
+  "association.numerical.form": {"routes": [{"clause": "standard", "edges": [
+    {"node": "data.scatter-plot.make", "relation": "representational", "points_to": "statement", "scope": "concept", "why": "The statement classifies the pattern of points in a scatter plot, and the test problem asks for both data sets to be plotted."},
+    {"node": "line.meaning", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "A linear association is one whose points lie roughly along a straight line, so the idea of a straight line is used."}
+  ]}]},
+
+  "association.numerical.strength": {"routes": [{"clause": "standard", "edges": [
+    {"node": "association.numerical.form", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "Strength is defined only for a linear association, whose points lie roughly along a straight line, so the statement uses that idea."},
+    {"node": "association.numerical.direction", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement says strength is separate from direction, and the test problem gives two plots that have the same positive direction."}
+  ]}]},
+
+  "association.numerical.clusters-outliers": {"routes": [{"clause": "standard", "edges": [
+    {"node": "data.scatter-plot.make", "relation": "representational", "points_to": "statement", "scope": "concept", "why": "Clusters and outliers are groups and single points in a scatter plot, where each point is a pair of values from one individual."}
+  ]}]},
+
+  "linear-function.fitted-line.meaning": {"routes": [{"clause": "standard", "edges": [
+    {"node": "association.numerical.form", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement applies when a scatter plot shows a linear association, which is points lying roughly along a straight line."}
+  ]}]},
+
+  "linear-function.fitted-line.fit": {"routes": [{"clause": "standard", "edges": [
+    {"node": "linear-function.fitted-line.meaning", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The line drawn is the line that models the trend, summarizing the data without having to pass through every point."},
+    {"node": "association.numerical.direction", "relation": "procedural", "points_to": "procedure.1", "scope": "concept", "why": "Step 1 judges from the points whether the trend rises or falls, which is deciding positive or negative association."},
+    {"node": "data.scatter-plot.make", "relation": "procedural", "points_to": "assess", "scope": "task", "why": "The test problem asks for the six given points to be plotted as a scatter plot before the line is drawn."}
+  ]}]},
+
+  "linear-function.fitted-line.assess-fit": {"routes": [{"clause": "standard", "edges": [
+    {"node": "linear-function.fitted-line.meaning", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "Judging how well a line fits uses the idea of a line that models the trend of the data without passing through every point."}
+  ]}]},
+
+  "linear-function.fitted-line.slope.interpret": {"routes": [{"clause": "standard", "edges": [
+    {"node": "linear-function.model.rate.interpret", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The slope is read as the change in the second quantity per one unit of the first, the rate of change of a linear model in context."},
+    {"node": "linear-function.fitted-line.meaning", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement says the slope describes the trend of the data, not the exact change for each individual, which uses the line as a model."}
+  ]}]},
+
+  "linear-function.fitted-line.intercept.interpret": {"routes": [{"clause": "standard", "edges": [
+    {"node": "linear-function.model.initial.interpret", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The intercept is read as the value of the second quantity when the first is 0, the initial value of a linear model in context."},
+    {"node": "linear-function.fitted-line.meaning", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement calls the intercept a prediction by the line, one that may be meaningless far outside the data, which uses the line as a model."}
+  ]}]},
+
+  "linear-function.fitted-line.predict": {"routes": [{"clause": "standard", "edges": [
+    {"node": "expressions.variable.evaluate", "relation": "procedural", "points_to": "statement", "scope": "concept", "why": "Finding the predicted value substitutes the given value of the first quantity into the equation and evaluates it."},
+    {"node": "expressions.numerical.fractions-decimals.evaluate", "relation": "procedural", "points_to": "assess", "scope": "task", "why": "The test problem evaluates 1.5 x 6 + 10 after substituting, which is a numerical expression with a decimal."},
+    {"node": "linear-function.fitted-line.meaning", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement says the answer is a prediction from the trend and not an exact value for any individual, which uses the line as a model."}
+  ]}]},
+
+  "linear-function.fitted-line.solve-for-input": {"routes": [{"clause": "standard", "edges": [
+    {"node": "equation.two-step.px-plus-q.solve", "relation": "procedural", "points_to": "statement", "scope": "concept", "why": "The statement finds the first quantity by solving the equation for it, and the test problem solves 1.5x + 10 = 25."},
+    {"node": "linear-function.fitted-line.meaning", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The input the model associates with an output is a value read from a line that summarizes the trend, not an exact value."}
+  ]}]},
+
+  "table.two-way.construct": {"routes": [{"clause": "standard", "edges": [
+    {"node": "table.two-way.interpret", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement says what each cell, row total, column total, and grand total of the table counts, which is the meaning of the cells and totals."},
+    {"node": "data.categorical.count-each", "relation": "procedural", "points_to": "procedure.2", "scope": "concept", "why": "Step 2 tallies the subjects falling in each pair of categories, which is counting the objects in each category."},
+    {"node": "addition.within-100", "relation": "procedural", "points_to": "procedure.3", "scope": "concept", "why": "Step 3 adds across each row and down each column and adds all the cells for the grand total, which are sums of whole numbers."}
+  ]}]},
+
+  "table.two-way.interpret": {"routes": [{"clause": "standard", "edges": [
+    {"node": "table.read-two-way", "relation": "representational", "points_to": "statement", "scope": "concept", "why": "The statement is about what the entries and totals of a table of rows and columns count, so reading an entry by its row and column is used."}
+  ]}]},
+
+  "table.two-way.relative-frequency": {"routes": [{"clause": "standard", "edges": [
+    {"node": "table.two-way.interpret", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement divides a cell count by its row or column total, so what a cell and a total count must be known."},
+    {"node": "fraction.quotient.symbolic", "relation": "procedural", "points_to": "procedure.2", "scope": "concept", "why": "Step 2 divides each cell count by the total of its row or column, which is written as the fraction cell over total."}
+  ]}]},
+
+  "association.categorical.meaning": {"routes": [{"clause": "standard", "edges": [
+    {"node": "table.two-way.relative-frequency", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The statement defines association by whether row or column relative frequencies differ from one category to the next."}
+  ]}]},
+
+  "association.categorical.describe": {"routes": [{"clause": "standard", "edges": [
+    {"node": "association.categorical.meaning", "relation": "definitional", "points_to": "statement", "scope": "concept", "why": "The answer decides whether there is an association by judging whether the relative frequencies differ between categories."},
+    {"node": "table.two-way.relative-frequency", "relation": "procedural", "points_to": "statement", "scope": "concept", "why": "The statement says the answer is found by computing row or column relative frequencies from the counts in the two-way table."}
+  ]}]}
+ }}
