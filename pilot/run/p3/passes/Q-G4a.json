@@ -1,0 +1,1705 @@
+{
+ "pass": "Q",
+ "batch": "G4a",
+ "nodes": {
+  "transformation.translation.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "point.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement moves every point of the plane and defines the image as the set of moved points, so a point as an exact location is used."
+      },
+      {
+       "node": "measurement.length.attribute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The condition 'same distance' compares how far each point moves, which treats that distance as a length that can be equal or unequal."
+      },
+      {
+       "node": "spatial.position.body",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The condition 'same direction' and the test's 'to the right' use direction words for the way a point moves."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.reflection.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "point.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement takes each point P to a point P' and says points on the line stay put, so points as exact locations are used."
+      },
+      {
+       "node": "line.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement reflects across a line l, which must be understood as straight and extending without end both ways."
+      },
+      {
+       "node": "segment.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement names segment PP' joining a point to its image and then speaks of the midpoint of that segment."
+      },
+      {
+       "node": "perpendicular.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The condition that segment PP' is perpendicular to l uses lines that meet at right angles."
+      },
+      {
+       "node": "partitioning.segment.equal-lengths",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The condition that l passes through the midpoint of PP' means l splits PP' into two equal lengths."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.rotation.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "point.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement takes each point P to a point P' and says the center O stays where it is, so points as exact locations are used."
+      },
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement fixes the amount of turn by angle POP' = d degrees, which uses the measure of an angle in degrees."
+      },
+      {
+       "node": "new:angle.turn-direction",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement turns the point in a given direction, clockwise or counterclockwise, so the two turning directions must be told apart."
+      },
+      {
+       "node": "measurement.length.attribute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The condition OP' = OP says the image point is the same distance from the center as the original point."
+      },
+      {
+       "node": "angle.right.meaning",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test places points 90 degrees from ray OP, and a 90 degree turn is a square corner turn, which picks out the correct image point."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.rotation.draw": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.rotation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure carries out the definition: it finds P' with OP' = OP and angle POP' equal to the given angle, turned in the given direction."
+      },
+      {
+       "node": "angle.protractor.sketch",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 draws a ray from O that makes the given angle with ray OP, using a protractor centered at O."
+      },
+      {
+       "node": "new:angle.turn-direction",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 turns the ray in the given direction, clockwise or counterclockwise, so the learner must tell the two directions apart."
+      },
+      {
+       "node": "measurement.length.ruler",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 marks P' on the ray so that OP' = OP, which means measuring OP and marking the same length with a ruler."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.rigid-motion.preserves-length": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.translation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about what a translation does to lines and segments, so what a translation is must be known."
+      },
+      {
+       "node": "transformation.reflection.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about what a reflection does to lines and segments, so what a reflection is must be known."
+      },
+      {
+       "node": "transformation.rotation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about what a rotation does to lines and segments, so what a rotation is must be known."
+      },
+      {
+       "node": "line.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says every line is taken to a line, which uses what it means for a line to be straight and endless."
+      },
+      {
+       "node": "segment.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says every line segment is taken to a segment of the same length, which uses what a segment is."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.rigid-motion.preserves-length.verify": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.translation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The experiment moves a tracing of a segment by a translation, so the learner must know what a translation does."
+      },
+      {
+       "node": "transformation.reflection.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The experiment moves a tracing of a segment by a reflection, so the learner must know what a reflection does."
+      },
+      {
+       "node": "transformation.rotation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The experiment moves a tracing of a segment by a rotation, so the learner must know what a rotation does."
+      },
+      {
+       "node": "segment.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The tracing is of a segment, and the finding is about the image of that segment."
+      },
+      {
+       "node": "comparing.size.direct",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Comparing each image with the original means laying one segment against the other to see whether their lengths match."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.rigid-motion.preserves-angle": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.translation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about what a translation does to angles, so what a translation is must be known."
+      },
+      {
+       "node": "transformation.reflection.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about what a reflection does to angles, so what a reflection is must be known."
+      },
+      {
+       "node": "transformation.rotation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about what a rotation does to angles, so what a rotation is must be known."
+      },
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says every angle goes to an angle of the same measure, which uses the measure of an angle in degrees."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.rigid-motion.preserves-angle.verify": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.translation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The experiment moves a tracing of an angle by a translation, so the learner must know what a translation does."
+      },
+      {
+       "node": "transformation.reflection.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The experiment moves a tracing of an angle by a reflection, so the learner must know what a reflection does."
+      },
+      {
+       "node": "transformation.rotation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The experiment moves a tracing of an angle by a rotation, so the learner must know what a rotation does."
+      },
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The finding is that the image angle has the same measure as the original, and the tracing shows this by fitting exactly over it."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.rigid-motion.preserves-parallel": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.translation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about what a translation does to pairs of lines, so what a translation is must be known."
+      },
+      {
+       "node": "transformation.reflection.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about what a reflection does to pairs of lines, so what a reflection is must be known."
+      },
+      {
+       "node": "transformation.rotation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about what a rotation does to pairs of lines, so what a rotation is must be known."
+      },
+      {
+       "node": "parallel.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says parallel lines stay parallel, which uses the meaning of lines that never meet."
+      },
+      {
+       "node": "line.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The second half of the statement is about two lines that meet, which uses what a line is."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.rigid-motion.preserves-parallel.verify": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.translation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The experiment moves a tracing of two parallel lines by a translation, so the learner must know what a translation does."
+      },
+      {
+       "node": "transformation.reflection.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The experiment moves a tracing of two parallel lines by a reflection, so the learner must know what a reflection does."
+      },
+      {
+       "node": "transformation.rotation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The experiment moves a tracing of two parallel lines by a rotation, so the learner must know what a rotation does."
+      },
+      {
+       "node": "parallel.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "After each move the learner checks whether the image lines are parallel, meaning they never meet."
+      },
+      {
+       "node": "parallel.draw",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test begins by drawing two parallel lines on paper so that they can be traced."
+      }
+     ]
+    }
+   ]
+  },
+  "congruence.rigid-motion.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.translation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The definition says a sequence of translations can take one figure onto the other, so what a translation does is used."
+      },
+      {
+       "node": "transformation.reflection.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The definition says a sequence of reflections can take one figure onto the other, so what a reflection does is used."
+      },
+      {
+       "node": "transformation.rotation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The definition says a sequence of rotations can take one figure onto the other, so what a rotation does is used."
+      },
+      {
+       "node": "transformation.rigid-motion.preserves-length",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "To rule out figures C and D, the learner uses that rigid motions keep lengths, so a figure with different lengths cannot be matched exactly."
+      },
+      {
+       "node": "scale-drawing.meaning",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Figure D is described as enlarged with scale factor 2, which uses the idea that an enlargement multiplies every length by the same factor."
+      }
+     ]
+    }
+   ]
+  },
+  "congruence.sequence.describe": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "congruence.rigid-motion.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sequence the procedure finds is exactly the one named in the definition of congruent figures."
+      },
+      {
+       "node": "transformation.translation.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 translates the first figure so that one vertex lands on its corresponding vertex."
+      },
+      {
+       "node": "transformation.rotation.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 rotates about that vertex so that a side lies along the corresponding side."
+      },
+      {
+       "node": "angle.protractor.measure",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 must state how far to rotate, which is the measure of the angle between the two sides found by measuring it."
+      },
+      {
+       "node": "transformation.reflection.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 reflects across the line containing a side when the figures still do not match."
+      },
+      {
+       "node": "coordinate-plane.first-quadrant.plot",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test gives the six vertices as coordinates on a grid, and the learner must locate them to see how the two triangles sit."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.dilation.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "point.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement takes each point P to a point P' and says the center O stays where it is, so points as exact locations are used."
+      },
+      {
+       "node": "ray.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The image point P' lies on ray OP, which starts at the center and extends without end one way."
+      },
+      {
+       "node": "multiplication.scaling.resize",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The condition OP' = k x OP resizes the distance OP by the factor k, which is multiplication as resizing."
+      },
+      {
+       "node": "multiplication.facts.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test needs 3 x 2 cm to find that the image of P is 6 cm from O."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.dilation.scale-lengths": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.dilation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement extends the rule OP' = k x OP for one point to the lengths of the whole figure, so the dilation with a center and scale factor is used."
+      },
+      {
+       "node": "multiplication.scaling.size-principle",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says a dilation enlarges when k is above 1 and reduces when k is below 1, which is the size principle for multiplying."
+      },
+      {
+       "node": "transformation.rigid-motion.preserves-length",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The conclusion that a dilation with k not 1 is not a rigid motion rests on rigid motions keeping every length the same."
+      },
+      {
+       "node": "fraction.multiply-whole.symbolic",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test finds one half of a 4 cm segment, which is a fraction times a whole number."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.dilation.preserves-angle": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.dilation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about what a dilation does to an angle, so the dilation with a center and scale factor must be known."
+      },
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says the image angle has the same measure, which uses the measure of an angle in degrees."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.translation.coordinates.image": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.translation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure finds where a translation puts each vertex: the same distance in the same direction."
+      },
+      {
+       "node": "coordinate-plane.four-quadrants.plot",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 locates each given vertex on the grid and counts the move from it, and the test image crosses into negative coordinates."
+      },
+      {
+       "node": "coordinate-plane.four-quadrants.read",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 records the coordinates of each image vertex, including a negative x-coordinate after a move left of the y-axis."
+      },
+      {
+       "node": "coordinate-plane.polygon.draw",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.translation.coordinates.rule": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.translation.coordinates.image",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule (x, y) -> (x + a, y + b) states in symbols how the coordinates of every vertex change in the image procedure."
+      },
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule uses the letters x, y, a and b to stand for any coordinates and any move, so a letter standing for a number is used."
+      },
+      {
+       "node": "rational-number.signed.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule uses a negative a for a move left and a negative b for a move down, so signed numbers as opposite directions are used."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.reflection.axis.coordinates.image": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.reflection.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure finds where a reflection puts each vertex: the point the same distance across the line on the perpendicular."
+      },
+      {
+       "node": "coordinate-plane.axes-origin",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement reflects across the x-axis or the y-axis, so the axes of the coordinate plane must be known."
+      },
+      {
+       "node": "coordinate-plane.segment-length.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds each vertex's distance from the axis, which is the length of a vertical or horizontal segment read from coordinates."
+      },
+      {
+       "node": "perpendicular.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 moves along the line through the vertex perpendicular to the axis, which uses lines meeting at right angles."
+      },
+      {
+       "node": "coordinate-plane.four-quadrants.plot",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 locates the image point on the other side of an axis, which for the test lies below the x-axis."
+      },
+      {
+       "node": "coordinate-plane.four-quadrants.read",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 records the coordinates of the image point, which can be negative after the reflection."
+      },
+      {
+       "node": "coordinate-plane.polygon.draw",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.reflection.axis.coordinates.rule": {
+   "routes": [
+    {
+     "clause": "from-images",
+     "edges": [
+      {
+       "node": "transformation.reflection.axis.coordinates.image",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rules (x, y) -> (x, -y) and (x, y) -> (-x, y) state in symbols what moving each vertex to the other side of an axis does to its coordinates."
+      },
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rules use the letters x and y for the coordinates of any point, so a letter standing for a number is used."
+      },
+      {
+       "node": "rational-number.opposite.number-line",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rules write -y and -x, the opposite of a coordinate, which sits on the other side of 0 at the same distance."
+      }
+     ]
+    },
+    {
+     "clause": "from-signs",
+     "edges": [
+      {
+       "node": "coordinate-plane.reflection.signs",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rules say in symbols that points differing only in the sign of one coordinate are mirror images across an axis."
+      },
+      {
+       "node": "transformation.reflection.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rules describe reflection across the x-axis or the y-axis, so what a reflection across a line does must be known."
+      },
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rules use the letters x and y for the coordinates of any point, so a letter standing for a number is used."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.reflection.parallel-to-axis.coordinates": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.reflection.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure finds where a reflection puts each vertex: the point the same distance across the line on the other side."
+      },
+      {
+       "node": "coordinate-plane.ordered-pair.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The line x = h is the set of points whose horizontal distance coordinate is h, and the other coordinate is kept, which uses what each coordinate measures."
+      },
+      {
+       "node": "coordinate-plane.segment-length.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds the horizontal distance to the line x = h or the vertical distance to y = k, which is a segment length read from coordinates."
+      },
+      {
+       "node": "coordinate-plane.first-quadrant.plot",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 moves past the line by the same distance and locates the image vertex, which in the test stays in the first quadrant."
+      },
+      {
+       "node": "coordinate-plane.first-quadrant.read",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 records the coordinates of the image vertex, which in the test has two positive coordinates."
+      },
+      {
+       "node": "coordinate-plane.polygon.draw",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.reflection.diagonal.coordinates": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.reflection.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rules (x, y) -> (y, x) and (x, y) -> (-y, -x) give the image of a reflection, so what a reflection across a line does must be known."
+      },
+      {
+       "node": "equation.two-variable.graph-as-solutions",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The mirror lines y = x and y = -x are given by equations, and the line is the set of points whose coordinates satisfy the equation."
+      },
+      {
+       "node": "coordinate.ordered-pair.notation",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 swaps the two coordinates of each vertex, so the order of x and y in an ordered pair must be known."
+      },
+      {
+       "node": "rational-number.opposite.number-line",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 changes the sign of both coordinates, which means replacing each by its opposite on the other side of 0."
+      },
+      {
+       "node": "coordinate-plane.polygon.draw",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.rotation.origin.coordinates": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.rotation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The three rules give the image of a rotation through 90 or 180 degrees, so what a rotation about a center does must be known."
+      },
+      {
+       "node": "coordinate-plane.axes-origin",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rotation is about the origin, the point where the axes cross."
+      },
+      {
+       "node": "new:angle.turn-direction",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 chooses the rule by direction, clockwise or counterclockwise, so the two turning directions must be told apart."
+      },
+      {
+       "node": "angle.measure.circle-fraction",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 uses that 90 degrees counterclockwise is the same as 270 degrees clockwise, which rests on a full turn being 360 degrees."
+      },
+      {
+       "node": "coordinate.ordered-pair.notation",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 applies a rule such as (x, y) -> (-y, x) to each vertex, so the order of x and y in an ordered pair must be known."
+      },
+      {
+       "node": "rational-number.opposite.number-line",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 uses the opposite of a coordinate, as in (-y, x), which sits on the other side of 0 at the same distance."
+      },
+      {
+       "node": "coordinate-plane.polygon.draw",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.rotation.center.coordinates": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.rotation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure finds where a rotation puts each vertex by turning its offset from the center, so the definition of a rotation is used."
+      },
+      {
+       "node": "rational-number.signed.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 records an offset with a negative number for a move left or down, which uses signed numbers as opposite directions."
+      },
+      {
+       "node": "coordinate-plane.first-quadrant.plot",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 locates each vertex and counts its offset from the center on the grid, which in the test stays in the first quadrant."
+      },
+      {
+       "node": "new:angle.turn-direction",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 turns the offset counterclockwise or clockwise, so the two turning directions must be told apart."
+      },
+      {
+       "node": "rational-number.opposite.number-line",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 turns (a, b) into (-b, a) or (b, -a), which uses the opposite of a number."
+      },
+      {
+       "node": "coordinate-plane.first-quadrant.read",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 counts the turned offset from the center and records the coordinates of the image vertex, which in the test has positive coordinates."
+      },
+      {
+       "node": "coordinate-plane.polygon.draw",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.sequence.coordinates": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.translation.coordinates.image",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Any step in the sequence may be a translation, which is carried out as in the single-step translation procedure."
+      },
+      {
+       "node": "transformation.reflection.axis.coordinates.image",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Any step in the sequence may be a reflection, and the test starts with a reflection across the x-axis."
+      },
+      {
+       "node": "transformation.rotation.center.coordinates",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The statement covers rotations, and any step in the sequence may be a rotation by a multiple of 90 degrees about a grid point."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.dilation.origin.coordinates": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.dilation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule (x, y) -> (k x x, k x y) gives the image under a dilation, so the definition of a dilation with a scale factor is used."
+      },
+      {
+       "node": "coordinate-plane.axes-origin",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement places the center of the dilation at the origin, the point where the axes cross."
+      },
+      {
+       "node": "coordinate.ordered-pair.notation",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 multiplies both coordinates of each vertex by k, so the two parts of an ordered pair must be known."
+      },
+      {
+       "node": "fraction.multiplication.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 multiplies a coordinate by the scale factor k, which in the test is the fraction 1/2."
+      },
+      {
+       "node": "coordinate-plane.polygon.draw",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.dilation.center.coordinates": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.dilation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure finds where a dilation puts each vertex by scaling its offset from the center, so the definition of a dilation is used."
+      },
+      {
+       "node": "rational-number.signed.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 records an offset with a negative number for a move left or down, which uses signed numbers as opposite directions."
+      },
+      {
+       "node": "coordinate-plane.first-quadrant.plot",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 locates each vertex and counts its offset from the center on the grid, which in the test stays in the first quadrant."
+      },
+      {
+       "node": "multiplication.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies both parts of the offset by the scale factor, which in the test is a whole number times a whole number."
+      },
+      {
+       "node": "coordinate-plane.first-quadrant.read",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 counts the new offset from the center and records the coordinates of the image vertex, which in the test has positive coordinates."
+      },
+      {
+       "node": "coordinate-plane.polygon.draw",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+      }
+     ]
+    }
+   ]
+  },
+  "transformation.sequence.with-dilation.coordinates": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.sequence.coordinates",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The rigid-motion part of the sequence is done as in this node, applying each motion to the image produced by the one before."
+      },
+      {
+       "node": "transformation.dilation.center.coordinates",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The dilation step is carried out by scaling each vertex's offset from the center, whatever the center is."
+      }
+     ]
+    }
+   ]
+  },
+  "similarity.transformation.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "transformation.translation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The definition lets translations be part of the sequence that takes one figure onto the other, so what a translation does is used."
+      },
+      {
+       "node": "transformation.reflection.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The definition lets reflections be part of the sequence that takes one figure onto the other, so what a reflection does is used."
+      },
+      {
+       "node": "transformation.rotation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The definition lets rotations be part of the sequence that takes one figure onto the other, so what a rotation does is used."
+      },
+      {
+       "node": "transformation.dilation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The definition adds dilations to the sequence, so a dilation with a center and a scale factor must be known."
+      },
+      {
+       "node": "transformation.dilation.scale-lengths",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "To rule out rectangles C and D, the learner uses that a dilation multiplies every length by the same factor."
+      },
+      {
+       "node": "transformation.rigid-motion.preserves-length",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "To rule out rectangles C and D, the learner uses that rigid motions leave lengths unchanged, so only the dilation changes the ratio of sides."
+      }
+     ]
+    }
+   ]
+  },
+  "similarity.sequence.describe": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "similarity.transformation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sequence the procedure finds is exactly the one named in the definition of similar figures."
+      },
+      {
+       "node": "fraction.quotient.symbolic",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 divides one side length by another to get the scale factor, and a quotient that is not whole is written as a fraction."
+      },
+      {
+       "node": "transformation.dilation.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 dilates the first figure by the scale factor k about a chosen center."
+      },
+      {
+       "node": "congruence.sequence.describe",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 describes rigid motions that take the dilated image onto the second figure, which is the congruence description procedure."
+      },
+      {
+       "node": "coordinate-plane.segment-length.meaning",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test gives the vertices as coordinates, and the side lengths come from the distances between horizontal or vertical neighbors."
+      },
+      {
+       "node": "transformation.dilation.center.coordinates",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The learner needs the coordinates of the dilated image to see which rigid motions finish the job in the test."
+      }
+     ]
+    }
+   ]
+  },
+  "geometry.similar-triangles": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "similarity.transformation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about triangles that are similar, meaning one is taken onto the other by dilations and rigid motions."
+      },
+      {
+       "node": "transformation.dilation.scale-lengths",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each side of DEF is k times a side of ABC because the dilation multiplies every length by the scale factor k."
+      },
+      {
+       "node": "transformation.rigid-motion.preserves-length",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rigid motions in the sequence leave every side length unchanged, so only the dilation sets the ratio k."
+      },
+      {
+       "node": "multiplication.comparison",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says each side of DEF is k times the corresponding side of ABC, which is a multiplicative comparison."
+      },
+      {
+       "node": "fraction.quotient.symbolic",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement writes the equal ratios as quotients of lengths, DE/AB = EF/BC = DF/AC, which uses a quotient written as a fraction."
+      },
+      {
+       "node": "multiplication.comparison.vs-additive",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test offers EF = 3 x BC against EF = BC + 3, so the learner must tell a multiplicative comparison from an additive one."
+      }
+     ]
+    }
+   ]
+  },
+  "similarity.triangle.angle-angle": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "similarity.transformation.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement concludes that the triangles are similar, which means a dilation and rigid motions take one onto the other."
+      },
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The condition is that two angles of one triangle have the same measures as two angles of the other, which uses angle measure in degrees."
+      }
+     ]
+    }
+   ]
+  },
+  "similarity.triangle.angle-angle.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "similarity.triangle.angle-angle",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation proves the angle-angle criterion, so the claim it proves must be known."
+      },
+      {
+       "node": "similarity.transformation.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation ends with the image landing exactly on DEF, so the triangles are similar by the transformation definition."
+      },
+      {
+       "node": "transformation.dilation.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation begins by dilating ABC with scale factor DE/AB about a center."
+      },
+      {
+       "node": "transformation.dilation.scale-lengths",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The side matching AB becomes as long as DE because the dilation multiplies every length by DE/AB."
+      },
+      {
+       "node": "transformation.dilation.preserves-angle",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The dilated triangle keeps the angles of ABC, so its angles at the ends of the matching side equal the angles at D and E."
+      },
+      {
+       "node": "congruence.sequence.describe",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Rigid motions place the matching side on DE with the third vertex on the same side as F, which is a translate, rotate, then reflect-if-needed sequence."
+      },
+      {
+       "node": "transformation.rigid-motion.preserves-angle",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rigid motions keep the angles of the dilated triangle, so the rays from D and E leave at the matching angles."
+      },
+      {
+       "node": "ray.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The argument that the rays from D and E meet only at F uses rays starting at an endpoint and extending one way."
+      }
+     ]
+    }
+   ]
+  },
+  "similarity.triangle.angle-angle.decide": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.triangle.third-angle",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds a missing third angle by subtracting the sum of the two given angles from 180 degrees."
+      },
+      {
+       "node": "similarity.triangle.angle-angle",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 concludes the triangles are similar when two pairs of angles are equal, which is the angle-angle criterion."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.transversal.corresponding": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "parallel.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement holds only when the two lines are parallel, which uses lines that never meet."
+      },
+      {
+       "node": "new:line.transversal.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about a transversal crossing two lines, and the angles in matching positions at the two crossings are named from it."
+      },
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says corresponding angles have equal measures, which uses angle measure in degrees."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.transversal.corresponding.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.transversal.corresponding",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation shows why corresponding angles are equal, so the claim and what corresponding angles are must be known."
+      },
+      {
+       "node": "transformation.translation.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The argument translates along the transversal by the distance between the two crossing points."
+      },
+      {
+       "node": "transformation.rigid-motion.preserves-angle",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The argument uses that the translation keeps angle measures, so each angle at P lands on an angle of equal measure at Q."
+      },
+      {
+       "node": "parallel.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The argument says the translated line through Q is parallel to m, so it must be n, which uses lines that never meet."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.transversal.alternate-interior": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "parallel.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement holds only when the two lines are parallel, which uses lines that never meet."
+      },
+      {
+       "node": "new:line.transversal.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about a transversal crossing two lines, and alternate interior angles are named by their places between the lines on opposite sides of it."
+      },
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says alternate interior angles have equal measures, which uses angle measure in degrees."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.transversal.alternate-interior.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.transversal.alternate-interior",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation shows why alternate interior angles are equal, so the claim and what alternate interior angles are must be known."
+      },
+      {
+       "node": "angle.vertical.equal",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation says each alternate interior angle is vertical to the corresponding angle, and vertical angles are equal."
+      },
+      {
+       "node": "angle.transversal.corresponding",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation then uses that corresponding angles at parallel lines are equal to finish the chain of equal angles."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.transversal.find-angles": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.vertical.equal",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 gives the vertical angle at the same crossing the same measure."
+      },
+      {
+       "node": "angle.straight-line.sum-180",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 gives each angle next to it on a line the measure 180 degrees minus the given angle."
+      },
+      {
+       "node": "subtraction.within-1000",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 subtracts the given angle from 180, as in 180 - 115, which is a subtraction within 1000."
+      },
+      {
+       "node": "angle.transversal.corresponding",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 gives each angle at the other crossing the measure of its corresponding angle."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.triangle.sum": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says the three angle measures add to 180 degrees, which uses angle measure in degrees."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.triangle.sum.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.triangle.sum",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation shows why the angles add to 180 degrees, so the claim it proves must be known."
+      },
+      {
+       "node": "angle.transversal.alternate-interior",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The two angles at the vertex are alternate interior angles with the other two triangle angles, so they are equal to them."
+      },
+      {
+       "node": "angle.straight-line.sum-180",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The three angles at the vertex lie along a straight line, which is a straight angle of 180 degrees."
+      },
+      {
+       "node": "angle.additive",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The measure of the straight angle is the sum of the measures of the three angles that fill it, since angle measure is additive."
+      },
+      {
+       "node": "parallel.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation starts with the line through a vertex parallel to the opposite side, which uses lines that never meet."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.triangle.third-angle": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.triangle.sum",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure subtracts from 180 degrees because the three angles of a triangle add to 180 degrees."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 adds the two known angle measures, as in 47 + 68, which is an addition within 1000."
+      },
+      {
+       "node": "subtraction.within-1000",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 subtracts that sum from 180, as in 180 - 115, which is a subtraction within 1000."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.triangle.exterior": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "line.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The exterior angle is formed by the extension of a side, which is the part of its line beyond the vertex."
+      },
+      {
+       "node": "angle.adjacent",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement picks the two interior angles that are not next to the exterior angle, so adjacent angles must be known."
+      },
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement equates the measure of the exterior angle with a sum of two measures, which uses angle measure in degrees."
+      },
+      {
+       "node": "angle.triangle.sum",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "To choose between the options, the learner reasons from the three angles of the triangle adding to 180 degrees."
+      },
+      {
+       "node": "angle.straight-line.sum-180",
+       "relation": "justificatory",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "To choose between the options, the learner reasons that the exterior angle and its adjacent interior angle lie on a straight line and add to 180 degrees."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
