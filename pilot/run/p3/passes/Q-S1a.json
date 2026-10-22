@@ -1,0 +1,951 @@
+{
+ "pass": "Q",
+ "batch": "S1a",
+ "nodes": {
+  "statistical-question.recognize": {
+   "routes": [],
+   "root_reason": "Uses only the everyday idea of asking a question about a group and getting different answers from different individuals; no earlier node in the map supplies the idea that data vary, and the data nodes only organize and count categories."
+  },
+  "distribution.describe": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "statistical-question.recognize",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement defines a distribution as the values collected to answer a statistical question, so the learner must know what such a question is."
+      },
+      {
+       "node": "data.dot-plot.read",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem gives the data as a dot plot, and center, spread and shape are described from the values read off the plot."
+      }
+     ]
+    }
+   ]
+  },
+  "distribution.shape.symmetric-skewed": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "distribution.describe",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Shape is one of the three features of a distribution, and the statement sorts shapes by how the two sides about the center look."
+      },
+      {
+       "node": "symmetry.line.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A symmetric distribution is defined by two sides about the center being mirror images, which is the matching-halves idea of a line of symmetry."
+      },
+      {
+       "node": "data.dot-plot.read",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem shows the three distributions as dot plots, so the piles of dots and the long tails must be read from the plots."
+      }
+     ]
+    }
+   ]
+  },
+  "center.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "distribution.describe",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A measure of center turns the informal idea of where a distribution's values center into one number, and the test contrasts it with spread."
+      }
+     ]
+    }
+   ]
+  },
+  "variability.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "distribution.describe",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A measure of variation is one number for how far a distribution's values spread, the feature first described informally as spread."
+      }
+     ]
+    }
+   ]
+  },
+  "data.dot-plot.read": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each dot sits above a position on a number line, so its value is read from where it falls on a labeled whole-number scale."
+      }
+     ]
+    }
+   ]
+  },
+  "data.histogram.make": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.categorical.count-each",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 counts the values falling in each interval, which is counting the objects in each category."
+      },
+      {
+       "node": "comparing.whole-numbers.magnitude",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Deciding which interval a value belongs to, including a value on a boundary, means comparing the value with the interval ends."
+      },
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 draws a number line marked at the interval boundaries, so values must be placed on a labeled scale."
+      },
+      {
+       "node": "data.bar-graph.draw",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 draws a bar up to its count on a vertical count scale over each interval, the same act as drawing a bar graph."
+      }
+     ]
+    }
+   ]
+  },
+  "data.histogram.read": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "data.bar-graph.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each bar's height is read against the vertical count scale exactly as a category's count is read from a bar graph."
+      },
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The interval that each bar covers is found from the labeled number line beneath the bars."
+      }
+     ]
+    }
+   ]
+  },
+  "data.box-plot.make": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 draws a number line whose scale covers the minimum and maximum, and steps 2 to 4 mark values on it."
+      },
+      {
+       "node": "center.median.find",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The line across the box marks the median, so the statement uses what the median of a data set is."
+      },
+      {
+       "node": "variability.quartiles.find",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The box runs from the lower quartile to the upper quartile, so the statement uses what the quartiles of a data set are."
+      }
+     ]
+    }
+   ]
+  },
+  "data.box-plot.read": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "number-line.whole-number-lengths",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each of the five values is read from where the end of a whisker, the box or the inside line falls on the number line."
+      },
+      {
+       "node": "center.median.find",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says the line inside the box is read as the median, so it uses what the median of a data set is."
+      },
+      {
+       "node": "variability.quartiles.find",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says the ends of the box are read as the lower and upper quartiles, so it uses what the quartiles are."
+      }
+     ]
+    }
+   ]
+  },
+  "data.observations.count": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.objects",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding the number of observations means counting the recorded values one at a time, with a repeated value counted each time it occurs."
+      }
+     ]
+    }
+   ]
+  },
+  "data.attribute.describe": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.attributes.several",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Naming the attribute measured on each individual uses the idea that an individual has several measurable attributes, one of which was chosen."
+      },
+      {
+       "node": "measurement.time.units",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem's trip times need a unit of time, and choosing minutes over hours or seconds uses their relative sizes."
+      }
+     ]
+    }
+   ]
+  },
+  "center.mean.compute": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 adds all the values of the data set, which is finding a sum of several whole numbers."
+      },
+      {
+       "node": "data.observations.count",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 counts the number of values, with repeated values counted each time they occur."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 divides the sum by the number of values, a whole-number division whose method does not matter."
+      }
+     ]
+    }
+   ]
+  },
+  "center.median.find": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.whole-numbers.magnitude",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 lists the values from least to greatest, which means deciding which of two values is greater."
+      },
+      {
+       "node": "data.observations.count",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 2 and 3 depend on the number of values, with repeated values counted each time."
+      },
+      {
+       "node": "parity.even-odd.pairing",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement separates an odd number of values from an even number, and an odd count leaves one middle value when values are paired from both ends."
+      },
+      {
+       "node": "number.halfway-between",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 takes the number halfway between the two middle values of the ordered list."
+      }
+     ]
+    }
+   ]
+  },
+  "variability.quartiles.find": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "center.median.find",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds the median, and step 4 finds the median of each half, so the median procedure is carried out three times."
+      }
+     ]
+    }
+   ]
+  },
+  "variability.iqr.compute": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "variability.quartiles.find",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds the lower quartile and the upper quartile, which are the two numbers the IQR is made from."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 subtracts the lower quartile from the upper quartile, a whole-number difference."
+      }
+     ]
+    }
+   ]
+  },
+  "variability.mad.compute": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "center.mean.compute",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 3 each find a mean, first of the data values and then of the distances from that mean."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds each value's distance from the mean as the larger number minus the smaller."
+      }
+     ]
+    }
+   ]
+  },
+  "distribution.pattern-deviations": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "distribution.describe",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Describing where most values lie, clusters and gaps goes beyond center, spread and shape of a distribution, and a striking deviation is a value far from where the rest lie."
+      }
+     ]
+    }
+   ]
+  },
+  "center.mean-median.outlier-effect": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "center.mean.compute",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation that every value enters the sum uses the mean as the sum of the values divided by their number."
+      },
+      {
+       "node": "center.median.find",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The explanation that the median depends only on the middle position uses the median as the middle of the ordered values."
+      }
+     ]
+    }
+   ]
+  },
+  "center.choose": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "center.mean.compute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement compares the mean with the median as summaries, so it uses what the mean of a data set is."
+      },
+      {
+       "node": "center.median.find",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement compares the median with the mean as summaries, so it uses what the median of a data set is."
+      },
+      {
+       "node": "center.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The choice is about which number better describes a typical value, which is the job of a measure of center."
+      },
+      {
+       "node": "distribution.shape.symmetric-skewed",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule is stated for roughly symmetric and strongly skewed distributions, so the learner must tell these shapes apart."
+      },
+      {
+       "node": "distribution.pattern-deviations",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule depends on whether the distribution has outliers, values that depart strikingly from the overall pattern."
+      },
+      {
+       "node": "center.mean-median.outlier-effect",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The reason the median better describes a typical value for skewed data is that extreme values pull the mean but barely move the median."
+      }
+     ]
+    }
+   ]
+  },
+  "variability.choose": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "variability.iqr.compute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement chooses between the IQR and the MAD, so it uses what the IQR of a data set is."
+      },
+      {
+       "node": "variability.mad.compute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement chooses between the IQR and the MAD, so it uses what the MAD of a data set is."
+      },
+      {
+       "node": "variability.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The choice is about which number better describes variability, which is the job of a measure of variation."
+      },
+      {
+       "node": "distribution.shape.symmetric-skewed",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule is stated for strongly skewed and roughly symmetric distributions, so the learner must tell these shapes apart."
+      },
+      {
+       "node": "distribution.pattern-deviations",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule depends on whether the distribution has outliers, values that depart strikingly from the overall pattern."
+      },
+      {
+       "node": "center.mean-median.outlier-effect",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The reason extreme values inflate the MAD but not the IQR parallels how an extreme value pulls the mean but not the median."
+      }
+     ]
+    }
+   ]
+  },
+  "variability.mad.interpret": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "variability.mad.compute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement reads the MAD as a typical distance from the mean, so it uses the MAD as the mean of the distances of values from the mean."
+      },
+      {
+       "node": "variability.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A small MAD meaning values close to the mean and a larger MAD meaning values farther away is the meaning of a measure of variation."
+      }
+     ]
+    }
+   ]
+  },
+  "sampling.population-sample.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "statistical-question.recognize",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The population is defined as the whole group a statistical question is about, so the learner must know what a statistical question is."
+      }
+     ]
+    }
+   ]
+  },
+  "sampling.representative": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "sampling.population-sample.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A representative sample is a sample that is like its population for the characteristic studied, so both terms must be known."
+      }
+     ]
+    }
+   ]
+  },
+  "sampling.random.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "sampling.population-sample.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A random sample is chosen from the population so that every member has the same chance, which uses the terms population and sample."
+      }
+     ]
+    }
+   ]
+  },
+  "sampling.random.representative": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "sampling.random.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement explains how choosing at random favors no part of the population, which is the equal-chance meaning of a random sample."
+      },
+      {
+       "node": "sampling.representative",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says random sampling tends to produce representative samples, so it uses what a representative sample is."
+      }
+     ]
+    }
+   ]
+  },
+  "sampling.variability.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "sampling.population-sample.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A sample statistic and the matching population statistic are defined from the sample and from the population."
+      },
+      {
+       "node": "sampling.random.representative",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A random sample's statistic estimates the population's because random samples tend to be representative, yet any one sample can differ by chance."
+      },
+      {
+       "node": "center.mean.compute",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem gives sample means and a population mean, so the learner must know what a mean is."
+      }
+     ]
+    }
+   ]
+  },
+  "sampling.variability.simulate.numerical": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "sampling.variability.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure uses the spread of several sample means as evidence of how far one sample mean can be from the population mean."
+      },
+      {
+       "node": "sampling.random.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 draws several random samples, so the learner must know what makes a sample random."
+      },
+      {
+       "node": "center.mean.compute",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes the mean of each sample."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 finds how far apart the least and greatest sample means are, which is a difference between two numbers."
+      },
+      {
+       "node": "decimal.compare",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem's sample means are decimals in tenths, so picking the least and greatest means compares decimals."
+      },
+      {
+       "node": "decimal.subtraction.algorithm",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem needs the difference between decimal sample means such as 4.8 and 4.1, and any method for subtracting decimals will do."
+      }
+     ]
+    }
+   ]
+  },
+  "sampling.variability.simulate.categorical": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "sampling.variability.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure uses the spread of several sample proportions as evidence of how far one sample proportion can be from the population proportion."
+      },
+      {
+       "node": "sampling.random.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 draws several random samples, so the learner must know what makes a sample random."
+      },
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds the fraction of a sample in the category of interest, such as 11 of 20 members, as a parts of size 1/b."
+      },
+      {
+       "node": "fraction.compare.same-denominator",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 picks the least and greatest proportions, and samples of the same size give fractions with the same denominator."
+      },
+      {
+       "node": "fraction.subtraction.like-denominators",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 finds how far apart the least and greatest proportions are, a difference of fractions with like denominators."
+      }
+     ]
+    }
+   ]
+  },
+  "inference.estimate.population-mean": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "center.mean.compute",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The estimate is the mean of the sample values, found as their sum divided by their number."
+      },
+      {
+       "node": "sampling.variability.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses a sample mean as an estimate of the population mean, the estimating relation between sample and population statistics."
+      },
+      {
+       "node": "sampling.random.representative",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Using the sample mean as an estimate is justified only because data from a random sample tend to be representative of the population."
+      }
+     ]
+    }
+   ]
+  },
+  "inference.estimate.population-proportion": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.non-unit.part-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The estimate is the fraction of the sample in a category, such as 30 of 50, written as a parts of size 1/b."
+      },
+      {
+       "node": "sampling.variability.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses a sample proportion as an estimate of the population proportion, the estimating relation between sample and population statistics."
+      },
+      {
+       "node": "sampling.random.representative",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Using the sample fraction as an estimate is justified only because data from a random sample tend to be representative of the population."
+      }
+     ]
+    }
+   ]
+  },
+  "distribution.compare.overlap": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "distribution.describe",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement compares two distributions by their plots, using the center, spread and shape that describe a distribution."
+      },
+      {
+       "node": "center.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement compares the difference between two centers, so each center must be understood as one number summarizing a data set."
+      },
+      {
+       "node": "variability.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement sets the difference between centers against similar variability, so each spread must be understood as one number."
+      },
+      {
+       "node": "data.dot-plot.read",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem gives four dot plots on one scale, and their overlap is judged from where the dots lie."
+      }
+     ]
+    }
+   ]
+  },
+  "distribution.compare.center-difference-in-variability": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "center.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure takes the difference between two centers, so each center must be understood as one number summarizing a data set."
+      },
+      {
+       "node": "variability.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure divides by a common measure of variability, so a measure of variation must be understood as one number for spread."
+      },
+      {
+       "node": "distribution.compare.overlap",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement turns the idea of a center difference compared with spread into a number of variability units."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 subtracts the smaller center from the larger center, a whole-number difference."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 divides the difference by the common measure of variability."
+      },
+      {
+       "node": "division.measurement.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 reports the quotient as the number of measures of variability that separate the centers, a quotient read as a number of equal groups."
+      }
+     ]
+    }
+   ]
+  },
+  "inference.compare.two-populations": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "distribution.compare.center-difference-in-variability",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The decision judges the difference between the sample centers in units of the measure of variability rather than against zero."
+      },
+      {
+       "node": "distribution.compare.overlap",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Whether one population's values are generally greater depends on how little the two distributions overlap given their spread."
+      },
+      {
+       "node": "inference.estimate.population-mean",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The centers of the random samples are used as estimates of the centers of the two populations."
+      },
+      {
+       "node": "variability.mad.interpret",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem gives MADs and asks for an explanation, which uses a MAD as a typical distance of values from the mean."
+      },
+      {
+       "node": "decimal.subtraction.algorithm",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem needs the difference between decimal means such as 6.5 and 4, and any method for subtracting decimals will do."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
