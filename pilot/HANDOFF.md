@@ -57,11 +57,20 @@ Done when the hold began: Q1a, Q1b, E1a (both passes), E1b (P). Running total 9,
 - area.composite-additive re-pointed to area.additive (p1 override, same node).
 - Session limits stopped all four first-wave writers about 30 minutes in; each was
   resumed with SendMessage. A resume replays the transcript (100-150k each); the
-  unreported first segments are ESTIMATED at 60k + 1.2k per node written (noted on
-  each manifest unit). tools/run_state.py now adds a tokens field when a unit lacks one.
-- Cost so far, phase 3 writers: 1,565,275 (Q1 287,328, E1 280,690, G3 276,242,
-  S1 282,543 incl. estimates; E2 218,225, G4 220,247 complete). Running total
-  7,794,671.
+  reported figure already covers the first segment (see the metric note below), so no
+  estimate is added. tools/run_state.py now adds a tokens field when a unit lacks one.
+- Cost, phase 3 writers: 1,147,275 (Q1 193,328, E1 180,690, G3 182,242, S1 152,543,
+  E2 218,225, G4 220,247).
+- **What "subagent tokens" measures** (found 2026-10-21 by reading transcripts): the
+  harness reports each agent's context size at its final turn (input + cache + output
+  of the last call), within ~300 tokens. It is not cumulative: an agent's billed usage,
+  mostly cache reads repeated every turn, is several times larger (a proposer with a
+  ~190k final context read ~1.3M cached tokens over its turns), which is why usage
+  limits arrive sooner than the running total suggests. Every figure in this file and
+  the manifest uses the harness metric, so they compare with each other. Earlier,
+  Claude added ~418k of first-segment estimates for four resumed writers; a resumed
+  agent's final context already contains its whole transcript, so those were removed.
+  When a report is lost, read the last usage record of the agent's transcript.
 
 ### Cost of the rest (fitted to the 23 measured phase 1 and 2 agents)
 
