@@ -1,0 +1,1178 @@
+{
+ "route_semantics": "complete",
+ "edges": {
+  "e871": {
+   "verdict": "task-only",
+   "reason": "Only the test problem compares numbers (4 and 6 against 5) to say inside, on or outside; the idea of a circle as points at one distance from a center does not need numeral comparison."
+  },
+  "e872": {
+   "verdict": "necessary"
+  },
+  "e873": {
+   "verdict": "necessary"
+  },
+  "e874": {
+   "verdict": "scaffold",
+   "reason": "The statement and test speak of a distance from the center, not of a segment; picturing the radius as a segment helps but the idea can be met without the formal segment node."
+  },
+  "e875": {
+   "verdict": "wrong",
+   "reason": "A recalled doubles fact is one method for the sub-computation 3 + 3; the method-neutral node is addition.within-10, and the idea of a diameter does not depend on a recalled doubles fact."
+  },
+  "e876": {
+   "verdict": "task-only",
+   "reason": "Only the test problem computes a number (double 3); the idea that a diameter is twice the radius is a relation, not a sum within 10."
+  },
+  "e877": {
+   "verdict": "necessary"
+  },
+  "e878": {
+   "verdict": "necessary"
+  },
+  "e879": {
+   "verdict": "necessary"
+  },
+  "e880": {
+   "verdict": "necessary"
+  },
+  "e881": {
+   "verdict": "undecided",
+   "reason": "Halving the diameter is a real step, but the test halves 8, a division fact; division.by-one-digit (multi-digit dividends) is stronger than the test uses.",
+   "would_decide": "Whether diameters beyond fact-size (for example 46 mm or 128 cm) are in scope. If only small even diameters, the weaker node is division.facts.within-100 and this edge is wrong; if arbitrary whole-number diameters, it is necessary."
+  },
+  "e882": {
+   "verdict": "necessary"
+  },
+  "e883": {
+   "verdict": "necessary"
+  },
+  "e884": {
+   "verdict": "necessary"
+  },
+  "e885": {
+   "verdict": "necessary"
+  },
+  "e886": {
+   "verdict": "necessary"
+  },
+  "e887": {
+   "verdict": "necessary"
+  },
+  "e888": {
+   "verdict": "scaffold",
+   "reason": "Naming typical triangles is the earlier, narrower step; the target draws triangles of any shape and is carried by naming a polygon as a triangle by its three sides (shapes.polygon.name-by-sides)."
+  },
+  "e889": {
+   "verdict": "necessary"
+  },
+  "e890": {
+   "verdict": "necessary"
+  },
+  "e891": {
+   "verdict": "necessary"
+  },
+  "e892": {
+   "verdict": "necessary"
+  },
+  "e893": {
+   "verdict": "necessary"
+  },
+  "e894": {
+   "verdict": "scaffold",
+   "reason": "Naming typical triangles is the earlier, narrower step; the target draws triangles of any shape and is carried by shapes.polygon.name-by-sides."
+  },
+  "e895": {
+   "verdict": "necessary"
+  },
+  "e896": {
+   "verdict": "indirect",
+   "reason": "The procedure uses radius and center only through opening the compass and turning it about an endpoint; that operational use is carried by construction.circle.radius-diameter. That the vertex is at the given distance from both endpoints explains why the method works and is not needed to carry it out at level 2.",
+   "via": "construction.circle.radius-diameter"
+  },
+  "e897": {
+   "verdict": "necessary"
+  },
+  "e898": {
+   "verdict": "necessary"
+  },
+  "e899": {
+   "verdict": "necessary"
+  },
+  "e900": {
+   "verdict": "scaffold",
+   "reason": "Naming typical triangles is the earlier, narrower step; the target draws triangles of any shape and is carried by shapes.polygon.name-by-sides."
+  },
+  "e901": {
+   "verdict": "necessary"
+  },
+  "e902": {
+   "verdict": "task-only",
+   "reason": "The sums in the test (3 + 4, 2 + 3) are within 10; the idea of the rule is about lengths laid end to end, and the arithmetic range is set only by the test numbers."
+  },
+  "e903": {
+   "verdict": "undecided",
+   "reason": "The statement is silent on the size of the lengths and the test sums stay within 10, so addition within 100 may be stronger than the target uses.",
+   "would_decide": "Whether the node is meant to cover side lengths whose sums exceed 10 (for example 47, 52, 90). If not, the weaker node is addition.within-10 (or within-20) and this edge is wrong; if so, it is necessary."
+  },
+  "e904": {
+   "verdict": "undecided",
+   "reason": "The statement is silent on the size of the lengths and the test compares single-digit numbers, so two-digit magnitude comparison may be stronger than the target uses.",
+   "would_decide": "Whether the node is meant to cover sums and lengths of two digits. If not, the weaker node is comparing.whole-numbers.numerals-within-10 and this edge is wrong; if so, it is necessary."
+  },
+  "e905": {
+   "verdict": "task-only",
+   "reason": "Comparing 3 + 4 with 5 and 2 + 3 with 6 is done only in the test problem; the idea is a relation between lengths."
+  },
+  "e906": {
+   "verdict": "route-only",
+   "reason": "The arc construction is one model for seeing when the third vertex cannot be found.",
+   "other_route": "Build triangles from sticks or straws of the three lengths and see whether they close up (shapes.compose.from-sides)."
+  },
+  "e907": {
+   "verdict": "route-only",
+   "reason": "Closing sticks of the three lengths is one model for the criterion.",
+   "other_route": "Try to draw the triangle with a ruler and compass using two arcs (construction.triangle.three-sides)."
+  },
+  "e908": {
+   "verdict": "necessary"
+  },
+  "e909": {
+   "verdict": "necessary"
+  },
+  "e910": {
+   "verdict": "route-only",
+   "reason": "The compass construction is one way to see the third vertex is forced.",
+   "other_route": "Build triangles from three straws and try to make a different one (shapes.compose.from-sides); the test itself describes building with straws."
+  },
+  "e911": {
+   "verdict": "necessary"
+  },
+  "e912": {
+   "verdict": "route-only",
+   "reason": "Straw building is one way to see the sticks close up in only one way.",
+   "other_route": "Draw the triangle with ruler and compass using arcs (construction.triangle.three-sides)."
+  },
+  "e913": {
+   "verdict": "necessary"
+  },
+  "e914": {
+   "verdict": "necessary"
+  },
+  "e915": {
+   "verdict": "necessary"
+  },
+  "e916": {
+   "verdict": "necessary"
+  },
+  "e917": {
+   "verdict": "necessary"
+  },
+  "e918": {
+   "verdict": "necessary"
+  },
+  "e919": {
+   "verdict": "necessary"
+  },
+  "e920": {
+   "verdict": "necessary"
+  },
+  "e921": {
+   "verdict": "necessary"
+  },
+  "e922": {
+   "verdict": "task-only",
+   "reason": "Only the test problem asks the learner to draw angle A of 30 degrees with a protractor; the idea that two triangles can fit is not about the protractor skill."
+  },
+  "e923": {
+   "verdict": "route-only",
+   "reason": "The arc about B crossing the ray twice is one model for the two triangles.",
+   "other_route": "Pivot a stick of length BC about B and see it touch the ray from A in two places, using straws (shapes.compose.from-sides), without naming a circle."
+  },
+  "e924": {
+   "verdict": "task-only",
+   "reason": "Drawing the arc of radius 4 cm is one way to find the two vertices for the test; a ruler or stick pivot would also locate them, and the idea itself does not need the compass."
+  },
+  "e925": {
+   "verdict": "task-only",
+   "reason": "Drawing AB to 6 cm and setting 4 cm is needed only to carry out the test drawing."
+  },
+  "e926": {
+   "verdict": "necessary"
+  },
+  "e927": {
+   "verdict": "necessary"
+  },
+  "e928": {
+   "verdict": "necessary"
+  },
+  "e929": {
+   "verdict": "route-only",
+   "reason": "Measuring the three angles of drawn triangles is one way to see that they total 180.",
+   "other_route": "Tear off the three corners of a paper triangle and fit them along a straight line, using that a straight angle is half a turn (angle.measure.circle-fraction)."
+  },
+  "e930": {
+   "verdict": "necessary"
+  },
+  "e931": {
+   "verdict": "undecided",
+   "reason": "The statement needs same shape in the informal sense of scaled copies of different sizes; it is not clear whether shapes.match covers that or only matching the same kind of shape.",
+   "would_decide": "Whether shapes.match includes judging two shapes of different sizes as the same shape (scaled copies) or only matching shapes of the same kind (for example both triangles)."
+  },
+  "e932": {
+   "verdict": "necessary"
+  },
+  "e933": {
+   "verdict": "necessary"
+  },
+  "e934": {
+   "verdict": "necessary"
+  },
+  "e935": {
+   "verdict": "necessary"
+  },
+  "e936": {
+   "verdict": "necessary"
+  },
+  "e937": {
+   "verdict": "necessary"
+  },
+  "e938": {
+   "verdict": "necessary"
+  },
+  "e939": {
+   "verdict": "necessary"
+  },
+  "e940": {
+   "verdict": "undecided",
+   "reason": "The concept of a plane is genuinely used by the statement, but plane.meaning is not in index.txt or the boundary nodes, so the edge cannot be tied to a node in this map.",
+   "would_decide": "Whether a plane node (a flat surface that goes on without end) exists or will be added; if it does, the edge is necessary."
+  },
+  "e941": {
+   "verdict": "necessary"
+  },
+  "e942": {
+   "verdict": "necessary"
+  },
+  "e943": {
+   "verdict": "necessary"
+  },
+  "e944": {
+   "verdict": "necessary"
+  },
+  "e945": {
+   "verdict": "necessary"
+  },
+  "e946": {
+   "verdict": "necessary"
+  },
+  "e947": {
+   "verdict": "wrong",
+   "reason": "The statement and test only name the cut as a rectangle the same size as the base; naming rectangles (shapes.name.prototype.rectangle-hexagon) is enough, not the full definition as a quadrilateral with four right angles."
+  },
+  "e948": {
+   "verdict": "necessary"
+  },
+  "e949": {
+   "verdict": "necessary"
+  },
+  "e950": {
+   "verdict": "scaffold",
+   "reason": "The statement needs the length of the cut across the base, a length the learner can read without the formal segment concept."
+  },
+  "e951": {
+   "verdict": "necessary"
+  },
+  "e952": {
+   "verdict": "wrong",
+   "reason": "The statement names the cut as a rectangle with a height and a width; naming rectangles (shapes.name.prototype.rectangle-hexagon) is enough, not the full definition with four right angles."
+  },
+  "e953": {
+   "verdict": "necessary"
+  },
+  "e954": {
+   "verdict": "necessary"
+  },
+  "e955": {
+   "verdict": "undecided",
+   "reason": "The statement needs same shape, smaller size in the informal sense of scaled copies; it is not clear whether shapes.match covers that or only matching the same kind of shape.",
+   "would_decide": "Whether shapes.match includes judging two shapes of different sizes as the same shape (scaled copies) or only matching shapes of the same kind."
+  },
+  "e956": {
+   "verdict": "necessary"
+  },
+  "e957": {
+   "verdict": "wrong",
+   "reason": "The statement and test only name the cut as a rectangle (a square in the test); naming rectangles and squares (shapes.name.prototype.rectangle-hexagon, shapes.name.prototype) is enough, not the full definition of a rectangle."
+  },
+  "e958": {
+   "verdict": "necessary"
+  },
+  "e959": {
+   "verdict": "necessary"
+  },
+  "e960": {
+   "verdict": "necessary"
+  },
+  "e961": {
+   "verdict": "necessary"
+  },
+  "e962": {
+   "verdict": "necessary"
+  },
+  "e963": {
+   "verdict": "necessary"
+  },
+  "e964": {
+   "verdict": "necessary"
+  },
+  "e965": {
+   "verdict": "scaffold",
+   "reason": "Seeing why a flat plane meets a flat face in a straight piece explains the claim, but the statement only counts sides and faces crossed."
+  },
+  "e966": {
+   "verdict": "necessary"
+  },
+  "e967": {
+   "verdict": "necessary"
+  },
+  "e968": {
+   "verdict": "necessary"
+  },
+  "e969": {
+   "verdict": "necessary"
+  },
+  "e970": {
+   "verdict": "necessary"
+  },
+  "e971": {
+   "verdict": "necessary"
+  },
+  "e972": {
+   "verdict": "necessary"
+  },
+  "e973": {
+   "verdict": "necessary"
+  },
+  "e974": {
+   "verdict": "necessary"
+  },
+  "e975": {
+   "verdict": "necessary"
+  },
+  "e976": {
+   "verdict": "necessary"
+  },
+  "e977": {
+   "verdict": "necessary"
+  },
+  "e978": {
+   "verdict": "wrong",
+   "reason": "The statement only needs the learner to know the figure is a circle; the definition by center and radius is stronger than used, and shapes.name.prototype covers recognizing a circle."
+  },
+  "e979": {
+   "verdict": "related",
+   "reason": "The test's 6 cm across is a distractor that measures across rather than around; the learner can set it aside without the term diameter.",
+   "relation": "contrasts_with"
+  },
+  "e980": {
+   "verdict": "route-only",
+   "reason": "Perimeter as the length around a figure is one way into distance around a circle.",
+   "other_route": "Wrap a string once around a circular object and lay it straight to measure it, as the test itself describes (measurement.length.attribute, measurement.length.ruler), without a prior perimeter concept."
+  },
+  "e981": {
+   "verdict": "necessary"
+  },
+  "e982": {
+   "verdict": "necessary"
+  },
+  "e983": {
+   "verdict": "necessary"
+  },
+  "e984": {
+   "verdict": "task-only",
+   "reason": "Only the test divides decimals such as 6.28 by 2; the idea that the quotient is the same for every circle does not need a decimal division procedure, and any method for these quotients would do."
+  },
+  "e985": {
+   "verdict": "necessary"
+  },
+  "e986": {
+   "verdict": "related",
+   "reason": "Saying C divided by d is the same for every circle is the same idea as saying the pairs (d, C) are equivalent ratios; the statement is phrased as a quotient, so ratio equivalence is another form of it, not a requirement.",
+   "relation": "same_idea_different_form"
+  },
+  "e987": {
+   "verdict": "necessary"
+  },
+  "e988": {
+   "verdict": "necessary"
+  },
+  "e989": {
+   "verdict": "necessary"
+  },
+  "e990": {
+   "verdict": "route-only",
+   "reason": "Turning circumference divided by diameter equals pi into C = pi x d uses a quotient as an unknown factor.",
+   "other_route": "Read pi as the number of diameters that fit around the circle, a multiplicative comparison (multiplication.comparison), so C = pi x d is read directly."
+  },
+  "e991": {
+   "verdict": "scaffold",
+   "reason": "That the two forms agree follows from d = 2 x r by substitution, as the test does with r = 4; regrouping the factors symbolically explains why but is not needed to state or use the formula at level 3."
+  },
+  "e992": {
+   "verdict": "task-only",
+   "reason": "Only the test substitutes a value (radius 4) into the formula to decide the claim."
+  },
+  "e993": {
+   "verdict": "necessary"
+  },
+  "e994": {
+   "verdict": "necessary"
+  },
+  "e995": {
+   "verdict": "necessary"
+  },
+  "e996": {
+   "verdict": "necessary"
+  },
+  "e997": {
+   "verdict": "undecided",
+   "reason": "Doubling the radius is a real step, but the test doubles 5; multiplication.by-one-digit (multi-digit factors) is stronger than the test uses.",
+   "would_decide": "Whether radii beyond fact-size (for example 12.5 or 47) are in scope. If only small radii, the weaker node is multiplication.facts.within-100 and this edge is wrong; if arbitrary whole-number radii, it is necessary."
+  },
+  "e998": {
+   "verdict": "necessary"
+  },
+  "e999": {
+   "verdict": "necessary"
+  },
+  "e1000": {
+   "verdict": "task-only",
+   "reason": "Only the test gives a diameter (6 m) and needs the radius; the formula itself is stated with the radius."
+  },
+  "e1001": {
+   "verdict": "necessary"
+  },
+  "e1002": {
+   "verdict": "necessary"
+  },
+  "e1003": {
+   "verdict": "necessary"
+  },
+  "e1004": {
+   "verdict": "necessary"
+  },
+  "e1005": {
+   "verdict": "necessary"
+  },
+  "e1006": {
+   "verdict": "necessary"
+  },
+  "e1007": {
+   "verdict": "undecided",
+   "reason": "Halving a given diameter is a real step but the test gives a radius; division.by-one-digit (multi-digit dividends) may be stronger than the target uses.",
+   "would_decide": "Whether diameters beyond fact-size are in scope. If only small even diameters, the weaker node is division.facts.within-100 and this edge is wrong; if arbitrary whole-number diameters, it is necessary."
+  },
+  "e1008": {
+   "verdict": "undecided",
+   "reason": "Multiplying the radius by itself is a real step but the test squares 10, a multiple-of-ten product; two-digit by two-digit multiplication may be stronger than the target uses.",
+   "would_decide": "Whether two-digit radii such as 12 or 15 are in scope. If only radii such as 5 or 10, the weaker nodes are multiplication.facts.within-100 and multiplication.multiple-of-ten.by-multiple-of-ten and this edge is wrong; if two-digit radii are intended, it is necessary."
+  },
+  "e1009": {
+   "verdict": "necessary"
+  },
+  "e1010": {
+   "verdict": "necessary"
+  },
+  "e1011": {
+   "verdict": "necessary"
+  },
+  "e1012": {
+   "verdict": "necessary"
+  },
+  "e1013": {
+   "verdict": "indirect",
+   "reason": "The final step only writes r x r as r^2, so the meaning of a power is exercised through writing a power.",
+   "via": "exponent.whole-number-power.write"
+  },
+  "e1014": {
+   "verdict": "necessary"
+  },
+  "e1015": {
+   "verdict": "necessary"
+  },
+  "e1016": {
+   "verdict": "wrong",
+   "reason": "The only fraction product used is (1/2) x 2; that needs multiplying a fraction by a whole number (fraction.multiply-whole.symbolic), not the stronger node for multiplying by a fraction."
+  },
+  "e1017": {
+   "verdict": "necessary"
+  },
+  "e1018": {
+   "verdict": "necessary"
+  },
+  "e1019": {
+   "verdict": "scaffold",
+   "reason": "The test gives the circle already cut into 16 equal sectors, so the learner interprets equal shares rather than partitioning a circle."
+  },
+  "e1020": {
+   "verdict": "necessary"
+  },
+  "e1021": {
+   "verdict": "necessary"
+  },
+  "e1022": {
+   "verdict": "necessary"
+  },
+  "e1023": {
+   "verdict": "necessary"
+  },
+  "e1024": {
+   "verdict": "necessary"
+  },
+  "e1025": {
+   "verdict": "necessary"
+  },
+  "e1026": {
+   "verdict": "necessary"
+  },
+  "e1027": {
+   "verdict": "necessary"
+  },
+  "e1028": {
+   "verdict": "route-only",
+   "reason": "Measuring both angles of vertical pairs is one way to see they are equal.",
+   "other_route": "Reason from straight lines: each vertical angle together with its neighbour makes 180, so both equal 180 minus the same angle (angle.straight-line.sum-180, subtraction.within-1000)."
+  },
+  "e1029": {
+   "verdict": "route-only",
+   "reason": "The straight-line reasoning is one way to see vertical angles are equal.",
+   "other_route": "Measure both angles of several vertical pairs with a protractor (angle.protractor.measure)."
+  },
+  "e1030": {
+   "verdict": "necessary"
+  },
+  "e1031": {
+   "verdict": "route-only",
+   "reason": "Subtracting the same angle from 180 belongs only to the straight-line reasoning route; the test asks for 65 degrees with no subtraction.",
+   "other_route": "Measure both angles of several vertical pairs with a protractor (angle.protractor.measure)."
+  },
+  "e1032": {
+   "verdict": "necessary"
+  },
+  "e1033": {
+   "verdict": "necessary"
+  },
+  "e1034": {
+   "verdict": "necessary"
+  },
+  "e1035": {
+   "verdict": "necessary"
+  },
+  "e1036": {
+   "verdict": "necessary"
+  },
+  "e1037": {
+   "verdict": "necessary"
+  },
+  "e1038": {
+   "verdict": "wrong",
+   "reason": "The statement only needs to know a straight angle is half a turn, which angle.measure.circle-fraction gives; the level 3 procedure for computing a degree measure from a fraction of a turn is stronger than used."
+  },
+  "e1039": {
+   "verdict": "route-only",
+   "reason": "A straight angle as half a circle is one way to know it measures 180.",
+   "other_route": "Read 180 degrees for a straight angle on a protractor and measure adjacent angles along a line (angle.protractor.measure)."
+  },
+  "e1040": {
+   "verdict": "route-only",
+   "reason": "Measuring two adjacent angles on a line and adding them is one way to see they total 180.",
+   "other_route": "Use that a straight angle is half a full turn of 360 degrees (angle.measure.circle-fraction)."
+  },
+  "e1041": {
+   "verdict": "necessary"
+  },
+  "e1042": {
+   "verdict": "task-only",
+   "reason": "Only the test problem subtracts 130 from 180 to find the unknown angle; the statement says the measures add to 180."
+  },
+  "e1043": {
+   "verdict": "necessary"
+  },
+  "e1044": {
+   "verdict": "necessary"
+  },
+  "e1045": {
+   "verdict": "necessary"
+  },
+  "e1046": {
+   "verdict": "necessary"
+  },
+  "e1047": {
+   "verdict": "necessary"
+  },
+  "e1048": {
+   "verdict": "necessary"
+  },
+  "e1049": {
+   "verdict": "task-only",
+   "reason": "The statement does not commit to a product such as 2x; only the test problem has the measure 2x, which must be read as 2 times x."
+  },
+  "e1050": {
+   "verdict": "necessary"
+  },
+  "e1051": {
+   "verdict": "necessary"
+  },
+  "e1052": {
+   "verdict": "necessary"
+  },
+  "e1053": {
+   "verdict": "necessary"
+  },
+  "e1054": {
+   "verdict": "necessary"
+  },
+  "e1055": {
+   "verdict": "necessary"
+  },
+  "e1056": {
+   "verdict": "necessary"
+  },
+  "e1057": {
+   "verdict": "necessary"
+  },
+  "e1058": {
+   "verdict": "necessary"
+  },
+  "e1059": {
+   "verdict": "necessary"
+  },
+  "e1060": {
+   "verdict": "task-only",
+   "reason": "Only the test subtracts 25 from 70; the relationships named in the statement (straight line, supplementary) subtract from 180."
+  },
+  "e1061": {
+   "verdict": "necessary"
+  },
+  "e1062": {
+   "verdict": "task-only",
+   "reason": "Only the test claim needs the area of a right triangular base (half of 3 x 4); the idea of V = B x h for any base does not."
+  },
+  "e1063": {
+   "verdict": "necessary"
+  },
+  "e1064": {
+   "verdict": "necessary"
+  },
+  "e1065": {
+   "verdict": "undecided",
+   "reason": "Finding the area of a base that is another polygon is a real step, but decomposing into triangles and rectangles is one method; subtracting pieces (area.polygon.subtract) would do equally well and the test base is a triangle. The index has no method-neutral node for the area of a polygon.",
+   "would_decide": "Whether the map intends a method-neutral node for finding the area of a polygon, and whether polygon bases beyond triangles are in scope. If only triangle bases, this edge is wrong and area.triangle.formula.apply suffices."
+  },
+  "e1066": {
+   "verdict": "necessary"
+  },
+  "e1067": {
+   "verdict": "undecided",
+   "reason": "Multiplying B by h is a real step, but the test multiplies 12 by 10, a place-value product; two-digit by two-digit multiplication may be stronger than the target uses.",
+   "would_decide": "Whether two-digit base areas and heights are in scope. If only products like 12 x 10, the weaker node is place-value.factor-of-ten and this edge is wrong; if two-digit by two-digit products are intended, it is necessary."
+  },
+  "e1068": {
+   "verdict": "necessary"
+  },
+  "e1069": {
+   "verdict": "necessary"
+  },
+  "e1070": {
+   "verdict": "necessary"
+  },
+  "e1071": {
+   "verdict": "undecided",
+   "reason": "The rationale cites 72 and 24, whose sum 96 is within 100, so addition within 1000 may be stronger than the target uses.",
+   "would_decide": "Whether composite volumes beyond 100 are in scope. If not, the weaker node is addition.within-100 (e1070) and this edge is wrong; if so, addition.within-1000 replaces e1070."
+  },
+  "e1072": {
+   "verdict": "necessary"
+  },
+  "e1073": {
+   "verdict": "necessary"
+  },
+  "e1074": {
+   "verdict": "necessary"
+  },
+  "e1075": {
+   "verdict": "necessary"
+  },
+  "e1076": {
+   "verdict": "necessary"
+  },
+  "e1077": {
+   "verdict": "necessary"
+  },
+  "e1078": {
+   "verdict": "necessary"
+  },
+  "e1079": {
+   "verdict": "necessary"
+  }
+ },
+ "nodes": {
+  "circle.center-radius": {
+   "missing_prerequisites": [
+    {
+     "node": "spatial.position.relative",
+     "why": "The test asks which point is inside or outside the circle; the position words inside and outside are used directly (test-level, low weight)."
+    }
+   ],
+   "missing_routes": []
+  },
+  "circle.diameter": {
+   "missing_prerequisites": [
+    {
+     "node": "multiplication.comparison",
+     "why": "'Twice the radius' is a multiplicative comparison; if the map treats twice as two equal lengths joined end to end (addition) this node is not needed, so low confidence."
+    }
+   ],
+   "missing_routes": []
+  },
+  "construction.circle.radius-diameter": {
+   "missing_prerequisites": [
+    {
+     "node": "division.facts.within-100",
+     "why": "If the node only halves small diameters such as 8 cm, this is the weaker node that halving needs (see e881)."
+    }
+   ],
+   "missing_routes": []
+  },
+  "construction.triangle.two-sides-included-angle": {
+   "missing_prerequisites": [
+    {
+     "node": "angle.measure.degrees",
+     "why": "The test gives the angle as 50 degrees and the protractor step reads degrees directly (test-level)."
+    }
+   ],
+   "missing_routes": []
+  },
+  "construction.triangle.two-angles-included-side": {
+   "missing_prerequisites": [
+    {
+     "node": "segment.meaning",
+     "why": "The procedure begins by drawing the given side as a segment of a given length; the sibling node with the same first step lists this edge."
+    },
+    {
+     "node": "angle.measure.degrees",
+     "why": "The angles are given in degrees and the protractor step reads degrees directly (test-level)."
+    }
+   ],
+   "missing_routes": []
+  },
+  "construction.triangle.three-sides": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "triangle.inequality": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Compass model: attempt the arcs and see when they fail to meet.",
+     "prerequisites": [
+      "addition.within-10",
+      "comparing.whole-numbers.numerals-within-10",
+      "shapes.polygon.name-by-sides",
+      "construction.triangle.three-sides"
+     ]
+    },
+    {
+     "description": "Stick model: try to close sticks of the three lengths into a triangle.",
+     "prerequisites": [
+      "addition.within-10",
+      "comparing.whole-numbers.numerals-within-10",
+      "shapes.polygon.name-by-sides",
+      "shapes.compose.from-sides"
+     ]
+    }
+   ]
+  },
+  "triangle.determined.three-sides": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Compass route: draw the triangle from arcs and see the third vertex is forced.",
+     "prerequisites": [
+      "angle.meaning",
+      "shapes.compare.same-different",
+      "construction.triangle.three-sides"
+     ]
+    },
+    {
+     "description": "Straw route: build triangles from three straws and try to build a different one.",
+     "prerequisites": [
+      "angle.meaning",
+      "shapes.compare.same-different",
+      "shapes.compose.from-sides"
+     ]
+    }
+   ]
+  },
+  "triangle.determined.two-sides-included-angle": {
+   "missing_prerequisites": [
+    {
+     "node": "angle.meaning",
+     "why": "The statement speaks of the angle between two sides; angle.measure.degrees is proposed but the figure idea of an angle between two sides is used directly."
+    }
+   ],
+   "missing_routes": []
+  },
+  "triangle.determined.two-angles-included-side": {
+   "missing_prerequisites": [
+    {
+     "node": "angle.meaning",
+     "why": "The statement speaks of the side between two angles; the angle as a figure is used directly alongside its degree measure."
+    }
+   ],
+   "missing_routes": []
+  },
+  "triangle.ambiguous.two-sides-non-included-angle": {
+   "missing_prerequisites": [
+    {
+     "node": "angle.meaning",
+     "why": "The statement is about an angle that is not between two sides, so the position of an angle relative to its sides is used directly."
+    }
+   ],
+   "missing_routes": [
+    {
+     "description": "Circle model: the arc of radius BC about B meets the ray from A twice.",
+     "prerequisites": [
+      "angle.meaning",
+      "angle.measure.degrees",
+      "circle.center-radius",
+      "shapes.compare.same-different"
+     ]
+    },
+    {
+     "description": "Stick model: swing a stick of length BC about B and see it reach the ray in two places.",
+     "prerequisites": [
+      "angle.meaning",
+      "angle.measure.degrees",
+      "shapes.compose.from-sides",
+      "shapes.compare.same-different"
+     ]
+    }
+   ]
+  },
+  "triangle.three-angles": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Measuring route: measure the angles of drawn triangles and add them.",
+     "prerequisites": [
+      "angle.measure.degrees",
+      "addition.within-1000",
+      "angle.protractor.measure",
+      "construction.triangle.two-angles-included-side",
+      "shapes.match"
+     ]
+    },
+    {
+     "description": "Tearing route: fit the three torn corners along a straight line.",
+     "prerequisites": [
+      "angle.measure.degrees",
+      "addition.within-1000",
+      "angle.measure.circle-fraction",
+      "construction.triangle.two-angles-included-side",
+      "shapes.match"
+     ]
+    }
+   ]
+  },
+  "triangle.conditions.classify": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "cross-section.meaning": {
+   "missing_prerequisites": [
+    {
+     "node": "new:plane.meaning",
+     "why": "A plane as a flat surface extending without end is used by the statement and no such node is in the index."
+    }
+   ],
+   "missing_routes": []
+  },
+  "cross-section.prism.parallel-to-base": {
+   "missing_prerequisites": [
+    {
+     "node": "shapes.name.prototype.rectangle-hexagon",
+     "why": "Naming the cross-section as a rectangle is all the statement uses."
+    },
+    {
+     "node": "new:parallel.planes",
+     "why": "parallel.meaning covers lines; the statement needs a plane parallel to a plane, which the index does not name."
+    }
+   ],
+   "missing_routes": []
+  },
+  "cross-section.prism.perpendicular-to-base": {
+   "missing_prerequisites": [
+    {
+     "node": "shapes.name.prototype.rectangle-hexagon",
+     "why": "Naming the cross-section as a rectangle is all the statement uses."
+    },
+    {
+     "node": "new:perpendicular.planes",
+     "why": "perpendicular.meaning covers lines; the statement needs a plane perpendicular to a plane, which the index does not name."
+    }
+   ],
+   "missing_routes": []
+  },
+  "cross-section.pyramid.parallel-to-base": {
+   "missing_prerequisites": [
+    {
+     "node": "shapes.name.prototype.rectangle-hexagon",
+     "why": "Naming the cross-section as a rectangle is all the statement uses."
+    },
+    {
+     "node": "new:parallel.planes",
+     "why": "parallel.meaning covers lines; the statement needs a plane parallel to a plane, which the index does not name."
+    }
+   ],
+   "missing_routes": []
+  },
+  "cross-section.pyramid.perpendicular-to-base": {
+   "missing_prerequisites": [
+    {
+     "node": "new:perpendicular.planes",
+     "why": "The statement needs a plane perpendicular to a plane and parallel to a line; the index names only parallel and perpendicular lines."
+    }
+   ],
+   "missing_routes": []
+  },
+  "cross-section.side-per-face": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "cross-section.prism.oblique": {
+   "missing_prerequisites": [
+    {
+     "node": "cross-section.meaning",
+     "why": "The statement speaks of the shape in which the plane slices the solid, which is the cross-section; the sibling nodes list this edge and here it is missing."
+    }
+   ],
+   "missing_routes": []
+  },
+  "cross-section.pyramid.oblique": {
+   "missing_prerequisites": [
+    {
+     "node": "cross-section.meaning",
+     "why": "The statement speaks of the shape in which the plane slices the solid, which is the cross-section; the sibling nodes list this edge and here it is missing."
+    }
+   ],
+   "missing_routes": []
+  },
+  "circle.circumference.meaning": {
+   "missing_prerequisites": [
+    {
+     "node": "measurement.length.attribute",
+     "why": "The statement defines the circumference as a length, so length is used directly on every route."
+    }
+   ],
+   "missing_routes": [
+    {
+     "description": "Perimeter route: circumference as the perimeter of a circle.",
+     "prerequisites": [
+      "shapes.name.prototype",
+      "measurement.length.attribute",
+      "perimeter.meaning"
+     ]
+    },
+    {
+     "description": "String route: wrap a string around the circle and measure it laid straight.",
+     "prerequisites": [
+      "shapes.name.prototype",
+      "measurement.length.attribute",
+      "measurement.length.ruler"
+     ]
+    }
+   ]
+  },
+  "circle.pi.ratio": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "circle.circumference.formula": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Inverse-operation route: turn C divided by d = pi into C = pi x d.",
+     "prerequisites": [
+      "circle.center-radius",
+      "circle.diameter",
+      "circle.pi.ratio",
+      "division.unknown-factor.meaning",
+      "expressions.variable.meaning"
+     ]
+    },
+    {
+     "description": "Comparison route: pi as the number of diameters around the circle.",
+     "prerequisites": [
+      "circle.center-radius",
+      "circle.diameter",
+      "circle.pi.ratio",
+      "multiplication.comparison",
+      "expressions.variable.meaning"
+     ]
+    }
+   ]
+  },
+  "circle.circumference.formula.apply": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "circle.area.formula": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "circle.area.formula.apply": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "circle.area.derive-from-circumference": {
+   "missing_prerequisites": [
+    {
+     "node": "circle.circumference.meaning",
+     "why": "The base of the near-parallelogram is half the circumference, so circumference as the length around is used directly."
+    },
+    {
+     "node": "expressions.variable.meaning",
+     "why": "The derivation is written with the letters C and r."
+    },
+    {
+     "node": "new:approximation.by-refinement",
+     "why": "The statement says the shape gets closer to a parallelogram the more sectors are used, an informal idea of approximation not named in the index."
+    }
+   ],
+   "missing_routes": []
+  },
+  "circle.application.circumference": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "circle.application.area": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "angle.adjacent": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "angle.vertical": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "angle.vertical.equal": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Measuring route: measure both angles of several vertical pairs.",
+     "prerequisites": [
+      "angle.vertical",
+      "angle.measure.degrees",
+      "angle.protractor.measure"
+     ]
+    },
+    {
+     "description": "Reasoning route: both vertical angles are 180 minus the same neighbouring angle.",
+     "prerequisites": [
+      "angle.vertical",
+      "angle.measure.degrees",
+      "angle.straight-line.sum-180",
+      "subtraction.within-1000"
+     ]
+    }
+   ]
+  },
+  "angle.supplementary": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "angle.complementary": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "angle.straight-line.sum-180": {
+   "missing_prerequisites": [
+    {
+     "node": "addition.within-1000",
+     "why": "The statement says the two measures add to 180, so adding angle measures past 100 is used directly, as in angle.supplementary."
+    }
+   ],
+   "missing_routes": [
+    {
+     "description": "Half-turn route: a straight angle is half a full turn.",
+     "prerequisites": [
+      "angle.additive",
+      "angle.adjacent",
+      "line.meaning",
+      "angle.measure.circle-fraction",
+      "addition.within-1000"
+     ]
+    },
+    {
+     "description": "Protractor route: measure adjacent angles on a line and add them.",
+     "prerequisites": [
+      "angle.additive",
+      "angle.adjacent",
+      "line.meaning",
+      "angle.protractor.measure",
+      "addition.within-1000"
+     ]
+    }
+   ]
+  },
+  "angle.unknown.equation.write": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "angle.unknown.equation.solve": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "angle.application.multi-step": {
+   "missing_prerequisites": [
+    {
+     "node": "angle.vertical",
+     "why": "The statement and test must pick out vertical pairs (AOC and BOD) before using that they are equal."
+    },
+    {
+     "node": "subtraction.within-1000",
+     "why": "The relationships named in the statement subtract from 180, which goes past 100."
+    }
+   ],
+   "missing_routes": []
+  },
+  "volume.prism.right.base-height": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "volume.prism.right.base-height.apply": {
+   "missing_prerequisites": [
+    {
+     "node": "new:area.polygon.find",
+     "why": "A method-neutral node for the area of a polygon base (by decomposing, subtracting or any method) is what step 1 needs for non-triangular bases."
+    }
+   ],
+   "missing_routes": []
+  },
+  "volume.composite.right-prisms": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "volume.application.right-prism": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "volume.application.composite.right-prisms": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  }
+ }
+}
