@@ -1,0 +1,638 @@
+{
+ "route_semantics": "complete",
+ "edges": {
+  "e1475": {
+   "verdict": "necessary"
+  },
+  "e1476": {
+   "verdict": "scaffold",
+   "reason": "Step 5 defines the remainder as the last difference, so the algorithm can be run and its output named without the grouping meaning of a remainder; the meaning helps interpret the result but is not needed to carry out the procedure."
+  },
+  "e1477": {
+   "verdict": "necessary"
+  },
+  "e1478": {
+   "verdict": "scaffold",
+   "reason": "At level 3, bringing down a digit is a juxtaposition step; that each place is ten times the one to its right explains why it works but is not needed to carry it out."
+  },
+  "e1479": {
+   "verdict": "necessary"
+  },
+  "e1480": {
+   "verdict": "indirect",
+   "reason": "The statement allows a divisor of any length, so the current number can have more than three digits and the multi-digit subtraction node is the direct one; subtraction within 1000 only covers the sizes in the test problem.",
+   "via": "subtraction.standard-algorithm"
+  },
+  "e1481": {
+   "verdict": "necessary"
+  },
+  "e1482": {
+   "verdict": "necessary"
+  },
+  "e1483": {
+   "verdict": "scaffold",
+   "reason": "The rule 10 of a place regroups as 1 of the next place is carried over from the whole-number algorithm (e1481); the decimal ten-times relation explains why it works across the point but is not needed to run the procedure."
+  },
+  "e1484": {
+   "verdict": "scaffold",
+   "reason": "In a - b the minuend is given by the expression and is written on top, so the procedure does not need to decide which decimal is greater (15 - 3.72 is plain); comparison is only a sanity check."
+  },
+  "e1485": {
+   "verdict": "necessary"
+  },
+  "e1486": {
+   "verdict": "scaffold",
+   "reason": "Decomposing 1 of a place into 10 of the next place is the whole-number move (e1487) applied across the point; the decimal ten-to-one relation explains why but is not needed to run the procedure."
+  },
+  "e1487": {
+   "verdict": "necessary"
+  },
+  "e1488": {
+   "verdict": "necessary"
+  },
+  "e1489": {
+   "verdict": "necessary"
+  },
+  "e1490": {
+   "verdict": "necessary"
+  },
+  "e1491": {
+   "verdict": "necessary"
+  },
+  "e1492": {
+   "verdict": "scaffold",
+   "reason": "Appending 0 after the last digit is a stated rule in step 4; the ten-times relation explains why it keeps the value but is not needed to apply it. The fact actually used (trailing zeros do not change a decimal) has no index node; see missing prerequisite."
+  },
+  "e1493": {
+   "verdict": "necessary"
+  },
+  "e1494": {
+   "verdict": "necessary"
+  },
+  "e1495": {
+   "verdict": "scaffold",
+   "reason": "At level 3 the learner can scale divisor and dividend by 10^k as step 2 directs without having the principle; the principle justifies the step (a level 4 matter) and is not needed to run it."
+  },
+  "e1496": {
+   "verdict": "scaffold",
+   "reason": "10^k only labels the multiplier; step 2 is carried out by moving the point k places, so the same procedure can be run with 10, 100, 1000 and no exponent notation."
+  },
+  "e1497": {
+   "verdict": "necessary"
+  },
+  "e1498": {
+   "verdict": "scaffold",
+   "reason": "Whole-number special case: step 2 already handles a whole-number dividend as a decimal with the point after the ones digit and zeros written in, and the test problem has a decimal dividend."
+  },
+  "e1499": {
+   "verdict": "necessary"
+  },
+  "e1500": {
+   "verdict": "task-only",
+   "reason": "The definition needs only what a factor is; the test asks whether 2, 3, 4 and 6 divide 12 and 18, which is deciding whether those numbers are multiples of them."
+  },
+  "e1501": {
+   "verdict": "necessary"
+  },
+  "e1502": {
+   "verdict": "necessary"
+  },
+  "e1503": {
+   "verdict": "necessary"
+  },
+  "e1504": {
+   "verdict": "necessary"
+  },
+  "e1505": {
+   "verdict": "necessary"
+  },
+  "e1506": {
+   "verdict": "necessary"
+  },
+  "e1507": {
+   "verdict": "necessary"
+  },
+  "e1508": {
+   "verdict": "necessary"
+  },
+  "e1509": {
+   "verdict": "necessary"
+  },
+  "e1510": {
+   "verdict": "necessary"
+  },
+  "e1511": {
+   "verdict": "necessary"
+  },
+  "e1512": {
+   "verdict": "scaffold",
+   "reason": "The unit-fraction rule is the special case a = 1 of the target rule; keep the numerator and multiply the denominator by n can be learned directly, so the special case is the usual entry and the base of one justification, not a requirement."
+  },
+  "e1513": {
+   "verdict": "scaffold",
+   "reason": "Reading a/b as a copies of 1/b justifies the rule, but the procedure only keeps a and multiplies b by n. What the procedure needs is reading the numerator and denominator of a/b; see missing prerequisite fraction.non-unit.part-whole."
+  },
+  "e1514": {
+   "verdict": "necessary"
+  },
+  "e1515": {
+   "verdict": "task-only",
+   "reason": "The statement multiplies b by any whole number n, so the general node is multiplication.by-one-digit (e1514); only the test problem's 4 x 2 is a recalled fact."
+  },
+  "e1516": {
+   "verdict": "indirect",
+   "reason": "The statement checks that a product is 1 by multiplying fractions (and a whole number by a fraction in the test); the product rule is the justification of that procedure and is reached through it.",
+   "via": "fraction.multiplication.symbolic"
+  },
+  "e1517": {
+   "verdict": "necessary"
+  },
+  "e1518": {
+   "verdict": "task-only",
+   "reason": "The statement is about a nonzero fraction a/b; only the test pair 5 and 1/5 needs 5 read as 5/1."
+  },
+  "e1519": {
+   "verdict": "necessary"
+  },
+  "e1520": {
+   "verdict": "related",
+   "relation": "same_idea_different_form",
+   "reason": "(a x k)/(b x k) = a/b is the fraction form of the same identity; proving the claim that way reads the quotient as a fraction, which changes the facet (measurement) of this node. Keep as a link, not a prerequisite."
+  },
+  "e1521": {
+   "verdict": "related",
+   "relation": "same_idea_different_form",
+   "reason": "Reading a divided by b as the fraction a/b is the bridge to the fraction form of the identity (e1520); the measurement-facet principle does not need it."
+  },
+  "e1522": {
+   "verdict": "task-only",
+   "reason": "The statement is general; only the test problem needs 7.38 and 0.6 rewritten as 73.8 and 6 or 738 and 60 by multiplying decimals by powers of 10."
+  },
+  "e1523": {
+   "verdict": "scaffold",
+   "reason": "At level 3 the principle is stated and applied; resizing explains why it holds (the level 4 justification) but is not needed to state or use it."
+  },
+  "e1524": {
+   "verdict": "necessary"
+  },
+  "e1525": {
+   "verdict": "necessary"
+  },
+  "e1526": {
+   "verdict": "necessary"
+  },
+  "e1527": {
+   "verdict": "route-only",
+   "reason": "The statement and procedure give the convention (opposite side of 0, same unit steps), so marking -n can be learned from whole-number lengths alone; the opposite-direction meaning is the usual motivation but not the only way in.",
+   "other_route": "Introduce negative integers directly as the extension of the number line to the left of (or below) 0 with the same unit steps, with no real-world context, starting from whole-number lengths from 0."
+  },
+  "e1528": {
+   "verdict": "necessary"
+  },
+  "e1529": {
+   "verdict": "necessary"
+  },
+  "e1530": {
+   "verdict": "necessary"
+  },
+  "e1531": {
+   "verdict": "necessary"
+  },
+  "e1532": {
+   "verdict": "necessary"
+  },
+  "e1533": {
+   "verdict": "necessary"
+  },
+  "e1534": {
+   "verdict": "necessary"
+  },
+  "e1535": {
+   "verdict": "necessary"
+  },
+  "e1536": {
+   "verdict": "necessary"
+  },
+  "e1537": {
+   "verdict": "route-only",
+   "reason": "The concept needs the convention that a negative first coordinate is left of the y-axis and a negative second coordinate is below the x-axis. Plotting is one place to learn it; reading plotted points is another.",
+   "other_route": "Learn the sign pattern by reading the coordinates of points already plotted in each quadrant (coordinate-plane.four-quadrants.read), with no plotting."
+  },
+  "e1538": {
+   "verdict": "route-only",
+   "reason": "The concept needs to see where (a, b), (a, -b) and (-a, b) sit; that can come from plotting them, or from reading the coordinates of a plotted point and its mirror image and noticing which sign changes.",
+   "other_route": "Read the coordinates of a point and its mirror image on a grid (coordinate-plane.four-quadrants.read) and notice which sign changes, with no plotting."
+  },
+  "e1539": {
+   "verdict": "necessary"
+  },
+  "e1540": {
+   "verdict": "necessary"
+  },
+  "e1541": {
+   "verdict": "necessary"
+  },
+  "e1542": {
+   "verdict": "necessary"
+  },
+  "e1543": {
+   "verdict": "necessary"
+  },
+  "e1544": {
+   "verdict": "necessary"
+  },
+  "e1545": {
+   "verdict": "necessary"
+  },
+  "e1546": {
+   "verdict": "necessary"
+  },
+  "e1547": {
+   "verdict": "necessary"
+  },
+  "e1548": {
+   "verdict": "necessary"
+  },
+  "e1549": {
+   "verdict": "necessary"
+  },
+  "e1550": {
+   "verdict": "necessary"
+  },
+  "e1551": {
+   "verdict": "necessary"
+  },
+  "e1552": {
+   "verdict": "necessary"
+  },
+  "e1553": {
+   "verdict": "necessary"
+  },
+  "e1554": {
+   "verdict": "necessary"
+  },
+  "e1555": {
+   "verdict": "necessary"
+  },
+  "e1556": {
+   "verdict": "necessary"
+  },
+  "e1557": {
+   "verdict": "necessary"
+  },
+  "e1558": {
+   "verdict": "necessary"
+  },
+  "e1559": {
+   "verdict": "undecided",
+   "reason": "Common denominator, common numerator and benchmarks are interchangeable methods for the same comparison of two positive fractions, so an edge to one method is wrong unless it is the map's general method; the index has no method-neutral 'compare two fractions' node to point to instead.",
+   "would_decide": "Whether the map has or will add a method-neutral node for comparing two fractions of any kind. If it does, this edge should point to that node; if common-denominator is the map's general comparison method, the edge is necessary."
+  },
+  "e1560": {
+   "verdict": "necessary"
+  },
+  "e1561": {
+   "verdict": "necessary"
+  },
+  "e1562": {
+   "verdict": "necessary"
+  },
+  "e1563": {
+   "verdict": "necessary"
+  },
+  "e1564": {
+   "verdict": "scaffold",
+   "reason": "The test says which town is higher, so the inequality is written by treating higher as greater (e1565), not by first deciding which of -12 and -5 is greater; the level 3 integer comparison is a later symbolic skill and a check here."
+  },
+  "e1565": {
+   "verdict": "necessary"
+  },
+  "e1566": {
+   "verdict": "scaffold",
+   "reason": "The statement and test already give the quantities as signed numbers (-12 m, -5 m), so writing a signed number from a context is not exercised; what is needed is reading a signed number as a quantity (see missing prerequisite rational-number.signed.meaning)."
+  },
+  "e1567": {
+   "verdict": "necessary"
+  },
+  "e1568": {
+   "verdict": "necessary"
+  },
+  "e1569": {
+   "verdict": "necessary"
+  },
+  "e1570": {
+   "verdict": "scaffold",
+   "reason": "The target's own statement defines |a| as the distance from 0 for fractions and decimals and its test applies it, so the integer case is the usual earlier special case in teaching order rather than a requirement."
+  },
+  "e1571": {
+   "verdict": "necessary"
+  },
+  "e1572": {
+   "verdict": "necessary"
+  },
+  "e1573": {
+   "verdict": "necessary"
+  },
+  "e1574": {
+   "verdict": "necessary"
+  },
+  "e1575": {
+   "verdict": "necessary"
+  },
+  "e1576": {
+   "verdict": "indirect",
+   "reason": "The explanation can be given with the rule that of two negatives the one nearer 0 is greater; the number-line meaning of order is reached through the integer comparison node, and the test does not require positions.",
+   "via": "rational-number.compare.integers"
+  },
+  "e1577": {
+   "verdict": "necessary"
+  },
+  "e1578": {
+   "verdict": "necessary"
+  },
+  "e1579": {
+   "verdict": "necessary"
+  },
+  "e1580": {
+   "verdict": "necessary"
+  },
+  "e1581": {
+   "verdict": "necessary"
+  },
+  "e1582": {
+   "verdict": "necessary"
+  },
+  "e1583": {
+   "verdict": "necessary"
+  },
+  "e1584": {
+   "verdict": "task-only",
+   "reason": "The statement is for any nonzero whole numbers a and b; only the test problem needs the product 7 x 9."
+  },
+  "e1585": {
+   "verdict": "necessary"
+  },
+  "e1586": {
+   "verdict": "necessary"
+  },
+  "e1587": {
+   "verdict": "necessary"
+  },
+  "e1588": {
+   "verdict": "route-only",
+   "reason": "The identity a + (-a) = 0 needs some meaning of adding a negative number. The number-line move is one; a gain and an equal loss combining to 0 is another.",
+   "other_route": "Context route: a quantity and an opposite quantity of the same size combine to 0 (rational-number.opposites.combine-to-zero.context), with the gain written as a and the loss as -a."
+  },
+  "e1589": {
+   "verdict": "task-only",
+   "reason": "The idea a + (-a) = 0 does not need negative fractions or decimals; only the test pairs (-4.5, -3/4) do. What they need is recognizing -a as the opposite of a, not locating a point on a number line."
+  },
+  "e1590": {
+   "verdict": "necessary"
+  },
+  "e1591": {
+   "verdict": "route-only",
+   "reason": "A gain and an equal loss combining to 0 is one way to give a + (-a) = 0 its meaning; the number-line move is the other.",
+   "other_route": "Number-line route: start at a and move |a| in the direction of -a, landing at 0 (rational-number.addition.number-line)."
+  },
+  "e1592": {
+   "verdict": "route-only",
+   "reason": "Writing a gain as a and the loss as -a is the step that turns the context into the equation on the context route only; the number-line route does not use it.",
+   "other_route": "Number-line route: start at a and move |a| in the direction of -a, landing at 0 (rational-number.addition.number-line)."
+  }
+ },
+ "nodes": {
+  "division.standard-algorithm.long-division": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "decimal.addition.algorithm": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "decimal.subtraction.algorithm": {
+   "missing_prerequisites": [
+    {
+     "node": "new:decimal.equivalent.trailing-zeros",
+     "why": "The procedure writes zeros after the last decimal digit (15 becomes 15.00, 3.7 becomes 3.70, 9.3 becomes 9.30) and relies on the number being unchanged; no index node states that a decimal is unchanged by appending zeros after its last decimal digit."
+    }
+   ],
+   "missing_routes": []
+  },
+  "decimal.multiplication.algorithm": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "decimal.division.by-whole.algorithm": {
+   "missing_prerequisites": [
+    {
+     "node": "new:decimal.equivalent.trailing-zeros",
+     "why": "The procedure writes zeros after the last decimal digit (15 becomes 15.00, 3.7 becomes 3.70, 9.3 becomes 9.30) and relies on the number being unchanged; no index node states that a decimal is unchanged by appending zeros after its last decimal digit."
+    }
+   ],
+   "missing_routes": []
+  },
+  "decimal.division.by-decimal.algorithm": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "factors.common-factor.meaning": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "factors.gcf.find": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "factors.common-multiple.meaning": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "factors.lcm.find": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "multiplication.distributive.factor-common": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "division.nonunit-fraction-by-whole": {
+   "missing_prerequisites": [
+    {
+     "node": "fraction.non-unit.part-whole",
+     "why": "The procedure keeps the numerator a and multiplies the denominator b by n, and the test uses the non-unit fraction 3/4, so the learner must read a/b with numerator a and denominator b."
+    }
+   ],
+   "missing_routes": []
+  },
+  "fraction.reciprocal": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "division.equal-scaling.quotient-unchanged": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "rational-number.signed.meaning": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "rational-number.signed.represent-context": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "rational-number.zero.meaning-in-context": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "rational-number.integer.number-line": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Introduce negative integers directly as the extension of the number line to the left of (or below) 0 with the same unit steps, with no real-world context.",
+     "prerequisites": [
+      "number-line.whole-number-lengths"
+     ]
+    }
+   ]
+  },
+  "rational-number.fraction-decimal.number-line": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "rational-number.opposite.number-line": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "rational-number.opposite.of-zero": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "rational-number.opposite.of-opposite": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "coordinate-plane.quadrants.signs": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Learn the sign-to-quadrant pattern by reading the coordinates of points already plotted in each quadrant, with no plotting.",
+     "prerequisites": [
+      "coordinate-plane.axes-origin",
+      "coordinate-plane.four-quadrants.read"
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.reflection.signs": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Read the coordinates of a point and its mirror image on a grid and notice which sign changes, with no plotting.",
+     "prerequisites": [
+      "coordinate-plane.four-quadrants.read",
+      "rational-number.opposite.number-line",
+      "symmetry.line.meaning"
+     ]
+    }
+   ]
+  },
+  "coordinate-plane.four-quadrants.plot": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "coordinate-plane.four-quadrants.read": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "coordinate-plane.four-quadrants.fraction-decimal.plot": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "coordinate-plane.four-quadrants.fraction-decimal.read": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "rational-number.order.number-line": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "rational-number.compare.integers": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "rational-number.compare.rationals": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "rational-number.order.context.write": {
+   "missing_prerequisites": [
+    {
+     "node": "rational-number.signed.meaning",
+     "why": "To write the right inequality the learner must read -12 m and -5 m as quantities in opposite directions from 0 (below sea level), so that higher means greater."
+    }
+   ],
+   "missing_routes": []
+  },
+  "rational-number.order.context.explain": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "absolute-value.distance.integer": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "absolute-value.distance.rational": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "absolute-value.magnitude.context": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "absolute-value.vs-order": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "absolute-value.vs-order.context": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "coordinate-plane.application.real-world.four-quadrants": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "rational-number.opposites.combine-to-zero.context": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "factors.common-multiple.product": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "rational-number.addition.number-line": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "rational-number.additive-inverse": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Number-line route: a + (-a) = 0 because starting at a and moving |a| in the direction of -a lands at 0.",
+     "prerequisites": [
+      "rational-number.addition.number-line",
+      "rational-number.opposite.number-line"
+     ]
+    },
+    {
+     "description": "Context route: a quantity and an opposite quantity of the same size combine to 0, with the gain written as a and the loss as -a.",
+     "prerequisites": [
+      "rational-number.opposites.combine-to-zero.context",
+      "rational-number.signed.represent-context",
+      "rational-number.opposite.number-line"
+     ]
+    }
+   ]
+  }
+ }
+}
