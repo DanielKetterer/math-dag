@@ -2,11 +2,19 @@
 
 Read this first in a new session. Then RULES.md.
 
-## Weekly limit hit and cleared (2026-10-21, evening)
+## Proposers done; critics running (2026-10-22)
 
-The weekly limit stopped E2b P and G3a P and Q before they wrote output; Daniel reset
-the limit the same evening and they were resumed (E2b Q kept running). Next after
-them: G3b, G4a, G4b, S1a, S1b (both passes each), then the 12 critics.
+- All 24 proposer passes done (proposers cost 4.64M, about 193k each by the harness
+  metric). Union pilot/run/p3/union.json: 1,964 edges, Jaccard 0.68 (phase 1 0.68,
+  phase 2 0.69), 0 rule violations, 16 edges to 9 ids outside the map (turn direction
+  x2 spellings, transversal, plane, pigeonhole x2, distributive over subtraction,
+  decimal subtraction to hundredths, multi-digit subtraction). Report:
+  pilot/run/p3/passes_report.md. Critic batches blinded (checked: no pass labels).
+- Session and weekly limits stopped agents three times; each resumed with SendMessage.
+  Reports lost to a container restart were read from transcripts (last non-zero
+  usage record).
+- Critics (Sonnet, 12): G4a, G3a, G3b, E2a running; then Q1b, E2b, G4b, E1a, E1b, Q1a,
+  S1a, S1b. Then `sh tools/rebuild.sh`, check, benchmark, explorer, review queue.
 
 ## Hold lifted (2026-10-21, evening): Daniel chose to continue with both passes at ~6.5M more
 
