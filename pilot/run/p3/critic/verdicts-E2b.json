@@ -1,0 +1,920 @@
+{
+ "route_semantics": "complete",
+ "edges": {
+  "e497": {
+   "verdict": "necessary"
+  },
+  "e498": {
+   "verdict": "scaffold",
+   "reason": "The node's own procedure states the coefficient and constant rules it applies; inspection is the recognition direction of the same rules and can be taught before or after generating."
+  },
+  "e499": {
+   "verdict": "necessary"
+  },
+  "e500": {
+   "verdict": "task-only",
+   "reason": "Only the test problem asks for a check of (1, 1) and (2, 0); the idea itself needs what a solution is (e501) and evaluation at given values (e502)."
+  },
+  "e501": {
+   "verdict": "necessary"
+  },
+  "e502": {
+   "verdict": "necessary"
+  },
+  "e503": {
+   "verdict": "necessary"
+  },
+  "e504": {
+   "verdict": "task-only",
+   "reason": "Only the test problem tests (2, 3) and (1, 4); the idea is that a pair satisfies both equations."
+  },
+  "e505": {
+   "verdict": "necessary"
+  },
+  "e506": {
+   "verdict": "task-only",
+   "reason": "Only the test problem evaluates the sides at the pairs; this overlaps e504, which itself rests on evaluation."
+  },
+  "e507": {
+   "verdict": "necessary"
+  },
+  "e508": {
+   "verdict": "necessary"
+  },
+  "e509": {
+   "verdict": "wrong",
+   "reason": "The statement, procedure and test read a crossing at a grid point and never require negative coordinates; the weaker node is coordinate-plane.first-quadrant.read. If the node is amended to include crossings in any quadrant, this edge becomes necessary."
+  },
+  "e510": {
+   "verdict": "necessary"
+  },
+  "e511": {
+   "verdict": "necessary"
+  },
+  "e512": {
+   "verdict": "necessary"
+  },
+  "e513": {
+   "verdict": "necessary"
+  },
+  "e514": {
+   "verdict": "scaffold",
+   "reason": "The statement restricts the input to systems already written as ax + by = c and dx + ey = f, and every test system is in that form, so step 1 is a no-op for the node as stated."
+  },
+  "e515": {
+   "verdict": "necessary"
+  },
+  "e516": {
+   "verdict": "necessary"
+  },
+  "e517": {
+   "verdict": "necessary"
+  },
+  "e518": {
+   "verdict": "task-only",
+   "reason": "Only the test problem writes one equation as y = 1 + 2x and must see it equals y = 2x + 1; the idea works on equations already in y = mx + b order."
+  },
+  "e519": {
+   "verdict": "necessary"
+  },
+  "e520": {
+   "verdict": "necessary"
+  },
+  "e521": {
+   "verdict": "necessary"
+  },
+  "e522": {
+   "verdict": "necessary"
+  },
+  "e523": {
+   "verdict": "necessary"
+  },
+  "e524": {
+   "verdict": "necessary"
+  },
+  "e525": {
+   "verdict": "necessary"
+  },
+  "e526": {
+   "verdict": "necessary"
+  },
+  "e527": {
+   "verdict": "wrong",
+   "reason": "The equation left after substituting into a standard-form equation needs expanding and collecting like terms (the node equation.linear.expand-collect, e526); the full multi-step solver is a stronger node than the step uses."
+  },
+  "e528": {
+   "verdict": "necessary"
+  },
+  "e529": {
+   "verdict": "necessary"
+  },
+  "e530": {
+   "verdict": "necessary"
+  },
+  "e531": {
+   "verdict": "necessary"
+  },
+  "e532": {
+   "verdict": "necessary"
+  },
+  "e533": {
+   "verdict": "necessary"
+  },
+  "e534": {
+   "verdict": "wrong",
+   "reason": "Step 3 always leaves a one-step equation py = q and step 4 leaves px + q = r; the weaker nodes are equation.one-step.multiplication.solve (e532) and equation.two-step.px-plus-q.solve (e533). Negative coefficients would need signed versions of those nodes, which are not in the index."
+  },
+  "e535": {
+   "verdict": "necessary"
+  },
+  "e536": {
+   "verdict": "necessary"
+  },
+  "e537": {
+   "verdict": "necessary"
+  },
+  "e538": {
+   "verdict": "necessary"
+  },
+  "e539": {
+   "verdict": "necessary"
+  },
+  "e540": {
+   "verdict": "necessary"
+  },
+  "e541": {
+   "verdict": "route-only",
+   "reason": "The statement says only 'solving the system'; setting the two y-expressions equal is one method.",
+   "other_route": "Solve the system by substitution, by elimination, or by graphing both lines, since the meeting point has integer coordinates."
+  },
+  "e542": {
+   "verdict": "necessary"
+  },
+  "e543": {
+   "verdict": "necessary"
+  },
+  "e544": {
+   "verdict": "necessary"
+  },
+  "e545": {
+   "verdict": "task-only",
+   "reason": "Only the test problem has a line through the origin (through (1, 2) and (3, 6), y = 2x); the general y = mx + b with b = 0 carries the idea."
+  },
+  "e546": {
+   "verdict": "necessary"
+  },
+  "e547": {
+   "verdict": "route-only",
+   "reason": "Solving the system is one computation that several methods do; setting the y-expressions equal is one of them.",
+   "other_route": "Solve the pair of equations by substitution or by elimination."
+  },
+  "e548": {
+   "verdict": "route-only",
+   "reason": "Equal slopes with different intercepts is the graphical way to decide whether the lines meet.",
+   "other_route": "Solve the system algebraically and read a false equation a = b as no intersection (equation.linear.solution-count.reduce)."
+  },
+  "e549": {
+   "verdict": "necessary"
+  },
+  "e550": {
+   "verdict": "necessary"
+  },
+  "e551": {
+   "verdict": "necessary"
+  },
+  "e552": {
+   "verdict": "route-only",
+   "reason": "Setting the two y = mx + b expressions equal is one way to solve the system; the statement says only 'solving the system'.",
+   "other_route": "Solve the system by substitution, by elimination, or by graphing both lines (answers are whole numbers)."
+  },
+  "e553": {
+   "verdict": "necessary"
+  },
+  "e554": {
+   "verdict": "necessary"
+  },
+  "e555": {
+   "verdict": "route-only",
+   "reason": "The statement says 'solving it algebraically'; elimination is one algebraic method.",
+   "other_route": "Solve the system by substitution (linear-system.substitution)."
+  },
+  "e556": {
+   "verdict": "necessary"
+  },
+  "e557": {
+   "verdict": "route-only",
+   "reason": "The statement says 'solving it algebraically'; substitution is one algebraic method.",
+   "other_route": "Solve the system by elimination (linear-system.elimination)."
+  },
+  "e558": {
+   "verdict": "task-only",
+   "reason": "Only Table 1 of the test problem is written as ordered pairs; the idea concerns which outputs go with an input, whatever the format."
+  },
+  "e559": {
+   "verdict": "necessary"
+  },
+  "e560": {
+   "verdict": "necessary"
+  },
+  "e561": {
+   "verdict": "necessary"
+  },
+  "e562": {
+   "verdict": "necessary"
+  },
+  "e563": {
+   "verdict": "necessary"
+  },
+  "e564": {
+   "verdict": "necessary"
+  },
+  "e565": {
+   "verdict": "scaffold",
+   "reason": "Shared vocabulary only: finding and comparing rates never uses the one-output-per-input property."
+  },
+  "e566": {
+   "verdict": "scaffold",
+   "reason": "The procedure reads m from a given equation (e567); it does not use the claim that every such equation defines a function or that other equations do not."
+  },
+  "e567": {
+   "verdict": "necessary"
+  },
+  "e568": {
+   "verdict": "necessary"
+  },
+  "e569": {
+   "verdict": "necessary"
+  },
+  "e570": {
+   "verdict": "necessary"
+  },
+  "e571": {
+   "verdict": "scaffold",
+   "reason": "Shared vocabulary only: finding and comparing outputs at input 0 never uses the one-output-per-input property."
+  },
+  "e572": {
+   "verdict": "scaffold",
+   "reason": "The procedure reads b from a given equation (e573); it does not use the claim that every such equation defines a function."
+  },
+  "e573": {
+   "verdict": "necessary"
+  },
+  "e574": {
+   "verdict": "necessary"
+  },
+  "e575": {
+   "verdict": "necessary"
+  },
+  "e576": {
+   "verdict": "necessary"
+  },
+  "e577": {
+   "verdict": "necessary"
+  },
+  "e578": {
+   "verdict": "task-only",
+   "reason": "Only the test item y = 7 - x/2 needs its terms reordered to see the form mx + b."
+  },
+  "e579": {
+   "verdict": "necessary"
+  },
+  "e580": {
+   "verdict": "necessary"
+  },
+  "e581": {
+   "verdict": "necessary"
+  },
+  "e582": {
+   "verdict": "scaffold",
+   "reason": "The vertical-line exclusion follows directly from functions.definition and functions.graph.meaning (two points on a vertical line are one input with two outputs), both already prerequisites."
+  },
+  "e583": {
+   "verdict": "necessary"
+  },
+  "e584": {
+   "verdict": "necessary"
+  },
+  "e585": {
+   "verdict": "necessary"
+  },
+  "e586": {
+   "verdict": "indirect",
+   "reason": "Lines through the origin are the b = 0 case of y = mx + b; this assumes y = mx writing precedes y = mx + b writing. If it does not, the edge is necessary.",
+   "via": "linear-function.line.y-mx-plus-b.write"
+  },
+  "e587": {
+   "verdict": "necessary"
+  },
+  "e588": {
+   "verdict": "necessary"
+  },
+  "e589": {
+   "verdict": "necessary"
+  },
+  "e590": {
+   "verdict": "necessary"
+  },
+  "e591": {
+   "verdict": "necessary"
+  },
+  "e592": {
+   "verdict": "necessary"
+  },
+  "e593": {
+   "verdict": "necessary"
+  },
+  "e594": {
+   "verdict": "task-only",
+   "reason": "Only the test problem evaluates A = s^2; the idea is about differing rates of change."
+  },
+  "e595": {
+   "verdict": "necessary"
+  },
+  "e596": {
+   "verdict": "necessary"
+  },
+  "e597": {
+   "verdict": "necessary"
+  },
+  "e598": {
+   "verdict": "necessary"
+  },
+  "e599": {
+   "verdict": "necessary"
+  },
+  "e600": {
+   "verdict": "necessary"
+  },
+  "e601": {
+   "verdict": "necessary"
+  },
+  "e602": {
+   "verdict": "necessary"
+  },
+  "e603": {
+   "verdict": "necessary"
+  },
+  "e604": {
+   "verdict": "necessary"
+  },
+  "e605": {
+   "verdict": "necessary"
+  },
+  "e606": {
+   "verdict": "necessary"
+  },
+  "e607": {
+   "verdict": "necessary"
+  },
+  "e608": {
+   "verdict": "wrong",
+   "reason": "Plotting paired quantities on a scaled grid is stronger than the sketch uses, which has no numerical scale; the weaker node is coordinate-plane.axes-origin (e609)."
+  },
+  "e609": {
+   "verdict": "necessary"
+  },
+  "e610": {
+   "verdict": "scaffold",
+   "reason": "Describing a graph is the inverse direction of sketching one; the correspondence between words and shape can be taught in either order."
+  },
+  "e611": {
+   "verdict": "scaffold",
+   "reason": "Telling straight from curved parts of a given graph is the inverse direction of sketching them; either can be taught first."
+  },
+  "e612": {
+   "verdict": "necessary"
+  },
+  "e613": {
+   "verdict": "scaffold",
+   "reason": "The statement already covers sums of any size up to 1,000,000, including those within 1000, so addition.within-1000 is the earlier narrower case of the same skill; the unshared core is one-digit sums in each place (addition.within-20.fluency)."
+  },
+  "e614": {
+   "verdict": "necessary"
+  },
+  "e615": {
+   "verdict": "scaffold",
+   "reason": "Division by a one-digit number is an earlier, easier case of the same family; a learner can reach two-digit divisors through multiples of the divisor and the meaning of a quotient without it."
+  },
+  "e616": {
+   "verdict": "necessary"
+  },
+  "e617": {
+   "verdict": "undecided",
+   "reason": "The id subtraction.multi-digit is not in the index; the computation (subtracting multiples of the divisor from a four-digit dividend) clearly needs multi-digit subtraction, but subtraction.standard-algorithm is a method and subtraction.within-1000 is too small.",
+   "would_decide": "Whether a method-neutral subtraction.multi-digit node exists in the map; if so the edge is necessary."
+  },
+  "e618": {
+   "verdict": "necessary"
+  },
+  "e619": {
+   "verdict": "scaffold",
+   "reason": "Exact division is the remainder-zero case of what this node covers, so it is the earlier narrower case; the core needs are multiplication.by-one-digit, place-value.factor-of-ten and multi-digit subtraction, listed as missing."
+  },
+  "e620": {
+   "verdict": "necessary"
+  },
+  "e621": {
+   "verdict": "wrong",
+   "reason": "The test compares 6 with 5, and the idea compares a leftover with the group size; comparing two-digit numbers is stronger than used. The weaker node is comparing.whole-numbers.numerals-within-10."
+  },
+  "e622": {
+   "verdict": "necessary"
+  },
+  "e623": {
+   "verdict": "related",
+   "reason": "Grouping is another reading of a quotient; the node's facet is unknown-factor, whose meaning is e624.",
+   "relation": "same_idea_different_form"
+  },
+  "e624": {
+   "verdict": "necessary"
+  },
+  "e625": {
+   "verdict": "necessary"
+  },
+  "e626": {
+   "verdict": "task-only",
+   "reason": "Only the test problem needs 8 x 10 = 80 to name the single division."
+  },
+  "e627": {
+   "verdict": "necessary"
+  },
+  "e628": {
+   "verdict": "scaffold",
+   "reason": "The statement covers multistep problems with any numbers and so carries the two-step case; the two-step node is the earlier narrower version of the same estimating-and-comparing skill."
+  },
+  "e629": {
+   "verdict": "undecided",
+   "reason": "The statement allows rounding 'or mental computation' and the test rounds only to the nearest hundred, which e630 covers; rounding to any place is needed only if intended problems round to thousands or beyond.",
+   "would_decide": "Whether intended problems round to places above the hundreds (thousands, ten-thousands)."
+  },
+  "e630": {
+   "verdict": "task-only",
+   "reason": "The statement allows 'rounded numbers or mental computation'; only the test problem requires rounding (198 to 200, 305 to 300)."
+  },
+  "e631": {
+   "verdict": "necessary"
+  },
+  "e632": {
+   "verdict": "necessary"
+  },
+  "e633": {
+   "verdict": "task-only",
+   "reason": "Only the test problem needs 5/6 and 2/6 as counts of 1/6 parts on a bar."
+  },
+  "e634": {
+   "verdict": "related",
+   "reason": "Separating is a different meaning of subtracting fractions; the comparison meaning (how much must be joined) does not use it.",
+   "relation": "same_idea_different_form"
+  },
+  "e635": {
+   "verdict": "task-only",
+   "reason": "Only the test numbers need halving by arithmetic; the idea can be met by splitting the segment between the numbers into two equal lengths."
+  },
+  "e636": {
+   "verdict": "route-only",
+   "reason": "Half of the distance as a share size is the arithmetic route.",
+   "other_route": "Partition the segment between the two numbers on the number line into two equal lengths and read the point reached (partitioning.segment.equal-lengths)."
+  },
+  "e637": {
+   "verdict": "necessary"
+  },
+  "e638": {
+   "verdict": "route-only",
+   "reason": "Finding the distance as a difference is part of the arithmetic route.",
+   "other_route": "Partition the segment between the two numbers on the number line into two equal lengths without computing the difference."
+  },
+  "e639": {
+   "verdict": "necessary"
+  },
+  "e640": {
+   "verdict": "necessary"
+  },
+  "e641": {
+   "verdict": "necessary"
+  },
+  "e642": {
+   "verdict": "scaffold",
+   "reason": "The target is a level 1 fact; place-value.hundreds.multiples is a level 2 concept that explains the count by hundreds but is not needed to say that 1000 follows 900."
+  },
+  "e643": {
+   "verdict": "necessary"
+  },
+  "e644": {
+   "verdict": "scaffold",
+   "reason": "Number names in words are given and read as words; reading written numerals is not used. The number words below 1000 come from counting.sequence.within-1000 (listed as missing)."
+  },
+  "e645": {
+   "verdict": "necessary"
+  },
+  "e646": {
+   "verdict": "necessary"
+  },
+  "e647": {
+   "verdict": "necessary"
+  },
+  "e648": {
+   "verdict": "necessary"
+  },
+  "e649": {
+   "verdict": "necessary"
+  },
+  "e650": {
+   "verdict": "necessary"
+  },
+  "e651": {
+   "verdict": "task-only",
+   "reason": "Only the test problem shows 7:59 in digital notation; the idea follows the minute hand around the clock face."
+  }
+ },
+ "nodes": {
+  "equation.linear.solution-count.generate": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "equation.two-variable.graph-as-solutions": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "linear-system.solution.meaning": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "linear-system.solution.intersection": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "linear-system.graph.read": {
+   "missing_prerequisites": [
+    {
+     "node": "coordinate-plane.first-quadrant.read",
+     "why": "The weaker node that reading a crossing at a grid point actually needs; replaces the proposed four-quadrant edge."
+    }
+   ],
+   "missing_routes": []
+  },
+  "linear-system.graph.estimate": {
+   "missing_prerequisites": [
+    {
+     "node": "linear-system.solution.meaning",
+     "why": "The statement asks for the solution of a system, so the meaning of a solution is used directly (it is also reached through linear-system.graph.read)."
+    }
+   ],
+   "missing_routes": []
+  },
+  "linear-system.inspection": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "linear-system.solution-count.slopes": {
+   "missing_prerequisites": [
+    {
+     "node": "slope.between-two-points",
+     "why": "The statement turns different or equal slopes into crossing or parallel lines, so what a slope is, beyond reading m from the equation, is used directly; evidence is moderate because y-mx-plus-b.write may already carry it."
+    }
+   ],
+   "missing_routes": []
+  },
+  "linear-system.set-expressions-equal": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "linear-system.substitution": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "linear-system.elimination": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "linear-system.application.mathematical.simple": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Solve the system of the two y = mx + b equations by substitution.",
+     "prerequisites": [
+      "linear-function.line.y-mx-plus-b.write",
+      "slope.between-two-points",
+      "linear-system.solution.intersection",
+      "linear-system.substitution"
+     ]
+    },
+    {
+     "description": "Solve the system by elimination.",
+     "prerequisites": [
+      "linear-function.line.y-mx-plus-b.write",
+      "slope.between-two-points",
+      "linear-system.solution.intersection",
+      "linear-system.elimination"
+     ]
+    },
+    {
+     "description": "Graph both lines and read the integer meeting point.",
+     "prerequisites": [
+      "linear-function.line.y-mx-plus-b.write",
+      "slope.between-two-points",
+      "linear-system.solution.intersection",
+      "linear-system.graph.estimate"
+     ]
+    }
+   ]
+  },
+  "linear-system.application.mathematical": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Solve by substitution and decide whether the lines meet from the slopes.",
+     "prerequisites": [
+      "linear-function.line.y-mx-plus-b.write",
+      "linear-function.model.initial.from-two-values",
+      "slope.between-two-points",
+      "linear-system.solution.intersection",
+      "linear-system.substitution",
+      "linear-system.solution-count.slopes"
+     ]
+    },
+    {
+     "description": "Solve by elimination and decide whether the lines meet from the slopes.",
+     "prerequisites": [
+      "linear-function.line.y-mx-plus-b.write",
+      "linear-function.model.initial.from-two-values",
+      "slope.between-two-points",
+      "linear-system.solution.intersection",
+      "linear-system.elimination",
+      "linear-system.solution-count.slopes"
+     ]
+    },
+    {
+     "description": "Set the y-expressions equal and decide whether the lines meet by reading a false equation a = b as no intersection.",
+     "prerequisites": [
+      "linear-function.line.y-mx-plus-b.write",
+      "linear-function.model.initial.from-two-values",
+      "slope.between-two-points",
+      "linear-system.solution.intersection",
+      "linear-system.set-expressions-equal",
+      "equation.linear.solution-count.reduce"
+     ]
+    },
+    {
+     "description": "Solve by substitution and read a false equation as no intersection.",
+     "prerequisites": [
+      "linear-function.line.y-mx-plus-b.write",
+      "linear-function.model.initial.from-two-values",
+      "slope.between-two-points",
+      "linear-system.solution.intersection",
+      "linear-system.substitution",
+      "equation.linear.solution-count.reduce"
+     ]
+    },
+    {
+     "description": "Solve by elimination and read a false equation as no intersection.",
+     "prerequisites": [
+      "linear-function.line.y-mx-plus-b.write",
+      "linear-function.model.initial.from-two-values",
+      "slope.between-two-points",
+      "linear-system.solution.intersection",
+      "linear-system.elimination",
+      "equation.linear.solution-count.reduce"
+     ]
+    }
+   ]
+  },
+  "linear-system.application.real-world.simple": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Solve the pair of equations by substitution.",
+     "prerequisites": [
+      "linear-function.model.construct",
+      "linear-system.solution.meaning",
+      "linear-system.substitution"
+     ]
+    },
+    {
+     "description": "Solve the pair of equations by elimination.",
+     "prerequisites": [
+      "linear-function.model.construct",
+      "linear-system.solution.meaning",
+      "linear-system.elimination"
+     ]
+    },
+    {
+     "description": "Graph both equations and read the whole-number crossing.",
+     "prerequisites": [
+      "linear-function.model.construct",
+      "linear-system.solution.meaning",
+      "linear-system.graph.estimate"
+     ]
+    }
+   ]
+  },
+  "linear-system.application.real-world": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "functions.definition": {
+   "missing_prerequisites": [
+    {
+     "node": "relationship.dependent-independent.meaning",
+     "why": "Inputs and outputs of a rule are the independent and dependent quantities; moderate confidence, no closer node in the index."
+    }
+   ],
+   "missing_routes": []
+  },
+  "functions.identify.table": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "functions.graph.meaning": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "functions.identify.graph": {
+   "missing_prerequisites": [
+    {
+     "node": "line.meaning",
+     "why": "The procedure pictures vertical lines across the graph and asks how many points of the graph each meets."
+    }
+   ],
+   "missing_routes": []
+  },
+  "linear-function.compare.rate-of-change": {
+   "missing_prerequisites": [
+    {
+     "node": "data.table-graph.read-values",
+     "why": "Two points are taken from a table or a graph before the change in y over the change in x can be found."
+    }
+   ],
+   "missing_routes": []
+  },
+  "linear-function.compare.initial-value": {
+   "missing_prerequisites": [
+    {
+     "node": "data.table-graph.read-values",
+     "why": "Values are read from a table or a graph to find the output at input 0."
+    }
+   ],
+   "missing_routes": []
+  },
+  "linear-function.line.equation-defines": {
+   "missing_prerequisites": [
+    {
+     "node": "exponent.whole-number-power.meaning",
+     "why": "Test problem only: deciding that y = x^2 + 1 is not of the form mx + b needs the squared letter."
+    }
+   ],
+   "missing_routes": []
+  },
+  "linear-function.line.graph-is-line": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "linear-function.line.graph": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "linear-function.nonlinear.identify": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "linear-function.nonlinear.example": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "functions.qualitative.increasing-decreasing": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "functions.qualitative.linear-nonlinear": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "functions.qualitative.sketch": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "addition.multi-digit": {
+   "missing_prerequisites": [
+    {
+     "node": "addition.within-20.fluency",
+     "why": "Each place is added with one-digit sums and carries; with addition.within-1000 a scaffold, the basic facts are the real direct base."
+    }
+   ],
+   "missing_routes": []
+  },
+  "division.by-two-digit": {
+   "missing_prerequisites": [
+    {
+     "node": "division.unknown-factor.meaning",
+     "why": "With division.by-one-digit a scaffold, the meaning of a quotient as the factor that multiplies the divisor to the dividend is the direct base for finding multiples of the divisor."
+    }
+   ],
+   "missing_routes": []
+  },
+  "division.by-two-digit.remainder": {
+   "missing_prerequisites": [
+    {
+     "node": "multiplication.by-one-digit",
+     "why": "Multiples of the two-digit divisor are formed to find the quotient, as for exact division."
+    },
+    {
+     "node": "place-value.factor-of-ten",
+     "why": "Quotients of up to three digits need multiples of the divisor times tens and hundreds."
+    },
+    {
+     "node": "new:subtraction.multi-digit",
+     "why": "Multiples of the divisor are subtracted from a dividend of up to four digits and the remainder is what is left; e617 in the sibling node cites this id, which is not in the index."
+    }
+   ],
+   "missing_routes": []
+  },
+  "division.remainder.meaning": {
+   "missing_prerequisites": [
+    {
+     "node": "comparing.whole-numbers.numerals-within-10",
+     "why": "The test compares 6 with 5 (or a leftover with a group by matching, comparing.count.matching); this is the weaker node in place of e621."
+    }
+   ],
+   "missing_routes": []
+  },
+  "division.successive-division": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "operations.application.reasonableness.multi-digit": {
+   "missing_prerequisites": [
+    {
+     "node": "comparing.whole-numbers.magnitude.multi-digit",
+     "why": "The estimate is compared with the stated answer, which is a multi-digit number."
+    }
+   ],
+   "missing_routes": []
+  },
+  "fraction.subtraction.comparison": {
+   "missing_prerequisites": [
+    {
+     "node": "fraction.compare.same-denominator",
+     "why": "'How much more' presupposes knowing which of 5/6 and 2/6 is greater; moderate confidence because the bar model may carry this."
+    }
+   ],
+   "missing_routes": []
+  },
+  "number.halfway-between": {
+   "missing_prerequisites": [
+    {
+     "node": "addition.within-1000",
+     "why": "On the arithmetic route the halfway number is the smaller number plus half the distance (200 and 300 give 250)."
+    }
+   ],
+   "missing_routes": [
+    {
+     "description": "Partition the segment between the two numbers on the number line into two equal lengths and read the point reached.",
+     "prerequisites": [
+      "number-line.whole-number-lengths",
+      "partitioning.segment.equal-lengths"
+     ]
+    }
+   ]
+  },
+  "counting.skip.twos": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "counting.skip.twenty-fives": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "counting.number-word.thousand": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "counting.number-word.thousand-million": {
+   "missing_prerequisites": [
+    {
+     "node": "counting.sequence.within-1000",
+     "why": "The numbers said before thousand or million are number names below one thousand, which this node builds."
+    },
+    {
+     "node": "counting.unitize",
+     "why": "The number said before 'thousand' counts thousands as units; moderate confidence."
+    }
+   ],
+   "missing_routes": []
+  },
+  "coordinate.ordered-pair.notation": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "data.table-graph.read-values": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "time.parts-of-day": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "time.hour.sixty-minutes": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  }
+ }
+}
