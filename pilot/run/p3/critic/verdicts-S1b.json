@@ -1,0 +1,649 @@
+{
+ "route_semantics": "complete",
+ "edges": {
+  "e1883": {
+   "verdict": "task-only",
+   "reason": "Only the test problem compares a decimal (0.7) with 0 and 1; the idea that a probability is a number from 0 to 1 does not need decimal comparison, and the test needs only a decimal against whole numbers."
+  },
+  "e1884": {
+   "verdict": "task-only",
+   "reason": "The statement never mentions decimals; only the test lists 0.7 and must read it as 7 tenths."
+  },
+  "e1885": {
+   "verdict": "route-only",
+   "reason": "The numbers between 0 and 1 can be met as fractions or as decimals; the statement itself does not choose one.",
+   "other_route": "Treat probabilities as decimals (0.7, 0.05) read as tenths and hundredths, with no fraction-as-number idea."
+  },
+  "e1886": {
+   "verdict": "task-only",
+   "reason": "Only the test problem asks whether 4/3 can be a probability; the concept (a number from 0 to 1) is stated without comparing any fraction with 1."
+  },
+  "e1887": {
+   "verdict": "task-only",
+   "reason": "Negative numbers appear only in the test problem (-0.2); the statement says only 'a number from 0 to 1'."
+  },
+  "e1888": {
+   "verdict": "task-only",
+   "reason": "Only the test problem uses a negative number; the statement does not. Same need as e1887, both are task-only."
+  },
+  "e1889": {
+   "verdict": "task-only",
+   "reason": "Only the test problem compares 0.9 with 0.05 (decimals); the statement compares probabilities in general, which fractions and decimals both allow."
+  },
+  "e1890": {
+   "verdict": "route-only",
+   "reason": "Judging 'near 0, around 1/2, near 1' is done here with fraction benchmarks, but probabilities may be given as decimals, and the test problem gives 0.9 and 0.05 with no fraction to compare.",
+   "other_route": "Place the decimal probability on a number line (decimal.number-line) and judge its nearness to 0, 0.5 and 1, knowing 1/2 = 0.5."
+  },
+  "e1891": {
+   "verdict": "necessary"
+  },
+  "e1892": {
+   "verdict": "necessary"
+  },
+  "e1893": {
+   "verdict": "route-only",
+   "reason": "The count over trials can be read as a fraction by part-whole ('120 of 200 trials'), without the identity a divided by b = a/b.",
+   "other_route": "Write 'count out of trials' as a fraction using the part-whole meaning (fraction.non-unit.part-whole)."
+  },
+  "e1894": {
+   "verdict": "necessary"
+  },
+  "e1895": {
+   "verdict": "necessary"
+  },
+  "e1896": {
+   "verdict": "task-only",
+   "reason": "The statement is for any p; only the test problem uses a fractional p (1/3) times 600. A decimal p would use decimal multiplication instead, so the fraction method is not required by the idea."
+  },
+  "e1897": {
+   "verdict": "necessary"
+  },
+  "e1898": {
+   "verdict": "undecided",
+   "reason": "The 'usually close but not exactly equal' clause could be taught from variation between repeated runs of the same n, without comparing few and many trials; or it could be taught as the more-trials idea itself.",
+   "would_decide": "Whether the node's 'usually close' claim is meant to rest on the trend with growing n (then necessary) or only on the variation of counts at one fixed n (then scaffold)."
+  },
+  "e1899": {
+   "verdict": "necessary"
+  },
+  "e1900": {
+   "verdict": "necessary"
+  },
+  "e1901": {
+   "verdict": "task-only",
+   "reason": "Only the test problem needs 12 + 13; the procedure takes the total of outcomes as counted."
+  },
+  "e1902": {
+   "verdict": "necessary"
+  },
+  "e1903": {
+   "verdict": "route-only",
+   "reason": "The event probability can be reached without a divided by b = a/b: each of the n outcomes has probability 1/n (uniform.develop), so k outcomes make k parts of size 1/n.",
+   "other_route": "Read k favorable outcomes among n equally likely outcomes as k parts of size 1/n (fraction.non-unit.part-whole with probability.model.uniform.develop)."
+  },
+  "e1904": {
+   "verdict": "necessary"
+  },
+  "e1905": {
+   "verdict": "necessary"
+  },
+  "e1906": {
+   "verdict": "necessary"
+  },
+  "e1907": {
+   "verdict": "necessary"
+  },
+  "e1908": {
+   "verdict": "wrong",
+   "reason": "The edge names one method (the standard algorithm for multi-digit decimals) for 0.5 + 0.2, a tenths-plus-tenths sum any method would do. The index has no method-neutral decimal addition node; the need is adding decimals to hundredths."
+  },
+  "e1909": {
+   "verdict": "route-only",
+   "reason": "A model listing outcomes with probabilities can be met first through observed frequencies, which already gives a non-uniform model.",
+   "other_route": "Reach the model idea from probability.model.from-frequencies (outcomes with different probabilities), then add the probabilities."
+  },
+  "e1910": {
+   "verdict": "related",
+   "relation": "generalizes",
+   "reason": "The target generalizes the uniform rule (k outcomes of probability 1/n sum to k/n) and mentions the count-over-total rule only to contrast it; the sum rule is not learned from the uniform rule alone and does not need it."
+  },
+  "e1911": {
+   "verdict": "wrong",
+   "reason": "A sample space lists outcomes and uses no probabilities; uniform.develop adds assigning 1/n to each outcome, which this target never uses. The weaker need is listing the possible outcomes of one chance process, which has no index node (new:probability.outcomes.list)."
+  },
+  "e1912": {
+   "verdict": "route-only",
+   "reason": "The table uses the idea of all combinations of stage outcomes but not the fix-the-first-stage listing procedure of the organized list.",
+   "other_route": "Build the table directly from the lists of single-stage outcomes, rows for the first stage and columns for the second, which itself shows all combinations."
+  },
+  "e1913": {
+   "verdict": "necessary"
+  },
+  "e1914": {
+   "verdict": "route-only",
+   "reason": "The tree uses the idea of all combinations but not the organized-list procedure.",
+   "other_route": "Build the tree directly from the lists of single-stage outcomes, branching from each outcome of the earlier stage."
+  },
+  "e1915": {
+   "verdict": "route-only",
+   "reason": "Step 1 says 'write or read the full sample space', in any representation; the list is only one of three.",
+   "other_route": "Read the sample space as a table or as a tree diagram, whichever the problem gives."
+  },
+  "e1916": {
+   "verdict": "task-only",
+   "reason": "Only the test problem hands the learner the sample space as a 6-by-6 table of outcome cells; the statement works with a sample space in any representation."
+  },
+  "e1917": {
+   "verdict": "necessary"
+  },
+  "e1918": {
+   "verdict": "task-only",
+   "reason": "Only the test problem asks why Sam's three results are not equally likely; the statement itself is the count-over-count rule."
+  },
+  "e1919": {
+   "verdict": "necessary"
+  },
+  "e1920": {
+   "verdict": "route-only",
+   "reason": "The denominator is the number of outcomes in the sample space, which may be written as a list, a table or a tree; the test problem gives the sample space already.",
+   "other_route": "Count the outcomes of the sample space as a table or a tree diagram instead of an organized list."
+  },
+  "e1921": {
+   "verdict": "task-only",
+   "reason": "Only the test problem gives 40% and needs 40% of 10 digits; the design idea (match each stage's probabilities with a device) holds for probabilities given as fractions."
+  },
+  "e1922": {
+   "verdict": "task-only",
+   "reason": "Only the test problem states the probability as a percent; the procedure does not require percent."
+  },
+  "e1923": {
+   "verdict": "necessary"
+  },
+  "e1924": {
+   "verdict": "necessary"
+  },
+  "e1925": {
+   "verdict": "necessary"
+  },
+  "e1926": {
+   "verdict": "necessary"
+  },
+  "e1927": {
+   "verdict": "necessary"
+  },
+  "e1928": {
+   "verdict": "route-only",
+   "reason": "Choosing and marking an axis scale to cover a range is not specific to bar graphs; the target needs it on two numeric axes, and a bar graph only scales one.",
+   "other_route": "Learn scale choice on a measurement number line (number-line.measurement-scale) and apply it to the two plot axes."
+  },
+  "e1929": {
+   "verdict": "route-only",
+   "reason": "The statement interprets a scatter plot that is given; making one is a stronger skill than reading one, and the test problem describes a finished plot.",
+   "other_route": "Interpret ready-made scatter plots by reading each point as a pair of values (data.table-graph.read-values and coordinate-plane.first-quadrant.read)."
+  },
+  "e1930": {
+   "verdict": "task-only",
+   "reason": "Only the test problem asks the learner to plot both data sets; classifying the form of a given plot needs only reading it."
+  },
+  "e1931": {
+   "verdict": "wrong",
+   "reason": "The statement needs only 'straight' versus 'curved'; line.meaning adds extending without end both ways, a stronger idea the target never uses. The weaker need is an informal straight-versus-curved sense (new:line.straight-vs-curved)."
+  },
+  "e1932": {
+   "verdict": "related",
+   "relation": "contrasts_with",
+   "reason": "Direction and strength are independent attributes of an association; the statement says so, but judging closeness to a line does not need the direction concept."
+  },
+  "e1933": {
+   "verdict": "necessary"
+  },
+  "e1934": {
+   "verdict": "route-only",
+   "reason": "Clusters and outliers are seen in a given plot; the test lists the points, and reading or plotting them both work, so making a plot is not required.",
+   "other_route": "Read ready-made scatter plots (data.table-graph.read-values, coordinate-plane.first-quadrant.read) and use distribution.pattern-deviations for 'far from the overall pattern'."
+  },
+  "e1935": {
+   "verdict": "necessary"
+  },
+  "e1936": {
+   "verdict": "necessary"
+  },
+  "e1937": {
+   "verdict": "necessary"
+  },
+  "e1938": {
+   "verdict": "task-only",
+   "reason": "Only the test problem asks the learner to plot the six points first; the procedure starts from a scatter plot that already suggests a linear association."
+  },
+  "e1939": {
+   "verdict": "necessary"
+  },
+  "e1940": {
+   "verdict": "necessary"
+  },
+  "e1941": {
+   "verdict": "necessary"
+  },
+  "e1942": {
+   "verdict": "task-only",
+   "reason": "Only the test problem presents the line as y = 1.5x + 10 and asks which number is the slope. Reading the coefficient as the slope is better supported by linear-function.line.y-mx-plus-b.write than by equation-defines, which says only that the equation defines a linear function."
+  },
+  "e1943": {
+   "verdict": "necessary"
+  },
+  "e1944": {
+   "verdict": "necessary"
+  },
+  "e1945": {
+   "verdict": "task-only",
+   "reason": "Only the test problem gives the equation y = 1.5x + 10 and asks what the constant 10 means; the statement is about the value predicted at 0 whatever the line's form."
+  },
+  "e1946": {
+   "verdict": "necessary"
+  },
+  "e1947": {
+   "verdict": "task-only",
+   "reason": "Only the test problem needs 1.5 x 6 + 10 with a decimal; the statement's equation could have whole-number coefficients."
+  },
+  "e1948": {
+   "verdict": "necessary"
+  },
+  "e1949": {
+   "verdict": "necessary"
+  },
+  "e1950": {
+   "verdict": "necessary"
+  },
+  "e1951": {
+   "verdict": "necessary"
+  },
+  "e1952": {
+   "verdict": "undecided",
+   "reason": "The test problem's sums stay within 10 (row and column totals 5, 5, 6, 4; grand total 10), which addition.within-10 covers; within-100 may be stronger than the node is meant to use.",
+   "would_decide": "The largest total the node's data are meant to reach: if within 10 or 20, the weaker addition node is right; if up to 100, this edge stands."
+  },
+  "e1953": {
+   "verdict": "necessary"
+  },
+  "e1954": {
+   "verdict": "necessary"
+  },
+  "e1955": {
+   "verdict": "scaffold",
+   "reason": "The statement and procedure of the target already carry what each cell and total counts, built by the tally in step 2; interpreting a finished table is a companion skill, not a requirement for constructing one."
+  },
+  "e1956": {
+   "verdict": "related",
+   "relation": "same_idea_different_form",
+   "reason": "Reading one category's count from a chart is the same idea as a margin total, in a different display. The underlying need is the count of a category (data.categorical.count-each), not chart reading."
+  },
+  "e1957": {
+   "verdict": "related",
+   "relation": "same_idea_different_form",
+   "reason": "Finding the total of the data points in a chart is the same idea as the grand total of a table; the test problem does not ask about the grand total, and the target defines it itself."
+  },
+  "e1958": {
+   "verdict": "necessary"
+  },
+  "e1959": {
+   "verdict": "scaffold",
+   "reason": "That the relative frequencies in a row sum to 1 is a check on the result, not a step of the procedure; the test problem only asks for the relative frequencies, and the frequencies may be written as decimals or percents rather than like-denominator fractions."
+  },
+  "e1960": {
+   "verdict": "route-only",
+   "reason": "A cell count out of its row total can be read as a fraction by part-whole, without the identity a divided by b = a/b.",
+   "other_route": "Read each cell as 'cell out of row total' with the part-whole meaning of a fraction (fraction.non-unit.part-whole)."
+  },
+  "e1961": {
+   "verdict": "necessary"
+  },
+  "e1962": {
+   "verdict": "necessary"
+  },
+  "e1963": {
+   "verdict": "necessary"
+  },
+  "e1964": {
+   "verdict": "necessary"
+  }
+ },
+ "nodes": {
+  "probability.likelihood.zero-to-one": {
+   "missing_prerequisites": [
+    {
+     "node": "new:probability.chance.impossible-certain-likely",
+     "why": "The statement ties 0 to an impossible event, 1 to a certain event and larger numbers to more likely events, so the qualitative idea of impossible, certain and more or less likely must already be there; no index node holds it."
+    }
+   ],
+   "missing_routes": [
+    {
+     "description": "Probabilities met as decimals (tenths and hundredths) rather than fractions.",
+     "prerequisites": [
+      "decimal.tenths.notation",
+      "new:probability.chance.impossible-certain-likely"
+     ]
+    }
+   ]
+  },
+  "probability.likelihood.interpret": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Judge a decimal probability by its position on the number line against 0, 0.5 and 1, with no fraction comparison.",
+     "prerequisites": [
+      "decimal.number-line",
+      "probability.likelihood.zero-to-one",
+      "new:decimal.fraction-benchmark.one-half"
+     ]
+    }
+   ]
+  },
+  "probability.relative-frequency.estimate": {
+   "missing_prerequisites": [
+    {
+     "node": "new:probability.chance-process.trial-and-event",
+     "why": "The statement and procedure use a trial of a chance process and an event that occurs or not in a trial; no index node introduces repeating a chance process and recording whether an event occurred."
+    }
+   ],
+   "missing_routes": [
+    {
+     "description": "Write the relative frequency as 'count out of trials' using the part-whole meaning of a fraction instead of dividing.",
+     "prerequisites": [
+      "data.categorical.count-each",
+      "fraction.non-unit.part-whole",
+      "probability.likelihood.zero-to-one"
+     ]
+    }
+   ]
+  },
+  "probability.relative-frequency.more-trials": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "probability.relative-frequency.predict-count": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "probability.model.uniform.develop": {
+   "missing_prerequisites": [
+    {
+     "node": "new:probability.outcomes.equally-likely",
+     "why": "The statement starts from the outcomes of a chance process being equally likely and listing all of them; no index node introduces outcomes or the meaning of equally likely."
+    }
+   ],
+   "missing_routes": []
+  },
+  "probability.model.uniform.event": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Each of the n equally likely outcomes has probability 1/n, so the k outcomes of the event make k parts of size 1/n; no division of counts.",
+     "prerequisites": [
+      "counting.objects",
+      "fraction.non-unit.part-whole",
+      "probability.model.uniform.develop"
+     ]
+    }
+   ]
+  },
+  "probability.model.from-frequencies": {
+   "missing_prerequisites": [
+    {
+     "node": "decimal.compare",
+     "why": "Step 4 compares the outcomes' probabilities (decimals or fractions) to judge whether they appear equally likely; fraction comparison would serve for fractions."
+    }
+   ],
+   "missing_routes": []
+  },
+  "probability.model.nonuniform.event": {
+   "missing_prerequisites": [
+    {
+     "node": "new:decimal.addition.to-hundredths",
+     "why": "Step 3 adds probabilities, here decimals; the index has decimal addition only as a model or as the standard algorithm, not as a method-neutral skill (fraction.addition.like-denominators serves for fraction probabilities)."
+    }
+   ],
+   "missing_routes": [
+    {
+     "description": "Reach the model from observed frequencies (a non-uniform model) and add the probabilities of the outcomes in the event.",
+     "prerequisites": [
+      "probability.model.from-frequencies",
+      "new:decimal.addition.to-hundredths"
+     ]
+    }
+   ]
+  },
+  "probability.sample-space.list": {
+   "missing_prerequisites": [
+    {
+     "node": "new:probability.outcomes.list",
+     "why": "The organized list combines the outcomes of each stage, so the learner must be able to list the possible outcomes of one chance process; this needs no probabilities."
+    }
+   ],
+   "missing_routes": []
+  },
+  "probability.sample-space.table": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Build the table straight from the lists of single-stage outcomes, rows for the first stage and columns for the second.",
+     "prerequisites": [
+      "new:probability.outcomes.list",
+      "table.read-two-way"
+     ]
+    }
+   ]
+  },
+  "probability.sample-space.tree": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Build the tree straight from the lists of single-stage outcomes, branching from each outcome of the earlier stage.",
+     "prerequisites": [
+      "new:probability.outcomes.list"
+     ]
+    }
+   ]
+  },
+  "probability.compound.event-outcomes": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Sample space read from a table.",
+     "prerequisites": [
+      "probability.sample-space.table"
+     ]
+    },
+    {
+     "description": "Sample space read from a tree diagram.",
+     "prerequisites": [
+      "probability.sample-space.tree"
+     ]
+    }
+   ]
+  },
+  "probability.compound.fraction-of-outcomes": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Count the sample space from a table.",
+     "prerequisites": [
+      "probability.compound.event-outcomes",
+      "probability.model.uniform.event",
+      "probability.sample-space.table"
+     ]
+    },
+    {
+     "description": "Count the sample space from a tree diagram.",
+     "prerequisites": [
+      "probability.compound.event-outcomes",
+      "probability.model.uniform.event",
+      "probability.sample-space.tree"
+     ]
+    }
+   ]
+  },
+  "probability.simulation.design": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "probability.simulation.use": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "data.scatter-plot.make": {
+   "missing_prerequisites": [
+    {
+     "node": "new:data.bivariate.measurement",
+     "why": "The statement presupposes two quantities measured on the same individuals, each individual giving a pair of values; no index node introduces bivariate data."
+    }
+   ],
+   "missing_routes": [
+    {
+     "description": "Axis scales learned on a measurement number line and applied to the two plot axes.",
+     "prerequisites": [
+      "coordinate-plane.first-quadrant.plot",
+      "number-line.measurement-scale"
+     ]
+    }
+   ]
+  },
+  "association.numerical.direction": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Interpret a given scatter plot by reading each point as a pair of values, without making one.",
+     "prerequisites": [
+      "data.table-graph.read-values",
+      "coordinate-plane.first-quadrant.read"
+     ]
+    }
+   ]
+  },
+  "association.numerical.form": {
+   "missing_prerequisites": [
+    {
+     "node": "data.table-graph.read-values",
+     "why": "The statement classifies a given scatter plot, so the learner must read points as paired values; plotting is needed only in the test problem."
+    },
+    {
+     "node": "coordinate-plane.first-quadrant.read",
+     "why": "Classifying the pattern of the points needs reading where each point lies in the plane."
+    },
+    {
+     "node": "new:line.straight-vs-curved",
+     "why": "The target needs only an informal sense of a straight versus a curved path, not the endless line of line.meaning."
+    }
+   ],
+   "missing_routes": []
+  },
+  "association.numerical.strength": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "association.numerical.clusters-outliers": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Read a given scatter plot and judge distance from the overall pattern; no plotting.",
+     "prerequisites": [
+      "data.table-graph.read-values",
+      "coordinate-plane.first-quadrant.read",
+      "distribution.pattern-deviations"
+     ]
+    }
+   ]
+  },
+  "linear-function.fitted-line.meaning": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "linear-function.fitted-line.fit": {
+   "missing_prerequisites": [
+    {
+     "node": "association.numerical.form",
+     "why": "The procedure applies to a scatter plot that suggests a linear association, so the learner must be able to judge that; this node's own statement uses it."
+    }
+   ],
+   "missing_routes": []
+  },
+  "linear-function.fitted-line.assess-fit": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "linear-function.fitted-line.slope.interpret": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "linear-function.fitted-line.intercept.interpret": {
+   "missing_prerequisites": [],
+   "missing_routes": []
+  },
+  "linear-function.fitted-line.predict": {
+   "missing_prerequisites": [
+    {
+     "node": "relationship.dependent-independent.meaning",
+     "why": "The statement gives a value of 'the first quantity' and asks for 'the second', so the learner must know which variable is the input and which the output."
+    }
+   ],
+   "missing_routes": []
+  },
+  "linear-function.fitted-line.solve-for-input": {
+   "missing_prerequisites": [
+    {
+     "node": "relationship.dependent-independent.meaning",
+     "why": "The statement gives the second quantity and asks for the first, so the learner must know which variable is which."
+    }
+   ],
+   "missing_routes": []
+  },
+  "table.two-way.construct": {
+   "missing_prerequisites": [
+    {
+     "node": "new:data.categorical-variables.pair",
+     "why": "The statement is about two categorical variables recorded on the same subjects, so each subject falls in one category of each; no index node introduces classifying the same subjects two ways."
+    }
+   ],
+   "missing_routes": []
+  },
+  "table.two-way.interpret": {
+   "missing_prerequisites": [
+    {
+     "node": "data.categorical.count-each",
+     "why": "A row or column total is the count of the subjects in one category; the count of a category is the underlying skill, not chart reading."
+    }
+   ],
+   "missing_routes": []
+  },
+  "table.two-way.relative-frequency": {
+   "missing_prerequisites": [],
+   "missing_routes": [
+    {
+     "description": "Read each cell as 'cell out of row (or column) total' with the part-whole meaning of a fraction instead of dividing.",
+     "prerequisites": [
+      "table.two-way.interpret",
+      "fraction.non-unit.part-whole"
+     ]
+    }
+   ]
+  },
+  "association.categorical.meaning": {
+   "missing_prerequisites": [
+    {
+     "node": "decimal.compare",
+     "why": "Deciding whether relative frequencies are about the same or differ compares two numbers; fraction or percent comparison would serve for those forms."
+    }
+   ],
+   "missing_routes": []
+  },
+  "association.categorical.describe": {
+   "missing_prerequisites": [
+    {
+     "node": "decimal.compare",
+     "why": "The answer rests on comparing row (or column) relative frequencies, for instance 0.8 and 0.3 in the test problem."
+    }
+   ],
+   "missing_routes": []
+  }
+ }
+}
