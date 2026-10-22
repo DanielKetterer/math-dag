@@ -1,0 +1,1255 @@
+{
+ "pass": "P",
+ "batch": "E2b",
+ "nodes": {
+  "equation.linear.solution-count.generate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.linear.solution-count.inspection",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The coefficient and constant rules that decide one, no, or infinitely many solutions are the rules used to choose the blanks."
+      }
+     ]
+    }
+   ]
+  },
+  "equation.two-variable.graph-as-solutions": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement calls a point part of the graph when its coordinates make the equation true, which is what being a solution means."
+      },
+      {
+       "node": "coordinate-plane.ordered-pair.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement treats each point as a pair (a, b) whose first and second numbers are its two coordinates in the plane."
+      },
+      {
+       "node": "equation.solution.check-substitution",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Deciding whether (1, 1) and (2, 0) lie on 3x + 2y = 5 requires substituting both coordinates and checking the equation."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-system.solution.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A solution of a system is a pair that makes each equation true, so what it means to satisfy one equation is used twice."
+      },
+      {
+       "node": "coordinate.ordered-pair.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The solution is written as an ordered pair (a, b) with the x-value first and the y-value second."
+      },
+      {
+       "node": "equation.solution.check-substitution",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Testing (2, 3) and (1, 4) in x + y = 5 and 2x - y = 1 means substituting into both equations."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-system.solution.intersection": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-system.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement identifies the intersection points with the pairs that make both equations true, which is the meaning of a solution of the system."
+      },
+      {
+       "node": "equation.two-variable.graph-as-solutions",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The because-clause says a point is on a graph exactly when its coordinates satisfy the equation, which is the graph-as-solution-set idea."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-system.graph.read": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-system.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure answers with the solution of the system, so the learner must know a solution is the pair satisfying both equations."
+      },
+      {
+       "node": "coordinate-plane.four-quadrants.read",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 reads the x and y coordinates of the crossing point, which may lie in any quadrant of the grid."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-system.graph.estimate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-function.line.graph",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 graphs each equation y = mx + b as a line, by plotting two points and drawing the line through them."
+      },
+      {
+       "node": "linear-system.graph.read",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 2 and 3 find the crossing point and take its coordinates as the solution, which is reading a solution from drawn graphs."
+      },
+      {
+       "node": "coordinate-plane.four-quadrants.fraction-decimal.read",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 estimates coordinates when the crossing falls between grid points, as the lines in the test problem cross at fractional coordinates."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-system.inspection": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-system.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The conclusions are counts of solutions of a system, one, none or infinitely many, so what a solution of a system is must be known."
+      },
+      {
+       "node": "equation.equality-preserved.same-operation",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 moves the x and y terms to the left and the constant to the right by doing the same operation to both sides."
+      },
+      {
+       "node": "rational-number.multiplication.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 checks whether one left side is a number k times the other, which multiplies the coefficients by k and compares."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-system.solution-count.slopes": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-system.solution.intersection",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement turns crossing, parallel and coinciding lines into one, none or infinitely many solutions, which is the solutions-as-intersection fact."
+      },
+      {
+       "node": "linear-function.line.y-mx-plus-b.write",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is written for equations y = mx + b, where m is the slope and b is the y-intercept of the line."
+      },
+      {
+       "node": "parallel.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Equal slopes with different intercepts give parallel lines, and the statement uses that parallel lines never meet to conclude no solution."
+      },
+      {
+       "node": "expressions.sum.rearrange-terms",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Seeing that y = 1 + 2x is the same equation as y = 2x + 1 in the test problem needs reordering the terms of a sum."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-system.set-expressions-equal": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-system.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Setting the two expressions for y equal rests on a solution being one pair whose y-value satisfies both equations at once."
+      },
+      {
+       "node": "equation.linear.variable-both-sides",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 solves the equation formed by the two expressions, which has x on both sides, as in 3x - 2 = x + 4."
+      },
+      {
+       "node": "expressions.variable.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 substitutes the value found for x into an expression for y and evaluates it to get y."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-system.substitution": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-system.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The method finds the pair that satisfies both equations, so the meaning of a solution of a system is used throughout."
+      },
+      {
+       "node": "equation.equality-preserved.same-operation",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 solves one equation for one variable, which is done by applying the same operation to both sides of that equation."
+      },
+      {
+       "node": "expressions.parts.single-entity",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 replaces a variable by a whole expression, which must be treated as one quantity, in parentheses, inside the other equation."
+      },
+      {
+       "node": "equation.linear.expand-collect",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 solves the one-variable equation that results, which needs combining like terms and sometimes expanding, as in 3x + (2x + 1) = 11."
+      },
+      {
+       "node": "expressions.variable.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 substitutes the value of the first variable back into an expression for the other variable and evaluates it."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-system.elimination": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-system.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The method finds the pair that satisfies both equations, so the meaning of a solution of a system is used throughout."
+      },
+      {
+       "node": "equation.equality-preserved.same-operation",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 multiplies both sides of an equation by a number, an operation that keeps the solutions of the equation."
+      },
+      {
+       "node": "expressions.linear.expand.rational",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Multiplying an equation by a number multiplies every term of its left side, as in 3(2x - y) = 6x - 3y."
+      },
+      {
+       "node": "expressions.linear.add.rational",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds the two equations, so the left sides are added as linear expressions and like terms are combined."
+      },
+      {
+       "node": "expressions.linear.subtract.rational",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 also subtracts one equation from the other, so one left side is subtracted from the other as linear expressions."
+      },
+      {
+       "node": "equation.one-step.multiplication.solve",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 solves an equation like 4y = 8 that remains once one variable has been eliminated."
+      },
+      {
+       "node": "equation.two-step.px-plus-q.solve",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 substitutes into an original equation and solves the result, of the form px + q = r, for the other variable."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-system.application.mathematical.simple": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "slope.between-two-points",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "When a line is given by its y-intercept and a second point, the slope is found from those two points."
+      },
+      {
+       "node": "linear-function.line.y-mx-plus-b.write",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement writes each line as y = mx + b from its y-intercept and slope."
+      },
+      {
+       "node": "linear-system.set-expressions-equal",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "With both lines written as y = mx + b, the meeting point is found by setting the two expressions for y equal and solving."
+      },
+      {
+       "node": "linear-system.solution.intersection",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Where the two lines meet is the solution of the system of their equations, which turns the geometric question into solving a system."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-system.application.mathematical": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "slope.between-two-points",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A line given by any two of its points has its slope found from those two points before an equation can be written."
+      },
+      {
+       "node": "linear-function.model.initial.from-two-values",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "When neither given point is on the y-axis, b must be found from the two points before y = mx + b can be written."
+      },
+      {
+       "node": "linear-function.line.y-mx-plus-b.write",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement writes an equation for each line, in the form y = mx + b once m and b are known."
+      },
+      {
+       "node": "linear-system.solution-count.slopes",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Deciding whether the lines intersect uses that equal slopes with different intercepts give parallel lines with no common point."
+      },
+      {
+       "node": "linear-system.set-expressions-equal",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding the intersection, possibly with fraction coordinates, sets the two expressions for y equal and solves for x."
+      },
+      {
+       "node": "linear-system.solution.intersection",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The intersection point of the two lines is the solution of the system of their equations, which is what the problem asks for."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-system.application.real-world.simple": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-function.model.construct",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each quantity with a starting value and constant rate is written as y = mx + b, which constructs its linear function."
+      },
+      {
+       "node": "linear-system.set-expressions-equal",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "When the two quantities are equal, their expressions of the form y = mx + b are set equal and solved for x."
+      },
+      {
+       "node": "linear-system.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The time at which the quantities are equal is the pair satisfying both equations at once, a solution of the system."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-system.application.real-world": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "expressions.variable.write-for-situation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each condition is written with letters for the two unknown counts, such as 2x + 5y for the total value of the tickets."
+      },
+      {
+       "node": "linear-system.solution.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The two conditions become two equations that the unknown pair must satisfy together, which is a solution of a system."
+      },
+      {
+       "node": "linear-system.substitution",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The system is solved algebraically, for example by solving x + y = 20 for y and substituting into the value equation."
+      }
+     ]
+    }
+   ]
+  },
+  "functions.definition": {
+   "routes": [],
+   "root_reason": "The definition itself introduces input, output and rule; the test problem needs only everyday readings of smaller than and one less."
+  },
+  "functions.identify.table": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "functions.definition",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A table fits a function exactly when each input has one output, which restates the definition of a function for pairs."
+      },
+      {
+       "node": "data.table-graph.read-values",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 scans the input column of a table for repeated inputs and reads the output paired with each."
+      },
+      {
+       "node": "coordinate.ordered-pair.notation",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Table 1 in the test problem is given as a list of ordered pairs, each written (input, output)."
+      }
+     ]
+    }
+   ]
+  },
+  "functions.graph.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "functions.definition",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each point of the graph pairs an input with the single output the function assigns to it, as the definition says."
+      },
+      {
+       "node": "coordinate-plane.ordered-pair.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The point (x, y) has first coordinate x and second coordinate y, which is why (7, 3) differs from (3, 7)."
+      }
+     ]
+    }
+   ]
+  },
+  "functions.identify.graph": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "functions.graph.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The test reads points of the graph as input-output pairs, so two points on one vertical line are two outputs of one input."
+      },
+      {
+       "node": "functions.definition",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The criterion holds because a function gives each input exactly one output, so a repeated input with two outputs fails."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.compare.rate-of-change": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-function.model.rate.from-two-values",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds the rate as the change in y over the change in x between two points of a table or a graph."
+      },
+      {
+       "node": "linear-function.model.rate.from-description",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "A function given by a verbal description has its rate of change read from the words, as step 1 allows."
+      },
+      {
+       "node": "linear-function.line.y-mx-plus-b.write",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 takes the rate of change to be m in y = mx + b, so the meaning of m in that form is used."
+      },
+      {
+       "node": "rational-number.compare.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 decides which rate is greater, and rates can be negative fractions or decimals."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.compare.initial-value": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-function.model.initial.from-two-values",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds the initial value from a table or graph, working back to input 0 at the constant rate."
+      },
+      {
+       "node": "linear-function.model.initial.from-description",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "A function given by a verbal description has its initial value read from the words, as step 1 allows."
+      },
+      {
+       "node": "linear-function.line.y-mx-plus-b.write",
+       "relation": "representational",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 takes the initial value to be b in y = mx + b, so the meaning of b in that form is used."
+      },
+      {
+       "node": "rational-number.compare.rationals",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 decides which initial value is greater, and initial values can be negative fractions or decimals."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.line.equation-defines": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "functions.definition",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The claim is that the equation defines y as a function of x, which means each x gives exactly one y."
+      },
+      {
+       "node": "expressions.notation.implicit-multiplication",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The form y = mx + b writes the product of m and x by placing them side by side."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.line.graph-is-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-function.line.equation-defines",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about the graphs of functions defined by y = mx + b, so what a linear function is must be known."
+      },
+      {
+       "node": "functions.graph.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The graph of a function is the set of its input-output points, which is the object the statement says is a line."
+      },
+      {
+       "node": "line.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says the graph is a straight line, so what a straight line is must be known."
+      },
+      {
+       "node": "functions.identify.graph",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Vertical lines are excluded because two points on a vertical line give one input two outputs, so they are not graphs of functions."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.line.graph": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "equation.two-variable.graph-as-solutions",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure plots points whose coordinates satisfy the equation, because the graph is the set of such points."
+      },
+      {
+       "node": "linear-function.line.graph-is-line",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Drawing the straight line through two plotted points is valid because the graph of y = mx + b is a straight line."
+      },
+      {
+       "node": "coordinate-plane.four-quadrants.plot",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Steps 1 and 2 plot the points (0, b) and a second point, whose coordinates may be negative."
+      },
+      {
+       "node": "expressions.variable.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 substitutes another value of x into mx + b and evaluates to find the second point's y."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.nonlinear.identify": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "linear-function.line.graph-is-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says points of a linear function lie on one line, which is the meaning of a linear function."
+      },
+      {
+       "node": "slope.constant-on-line",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Differing rates between pairs show a function is not linear because the rate between any two points of a line is the same."
+      },
+      {
+       "node": "expressions.variable.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 takes pairs of points from a rule by evaluating the rule at chosen inputs."
+      },
+      {
+       "node": "linear-function.model.rate.from-two-values",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes the change in output over the change in input for each pair of points."
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.whole-base",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem evaluates A = s^2 at s = 1, 2 and 3, which needs squares of whole numbers."
+      }
+     ]
+    }
+   ]
+  },
+  "linear-function.nonlinear.example": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "functions.definition",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The example must be a function, a rule giving each input exactly one output, before it can be shown not linear."
+      },
+      {
+       "node": "expressions.variable.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 computes three points of the chosen rule by evaluating it at three inputs."
+      },
+      {
+       "node": "linear-function.nonlinear.identify",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 shows two rates differ between pairs of the three points, which is the test for a function not being linear."
+      }
+     ]
+    }
+   ]
+  },
+  "functions.qualitative.increasing-decreasing": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.application.interpret",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The graph relates two quantities, so each point must be read as a pair of values in the situation, such as a time and a height."
+      }
+     ]
+    }
+   ]
+  },
+  "functions.qualitative.linear-nonlinear": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.application.interpret",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The graph relates two quantities, so each point must be read as a pair of values in the situation, such as a time and a distance."
+      },
+      {
+       "node": "ratio.unit-rate.language",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A constant rate of change, such as constant speed, is a rate described in per language, and the statement tells constant from changing rate."
+      }
+     ]
+    }
+   ]
+  },
+  "functions.qualitative.sketch": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "functions.qualitative.increasing-decreasing",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sketch must show increasing, decreasing and constant parts that match the description, so those parts of a graph must be known."
+      },
+      {
+       "node": "functions.qualitative.linear-nonlinear",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The sketch must show straight and curved parts that match constant and changing rates in the description."
+      },
+      {
+       "node": "coordinate-plane.application.real-world",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Drawing the graph puts the two quantities of the situation on labeled axes, as in graphing paired quantities."
+      }
+     ]
+    }
+   ]
+  },
+  "addition.multi-digit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "addition.within-1000",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Adding numbers with more digits uses the same sum-finding on each place, extending the sums found within 1000."
+      },
+      {
+       "node": "place-value.ten-times-right",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Sums up to 1,000,000 compose a unit of the next place from ten in any place, thousands and ten-thousands included."
+      }
+     ]
+    }
+   ]
+  },
+  "division.by-two-digit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Finding a quotient of a dividend up to four digits is the same task with a larger divisor, using the same place-by-place reasoning."
+      },
+      {
+       "node": "multiplication.by-one-digit",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Any method forms multiples of the two-digit divisor, such as 36 x 7, and compares them with the dividend."
+      }
+     ]
+    }
+   ]
+  },
+  "division.by-two-digit.remainder": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.by-two-digit",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The quotient is found as in division by a two-digit number with no remainder, then a remainder is left over."
+      },
+      {
+       "node": "division.remainder.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires the remainder to be less than the divisor, which is what the remainder means."
+      }
+     ]
+    }
+   ]
+  },
+  "division.remainder.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.measurement.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The remainder is what is left after putting objects into as many equal groups of a given size as possible."
+      }
+     ]
+    }
+   ]
+  },
+  "division.successive-division": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "division.measurement.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rule is about dividing a number by a, then dividing the result by b, so the meaning of a quotient is used."
+      },
+      {
+       "node": "multiplication.by-multiple-of-ten",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem needs the single divisor 8 x 10 = 80 to name the equivalent division."
+      }
+     ]
+    }
+   ]
+  },
+  "operations.application.reasonableness.multi-digit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "operations.application.reasonableness",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Judging an answer by estimating and comparing is the method of the two-step version, here extended to multi-digit numbers."
+      },
+      {
+       "node": "rounding.whole-number.any-place",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The estimate uses rounded numbers, and multi-digit numbers must be rounded to a suitable place such as the nearest hundred."
+      },
+      {
+       "node": "operations.application.multistep.multi-digit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about multistep problems with multi-digit numbers, so the operations the story needs must be identified to estimate."
+      }
+     ]
+    }
+   ]
+  },
+  "fraction.subtraction.comparison": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.subtraction.separating",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement gives a second meaning for subtracting fractions, so the first meaning of separating parts must be known."
+      },
+      {
+       "node": "fraction.addition.joining",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The difference is described as the part joined to the smaller amount to make the larger, which is joining fractions."
+      },
+      {
+       "node": "fraction.compare.same-whole",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires both fractions to refer to the same whole for the comparison to make sense."
+      }
+     ]
+    }
+   ]
+  },
+  "number.halfway-between": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "subtraction.comparison.number-line",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The distance from the smaller to the larger number on the number line is their difference, and halfway is half of it."
+      },
+      {
+       "node": "division.partitive.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Half of the distance is the size of each share when the distance is shared into two equal parts."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem needs half of 10, half of 100 and half of 2, which are divisions by 2."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.skip.twos": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.recite",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The multiples of two are every second number word in the counting sequence, up to twenty."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.skip.twenty-fives": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.to-100",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The multiples of twenty-five are number words within the sequence up to one hundred, said in order."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.number-word.thousand": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.sequence.within-1000",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement names the number after 999 in the counting sequence, so the sequence up to 999 must be known."
+      },
+      {
+       "node": "place-value.hundreds.multiples",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Counting by hundreds to nine hundred uses 100, 200, through 900 as numbers of hundreds, and one thousand comes next."
+      }
+     ]
+    }
+   ]
+  },
+  "counting.number-word.thousand-million": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "counting.number-word.thousand",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The word thousand names a period, so the number one thousand and its word must already be known."
+      },
+      {
+       "node": "numeral.read.to-1000",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The number said before thousand or million is a number name below one thousand, such as two hundred or fifteen."
+      }
+     ]
+    }
+   ]
+  },
+  "coordinate.ordered-pair.notation": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "ordinal.position",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The pair has a fixed order, first number then second number, so the ordinal words first and second are used."
+      },
+      {
+       "node": "numeral.write",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The pair is written as two numerals inside parentheses, such as 3 and 7."
+      }
+     ]
+    }
+   ]
+  },
+  "data.table-graph.read-values": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "table.read-two-way",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Reading the second value in the same row as a given first value is reading an entry of a table of rows and columns."
+      },
+      {
+       "node": "coordinate-plane.first-quadrant.read",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Reading the y-value of the point above a given x-value on a graph is reading a coordinate of a point in the first quadrant."
+      }
+     ]
+    }
+   ]
+  },
+  "time.parts-of-day": {
+   "routes": [],
+   "root_reason": "Placing morning, afternoon, evening and night in order uses everyday before-and-after language of events; no earlier map node supplies more than that."
+  },
+  "time.hour.sixty-minutes": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "time.analog.hour",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement follows the minute hand once around the clock face, and each hour the minute hand returns to the 12."
+      },
+      {
+       "node": "counting.sequence.to-100",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Counting the 60 minute marks the minute hand passes uses the counting sequence by ones up to sixty."
+      },
+      {
+       "node": "time.digital.read",
+       "relation": "representational",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem shows the time 7:59 in digital notation, so the hour and minutes of a written time must be read."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
