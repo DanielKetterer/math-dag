@@ -1,0 +1,1343 @@
+{
+ "pass": "P",
+ "batch": "G4b",
+ "nodes": {
+  "angle.triangle.exterior.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.straight-line.sum-180",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The exterior angle and the interior angle next to it form a straight angle, so the exterior angle is 180 degrees minus that interior angle."
+      },
+      {
+       "node": "angle.triangle.sum",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The other two interior angles add to 180 degrees minus the adjacent interior angle, which uses the triangle angle sum."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.application.triangles-parallel-lines": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.transversal.find-angles",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The first link of the chain carries the given angle across the transversal to an angle of the triangle using the parallel-line angle relations."
+      },
+      {
+       "node": "angle.triangle.sum",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The second link finds the unknown triangle angle from the other two by the triangle angle sum."
+      },
+      {
+       "node": "angle.triangle.exterior",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement allows the chain to end with the exterior angle fact instead of the angle sum, so the exterior angle equal to two remote angles is used."
+      },
+      {
+       "node": "subtraction.within-1000",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem subtracts the 50 and 70 degree angles from 180 degrees to get the unknown angle."
+      }
+     ]
+    }
+   ]
+  },
+  "pythagorean-theorem.squares-on-sides": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.triangle.right.identify",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about a right triangle and names its hypotenuse as the side opposite the right angle."
+      },
+      {
+       "node": "area.covering.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement compares the areas of squares, each area being the number of unit squares that cover the square."
+      },
+      {
+       "node": "shapes.square.define",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A square built on a side has four equal sides, each equal to that side, and four right angles."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem adds the areas 9 and 16 of the squares on the legs to get the area on the hypotenuse."
+      }
+     ]
+    }
+   ]
+  },
+  "pythagorean-theorem.statement": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "pythagorean-theorem.squares-on-sides",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation a^2 + b^2 = c^2 writes the area fact about squares on the legs and hypotenuse in symbols for side lengths."
+      },
+      {
+       "node": "shapes.triangle.right.identify",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about a right triangle, its legs, and the hypotenuse opposite the right angle."
+      },
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The notation a^2, b^2 and c^2 means each length times itself."
+      }
+     ]
+    }
+   ]
+  },
+  "pythagorean-theorem.proof.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "area.additive",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The uncovered area is the big square minus four equal triangles, so the area of a region equals the sum of the areas of its parts."
+      },
+      {
+       "node": "area.rectangle.length-times-width",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The squares of side a, b, c and a + b have areas found by multiplying a side by itself."
+      },
+      {
+       "node": "shapes.triangle.right.identify",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The argument uses a right triangle with legs a and b and hypotenuse c."
+      },
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The conclusion c^2 = a^2 + b^2 and the area (a + b)^2 of the large square are written with squared lengths."
+      }
+     ]
+    }
+   ]
+  },
+  "pythagorean-theorem.converse": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "pythagorean-theorem.statement",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The converse reverses the theorem: it starts from a^2 + b^2 = c^2 and concludes a right triangle, so the theorem's statement must be known."
+      },
+      {
+       "node": "shapes.triangle.right.identify",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The conclusion names the triangle as a right triangle with its right angle opposite the side c."
+      }
+     ]
+    }
+   ]
+  },
+  "pythagorean-theorem.converse.explain": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "construction.triangle.two-sides-included-angle",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The proof builds a right triangle with legs a and b, which is a triangle drawn from two sides and the right angle between them."
+      },
+      {
+       "node": "pythagorean-theorem.statement",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The theorem applied to the built triangle gives its hypotenuse squared as a^2 + b^2."
+      },
+      {
+       "node": "root.square.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Since the built hypotenuse and c are positive lengths with the same square, the two lengths are equal."
+      },
+      {
+       "node": "triangle.determined.three-sides",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Two triangles with the same three side lengths must be the same triangle, which is the step that makes them congruent."
+      },
+      {
+       "node": "congruence.rigid-motion.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The argument concludes the two triangles are congruent, meaning one can be moved onto the other by rigid motions."
+      },
+      {
+       "node": "transformation.rigid-motion.preserves-angle",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Congruent triangles have equal corresponding angles, so the angle opposite c equals the right angle of the built triangle."
+      }
+     ]
+    }
+   ]
+  },
+  "pythagorean-theorem.right-triangle.decide": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "comparing.whole-numbers.magnitude",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Naming the longest side c means deciding which of the given side lengths is greatest."
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.whole-base",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The procedure squares each side length to compute a^2, b^2 and c^2."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The procedure adds a^2 and b^2, a sum that can exceed 100."
+      },
+      {
+       "node": "pythagorean-theorem.converse",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Equal sums mean a right triangle by the converse of the theorem."
+      },
+      {
+       "node": "pythagorean-theorem.statement",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Unequal values mean the triangle is not right, which follows from the theorem itself."
+      }
+     ]
+    }
+   ]
+  },
+  "pythagorean-theorem.unknown-side.whole": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "pythagorean-theorem.statement",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure solves a^2 + b^2 = c^2 for the unknown side."
+      },
+      {
+       "node": "shapes.triangle.right.identify",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Identifying the hypotenuse means finding the side opposite the right angle of a right triangle."
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.whole-base",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The procedure computes the squares of the known sides."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "When the hypotenuse is unknown the procedure adds the two squares."
+      },
+      {
+       "node": "subtraction.within-1000",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "When a leg is unknown the procedure subtracts the square of the known leg from c^2."
+      },
+      {
+       "node": "equation.one-step.addition.solve",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Finding a leg squared from c^2 minus the known leg squared solves a one-step addition equation."
+      },
+      {
+       "node": "root.square.perfect-square.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The last step takes the square root of a perfect square to get the whole-number length."
+      }
+     ]
+    }
+   ]
+  },
+  "pythagorean-theorem.unknown-side.irrational": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "pythagorean-theorem.statement",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure solves a^2 + b^2 = c^2 for the unknown side."
+      },
+      {
+       "node": "shapes.triangle.right.identify",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Identifying the hypotenuse means finding the side opposite the right angle of a right triangle."
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.whole-base",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The procedure computes the squares of the known sides."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "When the hypotenuse is unknown the procedure adds the two squares to get n."
+      },
+      {
+       "node": "subtraction.within-1000",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "When a leg is unknown the procedure subtracts the square of the known leg from c^2 to get n."
+      },
+      {
+       "node": "equation.one-step.addition.solve",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Finding a leg squared from c^2 minus the known leg squared solves a one-step addition equation."
+      },
+      {
+       "node": "root.square.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The last step writes the exact length as sqrt(n), the positive number whose square is n."
+      }
+     ]
+    }
+   ]
+  },
+  "pythagorean-theorem.unknown-side.3d": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "pythagorean-theorem.unknown-side.whole",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Finding the base diagonal and then the interior diagonal are each a hypotenuse found from two legs."
+      },
+      {
+       "node": "pythagorean-theorem.statement",
+       "relation": "definitional",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The statement applies the theorem twice, the second time to the triangle of the base diagonal, a vertical edge and the interior diagonal."
+      },
+      {
+       "node": "shapes.rectangle.define",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The base diagonal is the hypotenuse of a right triangle because the corner of the base rectangle is a right angle."
+      },
+      {
+       "node": "shapes.prism.right.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The vertical edge is perpendicular to the base, which gives the right angle at the base in the second triangle."
+      }
+     ]
+    }
+   ]
+  },
+  "pythagorean-theorem.application.2d.whole": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "pythagorean-theorem.unknown-side.whole",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The problem reduces to finding an unknown side of one right triangle with a whole-number answer."
+      }
+     ]
+    }
+   ]
+  },
+  "pythagorean-theorem.application.2d.approximate": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "pythagorean-theorem.unknown-side.irrational",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The unknown side is found as an exact square root of a number that is not a perfect square."
+      },
+      {
+       "node": "real-number.approximate.square-root",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The answer must be located as a decimal by bounding the square root between squares of decimals."
+      },
+      {
+       "node": "rounding.decimal.any-place",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The decimal length is rounded to the nearest tenth."
+      }
+     ]
+    }
+   ]
+  },
+  "pythagorean-theorem.application.3d": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "pythagorean-theorem.unknown-side.3d",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The problem is solved by finding the interior diagonal of a rectangular box with two applications of the theorem."
+      }
+     ]
+    }
+   ]
+  },
+  "pythagorean-theorem.distance.coordinates": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "coordinate-plane.segment-length.same-sign",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The horizontal or vertical distance is found from coordinates that can have the same sign, as 1 and 5 do."
+      },
+      {
+       "node": "coordinate-plane.segment-length.opposite-sign",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The horizontal or vertical distance is found from coordinates that can have opposite signs, as -2 and 1 do."
+      },
+      {
+       "node": "shapes.triangle.right.identify",
+       "relation": "definitional",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The horizontal and vertical distances are the legs of a right triangle whose hypotenuse joins the points."
+      },
+      {
+       "node": "pythagorean-theorem.unknown-side.whole",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The last step finds the hypotenuse from the two legs."
+      }
+     ]
+    }
+   ]
+  },
+  "pythagorean-theorem.distance.application": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "pythagorean-theorem.distance.coordinates",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The distance between the two places is found as the hypotenuse of the right triangle on the grid."
+      },
+      {
+       "node": "real-number.approximate.square-root",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The distance is the square root of a number that is not a perfect square, so it is bounded as a decimal."
+      },
+      {
+       "node": "rounding.decimal.any-place",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The distance is rounded to the nearest tenth of a kilometer."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.cylinder.formula": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "circle.area.formula",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula uses the area of the circular base, pi x r^2."
+      },
+      {
+       "node": "volume.prism.formula.base-height",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula is a base area times a height, the same form as V = B x h for a prism."
+      },
+      {
+       "node": "circle.center-radius",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula is written with the radius r of the circular base."
+      },
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The term r^2 in the formula means the radius times itself."
+      },
+      {
+       "node": "shapes.name.solids",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula is about the solid shape called a cylinder."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.cylinder.compute": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.cylinder.formula",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure applies V = pi x r^2 x h."
+      },
+      {
+       "node": "circle.diameter",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Halving a given diameter to get the radius uses the fact that a diameter is twice a radius."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Halving the diameter is a division by 2."
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.whole-base",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The second step computes r^2 by multiplying the radius by itself."
+      },
+      {
+       "node": "multiplication.two-digit-by-two-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The procedure multiplies r^2 by the height h, a product of numbers that can have two digits each."
+      },
+      {
+       "node": "volume.unit-cube",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The answer is written in cubic units, the units of volume."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.cylinder.find-height": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.cylinder.formula",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The volume is the base area pi x r^2 times the height, so the height is the factor that is missing."
+      },
+      {
+       "node": "circle.area.formula.apply",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The first step computes the base area pi x r^2 from the radius."
+      },
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Dividing the volume by the base area finds the unknown factor in V = base area x h."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem divides 72 by 9 once the common factor pi is removed."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.cylinder.find-radius": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.cylinder.formula",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The volume is pi x r^2 x h, so dividing by pi x h leaves r^2."
+      },
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Dividing the volume by pi x h finds the unknown factor r^2 in the product."
+      },
+      {
+       "node": "root.square.perfect-square.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The second step takes the positive square root of r^2, a perfect square in the test problem."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem divides 80 by 5 once the common factor pi is removed."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.cylinder.application": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.cylinder.compute",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The problem finds a volume from a radius or diameter and a height with V = pi x r^2 x h."
+      },
+      {
+       "node": "expressions.numerical.fractions-decimals.evaluate",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The 3.14 value of pi makes the volume computation a product or quotient of decimals."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.cylinder.application.find-height": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.cylinder.find-height",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The problem finds a height by dividing the volume by the base area pi x r^2."
+      },
+      {
+       "node": "expressions.numerical.fractions-decimals.evaluate",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The 3.14 value of pi makes the volume computation a product or quotient of decimals."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.cylinder.application.find-radius": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.cylinder.find-radius",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The problem finds a radius by dividing the volume by pi x h and taking a square root."
+      },
+      {
+       "node": "expressions.numerical.fractions-decimals.evaluate",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The 3.14 value of pi makes the volume computation a product or quotient of decimals."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.cone.formula": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.cylinder.formula",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement defines the cone volume as one third of the volume of the cylinder with the same base and height."
+      },
+      {
+       "node": "fraction.multiplication.parts-of-partition.whole-number",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "One third of the cylinder volume is one of three equal parts of that volume."
+      },
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The term r^2 in the formula means the radius times itself."
+      },
+      {
+       "node": "shapes.name.solids",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula is about the solid shape called a cone."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.cone.compute": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.cone.formula",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure applies V = (1/3) x pi x r^2 x h."
+      },
+      {
+       "node": "circle.diameter",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Halving a given diameter to get the radius uses the fact that a diameter is twice a radius."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The procedure halves the diameter and divides r^2 x h by 3."
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.whole-base",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The second step computes r^2 by multiplying the radius by itself."
+      },
+      {
+       "node": "multiplication.two-digit-by-two-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The procedure multiplies r^2 by the height h, a product of numbers that can have two digits each."
+      },
+      {
+       "node": "volume.unit-cube",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The answer is written in cubic units, the units of volume."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.cone.find-height": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.cone.formula",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The volume is one third of the base area times the height, so 3 x V equals the base area times the height."
+      },
+      {
+       "node": "multiplication.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The first step multiplies the volume by 3."
+      },
+      {
+       "node": "circle.area.formula.apply",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The second step divides by the base area pi x r^2 computed from the radius."
+      },
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Dividing 3 x V by the base area finds the unknown factor in base area x h."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem divides 36 by 9 once the common factor pi is removed."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.cone.application": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.cone.compute",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The problem finds a volume from a radius or diameter and a height with V = (1/3) x pi x r^2 x h."
+      },
+      {
+       "node": "expressions.numerical.fractions-decimals.evaluate",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The 3.14 value of pi makes the volume computation a product or quotient of decimals."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.sphere.formula": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The term r^3 in the formula means the radius used as a factor three times."
+      },
+      {
+       "node": "circle.center-radius",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula is written with the radius r of the sphere, measured from its center."
+      },
+      {
+       "node": "circle.pi.ratio",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula contains the constant pi, the ratio of circumference to diameter."
+      },
+      {
+       "node": "shapes.name.solids",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula is about the solid shape called a sphere."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.sphere.compute": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.sphere.formula",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure applies V = (4/3) x pi x r^3."
+      },
+      {
+       "node": "circle.diameter",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Halving a given diameter to get the radius uses the fact that a diameter is twice a radius."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The procedure halves the diameter and divides by 3."
+      },
+      {
+       "node": "exponent.whole-number-power.evaluate.whole-base",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The second step computes r^3 by using the radius as a factor three times."
+      },
+      {
+       "node": "multiplication.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The second step multiplies the whole number r^3 by 4 before dividing by 3."
+      },
+      {
+       "node": "volume.unit-cube",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "The answer is written in cubic units, the units of volume."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.sphere.find-radius": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.sphere.formula",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The volume is (4/3) x pi x r^3, so multiplying by 3 and dividing by 4 x pi leaves r^3."
+      },
+      {
+       "node": "multiplication.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "The first step multiplies the volume by 3."
+      },
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "definitional",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Dividing 3 x V by 4 x pi finds the unknown factor r^3 in the product."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test problem divides 108 by 4 once the common factor pi is removed."
+      },
+      {
+       "node": "root.cube.perfect-cube.evaluate",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "The second step takes the cube root of r^3, a perfect cube in the test problem."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.sphere.application": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.sphere.compute",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The problem finds a volume from a radius or diameter with V = (4/3) x pi x r^3."
+      },
+      {
+       "node": "expressions.numerical.fractions-decimals.evaluate",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The 3.14 value of pi makes the volume computation a product or quotient of decimals."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.square-corner": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.corners.count",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A square corner is a kind of corner of a shape, so the learner must already pick out the corners of a shape to test them."
+      }
+     ]
+    }
+   ]
+  },
+  "shapes.name.prototype.rectangle-hexagon": {
+   "routes": [],
+   "root_reason": "Naming a typical rectangle or hexagon shown in its usual orientation is learned directly by hearing the name for a shown example; no earlier skill in the map is used."
+  },
+  "shapes.rectangle.opposite-sides-equal": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.rectangle.define",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about every rectangle, a quadrilateral with four right angles, and its pairs of opposite sides."
+      },
+      {
+       "node": "shapes.square.define",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says a square is the case of a rectangle with four equal sides."
+      }
+     ]
+    }
+   ]
+  },
+  "parallel.perpendicular-to-same-line": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "perpendicular.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement starts from two lines that are each perpendicular to the same line, meeting it at right angles."
+      },
+      {
+       "node": "parallel.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The conclusion is that the two lines are parallel, meaning they never meet."
+      }
+     ]
+    }
+   ]
+  },
+  "area.attribute": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.attribute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement sets area apart from length, so length as an attribute of an object is already known."
+      },
+      {
+       "node": "measurement.attributes.several",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Area is a second attribute that one figure has beside its length."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.space-occupied": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.attribute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement sets volume apart from height, a length, so length as an attribute is already known."
+      },
+      {
+       "node": "measurement.attributes.several",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Volume is a second attribute that one solid has beside its height."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.liquid-volume.liter-unit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.space-occupied",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Liquid volume is the amount of space a liquid takes up, and the liter is a unit for that attribute."
+      },
+      {
+       "node": "counting.events",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A liquid volume in liters is the number of times the liquid fills the 1-liter container, a count of fillings."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.mass.gram-kilogram-unit": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.weight.attribute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Mass is the heaviness of an object that the pan balance compares, kept separate from the size of the object."
+      },
+      {
+       "node": "comparing.weight.direct",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Balancing an object against unit masses on a pan balance compares two weights directly."
+      },
+      {
+       "node": "counting.objects",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The mass in grams or kilograms is the count of unit masses that balance the object."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.weight.ounces-pounds.measure": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.weight.attribute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The procedure measures the weight of an object, an attribute separate from its size."
+      },
+      {
+       "node": "number-line.measurement-scale",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A scale marked in ounces or pounds is read like a number line with a measurement scale."
+      },
+      {
+       "node": "numeral.read",
+       "relation": "procedural",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The weight is the number at the pointer, so the written numeral on the scale is read."
+      }
+     ]
+    }
+   ]
+  },
+  "measurement.length.whole-plus-fraction": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "fraction.mixed-number.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The length 2 1/4 is written as the whole number followed by the fraction, a mixed number."
+      },
+      {
+       "node": "fraction.non-unit.number-line",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The fraction of a unit is a point that fraction of the way from one whole-number mark to the next, as in 3/4."
+      },
+      {
+       "node": "measurement.length.ruler.from-zero",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The whole-number marks on a ruler count whole units from 0, so the mark 2 is two units from the start."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
