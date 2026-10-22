@@ -1,0 +1,1728 @@
+{
+ "pass": "Q",
+ "batch": "G3b",
+ "nodes": {
+  "circle.center-radius": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "point.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The center and every point on the circle are exact locations, and the definition sorts points by their distance from the center."
+      },
+      {
+       "node": "segment.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The radius is the distance from the center to a point, which is the length of the segment joining those two points."
+      },
+      {
+       "node": "comparing.whole-numbers.numerals-within-10",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Deciding whether Q at 4 cm and R at 6 cm are inside or outside needs comparing 4, 5 and 6 against each other."
+      }
+     ]
+    }
+   ]
+  },
+  "circle.diameter": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "circle.center-radius",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A diameter is defined through the center and the circle, and its length is stated as twice the radius."
+      },
+      {
+       "node": "segment.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A diameter is a segment, so its two endpoints and the length between them are part of the statement."
+      },
+      {
+       "node": "addition.within-10",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Finding the diameter from a 3 cm radius means doubling it, which is the sum 3 + 3."
+      }
+     ]
+    }
+   ]
+  },
+  "construction.circle.radius-diameter": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "circle.center-radius",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The compass is turned about the center so every point drawn stays one radius from the center."
+      },
+      {
+       "node": "circle.diameter",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 turns a given diameter into a radius using the fact that a diameter is twice the radius."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 halves the given diameter, which is dividing it by 2."
+      },
+      {
+       "node": "measurement.length.ruler",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 sets the compass opening against a ruler to measure one radius."
+      }
+     ]
+    }
+   ]
+  },
+  "construction.triangle.two-sides-included-angle": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.ruler",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 draws a side to a given length, and step 3 marks the second length, both read on a ruler."
+      },
+      {
+       "node": "angle.protractor.sketch",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 draws a ray making the given angle with the first side by using a protractor."
+      },
+      {
+       "node": "segment.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 joins the two free endpoints with a segment, which becomes the third side."
+      },
+      {
+       "node": "shapes.polygon.name-by-sides",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The figure drawn is a triangle, a closed figure with three sides and three vertices."
+      }
+     ]
+    }
+   ]
+  },
+  "construction.triangle.two-angles-included-side": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "measurement.length.ruler",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 draws the given side to its length, measured on a ruler."
+      },
+      {
+       "node": "angle.protractor.sketch",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 draws a ray at each endpoint making the given angle with the side, using a protractor."
+      },
+      {
+       "node": "ray.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 extends the two rays until they meet, which relies on a ray continuing without end."
+      },
+      {
+       "node": "shapes.polygon.name-by-sides",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The figure drawn is a triangle, a closed figure with three sides and three vertices."
+      }
+     ]
+    }
+   ]
+  },
+  "construction.triangle.three-sides": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "construction.circle.radius-diameter",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 2 and 3 set the compass to a given length and swing an arc about an endpoint, as when drawing a circle."
+      },
+      {
+       "node": "circle.center-radius",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The third vertex is at one given distance from each endpoint, so it lies on a circle about each endpoint."
+      },
+      {
+       "node": "measurement.length.ruler",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 draws the first side to its length, and the compass openings are set from ruler lengths."
+      },
+      {
+       "node": "segment.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.4",
+       "scope": "concept",
+       "why": "Step 4 joins the meeting point of the arcs to both endpoints with segments."
+      },
+      {
+       "node": "shapes.polygon.name-by-sides",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The figure drawn is a triangle, a closed figure with three sides and three vertices."
+      }
+     ]
+    }
+   ]
+  },
+  "triangle.inequality": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.polygon.name-by-sides",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about when three lengths can be the three sides of a triangle."
+      },
+      {
+       "node": "addition.within-10",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test sets 3, 4, 5 and 2, 3, 6 and 2, 3, 5 need the sum of the two shorter lengths, within 10."
+      },
+      {
+       "node": "comparing.whole-numbers.numerals-within-10",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Each set needs that sum compared with the longest length, as in 3 + 4 against 5 or 2 + 3 against 6."
+      }
+     ]
+    }
+   ]
+  },
+  "triangle.determined.three-sides": {
+   "routes": [
+    {
+     "clause": "drawn",
+     "edges": [
+      {
+       "node": "construction.triangle.three-sides",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "After one side is laid down, the arcs for the other two sides meet at one point on each side of it, so the triangle is fixed."
+      },
+      {
+       "node": "shapes.compare.same-different",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says any two such triangles are identical copies, which means judging whether two whole shapes are the same."
+      },
+      {
+       "node": "angle.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says the angles match too, so the angles of a triangle must be known as parts of the figure."
+      }
+     ]
+    },
+    {
+     "clause": "sticks",
+     "edges": [
+      {
+       "node": "shapes.compose.from-sides",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Building the triangle from sticks of the three lengths shows the sticks hold one rigid shape, with no different one possible."
+      },
+      {
+       "node": "shapes.compare.same-different",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says any two such triangles are identical copies, which means judging whether two whole shapes are the same."
+      },
+      {
+       "node": "angle.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says the angles match too, so the angles of a triangle must be known as parts of the figure."
+      }
+     ]
+    }
+   ]
+  },
+  "triangle.determined.two-sides-included-angle": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "construction.triangle.two-sides-included-angle",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Drawing the two sides at the given angle fixes the third vertex, which is why only one triangle results."
+      },
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement gives the measure of the angle between the sides, a number of degrees."
+      },
+      {
+       "node": "shapes.compare.same-different",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Determining exactly one triangle means any two such triangles are identical, judged by comparing whole shapes."
+      }
+     ]
+    }
+   ]
+  },
+  "triangle.determined.two-angles-included-side": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "construction.triangle.two-angles-included-side",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Drawing the two angles at the ends of the side fixes where the rays meet, so only one triangle results."
+      },
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement gives the measures of two angles in degrees."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires the sum of the two angle measures, which is found by adding them."
+      },
+      {
+       "node": "comparing.whole-numbers.magnitude.three-digit",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement requires that sum to be less than 180, which is a comparison of numbers."
+      },
+      {
+       "node": "shapes.compare.same-different",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Determining exactly one triangle means any two such triangles are identical, judged by comparing whole shapes."
+      }
+     ]
+    }
+   ]
+  },
+  "triangle.ambiguous.two-sides-non-included-angle": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement gives the measure of an angle in degrees and places it away from the two given sides."
+      },
+      {
+       "node": "shapes.compare.same-different",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The claim is that two different triangles fit, which means telling two shapes apart."
+      },
+      {
+       "node": "circle.center-radius",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The side of fixed length from one vertex stays at one distance from it, so its circle can cross the angle's ray at two points."
+      },
+      {
+       "node": "angle.protractor.sketch",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Drawing the 30-degree angle at A needs a protractor."
+      },
+      {
+       "node": "measurement.length.ruler",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Marking AB at 6 cm and BC at 4 cm needs a ruler."
+      },
+      {
+       "node": "construction.circle.radius-diameter",
+       "relation": "procedural",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Finding where side BC of 4 cm can end on the ray is done by swinging a compass arc of that radius about B."
+      }
+     ]
+    }
+   ]
+  },
+  "triangle.three-angles": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about three angle measures in degrees."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement tests whether the three angle measures add to 180."
+      },
+      {
+       "node": "shapes.match",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says all the triangles are the same shape and differ only in size, which is matching shapes of different sizes."
+      },
+      {
+       "node": "construction.triangle.two-angles-included-side",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Drawing two of the angles at the ends of a side, with different side lengths, produces the same-shaped triangles of different sizes."
+      },
+      {
+       "node": "angle.protractor.measure",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Measuring the third angle of such a drawing shows it is forced, which is why the three must add to 180."
+      }
+     ]
+    }
+   ]
+  },
+  "triangle.conditions.classify": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "triangle.determined.three-sides",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 uses that three sides that fit give exactly one triangle."
+      },
+      {
+       "node": "triangle.determined.two-sides-included-angle",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 uses that two sides and the angle between them give exactly one triangle."
+      },
+      {
+       "node": "triangle.determined.two-angles-included-side",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 uses that two angles and the side between them give exactly one triangle."
+      },
+      {
+       "node": "triangle.ambiguous.two-sides-non-included-angle",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 uses that two sides and an angle not between them can give a second, different triangle."
+      },
+      {
+       "node": "triangle.three-angles",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 2 and 3 use that three angles give no triangle unless they add to 180, and then give many."
+      },
+      {
+       "node": "triangle.inequality",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 checks that the two shorter sides add to more than the longest."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 adds side lengths or angle measures to compare the sum with the longest side or with 180."
+      },
+      {
+       "node": "comparing.whole-numbers.magnitude.three-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 compares a sum with the longest side or with 180."
+      }
+     ]
+    }
+   ]
+  },
+  "cross-section.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.dimension.flat-solid",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The cross-section is a flat figure cut from a solid, so flat figures must be told from solids."
+      },
+      {
+       "node": "shapes.solid.parts",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The cross-section is the shape of the cut face, so the faces of a solid must be known."
+      },
+      {
+       "node": "new:plane.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about a plane slicing through a solid, a flat surface that goes on past the solid."
+      }
+     ]
+    }
+   ]
+  },
+  "cross-section.prism.parallel-to-base": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "cross-section.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement names the cross-section, the flat figure where the slicing plane meets the prism."
+      },
+      {
+       "node": "shapes.prism.right.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about a right rectangular prism and its base."
+      },
+      {
+       "node": "parallel.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The slicing plane is parallel to the base, meaning it never meets the base plane."
+      },
+      {
+       "node": "shapes.rectangle.define",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The cross-section is named as a rectangle, a quadrilateral with four right angles."
+      },
+      {
+       "node": "shapes.compare.same-different",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says the cut figure has the same size and shape as the base, a whole-shape comparison."
+      }
+     ]
+    }
+   ]
+  },
+  "cross-section.prism.perpendicular-to-base": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "cross-section.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement names the cross-section, the flat figure where the slicing plane meets the prism."
+      },
+      {
+       "node": "shapes.prism.right.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses the height of a right rectangular prism and its base."
+      },
+      {
+       "node": "perpendicular.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The slicing plane meets the base at a right angle, which is what perpendicular means."
+      },
+      {
+       "node": "shapes.rectangle.define",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The cut face has right angles where the plane meets the base and the top, which makes it a rectangle."
+      },
+      {
+       "node": "segment.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The cut across the base is a segment, and its length is the width of the rectangle."
+      }
+     ]
+    }
+   ]
+  },
+  "cross-section.pyramid.parallel-to-base": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "cross-section.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement names the cross-section, the flat figure where the slicing plane meets the pyramid."
+      },
+      {
+       "node": "shapes.pyramid.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about a right rectangular pyramid, its base and its apex."
+      },
+      {
+       "node": "parallel.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The slicing plane is parallel to the base, meaning it never meets the base plane."
+      },
+      {
+       "node": "shapes.rectangle.define",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The cross-section is named as a rectangle, a quadrilateral with four right angles."
+      },
+      {
+       "node": "shapes.match",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement says the cut figure has the same shape as the base but a smaller size."
+      }
+     ]
+    }
+   ]
+  },
+  "cross-section.pyramid.perpendicular-to-base": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "cross-section.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement names the cross-section, the flat figure where the slicing plane meets the pyramid."
+      },
+      {
+       "node": "shapes.pyramid.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses the apex and base of a right rectangular pyramid."
+      },
+      {
+       "node": "perpendicular.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The slicing plane meets the base at a right angle, which is what perpendicular means."
+      },
+      {
+       "node": "parallel.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The slicing plane is parallel to one side of the base."
+      },
+      {
+       "node": "shapes.polygon.name-by-sides",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The cross-section is named as a triangle, a three-sided polygon."
+      },
+      {
+       "node": "shapes.quadrilateral.parallel-sides.define",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The cross-section is named as a trapezoid, a quadrilateral defined by a pair of parallel sides."
+      }
+     ]
+    }
+   ]
+  },
+  "cross-section.side-per-face": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "cross-section.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about the polygon where a plane meets a solid."
+      },
+      {
+       "node": "shapes.solid.parts",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement counts the faces of the solid that the plane crosses."
+      },
+      {
+       "node": "shapes.sides.count",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement counts the sides of the cross-section polygon, one per face crossed."
+      },
+      {
+       "node": "segment.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A plane meets a flat face along a straight segment, which is why each face crossed gives one side."
+      }
+     ]
+    }
+   ]
+  },
+  "cross-section.prism.oblique": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "cross-section.side-per-face",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement gives the shape by how many faces the plane crosses, using one side per face crossed."
+      },
+      {
+       "node": "shapes.prism.right.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about a right rectangular prism and its base."
+      },
+      {
+       "node": "shapes.polygon.name-by-sides",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The cross-section is named as a triangle, quadrilateral, pentagon or hexagon by its number of sides."
+      },
+      {
+       "node": "parallel.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The slanted plane is defined as not parallel to the base."
+      },
+      {
+       "node": "perpendicular.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The slanted plane is defined as not perpendicular to the base."
+      }
+     ]
+    }
+   ]
+  },
+  "cross-section.pyramid.oblique": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "cross-section.side-per-face",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement gives the shape by how many faces the plane crosses, using one side per face crossed."
+      },
+      {
+       "node": "shapes.pyramid.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about a right rectangular pyramid, its base and its triangular faces."
+      },
+      {
+       "node": "shapes.polygon.name-by-sides",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The cross-section is named as a triangle, quadrilateral or pentagon by its number of sides."
+      },
+      {
+       "node": "parallel.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The slanted plane is defined as not parallel to the base."
+      },
+      {
+       "node": "perpendicular.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The slanted plane is defined as not perpendicular to the base."
+      }
+     ]
+    }
+   ]
+  },
+  "circle.circumference.meaning": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "perimeter.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The circumference is the length around the circle, which is the perimeter idea applied to a curved figure."
+      },
+      {
+       "node": "circle.center-radius",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement names the circle whose length once around is measured."
+      },
+      {
+       "node": "circle.diameter",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test gives 6 cm across, the diameter, as a distractor, so a diameter must be told apart from the length around."
+      }
+     ]
+    }
+   ]
+  },
+  "circle.pi.ratio": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "circle.circumference.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement divides the circumference, the length around a circle, by the diameter."
+      },
+      {
+       "node": "circle.diameter",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement divides the circumference by the diameter of each circle."
+      },
+      {
+       "node": "ratio.equivalent",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The quotient being the same for every circle means the pairs of circumference and diameter form equivalent ratios."
+      },
+      {
+       "node": "decimal.hundredths.notation",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement gives pi as about 3.14, a decimal with hundredths."
+      },
+      {
+       "node": "decimal.division.by-whole.algorithm",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test divides circumferences such as 15.7 cm and 31.4 cm by whole-number diameters of 5 cm and 10 cm."
+      }
+     ]
+    }
+   ]
+  },
+  "circle.circumference.formula": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "circle.pi.ratio",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula restates that circumference divided by diameter is pi."
+      },
+      {
+       "node": "circle.diameter",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses the diameter d and the fact that it is twice the radius r."
+      },
+      {
+       "node": "division.unknown-factor.meaning",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Going from C divided by d equals pi to C = pi x d uses a quotient as the unknown factor."
+      },
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The letters C, d and r stand for numbers, so the formula is stated for every circle."
+      },
+      {
+       "node": "expressions.product.regroup-factors",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Showing pi x d equals 2 x pi x r puts 2 x r in place of d and regroups the factors."
+      },
+      {
+       "node": "expressions.variable.evaluate",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Testing pi x 4 for a radius of 4 cm means substituting values into the formula."
+      }
+     ]
+    }
+   ]
+  },
+  "circle.circumference.formula.apply": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "circle.circumference.formula",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the diameter by pi, which is the circumference formula."
+      },
+      {
+       "node": "circle.diameter",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 doubles a given radius to get the diameter."
+      },
+      {
+       "node": "multiplication.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 doubles the radius, which is multiplying it by 2."
+      },
+      {
+       "node": "decimal.multiplication.algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the diameter by an approximation such as 3.14, a decimal product."
+      }
+     ]
+    }
+   ]
+  },
+  "circle.area.formula": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "circle.center-radius",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula is written with the radius r of the circle."
+      },
+      {
+       "node": "circle.pi.ratio",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula uses pi, the number defined by the ratio of circumference to diameter."
+      },
+      {
+       "node": "area.covering.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The formula gives area, the number of unit squares that cover the circle."
+      },
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement writes r x r as r^2, which is a power of two equal factors."
+      },
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The letters A and r stand for numbers, so the rule holds for every circle."
+      },
+      {
+       "node": "circle.diameter",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test gives a diameter of 6 m, so the radius must be found as half of it."
+      }
+     ]
+    }
+   ]
+  },
+  "circle.area.formula.apply": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "circle.area.formula",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Steps 2 and 3 carry out the formula A = pi x r x r."
+      },
+      {
+       "node": "circle.diameter",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 halves a given diameter to get the radius."
+      },
+      {
+       "node": "division.by-one-digit",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 halves the diameter, which is dividing it by 2."
+      },
+      {
+       "node": "multiplication.two-digit-by-two-digit",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 multiplies the radius by itself, as in 10 x 10."
+      },
+      {
+       "node": "decimal.multiplication.algorithm",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 multiplies the result by an approximation such as 3.14, a decimal product."
+      }
+     ]
+    }
+   ]
+  },
+  "circle.area.derive-from-circumference": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "circle.circumference.formula",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The derivation uses that the circumference is C = 2 x pi x r."
+      },
+      {
+       "node": "area.parallelogram.formula",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The rearranged figure is close to a parallelogram, whose area is base times height."
+      },
+      {
+       "node": "area.additive",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Rearranging the sectors keeps the total area of the circle unchanged."
+      },
+      {
+       "node": "partitioning.equal-shares.area",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The circle is cut into many equal sectors, which is partitioning a circle into equal shares."
+      },
+      {
+       "node": "fraction.multiply-whole.symbolic",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The last step turns (1/2) x 2 x pi x r x r into pi x r x r by multiplying 2 by 1/2."
+      },
+      {
+       "node": "expressions.product.regroup-factors",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The last step reorders and regroups the factors (1/2), 2, pi, r and r."
+      },
+      {
+       "node": "exponent.whole-number-power.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The result is written pi x r^2, with r x r written as a power."
+      }
+     ]
+    }
+   ]
+  },
+  "circle.application.circumference": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "circle.circumference.formula.apply",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner finds the circumference from a given radius or diameter with the formula."
+      },
+      {
+       "node": "circle.circumference.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The problem asks for the distance once around, which must be recognized as the circumference."
+      }
+     ]
+    }
+   ]
+  },
+  "circle.application.area": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "circle.area.formula.apply",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner finds the area from a given radius or diameter with the formula."
+      },
+      {
+       "node": "area.attribute",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The problem asks how much surface the region covers, which must be recognized as its area."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.adjacent": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Adjacent angles are defined by the vertex and the sides they share, which are the parts of an angle."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.vertical": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Vertical angles are opposite angles that share a vertex and no side, so angles and their sides must be known."
+      },
+      {
+       "node": "line.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The angles are formed where two lines cross, so a line as straight and unending must be known."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.vertical.equal": {
+   "routes": [
+    {
+     "clause": "measure",
+     "edges": [
+      {
+       "node": "angle.vertical",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about the measures of a pair of vertical angles."
+      },
+      {
+       "node": "angle.protractor.measure",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Measuring pairs of vertical angles with a protractor shows their measures are equal."
+      }
+     ]
+    },
+    {
+     "clause": "reason",
+     "edges": [
+      {
+       "node": "angle.vertical",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about the measures of a pair of vertical angles."
+      },
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement compares angle measures, which are numbers of degrees."
+      },
+      {
+       "node": "angle.straight-line.sum-180",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "Each vertical angle adds to 180 with the same neighbor, so the two vertical angles must be equal."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.supplementary": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The definition is about angle measures in degrees."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The definition tests whether two angle measures add to 180, as with 120 and 60 or 100 and 70."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.complementary": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.measure.degrees",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The definition is about angle measures in degrees."
+      },
+      {
+       "node": "addition.within-100",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The definition tests whether two angle measures add to 90, as with 30 and 60 or 40 and 40."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.straight-line.sum-180": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.adjacent",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about adjacent angles whose outer sides form a straight line."
+      },
+      {
+       "node": "angle.additive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The two adjacent angles together make one angle, so their measures add."
+      },
+      {
+       "node": "line.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The outer sides lie on one straight line, which makes the combined angle a straight angle."
+      },
+      {
+       "node": "angle.measure.circle-fraction",
+       "relation": "justificatory",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "A straight angle is half of a full turn of the circle, which is why its measure is 180 degrees."
+      },
+      {
+       "node": "subtraction.within-1000",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Finding angle COB means subtracting 130 from 180."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.unknown.equation.write": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.straight-line.sum-180",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses that adjacent angles along a straight line add to 180."
+      },
+      {
+       "node": "angle.supplementary",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses that supplementary angles add to 180."
+      },
+      {
+       "node": "angle.complementary",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses that complementary angles add to 90."
+      },
+      {
+       "node": "angle.vertical.equal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement uses that vertical angles are equal."
+      },
+      {
+       "node": "expressions.variable.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The angle measures are expressions in an unknown letter that stands for a number."
+      },
+      {
+       "node": "expressions.notation.implicit-multiplication",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "An angle such as 2x degrees is written with a number next to a letter, meaning multiply."
+      },
+      {
+       "node": "equation.equal-sign.meaning",
+       "relation": "representational",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The equation states that two sides have the same value, such as the angle measures summing to 180."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.unknown.equation.solve": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.unknown.equation.write",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 writes the equation that the angle relationship gives."
+      },
+      {
+       "node": "expressions.like-terms.combine",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 combines like terms to reach the form p x + q = r."
+      },
+      {
+       "node": "equation.two-step.px-plus-q.solve",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 solves an equation of the form p x + q = r."
+      }
+     ]
+    }
+   ]
+  },
+  "angle.application.multi-step": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "angle.vertical.equal",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement lists vertical angles as one of the relationships used in turn."
+      },
+      {
+       "node": "angle.supplementary",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement lists supplementary angles as one of the relationships used in turn."
+      },
+      {
+       "node": "angle.complementary",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement lists complementary angles as one of the relationships used in turn."
+      },
+      {
+       "node": "angle.straight-line.sum-180",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement lists adjacent angles along a line as one of the relationships used in turn."
+      },
+      {
+       "node": "angle.additive",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement lists parts of a whole angle as one of the relationships used in turn."
+      },
+      {
+       "node": "subtraction.within-100",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "Finding angle BOE means subtracting 25 from 70."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.prism.right.base-height": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.prism.formula.base-height",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement extends V = B x h from rectangular prisms to right prisms with any polygon base."
+      },
+      {
+       "node": "shapes.prism.right.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The statement is about right prisms, their bases and their height."
+      },
+      {
+       "node": "area.covering.meaning",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "B is the area of the base, the number of unit squares that cover it."
+      },
+      {
+       "node": "area.triangle.right.half-rectangle",
+       "relation": "definitional",
+       "points_to": "assess",
+       "scope": "task",
+       "why": "The test needs the area of a right triangle base with legs 3 cm and 4 cm, which is half of a 3 by 4 rectangle."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.prism.right.base-height.apply": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.prism.right.base-height",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 multiplies the base area by the height, which is the rule V = B x h for a right prism."
+      },
+      {
+       "node": "area.triangle.formula.apply",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds the area of a triangular base."
+      },
+      {
+       "node": "area.polygon.decompose",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 finds the area of any other polygon base by splitting it into triangles and rectangles."
+      },
+      {
+       "node": "shapes.prism.right.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds the height as the distance between the two bases of a right prism."
+      },
+      {
+       "node": "multiplication.two-digit-by-two-digit",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 multiplies the base area by the height, as in 12 x 10."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.composite.right-prisms": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "shapes.prism.right.meaning",
+       "relation": "procedural",
+       "points_to": "procedure.1",
+       "scope": "concept",
+       "why": "Step 1 splits the solid into right prisms, so right prisms and their bases must be recognized."
+      },
+      {
+       "node": "volume.prism.right.base-height.apply",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds the volume of a prism with a triangular base using V = B x h."
+      },
+      {
+       "node": "volume.prism.formula.base-height.apply",
+       "relation": "procedural",
+       "points_to": "procedure.2",
+       "scope": "concept",
+       "why": "Step 2 finds the volume of the rectangular box using V = B x h."
+      },
+      {
+       "node": "volume.additive",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 adds the volumes, which is valid because the volume of non-overlapping parts adds."
+      },
+      {
+       "node": "addition.within-1000",
+       "relation": "procedural",
+       "points_to": "procedure.3",
+       "scope": "concept",
+       "why": "Step 3 adds the prism volumes, such as 72 and 24."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.application.right-prism": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.prism.right.base-height.apply",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner finds the volume of a prism with a triangular or other polygon base from the given lengths."
+      },
+      {
+       "node": "volume.space-occupied",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The problem asks how much space the object holds or takes up, which must be recognized as its volume."
+      }
+     ]
+    }
+   ]
+  },
+  "volume.application.composite.right-prisms": {
+   "routes": [
+    {
+     "clause": "standard",
+     "edges": [
+      {
+       "node": "volume.composite.right-prisms",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The learner finds the volume of an object made of right prisms by splitting it and adding the volumes."
+      },
+      {
+       "node": "volume.space-occupied",
+       "relation": "definitional",
+       "points_to": "statement",
+       "scope": "concept",
+       "why": "The problem asks how much space the object holds or takes up, which must be recognized as its volume."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
