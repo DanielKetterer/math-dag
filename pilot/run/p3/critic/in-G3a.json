@@ -1,0 +1,2388 @@
+{
+ "boundary_nodes": [],
+ "nodes": [
+  {
+   "id": "height.base-height",
+   "concept": "height",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Base and height of a triangle or parallelogram",
+   "statement": "Once a side is chosen as the base, the height is the length of a segment perpendicular to the line containing the base, running from that line to the opposite vertex of a triangle or to the opposite side of a parallelogram. The height may lie outside the figure.",
+   "assess": "In the obtuse triangle shown, the base is the 6 cm side. Two segments are drawn from the top vertex: the 5 cm side of the triangle, and a 4 cm dashed segment that meets the extended base line at a right angle outside the triangle. Which length is the height for this base?",
+   "proposed_edges": [
+    {
+     "edge_id": "e652",
+     "prerequisite": "line.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The base is extended into a whole line, and the height may meet that line outside the figure."
+    },
+    {
+     "edge_id": "e653",
+     "prerequisite": "perpendicular.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The height is defined as a segment perpendicular to the line that contains the base."
+    },
+    {
+     "edge_id": "e654",
+     "prerequisite": "segment.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The height is a segment with one endpoint on the base line and the other at the opposite vertex or side."
+    },
+    {
+     "edge_id": "e655",
+     "prerequisite": "shapes.polygon.name-by-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The height is defined for a triangle, which must be recognized by its three sides and vertices."
+    },
+    {
+     "edge_id": "e656",
+     "prerequisite": "shapes.quadrilateral.parallel-sides.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The height is also defined for a parallelogram, which is identified by its two pairs of parallel sides."
+    }
+   ]
+  },
+  {
+   "id": "area.triangle.right.half-rectangle",
+   "concept": "area",
+   "facet": "additive",
+   "level": 2,
+   "type": "procedure",
+   "name": "Find the area of a right triangle as half of a rectangle",
+   "statement": "A right triangle is half of the rectangle whose sides are its two legs, so its area is half of that rectangle's area.",
+   "assess": "A right triangle has legs of 6 cm and 4 cm. Draw the rectangle it is half of and use it to find the area of the triangle.",
+   "procedure": [
+    "Draw the rectangle that has the two legs of the right triangle as two of its sides.",
+    "Note that the hypotenuse is a diagonal that cuts the rectangle into two copies of the triangle.",
+    "Find the area of the rectangle and take half of it."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e657",
+     "prerequisite": "area.additive",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rectangle's area is the sum of its two equal triangular halves, so each triangle has half of it."
+    },
+    {
+     "edge_id": "e658",
+     "prerequisite": "area.rectangle.length-times-width",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The area of the rectangle is found from its two side lengths, which are the legs."
+    },
+    {
+     "edge_id": "e659",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Taking half of the rectangle's area of 24 square cm is dividing by 2."
+    },
+    {
+     "edge_id": "e660",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The rectangle's area 6 x 4 is a single-digit product."
+    },
+    {
+     "edge_id": "e661",
+     "prerequisite": "shapes.compare.same-different",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Seeing that the diagonal cuts the rectangle into two copies of the triangle means judging the two pieces to be the same shape."
+    },
+    {
+     "edge_id": "e662",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Drawing the rectangle that has the two legs as sides requires knowing a rectangle has four right angles."
+    },
+    {
+     "edge_id": "e663",
+     "prerequisite": "shapes.rectangle.opposite-sides-equal",
+     "relation": "justificatory",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The two missing sides of the rectangle equal the legs, which is why the diagonal cuts off two matching triangles."
+    },
+    {
+     "edge_id": "e664",
+     "prerequisite": "shapes.triangle.right.identify",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about right triangles, with two legs forming the right angle and the hypotenuse opposite it."
+    }
+   ]
+  },
+  {
+   "id": "area.parallelogram.rearrange",
+   "concept": "area",
+   "facet": "additive",
+   "level": 2,
+   "type": "procedure",
+   "name": "Find the area of a parallelogram by rearranging it into a rectangle",
+   "statement": "Cutting a parallelogram along a segment perpendicular to the base, from the base to the opposite side, and sliding the cut-off piece to the other end makes a rectangle with the same base and height, so the parallelogram has the area of that rectangle. Such a cut always exists when a longer side is used as the base.",
+   "assess": "A parallelogram drawn on grid paper has a base of 7 units, a slanted side of 5 units and a height of 4 units. Cut it and rearrange the pieces into a rectangle, and find its area.",
+   "procedure": [
+    "Use a longer side as the base.",
+    "Cut along a segment from a vertex of the opposite side, perpendicular to the base, down to the base.",
+    "Move the cut-off right triangle to the other end so that its slanted side meets the other slanted side.",
+    "Find the area of the resulting rectangle, whose sides are the base and the height."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e665",
+     "prerequisite": "area.additive",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Moving the cut-off piece keeps the total area, so the parallelogram has the same area as the rectangle."
+    },
+    {
+     "edge_id": "e666",
+     "prerequisite": "area.rectangle.length-times-width",
+     "relation": "procedural",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "The area of the resulting rectangle is its base times its height."
+    },
+    {
+     "edge_id": "e667",
+     "prerequisite": "height.base-height",
+     "relation": "representational",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "The resulting rectangle has the base and the height as its sides, and the height is the perpendicular cut."
+    },
+    {
+     "edge_id": "e668",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The rectangle on the grid is 7 by 4, which is a single-digit product."
+    },
+    {
+     "edge_id": "e669",
+     "prerequisite": "perpendicular.draw",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 requires drawing a segment perpendicular to the base from a vertex of the opposite side down to the base."
+    },
+    {
+     "edge_id": "e670",
+     "prerequisite": "perpendicular.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The cut is made perpendicular to the base, so the learner must know what perpendicular means."
+    },
+    {
+     "edge_id": "e671",
+     "prerequisite": "shapes.quadrilateral.parallel-sides.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about parallelograms, which are defined by two pairs of parallel sides."
+    }
+   ]
+  },
+  {
+   "id": "area.triangle.half-parallelogram",
+   "concept": "area",
+   "facet": "additive",
+   "level": 2,
+   "type": "procedure",
+   "name": "Find the area of any triangle as half of a parallelogram",
+   "statement": "Two copies of any triangle fit together along a side to form a parallelogram with the same base and height as the triangle, so the triangle's area is half of the parallelogram's area.",
+   "assess": "An obtuse triangle has a base of 8 cm and a height of 3 cm, drawn outside the triangle. Use two copies of the triangle to form a parallelogram, and find the area of the triangle.",
+   "procedure": [
+    "Make a copy of the triangle and turn it halfway around.",
+    "Join the copy to the original along a side other than the base, so that the two form a parallelogram.",
+    "Find the area of the parallelogram from its base and height, which are the triangle's base and height.",
+    "Take half of that area."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e672",
+     "prerequisite": "area.additive",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The parallelogram's area is the sum of the two equal triangles, so the triangle has half of it."
+    },
+    {
+     "edge_id": "e673",
+     "prerequisite": "area.parallelogram.rearrange",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The area of the joined parallelogram is found from its base and height by rearranging it into a rectangle."
+    },
+    {
+     "edge_id": "e674",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Half of the parallelogram's area of 24 square cm is found by dividing by 2."
+    },
+    {
+     "edge_id": "e675",
+     "prerequisite": "height.base-height",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The parallelogram has the same base and height as the triangle, including a height drawn outside."
+    },
+    {
+     "edge_id": "e676",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The parallelogram's area 8 x 3 is a single-digit product."
+    },
+    {
+     "edge_id": "e677",
+     "prerequisite": "shapes.quadrilateral.parallel-sides.define",
+     "relation": "definitional",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The two joined copies form a parallelogram, recognized by its two pairs of parallel sides."
+    },
+    {
+     "edge_id": "e678",
+     "prerequisite": "spatial.motion.turn-flip",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The copy of the triangle is turned halfway around so that it fits against the original."
+    }
+   ]
+  },
+  {
+   "id": "area.parallelogram.formula",
+   "concept": "area",
+   "facet": "multiplicative",
+   "level": 3,
+   "type": "concept",
+   "name": "The area formula for a parallelogram, A = b x h",
+   "statement": "The area of any parallelogram is its base times its height, A = b x h, for any side chosen as the base and the height to that base.",
+   "assess": "True or false: a parallelogram with sides of 6 cm and 5 cm, and a height of 4 cm to the 6 cm side, has an area of 30 square cm. Say which rule decides it.",
+   "proposed_edges": [
+    {
+     "edge_id": "e679",
+     "prerequisite": "area.parallelogram.rearrange",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rearrangement into a rectangle with the same base and height is why the area is base times height."
+    },
+    {
+     "edge_id": "e680",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule is written with the letters A, b and h, each standing for a number."
+    },
+    {
+     "edge_id": "e681",
+     "prerequisite": "height.base-height",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula uses a base and the height to that base, for any side chosen as the base."
+    },
+    {
+     "edge_id": "e682",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Checking 6 x 4 against the claimed area of 30 is a single-digit product."
+    },
+    {
+     "edge_id": "e683",
+     "prerequisite": "shapes.quadrilateral.parallel-sides.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule is stated for any parallelogram, a quadrilateral with two pairs of parallel sides."
+    }
+   ]
+  },
+  {
+   "id": "area.parallelogram.formula.apply",
+   "concept": "area",
+   "facet": "multiplicative",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the area of a parallelogram with A = b x h",
+   "statement": "The area of a parallelogram is found by multiplying a base by the height to that base.",
+   "assess": "A parallelogram has a base of 9 m, a slanted side of 5 m, and a height of 4 m to the base. Find its area.",
+   "procedure": [
+    "Choose a side as the base and identify the height to that base.",
+    "Multiply the base by the height."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e684",
+     "prerequisite": "area.parallelogram.formula",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The procedure applies the rule that the area is a base times the height to that base."
+    },
+    {
+     "edge_id": "e685",
+     "prerequisite": "height.base-height",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 identifies the height to the chosen base and sets aside the slanted side."
+    },
+    {
+     "edge_id": "e686",
+     "prerequisite": "multiplication.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 multiplies the base by the height, here 9 times 4."
+    },
+    {
+     "edge_id": "e687",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The base times height product 9 x 4 is a single-digit product."
+    }
+   ]
+  },
+  {
+   "id": "area.triangle.formula",
+   "concept": "area",
+   "facet": "multiplicative",
+   "level": 3,
+   "type": "concept",
+   "name": "The area formula for a triangle, A = (1/2) x b x h",
+   "statement": "The area of any triangle is half of its base times its height, A = (1/2) x b x h, for any side chosen as the base and the height to that base.",
+   "assess": "True or false: a right triangle with legs of 6 cm and 8 cm and a hypotenuse of 10 cm has an area of 40 square cm. Say which rule decides it.",
+   "proposed_edges": [
+    {
+     "edge_id": "e688",
+     "prerequisite": "area.triangle.half-parallelogram",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Two copies of the triangle form a parallelogram, which is why the area is half of base times height."
+    },
+    {
+     "edge_id": "e689",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Half of the product 48 is found by dividing by 2."
+    },
+    {
+     "edge_id": "e690",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule is written with the letters A, b and h, each standing for a number."
+    },
+    {
+     "edge_id": "e691",
+     "prerequisite": "fraction.multiplication.parts-of-partition.whole-number",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The factor 1/2 in the rule means taking one of two equal parts of the product b x h."
+    },
+    {
+     "edge_id": "e692",
+     "prerequisite": "height.base-height",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula uses a base and the height to that base, for any side chosen as the base."
+    },
+    {
+     "edge_id": "e693",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Checking the product 6 x 8 against the claimed area is a single-digit product."
+    }
+   ]
+  },
+  {
+   "id": "area.triangle.formula.apply",
+   "concept": "area",
+   "facet": "multiplicative",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the area of a triangle with A = (1/2) x b x h",
+   "statement": "The area of a triangle is found by multiplying a base by the height to that base and taking half of the product.",
+   "assess": "An obtuse triangle has a base of 6 cm, another side of 5 cm, and a height of 4 cm to the base, drawn outside the triangle. Find its area.",
+   "procedure": [
+    "Choose a side as the base and identify the height to that base, which may lie outside the triangle.",
+    "Multiply the base by the height.",
+    "Take half of the product."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e694",
+     "prerequisite": "area.triangle.formula",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The procedure applies the rule that the area is half of a base times the height to that base."
+    },
+    {
+     "edge_id": "e695",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Taking half of the product 24 is dividing by 2."
+    },
+    {
+     "edge_id": "e696",
+     "prerequisite": "height.base-height",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 identifies the height to the base, which may lie outside the triangle."
+    },
+    {
+     "edge_id": "e697",
+     "prerequisite": "multiplication.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 multiplies the base by the height, here 6 times 4."
+    },
+    {
+     "edge_id": "e698",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The base times height product 6 x 4 is a single-digit product."
+    }
+   ]
+  },
+  {
+   "id": "area.polygon.decompose",
+   "concept": "area",
+   "facet": "additive",
+   "level": 2,
+   "type": "procedure",
+   "name": "Find the area of a polygon by decomposing it into triangles and rectangles",
+   "statement": "The area of a polygon is the sum of the areas of non-overlapping triangles and rectangles that together make it up.",
+   "assess": "A trapezoid has parallel sides of 4 cm and 10 cm, a height of 3 cm, and two equal slanted sides (picture). Cut it into a rectangle and two triangles, and find its area.",
+   "procedure": [
+    "Cut the polygon into non-overlapping triangles and rectangles whose bases and heights are given or can be found from the given lengths.",
+    "Find the area of each piece.",
+    "Add the areas of the pieces."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e699",
+     "prerequisite": "addition.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The rectangle's area and the triangle areas are added to a total under 100."
+    },
+    {
+     "edge_id": "e700",
+     "prerequisite": "area.additive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The area of the polygon is the sum of the areas of the non-overlapping pieces."
+    },
+    {
+     "edge_id": "e701",
+     "prerequisite": "area.rectangle.length-times-width",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The area of each rectangular piece is its length times its width."
+    },
+    {
+     "edge_id": "e702",
+     "prerequisite": "area.triangle.formula.apply",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 finds the area of each triangular piece from its base and height."
+    },
+    {
+     "edge_id": "e703",
+     "prerequisite": "area.triangle.half-parallelogram",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The area of each triangular piece is found from its base and height."
+    },
+    {
+     "edge_id": "e704",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The difference 6 is split between two equal triangles by dividing by 2."
+    },
+    {
+     "edge_id": "e705",
+     "prerequisite": "division.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Each end triangle's base is half of the leftover 6 cm, which is 6 divided by 2."
+    },
+    {
+     "edge_id": "e706",
+     "prerequisite": "fraction.addition.like-denominators",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The two triangles each have area 9/2 square cm, and these halves are added."
+    },
+    {
+     "edge_id": "e707",
+     "prerequisite": "height.base-height",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The pieces must have bases and heights that are given or can be found from the given lengths."
+    },
+    {
+     "edge_id": "e708",
+     "prerequisite": "shapes.decompose.simple",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 cuts the polygon into smaller non-overlapping shapes."
+    },
+    {
+     "edge_id": "e709",
+     "prerequisite": "subtraction.within-10",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Finding the triangle bases in the trapezoid requires 10 minus 4."
+    },
+    {
+     "edge_id": "e710",
+     "prerequisite": "subtraction.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The triangles' bases come from subtracting 4 from 10 in the picture."
+    }
+   ]
+  },
+  {
+   "id": "area.polygon.subtract",
+   "concept": "area",
+   "facet": "additive",
+   "level": 2,
+   "type": "procedure",
+   "name": "Find the area of a figure by subtracting the pieces outside it from a larger figure",
+   "statement": "The area of a figure equals the area of a larger figure that contains it minus the areas of the non-overlapping pieces of the larger figure that lie outside it.",
+   "assess": "A triangle drawn on grid paper fits exactly inside a 6-by-5 rectangle. The three pieces of the rectangle outside the triangle are right triangles with legs 6 and 2, 4 and 3, and 2 and 5. Find the area of the triangle by subtracting.",
+   "procedure": [
+    "Enclose the figure in a larger figure whose area can be found, usually a rectangle.",
+    "Find the area of each piece of the larger figure that lies outside the given figure.",
+    "Subtract the sum of those areas from the area of the larger figure."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e711",
+     "prerequisite": "addition.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The three outside areas 6, 6 and 5 are added."
+    },
+    {
+     "edge_id": "e712",
+     "prerequisite": "area.additive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The larger figure's area is the sum of the given figure and the outside pieces, so subtracting recovers it."
+    },
+    {
+     "edge_id": "e713",
+     "prerequisite": "area.rectangle.length-times-width",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The enclosing figure is usually a rectangle whose area is its length times its width."
+    },
+    {
+     "edge_id": "e714",
+     "prerequisite": "area.triangle.formula.apply",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 finds the area of each outside piece, which are right triangles given by their legs."
+    },
+    {
+     "edge_id": "e715",
+     "prerequisite": "area.triangle.right.half-rectangle",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Each outside piece in the test problem is a right triangle with given legs, whose area is half a rectangle."
+    },
+    {
+     "edge_id": "e716",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The enclosing rectangle's area 6 x 5 is a single-digit product."
+    },
+    {
+     "edge_id": "e717",
+     "prerequisite": "subtraction.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The sum of the outside areas is subtracted from the rectangle's area of 30."
+    }
+   ]
+  },
+  {
+   "id": "area.application.triangle",
+   "concept": "area",
+   "facet": "multiplicative",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems that find the area of a triangular region",
+   "statement": "A real-world problem describes a triangular region with a given base and height; the learner finds its area.",
+   "assess": "A triangular sail is 4 m along its bottom edge and 6 m tall, measured straight up from the bottom edge. How many square meters of cloth make the sail?",
+   "proposed_edges": [
+    {
+     "edge_id": "e718",
+     "prerequisite": "area.triangle.formula.apply",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner finds the area of a triangular region from its given base and height with the triangle area rule."
+    }
+   ]
+  },
+  {
+   "id": "area.application.polygon",
+   "concept": "area",
+   "facet": "additive",
+   "level": 2,
+   "type": "application",
+   "name": "Solve real-world problems that find the area of a region made of rectangles and triangles",
+   "statement": "A real-world problem describes a region, with a picture and lengths, that can be cut into rectangles and triangles; the learner finds its area.",
+   "assess": "A patio is a 6 m by 4 m rectangle with a triangle added along one 4 m side; the triangle sticks out 3 m from that side (picture). How many square meters of tile cover the patio?",
+   "proposed_edges": [
+    {
+     "edge_id": "e719",
+     "prerequisite": "area.polygon.decompose",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner cuts the region into rectangles and triangles, finds each area, and adds the areas."
+    }
+   ]
+  },
+  {
+   "id": "volume.unit-fraction-cube",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 2,
+   "type": "concept",
+   "name": "Volume of a cube with a unit-fraction edge",
+   "statement": "A cube with edge length 1/n unit has volume 1/(n x n x n) cubic unit, because n x n x n such cubes pack one unit cube.",
+   "assess": "A 1-inch cube is cut into equal small cubes, each with edge 1/2 inch (picture). What is the volume, in cubic inches, of one small cube?",
+   "proposed_edges": [
+    {
+     "edge_id": "e720",
+     "prerequisite": "fraction.unit.part-whole",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The edge 1/n is a unit fraction of a unit length, and the volume 1/(n x n x n) is also a unit fraction."
+    },
+    {
+     "edge_id": "e721",
+     "prerequisite": "shapes.cube.identify",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The solid being measured is a cube, with equal edges and square faces."
+    },
+    {
+     "edge_id": "e722",
+     "prerequisite": "volume.additive",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each small cube has an equal share of the unit cube's volume because the equal pieces together make the whole volume."
+    },
+    {
+     "edge_id": "e723",
+     "prerequisite": "volume.packing",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Volume is the number of unit cubes that pack a solid, and here the small cubes pack a unit cube."
+    },
+    {
+     "edge_id": "e724",
+     "prerequisite": "volume.three-factor-product",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The count of n x n x n small cubes in a unit cube is a product of three whole numbers modeled as a prism."
+    },
+    {
+     "edge_id": "e725",
+     "prerequisite": "volume.unit-cube",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The volume of the small cube is compared with the volume of one cubic unit."
+    }
+   ]
+  },
+  {
+   "id": "volume.prism.fraction-edges.packing",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 2,
+   "type": "procedure",
+   "name": "Find the volume of a fraction-edged rectangular prism by packing it with unit-fraction cubes",
+   "statement": "A right rectangular prism whose edge lengths are multiples of 1/n unit is packed exactly by cubes of edge 1/n; its volume is the number of those cubes times 1/(n x n x n) cubic unit.",
+   "assess": "A box is 3/2 units long, 1 unit wide, and 1/2 unit tall. It is packed exactly with cubes of edge 1/2 unit, as shown. Use the packing to find the volume of the box in cubic units.",
+   "procedure": [
+    "Choose a unit fraction 1/n such that each edge length is a whole number of 1/n lengths.",
+    "Count the cubes of edge 1/n along each edge and multiply the three counts to get the number of cubes that pack the prism.",
+    "Multiply the number of cubes by the volume of one cube, 1/(n x n x n) cubic unit."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e726",
+     "prerequisite": "fraction.multiple-of-unit",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each edge is a whole number of 1/n lengths, and the volume is a whole number of unit-fraction cubic units."
+    },
+    {
+     "edge_id": "e727",
+     "prerequisite": "fraction.multiply-whole.unit-fraction",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 multiplies the number of cubes by a unit fraction of a cubic unit, as in 6 x 1/8."
+    },
+    {
+     "edge_id": "e728",
+     "prerequisite": "fraction.whole-number.as-fraction",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "An edge of 1 unit must be seen as n lengths of 1/n when counting cubes along it."
+    },
+    {
+     "edge_id": "e729",
+     "prerequisite": "volume.additive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The prism's volume is the number of cubes times the volume of one cube because the equal cubes together make the prism."
+    },
+    {
+     "edge_id": "e730",
+     "prerequisite": "volume.packing",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The volume is the number of cubes that pack the prism, each with a known volume."
+    },
+    {
+     "edge_id": "e731",
+     "prerequisite": "volume.three-factor-product",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The number of cubes that pack the prism is the product of the three counts along the edges."
+    },
+    {
+     "edge_id": "e732",
+     "prerequisite": "volume.unit-fraction-cube",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The volume of one packing cube, 1/(n x n x n) cubic unit, is multiplied by the number of cubes."
+    }
+   ]
+  },
+  {
+   "id": "volume.prism.fraction-edges.packing-equals-product",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 2,
+   "type": "justification",
+   "name": "Show that packing and multiplying edge lengths give the same volume for fractional edges",
+   "statement": "For a right rectangular prism with fractional edge lengths, the volume found by packing with unit-fraction cubes equals the product of the edge lengths, because counting the cubes and multiplying by the volume of one cube computes the same product of fractions.",
+   "assess": "A prism is 3/4 unit by 1/2 unit by 1 unit. Find its volume by packing it with cubes of edge 1/4 unit, and show why the result must equal 3/4 x 1/2 x 1.",
+   "proposed_edges": [
+    {
+     "edge_id": "e733",
+     "prerequisite": "fraction.equivalent.simple.generate",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Packing with cubes of edge 1/4 requires writing the 1/2 unit edge as 2/4."
+    },
+    {
+     "edge_id": "e734",
+     "prerequisite": "fraction.multiplication.product-rule",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Multiplying (a/n) x (b/n) x (c/n) gives (a x b x c)/(n x n x n), the cube count times one cube's volume."
+    },
+    {
+     "edge_id": "e735",
+     "prerequisite": "fraction.multiplication.symbolic",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The product 3/4 x 1/2 x 1 must be computed to compare it with the packing result."
+    },
+    {
+     "edge_id": "e736",
+     "prerequisite": "volume.prism.fraction-edges.packing",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement compares the volume found by packing with unit-fraction cubes to the product of the edge lengths."
+    }
+   ]
+  },
+  {
+   "id": "volume.prism.fraction-edges.lwh.apply",
+   "concept": "volume",
+   "facet": "multiplicative",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the volume of a fraction-edged rectangular prism with V = l x w x h",
+   "statement": "The volume of a right rectangular prism with fractional edge lengths is the product of its length, width and height.",
+   "assess": "Find the volume of a right rectangular prism that is 1/2 m long, 3/4 m wide and 2 m tall.",
+   "procedure": [
+    "Identify the length, width and height.",
+    "Multiply the three lengths.",
+    "Write the result in cubic units."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e737",
+     "prerequisite": "fraction.multiplication.symbolic",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 multiplies three lengths, at least one of them a fraction."
+    },
+    {
+     "edge_id": "e738",
+     "prerequisite": "volume.prism.formula.lwh",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The volume rule l x w x h for a rectangular prism is applied here with fractional edges."
+    },
+    {
+     "edge_id": "e739",
+     "prerequisite": "volume.prism.fraction-edges.packing-equals-product",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Packing with unit-fraction cubes shows the product of fractional edge lengths still gives the volume."
+    },
+    {
+     "edge_id": "e740",
+     "prerequisite": "volume.unit-cube",
+     "relation": "representational",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 writes the result in cubic units, the unit measured by a unit cube."
+    }
+   ]
+  },
+  {
+   "id": "volume.prism.fraction-edges.base-height.apply",
+   "concept": "volume",
+   "facet": "multiplicative",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the volume of a fraction-edged rectangular prism with V = B x h",
+   "statement": "The volume of a right rectangular prism with fractional edge lengths is the area of its base times its height.",
+   "assess": "A right rectangular prism has a base with area 5/2 square ft and a height of 3/4 ft. Find its volume.",
+   "procedure": [
+    "Find or read the area B of the base.",
+    "Multiply B by the height h."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e741",
+     "prerequisite": "fraction.multiplication.symbolic",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 multiplies the base area by the height, and at least one of them is a fraction."
+    },
+    {
+     "edge_id": "e742",
+     "prerequisite": "multiplication.array-area.fraction-sides.multiply",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Finding the base area from the fractional length and width of the base is multiplying the side lengths."
+    },
+    {
+     "edge_id": "e743",
+     "prerequisite": "volume.prism.formula.base-height",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The volume rule B x h for a rectangular prism is applied here with a fractional base area or height."
+    },
+    {
+     "edge_id": "e744",
+     "prerequisite": "volume.prism.fraction-edges.packing-equals-product",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Packing with unit-fraction cubes shows that multiplying fractional measures still gives the volume."
+    }
+   ]
+  },
+  {
+   "id": "volume.application.prism.fraction-edges.lwh",
+   "concept": "volume",
+   "facet": "multiplicative",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems about the volume of a box with fractional edge lengths",
+   "statement": "A real-world problem gives the length, width and height of a box-shaped object, at least one of them a fraction or mixed number; the learner finds its volume.",
+   "assess": "A box of rice is 4 in long, 3/2 in wide and 5/2 in tall. How many cubic inches of rice fill it?",
+   "proposed_edges": [
+    {
+     "edge_id": "e745",
+     "prerequisite": "fraction.mixed-number.multiplication",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement allows an edge given as a mixed number, which must be multiplied with the others."
+    },
+    {
+     "edge_id": "e746",
+     "prerequisite": "volume.prism.fraction-edges.lwh.apply",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner finds the volume of a box from its length, width and height with fractional edges."
+    }
+   ]
+  },
+  {
+   "id": "volume.application.prism.fraction-edges.base-height",
+   "concept": "volume",
+   "facet": "multiplicative",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems about the volume of a box from a fractional base area and height",
+   "statement": "A real-world problem gives the area of the base of a box-shaped object and its height, at least one of them a fraction; the learner finds its volume.",
+   "assess": "The bottom of a fish tank has an area of 3/2 square ft. Water fills the tank to a depth of 2/3 ft. How many cubic feet of water are in the tank?",
+   "proposed_edges": [
+    {
+     "edge_id": "e747",
+     "prerequisite": "volume.prism.fraction-edges.base-height.apply",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner multiplies the given base area by the height, at least one of them a fraction."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.polygon.draw",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 2,
+   "type": "procedure",
+   "name": "Draw a polygon in the coordinate plane from the coordinates of its vertices",
+   "statement": "A polygon is drawn in the coordinate plane by plotting its vertices, given as ordered pairs in any of the four quadrants, and joining them in the given order with segments.",
+   "assess": "On a coordinate grid, draw polygon ABCD with A(-3, 2), B(2, 2), C(2, -1) and D(-3, -1).",
+   "procedure": [
+    "Plot each vertex from its ordered pair.",
+    "Join consecutive vertices in the given order with segments, and join the last vertex to the first."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e748",
+     "prerequisite": "coordinate-plane.four-quadrants.plot",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Each vertex given as an ordered pair in any quadrant is plotted on the grid."
+    },
+    {
+     "edge_id": "e749",
+     "prerequisite": "segment.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Consecutive vertices are joined with line segments, each the part of a line between two endpoints."
+    },
+    {
+     "edge_id": "e750",
+     "prerequisite": "shapes.polygon.name-by-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about drawing a polygon, a closed figure of straight sides such as a triangle or quadrilateral."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.polygon.missing-vertex",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 2,
+   "type": "procedure",
+   "name": "Find the missing vertex of a rectangle with sides parallel to the axes",
+   "statement": "Find the fourth vertex of a rectangle with sides parallel to the axes from three given vertices with coordinates of any sign, by any reliable method: plotting the points and completing the rectangle, or using that each vertex shares its first coordinate with one neighboring vertex and its second coordinate with the other.",
+   "assess": "Three vertices of a rectangle with sides parallel to the axes are (-4, 3), (2, 3) and (2, -1). What are the coordinates of the fourth vertex?",
+   "proposed_edges": [
+    {
+     "edge_id": "e751",
+     "prerequisite": "coordinate-plane.four-quadrants.plot",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The three given vertices, with coordinates of any sign, are plotted on the plane."
+    },
+    {
+     "edge_id": "e752",
+     "prerequisite": "coordinate-plane.four-quadrants.read",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The coordinates of the completed fourth corner are read from the plane."
+    },
+    {
+     "edge_id": "e753",
+     "prerequisite": "coordinate-plane.segment-length.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Points sharing a first or second coordinate lie on one vertical or horizontal line, which fixes the shared coordinates."
+    },
+    {
+     "edge_id": "e754",
+     "prerequisite": "parallel.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says the sides are parallel to the axes, so the learner must know what parallel means."
+    },
+    {
+     "edge_id": "e755",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The fourth corner is found by completing a rectangle, a quadrilateral with four right angles."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.segment-length.meaning",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 2,
+   "type": "concept",
+   "name": "The length of a horizontal or vertical segment from coordinates",
+   "statement": "Two points with the same first coordinate lie on one vertical line, and the length of the segment joining them is the distance between their second coordinates; two points with the same second coordinate lie on one horizontal line, and the length is the distance between their first coordinates.",
+   "assess": "Segment PQ joins P(3, -2) and Q(3, 5). Is PQ horizontal or vertical, and which coordinates of P and Q do you compare to find its length?",
+   "proposed_edges": [
+    {
+     "edge_id": "e756",
+     "prerequisite": "coordinate-plane.four-quadrants.plot",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The points have coordinates of any sign, and the segment joining them is seen by plotting them."
+    },
+    {
+     "edge_id": "e757",
+     "prerequisite": "coordinate-plane.ordered-pair.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Points with the same first coordinate are the same distance from the vertical axis, so they lie on one vertical line."
+    },
+    {
+     "edge_id": "e758",
+     "prerequisite": "rational-number.integer.number-line",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The length is the distance between two coordinates, which are positions on a number line."
+    },
+    {
+     "edge_id": "e759",
+     "prerequisite": "segment.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement concerns the segment joining the two points, the part of a line between two endpoints."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.segment-length.same-sign",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find a horizontal or vertical length when the differing coordinates have the same sign",
+   "statement": "When two points share one coordinate and their other coordinates have the same sign, the points are on the same side of the axis, and the length of the segment joining them is the difference of the absolute values of those coordinates.",
+   "assess": "Without a grid, find the length of the segment joining (-2, -7) and (-2, -3).",
+   "procedure": [
+    "Find the coordinate the points do not share.",
+    "Take the absolute value of each of those two coordinates.",
+    "Subtract the smaller absolute value from the larger."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e760",
+     "prerequisite": "absolute-value.distance.integer",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 takes the absolute value of each differing coordinate, which is its distance from 0."
+    },
+    {
+     "edge_id": "e761",
+     "prerequisite": "coordinate-plane.quadrants.signs",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says same-sign coordinates put the points on the same side of the axis, which the signs of coordinates tell."
+    },
+    {
+     "edge_id": "e762",
+     "prerequisite": "coordinate-plane.segment-length.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The length is the distance between the two differing coordinates of points on one horizontal or vertical line."
+    },
+    {
+     "edge_id": "e763",
+     "prerequisite": "rational-number.integer.number-line",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Coordinates with the same sign lie on the same side of 0 on the number line."
+    },
+    {
+     "edge_id": "e764",
+     "prerequisite": "subtraction.within-10",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The absolute values 7 and 3 are subtracted to give 4."
+    },
+    {
+     "edge_id": "e765",
+     "prerequisite": "subtraction.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 subtracts the smaller absolute value from the larger."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.segment-length.opposite-sign",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find a horizontal or vertical length when the differing coordinates have opposite signs",
+   "statement": "When two points share one coordinate and their other coordinates have opposite signs, the points are on opposite sides of the axis, and the length of the segment joining them is the sum of the absolute values of those coordinates.",
+   "assess": "Without a grid, find the length of the segment joining (4, -3) and (4, 5).",
+   "procedure": [
+    "Find the coordinate the points do not share.",
+    "Take the absolute value of each of those two coordinates.",
+    "Add the two absolute values."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e766",
+     "prerequisite": "absolute-value.distance.integer",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 takes the absolute value of each differing coordinate, which is its distance from 0."
+    },
+    {
+     "edge_id": "e767",
+     "prerequisite": "addition.within-10",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The absolute values 3 and 5 are added to give 8."
+    },
+    {
+     "edge_id": "e768",
+     "prerequisite": "addition.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 adds the two absolute values, the distances from 0 on each side."
+    },
+    {
+     "edge_id": "e769",
+     "prerequisite": "coordinate-plane.quadrants.signs",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says opposite-sign coordinates put the points on opposite sides of the axis, which the signs of coordinates tell."
+    },
+    {
+     "edge_id": "e770",
+     "prerequisite": "coordinate-plane.segment-length.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The length is the distance between the two differing coordinates of points on one horizontal or vertical line."
+    },
+    {
+     "edge_id": "e771",
+     "prerequisite": "rational-number.integer.number-line",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Coordinates with opposite signs lie on opposite sides of 0, so the segment crosses the axis."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.application.perimeter",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 3,
+   "type": "application",
+   "name": "Find the perimeter of a polygon with horizontal and vertical sides from its vertices",
+   "statement": "A mathematical problem gives the vertices of a polygon whose sides are all horizontal or vertical, in any quadrants; the learner finds its perimeter from the coordinates.",
+   "assess": "A polygon has vertices (-3, 4), (2, 4), (2, -2) and (-3, -2). Find its perimeter.",
+   "proposed_edges": [
+    {
+     "edge_id": "e772",
+     "prerequisite": "coordinate-plane.polygon.draw",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Consecutive vertices in the list are joined by sides, as when a polygon is drawn from its vertices."
+    },
+    {
+     "edge_id": "e773",
+     "prerequisite": "coordinate-plane.segment-length.opposite-sign",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Sides whose differing coordinates have opposite signs are measured by the sum of absolute values."
+    },
+    {
+     "edge_id": "e774",
+     "prerequisite": "coordinate-plane.segment-length.same-sign",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Sides whose differing coordinates share a sign are measured by the difference of absolute values."
+    },
+    {
+     "edge_id": "e775",
+     "prerequisite": "perimeter.polygon.from-sides",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The perimeter is the sum of the side lengths found from the coordinates."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.application.rectangle-area",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 3,
+   "type": "application",
+   "name": "Find the area of a rectangle with sides parallel to the axes from its vertices",
+   "statement": "A mathematical problem gives the vertices of a rectangle with sides parallel to the axes, in any quadrants; the learner finds its area from the coordinates.",
+   "assess": "A rectangle has vertices (-2, 3), (4, 3), (4, -1) and (-2, -1). Find its area.",
+   "proposed_edges": [
+    {
+     "edge_id": "e776",
+     "prerequisite": "area.rectangle.length-times-width",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The area is the product of the rectangle's length and width found from the coordinates."
+    },
+    {
+     "edge_id": "e777",
+     "prerequisite": "coordinate-plane.polygon.draw",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Consecutive vertices in the list are joined by sides, as when a polygon is drawn from its vertices."
+    },
+    {
+     "edge_id": "e778",
+     "prerequisite": "coordinate-plane.segment-length.opposite-sign",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Sides whose differing coordinates have opposite signs are measured by the sum of absolute values."
+    },
+    {
+     "edge_id": "e779",
+     "prerequisite": "coordinate-plane.segment-length.same-sign",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Sides whose differing coordinates share a sign are measured by the difference of absolute values."
+    },
+    {
+     "edge_id": "e780",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The side lengths 6 and 4 give a single-digit product."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.application.distance.real-world",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 3,
+   "type": "application",
+   "name": "Find the distance between two places on a coordinate map that share a coordinate",
+   "statement": "A real-world problem places two locations on a coordinate map with the same first coordinate or the same second coordinate, in any quadrants; the learner finds the distance between them along the grid line.",
+   "assess": "On a town map with a coordinate grid measured in blocks, the library is at (-4, 3) and the school is at (5, 3). How many blocks apart are they along the street that joins them?",
+   "proposed_edges": [
+    {
+     "edge_id": "e781",
+     "prerequisite": "coordinate-plane.application.real-world.four-quadrants",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Places on the town map are located by signed coordinates on the map grid."
+    },
+    {
+     "edge_id": "e782",
+     "prerequisite": "coordinate-plane.segment-length.opposite-sign",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Places in different quadrants that share a coordinate are separated by the sum of absolute values."
+    },
+    {
+     "edge_id": "e783",
+     "prerequisite": "coordinate-plane.segment-length.same-sign",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Places in one quadrant that share a coordinate are separated by the difference of absolute values."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.application.missing-corner.real-world",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 2,
+   "type": "application",
+   "name": "Find the missing corner of a rectangular region on a coordinate map",
+   "statement": "A real-world problem gives three corners of a rectangular region, with sides parallel to the axes, on a coordinate map in any quadrants; the learner finds the fourth corner.",
+   "assess": "A park is a rectangle on a city map with sides along the grid lines. Three of its corners are at (-5, 2), (3, 2) and (3, -4). Where is the fourth corner?",
+   "proposed_edges": [
+    {
+     "edge_id": "e784",
+     "prerequisite": "coordinate-plane.application.real-world.four-quadrants",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The corners are places on a map grid located by signed coordinates."
+    },
+    {
+     "edge_id": "e785",
+     "prerequisite": "coordinate-plane.polygon.missing-vertex",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The fourth corner of the rectangular region is found as the missing vertex of an axis-parallel rectangle."
+    }
+   ]
+  },
+  {
+   "id": "shapes.prism.right.meaning",
+   "concept": "shapes",
+   "facet": "properties",
+   "level": 2,
+   "type": "concept",
+   "name": "A right prism",
+   "statement": "A right prism is a solid with two congruent, parallel polygon bases joined by rectangular faces that are perpendicular to the bases; the distance between the bases is its height.",
+   "assess": "Pictures show (a) a box, (b) a solid with two parallel triangles joined by three rectangles perpendicular to them, (c) a solid with a square base and four triangles meeting at a point, (d) a solid with two parallel squares joined by four leaning parallelograms. Which are right prisms?",
+   "proposed_edges": [
+    {
+     "edge_id": "e786",
+     "prerequisite": "parallel.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The two bases lie in parallel positions and never meet, however far they are extended."
+    },
+    {
+     "edge_id": "e787",
+     "prerequisite": "perpendicular.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rectangular faces are perpendicular to the bases, meeting them at right angles."
+    },
+    {
+     "edge_id": "e788",
+     "prerequisite": "shapes.compare.same-different",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The two bases must be the same shape and size, which is found by comparing the whole shapes."
+    },
+    {
+     "edge_id": "e789",
+     "prerequisite": "shapes.polygon.name-by-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The bases are polygons, such as triangles and quadrilaterals, named by their number of sides."
+    },
+    {
+     "edge_id": "e790",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The side faces must be rectangles, with four right angles, to tell right prisms from leaning ones."
+    },
+    {
+     "edge_id": "e791",
+     "prerequisite": "shapes.solid.parts",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A prism is described by its faces and bases, which are the flat surfaces of a solid."
+    }
+   ]
+  },
+  {
+   "id": "shapes.pyramid.meaning",
+   "concept": "shapes",
+   "facet": "properties",
+   "level": 2,
+   "type": "concept",
+   "name": "A pyramid",
+   "statement": "A pyramid is a solid with one polygon base and one triangular face on each side of the base, all the triangles meeting at a single point, the apex.",
+   "assess": "Pictures show (a) a solid with a square base and four triangles meeting at a point, (b) a solid with two parallel triangles joined by three rectangles, (c) a cone, (d) a solid made of four triangles. Which are pyramids?",
+   "proposed_edges": [
+    {
+     "edge_id": "e792",
+     "prerequisite": "shapes.polygon.name-by-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The base is a polygon and the side faces are triangles, each named by its number of sides."
+    },
+    {
+     "edge_id": "e793",
+     "prerequisite": "shapes.solid.parts",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A pyramid is described by its base face, its triangular faces and the apex corner where they meet."
+    }
+   ]
+  },
+  {
+   "id": "net.meaning",
+   "concept": "net",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "A net of a solid",
+   "statement": "A net of a solid with flat faces is a flat figure made of all of its faces, joined edge to edge, that folds up into the solid with no gaps and no overlaps.",
+   "assess": "Three arrangements of six equal squares are shown: (a) a row of four squares with one square above and one below the second square, (b) a row of four squares with one square above each of the first two, (c) a 2-by-3 block. Which fold into a cube?",
+   "proposed_edges": [
+    {
+     "edge_id": "e794",
+     "prerequisite": "shapes.cube.identify",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test asks which arrangements of six equal squares fold into a cube, which has six equal square faces."
+    },
+    {
+     "edge_id": "e795",
+     "prerequisite": "shapes.dimension.flat-solid",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A net is a flat figure that folds up into a solid shape."
+    },
+    {
+     "edge_id": "e796",
+     "prerequisite": "shapes.solid.parts",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A net contains every face of the solid, so the learner must be able to identify the faces."
+    }
+   ]
+  },
+  {
+   "id": "net.draw",
+   "concept": "net",
+   "facet": "core",
+   "level": 2,
+   "type": "representation",
+   "name": "Draw a net of a prism or pyramid made of rectangles and triangles",
+   "statement": "A net of a right prism or a pyramid is drawn by laying out each of its rectangular and triangular faces, with its dimensions, so that faces that meet along an edge in the solid share that edge in the net wherever the net is joined.",
+   "assess": "Draw and label a net of a square pyramid whose base edges are 4 cm and whose triangular faces each have a height of 3 cm.",
+   "procedure": [
+    "List the faces of the solid and the dimensions of each.",
+    "Draw one face, usually a base.",
+    "Draw each face that meets it along an edge against that edge, and continue until every face is drawn once.",
+    "Check that the net would fold into the solid with no gaps or overlaps, and label the edge lengths."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e797",
+     "prerequisite": "height.base-height",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Each triangular face is drawn with a base of 4 cm and a height of 3 cm."
+    },
+    {
+     "edge_id": "e798",
+     "prerequisite": "measurement.length.ruler",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Faces are drawn with their dimensions and labeled with edge lengths, using a ruler."
+    },
+    {
+     "edge_id": "e799",
+     "prerequisite": "net.meaning",
+     "relation": "justificatory",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Checking that the net folds into the solid with no gaps or overlaps uses what a net is."
+    },
+    {
+     "edge_id": "e800",
+     "prerequisite": "perpendicular.draw",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The triangle's height of 3 cm is drawn perpendicular to its base."
+    },
+    {
+     "edge_id": "e801",
+     "prerequisite": "shapes.prism.right.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Drawing the net of a right prism requires knowing its bases and its rectangular side faces."
+    },
+    {
+     "edge_id": "e802",
+     "prerequisite": "shapes.pyramid.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Drawing the net of a pyramid requires knowing its polygon base and its triangular faces."
+    }
+   ]
+  },
+  {
+   "id": "surface-area.meaning",
+   "concept": "surface-area",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Surface area as the total area of all faces",
+   "statement": "The surface area of a solid with flat faces is the sum of the areas of all of its faces, measured in square units.",
+   "assess": "Which tells the surface area of a closed box: (a) the area of its bottom, (b) the total area of all six of its faces, (c) the number of unit cubes that fill it, (d) the sum of its edge lengths?",
+   "proposed_edges": [
+    {
+     "edge_id": "e803",
+     "prerequisite": "area.additive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The surface area is the sum of the areas of the faces."
+    },
+    {
+     "edge_id": "e804",
+     "prerequisite": "area.covering.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each face has an area, the number of unit squares that cover it."
+    },
+    {
+     "edge_id": "e805",
+     "prerequisite": "area.unit-square",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The surface area is measured in square units, the unit of one square unit of area."
+    },
+    {
+     "edge_id": "e806",
+     "prerequisite": "shapes.solid.parts",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The surface area is defined over all the faces of a solid."
+    },
+    {
+     "edge_id": "e807",
+     "prerequisite": "volume.packing",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test tells surface area apart from the number of unit cubes that fill the box."
+    }
+   ]
+  },
+  {
+   "id": "surface-area.net.rectangular-prism",
+   "concept": "surface-area",
+   "facet": "core",
+   "level": 2,
+   "type": "procedure",
+   "name": "Find the surface area of a rectangular prism from its net",
+   "statement": "The surface area of a right rectangular prism is the sum of the areas of the six rectangles in its net.",
+   "assess": "A net of a box is made of six labeled rectangles: two are 5 cm by 3 cm, two are 5 cm by 2 cm, and two are 3 cm by 2 cm. Find the surface area of the box.",
+   "procedure": [
+    "Find the area of each rectangle in the net.",
+    "Add the six areas."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e808",
+     "prerequisite": "addition.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The six rectangle areas 15, 15, 10, 10, 6 and 6 are added."
+    },
+    {
+     "edge_id": "e809",
+     "prerequisite": "area.rectangle.length-times-width",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The area of each rectangle in the net is its length times its width."
+    },
+    {
+     "edge_id": "e810",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Each rectangle's area, such as 5 x 3, is a single-digit product."
+    },
+    {
+     "edge_id": "e811",
+     "prerequisite": "net.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The six rectangles are read from a net, a flat figure of all the faces."
+    },
+    {
+     "edge_id": "e812",
+     "prerequisite": "shapes.prism.right.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The solid is a right rectangular prism whose faces are rectangles."
+    },
+    {
+     "edge_id": "e813",
+     "prerequisite": "surface-area.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The surface area is the sum of the areas of all the faces."
+    }
+   ]
+  },
+  {
+   "id": "surface-area.net.triangle-faces",
+   "concept": "surface-area",
+   "facet": "core",
+   "level": 2,
+   "type": "procedure",
+   "name": "Find the surface area of a solid with triangular faces from its net",
+   "statement": "The surface area of a solid whose net is made of rectangles and triangles, such as a triangular prism or a pyramid, is the sum of the areas of the rectangles and triangles in its net.",
+   "assess": "A net of a square pyramid has a square base 4 cm on a side and four triangles, each with base 4 cm and height 3 cm. Find the surface area of the pyramid.",
+   "procedure": [
+    "Find the area of each rectangle in the net.",
+    "Find the area of each triangle in the net from its base and height.",
+    "Add all the areas."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e814",
+     "prerequisite": "addition.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The areas of the square and the four triangles are added."
+    },
+    {
+     "edge_id": "e815",
+     "prerequisite": "area.rectangle.length-times-width",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The area of each rectangle in the net is its length times its width."
+    },
+    {
+     "edge_id": "e816",
+     "prerequisite": "area.triangle.formula.apply",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 finds the area of each triangle in the net from its base and height."
+    },
+    {
+     "edge_id": "e817",
+     "prerequisite": "area.triangle.half-parallelogram",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The area of each triangle in the net is found from its base and height."
+    },
+    {
+     "edge_id": "e818",
+     "prerequisite": "height.base-height",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Each triangle's base and the height to that base are identified from the net."
+    },
+    {
+     "edge_id": "e819",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The square base 4 x 4 and the triangle product 4 x 3 are single-digit products."
+    },
+    {
+     "edge_id": "e820",
+     "prerequisite": "net.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rectangles and triangles are read from a net, a flat figure of all the faces."
+    },
+    {
+     "edge_id": "e821",
+     "prerequisite": "shapes.prism.right.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The solid may be a triangular prism, a right prism with triangular bases."
+    },
+    {
+     "edge_id": "e822",
+     "prerequisite": "shapes.pyramid.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The solid may be a pyramid, with a polygon base and triangular faces."
+    },
+    {
+     "edge_id": "e823",
+     "prerequisite": "surface-area.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The surface area is the sum of the areas of all the faces."
+    }
+   ]
+  },
+  {
+   "id": "surface-area.rectangular-prism.from-dimensions",
+   "concept": "surface-area",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the surface area of a rectangular prism from its length, width and height",
+   "statement": "A right rectangular prism has three pairs of identical faces, l by w, l by h and w by h, so its surface area is twice the sum of lw, lh and wh.",
+   "assess": "Without drawing a net, find the surface area of a right rectangular prism that is 5 cm long, 3 cm wide and 2 cm tall.",
+   "procedure": [
+    "Find the areas l x w, l x h and w x h of three faces that meet at one corner.",
+    "Add the three areas.",
+    "Double the sum."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e824",
+     "prerequisite": "addition.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The three face areas 15, 10 and 6 are added to 31."
+    },
+    {
+     "edge_id": "e825",
+     "prerequisite": "area.rectangle.length-times-width",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The areas l x w, l x h and w x h are areas of rectangles."
+    },
+    {
+     "edge_id": "e826",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule is written with the letters l, w and h, each standing for a number."
+    },
+    {
+     "edge_id": "e827",
+     "prerequisite": "multiplication.by-one-digit",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Doubling the sum 31 multiplies a two-digit number by 2."
+    },
+    {
+     "edge_id": "e828",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The products 5 x 3, 5 x 2 and 3 x 2 are single-digit products."
+    },
+    {
+     "edge_id": "e829",
+     "prerequisite": "surface-area.net.rectangular-prism",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A net shows six rectangles in three identical pairs, so the surface area is twice the sum of three areas."
+    }
+   ]
+  },
+  {
+   "id": "surface-area.prism.from-dimensions",
+   "concept": "surface-area",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the surface area of a right prism from its base and height",
+   "statement": "The surface area of a right prism is the sum of the areas of its two congruent bases and of its rectangular side faces; each side face has one side of the base as one dimension and the prism's height as the other.",
+   "assess": "A right prism is 10 cm long. Its bases are right triangles with sides 3 cm, 4 cm and 5 cm. Find its surface area.",
+   "procedure": [
+    "Find the area of the base and double it.",
+    "For each side of the base, multiply its length by the height of the prism.",
+    "Add the doubled base area and all the side-face areas."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e830",
+     "prerequisite": "addition.within-1000",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The doubled base area and the three side-face areas total 132, a sum within 1000."
+    },
+    {
+     "edge_id": "e831",
+     "prerequisite": "area.polygon.decompose",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The area of the base, a polygon, is found before it is doubled."
+    },
+    {
+     "edge_id": "e832",
+     "prerequisite": "area.rectangle.length-times-width",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Each side face is a rectangle with a side of the base and the prism's height as its dimensions."
+    },
+    {
+     "edge_id": "e833",
+     "prerequisite": "area.triangle.formula.apply",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The assess problem has right triangles as bases, so the base area comes from base and height."
+    },
+    {
+     "edge_id": "e834",
+     "prerequisite": "multiplication.by-multiple-of-ten",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The side faces 3 x 10, 4 x 10 and 5 x 10 multiply a one-digit number by a multiple of 10."
+    },
+    {
+     "edge_id": "e835",
+     "prerequisite": "multiplication.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 doubles the base area, and step 2 multiplies each side length by the height."
+    },
+    {
+     "edge_id": "e836",
+     "prerequisite": "shapes.prism.right.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The solid is a right prism with congruent bases and rectangular side faces whose other dimension is the prism's height."
+    },
+    {
+     "edge_id": "e837",
+     "prerequisite": "surface-area.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The surface area is the sum of the areas of the two bases and the side faces."
+    }
+   ]
+  },
+  {
+   "id": "surface-area.application.rectangular-prism",
+   "concept": "surface-area",
+   "facet": "core",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems about the surface area of a box",
+   "statement": "A real-world problem describes a closed box-shaped object by its length, width and height and asks how much material covers it; the learner finds its surface area.",
+   "assess": "A gift box is 6 in long, 4 in wide and 2 in tall. How many square inches of paper cover it exactly, with no overlap?",
+   "proposed_edges": [
+    {
+     "edge_id": "e838",
+     "prerequisite": "surface-area.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The paper that covers the closed box exactly is its surface area, the total area of all faces."
+    },
+    {
+     "edge_id": "e839",
+     "prerequisite": "surface-area.rectangular-prism.from-dimensions",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner finds the surface area of a box from its length, width and height."
+    }
+   ]
+  },
+  {
+   "id": "surface-area.application.triangle-faces",
+   "concept": "surface-area",
+   "facet": "core",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems about the surface area of an object with triangular and rectangular faces",
+   "statement": "A real-world problem describes an object shaped like a solid whose faces are triangles and rectangles, such as a triangular prism or a pyramid, with the lengths needed, and asks how much material covers it; the learner finds its surface area.",
+   "assess": "A tent is a triangular prism 8 ft long, with a floor. Each triangular end has a base of 6 ft, a height of 4 ft and slanted sides of 5 ft. How many square feet of canvas make the tent, floor included?",
+   "proposed_edges": [
+    {
+     "edge_id": "e840",
+     "prerequisite": "height.base-height",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The tent's triangular end has a given height of 4 ft that must be chosen over the slanted side of 5 ft."
+    },
+    {
+     "edge_id": "e841",
+     "prerequisite": "shapes.prism.right.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The object may be a triangular prism, so the learner must identify its two triangular ends and rectangular sides."
+    },
+    {
+     "edge_id": "e842",
+     "prerequisite": "shapes.pyramid.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The object may be a pyramid, so the learner must identify its base and triangular faces."
+    },
+    {
+     "edge_id": "e843",
+     "prerequisite": "surface-area.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The material that covers the object exactly is its surface area, the total area of its faces."
+    },
+    {
+     "edge_id": "e844",
+     "prerequisite": "surface-area.net.triangle-faces",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner adds the areas of the rectangles and triangles of an object such as a triangular prism or pyramid."
+    }
+   ]
+  },
+  {
+   "id": "scale-drawing.meaning",
+   "concept": "scale-drawing",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "A scale drawing multiplies every length by the same factor",
+   "statement": "A scale drawing of a figure has the same angles as the figure, and every length in the drawing is the actual length multiplied by one and the same factor; the scale states which actual length a drawing length stands for.",
+   "assess": "Rectangle A is 4 cm by 6 cm. Rectangle B is 6 cm by 8 cm. Rectangle C is 6 cm by 9 cm. Which of B and C is a scale drawing of A?",
+   "proposed_edges": [
+    {
+     "edge_id": "e845",
+     "prerequisite": "angle.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The drawing has the same angles as the figure, so the learner must know what an angle is."
+    },
+    {
+     "edge_id": "e846",
+     "prerequisite": "angle.measure.degrees",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says the drawing has the same angles as the figure, so the learner must compare angle measures."
+    },
+    {
+     "edge_id": "e847",
+     "prerequisite": "multiplication.scaling.resize",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Every length in the drawing is the actual length multiplied by one and the same factor, a resizing."
+    },
+    {
+     "edge_id": "e848",
+     "prerequisite": "ratio.composed-unit",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The scale states which actual length one drawing length stands for, such as for every 1 cm there are 2 m."
+    },
+    {
+     "edge_id": "e849",
+     "prerequisite": "ratio.equivalent",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test checks whether pairs of corresponding side lengths have equivalent ratios, such as 4:6 and 6:9."
+    }
+   ]
+  },
+  {
+   "id": "scale-drawing.actual-length",
+   "concept": "scale-drawing",
+   "facet": "core",
+   "level": 2,
+   "type": "procedure",
+   "name": "Find an actual length from a scale drawing",
+   "statement": "An actual length is found from its length in a scale drawing by proportional reasoning with the scale: drawing length and actual length are in the same ratio as the two lengths named in the scale.",
+   "assess": "On a plan, 2 cm represents 5 m. A wall is 8 cm long on the plan. How long is the actual wall?",
+   "procedure": [
+    "Write the scale as a pair of corresponding lengths, drawing length to actual length.",
+    "Find how many times the scale's drawing length fits into the given drawing length.",
+    "Multiply the scale's actual length by that number."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e850",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 finds how many times the scale's drawing length fits into the given drawing length, here 8 divided by 2."
+    },
+    {
+     "edge_id": "e851",
+     "prerequisite": "multiplication.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 multiplies the scale's actual length by that number, here 4 times 5."
+    },
+    {
+     "edge_id": "e852",
+     "prerequisite": "ratio.equivalent",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Drawing length and actual length are in the same ratio as the two lengths named in the scale."
+    },
+    {
+     "edge_id": "e853",
+     "prerequisite": "ratio.table.missing-value",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Scaling up the scale's pair of lengths to the given drawing length finds the missing actual length."
+    },
+    {
+     "edge_id": "e854",
+     "prerequisite": "scale-drawing.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The scale states which actual length one drawing length stands for."
+    }
+   ]
+  },
+  {
+   "id": "scale-drawing.actual-area",
+   "concept": "scale-drawing",
+   "facet": "core",
+   "level": 2,
+   "type": "procedure",
+   "name": "Find an actual area from a scale drawing",
+   "statement": "The actual area of a figure in a scale drawing is found by converting the drawing lengths it needs to actual lengths with the scale and then computing the area from the actual lengths.",
+   "assess": "A rectangular room is drawn 4 cm by 3 cm. The scale is 1 cm to 2 m. What is the actual area of the room?",
+   "procedure": [
+    "Convert each drawing length needed for the area to an actual length with the scale.",
+    "Compute the area from the actual lengths."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e855",
+     "prerequisite": "area.rectangle.length-times-width",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The room is a rectangle, so its area is the product of its actual length and width."
+    },
+    {
+     "edge_id": "e856",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The actual room area 8 x 6 is a single-digit product."
+    },
+    {
+     "edge_id": "e857",
+     "prerequisite": "scale-drawing.actual-length",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Each drawing length that the area calculation uses is converted to an actual length with the scale."
+    }
+   ]
+  },
+  {
+   "id": "scale-drawing.area.scale-factor-squared",
+   "concept": "scale-drawing",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "Scaling lengths by k scales area by k x k",
+   "statement": "When every length of a figure is multiplied by k, its area is multiplied by k x k.",
+   "assess": "Every side of a rectangle is multiplied by 3. Is its area multiplied by 3? If not, by what number is it multiplied?",
+   "proposed_edges": [
+    {
+     "edge_id": "e858",
+     "prerequisite": "area.rectangle.length-times-width",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Area as length times width shows that multiplying both lengths by k multiplies the area by k x k."
+    },
+    {
+     "edge_id": "e859",
+     "prerequisite": "expressions.product.regroup-factors",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Rewriting (k x l) x (k x w) as (k x k) x (l x w) reorders and regroups the factors."
+    },
+    {
+     "edge_id": "e860",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement uses the letter k for any factor."
+    },
+    {
+     "edge_id": "e861",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test's factor 3 gives the product 3 x 3, a single-digit product."
+    },
+    {
+     "edge_id": "e862",
+     "prerequisite": "scale-drawing.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement multiplies every length of a figure by k, as a scale drawing does."
+    }
+   ]
+  },
+  {
+   "id": "scale-drawing.reproduce",
+   "concept": "scale-drawing",
+   "facet": "core",
+   "level": 2,
+   "type": "procedure",
+   "name": "Redraw a scale drawing at a different scale",
+   "statement": "A scale drawing is redrawn at a new scale by finding each actual length from the old scale, converting it to a drawing length with the new scale, and drawing the figure with those lengths and the same angles.",
+   "assess": "A rectangular garden is drawn 6 cm by 4 cm with the scale 1 cm to 2 m. Redraw it with the scale 1 cm to 4 m, labeling the new side lengths.",
+   "procedure": [
+    "Find the actual length of each side from the old scale.",
+    "Find the new drawing length of each side from the new scale.",
+    "Draw the figure with the new lengths and the same angles."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e863",
+     "prerequisite": "angle.draw-by-type",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The garden's corners are right angles that must be drawn again."
+    },
+    {
+     "edge_id": "e864",
+     "prerequisite": "angle.protractor.sketch",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 draws the figure with the same angles, which requires drawing an angle of given measure."
+    },
+    {
+     "edge_id": "e865",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 divides each actual length by the new scale's actual length to find how many drawing units it takes."
+    },
+    {
+     "edge_id": "e866",
+     "prerequisite": "measurement.length.ruler",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The figure is drawn with the new lengths, measured out with a ruler."
+    },
+    {
+     "edge_id": "e867",
+     "prerequisite": "ratio.equivalent",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 turns an actual length into a drawing length with the new scale, which uses equivalent ratios in the other direction."
+    },
+    {
+     "edge_id": "e868",
+     "prerequisite": "ratio.table.missing-value",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The new drawing length is the missing value in the new scale's pair of corresponding lengths."
+    },
+    {
+     "edge_id": "e869",
+     "prerequisite": "scale-drawing.actual-length",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The actual length of each side is found from the old scale."
+    },
+    {
+     "edge_id": "e870",
+     "prerequisite": "scale-drawing.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The redrawn figure is a scale drawing with the same angles and all lengths multiplied by one factor."
+    }
+   ]
+  }
+ ]
+}

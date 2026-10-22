@@ -1,0 +1,2256 @@
+{
+ "boundary_nodes": [],
+ "nodes": [
+  {
+   "id": "circle.center-radius",
+   "concept": "circle",
+   "facet": "figure",
+   "level": 2,
+   "type": "concept",
+   "name": "A circle as the points at one distance from a center",
+   "statement": "A circle is all the points in a plane at one fixed distance, the radius, from a fixed point, the center.",
+   "assess": "A circle has center O and radius 5 cm. Point Q is 4 cm from O and point R is 6 cm from O. Which of Q and R is on the circle, inside it, or outside it?",
+   "proposed_edges": [
+    {
+     "edge_id": "e871",
+     "prerequisite": "comparing.whole-numbers.numerals-within-10",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Telling whether Q at 4 cm and R at 6 cm are inside or outside means comparing each distance with 5."
+    },
+    {
+     "edge_id": "e872",
+     "prerequisite": "measurement.length.attribute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The radius is a distance, which is the length between the center and a point of the circle."
+    },
+    {
+     "edge_id": "e873",
+     "prerequisite": "point.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The center is a fixed point, and the circle is made of points at one distance from it."
+    },
+    {
+     "edge_id": "e874",
+     "prerequisite": "segment.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The radius is the distance from the center to a point, which is the length of the segment joining those two points."
+    }
+   ]
+  },
+  {
+   "id": "circle.diameter",
+   "concept": "circle",
+   "facet": "figure",
+   "level": 2,
+   "type": "concept",
+   "name": "A diameter of a circle",
+   "statement": "A diameter of a circle is a segment that passes through the center and has both endpoints on the circle; its length is twice the radius.",
+   "assess": "In the picture, segment AB has both endpoints on the circle but misses the center, and segment CD passes through the center with both endpoints on the circle. Which is a diameter? The radius is 3 cm; how long is it?",
+   "proposed_edges": [
+    {
+     "edge_id": "e875",
+     "prerequisite": "addition.doubles.fact",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Finding the diameter for a 3 cm radius means doubling 3, since the diameter is twice the radius."
+    },
+    {
+     "edge_id": "e876",
+     "prerequisite": "addition.within-10",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Finding the diameter from a 3 cm radius means doubling it, which is the sum 3 + 3."
+    },
+    {
+     "edge_id": "e877",
+     "prerequisite": "circle.center-radius",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A diameter is defined through the center and points on the circle, and its length is twice the radius."
+    },
+    {
+     "edge_id": "e878",
+     "prerequisite": "segment.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A diameter is a segment with two endpoints, and both endpoints lie on the circle."
+    }
+   ]
+  },
+  {
+   "id": "construction.circle.radius-diameter",
+   "concept": "construction",
+   "facet": "core",
+   "level": 2,
+   "type": "procedure",
+   "name": "Draw a circle with a given radius or diameter using a compass",
+   "statement": "A circle with a given radius is drawn with a compass opened to that radius and turned about the center; for a given diameter the compass is opened to half the diameter.",
+   "assess": "With a compass and ruler, draw a circle with a diameter of 8 cm.",
+   "procedure": [
+    "If the diameter is given, halve it to get the radius.",
+    "Open the compass so its point and pencil are one radius apart, measured on a ruler.",
+    "Put the point on the center and turn the compass once around."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e879",
+     "prerequisite": "circle.center-radius",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The compass turned about the center makes all points at one fixed distance, the radius, from that center."
+    },
+    {
+     "edge_id": "e880",
+     "prerequisite": "circle.diameter",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A given diameter is converted to the radius, because a diameter is twice the radius."
+    },
+    {
+     "edge_id": "e881",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Halving the given diameter to get the radius is dividing it by 2."
+    },
+    {
+     "edge_id": "e882",
+     "prerequisite": "measurement.length.ruler",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Opening the compass one radius apart is set by measuring that length on a ruler."
+    }
+   ]
+  },
+  {
+   "id": "construction.triangle.two-sides-included-angle",
+   "concept": "construction",
+   "facet": "core",
+   "level": 2,
+   "type": "procedure",
+   "name": "Draw a triangle from two sides and the angle between them",
+   "statement": "A triangle with two given side lengths and a given angle between them is drawn with a ruler and protractor.",
+   "assess": "With a ruler and protractor, draw triangle ABC with AB = 6 cm, AC = 4 cm and angle A = 50 degrees.",
+   "procedure": [
+    "Draw one side to its given length.",
+    "At one endpoint, draw a ray making the given angle with that side, using a protractor.",
+    "Mark the second side length along the ray.",
+    "Join the two free endpoints."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e883",
+     "prerequisite": "angle.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The given angle is the one formed at the shared endpoint by the two given sides."
+    },
+    {
+     "edge_id": "e884",
+     "prerequisite": "angle.protractor.sketch",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The ray making the given angle with the first side is drawn with a protractor."
+    },
+    {
+     "edge_id": "e885",
+     "prerequisite": "measurement.length.ruler",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Drawing the first side to its length and marking the second side along the ray both use a ruler."
+    },
+    {
+     "edge_id": "e886",
+     "prerequisite": "ray.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The second side lies along a ray that starts at an endpoint of the first side."
+    },
+    {
+     "edge_id": "e887",
+     "prerequisite": "segment.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Joining the two free endpoints draws the third side as a segment."
+    },
+    {
+     "edge_id": "e888",
+     "prerequisite": "shapes.name.prototype",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The figure being drawn is a triangle, so the learner must know what a triangle is."
+    },
+    {
+     "edge_id": "e889",
+     "prerequisite": "shapes.polygon.name-by-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The figure drawn is a triangle, a closed figure with three sides and three vertices."
+    }
+   ]
+  },
+  {
+   "id": "construction.triangle.two-angles-included-side",
+   "concept": "construction",
+   "facet": "core",
+   "level": 2,
+   "type": "procedure",
+   "name": "Draw a triangle from two angles and the side between them",
+   "statement": "A triangle with two given angles, whose sum is less than 180 degrees, and a given side between them is drawn with a ruler and protractor.",
+   "assess": "With a ruler and protractor, draw triangle PQR with PQ = 5 cm, angle P = 40 degrees and angle Q = 70 degrees.",
+   "procedure": [
+    "Draw the given side to its length.",
+    "At each endpoint, draw a ray making the given angle with the side, both rays on the same side of it.",
+    "Extend the rays until they meet; the meeting point is the third vertex."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e890",
+     "prerequisite": "angle.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each given angle is formed at an endpoint of the side by that side and a ray."
+    },
+    {
+     "edge_id": "e891",
+     "prerequisite": "angle.protractor.sketch",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Each ray is drawn at its given angle to the side by using a protractor."
+    },
+    {
+     "edge_id": "e892",
+     "prerequisite": "measurement.length.ruler",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Drawing the given side to its length uses a ruler to measure that length."
+    },
+    {
+     "edge_id": "e893",
+     "prerequisite": "ray.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The two rays are extended until they meet, which locates the third vertex."
+    },
+    {
+     "edge_id": "e894",
+     "prerequisite": "shapes.name.prototype",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The figure being drawn is a triangle, so the learner must know what a triangle is."
+    },
+    {
+     "edge_id": "e895",
+     "prerequisite": "shapes.polygon.name-by-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The figure drawn is a triangle, a closed figure with three sides and three vertices."
+    }
+   ]
+  },
+  {
+   "id": "construction.triangle.three-sides",
+   "concept": "construction",
+   "facet": "core",
+   "level": 2,
+   "type": "procedure",
+   "name": "Draw a triangle from three side lengths with a compass",
+   "statement": "A triangle with three given side lengths is drawn by laying down one side and finding the third vertex where two arcs, with radii equal to the other two lengths, meet.",
+   "assess": "With a ruler and compass, draw a triangle with sides of 5 cm, 6 cm and 7 cm.",
+   "procedure": [
+    "Draw one side to its given length.",
+    "From one endpoint, draw an arc with radius equal to the second length.",
+    "From the other endpoint, draw an arc with radius equal to the third length.",
+    "Join the point where the arcs meet to both endpoints."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e896",
+     "prerequisite": "circle.center-radius",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The third vertex is where two arcs meet, so it lies at the given distance from both endpoints."
+    },
+    {
+     "edge_id": "e897",
+     "prerequisite": "construction.circle.radius-diameter",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Each arc is part of a circle drawn with the compass opened to a given length about a chosen center."
+    },
+    {
+     "edge_id": "e898",
+     "prerequisite": "measurement.length.ruler",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Drawing the first side to its given length uses a ruler to measure that length."
+    },
+    {
+     "edge_id": "e899",
+     "prerequisite": "segment.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Joining the meeting point to both endpoints draws the other two sides as segments."
+    },
+    {
+     "edge_id": "e900",
+     "prerequisite": "shapes.name.prototype",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The figure being drawn is a triangle, so the learner must know what a triangle is."
+    },
+    {
+     "edge_id": "e901",
+     "prerequisite": "shapes.polygon.name-by-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The figure drawn is a triangle, a closed figure with three sides and three vertices."
+    }
+   ]
+  },
+  {
+   "id": "triangle.inequality",
+   "concept": "triangle",
+   "facet": "determination",
+   "level": 2,
+   "type": "concept",
+   "name": "Three lengths make a triangle only when the two shorter add to more than the longest",
+   "statement": "Three lengths are the side lengths of a triangle exactly when the sum of the two shorter lengths is greater than the longest length.",
+   "assess": "Which of these sets of lengths can be the sides of a triangle: 3, 4, 5; 2, 3, 6; 2, 3, 5?",
+   "proposed_edges": [
+    {
+     "edge_id": "e902",
+     "prerequisite": "addition.within-10",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test sets 3, 4, 5 and 2, 3, 6 and 2, 3, 5 need the sum of the two shorter lengths, within 10."
+    },
+    {
+     "edge_id": "e903",
+     "prerequisite": "addition.within-100",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule adds the two shorter lengths, so the learner must find that sum."
+    },
+    {
+     "edge_id": "e904",
+     "prerequisite": "comparing.whole-numbers.magnitude",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule compares that sum with the longest length to see which is greater."
+    },
+    {
+     "edge_id": "e905",
+     "prerequisite": "comparing.whole-numbers.numerals-within-10",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Each set needs that sum compared with the longest length, as in 3 + 4 against 5 or 2 + 3 against 6."
+    },
+    {
+     "edge_id": "e906",
+     "prerequisite": "construction.triangle.three-sides",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Trying to find the third vertex with two arcs shows when the arcs fail to meet."
+    },
+    {
+     "edge_id": "e907",
+     "prerequisite": "shapes.compose.from-sides",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Trying to build a triangle from sticks of the three lengths shows whether the sticks can close up."
+    },
+    {
+     "edge_id": "e908",
+     "prerequisite": "shapes.polygon.name-by-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about when three lengths can be the three sides of a triangle."
+    }
+   ]
+  },
+  {
+   "id": "triangle.determined.three-sides",
+   "concept": "triangle",
+   "facet": "determination",
+   "level": 2,
+   "type": "concept",
+   "name": "Three side lengths determine a unique triangle",
+   "statement": "Three lengths that can form a triangle determine exactly one triangle: any two triangles with those side lengths are identical copies, angles included.",
+   "assess": "Ana and Ben each build a triangle from straws of 5 cm, 6 cm and 8 cm. Must their triangles have the same angles? Explain by trying to build a different one.",
+   "proposed_edges": [
+    {
+     "edge_id": "e909",
+     "prerequisite": "angle.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The claim covers the angles of the triangles, which are formed at the corners by the sides."
+    },
+    {
+     "edge_id": "e910",
+     "prerequisite": "construction.triangle.three-sides",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Drawing from three lengths with arcs shows the third vertex can fall in only one place, apart from a flip."
+    },
+    {
+     "edge_id": "e911",
+     "prerequisite": "shapes.compare.same-different",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Saying two triangles are identical copies means comparing the whole shapes and finding no difference."
+    },
+    {
+     "edge_id": "e912",
+     "prerequisite": "shapes.compose.from-sides",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Building triangles from three sticks shows the sticks can close up in only one way."
+    }
+   ]
+  },
+  {
+   "id": "triangle.determined.two-sides-included-angle",
+   "concept": "triangle",
+   "facet": "determination",
+   "level": 2,
+   "type": "concept",
+   "name": "Two sides and the angle between them determine a unique triangle",
+   "statement": "Two side lengths and the measure of the angle between those two sides determine exactly one triangle.",
+   "assess": "Ana draws a triangle with sides of 5 cm and 7 cm and a 40-degree angle between them. Ben draws one with the same three measures. Must the third sides of their triangles be equal? Explain.",
+   "proposed_edges": [
+    {
+     "edge_id": "e913",
+     "prerequisite": "angle.measure.degrees",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The condition gives the measure of the angle between the two sides in degrees."
+    },
+    {
+     "edge_id": "e914",
+     "prerequisite": "construction.triangle.two-sides-included-angle",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Drawing from two sides and the angle between them shows every step is forced, so the third vertex is fixed."
+    },
+    {
+     "edge_id": "e915",
+     "prerequisite": "shapes.compare.same-different",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Concluding that the third sides are equal means judging the two triangles to be identical."
+    }
+   ]
+  },
+  {
+   "id": "triangle.determined.two-angles-included-side",
+   "concept": "triangle",
+   "facet": "determination",
+   "level": 2,
+   "type": "concept",
+   "name": "Two angles and the side between them determine a unique triangle",
+   "statement": "Two angle measures whose sum is less than 180 degrees, and the length of the side between those two angles, determine exactly one triangle.",
+   "assess": "Ana and Ben each draw a triangle with a 5 cm side that has a 40-degree angle at one end and a 60-degree angle at the other. Must their triangles be identical? Explain.",
+   "proposed_edges": [
+    {
+     "edge_id": "e916",
+     "prerequisite": "addition.within-1000",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement requires the sum of the two angle measures, which is found by adding them."
+    },
+    {
+     "edge_id": "e917",
+     "prerequisite": "angle.measure.degrees",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The condition gives the two angle measures in degrees."
+    },
+    {
+     "edge_id": "e918",
+     "prerequisite": "comparing.whole-numbers.magnitude.three-digit",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement requires that sum to be less than 180, which is a comparison of numbers."
+    },
+    {
+     "edge_id": "e919",
+     "prerequisite": "construction.triangle.two-angles-included-side",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Drawing from two angles and the side between them shows every step is forced, so the third vertex is fixed."
+    },
+    {
+     "edge_id": "e920",
+     "prerequisite": "shapes.compare.same-different",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Concluding that Ana's and Ben's triangles are identical means comparing the whole shapes."
+    }
+   ]
+  },
+  {
+   "id": "triangle.ambiguous.two-sides-non-included-angle",
+   "concept": "triangle",
+   "facet": "determination",
+   "level": 2,
+   "type": "concept",
+   "name": "Two sides and an angle not between them can give more than one triangle",
+   "statement": "Two side lengths and the measure of an angle that is not between those two sides do not always determine one triangle: they can fit two different triangles.",
+   "assess": "Angle A is 30 degrees, side AB is 6 cm and side BC is 4 cm. Draw two different triangles ABC that meet all three conditions.",
+   "proposed_edges": [
+    {
+     "edge_id": "e921",
+     "prerequisite": "angle.measure.degrees",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The condition gives the measure of an angle in degrees, 30 degrees in the test problem."
+    },
+    {
+     "edge_id": "e922",
+     "prerequisite": "angle.protractor.sketch",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Drawing angle A of 30 degrees on the 6 cm side uses a protractor."
+    },
+    {
+     "edge_id": "e923",
+     "prerequisite": "circle.center-radius",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "An arc of radius BC about B is all points at that distance, and it can cross the ray from A twice."
+    },
+    {
+     "edge_id": "e924",
+     "prerequisite": "construction.circle.radius-diameter",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Finding the two possible third vertices draws an arc of radius 4 cm about B."
+    },
+    {
+     "edge_id": "e925",
+     "prerequisite": "measurement.length.ruler",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Drawing side AB to 6 cm and setting the compass to 4 cm both use a ruler."
+    },
+    {
+     "edge_id": "e926",
+     "prerequisite": "shapes.compare.same-different",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The claim is that two different triangles fit, which means telling two shapes apart."
+    }
+   ]
+  },
+  {
+   "id": "triangle.three-angles",
+   "concept": "triangle",
+   "facet": "determination",
+   "level": 2,
+   "type": "concept",
+   "name": "Three angles give no triangle or infinitely many",
+   "statement": "Three angle measures fit no triangle unless their sum is 180 degrees; when the sum is 180 degrees they fit infinitely many triangles, all the same shape and different in size.",
+   "assess": "Can you draw a triangle with angles of 50, 60 and 70 degrees? Can you draw two different ones? Can you draw a triangle with angles of 50, 60 and 80 degrees?",
+   "proposed_edges": [
+    {
+     "edge_id": "e927",
+     "prerequisite": "addition.within-1000",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Deciding between no triangle and infinitely many means adding the three measures and comparing with 180."
+    },
+    {
+     "edge_id": "e928",
+     "prerequisite": "angle.measure.degrees",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement gives angle measures in degrees and says what their sum must be."
+    },
+    {
+     "edge_id": "e929",
+     "prerequisite": "angle.protractor.measure",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Measuring the third angle of triangles drawn with two chosen angles shows the three always total 180."
+    },
+    {
+     "edge_id": "e930",
+     "prerequisite": "construction.triangle.two-angles-included-side",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Drawing triangles from two angles and a side, with different side lengths, gives triangles of one shape and different sizes."
+    },
+    {
+     "edge_id": "e931",
+     "prerequisite": "shapes.match",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Saying the triangles are all the same shape and different in size uses the informal idea of same shape."
+    }
+   ]
+  },
+  {
+   "id": "triangle.conditions.classify",
+   "concept": "triangle",
+   "facet": "determination",
+   "level": 2,
+   "type": "procedure",
+   "name": "Decide whether three measures give one triangle, more than one, or none",
+   "statement": "Given three measures of sides or angles, decide whether they determine exactly one triangle, more than one triangle, or no triangle.",
+   "assess": "For each set, say whether it gives exactly one triangle, more than one, or none: (a) sides of 4 cm, 5 cm and 10 cm; (b) angles of 30, 60 and 90 degrees; (c) sides of 6 cm and 8 cm with a 50-degree angle between them.",
+   "procedure": [
+    "Name which kind of condition the three measures are: three sides, two sides and the angle between them, two sides and an angle not between them, two angles and the side between them, or three angles.",
+    "Check whether the measures can fit any triangle: the two shorter sides must add to more than the longest, and the angles must add to less than 180 degrees, or to exactly 180 degrees when all three are angles.",
+    "If they fit, decide from the kind of condition whether only one triangle fits, or try to draw a second, different triangle that also meets them."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e932",
+     "prerequisite": "addition.within-1000",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Checking angle sums against 180 means adding the given angle measures."
+    },
+    {
+     "edge_id": "e933",
+     "prerequisite": "comparing.whole-numbers.magnitude.three-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The angle sum is compared with 180 to see whether it is less than or equal to it."
+    },
+    {
+     "edge_id": "e934",
+     "prerequisite": "triangle.ambiguous.two-sides-non-included-angle",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Two sides with an angle not between them is a kind that can give more than one triangle."
+    },
+    {
+     "edge_id": "e935",
+     "prerequisite": "triangle.determined.three-sides",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Three sides is one of the five kinds, and it gives exactly one triangle once the sides fit."
+    },
+    {
+     "edge_id": "e936",
+     "prerequisite": "triangle.determined.two-angles-included-side",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Two angles with the side between them is one of the five kinds, and it gives exactly one triangle."
+    },
+    {
+     "edge_id": "e937",
+     "prerequisite": "triangle.determined.two-sides-included-angle",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Two sides with the angle between them is one of the five kinds, and it gives exactly one triangle."
+    },
+    {
+     "edge_id": "e938",
+     "prerequisite": "triangle.inequality",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Checking whether three sides can fit a triangle applies the rule that the two shorter must exceed the longest."
+    },
+    {
+     "edge_id": "e939",
+     "prerequisite": "triangle.three-angles",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Three angles is a kind that gives no triangle or infinitely many, depending on the angle sum."
+    }
+   ]
+  },
+  {
+   "id": "cross-section.meaning",
+   "concept": "cross-section",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "A cross-section is the flat figure where a plane slices a solid",
+   "statement": "When a plane slices through a solid, the cross-section is the flat figure where the plane and the solid meet: the shape of the cut face.",
+   "assess": "A block of cheese shaped like a box is cut straight through with a knife. Which is the cross-section: (a) the shape of the cut face, (b) the piece that was cut off, (c) the whole block?",
+   "proposed_edges": [
+    {
+     "edge_id": "e940",
+     "prerequisite": "plane.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about a plane slicing through a solid, a flat surface that goes on past the solid."
+    },
+    {
+     "edge_id": "e941",
+     "prerequisite": "shapes.dimension.flat-solid",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A cross-section is a flat figure cut from a solid, so the learner must tell flat shapes from solids."
+    },
+    {
+     "edge_id": "e942",
+     "prerequisite": "shapes.solid.parts",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The cross-section is the shape of the cut face, so the faces of a solid must be known."
+    }
+   ]
+  },
+  {
+   "id": "cross-section.prism.parallel-to-base",
+   "concept": "cross-section",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Slicing a rectangular prism parallel to its base",
+   "statement": "A plane parallel to a base of a right rectangular prism slices it in a rectangle of the same size and shape as the base.",
+   "assess": "A box 6 cm long, 4 cm wide and 10 cm tall is sliced halfway up by a plane parallel to its base. Describe the cross-section and give its dimensions.",
+   "proposed_edges": [
+    {
+     "edge_id": "e943",
+     "prerequisite": "cross-section.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The result is described as the cross-section, the flat figure where the plane meets the solid."
+    },
+    {
+     "edge_id": "e944",
+     "prerequisite": "parallel.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement names the slicing plane as parallel to the base, so it never meets the base."
+    },
+    {
+     "edge_id": "e945",
+     "prerequisite": "shapes.compare.same-different",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The cross-section is said to be the same size and shape as the base, which means comparing whole shapes."
+    },
+    {
+     "edge_id": "e946",
+     "prerequisite": "shapes.prism.right.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The solid being sliced is a right rectangular prism, with a base and faces at right angles to it."
+    },
+    {
+     "edge_id": "e947",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The cross-section is named as a rectangle, a quadrilateral with four right angles."
+    }
+   ]
+  },
+  {
+   "id": "cross-section.prism.perpendicular-to-base",
+   "concept": "cross-section",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Slicing a rectangular prism perpendicular to its base",
+   "statement": "A plane perpendicular to a base of a right rectangular prism, crossing the base, slices it in a rectangle whose height is the prism's height and whose width is the length of the cut across the base.",
+   "assess": "A box has a 6 cm by 8 cm base and is 5 cm tall. A plane perpendicular to the base slices it along a diagonal of the base, which is 10 cm long. Describe the cross-section and give its dimensions.",
+   "proposed_edges": [
+    {
+     "edge_id": "e948",
+     "prerequisite": "cross-section.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The result is described as the cross-section, the flat figure where the plane meets the solid."
+    },
+    {
+     "edge_id": "e949",
+     "prerequisite": "perpendicular.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement names the slicing plane as perpendicular to the base, meeting it at right angles."
+    },
+    {
+     "edge_id": "e950",
+     "prerequisite": "segment.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The width of the cross-section is the length of the cut across the base, which is a segment."
+    },
+    {
+     "edge_id": "e951",
+     "prerequisite": "shapes.prism.right.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The solid being sliced is a right rectangular prism, with a base and faces at right angles to it."
+    },
+    {
+     "edge_id": "e952",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The cross-section is named as a rectangle, a quadrilateral with four right angles."
+    }
+   ]
+  },
+  {
+   "id": "cross-section.pyramid.parallel-to-base",
+   "concept": "cross-section",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Slicing a rectangular pyramid parallel to its base",
+   "statement": "A plane parallel to the base of a right rectangular pyramid, between the base and the apex, slices it in a rectangle with the same shape as the base and a smaller size, smaller the nearer the plane is to the apex.",
+   "assess": "A pyramid has a square base 6 cm on a side. It is sliced by a plane parallel to the base, part way up. What shape is the cross-section, and is it larger or smaller than the base?",
+   "proposed_edges": [
+    {
+     "edge_id": "e953",
+     "prerequisite": "cross-section.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The result is described as the cross-section, the flat figure where the plane meets the solid."
+    },
+    {
+     "edge_id": "e954",
+     "prerequisite": "parallel.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement names the slicing plane as parallel to the base, so it never meets the base."
+    },
+    {
+     "edge_id": "e955",
+     "prerequisite": "shapes.match",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The cross-section is said to have the same shape as the base but a smaller size, an informal idea of same shape."
+    },
+    {
+     "edge_id": "e956",
+     "prerequisite": "shapes.pyramid.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The solid being sliced is a right rectangular pyramid, with a rectangular base and an apex."
+    },
+    {
+     "edge_id": "e957",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The cross-section is named as a rectangle, a quadrilateral with four right angles."
+    }
+   ]
+  },
+  {
+   "id": "cross-section.pyramid.perpendicular-to-base",
+   "concept": "cross-section",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Slicing a rectangular pyramid perpendicular to its base",
+   "statement": "A plane perpendicular to the base of a right rectangular pyramid and parallel to one side of the base slices it in a triangle when the plane passes through the apex, and in a trapezoid when it does not.",
+   "assess": "A right rectangular pyramid is sliced by a plane perpendicular to its base and parallel to one side of the base. What shape is the cross-section if the plane passes through the apex? If it misses the apex?",
+   "proposed_edges": [
+    {
+     "edge_id": "e958",
+     "prerequisite": "cross-section.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The result is described as the cross-section, the flat figure where the plane meets the solid."
+    },
+    {
+     "edge_id": "e959",
+     "prerequisite": "parallel.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The slicing plane is also parallel to one side of the base, so it never meets that side's line."
+    },
+    {
+     "edge_id": "e960",
+     "prerequisite": "perpendicular.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement names the slicing plane as perpendicular to the base, meeting it at right angles."
+    },
+    {
+     "edge_id": "e961",
+     "prerequisite": "shapes.polygon.name-by-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The cross-section through the apex is named as a triangle by its three sides."
+    },
+    {
+     "edge_id": "e962",
+     "prerequisite": "shapes.pyramid.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The solid being sliced is a right rectangular pyramid, with a rectangular base and an apex."
+    },
+    {
+     "edge_id": "e963",
+     "prerequisite": "shapes.quadrilateral.parallel-sides.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The cross-section that misses the apex is named as a trapezoid, a quadrilateral with a pair of parallel sides."
+    }
+   ]
+  },
+  {
+   "id": "cross-section.side-per-face",
+   "concept": "cross-section",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "A cross-section has one side in each face the plane crosses",
+   "statement": "When a plane slices a solid with flat faces, the cross-section is a polygon with exactly one side in each face the plane crosses.",
+   "assess": "A plane slices a box so that it crosses exactly five of the box's six faces. How many sides does the cross-section have?",
+   "proposed_edges": [
+    {
+     "edge_id": "e964",
+     "prerequisite": "cross-section.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The result is described as the cross-section, the flat figure where the plane meets the solid."
+    },
+    {
+     "edge_id": "e965",
+     "prerequisite": "segment.meaning",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each side is the segment where the flat plane meets one flat face of the solid."
+    },
+    {
+     "edge_id": "e966",
+     "prerequisite": "shapes.sides.count",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement counts the sides of the cross-section polygon, one for each face crossed."
+    },
+    {
+     "edge_id": "e967",
+     "prerequisite": "shapes.solid.parts",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement counts the faces of a solid that the plane crosses, so the learner must identify faces."
+    }
+   ]
+  },
+  {
+   "id": "cross-section.prism.oblique",
+   "concept": "cross-section",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Slicing a rectangular prism at a slant",
+   "statement": "A plane that is neither parallel nor perpendicular to the base of a right rectangular prism can slice it in a triangle, a quadrilateral, a pentagon or a hexagon, according to how many faces it crosses.",
+   "assess": "A slanted plane cuts off one corner of a box, crossing only the three faces that meet at that corner. What shape is the cross-section?",
+   "proposed_edges": [
+    {
+     "edge_id": "e968",
+     "prerequisite": "cross-section.side-per-face",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The number of sides of the cross-section equals the number of faces the slanted plane crosses."
+    },
+    {
+     "edge_id": "e969",
+     "prerequisite": "parallel.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement defines the slant as a plane that is not parallel to the base."
+    },
+    {
+     "edge_id": "e970",
+     "prerequisite": "perpendicular.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement defines the slant as a plane that is not perpendicular to the base."
+    },
+    {
+     "edge_id": "e971",
+     "prerequisite": "shapes.polygon.name-by-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The cross-section is named as a triangle, quadrilateral, pentagon or hexagon by its number of sides."
+    },
+    {
+     "edge_id": "e972",
+     "prerequisite": "shapes.prism.right.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The solid being sliced is a right rectangular prism, with a base and faces at right angles to it."
+    }
+   ]
+  },
+  {
+   "id": "cross-section.pyramid.oblique",
+   "concept": "cross-section",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Slicing a rectangular pyramid at a slant",
+   "statement": "A plane that is neither parallel nor perpendicular to the base of a right rectangular pyramid can slice it in a triangle, a quadrilateral or a pentagon, according to how many faces it crosses.",
+   "assess": "A slanted plane slices a square pyramid, crossing all four triangular faces but not the base. What kind of polygon is the cross-section?",
+   "proposed_edges": [
+    {
+     "edge_id": "e973",
+     "prerequisite": "cross-section.side-per-face",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The number of sides of the cross-section equals the number of faces the slanted plane crosses."
+    },
+    {
+     "edge_id": "e974",
+     "prerequisite": "parallel.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement defines the slant as a plane that is not parallel to the base."
+    },
+    {
+     "edge_id": "e975",
+     "prerequisite": "perpendicular.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement defines the slant as a plane that is not perpendicular to the base."
+    },
+    {
+     "edge_id": "e976",
+     "prerequisite": "shapes.polygon.name-by-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The cross-section is named as a triangle, quadrilateral or pentagon by its number of sides."
+    },
+    {
+     "edge_id": "e977",
+     "prerequisite": "shapes.pyramid.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The solid being sliced is a right rectangular pyramid, with a rectangular base and an apex."
+    }
+   ]
+  },
+  {
+   "id": "circle.circumference.meaning",
+   "concept": "circle",
+   "facet": "measure",
+   "level": 2,
+   "type": "concept",
+   "name": "The circumference of a circle",
+   "statement": "The circumference of a circle is its length: the distance once around the circle.",
+   "assess": "A string wrapped once around the circular bottom of a can and then laid straight is 19 cm long. The can is 6 cm across and 12 cm tall. What is the circumference of the bottom of the can?",
+   "proposed_edges": [
+    {
+     "edge_id": "e978",
+     "prerequisite": "circle.center-radius",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement names the circle whose length once around is measured."
+    },
+    {
+     "edge_id": "e979",
+     "prerequisite": "circle.diameter",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test gives 6 cm across, the diameter, as a distractor, so a diameter must be told apart from the length around."
+    },
+    {
+     "edge_id": "e980",
+     "prerequisite": "perimeter.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The circumference is the perimeter of a circle, the length once around it."
+    },
+    {
+     "edge_id": "e981",
+     "prerequisite": "shapes.name.prototype",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The figure whose length is measured is a circle, so the learner must recognize a circle."
+    }
+   ]
+  },
+  {
+   "id": "circle.pi.ratio",
+   "concept": "circle",
+   "facet": "measure",
+   "level": 2,
+   "type": "concept",
+   "name": "Pi as the ratio of circumference to diameter",
+   "statement": "For every circle, the circumference divided by the diameter is the same number, called pi, which is about 3.14.",
+   "assess": "Circles with diameters 2 cm, 5 cm and 10 cm have circumferences of about 6.28 cm, 15.7 cm and 31.4 cm. Find circumference divided by diameter for each circle. What is this number called?",
+   "proposed_edges": [
+    {
+     "edge_id": "e982",
+     "prerequisite": "circle.circumference.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The ratio divides the circumference, the distance once around the circle, by the diameter."
+    },
+    {
+     "edge_id": "e983",
+     "prerequisite": "circle.diameter",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The ratio divides the circumference by the diameter of the circle."
+    },
+    {
+     "edge_id": "e984",
+     "prerequisite": "decimal.division.by-whole.algorithm",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Finding each circumference divided by diameter divides decimals such as 6.28 by 2."
+    },
+    {
+     "edge_id": "e985",
+     "prerequisite": "decimal.hundredths.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Pi is stated as about 3.14, a decimal written to hundredths."
+    },
+    {
+     "edge_id": "e986",
+     "prerequisite": "ratio.equivalent",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The quotient being the same for every circle means the pairs of circumference and diameter form equivalent ratios."
+    }
+   ]
+  },
+  {
+   "id": "circle.circumference.formula",
+   "concept": "circle",
+   "facet": "measure",
+   "level": 3,
+   "type": "concept",
+   "name": "The circumference formula C = pi x d",
+   "statement": "The circumference of a circle with diameter d and radius r is C = pi x d, which is the same as C = 2 x pi x r.",
+   "assess": "True or false: a circle with radius 4 cm has circumference pi x 4 cm. Say which rule decides it.",
+   "proposed_edges": [
+    {
+     "edge_id": "e987",
+     "prerequisite": "circle.center-radius",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The second form of the formula is written with the radius r of the circle."
+    },
+    {
+     "edge_id": "e988",
+     "prerequisite": "circle.diameter",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula uses the diameter d and says C = 2 x pi x r because a diameter is twice the radius."
+    },
+    {
+     "edge_id": "e989",
+     "prerequisite": "circle.pi.ratio",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula C = pi x d restates that circumference divided by diameter is the number pi."
+    },
+    {
+     "edge_id": "e990",
+     "prerequisite": "division.unknown-factor.meaning",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Turning circumference divided by diameter equals pi into C = pi x d uses a quotient as an unknown factor."
+    },
+    {
+     "edge_id": "e991",
+     "prerequisite": "expressions.product.regroup-factors",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Showing pi x d equals 2 x pi x r puts 2 x r in place of d and regroups the factors."
+    },
+    {
+     "edge_id": "e992",
+     "prerequisite": "expressions.variable.evaluate",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Testing pi x 4 for a radius of 4 cm means substituting values into the formula."
+    },
+    {
+     "edge_id": "e993",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula is written with the letters C, d and r, each standing for a number."
+    }
+   ]
+  },
+  {
+   "id": "circle.circumference.formula.apply",
+   "concept": "circle",
+   "facet": "measure",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the circumference of a circle with the formula",
+   "statement": "The circumference of a circle is found by multiplying its diameter by pi, doubling the radius first when the radius is given.",
+   "assess": "Find the circumference of a circle with radius 5 cm. Use 3.14 for pi.",
+   "procedure": [
+    "If the radius is given, double it to get the diameter.",
+    "Multiply the diameter by pi, or by an approximation such as 3.14."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e994",
+     "prerequisite": "circle.circumference.formula",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The procedure multiplies the diameter by pi, which is the formula C = pi x d."
+    },
+    {
+     "edge_id": "e995",
+     "prerequisite": "circle.diameter",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Doubling the radius to get the diameter relies on a diameter being twice the radius."
+    },
+    {
+     "edge_id": "e996",
+     "prerequisite": "decimal.multiplication.algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Multiplying the diameter by 3.14 is multiplying a whole number by a decimal."
+    },
+    {
+     "edge_id": "e997",
+     "prerequisite": "multiplication.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Doubling the radius is multiplying a whole number by 2."
+    }
+   ]
+  },
+  {
+   "id": "circle.area.formula",
+   "concept": "circle",
+   "facet": "measure",
+   "level": 3,
+   "type": "concept",
+   "name": "The area formula A = pi x r^2",
+   "statement": "The area of a circle with radius r is A = pi x r x r, written pi x r^2.",
+   "assess": "True or false: a circle with diameter 6 m has area pi x 6 x 6 square m. Say which rule decides it.",
+   "proposed_edges": [
+    {
+     "edge_id": "e998",
+     "prerequisite": "area.covering.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula gives the area, a number of unit squares that cover the circle."
+    },
+    {
+     "edge_id": "e999",
+     "prerequisite": "circle.center-radius",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula uses r, the radius, which is the distance from the center to the circle."
+    },
+    {
+     "edge_id": "e1000",
+     "prerequisite": "circle.diameter",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Deciding the diameter-6 claim means knowing the radius is half the diameter, so it is 3 m."
+    },
+    {
+     "edge_id": "e1001",
+     "prerequisite": "circle.pi.ratio",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula contains pi, the number defined as circumference divided by diameter."
+    },
+    {
+     "edge_id": "e1002",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The area is written pi x r^2, where r^2 stands for r times r."
+    },
+    {
+     "edge_id": "e1003",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula uses the letter r for the radius, a letter standing for a number."
+    }
+   ]
+  },
+  {
+   "id": "circle.area.formula.apply",
+   "concept": "circle",
+   "facet": "measure",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the area of a circle with the formula",
+   "statement": "The area of a circle is found by multiplying pi by the radius times itself, halving the diameter first when the diameter is given.",
+   "assess": "Find the area of a circle with radius 10 cm. Use 3.14 for pi.",
+   "procedure": [
+    "If the diameter is given, halve it to get the radius.",
+    "Multiply the radius by itself.",
+    "Multiply the result by pi, or by an approximation such as 3.14."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1004",
+     "prerequisite": "circle.area.formula",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The procedure carries out the formula A = pi x r x r."
+    },
+    {
+     "edge_id": "e1005",
+     "prerequisite": "circle.diameter",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Halving a given diameter to get the radius relies on a diameter being twice the radius."
+    },
+    {
+     "edge_id": "e1006",
+     "prerequisite": "decimal.multiplication.algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Multiplying the result by 3.14 is multiplying a whole number by a decimal."
+    },
+    {
+     "edge_id": "e1007",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Halving the diameter is dividing it by 2."
+    },
+    {
+     "edge_id": "e1008",
+     "prerequisite": "multiplication.two-digit-by-two-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Multiplying the radius by itself is a whole-number product such as 10 x 10."
+    }
+   ]
+  },
+  {
+   "id": "circle.area.derive-from-circumference",
+   "concept": "circle",
+   "facet": "measure",
+   "level": 4,
+   "type": "justification",
+   "name": "Derive the area of a circle from its circumference by rearranging sectors",
+   "statement": "A circle cut into many equal sectors, arranged alternately point up and point down, is close to a parallelogram whose base is half the circumference and whose height is the radius, and closer the more sectors are used; so the area is (1/2) x C x r, which is (1/2) x 2 x pi x r x r = pi x r^2.",
+   "assess": "A circle of radius r is cut into 16 equal sectors, which are rearranged as in the picture. Use the picture to explain why the area of the circle is half its circumference times its radius, and why that equals pi x r^2.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1009",
+     "prerequisite": "area.additive",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Rearranging the sectors into a parallelogram keeps the total area, since area adds across non-overlapping parts."
+    },
+    {
+     "edge_id": "e1010",
+     "prerequisite": "area.parallelogram.formula",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The area of the rearranged shape is its base times its height, the parallelogram area formula."
+    },
+    {
+     "edge_id": "e1011",
+     "prerequisite": "circle.center-radius",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The height of the rearranged shape is the radius of the circle."
+    },
+    {
+     "edge_id": "e1012",
+     "prerequisite": "circle.circumference.formula",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The derivation replaces C by 2 x pi x r when simplifying (1/2) x C x r."
+    },
+    {
+     "edge_id": "e1013",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The result is written pi x r^2, with r x r written as a power."
+    },
+    {
+     "edge_id": "e1014",
+     "prerequisite": "exponent.whole-number-power.write",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The product r x r is written as r^2 in the final area formula."
+    },
+    {
+     "edge_id": "e1015",
+     "prerequisite": "expressions.product.regroup-factors",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Regrouping the factors of (1/2) x 2 x pi x r x r shows the product equals pi x r x r."
+    },
+    {
+     "edge_id": "e1016",
+     "prerequisite": "fraction.multiplication.symbolic",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Simplifying (1/2) x 2 x pi x r x r requires multiplying a fraction by a whole number."
+    },
+    {
+     "edge_id": "e1017",
+     "prerequisite": "fraction.multiply-whole.symbolic",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The last step turns (1/2) x 2 x pi x r x r into pi x r x r by multiplying 2 by 1/2."
+    },
+    {
+     "edge_id": "e1018",
+     "prerequisite": "height.base-height",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The base of the near-parallelogram is half the circumference and its height is the radius."
+    },
+    {
+     "edge_id": "e1019",
+     "prerequisite": "partitioning.equal-shares.area",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Cutting the circle into many equal sectors is partitioning a circle into equal shares."
+    }
+   ]
+  },
+  {
+   "id": "circle.application.circumference",
+   "concept": "circle",
+   "facet": "measure",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems about the distance around a circular object",
+   "statement": "A real-world problem gives the radius or diameter of a circular object and asks for the distance once around it; the learner finds the circumference.",
+   "assess": "A circular garden has a radius of 5 m. How many meters of fencing go once around it? Use 3.14 for pi.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1020",
+     "prerequisite": "circle.circumference.formula.apply",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner finds the circumference from the given radius or diameter with the formula."
+    },
+    {
+     "edge_id": "e1021",
+     "prerequisite": "circle.circumference.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The problem asks for the distance once around a circular object, which is its circumference."
+    }
+   ]
+  },
+  {
+   "id": "circle.application.area",
+   "concept": "circle",
+   "facet": "measure",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems about the area of a circular region",
+   "statement": "A real-world problem gives the radius or diameter of a circular region and asks how much surface it covers; the learner finds its area.",
+   "assess": "A circular rug has a diameter of 4 m. How many square meters of floor does it cover? Use 3.14 for pi.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1022",
+     "prerequisite": "area.attribute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The problem asks how much surface a circular region covers, which is its area."
+    },
+    {
+     "edge_id": "e1023",
+     "prerequisite": "circle.area.formula.apply",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner finds the area from the given radius or diameter with the formula."
+    }
+   ]
+  },
+  {
+   "id": "angle.adjacent",
+   "concept": "angle",
+   "facet": "figure",
+   "level": 2,
+   "type": "concept",
+   "name": "Adjacent angles",
+   "statement": "Two angles are adjacent when they share a vertex and a side and do not overlap.",
+   "assess": "Three pairs of angles are shown: (a) two angles that share a vertex and a side and do not overlap, (b) two angles that share only a vertex, (c) two angles that share a vertex and a side, one lying inside the other. Which pair is adjacent?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1024",
+     "prerequisite": "angle.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Adjacent angles are described by a shared vertex and a shared side, which are parts of an angle."
+    }
+   ]
+  },
+  {
+   "id": "angle.vertical",
+   "concept": "angle",
+   "facet": "figure",
+   "level": 2,
+   "type": "concept",
+   "name": "Vertical angles",
+   "statement": "When two lines cross, each pair of opposite angles, which share the vertex and no side, is a pair of vertical angles.",
+   "assess": "Lines AB and CD cross at O. Which angle is vertical to angle AOC? Are angles AOC and COB vertical angles?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1025",
+     "prerequisite": "angle.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Vertical angles are a pair of angles at a vertex, so the learner must know what an angle is."
+    },
+    {
+     "edge_id": "e1026",
+     "prerequisite": "line.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The angles are formed where two lines cross, and a line is straight and extends both ways."
+    }
+   ]
+  },
+  {
+   "id": "angle.vertical.equal",
+   "concept": "angle",
+   "facet": "measure",
+   "level": 3,
+   "type": "concept",
+   "name": "Vertical angles are equal",
+   "statement": "Vertical angles have equal measures.",
+   "assess": "Two lines cross. One of the four angles measures 65 degrees. Without measuring, what is the measure of the angle vertical to it?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1027",
+     "prerequisite": "angle.measure.degrees",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement compares angle measures, which are numbers of degrees."
+    },
+    {
+     "edge_id": "e1028",
+     "prerequisite": "angle.protractor.measure",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Measuring both angles of a vertical pair shows their degree measures are the same."
+    },
+    {
+     "edge_id": "e1029",
+     "prerequisite": "angle.straight-line.sum-180",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each vertical angle together with the angle next to it makes 180, so both are 180 minus the same angle."
+    },
+    {
+     "edge_id": "e1030",
+     "prerequisite": "angle.vertical",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about pairs of vertical angles formed where two lines cross."
+    },
+    {
+     "edge_id": "e1031",
+     "prerequisite": "subtraction.within-1000",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Subtracting the same angle from 180 gives the same result for each of the two vertical angles."
+    }
+   ]
+  },
+  {
+   "id": "angle.supplementary",
+   "concept": "angle",
+   "facet": "measure",
+   "level": 2,
+   "type": "concept",
+   "name": "Supplementary angles",
+   "statement": "Two angles are supplementary when their measures add to 180 degrees; they need not be adjacent.",
+   "assess": "Which pairs are supplementary: (a) a 120-degree angle and a 60-degree angle in different parts of a figure, (b) adjacent angles of 100 and 70 degrees, (c) two 45-degree angles?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1032",
+     "prerequisite": "addition.within-1000",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Two angles are supplementary when their measures add to 180, so the learner adds them."
+    },
+    {
+     "edge_id": "e1033",
+     "prerequisite": "angle.measure.degrees",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Supplementary angles are defined by their measures in degrees, whether or not they touch."
+    }
+   ]
+  },
+  {
+   "id": "angle.complementary",
+   "concept": "angle",
+   "facet": "measure",
+   "level": 2,
+   "type": "concept",
+   "name": "Complementary angles",
+   "statement": "Two angles are complementary when their measures add to 90 degrees; they need not be adjacent.",
+   "assess": "Which pairs are complementary: (a) a 30-degree angle and a 60-degree angle in different parts of a figure, (b) adjacent angles of 40 and 40 degrees, (c) two 90-degree angles?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1034",
+     "prerequisite": "addition.within-100",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Two angles are complementary when their measures add to 90, so the learner adds them."
+    },
+    {
+     "edge_id": "e1035",
+     "prerequisite": "angle.measure.degrees",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Complementary angles are defined by their measures in degrees, whether or not they touch."
+    }
+   ]
+  },
+  {
+   "id": "angle.straight-line.sum-180",
+   "concept": "angle",
+   "facet": "measure",
+   "level": 2,
+   "type": "concept",
+   "name": "Adjacent angles along a straight line add to 180 degrees",
+   "statement": "Adjacent angles whose outer sides form a straight line together make a straight angle, so their measures add to 180 degrees.",
+   "assess": "Ray OC is drawn from point O on line AB. Angle AOC measures 130 degrees. Without measuring, find angle COB.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1036",
+     "prerequisite": "angle.additive",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The two adjacent angles together make one straight angle, because angle measure adds."
+    },
+    {
+     "edge_id": "e1037",
+     "prerequisite": "angle.adjacent",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about adjacent angles, which share a vertex and a side."
+    },
+    {
+     "edge_id": "e1038",
+     "prerequisite": "angle.fraction-of-turn.degrees",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A straight angle is half a turn, which measures 180 degrees."
+    },
+    {
+     "edge_id": "e1039",
+     "prerequisite": "angle.measure.circle-fraction",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A straight angle is half of a full turn of the circle, which is why its measure is 180 degrees."
+    },
+    {
+     "edge_id": "e1040",
+     "prerequisite": "angle.protractor.measure",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Measuring the two adjacent angles on a line and adding them gives 180 degrees."
+    },
+    {
+     "edge_id": "e1041",
+     "prerequisite": "line.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The outer sides of the two angles form a straight line, which extends both ways."
+    },
+    {
+     "edge_id": "e1042",
+     "prerequisite": "subtraction.within-1000",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Finding angle COB from 130 degrees on a straight line means subtracting 130 from 180."
+    }
+   ]
+  },
+  {
+   "id": "angle.unknown.equation.write",
+   "concept": "angle",
+   "facet": "measure",
+   "level": 3,
+   "type": "representation",
+   "name": "Write an equation for an unknown angle from an angle relationship",
+   "statement": "When angle measures in a figure are given as expressions in an unknown, an angle relationship gives an equation: the measures of supplementary angles, or of adjacent angles along a straight line, add to 180; of complementary angles add to 90; vertical angles are equal.",
+   "assess": "Angles ABD and DBC are adjacent, and A, B and C lie on a straight line. Angle ABD measures 2x degrees and angle DBC measures (x + 30) degrees. Write an equation for x. Do not solve it.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1043",
+     "prerequisite": "angle.complementary",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Complementary angles give an equation whose measures add to 90."
+    },
+    {
+     "edge_id": "e1044",
+     "prerequisite": "angle.straight-line.sum-180",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Adjacent angles along a straight line give an equation whose sides add to 180."
+    },
+    {
+     "edge_id": "e1045",
+     "prerequisite": "angle.supplementary",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Supplementary angles give an equation whose measures add to 180."
+    },
+    {
+     "edge_id": "e1046",
+     "prerequisite": "angle.unknown.equation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Writing an equation with an unknown for an angle on a diagram is extended here to measures given as expressions."
+    },
+    {
+     "edge_id": "e1047",
+     "prerequisite": "angle.vertical.equal",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Vertical angles give an equation that sets the two measures equal."
+    },
+    {
+     "edge_id": "e1048",
+     "prerequisite": "equation.equal-sign.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The relationship is written as an equation, which says both sides have the same value."
+    },
+    {
+     "edge_id": "e1049",
+     "prerequisite": "expressions.notation.implicit-multiplication",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The measure 2x in the test problem is a number next to a letter, which means multiply."
+    },
+    {
+     "edge_id": "e1050",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The angle measures are given with a letter that stands for an unknown number."
+    }
+   ]
+  },
+  {
+   "id": "angle.unknown.equation.solve",
+   "concept": "angle",
+   "facet": "measure",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find an unknown angle by writing and solving a two-step equation",
+   "statement": "An unknown in angle measures given as expressions is found by writing an equation of the form p x + q = r from an angle relationship and solving it.",
+   "assess": "Two complementary angles measure x degrees and (2x + 15) degrees. Find x.",
+   "procedure": [
+    "Write the equation that the angle relationship gives.",
+    "Combine like terms so the equation has the form p x + q = r.",
+    "Solve the equation for x."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1051",
+     "prerequisite": "angle.unknown.equation.write",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The first step writes the equation that the angle relationship gives, from measures given as expressions."
+    },
+    {
+     "edge_id": "e1052",
+     "prerequisite": "equation.two-step.px-plus-q.solve",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The last step solves an equation of the form p x + q = r for x."
+    },
+    {
+     "edge_id": "e1053",
+     "prerequisite": "expressions.like-terms.combine",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Combining like terms puts the equation in the form p x + q = r."
+    }
+   ]
+  },
+  {
+   "id": "angle.application.multi-step",
+   "concept": "angle",
+   "facet": "measure",
+   "level": 3,
+   "type": "application",
+   "name": "Find an unknown angle in a figure by using two or more angle relationships in turn",
+   "statement": "A figure problem needs two or more angle relationships (vertical, supplementary, complementary, adjacent angles along a line, or parts of a whole angle) used one after another to find an unknown angle.",
+   "assess": "Lines AB and CD cross at O. Ray OE lies inside angle BOD. Angle AOC measures 70 degrees and angle EOD measures 25 degrees. Find angle BOE.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1054",
+     "prerequisite": "angle.additive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement lists parts of a whole angle as one of the relationships used in turn."
+    },
+    {
+     "edge_id": "e1055",
+     "prerequisite": "angle.complementary",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "One step may use two complementary angles that add to 90 degrees."
+    },
+    {
+     "edge_id": "e1056",
+     "prerequisite": "angle.straight-line.sum-180",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "One step uses adjacent angles along a line adding to 180 to find a neighbouring angle."
+    },
+    {
+     "edge_id": "e1057",
+     "prerequisite": "angle.supplementary",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "One step may use two supplementary angles that are not next to each other."
+    },
+    {
+     "edge_id": "e1058",
+     "prerequisite": "angle.unknown-part",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "One step finds an unknown part of a whole angle by subtracting the known part."
+    },
+    {
+     "edge_id": "e1059",
+     "prerequisite": "angle.vertical.equal",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "One step uses vertical angles being equal to carry a measure across a crossing of two lines."
+    },
+    {
+     "edge_id": "e1060",
+     "prerequisite": "subtraction.within-100",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Finding angle BOE means subtracting 25 from 70."
+    }
+   ]
+  },
+  {
+   "id": "volume.prism.right.base-height",
+   "concept": "volume",
+   "facet": "multiplicative",
+   "level": 3,
+   "type": "concept",
+   "name": "The volume of any right prism is V = B x h",
+   "statement": "The volume of any right prism is the area B of its base times its height h, whatever polygon the base is.",
+   "assess": "True or false: a right prism 10 cm long whose bases are right triangles with legs 3 cm and 4 cm has volume 3 x 4 x 10 = 120 cubic cm. Say which rule decides it.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1061",
+     "prerequisite": "area.covering.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "B is the area of the base, the number of unit squares that cover it."
+    },
+    {
+     "edge_id": "e1062",
+     "prerequisite": "area.triangle.right.half-rectangle",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Testing the claim needs the base area of a right triangle, which is half of 3 x 4."
+    },
+    {
+     "edge_id": "e1063",
+     "prerequisite": "shapes.prism.right.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about any right prism, whatever polygon its bases are."
+    },
+    {
+     "edge_id": "e1064",
+     "prerequisite": "volume.prism.formula.base-height",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement extends V = B x h from rectangular prisms to right prisms with any base."
+    }
+   ]
+  },
+  {
+   "id": "volume.prism.right.base-height.apply",
+   "concept": "volume",
+   "facet": "multiplicative",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the volume of a right prism with a non-rectangular base",
+   "statement": "The volume of a right prism whose base is a triangle or another polygon is found by computing the area of the base and multiplying it by the height of the prism.",
+   "assess": "A right prism is 10 cm long. Its bases are right triangles with legs of 6 cm and 4 cm. Find its volume.",
+   "procedure": [
+    "Find the area B of the base.",
+    "Find the height h, the distance between the two bases.",
+    "Multiply B by h."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1065",
+     "prerequisite": "area.polygon.decompose",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Finding the area B of a base that is another polygon uses decomposing it into triangles and rectangles."
+    },
+    {
+     "edge_id": "e1066",
+     "prerequisite": "area.triangle.formula.apply",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Finding the area B of a triangular base uses the triangle area formula."
+    },
+    {
+     "edge_id": "e1067",
+     "prerequisite": "multiplication.two-digit-by-two-digit",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Multiplying the base area B by the height h is a whole-number product."
+    },
+    {
+     "edge_id": "e1068",
+     "prerequisite": "shapes.prism.right.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The height is the distance between the two bases, which is the length of an edge of a right prism."
+    },
+    {
+     "edge_id": "e1069",
+     "prerequisite": "volume.prism.right.base-height",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The procedure carries out V = B x h for a right prism with a non-rectangular base."
+    }
+   ]
+  },
+  {
+   "id": "volume.composite.right-prisms",
+   "concept": "volume",
+   "facet": "additive",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the volume of a solid made of right prisms, not all rectangular",
+   "statement": "The volume of a solid made of non-overlapping right prisms, at least one with a non-rectangular base, is the sum of the volumes of the prisms.",
+   "assess": "A solid is a 6 m by 4 m by 3 m box with a triangular prism on top. The prism is 6 m long and its triangular ends have a base of 4 m and a height of 2 m. Find the volume of the solid.",
+   "procedure": [
+    "Split the solid into right prisms that do not overlap.",
+    "Find the volume of each prism with V = B x h.",
+    "Add the volumes."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1070",
+     "prerequisite": "addition.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Adding the volumes of the prisms is a sum of whole numbers."
+    },
+    {
+     "edge_id": "e1071",
+     "prerequisite": "addition.within-1000",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 adds the prism volumes, such as 72 and 24."
+    },
+    {
+     "edge_id": "e1072",
+     "prerequisite": "shapes.prism.right.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Splitting the solid into right prisms needs recognizing which pieces are right prisms."
+    },
+    {
+     "edge_id": "e1073",
+     "prerequisite": "volume.additive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The volume of the whole solid is the sum of the volumes of the non-overlapping prisms."
+    },
+    {
+     "edge_id": "e1074",
+     "prerequisite": "volume.prism.formula.base-height.apply",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 finds the volume of the rectangular box using V = B x h."
+    },
+    {
+     "edge_id": "e1075",
+     "prerequisite": "volume.prism.right.base-height.apply",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Each prism's volume is found with V = B x h, including prisms with a triangular base."
+    }
+   ]
+  },
+  {
+   "id": "volume.application.right-prism",
+   "concept": "volume",
+   "facet": "multiplicative",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems about the volume of an object shaped like a non-rectangular right prism",
+   "statement": "A real-world problem describes an object shaped like a right prism whose base is a triangle or another polygon, with the lengths needed, and asks how much space it holds or takes up; the learner finds its volume.",
+   "assess": "A tent is a triangular prism 3 m long. Each triangular end has a base of 4 m and a height of 2 m. How many cubic meters of space are inside the tent?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1076",
+     "prerequisite": "volume.prism.right.base-height.apply",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner finds the volume of the prism-shaped object with V = B x h."
+    },
+    {
+     "edge_id": "e1077",
+     "prerequisite": "volume.space-occupied",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The problem asks how much space the object holds or takes up, which is its volume."
+    }
+   ]
+  },
+  {
+   "id": "volume.application.composite.right-prisms",
+   "concept": "volume",
+   "facet": "additive",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems about the volume of an object made of right prisms",
+   "statement": "A real-world problem describes an object made of right prisms, at least one with a non-rectangular base, with the lengths needed, and asks how much space it holds or takes up; the learner finds its volume.",
+   "assess": "A shed is a box 4 m long, 3 m wide and 2 m tall with a roof shaped like a triangular prism on top. The roof is 4 m long and its triangular ends have a base of 3 m and a height of 1 m. What is the total volume of the shed?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1078",
+     "prerequisite": "volume.composite.right-prisms",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner splits the object into right prisms, finds each volume and adds them."
+    },
+    {
+     "edge_id": "e1079",
+     "prerequisite": "volume.space-occupied",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The problem asks how much space the object holds or takes up, which is its volume."
+    }
+   ]
+  }
+ ]
+}

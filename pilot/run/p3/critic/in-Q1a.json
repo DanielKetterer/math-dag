@@ -1,0 +1,1549 @@
+{
+ "boundary_nodes": [],
+ "nodes": [
+  {
+   "id": "division.standard-algorithm.long-division",
+   "concept": "division",
+   "facet": "base-ten",
+   "level": 3,
+   "type": "procedure",
+   "name": "Divide multi-digit whole numbers with the standard algorithm",
+   "statement": "Divide a multi-digit whole number by a whole number of one or more digits (not greater than the dividend) with the standard long-division algorithm, working from the greatest place of the dividend, to get the whole-number quotient and remainder.",
+   "assess": "Use the standard algorithm to divide 9,374 by 26. Give the quotient and the remainder.",
+   "procedure": [
+    "Take the fewest leading digits of the dividend that form a number at least as large as the divisor; this is the current number.",
+    "Find the greatest digit q (0 to 9) with q x divisor at most the current number, and write q in the quotient above the last digit used.",
+    "Subtract q x divisor from the current number.",
+    "If digits of the dividend remain, bring down the next one to the right of the difference to form the new current number, and return to step 2.",
+    "When no digits remain, the last difference is the remainder."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1475",
+     "prerequisite": "comparing.whole-numbers.magnitude.multi-digit",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 takes the fewest leading digits that form a number at least as large as the divisor, which compares multi-digit numbers."
+    },
+    {
+     "edge_id": "e1476",
+     "prerequisite": "division.remainder.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement asks for a whole-number quotient and a remainder, which is what is left after making as many whole groups as possible."
+    },
+    {
+     "edge_id": "e1477",
+     "prerequisite": "multiplication.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 finds the greatest digit q by multiplying a multi-digit divisor by q and checking the product against the current number."
+    },
+    {
+     "edge_id": "e1478",
+     "prerequisite": "place-value.ten-times-right",
+     "relation": "procedural",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Step 4 brings down the next digit to the right of the difference, which makes the difference ten times larger plus that digit."
+    },
+    {
+     "edge_id": "e1479",
+     "prerequisite": "subtraction.standard-algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 subtracts the product q x divisor from the current multi-digit number, and the last difference is the remainder."
+    },
+    {
+     "edge_id": "e1480",
+     "prerequisite": "subtraction.within-1000",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 subtracts q times the divisor from the current number, such as 157 minus 156 in the test problem."
+    }
+   ]
+  },
+  {
+   "id": "decimal.addition.algorithm",
+   "concept": "decimal",
+   "facet": "decimal-fraction",
+   "level": 3,
+   "type": "procedure",
+   "name": "Add multi-digit decimals with the standard algorithm",
+   "statement": "Add decimals by writing them in columns with the decimal points aligned, so that digits of the same place value share a column, and adding as with whole numbers, regrouping across the decimal point when needed.",
+   "assess": "Use the standard algorithm: 27.6 + 4.385.",
+   "procedure": [
+    "Write the numbers in a column with their decimal points lined up (a whole number has its decimal point after the ones digit), writing zeros in empty places on the right if helpful.",
+    "Add each column from right to left, regrouping 10 of a place as 1 of the next place to the left.",
+    "Place the decimal point in the sum directly below the aligned decimal points."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1481",
+     "prerequisite": "addition.standard-algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 adds each column from right to left with regrouping, which is the whole-number standard algorithm applied to aligned decimal digits."
+    },
+    {
+     "edge_id": "e1482",
+     "prerequisite": "decimal.thousandths.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Aligning digits of the same place value requires reading the place of every digit in decimals such as 4.385."
+    },
+    {
+     "edge_id": "e1483",
+     "prerequisite": "place-value.ten-times-right.decimal",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Aligned decimal points put digits of the same place value in one column, and 10 of a place regroup as 1 of the next place across the decimal point."
+    }
+   ]
+  },
+  {
+   "id": "decimal.subtraction.algorithm",
+   "concept": "decimal",
+   "facet": "decimal-fraction",
+   "level": 3,
+   "type": "procedure",
+   "name": "Subtract multi-digit decimals with the standard algorithm",
+   "statement": "Subtract decimals by writing them in columns with the decimal points aligned, writing zeros so both numbers have the same number of decimal places, and subtracting as with whole numbers, decomposing across the decimal point when needed.",
+   "assess": "Use the standard algorithm: 15 - 3.72.",
+   "procedure": [
+    "Write the greater number above the smaller with the decimal points lined up (a whole number has its decimal point after the ones digit).",
+    "Write zeros in empty places on the right so both numbers have the same number of decimal places.",
+    "Subtract each column from right to left, decomposing 1 of the next place to the left into 10 of this place when a digit is too small.",
+    "Place the decimal point in the difference directly below the aligned decimal points."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1484",
+     "prerequisite": "decimal.compare",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 writes the greater number above the smaller, which requires deciding which of two decimals is greater."
+    },
+    {
+     "edge_id": "e1485",
+     "prerequisite": "decimal.thousandths.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Lining up decimal points so digits of the same place share a column requires reading the place of each decimal digit."
+    },
+    {
+     "edge_id": "e1486",
+     "prerequisite": "place-value.ten-times-right.decimal",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Decomposing 1 of the next place into 10 of this place, even across the decimal point, uses the ten-to-one relation between decimal places."
+    },
+    {
+     "edge_id": "e1487",
+     "prerequisite": "subtraction.standard-algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 subtracts each column from right to left and decomposes the next place when a digit is too small, as in the whole-number algorithm."
+    }
+   ]
+  },
+  {
+   "id": "decimal.multiplication.algorithm",
+   "concept": "decimal",
+   "facet": "decimal-fraction",
+   "level": 3,
+   "type": "procedure",
+   "name": "Multiply multi-digit decimals with the standard algorithm",
+   "statement": "Multiply two decimals by multiplying them as whole numbers, ignoring the decimal points, and then placing the decimal point so that the product has as many decimal places as the two factors have together.",
+   "assess": "Use the standard algorithm: 3.06 x 0.24.",
+   "procedure": [
+    "Multiply the factors as whole numbers with the standard algorithm, ignoring the decimal points.",
+    "Count the digits to the right of the decimal point in both factors together.",
+    "From the right end of the whole-number product, count that many places to the left and place the decimal point there, writing zeros on the left if the product has too few digits."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1488",
+     "prerequisite": "decimal.thousandths.notation",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 counts the digits to the right of the decimal point in each factor, which requires reading decimal places in the notation."
+    },
+    {
+     "edge_id": "e1489",
+     "prerequisite": "multiplication.standard-algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 multiplies the two factors as whole numbers with the standard algorithm, ignoring the decimal points."
+    }
+   ]
+  },
+  {
+   "id": "decimal.division.by-whole.algorithm",
+   "concept": "decimal",
+   "facet": "decimal-fraction",
+   "level": 3,
+   "type": "procedure",
+   "name": "Divide a decimal by a whole number with the standard algorithm",
+   "statement": "Divide a decimal by a whole number with long division, placing the decimal point of the quotient directly above the decimal point of the dividend and writing zeros after the last digit of the dividend to keep dividing.",
+   "assess": "Use the standard algorithm: 9.3 divided by 4.",
+   "procedure": [
+    "Set up long division with the decimal dividend and the whole-number divisor.",
+    "Place the decimal point in the quotient directly above the decimal point of the dividend.",
+    "Divide as with whole numbers, bringing down one digit at a time.",
+    "If the digits of the dividend run out and the difference is not 0, write a 0 after the last digit of the dividend and keep dividing, until the difference is 0 or the quotient has the required number of places."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1490",
+     "prerequisite": "decimal.thousandths.notation",
+     "relation": "representational",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Step 4 writes a 0 after the last digit of the decimal dividend and keeps dividing, which reads those digits as decimal places."
+    },
+    {
+     "edge_id": "e1491",
+     "prerequisite": "division.standard-algorithm.long-division",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 divides as with whole numbers, bringing down one digit at a time, which is the long-division algorithm."
+    },
+    {
+     "edge_id": "e1492",
+     "prerequisite": "place-value.ten-times-right.decimal",
+     "relation": "procedural",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Writing a 0 after the last digit of the dividend and continuing keeps the dividend's value only because each decimal place is ten times the one to its right."
+    }
+   ]
+  },
+  {
+   "id": "decimal.division.by-decimal.algorithm",
+   "concept": "decimal",
+   "facet": "decimal-fraction",
+   "level": 3,
+   "type": "procedure",
+   "name": "Divide by a decimal with the standard algorithm",
+   "statement": "Divide a whole number or a decimal by a decimal by first multiplying the divisor and the dividend by the same power of 10, which makes the divisor a whole number and leaves the quotient unchanged, and then dividing by that whole number with long division.",
+   "assess": "Use the standard algorithm: 7.38 divided by 0.6.",
+   "procedure": [
+    "Count the decimal places k in the divisor.",
+    "Multiply the divisor and the dividend by 10^k by moving each decimal point k places to the right, writing zeros in the dividend if needed.",
+    "Divide the new dividend by the new whole-number divisor with long division, placing the decimal point of the quotient above the new decimal point of the dividend."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1493",
+     "prerequisite": "decimal.division.by-whole.algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 divides the new decimal dividend by the new whole-number divisor and places the quotient point above the dividend point."
+    },
+    {
+     "edge_id": "e1494",
+     "prerequisite": "decimal.thousandths.notation",
+     "relation": "representational",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 counts the decimal places k in the divisor, which requires reading the decimal places in its notation."
+    },
+    {
+     "edge_id": "e1495",
+     "prerequisite": "division.equal-scaling.quotient-unchanged",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says multiplying divisor and dividend by the same power of 10 leaves the quotient unchanged, which is this scaling principle."
+    },
+    {
+     "edge_id": "e1496",
+     "prerequisite": "exponent.power-of-ten.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement and step 2 name the multiplier as a power of 10, written 10^k with a whole-number exponent."
+    },
+    {
+     "edge_id": "e1497",
+     "prerequisite": "multiplication.power-of-ten.decimal.rule",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 multiplies a decimal dividend or divisor by 10^k by moving its decimal point k places to the right, writing zeros if needed."
+    },
+    {
+     "edge_id": "e1498",
+     "prerequisite": "multiplication.power-of-ten.whole-number.rule",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 also multiplies a whole-number dividend by 10^k, which appends k zeros to the dividend."
+    }
+   ]
+  },
+  {
+   "id": "factors.common-factor.meaning",
+   "concept": "factors",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "A common factor of two whole numbers",
+   "statement": "A common factor of two whole numbers is a whole number that is a factor of each of them.",
+   "assess": "Which of 2, 3, 4, and 6 are common factors of 12 and 18?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1499",
+     "prerequisite": "factors.factor-pair.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement defines a common factor as a number that is a factor of each of two numbers, so it uses the meaning of factor."
+    },
+    {
+     "edge_id": "e1500",
+     "prerequisite": "factors.is-multiple.decide",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem asks whether 2, 3, 4 and 6 divide both 12 and 18, which is deciding whether a number is a multiple of a one-digit number."
+    }
+   ]
+  },
+  {
+   "id": "factors.gcf.find",
+   "concept": "factors",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the greatest common factor of two whole numbers",
+   "statement": "The greatest common factor of two whole numbers up to 100 is the largest of their common factors; find it by listing the factors of each number and choosing the largest number on both lists.",
+   "assess": "Find the greatest common factor of 36 and 48.",
+   "procedure": [
+    "List all factors of the first number from its factor pairs.",
+    "List all factors of the second number the same way.",
+    "Choose the largest number that appears on both lists."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1501",
+     "prerequisite": "factors.common-factor.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The greatest common factor is defined as the largest of the common factors of the two numbers."
+    },
+    {
+     "edge_id": "e1502",
+     "prerequisite": "factors.factor-pairs.find-all",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Steps 1 and 2 list all factors of each number from its factor pairs, which is finding all factor pairs of a number within 100."
+    }
+   ]
+  },
+  {
+   "id": "factors.common-multiple.meaning",
+   "concept": "factors",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "A common multiple of two whole numbers",
+   "statement": "A common multiple of two whole numbers is a whole number that is a multiple of each of them.",
+   "assess": "Which of 16, 18, 24, and 48 are common multiples of 6 and 8?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1503",
+     "prerequisite": "factors.is-multiple.decide",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement defines a common multiple as a number that is a multiple of each of the two numbers, so it uses the meaning of multiple."
+    }
+   ]
+  },
+  {
+   "id": "factors.lcm.find",
+   "concept": "factors",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the least common multiple of two whole numbers",
+   "statement": "The least common multiple of two nonzero whole numbers up to 12 is the smallest nonzero common multiple; find it by listing the multiples of the greater number in order until one is also a multiple of the smaller number.",
+   "assess": "Find the least common multiple of 6 and 8.",
+   "procedure": [
+    "List the multiples of the greater number in order: 1 times it, 2 times it, 3 times it, and so on.",
+    "For each one, decide whether it is a multiple of the smaller number.",
+    "The first one that is a multiple of the smaller number is the least common multiple."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1504",
+     "prerequisite": "factors.common-multiple.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The least common multiple is defined as the smallest nonzero common multiple of the two numbers."
+    },
+    {
+     "edge_id": "e1505",
+     "prerequisite": "factors.is-multiple.decide",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 decides for each listed multiple whether it is also a multiple of the smaller number."
+    },
+    {
+     "edge_id": "e1506",
+     "prerequisite": "multiplication.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 lists multiples of the greater number as 1 times it, 2 times it, 3 times it, which multiplies a number up to 12 by a one-digit number."
+    }
+   ]
+  },
+  {
+   "id": "multiplication.distributive.factor-common",
+   "concept": "multiplication",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Write a sum of two whole numbers as a common factor times a sum",
+   "statement": "Use the distributive property to rewrite a sum a + b of two whole numbers whose greatest common factor g is greater than 1 as g x (c + d), where a = g x c and b = g x d, so that c and d have no common factor greater than 1.",
+   "assess": "Write 36 + 8 as a whole number times a sum of two whole numbers that have no common factor greater than 1.",
+   "procedure": [
+    "Find the greatest common factor g of a and b.",
+    "Find c and d with a = g x c and b = g x d.",
+    "Write a + b = g x c + g x d = g x (c + d)."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1507",
+     "prerequisite": "expressions.parentheses",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The target form g x (c + d) uses parentheses to show that the sum is computed first and then multiplied by g."
+    },
+    {
+     "edge_id": "e1508",
+     "prerequisite": "factors.common-factor.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement requires that c and d have no common factor greater than 1, which is worded with common factors."
+    },
+    {
+     "edge_id": "e1509",
+     "prerequisite": "factors.gcf.find",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 finds the greatest common factor g of the two addends, such as 4 for 36 and 8."
+    },
+    {
+     "edge_id": "e1510",
+     "prerequisite": "multiplication.distributive",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 rewrites g x c + g x d as g x (c + d), which is the distributive property of multiplication over addition."
+    },
+    {
+     "edge_id": "e1511",
+     "prerequisite": "multiplication.unknown-factor.solve",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 finds c and d with a = g x c and b = g x d, which is finding an unknown factor in a multiplication equation."
+    }
+   ]
+  },
+  {
+   "id": "division.nonunit-fraction-by-whole",
+   "concept": "division",
+   "facet": "partitive",
+   "level": 3,
+   "type": "procedure",
+   "name": "Divide a fraction by a whole number",
+   "statement": "Divide a fraction a/b by a whole number n greater than 0 by multiplying the denominator by n: (a/b) divided by n = a/(b x n).",
+   "assess": "Compute (3/4) divided by 2.",
+   "procedure": [
+    "Keep the numerator a.",
+    "Multiply the denominator b by n.",
+    "Write a/(b x n) as the quotient."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1512",
+     "prerequisite": "division.unit-fraction-by-whole.rule",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule (a/b) divided by n = a/(b x n) extends the unit-fraction rule (1/b) divided by n = 1/(b x n) from one part to a parts."
+    },
+    {
+     "edge_id": "e1513",
+     "prerequisite": "fraction.multiple-of-unit",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The fraction a/b is read as a copies of the unit fraction 1/b, each of which is divided by n."
+    },
+    {
+     "edge_id": "e1514",
+     "prerequisite": "multiplication.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 multiplies the denominator b by n, such as 4 times 2 in the test problem."
+    },
+    {
+     "edge_id": "e1515",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 multiplies the denominator b by n, a product of whole numbers such as 4 x 2 in the test problem."
+    }
+   ]
+  },
+  {
+   "id": "fraction.reciprocal",
+   "concept": "fraction",
+   "facet": "operator",
+   "level": 3,
+   "type": "concept",
+   "name": "The reciprocal of a fraction",
+   "statement": "The reciprocal of a nonzero fraction a/b is b/a, the number whose product with a/b is 1.",
+   "assess": "Which pairs are reciprocals: 2/3 and 3/2; 2/3 and 1/3; 5 and 1/5; 1/4 and 4/1?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1516",
+     "prerequisite": "fraction.multiplication.product-rule",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The reciprocal is defined as the number whose product with a/b is 1, which uses the product rule (a/b) x (c/d) = (a x c)/(b x d)."
+    },
+    {
+     "edge_id": "e1517",
+     "prerequisite": "fraction.multiplication.symbolic",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The reciprocal is defined as the number whose product with a/b is 1, found by multiplying a/b by b/a."
+    },
+    {
+     "edge_id": "e1518",
+     "prerequisite": "fraction.whole-number.as-fraction",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test pairs 5 with 1/5 and 1/4 with 4/1, which requires writing a whole number as a fraction."
+    }
+   ]
+  },
+  {
+   "id": "division.equal-scaling.quotient-unchanged",
+   "concept": "division",
+   "facet": "measurement",
+   "level": 3,
+   "type": "concept",
+   "name": "Scaling dividend and divisor by the same number leaves the quotient unchanged",
+   "statement": "Multiplying the dividend and the divisor by the same nonzero number does not change the quotient: a divided by b = (a x k) divided by (b x k).",
+   "assess": "Without dividing, decide which of these are equal to 7.38 divided by 0.6: 73.8 divided by 6; 738 divided by 6; 738 divided by 60.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1519",
+     "prerequisite": "division.measurement.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement treats the quotient as the number of equal groups of size b in a, which is the grouping meaning of division."
+    },
+    {
+     "edge_id": "e1520",
+     "prerequisite": "fraction.equivalent.multiply-principle",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Multiplying numerator and denominator by the same number gives an equal fraction, which is the claim a divided by b = (a x k) divided by (b x k)."
+    },
+    {
+     "edge_id": "e1521",
+     "prerequisite": "fraction.quotient.symbolic",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Writing a divided by b as the fraction a/b lets the quotient be treated as a fraction whose numerator and denominator are the two numbers."
+    },
+    {
+     "edge_id": "e1522",
+     "prerequisite": "multiplication.power-of-ten.decimal.rule",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem needs 7.38 and 0.6 rewritten as 73.8 and 6 or as 738 and 60 by multiplying decimals by powers of 10."
+    },
+    {
+     "edge_id": "e1523",
+     "prerequisite": "multiplication.scaling.resize",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Resizing the dividend and the group size by the same factor k leaves the number of groups unchanged, which explains a divided by b = (a x k) divided by (b x k)."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.signed.meaning",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Positive and negative numbers describe opposite directions from 0",
+   "statement": "Positive and negative numbers are used together for quantities measured in opposite directions from a reference value of 0: amounts in one direction are positive and amounts in the opposite direction are negative.",
+   "assess": "Which pairs could be written as +40 and -40: a deposit of 40 dollars and a withdrawal of 40 dollars; 40 m above sea level and 40 m below sea level; 40 apples and 40 oranges? Explain.",
+   "proposed_edges": []
+  },
+  {
+   "id": "rational-number.signed.represent-context",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 2,
+   "type": "representation",
+   "name": "Write a signed number for a quantity in context",
+   "statement": "Write a positive or negative number for a quantity described in a real-world context, choosing the sign by the direction of the quantity from 0.",
+   "assess": "Write a number for each: a temperature 8 degrees below zero; a deposit of 25 dollars; a depth of 150 m below sea level.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1524",
+     "prerequisite": "rational-number.signed.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Choosing the sign by the direction of the quantity from 0 uses the meaning of positive and negative numbers as opposite directions from a reference value."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.zero.meaning-in-context",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "The meaning of 0 in a signed-number context",
+   "statement": "In a context described with positive and negative numbers, 0 stands for the reference value from which both directions are measured, such as sea level, a balance of no money, or the freezing point of water on the Celsius scale.",
+   "assess": "Heights are written relative to sea level, as +200 m for a hilltop and -30 m for a valley floor. What does an elevation of 0 m mean in this situation?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1525",
+     "prerequisite": "rational-number.signed.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says 0 is the reference value from which both directions are measured, which builds the meaning of 0 on positive and negative as opposite directions."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.integer.number-line",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 2,
+   "type": "representation",
+   "name": "Locate integers on a horizontal or vertical number line",
+   "statement": "The negative integers are marked at unit steps from 0 on the opposite side from the positive integers: to the left of 0 on a horizontal number line and below 0 on a vertical one.",
+   "assess": "On a vertical number line marked only with 0 and 1, mark -3 and 2.",
+   "procedure": [
+    "Find 0 and the unit length on the number line.",
+    "For a positive integer n, mark the point n units from 0 to the right (horizontal) or up (vertical).",
+    "For a negative integer -n, mark the point n units from 0 to the left (horizontal) or down (vertical)."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1526",
+     "prerequisite": "number-line.whole-number-lengths",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 marks a positive integer n at n units from 0, which uses whole numbers as lengths from 0 on a number line."
+    },
+    {
+     "edge_id": "e1527",
+     "prerequisite": "rational-number.signed.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement places negative integers on the opposite side of 0 from the positive integers, which is the opposite-direction meaning of negative numbers."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.fraction-decimal.number-line",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 2,
+   "type": "representation",
+   "name": "Locate negative fractions and decimals on a number line",
+   "statement": "A negative fraction or decimal -a is located the same distance from 0 as a, on the negative side of 0 (left on a horizontal number line, below on a vertical one).",
+   "assess": "On a horizontal number line labeled with the integers from -3 to 3, mark -2.5 and -3/4.",
+   "procedure": [
+    "Find where the positive number a would be by locating the fraction or decimal a on the positive side.",
+    "Measure the distance from 0 to a.",
+    "Mark the point at that same distance from 0 on the negative side and label it -a."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1528",
+     "prerequisite": "decimal.number-line",
+     "relation": "representational",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 finds where the positive decimal a would be by locating a decimal on the number line, as for 2.5."
+    },
+    {
+     "edge_id": "e1529",
+     "prerequisite": "fraction.non-unit.number-line",
+     "relation": "representational",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 finds where the positive fraction a would be by locating a fraction on the number line, as for 3/4."
+    },
+    {
+     "edge_id": "e1530",
+     "prerequisite": "rational-number.integer.number-line",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement puts -a on the negative side of 0, extending the way negative integers are marked left of or below 0."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.opposite.number-line",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Opposites lie on opposite sides of 0 at the same distance",
+   "statement": "A number and its opposite, such as 5 and -5, lie on opposite sides of 0 on the number line, at the same distance from 0.",
+   "assess": "Which pairs are opposites: 5 and -5; 3 and -4; -2 and -6? Use a number line to explain.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1531",
+     "prerequisite": "rational-number.integer.number-line",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement places 5 and -5 on opposite sides of 0 at the same distance, which uses locating positive and negative integers on a number line."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.opposite.of-zero",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "0 is its own opposite",
+   "statement": "The opposite of 0 is 0, since 0 is at distance 0 from itself and lies on neither side of 0.",
+   "assess": "What is the opposite of 0? Use the number line to explain.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1532",
+     "prerequisite": "rational-number.opposite.number-line",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The opposite of a number is the point on the other side of 0 at the same distance, so the opposite of 0 is decided by that definition."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.opposite.of-opposite",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "The opposite of the opposite of a number is the number",
+   "statement": "For every number a, the opposite of the opposite of a is a itself: -(-a) = a.",
+   "assess": "What number is -(-7)? If a = -3, what number is -(-a)?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1533",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem gives a = -3 and asks for -(-a), which requires reading the letter a as standing for a number."
+    },
+    {
+     "edge_id": "e1534",
+     "prerequisite": "rational-number.opposite.number-line",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Taking the opposite twice crosses to the other side of 0 and back at the same distance, which is why -(-a) returns to a."
+    },
+    {
+     "edge_id": "e1535",
+     "prerequisite": "rational-number.opposite.of-zero",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement holds for every number a, including 0, whose opposite is 0 so that -(-0) = 0."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.quadrants.signs",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 3,
+   "type": "concept",
+   "name": "The signs of the coordinates tell the quadrant",
+   "statement": "With the quadrants numbered I to IV counterclockwise from the upper right, a point whose coordinates have signs (+, +) is in quadrant I, (-, +) in quadrant II, (-, -) in quadrant III, and (+, -) in quadrant IV; a point with a coordinate of 0 lies on an axis.",
+   "assess": "Without plotting, name the quadrant or axis for each point: (-4, 7), (3, -2), (-1, -5), (0, 6).",
+   "proposed_edges": [
+    {
+     "edge_id": "e1536",
+     "prerequisite": "coordinate-plane.axes-origin",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The quadrants are the four regions the axes cut the plane into, and a point with a coordinate 0 lies on an axis."
+    },
+    {
+     "edge_id": "e1537",
+     "prerequisite": "coordinate-plane.four-quadrants.plot",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Reading the signs of the coordinates as left or right and up or down from the origin is how plotting places a point in a quadrant or on an axis."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.reflection.signs",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 3,
+   "type": "concept",
+   "name": "Points that differ only in sign are mirror images across the axes",
+   "statement": "The points (a, b) and (a, -b) are mirror images across the x-axis, (a, b) and (-a, b) are mirror images across the y-axis, and (a, b) and (-a, -b) are related by a flip across one axis followed by a flip across the other.",
+   "assess": "Point P is (5, -2). Without plotting, which point is its mirror image across the y-axis: (-5, -2), (5, 2), or (-5, 2)?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1538",
+     "prerequisite": "coordinate-plane.four-quadrants.plot",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement describes where the points (a, b), (a, -b) and (-a, b) sit in the plane, which uses placing points from signed coordinates."
+    },
+    {
+     "edge_id": "e1539",
+     "prerequisite": "rational-number.opposite.number-line",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Changing b to -b or a to -a puts the coordinate on the other side of 0 at the same distance, which is the meaning of opposites."
+    },
+    {
+     "edge_id": "e1540",
+     "prerequisite": "symmetry.line.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Mirror images across an axis are matching parts on either side of a line of symmetry, which is the informal meaning of a mirror image."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.four-quadrants.plot",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 2,
+   "type": "procedure",
+   "name": "Plot a point with integer coordinates in any quadrant",
+   "statement": "Plot the point (a, b) with integer coordinates by moving from the origin along the x-axis to a, right if a is positive and left if negative, and then parallel to the y-axis to b, up if b is positive and down if negative.",
+   "assess": "Plot A(-3, 4), B(2, -5), and C(-1, -2) on a coordinate grid.",
+   "procedure": [
+    "Start at the origin.",
+    "Move |a| units along the x-axis: right if a is positive, left if a is negative.",
+    "From there, move |b| units parallel to the y-axis: up if b is positive, down if b is negative.",
+    "Mark the point and label it."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1541",
+     "prerequisite": "coordinate-plane.axes-origin",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The procedure starts at the origin and moves along the x-axis and parallel to the y-axis."
+    },
+    {
+     "edge_id": "e1542",
+     "prerequisite": "coordinate-plane.ordered-pair.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Plotting (a, b) uses the first coordinate as the distance along the x-axis and the second as the distance parallel to the y-axis."
+    },
+    {
+     "edge_id": "e1543",
+     "prerequisite": "coordinate.ordered-pair.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The point is given as an ordered pair (a, b), with the first number for horizontal position and the second for vertical position."
+    },
+    {
+     "edge_id": "e1544",
+     "prerequisite": "rational-number.integer.number-line",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Steps 2 and 3 move right or up for positive coordinates and left or down for negative ones, which is the signed position of an integer on each axis."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.four-quadrants.read",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 2,
+   "type": "procedure",
+   "name": "Read the integer coordinates of a point in any quadrant",
+   "statement": "Find the integer coordinates of a plotted point in any quadrant: the first coordinate is its signed horizontal position, negative to the left of the y-axis, and the second is its signed vertical position, negative below the x-axis.",
+   "assess": "Write the ordered pair for each of the four labeled points on this grid, one in each quadrant.",
+   "procedure": [
+    "From the point, go straight up or down to the x-axis and read the number there; it is negative if the point is left of the y-axis.",
+    "From the point, go straight left or right to the y-axis and read the number there; it is negative if the point is below the x-axis.",
+    "Write the two numbers as an ordered pair (first, second)."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1545",
+     "prerequisite": "coordinate-plane.axes-origin",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Steps 1 and 2 read numbers on the x-axis and y-axis and use which side of the origin the point is on to decide the sign."
+    },
+    {
+     "edge_id": "e1546",
+     "prerequisite": "coordinate-plane.ordered-pair.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement gives the first coordinate as the horizontal position and the second as the vertical position, which is the meaning of the coordinates."
+    },
+    {
+     "edge_id": "e1547",
+     "prerequisite": "coordinate.ordered-pair.notation",
+     "relation": "representational",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 writes the two numbers as an ordered pair (first, second)."
+    },
+    {
+     "edge_id": "e1548",
+     "prerequisite": "rational-number.integer.number-line",
+     "relation": "representational",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Steps 1 and 2 read a number on each axis that is negative left of the y-axis or below the x-axis, which is reading signed integers on a number line."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.four-quadrants.fraction-decimal.plot",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 2,
+   "type": "procedure",
+   "name": "Plot a point with fraction or decimal coordinates in any quadrant",
+   "statement": "Plot a point in any quadrant whose coordinates are positive or negative fractions or decimals, locating each coordinate on its axis as on a number line.",
+   "assess": "On a grid with lines one unit apart, plot (-2.5, 1.5) and (3/4, -2).",
+   "proposed_edges": [
+    {
+     "edge_id": "e1549",
+     "prerequisite": "coordinate-plane.four-quadrants.plot",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement plots by locating each coordinate on its axis and moving from the origin, which is the integer plotting procedure with new kinds of numbers."
+    },
+    {
+     "edge_id": "e1550",
+     "prerequisite": "rational-number.fraction-decimal.number-line",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Locating each fraction or decimal coordinate on its axis, including negative ones, is locating negative fractions and decimals on a number line."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.four-quadrants.fraction-decimal.read",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 2,
+   "type": "procedure",
+   "name": "Read fraction or decimal coordinates of a point in any quadrant",
+   "statement": "Find the coordinates of a plotted point in any quadrant when they are positive or negative fractions or decimals, reading each from the scale of its axis.",
+   "assess": "On a grid whose lines are marked every 0.5 unit, point Q is plotted in quadrant III. Write its coordinates.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1551",
+     "prerequisite": "coordinate-plane.four-quadrants.read",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement reads the two coordinates of a plotted point from its axes, which is the integer reading procedure with new kinds of numbers."
+    },
+    {
+     "edge_id": "e1552",
+     "prerequisite": "rational-number.fraction-decimal.number-line",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Reading a negative fraction or decimal from the scale of an axis uses the position of such numbers on a number line."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.order.number-line",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "An inequality as relative position on the number line",
+   "statement": "For two numbers a and b, a > b says that a is located to the right of b on a number line oriented from left to right, and a < b says that a is located to the left of b.",
+   "assess": "Ana says that -3 > -7 means -3 is to the left of -7 on a number line oriented from left to right. Is she right? Explain using the positions of the two points.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1553",
+     "prerequisite": "comparing.whole-numbers.symbols",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement gives the symbols > and < a meaning as relative position, which reuses the symbols for recording a whole-number comparison."
+    },
+    {
+     "edge_id": "e1554",
+     "prerequisite": "rational-number.integer.number-line",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement reads a > b as a being to the right of b on a number line, and the test compares negative integers such as -3 and -7 by position."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.compare.integers",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Decide which of two integers is greater",
+   "statement": "Decide which of two integers is greater without a number line: a positive integer is greater than 0, 0 is greater than a negative integer, and of two negative integers the one closer to 0 is greater.",
+   "assess": "Which is greater in each pair: -14 or -9; -6 or 0?",
+   "procedure": [
+    "If the integers have different signs, or one is 0, the order is negative < 0 < positive.",
+    "If both are positive, compare them as whole numbers.",
+    "If both are negative, compare their opposites; the negative integer whose opposite is smaller is the greater."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1555",
+     "prerequisite": "comparing.whole-numbers.magnitude.multi-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 compares two positive integers as whole numbers, which is deciding which of two multi-digit numbers is greater."
+    },
+    {
+     "edge_id": "e1556",
+     "prerequisite": "rational-number.opposite.number-line",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 compares the opposites of two negative integers, which uses the opposite of a number as its mirror point across 0."
+    },
+    {
+     "edge_id": "e1557",
+     "prerequisite": "rational-number.order.number-line",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Deciding which integer is greater without a number line rests on what greater means as a position to the right on the number line."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.compare.rationals",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Decide which of two signed fractions or decimals is greater",
+   "statement": "Decide which of two rational numbers given as fractions or decimals is greater without a number line: negative < 0 < positive, and of two negative numbers the one closer to 0, whose opposite is smaller, is greater.",
+   "assess": "Which is greater in each pair: -4.5 or -4.05; -2/3 or -3/4?",
+   "procedure": [
+    "If the numbers have different signs, or one is 0, the order is negative < 0 < positive.",
+    "If both are positive, compare them as fractions or decimals.",
+    "If both are negative, compare their opposites as fractions or decimals; the negative number whose opposite is smaller is the greater."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1558",
+     "prerequisite": "decimal.compare",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 compares positive decimals such as 4.5 and 4.05, which is deciding which of two decimals is greater."
+    },
+    {
+     "edge_id": "e1559",
+     "prerequisite": "fraction.compare.common-denominator",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 compares positive fractions such as 2/3 and 3/4, which have unlike denominators and numerators, so the comparison must handle any pair."
+    },
+    {
+     "edge_id": "e1560",
+     "prerequisite": "rational-number.fraction-decimal.number-line",
+     "relation": "definitional",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 compares the opposites of two negative fractions or decimals, which are the positive numbers at the same distance from 0."
+    },
+    {
+     "edge_id": "e1561",
+     "prerequisite": "rational-number.opposite.number-line",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 compares the opposites of two negative numbers, which uses the opposite of a number as its mirror point across 0."
+    },
+    {
+     "edge_id": "e1562",
+     "prerequisite": "rational-number.order.number-line",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Deciding which rational number is greater without a number line rests on what greater means as a position to the right on the number line."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.order.context.write",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 2,
+   "type": "representation",
+   "name": "Write an inequality comparing two signed quantities in context",
+   "statement": "Write an inequality with > or < between two signed numbers that stand for quantities in a real-world context, such as -3 degrees C > -7 degrees C to record that -3 degrees C is warmer.",
+   "assess": "One town is at an elevation of -12 m and another at -5 m. Write an inequality with these two numbers that says the second town is higher.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1563",
+     "prerequisite": "comparing.whole-numbers.symbols",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement records the comparison with the symbol > or <, as first learned for whole numbers."
+    },
+    {
+     "edge_id": "e1564",
+     "prerequisite": "rational-number.compare.integers",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Writing a correct inequality for the two town elevations requires deciding which of -12 and -5 is greater."
+    },
+    {
+     "edge_id": "e1565",
+     "prerequisite": "rational-number.order.number-line",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Choosing > or < between two signed numbers uses the meaning of an inequality as relative position, where higher is greater."
+    },
+    {
+     "edge_id": "e1566",
+     "prerequisite": "rational-number.signed.represent-context",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each quantity in the context, such as an elevation of -12 m, is first written as a signed number before the two are compared."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.order.context.explain",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 2,
+   "type": "justification",
+   "name": "Explain an inequality between signed quantities in context",
+   "statement": "Explain why an inequality between two signed quantities is true by saying what it means for the quantities in their context, such as warmer, higher, or owing less.",
+   "assess": "Two account balances are -20 dollars and -5 dollars. Explain, in terms of money owed, why -20 < -5.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1567",
+     "prerequisite": "rational-number.order.number-line",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The explanation says what an inequality such as -20 < -5 means for the quantities, which uses its meaning as relative position."
+    },
+    {
+     "edge_id": "e1568",
+     "prerequisite": "rational-number.signed.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Saying the balance is owing less or owing more uses negative numbers as amounts in the opposite direction from 0."
+    }
+   ]
+  },
+  {
+   "id": "absolute-value.distance.integer",
+   "concept": "absolute-value",
+   "facet": "distance",
+   "level": 2,
+   "type": "concept",
+   "name": "Absolute value of an integer as its distance from 0",
+   "statement": "The absolute value of an integer a, written |a|, is the distance from 0 to a on the number line.",
+   "assess": "Use a number line to find |-6|, |6| and |0|.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1569",
+     "prerequisite": "rational-number.integer.number-line",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement defines |a| as the distance from 0 to a, and the test finds |-6| and |6| from the positions of -6 and 6 on a number line."
+    }
+   ]
+  },
+  {
+   "id": "absolute-value.distance.rational",
+   "concept": "absolute-value",
+   "facet": "distance",
+   "level": 2,
+   "type": "concept",
+   "name": "Absolute value of a fraction or decimal as its distance from 0",
+   "statement": "The absolute value of a rational number a given as a fraction or decimal, written |a|, is the distance from 0 to a on the number line.",
+   "assess": "Use a number line to find |-2.5| and |-3/4|.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1570",
+     "prerequisite": "absolute-value.distance.integer",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement gives the same distance-from-0 meaning and the |a| notation as for integers, now applied to fractions and decimals."
+    },
+    {
+     "edge_id": "e1571",
+     "prerequisite": "rational-number.fraction-decimal.number-line",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Finding |-2.5| and |-3/4| uses the positions of negative fractions and decimals on a number line."
+    }
+   ]
+  },
+  {
+   "id": "absolute-value.magnitude.context",
+   "concept": "absolute-value",
+   "facet": "magnitude",
+   "level": 2,
+   "type": "concept",
+   "name": "Absolute value as the size of a signed quantity in context",
+   "statement": "For a quantity in a real-world context written as a signed number, its absolute value is the size of the quantity without its direction, such as the amount of a debt or a depth below sea level.",
+   "assess": "An account balance is -30 dollars. What does |-30| = 30 tell you about the account?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1572",
+     "prerequisite": "absolute-value.distance.integer",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement reads |a| as the size of a signed quantity, and the test uses |-30| = 30 as the distance of -30 from 0."
+    },
+    {
+     "edge_id": "e1573",
+     "prerequisite": "rational-number.signed.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A signed quantity in context, such as a balance of -30 dollars, has a direction from 0 that the absolute value leaves out."
+    }
+   ]
+  },
+  {
+   "id": "absolute-value.vs-order",
+   "concept": "absolute-value",
+   "facet": "distance",
+   "level": 3,
+   "type": "concept",
+   "name": "Comparing absolute values is not comparing numbers",
+   "statement": "A comparison of absolute values is a different statement from a comparison of the numbers: of two negative numbers, the one with the greater absolute value is the lesser number.",
+   "assess": "True or false: -8 < -3. True or false: |-8| < |-3|. Explain why the two answers differ.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1574",
+     "prerequisite": "absolute-value.distance.integer",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement compares absolute values such as |-8| and |-3|, which are distances from 0."
+    },
+    {
+     "edge_id": "e1575",
+     "prerequisite": "rational-number.compare.integers",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says that of two negative numbers the one with the greater absolute value is the lesser number, which is the order of negative integers."
+    },
+    {
+     "edge_id": "e1576",
+     "prerequisite": "rational-number.order.number-line",
+     "relation": "justificatory",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Explaining why -8 < -3 is true while |-8| < |-3| is false uses the positions of the two points on the number line."
+    }
+   ]
+  },
+  {
+   "id": "absolute-value.vs-order.context",
+   "concept": "absolute-value",
+   "facet": "magnitude",
+   "level": 2,
+   "type": "application",
+   "name": "Tell order statements from size statements about signed quantities in context",
+   "statement": "A real-world problem states the order of a negative quantity, such as an account balance less than -30 dollars, and asks what it says about the quantity's size, here a debt greater than 30 dollars.",
+   "assess": "Maya's account balance is less than -30 dollars. Is her debt more than or less than 30 dollars? Explain.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1577",
+     "prerequisite": "absolute-value.magnitude.context",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The question asks for the size of the debt, which is the absolute value of the signed balance in context."
+    },
+    {
+     "edge_id": "e1578",
+     "prerequisite": "rational-number.order.context.explain",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A balance less than -30 dollars is an order statement about a signed quantity, and its meaning in context is the kind of reasoning explained there."
+    }
+   ]
+  },
+  {
+   "id": "coordinate-plane.application.real-world.four-quadrants",
+   "concept": "coordinate-plane",
+   "facet": "location",
+   "level": 2,
+   "type": "application",
+   "name": "Locate places on a map grid with signed coordinates",
+   "statement": "A real-world problem gives places on a map grid as ordered pairs of either sign, with the origin at a landmark and east and north positive; plot them and say where one place is relative to the landmark or to another place.",
+   "assess": "On a town map, the school is at the origin, east and north are positive, and each unit is one block. The library is at (-3, 2) and the park is at (4, -1). Plot both, and say which of them is southeast of the school.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1579",
+     "prerequisite": "coordinate-plane.four-quadrants.plot",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The task plots places given as ordered pairs of either sign on a map grid, as in the test problem for the library and the park."
+    },
+    {
+     "edge_id": "e1580",
+     "prerequisite": "rational-number.signed.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "With east and north positive, a negative coordinate means west or south of the landmark, which is the opposite-direction meaning of negative numbers."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.opposites.combine-to-zero.context",
+   "concept": "rational-number",
+   "facet": "change",
+   "level": 2,
+   "type": "concept",
+   "name": "Opposite quantities combine to make 0",
+   "statement": "In a real-world situation, a quantity combined with an opposite quantity of the same size gives 0, such as a gain of 6 points followed by a loss of 6 points.",
+   "assess": "Which situation ends with a total change of 0: (a) a deposit of 20 dollars, then a withdrawal of 20 dollars; (b) a deposit of 20 dollars, then another deposit of 20 dollars; (c) a rise of 5 degrees, then a fall of 3 degrees?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1581",
+     "prerequisite": "rational-number.signed.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement pairs a quantity with an opposite quantity such as a gain and a loss, which uses opposite directions from a reference value."
+    }
+   ]
+  },
+  {
+   "id": "factors.common-multiple.product",
+   "concept": "factors",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "The product of two whole numbers is a common multiple",
+   "statement": "For nonzero whole numbers a and b, the product a x b is a common multiple of a and b, though it need not be the least one.",
+   "assess": "Without listing multiples, give a common multiple of 7 and 9, and explain how you know it is a multiple of each.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1582",
+     "prerequisite": "factors.common-multiple.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement claims a x b is a common multiple of a and b, which is a multiple of each of the two numbers."
+    },
+    {
+     "edge_id": "e1583",
+     "prerequisite": "factors.multiple-of-each-factor",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A x b has a and b as factors, and a whole number is a multiple of each of its factors, which shows a x b is a multiple of both."
+    },
+    {
+     "edge_id": "e1584",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem asks for a common multiple of 7 and 9, found as the product 7 x 9."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.addition.number-line",
+   "concept": "rational-number",
+   "facet": "change",
+   "level": 2,
+   "type": "concept",
+   "name": "p + q as a move of |q| from p on the number line",
+   "statement": "p + q is the number located a distance |q| from p on the number line, in the positive direction if q is positive and in the negative direction if q is negative.",
+   "assess": "Without computing, describe where -2 + 5 and -2 + (-5) are on a number line: from which point do you start, which way do you move, and how far?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1585",
+     "prerequisite": "absolute-value.distance.integer",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement moves a distance |q| from p, which is the absolute value of q as its distance from 0."
+    },
+    {
+     "edge_id": "e1586",
+     "prerequisite": "addition.add-to.number-line",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "For positive q the sum p + q is the point reached by moving q units in the positive direction, as when a whole-number sum is shown on a number line."
+    },
+    {
+     "edge_id": "e1587",
+     "prerequisite": "rational-number.integer.number-line",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement places p + q on the number line by moving in the positive or negative direction, which uses positions of negative and positive integers."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.additive-inverse",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "A number and its opposite are additive inverses",
+   "statement": "For every number a, a + (-a) = 0; a number and its opposite are additive inverses.",
+   "assess": "Which pairs are additive inverses: 4.5 and -4.5; -3/4 and 4/3; -7 and 7; 2 and 1/2?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1588",
+     "prerequisite": "rational-number.addition.number-line",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Starting at a and moving a distance |a| in the direction of -a lands at 0, which uses the number-line meaning of a + (-a)."
+    },
+    {
+     "edge_id": "e1589",
+     "prerequisite": "rational-number.fraction-decimal.number-line",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test pairs 4.5 with -4.5 and -3/4 with 4/3, which requires locating negative fractions and decimals on a number line."
+    },
+    {
+     "edge_id": "e1590",
+     "prerequisite": "rational-number.opposite.number-line",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about a number and its opposite, which lie on opposite sides of 0 at the same distance."
+    },
+    {
+     "edge_id": "e1591",
+     "prerequisite": "rational-number.opposites.combine-to-zero.context",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A gain and a loss of the same size combining to 0 is the situation that a + (-a) = 0 describes."
+    },
+    {
+     "edge_id": "e1592",
+     "prerequisite": "rational-number.signed.represent-context",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Writing the gain as a and the loss as -a turns the situation into the equation a + (-a) = 0."
+    }
+   ]
+  }
+ ]
+}

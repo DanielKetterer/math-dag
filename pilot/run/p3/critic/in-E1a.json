@@ -1,0 +1,1765 @@
+{
+ "boundary_nodes": [],
+ "nodes": [
+  {
+   "id": "exponent.whole-number-power.meaning",
+   "concept": "exponent",
+   "facet": "whole-number-power",
+   "level": 3,
+   "type": "concept",
+   "name": "a^b as a product of b equal factors",
+   "statement": "For a whole number b of at least 1, a^b is the product of b factors, each equal to a; a is the base and b is the exponent.",
+   "assess": "Which of these equals 4^3: 4 x 3, 4 x 4 x 4, 3 x 3 x 3 x 3, or 4 + 4 + 4?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A power is a product of b equal factors, so reading each multiplication in 4 x 4 x 4 uses a product as a number of equal groups."
+    }
+   ]
+  },
+  {
+   "id": "exponent.whole-number-power.write",
+   "concept": "exponent",
+   "facet": "whole-number-power",
+   "level": 3,
+   "type": "representation",
+   "name": "Write a product of equal factors as a power",
+   "statement": "A product of b equal factors a is written a^b, with the repeated factor as the base and the number of factors as the exponent.",
+   "assess": "Write 6 x 6 x 6 x 6 x 6 using an exponent.",
+   "proposed_edges": [
+    {
+     "edge_id": "e2",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Writing 6 x 6 x 6 x 6 x 6 as 6^5 uses the roles of base and exponent and the meaning of a^b as b equal factors."
+    }
+   ]
+  },
+  {
+   "id": "exponent.whole-number-power.evaluate.whole-base",
+   "concept": "exponent",
+   "facet": "whole-number-power",
+   "level": 3,
+   "type": "procedure",
+   "name": "Evaluate a power of a whole number",
+   "statement": "Find the value of a^b, for a whole number a and a whole-number exponent b of at least 1, by multiplying b factors of a.",
+   "assess": "Evaluate 3^4.",
+   "procedure": [
+    "Write a^b as a product of b factors of a.",
+    "Multiply the factors."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e3",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 rewrites a^b as a product of b factors of a, which is exactly what the power means."
+    },
+    {
+     "edge_id": "e4",
+     "prerequisite": "multiplication.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 multiplies the factors one at a time, as in 9 x 3 and then 27 x 3 for 3^4, each a whole number times a one-digit factor."
+    }
+   ]
+  },
+  {
+   "id": "exponent.whole-number-power.evaluate.fraction-base",
+   "concept": "exponent",
+   "facet": "whole-number-power",
+   "level": 3,
+   "type": "procedure",
+   "name": "Evaluate a power of a fraction",
+   "statement": "Find the value of (a/c)^b, for a fraction a/c and a whole-number exponent b of at least 1, by multiplying b factors of a/c.",
+   "assess": "Evaluate (2/3)^3.",
+   "procedure": [
+    "Write (a/c)^b as a product of b factors of a/c.",
+    "Multiply the fractions."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e5",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 rewrites (a/c)^b as a product of b factors of the fraction a/c, which is what the power means."
+    },
+    {
+     "edge_id": "e6",
+     "prerequisite": "expressions.parentheses",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The base is written (a/c) inside parentheses so that the exponent applies to the whole fraction, not just to the denominator."
+    },
+    {
+     "edge_id": "e7",
+     "prerequisite": "fraction.multiplication.symbolic",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 multiplies b copies of a fraction two at a time, as in (2/3) x (2/3) x (2/3)."
+    }
+   ]
+  },
+  {
+   "id": "exponent.whole-number-power.evaluate.decimal-base",
+   "concept": "exponent",
+   "facet": "whole-number-power",
+   "level": 3,
+   "type": "procedure",
+   "name": "Evaluate a power of a decimal",
+   "statement": "Find the value of d^b, for a decimal d and a whole-number exponent b of at least 1, by multiplying b factors of d.",
+   "assess": "Evaluate (0.2)^3.",
+   "procedure": [
+    "Write d^b as a product of b factors of d.",
+    "Multiply the decimals."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e8",
+     "prerequisite": "decimal.multiplication.algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 multiplies b copies of a decimal two at a time and places the decimal point in each product, as in 0.2 x 0.2 x 0.2."
+    },
+    {
+     "edge_id": "e9",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 rewrites d^b as a product of b factors of the decimal d, which is what the power means."
+    },
+    {
+     "edge_id": "e10",
+     "prerequisite": "expressions.parentheses",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem writes the base as (0.2) in parentheses, so the exponent 3 applies to the whole decimal."
+    }
+   ]
+  },
+  {
+   "id": "expressions.order-of-operations.exponents",
+   "concept": "expressions",
+   "facet": "numerical",
+   "level": 3,
+   "type": "concept",
+   "name": "Powers come before multiplication and division",
+   "statement": "In the conventional order of operations, powers are evaluated after the work inside grouping symbols and before multiplication and division.",
+   "assess": "In 2 x 3^2, which is done first, the multiplication or the power? Is the value 36 or 18?",
+   "proposed_edges": [
+    {
+     "edge_id": "e11",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Telling whether 2 x 3^2 is 36 or 18 requires evaluating 3^2 as 9 before multiplying."
+    },
+    {
+     "edge_id": "e12",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Deciding when a power is evaluated requires knowing that a power is an operation that makes a product of equal factors."
+    },
+    {
+     "edge_id": "e13",
+     "prerequisite": "expressions.order-of-operations",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement places powers inside the existing conventional order, after grouping symbols and before multiplication and division."
+    }
+   ]
+  },
+  {
+   "id": "expressions.exponents.evaluate",
+   "concept": "expressions",
+   "facet": "numerical",
+   "level": 3,
+   "type": "procedure",
+   "name": "Evaluate a numerical expression that contains powers",
+   "statement": "Evaluate a numerical expression of whole numbers that contains whole-number exponents, in the conventional order: grouping symbols, then powers, then multiplication and division from left to right, then addition and subtraction from left to right.",
+   "assess": "Evaluate 20 - 2 x 3^2.",
+   "procedure": [
+    "Evaluate inside grouping symbols, innermost first.",
+    "Evaluate powers.",
+    "Multiply and divide from left to right.",
+    "Add and subtract from left to right."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e14",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 finds the value of each power of a whole number, such as 3^2 = 9 in the test problem."
+    },
+    {
+     "edge_id": "e15",
+     "prerequisite": "expressions.grouping.nested.evaluate",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 evaluates inside grouping symbols, innermost first, which is the nested-grouping evaluation procedure."
+    },
+    {
+     "edge_id": "e16",
+     "prerequisite": "expressions.order-of-operations",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Steps 3 and 4 apply the left-to-right convention to multiplication and division and then to addition and subtraction."
+    },
+    {
+     "edge_id": "e17",
+     "prerequisite": "expressions.order-of-operations.exponents",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 evaluates powers after grouping and before multiplication and division, which is where the rule places them."
+    }
+   ]
+  },
+  {
+   "id": "expressions.variable.meaning",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "concept",
+   "name": "A letter in an expression stands for a number",
+   "statement": "A letter in an expression stands for a number, so operations written with the letter are operations on that number, not on an object or a word.",
+   "assess": "In the expression 3 x b, b stands for the number of books on each of 3 shelves. Sam says b means 'books'. What does b stand for, and what does 3 x b stand for?",
+   "proposed_edges": [
+    {
+     "edge_id": "e18",
+     "prerequisite": "equation.unknown-symbol",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A letter that stands for a number extends the symbol that stands for an unknown number in an equation like 8 + _ = 11."
+    },
+    {
+     "edge_id": "e19",
+     "prerequisite": "expressions.write.record-calculation",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement speaks of operations written with the letter, so the learner must already see an expression as a record of operations on numbers."
+    },
+    {
+     "edge_id": "e20",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem asks what 3 x b stands for, which reads 3 x b as three groups of b books each."
+    }
+   ]
+  },
+  {
+   "id": "expressions.notation.implicit-multiplication",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "representation",
+   "name": "A number next to a letter or parenthesis means multiply",
+   "statement": "A number written directly before a letter or a parenthesis means multiplication: 4y means 4 x y, and 5(2 + n) means 5 x (2 + n).",
+   "assess": "Rewrite 4y and 5(2 + n) with the multiplication sign x shown.",
+   "proposed_edges": [
+    {
+     "edge_id": "e21",
+     "prerequisite": "expressions.parentheses",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "In 5(2 + n) a number sits directly before a parenthesized group, which must be read as one quantity computed first."
+    },
+    {
+     "edge_id": "e22",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "4y means 4 times the number that y stands for, so the letter must already be read as a number."
+    }
+   ]
+  },
+  {
+   "id": "expressions.variable.read",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "representation",
+   "name": "Describe an expression with a letter in words",
+   "statement": "Given an expression built from numbers, letters and operations, choose or give a phrase that describes its operations in the right order.",
+   "assess": "Which phrase describes 5 - y: 'y less than 5', '5 less than y', or 'y minus 5'?",
+   "proposed_edges": [
+    {
+     "edge_id": "e23",
+     "prerequisite": "expressions.interpret.without-evaluating",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Choosing a phrase for 5 - y reads the operations of an expression in words without computing it, as is first done with numbers."
+    },
+    {
+     "edge_id": "e24",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A phrase for 5 - y describes operations on the number y stands for, so the letter must be read as a number."
+    }
+   ]
+  },
+  {
+   "id": "expressions.variable.write-from-words",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "representation",
+   "name": "Write an expression with a letter from a verbal phrase",
+   "statement": "Write an expression, using numbers, letters and operation symbols, that records the operations a verbal phrase describes, in the order the phrase gives them.",
+   "assess": "Write an expression for '7 less than 3 times a number n'.",
+   "proposed_edges": [
+    {
+     "edge_id": "e25",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The letter n in the phrase 'a number n' is written into the expression as a number the operations act on."
+    },
+    {
+     "edge_id": "e26",
+     "prerequisite": "expressions.write.record-calculation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Writing an expression for '7 less than 3 times a number n' repeats the numerical skill of recording described operations in the order given."
+    }
+   ]
+  },
+  {
+   "id": "expressions.parts.name",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "concept",
+   "name": "Name the parts of an expression",
+   "statement": "The parts of an expression are named by its operations: the parts added in a sum are terms, the parts multiplied in a product are factors, an expression whose last operation is division is a quotient, and the number factor of a term with a letter is its coefficient.",
+   "assess": "In 5x + 2y + 8: how many terms are there, what is the coefficient of y, and what are the two factors of 5x?",
+   "proposed_edges": [
+    {
+     "edge_id": "e27",
+     "prerequisite": "expressions.notation.implicit-multiplication",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Finding the coefficient of y and the two factors of 5x requires reading 5x as 5 times x."
+    },
+    {
+     "edge_id": "e28",
+     "prerequisite": "expressions.order-of-operations",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The names sum, product and quotient depend on which operation is last, as in seeing 5x + 2y + 8 as a sum of three terms."
+    }
+   ]
+  },
+  {
+   "id": "expressions.parts.single-entity",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "concept",
+   "name": "View part of an expression as a single quantity",
+   "statement": "A part of an expression, such as (8 + 7) in 2(8 + 7), can be treated as one quantity (here, one factor) while also being a sum of terms.",
+   "assess": "Describe 2(8 + 7) as a product of two factors. Then describe its second factor as a sum of two terms.",
+   "proposed_edges": [
+    {
+     "edge_id": "e29",
+     "prerequisite": "expressions.notation.implicit-multiplication",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The expression 2(8 + 7) is written with a number directly before a parenthesis, which means 2 x (8 + 7)."
+    },
+    {
+     "edge_id": "e30",
+     "prerequisite": "expressions.parentheses",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Treating (8 + 7) as one quantity extends the idea that parentheses group a part to be computed first."
+    },
+    {
+     "edge_id": "e31",
+     "prerequisite": "expressions.parts.name",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Describing 2(8 + 7) as a product of two factors and then its second factor as a sum of two terms uses the words factor and term."
+    }
+   ]
+  },
+  {
+   "id": "expressions.variable.evaluate",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "procedure",
+   "name": "Evaluate an expression at given values of its variables",
+   "statement": "Find the value of an expression at given values of its variables by replacing each letter with its value and evaluating in the conventional order.",
+   "assess": "Evaluate 4a + 3b when a = 5 and b = 2.",
+   "procedure": [
+    "Replace each letter with its given value, writing out any multiplication the notation hides (4a with a = 5 becomes 4 x 5).",
+    "Evaluate the resulting numerical expression in the conventional order."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e32",
+     "prerequisite": "expressions.notation.implicit-multiplication",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 writes out the multiplication the notation hides, turning 4a with a = 5 into 4 x 5."
+    },
+    {
+     "edge_id": "e33",
+     "prerequisite": "expressions.order-of-operations",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 evaluates the resulting numerical expression in the conventional order, as in 4 x 5 + 3 x 2."
+    },
+    {
+     "edge_id": "e34",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 replaces each letter with a given number, which treats the letter as standing for that number."
+    }
+   ]
+  },
+  {
+   "id": "expressions.formula.evaluate",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "application",
+   "name": "Use a given formula to find a quantity in a real-world problem",
+   "statement": "In a real-world problem that gives a formula, such as V = s^3 or A = 6s^2, find the quantity the formula names by evaluating it at the given measurements, and state the result with its unit.",
+   "assess": "The volume of a cube with edge length s is V = s^3. Find the volume of a cube whose edges are 1/2 inch long.",
+   "proposed_edges": [
+    {
+     "edge_id": "e35",
+     "prerequisite": "exponent.whole-number-power.evaluate.fraction-base",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem evaluates (1/2)^3 for an edge of 1/2 inch, a power of a fraction."
+    },
+    {
+     "edge_id": "e36",
+     "prerequisite": "expressions.exponents.evaluate",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formulas V = s^3 and A = 6s^2 contain powers, so evaluating them after substitution puts the power before the multiplication by 6."
+    },
+    {
+     "edge_id": "e37",
+     "prerequisite": "expressions.numerical.fractions-decimals.evaluate",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The measurements may be fractions or decimals and formulas such as A = 6s^2 contain powers, so the substituted expression is evaluated with those numbers."
+    },
+    {
+     "edge_id": "e38",
+     "prerequisite": "expressions.variable.evaluate",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Finding the quantity a formula names means replacing the letters in V = s^3 or A = 6s^2 with the given measurements and evaluating."
+    },
+    {
+     "edge_id": "e39",
+     "prerequisite": "volume.unit-cube",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The answer to the cube problem must be stated in cubic inches, the unit that comes from a unit cube."
+    }
+   ]
+  },
+  {
+   "id": "expressions.numerical.fractions-decimals.evaluate",
+   "concept": "expressions",
+   "facet": "numerical",
+   "level": 3,
+   "type": "procedure",
+   "name": "Evaluate a numerical expression with fractions or decimals",
+   "statement": "Evaluate a numerical expression with two or more operations, possibly including whole-number exponents, whose numbers are nonnegative fractions or decimals, in the conventional order of operations.",
+   "assess": "Evaluate 1/2 + 3 x (1/2)^2.",
+   "procedure": [
+    "Evaluate inside grouping symbols, innermost first.",
+    "Evaluate powers.",
+    "Multiply and divide from left to right.",
+    "Add and subtract from left to right."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e40",
+     "prerequisite": "decimal.addition.algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Step 4 adds decimals when the expression's numbers are decimals."
+    },
+    {
+     "edge_id": "e41",
+     "prerequisite": "decimal.division.by-decimal.algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 divides decimals when the expression has a division."
+    },
+    {
+     "edge_id": "e42",
+     "prerequisite": "decimal.multiplication.algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 multiplies decimals when the expression's numbers are decimals."
+    },
+    {
+     "edge_id": "e43",
+     "prerequisite": "decimal.subtraction.algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Step 4 subtracts decimals when the expression has a subtraction."
+    },
+    {
+     "edge_id": "e44",
+     "prerequisite": "exponent.whole-number-power.evaluate.decimal-base",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 evaluates a power of a decimal when the expression's numbers are decimals."
+    },
+    {
+     "edge_id": "e45",
+     "prerequisite": "exponent.whole-number-power.evaluate.fraction-base",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 evaluates a power of a fraction, such as (1/2)^2."
+    },
+    {
+     "edge_id": "e46",
+     "prerequisite": "expressions.grouping.nested.evaluate",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 evaluates inside grouping symbols, innermost first, now in expressions whose numbers are fractions or decimals."
+    },
+    {
+     "edge_id": "e47",
+     "prerequisite": "expressions.order-of-operations",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Steps 3 and 4 apply the left-to-right convention to multiplication and division and then to addition and subtraction."
+    },
+    {
+     "edge_id": "e48",
+     "prerequisite": "expressions.order-of-operations.exponents",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 puts powers before multiplication and division, as in 3 x (1/2)^2 in the test problem."
+    },
+    {
+     "edge_id": "e49",
+     "prerequisite": "fraction.addition.unlike-denominators",
+     "relation": "procedural",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Step 4 adds fractions, as in 1/2 + 3/4 in the test problem, where the denominators differ."
+    },
+    {
+     "edge_id": "e50",
+     "prerequisite": "fraction.division.symbolic",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 divides fractions when the expression has a division."
+    },
+    {
+     "edge_id": "e51",
+     "prerequisite": "fraction.multiplication.symbolic",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 multiplies fractions, as in 3 x (1/4) in the test problem."
+    },
+    {
+     "edge_id": "e52",
+     "prerequisite": "fraction.subtraction.unlike-denominators",
+     "relation": "procedural",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Step 4 subtracts fractions when the expression has a subtraction."
+    }
+   ]
+  },
+  {
+   "id": "expressions.sum.rearrange-terms",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "procedure",
+   "name": "Reorder and regroup the terms of a sum",
+   "statement": "Generate an expression equivalent to a sum by writing its terms in a different order or grouping them differently, using the commutative and associative properties of addition.",
+   "assess": "Rewrite 3 + x + 7 as x plus a single number.",
+   "procedure": [
+    "Write the terms in the new order.",
+    "Group the terms to be combined with parentheses."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e53",
+     "prerequisite": "addition.associative.strategy",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 groups the terms differently, which relies on choosing which two numbers to add first."
+    },
+    {
+     "edge_id": "e54",
+     "prerequisite": "addition.commutative",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 writes the terms in a new order, which is allowed because the order of addends does not change the sum."
+    },
+    {
+     "edge_id": "e55",
+     "prerequisite": "addition.within-10",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Rewriting 3 + x + 7 as x plus a single number requires finding 3 + 7."
+    },
+    {
+     "edge_id": "e56",
+     "prerequisite": "expressions.parentheses",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 groups the terms to be combined by putting parentheses around them."
+    },
+    {
+     "edge_id": "e57",
+     "prerequisite": "expressions.parts.name",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement speaks of the terms of a sum, which uses the word term for each part added."
+    },
+    {
+     "edge_id": "e58",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The properties apply to a sum with a letter because the letter stands for a number."
+    }
+   ]
+  },
+  {
+   "id": "expressions.product.regroup-factors",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "procedure",
+   "name": "Reorder and regroup the factors of a product",
+   "statement": "Generate an expression equivalent to a product by writing its factors in a different order or grouping them differently, using the commutative and associative properties of multiplication, so that the number factors can be multiplied together.",
+   "assess": "Rewrite 4 x (y x 5) as a single number times y.",
+   "procedure": [
+    "Write the number factors next to each other.",
+    "Group the number factors with parentheses and multiply them."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e59",
+     "prerequisite": "expressions.notation.implicit-multiplication",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The goal 'a single number times y' is written as a number next to a letter, such as 20y."
+    },
+    {
+     "edge_id": "e60",
+     "prerequisite": "expressions.parentheses",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 groups the number factors by putting parentheses around them."
+    },
+    {
+     "edge_id": "e61",
+     "prerequisite": "expressions.parts.name",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement speaks of the factors of a product, which uses the word factor for each part multiplied."
+    },
+    {
+     "edge_id": "e62",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The properties apply to a product with a letter because the letter stands for a number."
+    },
+    {
+     "edge_id": "e63",
+     "prerequisite": "multiplication.associative",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 groups the number factors with parentheses, which relies on the associative property of multiplication."
+    },
+    {
+     "edge_id": "e64",
+     "prerequisite": "multiplication.commutative",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 writes the number factors next to each other, which is allowed because the order of factors does not change the product."
+    },
+    {
+     "edge_id": "e65",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Rewriting 4 x (y x 5) as a single number times y requires finding 4 x 5."
+    }
+   ]
+  },
+  {
+   "id": "expressions.like-terms.meaning",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "concept",
+   "name": "Like terms",
+   "statement": "Like terms are terms with the same variable part (the same letters raised to the same powers); they may differ only in their number coefficient. Number terms with no letter are like terms of one another.",
+   "assess": "Which of these pairs are like terms: 3x and 7x; 3x and 3y; 5 and 9; 4x and 4; 2x^2 and 2x?",
+   "proposed_edges": [
+    {
+     "edge_id": "e66",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The same letters raised to the same powers requires reading x^2 as x times x, which the test pair 2x^2 and 2x uses."
+    },
+    {
+     "edge_id": "e67",
+     "prerequisite": "expressions.parts.name",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Like terms are defined as terms that differ only in their coefficient, which uses the words term and coefficient."
+    }
+   ]
+  },
+  {
+   "id": "expressions.like-terms.combine",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "procedure",
+   "name": "Combine like terms with nonnegative coefficients",
+   "statement": "Combine like terms whose coefficients are nonnegative whole numbers, fractions or decimals by adding their coefficients, ax + bx = (a + b)x, where a term written x has coefficient 1.",
+   "assess": "Write y + y + y as a single term. Write 2.5x + 4x as a single term.",
+   "procedure": [
+    "Identify the like terms.",
+    "Add their coefficients, counting a term written x as 1x.",
+    "Write the sum of the coefficients times the shared variable part."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e68",
+     "prerequisite": "addition.multi-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 adds the coefficients, which are whole numbers that may have more than one digit."
+    },
+    {
+     "edge_id": "e69",
+     "prerequisite": "addition.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 adds whole-number coefficients, as in 1 + 1 + 1 for y + y + y."
+    },
+    {
+     "edge_id": "e70",
+     "prerequisite": "decimal.addition.algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 adds the coefficients when they are decimals, as in 2.5 + 4 in the test problem."
+    },
+    {
+     "edge_id": "e71",
+     "prerequisite": "expressions.like-terms.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 identifies which terms are like terms before any coefficients are added."
+    },
+    {
+     "edge_id": "e72",
+     "prerequisite": "expressions.parts.name",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement adds coefficients in ax + bx = (a + b)x, which uses the word coefficient for the number factor of a term."
+    },
+    {
+     "edge_id": "e73",
+     "prerequisite": "fraction.addition.unlike-denominators",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 adds the coefficients when they are fractions, which may have unlike denominators."
+    },
+    {
+     "edge_id": "e74",
+     "prerequisite": "multiplication.by-one",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Counting a term written x as 1x relies on multiplying by 1 leaving a number unchanged."
+    },
+    {
+     "edge_id": "e75",
+     "prerequisite": "multiplication.distributive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The identity ax + bx = (a + b)x is the distributive property of multiplication over addition read from right to left."
+    },
+    {
+     "edge_id": "e76",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Writing y + y + y as a single term 3y reads three equal addends as three groups of y."
+    }
+   ]
+  },
+  {
+   "id": "expressions.distributive.expand",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "procedure",
+   "name": "Expand a(b + c) with a variable using the distributive property",
+   "statement": "Rewrite a nonnegative number times a sum or difference that contains a variable, a(b + c) or a(b - c), as ab + ac or ab - ac, using the distributive property.",
+   "assess": "Rewrite 3(2 + x) without parentheses.",
+   "procedure": [
+    "Multiply the outside factor by each term inside the parentheses.",
+    "Write the products joined by the sign that joined the terms."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e77",
+     "prerequisite": "expressions.notation.implicit-multiplication",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The expression 3(2 + x) and the product 3x both hide the multiplication sign, so the notation must be read as multiplication."
+    },
+    {
+     "edge_id": "e78",
+     "prerequisite": "expressions.parts.name",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 multiplies by each term inside the parentheses, which uses the name term for a part joined by addition."
+    },
+    {
+     "edge_id": "e79",
+     "prerequisite": "expressions.parts.single-entity",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 multiplies the outside factor by each term, treating the parenthesized sum as one factor that is also a sum of terms."
+    },
+    {
+     "edge_id": "e80",
+     "prerequisite": "multiplication.distributive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement rewrites a(b + c) as ab + ac, which is the distributive property of multiplication over addition."
+    },
+    {
+     "edge_id": "e81",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Rewriting 3(2 + x) as 6 + 3x requires finding 3 x 2."
+    },
+    {
+     "edge_id": "e82",
+     "prerequisite": "multiplication.distributive-over-subtraction",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement also rewrites a(b - c) as ab - ac, which is the distributive property over subtraction."
+    }
+   ]
+  },
+  {
+   "id": "expressions.distributive.factor",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "procedure",
+   "name": "Factor a common whole-number factor out of a sum",
+   "statement": "Rewrite a sum of terms that share a whole-number factor f as f times a sum, such as 24x + 18y = 6(4x + 3y), using the distributive property in reverse.",
+   "assess": "Rewrite 24x + 18y as a product with 6 as one factor.",
+   "procedure": [
+    "Divide each term by the common factor f.",
+    "Write f times the sum of the quotients."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e83",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 divides each term's coefficient by f exactly, as in 24 / 6 and 18 / 6."
+    },
+    {
+     "edge_id": "e84",
+     "prerequisite": "division.facts.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 divides each term by the common factor, as in 24 divided by 6 and 18 divided by 6."
+    },
+    {
+     "edge_id": "e85",
+     "prerequisite": "expressions.notation.implicit-multiplication",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The terms 24x and 18y and the result 6(4x + 3y) are all written with a hidden multiplication sign."
+    },
+    {
+     "edge_id": "e86",
+     "prerequisite": "expressions.parts.name",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about a sum of terms and the number factor of each term, which uses those names."
+    },
+    {
+     "edge_id": "e87",
+     "prerequisite": "expressions.parts.single-entity",
+     "relation": "definitional",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 writes f times a sum, treating the sum of the quotients as a single factor."
+    },
+    {
+     "edge_id": "e88",
+     "prerequisite": "factors.common-factor.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The terms must share a whole-number factor f, which is a common factor of the coefficients such as 6 for 24 and 18."
+    },
+    {
+     "edge_id": "e89",
+     "prerequisite": "multiplication.distributive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement uses the distributive property in reverse to write a sum as a common factor times a sum."
+    }
+   ]
+  },
+  {
+   "id": "expressions.equivalent.meaning",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "concept",
+   "name": "Equivalent expressions",
+   "statement": "Two expressions are equivalent when they have the same value for every number substituted for the variable; having the same value for one number is not enough.",
+   "assess": "When x = 2, both 2x and x + 2 equal 4. What does each equal when x = 5? Are 2x and x + 2 equivalent?",
+   "proposed_edges": [
+    {
+     "edge_id": "e90",
+     "prerequisite": "expressions.variable.evaluate",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Equivalence is defined by comparing the values of two expressions after a number is substituted for the variable, which is evaluating each one."
+    },
+    {
+     "edge_id": "e91",
+     "prerequisite": "expressions.variable.unknown-vs-varying",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "'Every number substituted for the variable' treats the letter as standing for any number in a set, not one fixed unknown."
+    }
+   ]
+  },
+  {
+   "id": "expressions.equivalent.test-substitution",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "procedure",
+   "name": "Show two expressions are not equivalent by substitution",
+   "statement": "Show that two expressions are not equivalent by finding a value of the variable at which they have different values; agreement at the values tried does not by itself show that they are equivalent.",
+   "assess": "Substitute x = 0, 1 and 2 into 2(x + 3) and 2x + 3. Are the two expressions equivalent?",
+   "procedure": [
+    "Choose a value for the variable and evaluate both expressions.",
+    "If the values differ, the expressions are not equivalent.",
+    "If they agree, try another value, or use properties of operations to decide."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e92",
+     "prerequisite": "expressions.equivalent.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Showing that two expressions are not equivalent means finding one value at which they differ, which is what equivalence requires at every value."
+    },
+    {
+     "edge_id": "e93",
+     "prerequisite": "expressions.variable.evaluate",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 chooses a value for the variable and evaluates both expressions at it."
+    }
+   ]
+  },
+  {
+   "id": "expressions.equivalent.test-properties",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "procedure",
+   "name": "Decide whether expressions are equivalent using properties",
+   "statement": "Decide whether two expressions are equivalent by using properties of operations to rewrite one into the other, or both into the same form.",
+   "assess": "Use properties of operations to decide whether 3(x + 4) + 2x and 5x + 12 are equivalent.",
+   "procedure": [
+    "Expand products and combine like terms in each expression.",
+    "Compare the two resulting forms term by term."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e94",
+     "prerequisite": "expressions.distributive.expand",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 expands products such as 3(x + 4) with the distributive property."
+    },
+    {
+     "edge_id": "e95",
+     "prerequisite": "expressions.equivalent.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The decision is whether two expressions have the same value for every number, which is the meaning of equivalent."
+    },
+    {
+     "edge_id": "e96",
+     "prerequisite": "expressions.like-terms.combine",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 combines like terms, as in 3x + 2x = 5x in the test problem."
+    },
+    {
+     "edge_id": "e97",
+     "prerequisite": "expressions.sum.rearrange-terms",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Combining 3x and 2x in 3x + 12 + 2x requires first reordering the terms so the like terms sit together."
+    }
+   ]
+  },
+  {
+   "id": "expressions.equivalent.explain",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 4,
+   "type": "justification",
+   "name": "Explain whether two expressions are equivalent",
+   "statement": "An argument that two expressions are equivalent rewrites one into the other with properties of operations, which hold for every value of the variable; an argument that they are not gives one value at which they differ.",
+   "assess": "Explain why y + y + y and 3y are equivalent, and why y + 3 and 3y are not.",
+   "proposed_edges": [
+    {
+     "edge_id": "e98",
+     "prerequisite": "expressions.equivalent.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The argument must show equal values for every number, or one value where they differ, which is the meaning of equivalent."
+    },
+    {
+     "edge_id": "e99",
+     "prerequisite": "expressions.equivalent.test-properties",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The argument for equivalence rewrites one expression into the other with properties of operations, as in y + y + y = 3y."
+    },
+    {
+     "edge_id": "e100",
+     "prerequisite": "expressions.equivalent.test-substitution",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The argument for non-equivalence gives one value at which the expressions differ, as for y + 3 and 3y."
+    },
+    {
+     "edge_id": "e101",
+     "prerequisite": "expressions.like-terms.combine",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem explains why y + y + y and 3y are equivalent, which rewrites a sum of equal terms as one term."
+    }
+   ]
+  },
+  {
+   "id": "equation.solution.meaning",
+   "concept": "equation",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "concept",
+   "name": "A solution of an equation",
+   "statement": "A solution of an equation with a variable is a value of the variable that makes the equation true; solving the equation means finding which values from a given set, if any, are solutions.",
+   "assess": "When x = 4, the equation 3x + 2 = 14 is true. When x = 5, it is false. Which of 4 and 5 is a solution of 3x + 2 = 14, and why?",
+   "proposed_edges": [
+    {
+     "edge_id": "e102",
+     "prerequisite": "equation.equal-sign.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "An equation is true when both sides have the same value, which is what the equal sign says and what makes a value a solution."
+    },
+    {
+     "edge_id": "e103",
+     "prerequisite": "equation.true-false",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A solution is a value that makes the equation true, which uses deciding whether an equation is true or false."
+    },
+    {
+     "edge_id": "e104",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A solution is a value of the variable, so the letter must already be read as standing for a number."
+    }
+   ]
+  },
+  {
+   "id": "inequality.solution.meaning",
+   "concept": "inequality",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "concept",
+   "name": "A solution of an inequality",
+   "statement": "A solution of an inequality with a variable is a value of the variable that makes the inequality true; an inequality can have more than one solution.",
+   "assess": "x + 1 > 5 is true when x = 6 and when x = 9, and false when x = 3. Which of 3, 6 and 9 are solutions of x + 1 > 5?",
+   "proposed_edges": [
+    {
+     "edge_id": "e105",
+     "prerequisite": "comparing.whole-numbers.symbols",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "An inequality such as x + 1 > 5 is written with a comparison symbol, which must be read to tell when it is true."
+    },
+    {
+     "edge_id": "e106",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A solution is a value of the variable, so the letter must already be read as standing for a number."
+    }
+   ]
+  },
+  {
+   "id": "equation.solution.check-substitution",
+   "concept": "equation",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "procedure",
+   "name": "Check by substitution which numbers solve an equation",
+   "statement": "Decide which numbers in a given set, if any, make an equation true by substituting each for the variable and checking whether the two sides have the same value.",
+   "assess": "Which numbers in the set {2, 3, 5} make 2x + 1 = 7 true?",
+   "procedure": [
+    "Substitute a number from the set for the variable.",
+    "Evaluate each side.",
+    "If the sides are equal, the number is a solution; repeat for each number in the set."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e107",
+     "prerequisite": "equation.solution.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A number is kept as a solution only when substituting it makes the equation true, which is the meaning of a solution."
+    },
+    {
+     "edge_id": "e108",
+     "prerequisite": "expressions.variable.evaluate",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Steps 1 and 2 substitute a number for the variable and evaluate each side, as in 2x + 1 with x = 3."
+    }
+   ]
+  },
+  {
+   "id": "inequality.solution.check-substitution",
+   "concept": "inequality",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "procedure",
+   "name": "Check by substitution which numbers solve an inequality",
+   "statement": "Decide which numbers in a given set, if any, make an inequality true by substituting each for the variable and checking whether the resulting comparison is true.",
+   "assess": "Which numbers in the set {1, 3, 5, 7} make 2x - 1 > 6 true?",
+   "procedure": [
+    "Substitute a number from the set for the variable.",
+    "Evaluate each side.",
+    "If the comparison is true, the number is a solution; repeat for each number in the set."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e109",
+     "prerequisite": "comparing.whole-numbers.magnitude",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 decides whether the comparison of the two evaluated sides is true, as in 9 > 6, by telling which number is greater."
+    },
+    {
+     "edge_id": "e110",
+     "prerequisite": "comparing.whole-numbers.magnitude.multi-digit",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 decides whether the comparison of the two evaluated sides is true, such as 13 > 6, by judging which number is greater."
+    },
+    {
+     "edge_id": "e111",
+     "prerequisite": "expressions.variable.evaluate",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Steps 1 and 2 substitute a number for the variable and evaluate each side, as in 2x - 1 with x = 5."
+    },
+    {
+     "edge_id": "e112",
+     "prerequisite": "inequality.solution.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A number is kept as a solution only when substituting it makes the inequality true, which is the meaning of a solution."
+    }
+   ]
+  },
+  {
+   "id": "expressions.variable.unknown-vs-varying",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "concept",
+   "name": "A variable as one unknown number or as any number in a set",
+   "statement": "A letter can stand for one unknown number that a condition fixes, as in the equation n + 3 = 10, or for any number in a set, as in the expression 3n for the cost in dollars of n pencils at $3 each; the purpose at hand decides which.",
+   "assess": "In n + 3 = 10, which numbers can n be? In 'n pencils at $3 each cost 3n dollars', which numbers can n be?",
+   "proposed_edges": [
+    {
+     "edge_id": "e113",
+     "prerequisite": "equation.solution.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A letter fixed to one unknown number by a condition, as in n + 3 = 10, uses the idea of the solution that makes an equation true."
+    },
+    {
+     "edge_id": "e114",
+     "prerequisite": "equation.unknown-symbol",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The first use, one unknown number fixed by a condition as in n + 3 = 10, extends the symbol for an unknown number in an equation."
+    },
+    {
+     "edge_id": "e115",
+     "prerequisite": "equation.unknown.addition",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Telling which numbers n can be in n + 3 = 10 requires finding the unknown in an addition equation."
+    },
+    {
+     "edge_id": "e116",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Both uses of a letter, an unknown number and any number in a set, start from the letter standing for a number."
+    },
+    {
+     "edge_id": "e117",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem reads 3n as the cost of n pencils at 3 dollars each, which is n equal groups of 3."
+    }
+   ]
+  },
+  {
+   "id": "expressions.variable.situation-from-expression",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "representation",
+   "name": "Describe a situation that an expression with a variable represents",
+   "statement": "Given an expression with a variable, describe a real-world situation the expression could represent, saying what the variable stands for.",
+   "assess": "Describe a situation that 20 - 3x could represent, and say what x stands for.",
+   "proposed_edges": [
+    {
+     "edge_id": "e118",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The learner must say what the variable stands for, which uses the letter as a number."
+    },
+    {
+     "edge_id": "e119",
+     "prerequisite": "expressions.variable.read",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A situation for 20 - 3x must match the operations in the right order, which is what describing the expression in words does."
+    },
+    {
+     "edge_id": "e120",
+     "prerequisite": "expressions.variable.unknown-vs-varying",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The situation must let the variable take any number in a set, such as a count of items, rather than one fixed unknown."
+    },
+    {
+     "edge_id": "e121",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem needs a situation for 3x, such as x items at 3 dollars each, which is x equal groups of 3."
+    }
+   ]
+  },
+  {
+   "id": "expressions.variable.write-for-situation",
+   "concept": "expressions",
+   "facet": "algebraic",
+   "level": 3,
+   "type": "representation",
+   "name": "Write an expression with a variable for a real-world quantity",
+   "statement": "Write an expression, with a letter for a number that can vary, for a quantity in a real-world situation that depends on that number.",
+   "assess": "Pencils cost $2 each and a notebook costs $3. Write an expression for the cost, in dollars, of p pencils and one notebook.",
+   "proposed_edges": [
+    {
+     "edge_id": "e122",
+     "prerequisite": "expressions.variable.unknown-vs-varying",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The letter stands for a number that can vary, such as the number of pencils, rather than one fixed unknown."
+    },
+    {
+     "edge_id": "e123",
+     "prerequisite": "expressions.variable.write-from-words",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Once the operations of the situation are stated, writing 2p + 3 uses the skill of writing an expression with a letter from a phrase."
+    },
+    {
+     "edge_id": "e124",
+     "prerequisite": "multiplication.equal-groups.situation-to-expression",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The cost of p pencils at $2 each is an equal-groups situation written as 2 x p."
+    }
+   ]
+  },
+  {
+   "id": "equation.equality-preserved.same-operation",
+   "concept": "equation",
+   "facet": "relational",
+   "level": 3,
+   "type": "concept",
+   "name": "Doing the same operation to both sides keeps an equation's solutions",
+   "statement": "Adding the same number to both sides of an equation, subtracting the same number from both sides, or multiplying or dividing both sides by the same nonzero number gives an equation with exactly the same solutions.",
+   "assess": "Which of these equations have exactly the same solutions as n + 5 = 12: n + 5 - 5 = 12 - 5; n + 5 - 5 = 12; 3 x (n + 5) = 3 x 12; 0 x (n + 5) = 0 x 12?",
+   "proposed_edges": [
+    {
+     "edge_id": "e125",
+     "prerequisite": "division.by-zero.undefined",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement allows dividing both sides only by a nonzero number, because division by zero is undefined."
+    },
+    {
+     "edge_id": "e126",
+     "prerequisite": "equation.equal-sign.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Doing the same operation to both sides keeps the two sides equal in value, which is what the equal sign says."
+    },
+    {
+     "edge_id": "e127",
+     "prerequisite": "equation.solution.check-substitution",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Deciding which listed equations share the solution of n + 5 = 12 can be done by substituting n = 7 into each."
+    },
+    {
+     "edge_id": "e128",
+     "prerequisite": "equation.solution.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says the new equation has exactly the same solutions, which uses what a solution of an equation is."
+    },
+    {
+     "edge_id": "e129",
+     "prerequisite": "multiplication.by-zero",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test option 0 x (n + 5) = 0 x 12 reduces to 0 = 0, so multiplying by 0 changes the solutions."
+    }
+   ]
+  },
+  {
+   "id": "equation.one-step.addition.solve",
+   "concept": "equation",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "procedure",
+   "name": "Solve x + p = q with nonnegative rational numbers",
+   "statement": "Solve an equation x + p = q, where p and q are nonnegative whole numbers, fractions or decimals with q at least p, by subtracting p from both sides, so that x = q - p.",
+   "assess": "Solve x + 2/3 = 7/6.",
+   "procedure": [
+    "Subtract p from both sides of the equation.",
+    "Compute q - p; the result is the value of x."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e130",
+     "prerequisite": "decimal.subtraction.algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 computes q - p when p and q are decimals."
+    },
+    {
+     "edge_id": "e131",
+     "prerequisite": "equation.equality-preserved.same-operation",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 subtracts p from both sides, which is justified because the same operation on both sides keeps the solutions."
+    },
+    {
+     "edge_id": "e132",
+     "prerequisite": "fraction.subtraction.unlike-denominators",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 computes q - p for fractions, as in 7/6 - 2/3 in the test problem, where the denominators differ."
+    },
+    {
+     "edge_id": "e133",
+     "prerequisite": "subtraction.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 computes q - p for whole-number values."
+    },
+    {
+     "edge_id": "e134",
+     "prerequisite": "subtraction.within-1000",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 computes q - p, which is a whole-number difference when p and q are whole numbers."
+    }
+   ]
+  },
+  {
+   "id": "equation.one-step.multiplication.solve",
+   "concept": "equation",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "procedure",
+   "name": "Solve px = q with nonnegative rational numbers",
+   "statement": "Solve an equation px = q, where p is a positive whole number, fraction or decimal and q is a nonnegative one, by dividing both sides by p, so that x = q divided by p.",
+   "assess": "Solve (3/4)x = 6.",
+   "procedure": [
+    "Divide both sides of the equation by p.",
+    "Compute q divided by p; the result is the value of x."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e135",
+     "prerequisite": "decimal.division.by-decimal.algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 computes q divided by p when p is a decimal."
+    },
+    {
+     "edge_id": "e136",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 computes q divided by p for whole numbers when p is a one-digit number that divides q evenly."
+    },
+    {
+     "edge_id": "e137",
+     "prerequisite": "equation.equality-preserved.same-operation",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 divides both sides by p, which is justified because dividing both sides by the same nonzero number keeps the solutions."
+    },
+    {
+     "edge_id": "e138",
+     "prerequisite": "expressions.notation.implicit-multiplication",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation px = q and the test equation (3/4)x = 6 write the product of p and x with the multiplication sign hidden."
+    },
+    {
+     "edge_id": "e139",
+     "prerequisite": "fraction.division.symbolic",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 computes q divided by p for a fraction p, as in 6 divided by 3/4 in the test problem."
+    },
+    {
+     "edge_id": "e140",
+     "prerequisite": "fraction.quotient.symbolic",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 computes q divided by p for whole numbers when the quotient is not a whole number, writing it as a fraction."
+    }
+   ]
+  },
+  {
+   "id": "equation.one-step.write.addition",
+   "concept": "equation",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "representation",
+   "name": "Write x + p = q for a word problem",
+   "statement": "For a problem stated in words in which an unknown nonnegative quantity and a known nonnegative rational amount p together make a known amount q, write the equation x + p = q, saying what x stands for.",
+   "assess": "After Ana poured 1.25 liters of water into a jug, the jug held 3 liters. Write an equation for the amount of water w, in liters, that was in the jug at first.",
+   "proposed_edges": [
+    {
+     "edge_id": "e141",
+     "prerequisite": "equation.situation.one-step",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Writing x + p = q for a story extends writing an equation with a symbol for the unknown in a one-step story."
+    },
+    {
+     "edge_id": "e142",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The task says what x stands for, which uses a letter standing for the unknown number of units."
+    },
+    {
+     "edge_id": "e143",
+     "prerequisite": "expressions.variable.unknown-vs-varying",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The letter stands for one unknown quantity fixed by the story, and the learner must say what it stands for."
+    }
+   ]
+  },
+  {
+   "id": "equation.one-step.write.multiplication",
+   "concept": "equation",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "representation",
+   "name": "Write px = q for a word problem",
+   "statement": "For a problem stated in words in which a known positive rational number p times an unknown nonnegative quantity gives a known amount q (p may be a fraction, as in 'p of the quantity'), write the equation px = q, saying what x stands for.",
+   "assess": "Three-fourths of a bag of rice weighs 6 pounds. Write an equation for the weight b, in pounds, of the full bag.",
+   "proposed_edges": [
+    {
+     "edge_id": "e144",
+     "prerequisite": "division.unknown-factor.equation-from-story",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Writing px = q for a story extends writing a multiplication equation with an unknown factor for a story."
+    },
+    {
+     "edge_id": "e145",
+     "prerequisite": "equation.situation.one-step",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Writing an equation with an unknown for a one-step story is the same skill, now with a letter and rational amounts."
+    },
+    {
+     "edge_id": "e146",
+     "prerequisite": "expressions.notation.implicit-multiplication",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation is written as px or (3/4)b, a number next to a letter meaning multiplication."
+    },
+    {
+     "edge_id": "e147",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The task says what x stands for, which uses a letter standing for the unknown quantity."
+    },
+    {
+     "edge_id": "e148",
+     "prerequisite": "expressions.variable.unknown-vs-varying",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The letter stands for one unknown quantity fixed by the story, and the learner must say what it stands for."
+    },
+    {
+     "edge_id": "e149",
+     "prerequisite": "fraction.multiplication.parts-of-partition.whole-number",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A phrase like 'three-fourths of a bag' means the fraction times the quantity, as in (3/4) x b."
+    }
+   ]
+  },
+  {
+   "id": "equation.one-step.addition.application",
+   "concept": "equation",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems with an equation x + p = q",
+   "statement": "Solve a real-world problem in which an unknown nonnegative quantity plus a known nonnegative rational amount p gives a known amount q, by writing x + p = q and solving it.",
+   "assess": "A plant grew 2 3/4 inches this month and is now 10 1/2 inches tall. Write an equation and solve it to find how tall the plant was at the start of the month.",
+   "proposed_edges": [
+    {
+     "edge_id": "e150",
+     "prerequisite": "equation.one-step.addition.solve",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement then solves x + p = q, which is the solving procedure for that equation."
+    },
+    {
+     "edge_id": "e151",
+     "prerequisite": "equation.one-step.write.addition",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement solves a problem by writing x + p = q first, which is writing the equation for the story."
+    },
+    {
+     "edge_id": "e152",
+     "prerequisite": "fraction.mixed-number.subtraction.unlike-denominators",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem solves with 10 1/2 - 2 3/4, a subtraction of mixed numbers with unlike denominators."
+    }
+   ]
+  }
+ ]
+}

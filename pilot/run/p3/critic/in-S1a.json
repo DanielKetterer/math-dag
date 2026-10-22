@@ -1,0 +1,1274 @@
+{
+ "boundary_nodes": [],
+ "nodes": [
+  {
+   "id": "statistical-question.recognize",
+   "concept": "statistical-question",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Recognize a statistical question",
+   "statement": "A statistical question is one answered by collecting data that are expected to vary, with an answer that describes that variation; a question with one fixed answer is not statistical, even when it is about a group.",
+   "assess": "Which of these are statistical questions? (a) How tall is the classroom door? (b) How many hours did each student in this class sleep last night? (c) How many students are in this class? (d) How old are the students in this school?",
+   "proposed_edges": []
+  },
+  {
+   "id": "distribution.describe",
+   "concept": "distribution",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Describe a distribution by its center, spread, and shape",
+   "statement": "The values of a numerical data set collected to answer a statistical question form a distribution, described informally by where its values center, how far they spread, and its overall shape.",
+   "assess": "A dot plot shows the number of books each of 13 students read last month: 1 dot above 1, 3 dots above 2, 5 dots above 3, 3 dots above 4, and 1 dot above 5. Describe where the data center, how far they spread, and the overall shape.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1782",
+     "prerequisite": "data.dot-plot.read",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem gives the data as a dot plot, so the learner reads the dots as values before describing center, spread, and shape."
+    },
+    {
+     "edge_id": "e1783",
+     "prerequisite": "statistical-question.recognize",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement defines a distribution as the values of a data set collected to answer a statistical question, so the learner must know what that question is."
+    }
+   ]
+  },
+  {
+   "id": "distribution.shape.symmetric-skewed",
+   "concept": "distribution",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Symmetric and skewed distributions",
+   "statement": "A distribution is symmetric when its two sides about the center are close to mirror images, skewed right when its values trail off in a long tail toward larger values, and skewed left when they trail off in a long tail toward smaller values.",
+   "assess": "Three dot plots use a scale from 0 to 10. Plot A has most dots at 1 to 3 and a few stretching out to 9. Plot B has most dots at 7 to 9 and a few stretching down to 1. Plot C has its dots piled around 5 and falling off equally on both sides. Name the shape of each: symmetric, skewed left, or skewed right.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1784",
+     "prerequisite": "data.dot-plot.read",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem shows each distribution as a dot plot on a scale, so the learner reads where dots pile up and where they trail off."
+    },
+    {
+     "edge_id": "e1785",
+     "prerequisite": "distribution.describe",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Symmetric and skewed name kinds of the overall shape of a distribution, described about its center and spread as first described informally."
+    },
+    {
+     "edge_id": "e1786",
+     "prerequisite": "symmetry.line.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A symmetric distribution has two sides about the center that are close to mirror images, which is the matching-halves idea of a line of symmetry."
+    }
+   ]
+  },
+  {
+   "id": "center.meaning",
+   "concept": "center",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "A measure of center summarizes a data set with one number",
+   "statement": "A measure of center is a single number that summarizes all the values of a numerical data set as one typical value.",
+   "assess": "Test scores: 70, 75, 80, 80, 95. Lee says 'a typical score is about 80.' Kim says 'the scores go from 70 to 95.' Raj says 'the scores are spread over 25 points.' Whose statement gives a measure of center? Why are the other two not measures of center?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1787",
+     "prerequisite": "distribution.describe",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A measure of center puts into one number where a distribution's values center, and the test separates it from the range and spread named in the informal description."
+    }
+   ]
+  },
+  {
+   "id": "variability.meaning",
+   "concept": "variability",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "A measure of variation describes spread with one number",
+   "statement": "A measure of variation is a single number that describes how much the values of a numerical data set differ from one another; it is 0 when all the values are equal and larger when the values are more spread out.",
+   "assess": "Data set A is 5, 5, 5, 5. Data set B is 1, 3, 7, 9. Both have a typical value of 5. Which data set should have the larger measure of variation? What should the measure of variation of A be?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1788",
+     "prerequisite": "distribution.describe",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A measure of variation puts into one number the informal spread of a distribution, how far apart its values lie, which the informal description first names."
+    }
+   ]
+  },
+  {
+   "id": "data.dot-plot.read",
+   "concept": "data",
+   "facet": "line-plot",
+   "level": 2,
+   "type": "representation",
+   "name": "Read the data set from a dot plot",
+   "statement": "A dot plot (line plot) shows a numerical data set on a number line with one dot above a value for each time the value occurs, so the full list of values can be read back from it.",
+   "assess": "A dot plot on a number line from 0 to 6 has 2 dots above 1, 1 dot above 3, and 3 dots above 4. List every value in the data set.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1789",
+     "prerequisite": "counting.objects",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A value occurs as many times as there are dots above it, so the learner counts the dots over each mark to list that value that many times."
+    },
+    {
+     "edge_id": "e1790",
+     "prerequisite": "number-line.whole-number-lengths",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A dot plot places each value at its mark on a number line, so the learner must locate whole-number values by their positions on the line."
+    }
+   ]
+  },
+  {
+   "id": "data.histogram.make",
+   "concept": "data",
+   "facet": "histogram",
+   "level": 2,
+   "type": "representation",
+   "name": "Make a histogram from a numerical data set",
+   "statement": "A histogram groups numerical data into equal-width intervals along a number line and draws over each interval a bar, with no gaps between adjacent bars, whose height is the number of values in that interval.",
+   "assess": "Ages of 10 people: 12, 15, 21, 23, 24, 30, 31, 38, 39, 45. Make a histogram with the intervals 10 to under 20, 20 to under 30, 30 to under 40, and 40 to under 50.",
+   "procedure": [
+    "Choose equal-width intervals that together cover all the values, such as 10 to under 20 and 20 to under 30.",
+    "Count the values in each interval; a value on a boundary goes in the interval that starts there.",
+    "Draw a number line marked at the interval boundaries and a vertical scale for the counts.",
+    "Draw a bar over each interval up to its count, with no gaps between adjacent intervals."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1791",
+     "prerequisite": "addition.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Choosing equal-width intervals means adding the same width again and again to get each boundary, such as 10, 20, 30, and 40."
+    },
+    {
+     "edge_id": "e1792",
+     "prerequisite": "comparing.whole-numbers.magnitude",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Placing each value in its interval means deciding which boundaries it is at least as great as and less than, including values that sit on a boundary."
+    },
+    {
+     "edge_id": "e1793",
+     "prerequisite": "data.bar-graph.draw",
+     "relation": "representational",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Each histogram bar is drawn up to its count on a vertical scale, the way a bar graph bar is drawn, here with no gaps between bars."
+    },
+    {
+     "edge_id": "e1794",
+     "prerequisite": "data.categorical.count-each",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Counting the values in each interval treats every interval as a category and counts the data values that fall in each one."
+    },
+    {
+     "edge_id": "e1795",
+     "prerequisite": "number-line.whole-number-lengths",
+     "relation": "representational",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The horizontal axis is a number line marked at equally spaced interval boundaries, so whole numbers must be placed at their lengths from 0."
+    }
+   ]
+  },
+  {
+   "id": "data.histogram.read",
+   "concept": "data",
+   "facet": "histogram",
+   "level": 2,
+   "type": "representation",
+   "name": "Read interval counts from a histogram",
+   "statement": "Each bar of a histogram gives how many data values lie in its interval; a histogram does not show the individual values, so exact values cannot be read from it.",
+   "assess": "A histogram of ages has a bar of height 3 over 10 to under 20, a bar of height 5 over 20 to under 30, and a bar of height 2 over 30 to under 40. How many people are 20 to under 30 years old? Can you tell from the histogram how many people are exactly 25?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1796",
+     "prerequisite": "data.bar-graph.read",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A histogram bar's count is read against the vertical scale just as a bar graph category count is read, giving how many values lie in the interval."
+    },
+    {
+     "edge_id": "e1797",
+     "prerequisite": "number-line.whole-number-lengths",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The bars stand over intervals marked on a number line axis, so interval ends such as 20 to under 30 are read as positions on that line."
+    }
+   ]
+  },
+  {
+   "id": "data.box-plot.make",
+   "concept": "data",
+   "facet": "box-plot",
+   "level": 2,
+   "type": "representation",
+   "name": "Draw a box plot from a five-number summary",
+   "statement": "A box plot shows the five-number summary of a numerical data set on a number line: a box from the lower quartile to the upper quartile with a line across it at the median, and whiskers from the box out to the minimum and to the maximum.",
+   "assess": "A data set has minimum 2, lower quartile 5, median 7, upper quartile 10, and maximum 15. Draw its box plot on a number line from 0 to 16.",
+   "procedure": [
+    "Draw a number line whose scale covers the minimum and the maximum.",
+    "Mark the minimum, lower quartile, median, upper quartile, and maximum above the line.",
+    "Draw a box from the lower quartile to the upper quartile and a segment across the box at the median.",
+    "Draw a whisker from the lower quartile out to the minimum and one from the upper quartile out to the maximum."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1798",
+     "prerequisite": "center.median.find",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The line across the box marks the median of the data set, so the learner must know what the median of a data set is."
+    },
+    {
+     "edge_id": "e1799",
+     "prerequisite": "number-line.whole-number-lengths",
+     "relation": "representational",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The learner draws a number line whose scale covers the minimum and maximum and marks the five summary values at their positions on it."
+    },
+    {
+     "edge_id": "e1800",
+     "prerequisite": "variability.quartiles.find",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The box runs from the lower quartile to the upper quartile, so the learner must know what those two quartiles of a data set are."
+    }
+   ]
+  },
+  {
+   "id": "data.box-plot.read",
+   "concept": "data",
+   "facet": "box-plot",
+   "level": 2,
+   "type": "representation",
+   "name": "Read the five-number summary from a box plot",
+   "statement": "On a box plot, the minimum and maximum are read at the ends of the whiskers, the lower and upper quartiles at the ends of the box, and the median at the line inside the box.",
+   "assess": "A box plot on a number line from 0 to 20 has whiskers reaching 2 and 18, a box from 6 to 12, and a line inside the box at 9. Give the minimum, lower quartile, median, upper quartile, and maximum.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1801",
+     "prerequisite": "center.median.find",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The line inside the box is read as the median, so the learner must know what the median of a data set is."
+    },
+    {
+     "edge_id": "e1802",
+     "prerequisite": "number-line.whole-number-lengths",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each summary value is read at its position on the number line under the box plot, so whole numbers must be read from marks on the line."
+    },
+    {
+     "edge_id": "e1803",
+     "prerequisite": "variability.quartiles.find",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The ends of the box are read as the lower and upper quartiles, so the learner must know what those quartiles of a data set are."
+    }
+   ]
+  },
+  {
+   "id": "data.observations.count",
+   "concept": "data",
+   "facet": "measurement",
+   "level": 2,
+   "type": "concept",
+   "name": "The number of observations in a data set",
+   "statement": "The number of observations in a data set is the number of values recorded, one for each individual measured, so a value that occurs several times is counted each time it occurs.",
+   "assess": "Students reported how many pets they own: 0, 1, 0, 2, 0, 1, 5, 0, 1. Ana says there are 4 observations because there are 4 different values. How many observations are there, and what does each one record?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1804",
+     "prerequisite": "counting.objects",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The number of observations is found by counting the recorded values to find how many, counting a value again each time it occurs."
+    }
+   ]
+  },
+  {
+   "id": "data.attribute.describe",
+   "concept": "data",
+   "facet": "measurement",
+   "level": 2,
+   "type": "concept",
+   "name": "Describe the attribute a numerical data set measures",
+   "statement": "Summarizing a numerical data set in context includes naming the attribute measured on each individual, how it was measured, and its unit of measurement.",
+   "assess": "Each student in a class timed the trip to school with a phone, from leaving home to arriving at school, and reported the result: 12, 25, 8, 15, 30. What attribute was measured, how was it measured, and in what unit?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1805",
+     "prerequisite": "measurement.attributes.several",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Naming the attribute measured on each individual uses the idea that one object has several measurable attributes and one of them is chosen."
+    },
+    {
+     "edge_id": "e1806",
+     "prerequisite": "measurement.length.ruler",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Stating the unit of measurement uses the idea that a measurement is a number of standard units, as when a length is read in inches or centimeters."
+    },
+    {
+     "edge_id": "e1807",
+     "prerequisite": "measurement.time.units",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem's trip times need a unit of time, and choosing minutes over hours or seconds uses their relative sizes."
+    }
+   ]
+  },
+  {
+   "id": "center.mean.compute",
+   "concept": "center",
+   "facet": "mean",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the mean of a numerical data set",
+   "statement": "The mean of a numerical data set is the sum of its values divided by the number of values.",
+   "assess": "Find the mean of 4, 7, 7, 10, 12.",
+   "procedure": [
+    "Add all the values in the data set, counting repeated values each time.",
+    "Count the number of values.",
+    "Divide the sum by the number of values."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1808",
+     "prerequisite": "addition.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 adds all the values of the data set, repeats included, and the test sum of five values stays within 100; any method of adding will do."
+    },
+    {
+     "edge_id": "e1809",
+     "prerequisite": "data.observations.count",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 counts the number of values in the data set, counting a repeated value each time it occurs, which is the number of observations."
+    },
+    {
+     "edge_id": "e1810",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 divides the sum by the number of values, and the test problem divides 40 by 5; any method of dividing will do."
+    }
+   ]
+  },
+  {
+   "id": "center.median.find",
+   "concept": "center",
+   "facet": "median",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the median of a numerical data set",
+   "statement": "The median of a numerical data set is the middle value when the values are listed in order; when there is an even number of values, it is the number halfway between the two middle values.",
+   "assess": "Find the median of 9, 3, 7, 12, 5, 10.",
+   "procedure": [
+    "List the values in order from least to greatest, keeping repeated values.",
+    "If the number of values is odd, the median is the middle value of the list.",
+    "If the number of values is even, the median is the number halfway between the two middle values."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1811",
+     "prerequisite": "comparing.whole-numbers.magnitude",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 lists the values from least to greatest, which means deciding which of two values is greater, as with 9, 3, 7, 12, 5, and 10."
+    },
+    {
+     "edge_id": "e1812",
+     "prerequisite": "data.observations.count",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 depends on how many values are listed, repeated values included, so the learner counts the observations to find the middle."
+    },
+    {
+     "edge_id": "e1813",
+     "prerequisite": "number.halfway-between",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "For an even number of values, step 3 takes the number halfway between the two middle values, such as the number halfway between 7 and 9."
+    },
+    {
+     "edge_id": "e1814",
+     "prerequisite": "parity.even-odd.pairing",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Steps 2 and 3 branch on whether the number of values is odd or even, which is whether pairing the values leaves one over."
+    }
+   ]
+  },
+  {
+   "id": "variability.quartiles.find",
+   "concept": "variability",
+   "facet": "iqr",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the quartiles of a numerical data set",
+   "statement": "The lower quartile is the median of the lower half of the ordered data and the upper quartile is the median of the upper half, where the halves are the values before and after the median's position in the ordered list (the median itself is left out of both halves when the number of values is odd).",
+   "assess": "Find the lower quartile and the upper quartile of 1, 3, 5, 6, 8, 9, 11, 13, 14.",
+   "procedure": [
+    "List the values in order and find the median.",
+    "Form the lower half from the values before the median's position, leaving out the median itself when the number of values is odd.",
+    "Form the upper half from the values after the median's position in the same way.",
+    "The lower quartile is the median of the lower half; the upper quartile is the median of the upper half."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1815",
+     "prerequisite": "center.median.find",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Each quartile is defined as the median of a half of the ordered data, and step 1 finds the median of the whole set to split it."
+    }
+   ]
+  },
+  {
+   "id": "variability.iqr.compute",
+   "concept": "variability",
+   "facet": "iqr",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the interquartile range",
+   "statement": "The interquartile range (IQR) of a numerical data set is the upper quartile minus the lower quartile, the length of the interval that holds the middle half of the ordered data.",
+   "assess": "A data set has minimum 4, lower quartile 12, median 15, upper quartile 20, and maximum 31. Find its interquartile range.",
+   "procedure": [
+    "Find the lower quartile and the upper quartile.",
+    "Subtract the lower quartile from the upper quartile."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1816",
+     "prerequisite": "subtraction.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 subtracts the lower quartile from the upper quartile, such as 20 minus 12 in the test problem; any method of subtracting will do."
+    },
+    {
+     "edge_id": "e1817",
+     "prerequisite": "variability.quartiles.find",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The IQR is defined as the upper quartile minus the lower quartile, so the learner must know what the two quartiles of a data set are."
+    }
+   ]
+  },
+  {
+   "id": "variability.mad.compute",
+   "concept": "variability",
+   "facet": "mad",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the mean absolute deviation",
+   "statement": "The mean absolute deviation (MAD) of a numerical data set is the mean of the distances of its values from the mean of the data set.",
+   "assess": "Find the mean absolute deviation of 2, 4, 6, 8. (The mean is 5.)",
+   "procedure": [
+    "Find the mean of the data set.",
+    "For each value, find its distance from the mean (the larger of the two numbers minus the smaller).",
+    "Find the mean of these distances."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1818",
+     "prerequisite": "center.mean.compute",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 finds the mean of the data set, and step 3 finds the mean of the distances, so the mean procedure is used twice."
+    },
+    {
+     "edge_id": "e1819",
+     "prerequisite": "subtraction.comparison.number-line",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The MAD averages the distances of values from the mean, and a distance between two numbers is the gap between them on a number line."
+    },
+    {
+     "edge_id": "e1820",
+     "prerequisite": "subtraction.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 subtracts the smaller number from the larger for each value and the mean, as in 5 minus 2 and 8 minus 5 in the test problem."
+    }
+   ]
+  },
+  {
+   "id": "distribution.pattern-deviations",
+   "concept": "distribution",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Describe the overall pattern and striking deviations in context",
+   "statement": "Summarizing a numerical data set includes describing its overall pattern (where most values lie, clusters, gaps) and any values that depart strikingly from that pattern, with a possible reason for the departure drawn from how and where the data were gathered.",
+   "assess": "Minutes that 10 students spent on homework last night: 25, 30, 30, 35, 35, 35, 40, 40, 45, 150. Describe the overall pattern, name the value that departs from it, and give a reason from the situation that could explain it.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1821",
+     "prerequisite": "data.attribute.describe",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A reason for a striking deviation comes from how the data were gathered and measured, which is the attribute, method, and unit of the data."
+    },
+    {
+     "edge_id": "e1822",
+     "prerequisite": "distribution.describe",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The overall pattern of where values lie, clusters, and gaps extends the description of a distribution by its center, spread, and shape."
+    }
+   ]
+  },
+  {
+   "id": "center.mean-median.outlier-effect",
+   "concept": "center",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "An extreme value pulls the mean but barely moves the median",
+   "statement": "Changing one value to an extreme value pulls the mean toward it, because every value enters the sum, but changes the median little or not at all, because the median depends only on the middle position of the ordered values.",
+   "assess": "The data set 2, 3, 4, 5, 6 has mean 4 and median 4. If the 6 is replaced by 56, which changes a lot, the mean or the median? Explain without computing.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1823",
+     "prerequisite": "center.mean.compute",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The explanation that the mean moves because every value enters the sum uses the definition of the mean as the sum divided by the number of values."
+    },
+    {
+     "edge_id": "e1824",
+     "prerequisite": "center.median.find",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The explanation that the median barely moves uses its definition as the middle value of the ordered list, which depends only on position."
+    }
+   ]
+  },
+  {
+   "id": "center.choose",
+   "concept": "center",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "Choose the mean or the median to fit the distribution",
+   "statement": "For a roughly symmetric distribution without outliers the mean and median are close and the mean is a good summary of a typical value; for a strongly skewed distribution or one with outliers the median better describes a typical value.",
+   "assess": "Prices in thousands of dollars of the 7 houses on a street: 200, 210, 215, 220, 225, 230, 900. The mean is about 314 and the median is 220. Which better describes the price of a typical house on this street, and why?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1825",
+     "prerequisite": "center.mean-median.outlier-effect",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The reason the median describes a typical value better with outliers is that an extreme value pulls the mean but barely moves the median."
+    },
+    {
+     "edge_id": "e1826",
+     "prerequisite": "center.mean.compute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement compares the mean with the median as summaries, so it uses what the mean of a data set is."
+    },
+    {
+     "edge_id": "e1827",
+     "prerequisite": "center.meaning",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem asks which measure better describes a typical house, which is judging a measure of center as one typical value."
+    },
+    {
+     "edge_id": "e1828",
+     "prerequisite": "center.median.find",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement compares the median with the mean as summaries, so it uses what the median of a data set is."
+    },
+    {
+     "edge_id": "e1829",
+     "prerequisite": "distribution.pattern-deviations",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement separates distributions without outliers from those with outliers, so the learner must recognize values that depart strikingly from the pattern."
+    },
+    {
+     "edge_id": "e1830",
+     "prerequisite": "distribution.shape.symmetric-skewed",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The choice depends on whether the distribution is roughly symmetric or strongly skewed, so the learner must recognize those shapes."
+    }
+   ]
+  },
+  {
+   "id": "variability.choose",
+   "concept": "variability",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "Choose the IQR or the MAD to fit the distribution",
+   "statement": "For a strongly skewed distribution or one with outliers the IQR, reported with the median, describes variability better, because extreme values inflate the MAD; for a roughly symmetric distribution without outliers the MAD, reported with the mean, is a good summary.",
+   "assess": "Commute times for 30 workers are strongly skewed right, with three commutes much longer than the rest. Should you report the IQR or the MAD as the measure of variability? Why?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1831",
+     "prerequisite": "center.choose",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The IQR is reported with the median and the MAD with the mean, so the learner must know which center fits which distribution."
+    },
+    {
+     "edge_id": "e1832",
+     "prerequisite": "center.mean-median.outlier-effect",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The reason extreme values inflate the MAD but not the IQR parallels how an extreme value pulls the mean but not the median."
+    },
+    {
+     "edge_id": "e1833",
+     "prerequisite": "distribution.pattern-deviations",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement separates distributions with outliers from those without, so the learner must recognize values that depart strikingly from the pattern."
+    },
+    {
+     "edge_id": "e1834",
+     "prerequisite": "distribution.shape.symmetric-skewed",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The choice depends on whether the distribution is strongly skewed or roughly symmetric, so the learner must recognize those shapes."
+    },
+    {
+     "edge_id": "e1835",
+     "prerequisite": "variability.iqr.compute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "One of the two measures being chosen between is the IQR, so the learner must know it as the interval holding the middle half of the data."
+    },
+    {
+     "edge_id": "e1836",
+     "prerequisite": "variability.mad.compute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The other measure being chosen between is the MAD, and the reason extreme values inflate it comes from averaging distances from the mean."
+    },
+    {
+     "edge_id": "e1837",
+     "prerequisite": "variability.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The choice is about which number better describes variability, which is the job of a measure of variation."
+    }
+   ]
+  },
+  {
+   "id": "variability.mad.interpret",
+   "concept": "variability",
+   "facet": "mad",
+   "level": 2,
+   "type": "concept",
+   "name": "Interpret the mean absolute deviation",
+   "statement": "The MAD of a data set is the typical distance of its values from the mean, in the units of the data: a small MAD means the values lie close to the mean and a larger MAD means they lie farther from it.",
+   "assess": "Class A's reading times have mean 30 minutes and MAD 2 minutes. Class B's have mean 30 minutes and MAD 9 minutes. What do the two MADs tell you about the reading times in each class?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1838",
+     "prerequisite": "variability.mad.compute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Interpreting the MAD as a typical distance from the mean uses its definition as the mean of the distances of the values from the mean."
+    },
+    {
+     "edge_id": "e1839",
+     "prerequisite": "variability.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A small MAD meaning values close to the mean and a larger MAD meaning values farther away applies the idea of a measure of variation."
+    }
+   ]
+  },
+  {
+   "id": "sampling.population-sample.meaning",
+   "concept": "sampling",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Population and sample",
+   "statement": "The population is the whole group a statistical question is about; a sample is the part of the population from which data are actually collected, in order to learn about the population.",
+   "assess": "To find out how many hours the 900 students at a school sleep on a school night, Mia asks 50 of them. What is the population? What is the sample?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1840",
+     "prerequisite": "statistical-question.recognize",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The population is defined as the whole group a statistical question is about, so the learner must know what a statistical question asks about."
+    }
+   ]
+  },
+  {
+   "id": "sampling.representative",
+   "concept": "sampling",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "A generalization from a sample needs a representative sample",
+   "statement": "A conclusion about a population drawn from a sample is valid only if the sample is representative, meaning that for the characteristic studied the sample is like the population.",
+   "assess": "To find out how much the students at a school like soccer, Ben surveys the members of the school soccer team. Can he use his results to describe all the students at the school? Why or why not?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1841",
+     "prerequisite": "sampling.population-sample.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A representative sample is one that is like the population for the characteristic studied, so the learner must know the sample and the population."
+    }
+   ]
+  },
+  {
+   "id": "sampling.random.meaning",
+   "concept": "sampling",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "A random sample gives every member the same chance",
+   "statement": "A random sample is chosen so that every member of the population has the same chance of being selected.",
+   "assess": "Which of these ways of choosing 30 students give every student at the school the same chance of being chosen? (a) the first 30 students to arrive in the morning; (b) 30 names drawn from a bag holding one slip for every student; (c) 30 volunteers; (d) the 30 students in the art club.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1842",
+     "prerequisite": "sampling.population-sample.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A random sample is a sample chosen so that every member of the population has the same chance, so the learner must know sample and population."
+    }
+   ]
+  },
+  {
+   "id": "sampling.random.representative",
+   "concept": "sampling",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Random sampling tends to produce representative samples",
+   "statement": "Because no part of the population is favored, random sampling tends to produce representative samples and so supports valid conclusions about the population, although any single random sample can still differ from the population by chance.",
+   "assess": "Kai says a random sample of 30 students is guaranteed to match the whole school exactly. Lia says random sampling only tends to give a sample like the school. Who is right, and why does choosing at random help?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1843",
+     "prerequisite": "sampling.random.meaning",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The explanation that no part of the population is favored is that every member has the same chance of being chosen."
+    },
+    {
+     "edge_id": "e1844",
+     "prerequisite": "sampling.representative",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The claim is that random samples tend to be representative, so the learner must know what a representative sample is and why it supports valid conclusions."
+    }
+   ]
+  },
+  {
+   "id": "sampling.variability.meaning",
+   "concept": "sampling",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Sample statistics estimate population statistics and vary from sample to sample",
+   "statement": "A statistic computed from a sample, such as a sample mean or a sample proportion, estimates the matching population statistic but is usually not equal to it, and different samples of the same size usually give different values.",
+   "assess": "The mean height of all 600 students in a school is 152 cm. Ana's random sample of 20 students has mean height 150 cm and Tom's random sample of 20 students has mean height 155 cm. Did either of them make a mistake? Explain.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1845",
+     "prerequisite": "center.mean.compute",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem compares two sample means with the population mean, so the learner must know the mean of a data set as the statistic computed."
+    },
+    {
+     "edge_id": "e1846",
+     "prerequisite": "sampling.population-sample.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A sample statistic is computed from a sample and estimates the matching statistic of the population, so the learner must know sample and population."
+    },
+    {
+     "edge_id": "e1847",
+     "prerequisite": "sampling.random.representative",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A random sample's statistic estimates the population's because random samples tend to be representative, yet any one sample can differ by chance."
+    }
+   ]
+  },
+  {
+   "id": "sampling.variability.simulate.numerical",
+   "concept": "sampling",
+   "facet": "core",
+   "level": 2,
+   "type": "procedure",
+   "name": "Gauge the error of a sample mean from several samples",
+   "statement": "Draw several random samples (or simulated samples) of the same size from the same population of numerical data, compute the mean of each, and use how far the sample means spread to judge how far an estimate from one sample might be from the population mean.",
+   "assess": "Lin drew 4 random samples of 10 words each from a book. The sample mean word lengths were 4.1, 4.8, 4.4, and 4.7 letters. About how far off might an estimate of the book's mean word length from one sample of 10 words be?",
+   "procedure": [
+    "Draw several random samples of the same size from the population, or simulate them.",
+    "Compute the mean of each sample.",
+    "Note the least and greatest sample means and how far apart they are.",
+    "Use that spread to say about how far one sample mean might be from the population mean."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1848",
+     "prerequisite": "center.mean.compute",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 computes the mean of each sample drawn, such as the mean word length of 10 words."
+    },
+    {
+     "edge_id": "e1849",
+     "prerequisite": "decimal.compare",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem's sample means are decimals in tenths, so picking the least and greatest means compares decimals."
+    },
+    {
+     "edge_id": "e1850",
+     "prerequisite": "decimal.subtraction.algorithm",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem needs the difference between decimal sample means such as 4.8 and 4.1, and any method for subtracting decimals will do."
+    },
+    {
+     "edge_id": "e1851",
+     "prerequisite": "inference.estimate.population-mean",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement gauges how far one sample mean, used as an estimate of the population mean, might be from that population mean."
+    },
+    {
+     "edge_id": "e1852",
+     "prerequisite": "decimal.subtract-to-hundredths",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test sample means 4.1, 4.8, 4.4, and 4.7 are decimals, so finding how far apart the least and greatest are subtracts decimals."
+    },
+    {
+     "edge_id": "e1853",
+     "prerequisite": "sampling.random.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 draws several random samples of the same size, so the learner must know what makes a sample random."
+    },
+    {
+     "edge_id": "e1854",
+     "prerequisite": "sampling.variability.meaning",
+     "relation": "justificatory",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Step 4 uses how far sample means differ as the likely error of one sample mean, which rests on samples giving different values."
+    },
+    {
+     "edge_id": "e1855",
+     "prerequisite": "subtraction.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 finds how far apart the least and greatest sample means are, which is the difference of the two numbers."
+    }
+   ]
+  },
+  {
+   "id": "sampling.variability.simulate.categorical",
+   "concept": "sampling",
+   "facet": "core",
+   "level": 2,
+   "type": "procedure",
+   "name": "Gauge the error of a sample proportion from several samples",
+   "statement": "Draw several random samples (or simulated samples) of the same size from the same population of categorical data, find the proportion in the category of interest in each, and use how far the sample proportions spread to judge how far an estimate from one sample might be from the population proportion.",
+   "assess": "Four random samples of 20 voters each were asked whether they will vote for Candidate A. The numbers saying yes were 11, 13, 9, and 12. About how far off might an estimate of Candidate A's share of all voters from one sample of 20 be?",
+   "procedure": [
+    "Draw several random samples of the same size from the population, or simulate them.",
+    "In each sample, find the fraction of members in the category of interest.",
+    "Note the least and greatest sample proportions and how far apart they are.",
+    "Use that spread to say about how far one sample proportion might be from the population proportion."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1856",
+     "prerequisite": "fraction.compare.same-denominator",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 finds the least and greatest sample proportions, and samples of equal size give fractions with the same denominator to compare."
+    },
+    {
+     "edge_id": "e1857",
+     "prerequisite": "fraction.non-unit.part-whole",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 writes the fraction of each sample in the category of interest, such as 11 of 20 voters, as a fraction of the sample."
+    },
+    {
+     "edge_id": "e1858",
+     "prerequisite": "fraction.subtraction.like-denominators",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 finds how far apart the least and greatest proportions are, a difference of fractions with the same denominator such as 13/20 minus 9/20."
+    },
+    {
+     "edge_id": "e1859",
+     "prerequisite": "inference.estimate.population-proportion",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement gauges how far one sample proportion, used as an estimate of the population proportion, might be from that population proportion."
+    },
+    {
+     "edge_id": "e1860",
+     "prerequisite": "sampling.random.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 draws several random samples of the same size, so the learner must know what makes a sample random."
+    },
+    {
+     "edge_id": "e1861",
+     "prerequisite": "sampling.variability.meaning",
+     "relation": "justificatory",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Step 4 uses how far sample proportions differ as the likely error of one sample proportion, which rests on samples giving different values."
+    }
+   ]
+  },
+  {
+   "id": "inference.estimate.population-mean",
+   "concept": "inference",
+   "facet": "estimate",
+   "level": 3,
+   "type": "application",
+   "name": "Estimate a population mean from a random sample",
+   "statement": "When the data come from a random sample, the sample mean is used as an estimate of the unknown mean of the population.",
+   "assess": "A random sample of 5 words from a book has word lengths 3, 5, 4, 6, and 7 letters. Estimate the mean word length of all the words in the book.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1862",
+     "prerequisite": "center.mean.compute",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem finds the sample mean of the five word lengths 3, 5, 4, 6, and 7 before using it as the estimate."
+    },
+    {
+     "edge_id": "e1863",
+     "prerequisite": "sampling.random.representative",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The sample mean is a reasonable estimate only when the data come from a random sample, which tends to be representative of the population."
+    },
+    {
+     "edge_id": "e1864",
+     "prerequisite": "sampling.variability.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Using the sample mean as an estimate of the unknown population mean applies the idea that a sample statistic estimates the matching population statistic."
+    }
+   ]
+  },
+  {
+   "id": "inference.estimate.population-proportion",
+   "concept": "inference",
+   "facet": "estimate",
+   "level": 3,
+   "type": "application",
+   "name": "Estimate a population proportion from a random sample",
+   "statement": "When categorical data come from a random sample, the fraction of the sample in a category is used as an estimate of the unknown fraction of the population in that category.",
+   "assess": "In a random sample of 50 students at a school, 30 said they would vote for Maria and 20 said they would vote for Leo. Estimate the fraction of all the students at the school who would vote for Maria.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1865",
+     "prerequisite": "fraction.non-unit.part-whole",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem writes 30 of the 50 sampled students as the fraction 30/50 before using it as the estimate."
+    },
+    {
+     "edge_id": "e1866",
+     "prerequisite": "sampling.random.representative",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The sample fraction is a reasonable estimate only when the data come from a random sample, which tends to be representative of the population."
+    },
+    {
+     "edge_id": "e1867",
+     "prerequisite": "sampling.variability.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Using the sample fraction as an estimate of the unknown population fraction applies the idea that a sample statistic estimates the matching population statistic."
+    }
+   ]
+  },
+  {
+   "id": "distribution.compare.overlap",
+   "concept": "distribution",
+   "facet": "core",
+   "level": 2,
+   "type": "concept",
+   "name": "Judge the visual overlap of two distributions with similar variability",
+   "statement": "For two numerical distributions with similar variability shown on the same scale, the less their plots overlap, the larger the difference between their centers is compared with their spread; distributions that barely overlap are clearly separated.",
+   "assess": "Four dot plots share one scale and have about the same spread. Plot A runs from 150 to 170 and plot B from 152 to 172. Plot C runs from 150 to 170 and plot D from 175 to 195. Which pair of plots overlaps more? In which pair are the two groups clearly separated?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1868",
+     "prerequisite": "center.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement compares the difference between two centers, so each center must be understood as one number summarizing a data set."
+    },
+    {
+     "edge_id": "e1869",
+     "prerequisite": "data.dot-plot.read",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem shows each group as a dot plot on one shared scale, so the learner reads where each plot starts and ends."
+    },
+    {
+     "edge_id": "e1870",
+     "prerequisite": "distribution.describe",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Comparing the centers of two distributions against their spread uses the informal description of each distribution by its center and spread."
+    },
+    {
+     "edge_id": "e1871",
+     "prerequisite": "variability.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement sets the difference between centers against similar variability, so each spread must be understood as one number."
+    }
+   ]
+  },
+  {
+   "id": "distribution.compare.center-difference-in-variability",
+   "concept": "distribution",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Express the difference between two centers as a multiple of a measure of variability",
+   "statement": "For two numerical distributions with similar variability, the difference between their centers is measured in units of that variability by dividing the difference by the common measure of variability (such as the MAD).",
+   "assess": "The mean height of the basketball team is 190 cm and the mean height of the soccer team is 180 cm. The MAD of each team's heights is 5 cm. The difference between the means is how many MADs?",
+   "procedure": [
+    "Subtract the smaller center from the larger center.",
+    "Divide the difference by the common measure of variability.",
+    "Report the result as the number of measures of variability that separate the centers."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1872",
+     "prerequisite": "center.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The quantity compared is the difference between the centers of the two distributions, so the learner must know a center as one typical value."
+    },
+    {
+     "edge_id": "e1873",
+     "prerequisite": "distribution.compare.overlap",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement turns the idea of a center difference compared with spread into a number of variability units."
+    },
+    {
+     "edge_id": "e1874",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 divides the difference by the common measure of variability, such as 10 divided by 5 in the test problem."
+    },
+    {
+     "edge_id": "e1875",
+     "prerequisite": "division.measurement.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 reports how many measures of variability fit in the difference, which is a quotient read as the number of equal groups."
+    },
+    {
+     "edge_id": "e1876",
+     "prerequisite": "subtraction.within-100",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 subtracts the smaller center from the larger center, such as 190 minus 180 in the test problem; any method of subtracting will do."
+    },
+    {
+     "edge_id": "e1877",
+     "prerequisite": "variability.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The difference is measured in units of a common measure of variability such as the MAD, so the learner must know what such a measure is."
+    }
+   ]
+  },
+  {
+   "id": "inference.compare.two-populations",
+   "concept": "inference",
+   "facet": "comparison",
+   "level": 3,
+   "type": "application",
+   "name": "Compare two populations informally from random samples",
+   "statement": "Given the centers and measures of variability of random samples of numerical data from two populations, decide informally whether the values in one population are generally greater than in the other, judging the difference between the centers against the variability rather than against zero.",
+   "assess": "Random samples of 30 words from two books give these word lengths: Book A has mean 6.5 letters and MAD 1 letter; Book B has mean 4 letters and MAD 1 letter. Are the words in Book A generally longer than the words in Book B? Explain using the means and MADs.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1878",
+     "prerequisite": "decimal.subtraction.algorithm",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem needs the difference between decimal means such as 6.5 and 4, and any method for subtracting decimals will do."
+    },
+    {
+     "edge_id": "e1879",
+     "prerequisite": "distribution.compare.center-difference-in-variability",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Judging the difference between centers against the variability means expressing that difference as a number of measures of variability."
+    },
+    {
+     "edge_id": "e1880",
+     "prerequisite": "distribution.compare.overlap",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Deciding that one population is generally greater uses the idea that distributions with little overlap relative to their spread are clearly separated."
+    },
+    {
+     "edge_id": "e1881",
+     "prerequisite": "inference.estimate.population-mean",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The centers of the random samples are used as estimates of the centers of the two populations being compared."
+    },
+    {
+     "edge_id": "e1882",
+     "prerequisite": "variability.mad.interpret",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem gives each sample's variability as a MAD and asks for an explanation, so the learner reads a MAD as typical distance from the mean."
+    }
+   ]
+  }
+ ]
+}

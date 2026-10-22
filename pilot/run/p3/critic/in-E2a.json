@@ -1,0 +1,2297 @@
+{
+ "boundary_nodes": [],
+ "nodes": [
+  {
+   "id": "exponent.whole-number.product-rule",
+   "concept": "exponent",
+   "facet": "whole-number-power",
+   "level": 3,
+   "type": "concept",
+   "name": "Product of powers with the same base: a^m x a^n = a^(m+n)",
+   "statement": "For any number a and any positive whole numbers m and n, a^m x a^n = a^(m+n): multiplying powers of the same base adds the exponents.",
+   "assess": "Without computing any power, decide whether each is true: 5^3 x 5^4 = 5^7; 5^3 x 5^4 = 5^12; 5^3 x 5^4 = 25^7.",
+   "proposed_edges": [
+    {
+     "edge_id": "e298",
+     "prerequisite": "addition.within-10",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problems need the sum 3 + 4 to tell 5^7 apart from 5^12 and 25^7."
+    },
+    {
+     "edge_id": "e299",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "a^m and a^n are products of m and n equal factors, so their product has m + n factors of a."
+    },
+    {
+     "edge_id": "e300",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule is stated with letters, each standing for any number or any whole number."
+    }
+   ]
+  },
+  {
+   "id": "exponent.whole-number.quotient-rule",
+   "concept": "exponent",
+   "facet": "whole-number-power",
+   "level": 3,
+   "type": "concept",
+   "name": "Quotient of powers with the same base: a^m divided by a^n = a^(m - n)",
+   "statement": "For any nonzero number a and positive whole numbers m and n with m greater than n, a^m divided by a^n = a^(m - n): dividing powers of the same base subtracts the exponents.",
+   "assess": "Without computing any power, decide whether each is true: 7^6 divided by 7^2 = 7^4; 7^6 divided by 7^2 = 7^3; 7^6 divided by 7^2 = 1^4.",
+   "proposed_edges": [
+    {
+     "edge_id": "e301",
+     "prerequisite": "division.unknown-factor.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The quotient of a^m by a^n is the unknown factor that multiplies a^n to give a^m."
+    },
+    {
+     "edge_id": "e302",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "a^m and a^n expand into m and n equal factors of a, which can be written out in full."
+    },
+    {
+     "edge_id": "e303",
+     "prerequisite": "exponent.whole-number.product-rule",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Since a^(m - n) x a^n = a^m by the product rule, a^(m - n) is the quotient of a^m by a^n."
+    },
+    {
+     "edge_id": "e304",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule is stated with letters, each standing for any number or any whole number."
+    },
+    {
+     "edge_id": "e305",
+     "prerequisite": "fraction.equivalent.multiply-principle",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Dividing numerator and denominator by the shared n factors of a leaves m - n factors of a."
+    },
+    {
+     "edge_id": "e306",
+     "prerequisite": "fraction.quotient.symbolic",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "a^m divided by a^n is written as the fraction a^m/a^n, with products of a above and below."
+    },
+    {
+     "edge_id": "e307",
+     "prerequisite": "subtraction.within-10",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problems need the difference 6 - 2 to tell 7^4 apart from 7^3 and 1^4."
+    }
+   ]
+  },
+  {
+   "id": "exponent.whole-number.power-of-power",
+   "concept": "exponent",
+   "facet": "whole-number-power",
+   "level": 3,
+   "type": "concept",
+   "name": "Power of a power: (a^m)^n = a^(m x n)",
+   "statement": "For any number a and positive whole numbers m and n, (a^m)^n = a^(m x n): raising a power to a power multiplies the exponents.",
+   "assess": "Without computing any power, decide whether each is true: (3^2)^4 = 3^8; (3^2)^4 = 3^6; (3^2)^4 = 9^8.",
+   "proposed_edges": [
+    {
+     "edge_id": "e308",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "(a^m)^n is n equal factors of a^m, and each a^m is itself m equal factors of a."
+    },
+    {
+     "edge_id": "e309",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule is stated with letters, each standing for any number or any whole number."
+    },
+    {
+     "edge_id": "e310",
+     "prerequisite": "multiplication.equal-groups.meaning",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "n groups of m factors of a make m x n factors of a in all, which is a^(m x n)."
+    },
+    {
+     "edge_id": "e311",
+     "prerequisite": "multiplication.facts.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problems need the product 2 x 4 to tell 3^8 apart from 3^6."
+    }
+   ]
+  },
+  {
+   "id": "exponent.whole-number.power-of-product",
+   "concept": "exponent",
+   "facet": "whole-number-power",
+   "level": 3,
+   "type": "concept",
+   "name": "Power of a product: (a x b)^n = a^n x b^n",
+   "statement": "For any numbers a and b and positive whole number n, (a x b)^n = a^n x b^n. The rule is for a product only: (a + b)^n is not in general a^n + b^n.",
+   "assess": "Without computing any power, decide whether each is true: (2 x 5)^3 = 2^3 x 5^3; (2 x 5)^3 = 2 x 5^3; (2 + 5)^3 = 2^3 + 5^3.",
+   "proposed_edges": [
+    {
+     "edge_id": "e312",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "(a x b)^n is n equal factors of the product a x b."
+    },
+    {
+     "edge_id": "e313",
+     "prerequisite": "expressions.order-of-operations.exponents",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "In 2 x 5^3 and a^n x b^n a power applies only to the base beside it, before the multiplication."
+    },
+    {
+     "edge_id": "e314",
+     "prerequisite": "expressions.parentheses",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The parentheses make the whole product a x b the base, so the exponent n applies to both factors."
+    },
+    {
+     "edge_id": "e315",
+     "prerequisite": "expressions.product.regroup-factors",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Reordering and regrouping n copies of a x b gathers n factors of a and n factors of b."
+    },
+    {
+     "edge_id": "e316",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule is stated with letters, each standing for any number or any whole number."
+    }
+   ]
+  },
+  {
+   "id": "exponent.whole-number.power-of-quotient",
+   "concept": "exponent",
+   "facet": "whole-number-power",
+   "level": 3,
+   "type": "concept",
+   "name": "Power of a quotient: (a/b)^n = a^n/b^n",
+   "statement": "For any number a, nonzero number b, and positive whole number n, (a/b)^n = a^n/b^n.",
+   "assess": "Without computing any power, decide whether each is true: (2/3)^4 = 2^4/3^4; (2/3)^4 = 2^4/3; (2/3)^4 = 8/12.",
+   "proposed_edges": [
+    {
+     "edge_id": "e317",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "(a/b)^n is n equal factors of the fraction a/b multiplied together."
+    },
+    {
+     "edge_id": "e318",
+     "prerequisite": "expressions.parentheses",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The parentheses make the whole fraction a/b the base, so the exponent n applies to a and to b."
+    },
+    {
+     "edge_id": "e319",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule is stated with letters, each standing for any number or any whole number."
+    },
+    {
+     "edge_id": "e320",
+     "prerequisite": "fraction.multiplication.product-rule",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Multiplying n copies of a/b by the product rule gives numerator a^n and denominator b^n."
+    }
+   ]
+  },
+  {
+   "id": "exponent.zero",
+   "concept": "exponent",
+   "facet": "integer-power",
+   "level": 3,
+   "type": "concept",
+   "name": "The zero exponent: a^0 = 1",
+   "statement": "For any nonzero number a, a^0 = 1.",
+   "assess": "True or false: 7^0 = 0; 7^0 = 1; 7^0 = 7; (2/5)^0 = 1.",
+   "proposed_edges": [
+    {
+     "edge_id": "e321",
+     "prerequisite": "division.measurement.meaning",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A nonzero number divided by itself makes exactly one equal group, so a^n divided by a^n is 1."
+    },
+    {
+     "edge_id": "e322",
+     "prerequisite": "exponent.whole-number.product-rule",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "For the product rule to hold at exponent 0, a^0 x a^n = a^(0 + n) = a^n, so a^0 leaves a^n unchanged."
+    },
+    {
+     "edge_id": "e323",
+     "prerequisite": "exponent.whole-number.quotient-rule",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The quotient rule applied to a^n divided by a^n gives a^(n - n), which is a^0."
+    },
+    {
+     "edge_id": "e324",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule is stated with letters, each standing for any number or any whole number."
+    },
+    {
+     "edge_id": "e325",
+     "prerequisite": "fraction.as-number",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem (2/5)^0 uses a fraction as the nonzero base number a."
+    },
+    {
+     "edge_id": "e326",
+     "prerequisite": "multiplication.by-one",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The factor that leaves a^n unchanged under multiplication is 1, so a^0 must equal 1."
+    }
+   ]
+  },
+  {
+   "id": "exponent.negative",
+   "concept": "exponent",
+   "facet": "integer-power",
+   "level": 3,
+   "type": "concept",
+   "name": "A negative exponent: a^(-n) = 1/a^n",
+   "statement": "For any nonzero number a and positive whole number n, a^(-n) = 1/a^n, the reciprocal of a^n.",
+   "assess": "Which of these equals 2^-3: -8, -6, 1/8, or 1/6?",
+   "proposed_edges": [
+    {
+     "edge_id": "e327",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem needs 2^3 = 8 evaluated to choose 1/8 over -8, -6 and 1/6."
+    },
+    {
+     "edge_id": "e328",
+     "prerequisite": "exponent.whole-number.product-rule",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Keeping the product rule true at exponent -n gives a^(-n) x a^n = a^(-n + n)."
+    },
+    {
+     "edge_id": "e329",
+     "prerequisite": "exponent.zero",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "a^(-n) x a^n = a^0 = 1 uses a^0 = 1 to show a^(-n) pairs with a^n to make 1."
+    },
+    {
+     "edge_id": "e330",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule is stated with letters, each standing for any number or any whole number."
+    },
+    {
+     "edge_id": "e331",
+     "prerequisite": "fraction.reciprocal",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says a^(-n) is the reciprocal of a^n, the number whose product with a^n is 1."
+    },
+    {
+     "edge_id": "e332",
+     "prerequisite": "rational-number.signed.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The exponent -n is a negative number, so exponents now extend below zero."
+    }
+   ]
+  },
+  {
+   "id": "exponent.integer.properties",
+   "concept": "exponent",
+   "facet": "integer-power",
+   "level": 3,
+   "type": "concept",
+   "name": "The exponent properties hold for all integer exponents",
+   "statement": "With a^0 = 1 and a^(-n) = 1/a^n, the rules a^m x a^n = a^(m+n), a^m divided by a^n = a^(m - n), (a^m)^n = a^(m x n), (a x b)^n = a^n x b^n and (a/b)^n = a^n/b^n hold for all integers m and n, with nonzero bases.",
+   "assess": "Without computing any power, decide whether each is true: 5^-2 x 5^6 = 5^4; 4^3 divided by 4^7 = 4^-4; (2^-3)^2 = 2^-1; 6^4 divided by 6^4 = 6^0.",
+   "proposed_edges": [
+    {
+     "edge_id": "e333",
+     "prerequisite": "exponent.negative",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement fixes a^(-n) = 1/a^n, which the rules must still respect for negative exponents."
+    },
+    {
+     "edge_id": "e334",
+     "prerequisite": "exponent.whole-number.power-of-power",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement extends (a^m)^n = a^(m x n) to integer exponents."
+    },
+    {
+     "edge_id": "e335",
+     "prerequisite": "exponent.whole-number.power-of-product",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement extends (a x b)^n = a^n x b^n to integer exponents."
+    },
+    {
+     "edge_id": "e336",
+     "prerequisite": "exponent.whole-number.power-of-quotient",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement extends (a/b)^n = a^n/b^n to integer exponents."
+    },
+    {
+     "edge_id": "e337",
+     "prerequisite": "exponent.whole-number.product-rule",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement extends the product rule a^m x a^n = a^(m+n) from whole-number to integer exponents."
+    },
+    {
+     "edge_id": "e338",
+     "prerequisite": "exponent.whole-number.quotient-rule",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement extends the quotient rule to every integer m and n, including m less than n."
+    },
+    {
+     "edge_id": "e339",
+     "prerequisite": "exponent.zero",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement fixes a^0 = 1, which the rules must still respect when an exponent is 0."
+    },
+    {
+     "edge_id": "e340",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule is stated with letters, each standing for any number or any whole number."
+    },
+    {
+     "edge_id": "e341",
+     "prerequisite": "rational-number.addition.integers",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problems add integer exponents such as -2 + 6 to check 5^-2 x 5^6 = 5^4."
+    },
+    {
+     "edge_id": "e342",
+     "prerequisite": "rational-number.multiplication.integers",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problems multiply integer exponents such as -3 x 2 to check (2^-3)^2."
+    },
+    {
+     "edge_id": "e343",
+     "prerequisite": "rational-number.subtraction.integers",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problems subtract integer exponents such as 3 - 7 to check 4^3 divided by 4^7."
+    }
+   ]
+  },
+  {
+   "id": "exponent.integer.equivalent-expressions",
+   "concept": "exponent",
+   "facet": "integer-power",
+   "level": 3,
+   "type": "procedure",
+   "name": "Rewrite a numerical expression with integer exponents using the exponent properties",
+   "statement": "Rewrite a numerical expression made of products, quotients and powers of powers with integer exponents as an equivalent single power, or as a fraction without exponents, by applying the exponent properties.",
+   "assess": "Write 3^2 x 3^-5 as a fraction with no exponents.",
+   "procedure": [
+    "Combine powers with the same base into one power, using the product, quotient and power-of-a-power rules.",
+    "Combine powers with the same exponent into one power of a product or quotient where that helps.",
+    "Rewrite any negative exponent as a reciprocal: a^(-n) = 1/a^n.",
+    "If a value is asked for, evaluate the remaining whole-number power."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e344",
+     "prerequisite": "exponent.integer.properties",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Steps 1 and 2 combine powers with the same base or the same exponent, using the rules for integer exponents."
+    },
+    {
+     "edge_id": "e345",
+     "prerequisite": "exponent.negative",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 rewrites each remaining negative exponent as a reciprocal with a^(-n) = 1/a^n."
+    },
+    {
+     "edge_id": "e346",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "procedure.4",
+     "scope": "concept",
+     "rationale": "Step 4 evaluates the remaining whole-number power, such as 3^3 = 27, to give a value."
+    },
+    {
+     "edge_id": "e347",
+     "prerequisite": "expressions.order-of-operations.exponents",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The expressions mix powers with products and quotients, so powers are read before multiplying or dividing."
+    },
+    {
+     "edge_id": "e348",
+     "prerequisite": "rational-number.addition.integers",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Combining 3^2 x 3^-5 adds the exponents 2 and -5, which are integers of either sign."
+    },
+    {
+     "edge_id": "e349",
+     "prerequisite": "rational-number.multiplication.integers",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Combining a power of a power multiplies exponents, which may be negative integers."
+    },
+    {
+     "edge_id": "e350",
+     "prerequisite": "rational-number.subtraction.integers",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Combining a quotient of powers subtracts exponents, which may be negative integers."
+    }
+   ]
+  },
+  {
+   "id": "root.square.meaning",
+   "concept": "root",
+   "facet": "square",
+   "level": 3,
+   "type": "concept",
+   "name": "The square root of a number",
+   "statement": "For a number p that is 0 or greater, sqrt(p) is the number that is 0 or greater and whose square is p.",
+   "assess": "Which of these is sqrt(36): 18, 6, or -6?",
+   "proposed_edges": [
+    {
+     "edge_id": "e351",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Deciding which of 18, 6 and -6 has square 36 needs squares such as 6^2 and 18^2 evaluated."
+    },
+    {
+     "edge_id": "e352",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The square of a number is the number multiplied by itself, a power with exponent 2."
+    },
+    {
+     "edge_id": "e353",
+     "prerequisite": "rational-number.compare.integers",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem rules out -6 because -6 is less than 0 and the root must be 0 or greater."
+    },
+    {
+     "edge_id": "e354",
+     "prerequisite": "rational-number.multiplication.integers",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "the choice -6 also has square 36, so the learner must see that a product of two negatives is positive"
+    }
+   ]
+  },
+  {
+   "id": "root.cube.meaning",
+   "concept": "root",
+   "facet": "cube",
+   "level": 3,
+   "type": "concept",
+   "name": "The cube root of a number",
+   "statement": "For a positive number p, the cube root of p is the number whose cube is p.",
+   "assess": "Which of these is the cube root of 64: 8, 4, or 64/3?",
+   "proposed_edges": [
+    {
+     "edge_id": "e355",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Deciding which of 8, 4 and 64/3 has cube 64 needs cubes such as 4^3 and 8^3 evaluated."
+    },
+    {
+     "edge_id": "e356",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The cube of a number is the number multiplied by itself three times, a power with exponent 3."
+    }
+   ]
+  },
+  {
+   "id": "root.square.perfect-square.evaluate",
+   "concept": "root",
+   "facet": "square",
+   "level": 3,
+   "type": "procedure",
+   "name": "Evaluate the square root of a perfect square up to 625",
+   "statement": "For a perfect square p from 0 to 625, find sqrt(p): the whole number from 0 to 25 whose square is p.",
+   "assess": "Find sqrt(196) and sqrt(529).",
+   "procedure": [
+    "Recall a square equal to p, or locate p between two known squares and try the whole numbers between their roots.",
+    "Check by squaring that the number found gives p."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e357",
+     "prerequisite": "comparing.whole-numbers.magnitude.three-digit",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Locating p between two known squares compares p with three-digit squares to see which is greater."
+    },
+    {
+     "edge_id": "e358",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Recalling or trying squares of whole numbers up to 25, and checking by squaring, evaluates powers such as 14^2."
+    },
+    {
+     "edge_id": "e359",
+     "prerequisite": "root.square.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The goal is sqrt(p), the number 0 or greater whose square is p."
+    }
+   ]
+  },
+  {
+   "id": "root.cube.perfect-cube.evaluate",
+   "concept": "root",
+   "facet": "cube",
+   "level": 3,
+   "type": "procedure",
+   "name": "Evaluate the cube root of a perfect cube up to 1000",
+   "statement": "For a perfect cube p from 1 to 1000, find the cube root of p: the whole number from 1 to 10 whose cube is p.",
+   "assess": "Find the cube root of 343 and the cube root of 1000.",
+   "procedure": [
+    "Recall a cube equal to p, or locate p between two known cubes and try the whole numbers between their roots.",
+    "Check by cubing that the number found gives p."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e360",
+     "prerequisite": "comparing.whole-numbers.magnitude.multi-digit",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "locating p up to 1000 between two known cubes compares p with cubes of up to four digits"
+    },
+    {
+     "edge_id": "e361",
+     "prerequisite": "comparing.whole-numbers.magnitude.three-digit",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Locating p between two known cubes compares p with three-digit cubes to see which is greater."
+    },
+    {
+     "edge_id": "e362",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Recalling or trying cubes of whole numbers up to 10, and checking by cubing, evaluates powers such as 7^3."
+    },
+    {
+     "edge_id": "e363",
+     "prerequisite": "root.cube.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The goal is the cube root of p, the number whose cube is p."
+    }
+   ]
+  },
+  {
+   "id": "root.square.solve-x-squared",
+   "concept": "root",
+   "facet": "square",
+   "level": 3,
+   "type": "procedure",
+   "name": "Write the solutions of x^2 = p with square roots",
+   "statement": "For a positive rational number p, the equation x^2 = p has exactly two solutions, x = sqrt(p) and x = -sqrt(p).",
+   "assess": "Find every solution of x^2 = 10. Write the solutions with the square root symbol.",
+   "procedure": [
+    "Write the two solutions x = sqrt(p) and x = -sqrt(p).",
+    "If p is a perfect square, the roots may be replaced by their values."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e364",
+     "prerequisite": "equation.solution.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A solution of x^2 = p is a value of x that makes the equation true, and exactly two such values exist."
+    },
+    {
+     "edge_id": "e365",
+     "prerequisite": "rational-number.multiplication.sign-rule",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "(-sqrt(p))^2 = p because a negative times a negative is positive, so -sqrt(p) is also a solution."
+    },
+    {
+     "edge_id": "e366",
+     "prerequisite": "root.square.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The two solutions are written as sqrt(p) and -sqrt(p), where sqrt(p) is the square root of p."
+    },
+    {
+     "edge_id": "e367",
+     "prerequisite": "root.square.perfect-square.evaluate",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "When p is a perfect square, each root is replaced by its whole-number value."
+    }
+   ]
+  },
+  {
+   "id": "root.cube.solve-x-cubed",
+   "concept": "root",
+   "facet": "cube",
+   "level": 3,
+   "type": "procedure",
+   "name": "Write the solution of x^3 = p with a cube root",
+   "statement": "For a positive rational number p, the equation x^3 = p has exactly one solution, the cube root of p.",
+   "assess": "Find every solution of x^3 = 20. Write the solution with the cube root symbol.",
+   "procedure": [
+    "Write the single solution x = the cube root of p.",
+    "If p is a perfect cube, the root may be replaced by its value."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e368",
+     "prerequisite": "equation.solution.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A solution of x^3 = p is a value of x that makes the equation true, and exactly one such value exists."
+    },
+    {
+     "edge_id": "e369",
+     "prerequisite": "rational-number.multiplication.sign-rule",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A negative number cubed is negative, so no negative x solves x^3 = p and the solution is unique."
+    },
+    {
+     "edge_id": "e370",
+     "prerequisite": "root.cube.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The one solution is written as the cube root of p, the number whose cube is p."
+    },
+    {
+     "edge_id": "e371",
+     "prerequisite": "root.cube.perfect-cube.evaluate",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "When p is a perfect cube, the root is replaced by its whole-number value."
+    }
+   ]
+  },
+  {
+   "id": "root.square.sqrt2-irrational",
+   "concept": "root",
+   "facet": "square",
+   "level": 3,
+   "type": "concept",
+   "name": "sqrt(2) is irrational",
+   "statement": "sqrt(2) is irrational: it is not equal to any fraction a/b of integers, so every fraction or finite decimal written for it, such as 1.414, is only an approximation.",
+   "assess": "Ana says sqrt(2) = 1.414 exactly. Ben says sqrt(2) = 99/70 exactly. Is either of them right? What kind of number is sqrt(2)?",
+   "proposed_edges": [
+    {
+     "edge_id": "e372",
+     "prerequisite": "decimal.thousandths.notation",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "a finite decimal such as 1.414 is the fraction 1414/1000 of integers, so it cannot equal sqrt(2)"
+    },
+    {
+     "edge_id": "e373",
+     "prerequisite": "exponent.whole-number-power.evaluate.decimal-base",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Testing Ana's claim squares 1.414 to see whether the result is exactly 2."
+    },
+    {
+     "edge_id": "e374",
+     "prerequisite": "exponent.whole-number-power.evaluate.fraction-base",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Testing Ben's claim squares 99/70 to see whether the result is exactly 2."
+    },
+    {
+     "edge_id": "e375",
+     "prerequisite": "rational-number.definition",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Irrational here means equal to no fraction a/b of integers, which is what a rational number is."
+    },
+    {
+     "edge_id": "e376",
+     "prerequisite": "root.square.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "sqrt(2) is the number 0 or greater whose square is 2, the number the claim is about."
+    }
+   ]
+  },
+  {
+   "id": "exponent.power-of-ten.negative",
+   "concept": "exponent",
+   "facet": "power-of-ten",
+   "level": 3,
+   "type": "representation",
+   "name": "Negative powers of 10 as decimals",
+   "statement": "For a positive whole number n, 10^-n = 1/10^n, the decimal with the digit 1 in the n-th place after the decimal point and zeros in the places before it.",
+   "assess": "Write 10^-4 as a decimal.",
+   "proposed_edges": [
+    {
+     "edge_id": "e377",
+     "prerequisite": "division.power-of-ten.rule",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "dividing 1 by 10^n moves the decimal point n places left, putting the digit 1 in the n-th place"
+    },
+    {
+     "edge_id": "e378",
+     "prerequisite": "exponent.negative",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "10^-n = 1/10^n is the negative exponent rule with the base 10."
+    },
+    {
+     "edge_id": "e379",
+     "prerequisite": "exponent.power-of-ten.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The denominator 10^n is a 1 followed by n zeros, which fixes the n-th decimal place."
+    },
+    {
+     "edge_id": "e380",
+     "prerequisite": "place-value.ten-times-right.decimal",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The n-th place after the decimal point has value 1/10^n, since each place is a tenth of the one to its left."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.meaning",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "What scientific notation is",
+   "statement": "A positive number is written in scientific notation when it has the form a x 10^n, where n is an integer and the leading factor a is at least 1 and less than 10.",
+   "assess": "Which of these are written in scientific notation: 4.5 x 10^6; 45 x 10^5; 0.45 x 10^7; 4.5 x 10^-3; 4.5 x 2^6?",
+   "proposed_edges": [
+    {
+     "edge_id": "e381",
+     "prerequisite": "decimal.compare",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The leading factor a must be at least 1 and less than 10, which compares a decimal with 1 and 10."
+    },
+    {
+     "edge_id": "e382",
+     "prerequisite": "exponent.negative",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "the exponent n may be a negative integer, as in 4.5 x 10^-3 where 10^-3 is 1/10^3"
+    },
+    {
+     "edge_id": "e383",
+     "prerequisite": "exponent.power-of-ten.negative",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The form allows n to be a negative integer, as in 4.5 x 10^-3, using 10^-n as a decimal."
+    },
+    {
+     "edge_id": "e384",
+     "prerequisite": "exponent.power-of-ten.notation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The form a x 10^n uses powers of 10 with whole-number exponents, as in 10^6."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.from-decimal.large",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "representation",
+   "name": "Write a number of 10 or more in scientific notation",
+   "statement": "Write a number of 10 or more as a x 10^n, with a at least 1 and less than 10 and n a positive integer, by placing the decimal point just after the first nonzero digit and taking n as the number of places the point moved left.",
+   "assess": "Write 52,000,000 in scientific notation.",
+   "procedure": [
+    "Place the decimal point just after the first nonzero digit; the number formed is a.",
+    "Count the places the decimal point moved to the left; that count is n.",
+    "Write a x 10^n, dropping trailing zeros after the decimal point of a."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e385",
+     "prerequisite": "exponent.power-of-ten.notation",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "step 3 writes the power 10^n with a positive whole-number exponent"
+    },
+    {
+     "edge_id": "e386",
+     "prerequisite": "multiplication.power-of-ten.decimal.rule",
+     "relation": "justificatory",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Multiplying by 10^n moves the point n places right, so the places moved left give the exponent n."
+    },
+    {
+     "edge_id": "e387",
+     "prerequisite": "scientific-notation.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The result must have the form a x 10^n with a at least 1 and less than 10."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.from-decimal.small",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "representation",
+   "name": "Write a positive number less than 1 in scientific notation",
+   "statement": "Write a positive number less than 1 as a x 10^n, with a at least 1 and less than 10 and n a negative integer, by moving the decimal point right to just after the first nonzero digit and taking n as minus the number of places it moved.",
+   "assess": "Write 0.00073 in scientific notation.",
+   "procedure": [
+    "Move the decimal point right to just after the first nonzero digit; the number formed is a.",
+    "Count the places the decimal point moved; n is the negative of that count.",
+    "Write a x 10^n."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e388",
+     "prerequisite": "division.power-of-ten.rule",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "a x 10^-k equals a divided by 10^k, which moves the point left k places and undoes the right moves counted"
+    },
+    {
+     "edge_id": "e389",
+     "prerequisite": "exponent.power-of-ten.negative",
+     "relation": "representational",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Writing a x 10^n with n = -k uses 10^-k = 1/10^k to express dividing by 10^k."
+    },
+    {
+     "edge_id": "e390",
+     "prerequisite": "multiplication.power-of-ten.decimal.rule",
+     "relation": "justificatory",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Moving the point right k places multiplies by 10^k, so the original number is a divided by 10^k."
+    },
+    {
+     "edge_id": "e391",
+     "prerequisite": "scientific-notation.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The result must have the form a x 10^n with a at least 1 and less than 10."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.to-decimal.large",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "representation",
+   "name": "Write a number in scientific notation with a positive exponent as a decimal",
+   "statement": "Write a x 10^n, with n a positive integer, as a decimal by moving the decimal point of a n places to the right, writing zeros in any empty places.",
+   "assess": "Write 6.02 x 10^5 as a decimal.",
+   "procedure": [
+    "Move the decimal point of a n places to the right.",
+    "Write a zero in each place passed that has no digit."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e392",
+     "prerequisite": "multiplication.power-of-ten.decimal.rule",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Multiplying a by 10^n moves the decimal point of a n places to the right."
+    },
+    {
+     "edge_id": "e393",
+     "prerequisite": "scientific-notation.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The number is given as a x 10^n in scientific notation, with a positive integer exponent n."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.to-decimal.small",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "representation",
+   "name": "Write a number in scientific notation with a negative exponent as a decimal",
+   "statement": "Write a x 10^-k, with k a positive whole number, as a decimal by moving the decimal point of a k places to the left, writing zeros in any empty places.",
+   "assess": "Write 4.1 x 10^-3 as a decimal.",
+   "procedure": [
+    "Move the decimal point of a k places to the left.",
+    "Write a zero in each place passed that has no digit, and a 0 before the decimal point."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e394",
+     "prerequisite": "division.power-of-ten.rule",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Dividing a by 10^k moves the decimal point of a k places to the left."
+    },
+    {
+     "edge_id": "e395",
+     "prerequisite": "exponent.power-of-ten.negative",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "a x 10^-k means a x (1/10^k), which is a divided by 10^k."
+    },
+    {
+     "edge_id": "e396",
+     "prerequisite": "scientific-notation.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The number is given as a x 10^-k in scientific notation, with a negative integer exponent."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.estimate.large",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Estimate a large number as a single digit times a power of 10",
+   "statement": "Estimate a whole number of 10 or more as d x 10^n, with d a single digit from 1 to 9 and n a positive integer, by rounding the number to its greatest place.",
+   "assess": "Estimate 4,120,000,000 as a single digit times a power of 10.",
+   "procedure": [
+    "Round the number to its greatest place, so that one nonzero digit is left.",
+    "Take that digit as d, and the number of places after it as n.",
+    "Write d x 10^n."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e397",
+     "prerequisite": "exponent.power-of-ten.notation",
+     "relation": "representational",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 writes the estimate as d x 10^n using power-of-10 notation with a positive exponent."
+    },
+    {
+     "edge_id": "e398",
+     "prerequisite": "multiplication.power-of-ten.whole-number.rule",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "A digit followed by n zeros is d x 10^n, so n is the number of places after the digit."
+    },
+    {
+     "edge_id": "e399",
+     "prerequisite": "rounding.whole-number.any-place",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 rounds the number to its greatest place, which is rounding a multi-digit whole number to any place."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.estimate.small",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Estimate a small number as a single digit times a power of 10",
+   "statement": "Estimate a positive number less than 1 as d x 10^n, with d a single digit from 1 to 9 and n a negative integer, by rounding the number to the place of its first nonzero digit.",
+   "assess": "Estimate 0.000062 as a single digit times a power of 10.",
+   "procedure": [
+    "Round the number to the place of its first nonzero digit.",
+    "Take that digit as d; if it is in the k-th decimal place, n = -k.",
+    "Write d x 10^n."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e400",
+     "prerequisite": "exponent.power-of-ten.negative",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "A digit d in the k-th decimal place equals d x 10^-k, since 10^-k has a 1 in the k-th place."
+    },
+    {
+     "edge_id": "e401",
+     "prerequisite": "rounding.decimal.any-place",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 rounds the number to the place of its first nonzero digit, which is rounding a decimal to any place."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.compare.order",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Decide which of two numbers in scientific notation is greater",
+   "statement": "Of two positive numbers in scientific notation, the one with the greater exponent is greater; when the exponents are equal, the one with the greater leading factor is greater.",
+   "assess": "Which is greater, 9 x 10^-6 or 2 x 10^-5?",
+   "procedure": [
+    "Compare the exponents; the number with the greater exponent is greater.",
+    "If the exponents are equal, compare the leading factors."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e402",
+     "prerequisite": "decimal.compare",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 compares the leading factors, which are decimals when the exponents are equal."
+    },
+    {
+     "edge_id": "e403",
+     "prerequisite": "rational-number.compare.integers",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 compares the exponents, which can be negative integers such as -6 and -5."
+    },
+    {
+     "edge_id": "e404",
+     "prerequisite": "scientific-notation.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule that the greater exponent wins relies on every leading factor being at least 1 and less than 10."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.compare.times-as-much",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find how many times as large one number written with a power of 10 is as another",
+   "statement": "For positive numbers a x 10^m and b x 10^n, the first is (a divided by b) x 10^(m - n) times as large as the second.",
+   "assess": "How many times as large is 6 x 10^4 as 2 x 10^-3?",
+   "procedure": [
+    "Divide the leading factors: a divided by b.",
+    "Subtract the exponents: m - n.",
+    "Write the result as (a divided by b) x 10^(m - n) and state it as a number of times."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e405",
+     "prerequisite": "multiplication.comparison",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Saying one number is some number of times as large as another uses a multiplication equation as a comparison."
+    },
+    {
+     "edge_id": "e406",
+     "prerequisite": "scientific-notation.divide",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Dividing the leading factors and subtracting the exponents is division of two numbers in scientific notation."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.normalize",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Rewrite a x 10^n in scientific notation when a is 10 or more or less than 1",
+   "statement": "When the leading factor of a x 10^n is 10 or more or less than 1, rewrite the number in scientific notation by moving the decimal point of a and changing the exponent so the value is unchanged: each place moved left adds 1 to n, each place moved right subtracts 1.",
+   "assess": "Write 34.5 x 10^5 and 0.6 x 10^-2 in scientific notation.",
+   "procedure": [
+    "Move the decimal point of a until a is at least 1 and less than 10, counting the places moved.",
+    "If the point moved k places left, add k to the exponent; if it moved k places right, subtract k."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e407",
+     "prerequisite": "division.power-of-ten.rule",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Moving the decimal point of a left, as for 34.5 becoming 3.45, divides a by a power of 10."
+    },
+    {
+     "edge_id": "e408",
+     "prerequisite": "exponent.integer.properties",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The value stays the same because 10^k x 10^n = 10^(n + k) holds for positive or negative integer n."
+    },
+    {
+     "edge_id": "e409",
+     "prerequisite": "multiplication.power-of-ten.decimal.rule",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Moving the decimal point of a right, as for 0.6 becoming 6, multiplies a by a power of 10."
+    },
+    {
+     "edge_id": "e410",
+     "prerequisite": "rational-number.addition.integers",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Adding k to the exponent n, which may be negative, is integer addition."
+    },
+    {
+     "edge_id": "e411",
+     "prerequisite": "rational-number.subtraction.integers",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Subtracting k from the exponent n, as in -2 - 1, is integer subtraction."
+    },
+    {
+     "edge_id": "e412",
+     "prerequisite": "scientific-notation.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The goal is a form a x 10^n with a at least 1 and less than 10."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.add.same-exponent",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Add numbers in scientific notation with the same power of 10",
+   "statement": "(a x 10^n) + (b x 10^n) = (a + b) x 10^n: add the leading factors and keep the power of 10.",
+   "assess": "Find 3.2 x 10^5 + 4.5 x 10^5. Give the answer in scientific notation.",
+   "procedure": [
+    "Add the leading factors.",
+    "Keep the common power of 10.",
+    "If the new leading factor is 10 or more, rewrite the result in scientific notation."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e413",
+     "prerequisite": "decimal.addition.algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 adds the leading factors, which are decimals such as 3.2 and 4.5."
+    },
+    {
+     "edge_id": "e414",
+     "prerequisite": "multiplication.distributive",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "a x 10^n + b x 10^n = (a + b) x 10^n takes the common 10^n out of the sum by the distributive property."
+    },
+    {
+     "edge_id": "e415",
+     "prerequisite": "rational-number.addition.rationals",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "step 1 adds the leading factors, which are decimals such as 3.2 and 4.5"
+    },
+    {
+     "edge_id": "e416",
+     "prerequisite": "scientific-notation.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Both numbers and the result are written as a leading factor times a power of 10 in scientific notation."
+    },
+    {
+     "edge_id": "e417",
+     "prerequisite": "scientific-notation.normalize",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 rewrites a sum whose leading factor is 10 or more in scientific notation."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.subtract.same-exponent",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Subtract numbers in scientific notation with the same power of 10",
+   "statement": "(a x 10^n) - (b x 10^n) = (a - b) x 10^n: subtract the leading factors and keep the power of 10.",
+   "assess": "Find 8.6 x 10^-4 - 2.3 x 10^-4. Give the answer in scientific notation.",
+   "procedure": [
+    "Subtract the leading factors.",
+    "Keep the common power of 10.",
+    "If the new leading factor is less than 1, rewrite the result in scientific notation."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e418",
+     "prerequisite": "decimal.subtraction.algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 subtracts the leading factors, which are decimals such as 8.6 and 2.3."
+    },
+    {
+     "edge_id": "e419",
+     "prerequisite": "multiplication.distributive",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "a x 10^n - b x 10^n = (a - b) x 10^n takes the common 10^n out of the difference by the distributive property."
+    },
+    {
+     "edge_id": "e420",
+     "prerequisite": "rational-number.subtraction.rationals",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "step 1 subtracts the leading factors, which are decimals such as 8.6 and 2.3"
+    },
+    {
+     "edge_id": "e421",
+     "prerequisite": "scientific-notation.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Both numbers and the result are written as a leading factor times a power of 10 in scientific notation."
+    },
+    {
+     "edge_id": "e422",
+     "prerequisite": "scientific-notation.normalize",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 rewrites a difference whose leading factor is less than 1 in scientific notation."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.add.different-exponents",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Add numbers in scientific notation with different powers of 10",
+   "statement": "To add two numbers in scientific notation with different powers of 10, rewrite one so both have the same power of 10, then add the leading factors.",
+   "assess": "Find 3 x 10^6 + 4.5 x 10^5. Give the answer in scientific notation.",
+   "procedure": [
+    "Rewrite the number with the smaller exponent to have the larger exponent, moving its decimal point one place left for each 1 added to the exponent.",
+    "Add the leading factors and keep the common power of 10.",
+    "If needed, rewrite the result in scientific notation."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e423",
+     "prerequisite": "division.power-of-ten.rule",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "moving the decimal point one place left per 1 added to the exponent is dividing by 10 each time"
+    },
+    {
+     "edge_id": "e424",
+     "prerequisite": "rational-number.compare.integers",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Finding which number has the smaller exponent compares integer exponents, which may be negative."
+    },
+    {
+     "edge_id": "e425",
+     "prerequisite": "rational-number.subtraction.integers",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "the number of places the point moves equals the difference of the two exponents, such as 6 - 5"
+    },
+    {
+     "edge_id": "e426",
+     "prerequisite": "scientific-notation.add.same-exponent",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Once both numbers share a power of 10, adding the leading factors is the same-exponent sum."
+    },
+    {
+     "edge_id": "e427",
+     "prerequisite": "scientific-notation.normalize",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Rewriting a x 10^n with a larger exponent moves the decimal point left and raises the exponent, keeping the value."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.subtract.different-exponents",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Subtract numbers in scientific notation with different powers of 10",
+   "statement": "To subtract two numbers in scientific notation with different powers of 10, rewrite one so both have the same power of 10, then subtract the leading factors.",
+   "assess": "Find 7.2 x 10^-3 - 5 x 10^-4. Give the answer in scientific notation.",
+   "procedure": [
+    "Rewrite the number with the smaller exponent to have the larger exponent, moving its decimal point one place left for each 1 added to the exponent.",
+    "Subtract the leading factors and keep the common power of 10.",
+    "If needed, rewrite the result in scientific notation."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e428",
+     "prerequisite": "division.power-of-ten.rule",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "moving the decimal point one place left per 1 added to the exponent is dividing by 10 each time"
+    },
+    {
+     "edge_id": "e429",
+     "prerequisite": "rational-number.compare.integers",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Finding which number has the smaller exponent compares integer exponents, which may be negative."
+    },
+    {
+     "edge_id": "e430",
+     "prerequisite": "rational-number.subtraction.integers",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "the number of places the point moves equals the difference of the two exponents"
+    },
+    {
+     "edge_id": "e431",
+     "prerequisite": "scientific-notation.normalize",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Rewriting a x 10^n with a larger exponent moves the decimal point left and raises the exponent, keeping the value."
+    },
+    {
+     "edge_id": "e432",
+     "prerequisite": "scientific-notation.subtract.same-exponent",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Once both numbers share a power of 10, subtracting the leading factors is the same-exponent difference."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.multiply",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Multiply numbers in scientific notation",
+   "statement": "(a x 10^m) x (b x 10^n) = (a x b) x 10^(m+n): multiply the leading factors and add the exponents.",
+   "assess": "Find (2 x 10^3) x (4 x 10^-5). Give the answer in scientific notation.",
+   "procedure": [
+    "Multiply the leading factors.",
+    "Add the exponents.",
+    "If the new leading factor is 10 or more, rewrite the result in scientific notation."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e433",
+     "prerequisite": "decimal.multiplication.algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 multiplies the leading factors, which are decimals such as 2.5 and 4."
+    },
+    {
+     "edge_id": "e434",
+     "prerequisite": "exponent.integer.properties",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 adds exponents with 10^m x 10^n = 10^(m + n), for integer exponents including negative ones."
+    },
+    {
+     "edge_id": "e435",
+     "prerequisite": "expressions.product.regroup-factors",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "(a x 10^m) x (b x 10^n) is regrouped as (a x b) x (10^m x 10^n) by reordering the factors."
+    },
+    {
+     "edge_id": "e436",
+     "prerequisite": "rational-number.addition.integers",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Adding the exponents, as in 3 + (-5), is integer addition."
+    },
+    {
+     "edge_id": "e437",
+     "prerequisite": "rational-number.multiplication.rationals",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "step 1 multiplies the leading factors, which are decimals"
+    },
+    {
+     "edge_id": "e438",
+     "prerequisite": "scientific-notation.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Both numbers and the result are written as a leading factor times a power of 10 in scientific notation."
+    },
+    {
+     "edge_id": "e439",
+     "prerequisite": "scientific-notation.normalize",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 rewrites a product whose leading factor is 10 or more in scientific notation."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.divide",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Divide numbers in scientific notation",
+   "statement": "(a x 10^m) divided by (b x 10^n) = (a divided by b) x 10^(m - n): divide the leading factors and subtract the exponents.",
+   "assess": "Find (9 x 10^4) divided by (3 x 10^-2). Give the answer in scientific notation.",
+   "procedure": [
+    "Divide the leading factors.",
+    "Subtract the exponent of the divisor from the exponent of the dividend.",
+    "If the new leading factor is less than 1, rewrite the result in scientific notation."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e440",
+     "prerequisite": "decimal.division.by-decimal.algorithm",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 divides the leading factors, which are decimals and may have a decimal divisor."
+    },
+    {
+     "edge_id": "e441",
+     "prerequisite": "exponent.integer.properties",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 subtracts exponents with 10^m divided by 10^n = 10^(m - n), for integer exponents including negative ones."
+    },
+    {
+     "edge_id": "e442",
+     "prerequisite": "fraction.multiplication.product-rule",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The quotient is regrouped as (a divided by b) x (10^m divided by 10^n), splitting the product over the quotient."
+    },
+    {
+     "edge_id": "e443",
+     "prerequisite": "rational-number.division.rationals",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "step 1 divides the leading factors, which are decimals"
+    },
+    {
+     "edge_id": "e444",
+     "prerequisite": "rational-number.subtraction.integers",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Subtracting the divisor's exponent, as in 4 - (-2), is integer subtraction."
+    },
+    {
+     "edge_id": "e445",
+     "prerequisite": "scientific-notation.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Both numbers and the result are written as a leading factor times a power of 10 in scientific notation."
+    },
+    {
+     "edge_id": "e446",
+     "prerequisite": "scientific-notation.normalize",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 rewrites a quotient whose leading factor is less than 1 in scientific notation."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.multiply.mixed-forms",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Multiply a decimal by a number in scientific notation",
+   "statement": "Multiply a number written as a decimal by a number written in scientific notation by first writing the decimal in scientific notation, then multiplying the two numbers in scientific notation.",
+   "assess": "Find 0.0003 x (2 x 10^7). Give the answer in scientific notation.",
+   "procedure": [
+    "Write the decimal number in scientific notation.",
+    "Multiply the two numbers in scientific notation."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e447",
+     "prerequisite": "scientific-notation.from-decimal.large",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 writes a decimal of 10 or more in scientific notation before multiplying."
+    },
+    {
+     "edge_id": "e448",
+     "prerequisite": "scientific-notation.from-decimal.small",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 writes a decimal less than 1, such as 0.0003, in scientific notation before multiplying."
+    },
+    {
+     "edge_id": "e449",
+     "prerequisite": "scientific-notation.multiply",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 multiplies the two numbers once both are in scientific notation."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.divide.mixed-forms",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Divide when one number is a decimal and the other is in scientific notation",
+   "statement": "Divide when one number is written as a decimal and the other in scientific notation by first writing the decimal in scientific notation, then dividing the two numbers in scientific notation.",
+   "assess": "Find 4,800,000 divided by (1.2 x 10^-3). Give the answer in scientific notation.",
+   "procedure": [
+    "Write the decimal number in scientific notation.",
+    "Divide the two numbers in scientific notation."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e450",
+     "prerequisite": "scientific-notation.divide",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 divides the two numbers once both are in scientific notation."
+    },
+    {
+     "edge_id": "e451",
+     "prerequisite": "scientific-notation.from-decimal.large",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 writes a decimal of 10 or more, such as 4,800,000, in scientific notation before dividing."
+    },
+    {
+     "edge_id": "e452",
+     "prerequisite": "scientific-notation.from-decimal.small",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 writes a decimal less than 1 in scientific notation before dividing."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.units.choose",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "procedure",
+   "name": "Choose a unit of suitable size for a very large or very small measurement",
+   "statement": "Given a very large or very small measurement in scientific notation and a set of metric units, choose the unit that makes its measure a number from 1 to 1000, and rewrite the measurement in that unit using powers of 10.",
+   "assess": "The Atlantic seafloor widens by about 2.5 x 10^-5 kilometers each year. Which unit makes this rate a number from 1 to 1000: kilometers, meters, or millimeters per year? Give the rate in that unit.",
+   "procedure": [
+    "Write the size of each offered unit as a power of 10 times the given unit.",
+    "For each unit, divide the measurement by that power of 10 and find the unit that gives a number from 1 to 1000.",
+    "Write the measurement in that unit."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e453",
+     "prerequisite": "decimal.compare",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "deciding whether a converted number is from 1 to 1000 compares decimals such as 0.025 with 1"
+    },
+    {
+     "edge_id": "e454",
+     "prerequisite": "exponent.power-of-ten.negative",
+     "relation": "representational",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 writes a smaller unit's size as a negative power of 10 times the given unit, such as 10^-6 km."
+    },
+    {
+     "edge_id": "e455",
+     "prerequisite": "exponent.power-of-ten.notation",
+     "relation": "representational",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 writes a larger unit's size as a positive power of 10 times the given unit."
+    },
+    {
+     "edge_id": "e456",
+     "prerequisite": "measurement.length.units.metric",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 writes each offered unit, such as meters or millimeters, in terms of kilometers using metric unit sizes."
+    },
+    {
+     "edge_id": "e457",
+     "prerequisite": "measurement.unit-conversion.multiplicative-relation",
+     "relation": "definitional",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 rewrites the measurement in the chosen unit, whose number is a fixed multiple of the number in the given unit."
+    },
+    {
+     "edge_id": "e458",
+     "prerequisite": "scientific-notation.divide",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 divides the measurement by each unit's power of 10, a division in scientific notation."
+    },
+    {
+     "edge_id": "e459",
+     "prerequisite": "scientific-notation.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The measurement is given in scientific notation as a leading factor times a power of 10."
+    }
+   ]
+  },
+  {
+   "id": "scientific-notation.technology.interpret",
+   "concept": "scientific-notation",
+   "facet": "core",
+   "level": 3,
+   "type": "representation",
+   "name": "Read scientific notation shown by a calculator or computer",
+   "statement": "A calculator or computer display such as 4.7E-6 means 4.7 x 10^-6: the number after E is the exponent of 10.",
+   "assess": "A calculator shows 4.7E-6. Write the number it shows in scientific notation.",
+   "proposed_edges": [
+    {
+     "edge_id": "e460",
+     "prerequisite": "scientific-notation.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A display such as 4.7E-6 abbreviates the scientific notation a x 10^n, with the number after E as n."
+    }
+   ]
+  },
+  {
+   "id": "equation.linear.variable-both-sides",
+   "concept": "equation",
+   "facet": "linear-one-variable",
+   "level": 3,
+   "type": "procedure",
+   "name": "Solve a linear equation with the variable on both sides",
+   "statement": "Solve an equation of the form ax + b = cx + d with integer coefficients and a not equal to c by subtracting one variable term from both sides, which leaves an equation with the variable on one side, and solving that equation.",
+   "assess": "Solve 7x - 4 = 3x + 16.",
+   "procedure": [
+    "Subtract one of the variable terms, cx or ax, from both sides so the variable appears on one side only.",
+    "Solve the resulting equation of the form px + q = r."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e461",
+     "prerequisite": "equation.equality-preserved.same-operation",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Subtracting the same variable term from both sides keeps the solutions of the equation."
+    },
+    {
+     "edge_id": "e462",
+     "prerequisite": "equation.two-step.px-plus-q.solve",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The resulting equation px + q = r is solved by undoing the added constant and then dividing by p."
+    },
+    {
+     "edge_id": "e463",
+     "prerequisite": "expressions.linear.subtract.rational",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Subtracting cx from ax + b and from cx + d combines variable terms whose integer coefficients may be negative."
+    }
+   ]
+  },
+  {
+   "id": "equation.linear.expand-collect",
+   "concept": "equation",
+   "facet": "linear-one-variable",
+   "level": 3,
+   "type": "procedure",
+   "name": "Solve a linear equation that needs expanding and collecting like terms",
+   "statement": "Solve a linear equation with integer coefficients in which a side must first be rewritten, by expanding products with the distributive property and collecting like terms, as a single expression px + q.",
+   "assess": "Solve 3(x - 2) + 4x = 15.",
+   "procedure": [
+    "Expand each product such as 3(x - 2) with the distributive property.",
+    "Collect like terms on each side.",
+    "Solve the resulting equation."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e464",
+     "prerequisite": "equation.two-step.px-plus-q.solve",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 solves the equation px + q = r that remains, such as 7x - 6 = 15."
+    },
+    {
+     "edge_id": "e465",
+     "prerequisite": "expressions.linear.add.rational",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 collects like terms such as 3x and 4x on a side into a single expression px + q."
+    },
+    {
+     "edge_id": "e466",
+     "prerequisite": "expressions.linear.expand.rational",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 expands products such as 3(x - 2) with the distributive property and signed numbers."
+    }
+   ]
+  },
+  {
+   "id": "equation.linear.clear-fractions",
+   "concept": "equation",
+   "facet": "linear-one-variable",
+   "level": 3,
+   "type": "procedure",
+   "name": "Clear the fractions from a linear equation",
+   "statement": "Multiplying every term on both sides of an equation by a common multiple of its denominators gives an equivalent equation with integer coefficients.",
+   "assess": "Multiply both sides of (2/3)x - 1 = (1/6)x + 2 by a number that clears every fraction, and write the new equation.",
+   "procedure": [
+    "Find a common multiple of all the denominators in the equation.",
+    "Multiply every term on both sides by it.",
+    "Simplify each term so its coefficient is an integer."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e467",
+     "prerequisite": "equation.equality-preserved.same-operation",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Multiplying every term on both sides by the same nonzero number keeps the solutions, so the new equation is equivalent."
+    },
+    {
+     "edge_id": "e468",
+     "prerequisite": "expressions.linear.expand.rational",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "multiplying a side made of several terms by the common multiple distributes it over every term"
+    },
+    {
+     "edge_id": "e469",
+     "prerequisite": "factors.common-multiple.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 finds a common multiple of all the denominators, such as 6 for denominators 3 and 6."
+    },
+    {
+     "edge_id": "e470",
+     "prerequisite": "fraction.multiply-whole.symbolic",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 simplifies each product such as 6 x (2/3) to a whole-number coefficient."
+    },
+    {
+     "edge_id": "e471",
+     "prerequisite": "multiplication.distributive",
+     "relation": "justificatory",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Multiplying a side made of several terms by the common multiple multiplies each term, by the distributive property."
+    },
+    {
+     "edge_id": "e472",
+     "prerequisite": "rational-number.multiplication.rationals",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "step 3 simplifies each product, such as 6 x (2/3), so the coefficient is an integer"
+    }
+   ]
+  },
+  {
+   "id": "equation.linear.rational-coefficients",
+   "concept": "equation",
+   "facet": "linear-one-variable",
+   "level": 3,
+   "type": "procedure",
+   "name": "Solve a linear equation with fraction or decimal coefficients by operating on them directly",
+   "statement": "Solve a linear equation whose coefficients and constants are fractions or decimals, with the variable on both sides, by applying the same operations to both sides and computing with the fractions or decimals as they are.",
+   "assess": "Solve (2/3)x - 1 = (1/6)x + 2 without first clearing the fractions.",
+   "procedure": [
+    "Subtract one variable term from both sides, combining the fractional or decimal coefficients of x.",
+    "Add or subtract the constant on the variable side from both sides.",
+    "Divide both sides by the coefficient of x."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e473",
+     "prerequisite": "equation.linear.variable-both-sides",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Subtracting one variable term from both sides is the same strategy, now with fraction or decimal coefficients."
+    },
+    {
+     "edge_id": "e474",
+     "prerequisite": "equation.two-step.px-plus-q.solve",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Steps 2 and 3 solve px + q = r with rational p, q and r by undoing the constant, then dividing by p."
+    },
+    {
+     "edge_id": "e475",
+     "prerequisite": "expressions.linear.subtract.rational",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Combining the coefficients 2/3 and 1/6 of x is subtracting linear expressions with rational coefficients."
+    },
+    {
+     "edge_id": "e476",
+     "prerequisite": "rational-number.addition.rationals",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "step 2 adds a fraction or decimal constant to both sides"
+    },
+    {
+     "edge_id": "e477",
+     "prerequisite": "rational-number.division.rationals",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "step 3 divides both sides by a fraction or decimal coefficient of x"
+    },
+    {
+     "edge_id": "e478",
+     "prerequisite": "rational-number.subtraction.rationals",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "step 2 subtracts a fraction or decimal constant from both sides"
+    }
+   ]
+  },
+  {
+   "id": "equations.linear.solve",
+   "concept": "equation",
+   "facet": "linear-one-variable",
+   "level": 3,
+   "type": "procedure",
+   "name": "Solve a multi-step linear equation in one variable",
+   "statement": "Solve any linear equation in one variable with rational coefficients that has exactly one solution, using whichever of these steps it needs: expanding products, collecting like terms, moving the variable terms to one side, and isolating the variable.",
+   "assess": "Solve (1/2)(4x - 6) + x = 2x + 5.",
+   "procedure": [
+    "Expand products with the distributive property.",
+    "Collect like terms on each side.",
+    "Add or subtract the same terms on both sides so the variable terms are on one side and the constants on the other.",
+    "Divide both sides by the coefficient of the variable."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e479",
+     "prerequisite": "equation.linear.clear-fractions",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 multiplies every term by a common multiple of the denominators so all coefficients are integers.",
+     "route_procedure": [
+      "Clear the fractions by multiplying every term on both sides by a common multiple of the denominators.",
+      "Expand products and collect like terms on each side.",
+      "Subtract a variable term from both sides so the variable terms are on one side and the constants on the other.",
+      "Divide both sides by the coefficient of the variable."
+     ]
+    },
+    {
+     "edge_id": "e480",
+     "prerequisite": "equation.linear.expand-collect",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 expands products and collects like terms on each side of the integer equation.",
+     "route_procedure": [
+      "Clear the fractions by multiplying every term on both sides by a common multiple of the denominators.",
+      "Expand products and collect like terms on each side.",
+      "Subtract a variable term from both sides so the variable terms are on one side and the constants on the other.",
+      "Divide both sides by the coefficient of the variable."
+     ]
+    },
+    {
+     "edge_id": "e481",
+     "prerequisite": "equation.linear.rational-coefficients",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Steps 3 and 4 move the variable terms to one side and divide by a fraction or decimal coefficient."
+    },
+    {
+     "edge_id": "e482",
+     "prerequisite": "equation.linear.variable-both-sides",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Steps 3 and 4 move the variable terms to one side and divide by the integer coefficient.",
+     "route_procedure": [
+      "Clear the fractions by multiplying every term on both sides by a common multiple of the denominators.",
+      "Expand products and collect like terms on each side.",
+      "Subtract a variable term from both sides so the variable terms are on one side and the constants on the other.",
+      "Divide both sides by the coefficient of the variable."
+     ]
+    },
+    {
+     "edge_id": "e483",
+     "prerequisite": "expressions.linear.add.rational",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 collects like terms on each side, with rational coefficients of either sign."
+    },
+    {
+     "edge_id": "e484",
+     "prerequisite": "expressions.linear.expand.rational",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 expands products with rational factors such as (1/2)(4x - 6) using the distributive property."
+    }
+   ]
+  },
+  {
+   "id": "equation.linear.solution-count.cases",
+   "concept": "equation",
+   "facet": "linear-one-variable",
+   "level": 3,
+   "type": "concept",
+   "name": "A linear equation can have one solution, no solution, or infinitely many",
+   "statement": "A linear equation in one variable is true for exactly one value of the variable, for no value, or for every value; in the last two cases it has no solution or infinitely many solutions.",
+   "assess": "Which of these equations is true for every value of x, which for no value, and which for exactly one: x + 3 = 3 + x; x + 3 = x + 4; x + 3 = 2x?",
+   "proposed_edges": [
+    {
+     "edge_id": "e485",
+     "prerequisite": "equation.solution.check-substitution",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Sorting x + 3 = 3 + x, x + 3 = x + 4 and x + 3 = 2x can be done by trying values in each equation."
+    },
+    {
+     "edge_id": "e486",
+     "prerequisite": "equation.solution.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The three cases count the values of the variable that make the equation true, which is what a solution is."
+    }
+   ]
+  },
+  {
+   "id": "equation.linear.solution-count.reduce",
+   "concept": "equation",
+   "facet": "linear-one-variable",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the number of solutions by transforming to x = a, a = a, or a = b",
+   "statement": "Transform a linear equation in one variable into simpler equivalent equations until x = a (exactly one solution), a = a (infinitely many solutions), or a = b with a and b different numbers (no solution) results.",
+   "assess": "How many solutions does 3(x + 2) = 3x + 5 have? Show the simplest equivalent equation you reach.",
+   "procedure": [
+    "Expand products and collect like terms on each side.",
+    "Subtract a variable term from both sides so that at most one side has the variable.",
+    "If the variable is gone, the equation reads a = a (infinitely many solutions) or a = b with a not equal to b (no solution).",
+    "Otherwise isolate the variable to reach x = a (one solution)."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e487",
+     "prerequisite": "equation.equal-sign.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Reading a = a as always true and a = b as never true uses the equal sign meaning that both sides have the same value."
+    },
+    {
+     "edge_id": "e488",
+     "prerequisite": "equation.linear.expand-collect",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 expands products and collects like terms on each side, as for 3(x + 2)."
+    },
+    {
+     "edge_id": "e489",
+     "prerequisite": "equation.linear.solution-count.cases",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The end forms x = a, a = a and a = b correspond to one, infinitely many and no solutions."
+    },
+    {
+     "edge_id": "e490",
+     "prerequisite": "equation.linear.variable-both-sides",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 subtracts a variable term from both sides so at most one side has the variable."
+    },
+    {
+     "edge_id": "e491",
+     "prerequisite": "expressions.linear.add.rational",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "step 1 collects like terms on each side before the variable terms are moved"
+    },
+    {
+     "edge_id": "e492",
+     "prerequisite": "expressions.linear.expand.rational",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "step 1 expands products such as 3(x + 2) on each side"
+    }
+   ]
+  },
+  {
+   "id": "equation.linear.solution-count.inspection",
+   "concept": "equation",
+   "facet": "linear-one-variable",
+   "level": 3,
+   "type": "procedure",
+   "name": "Tell by inspection how many solutions a linear equation has",
+   "statement": "When each side of a linear equation is collected into the form px + q, the equation has exactly one solution if the coefficients of x differ, no solution if they are equal and the constants differ, and infinitely many solutions if both are equal.",
+   "assess": "Without solving, say how many solutions each equation has: 4x + 1 = 4x + 7; 4x + 1 = 2x + 1; 2(2x + 3) = 4x + 6.",
+   "procedure": [
+    "If needed, expand and collect like terms mentally so each side has the form px + q.",
+    "Compare the coefficients of x: if they differ, there is exactly one solution.",
+    "If they are equal, compare the constants: different constants mean no solution, equal constants mean infinitely many."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e493",
+     "prerequisite": "equation.linear.solution-count.cases",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The rule sorts equations into the three cases of one, no, or infinitely many solutions."
+    },
+    {
+     "edge_id": "e494",
+     "prerequisite": "equation.linear.solution-count.reduce",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The comparison rule is the shortcut for the transformation, where subtracting px leaves x = a, a = a or a = b."
+    },
+    {
+     "edge_id": "e495",
+     "prerequisite": "expressions.linear.add.rational",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 collects like terms so each side has the single form px + q."
+    },
+    {
+     "edge_id": "e496",
+     "prerequisite": "expressions.linear.expand.rational",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 expands products such as 2(2x + 3) so each side can be read as px + q."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1864 @@
+{
+ "boundary_nodes": [],
+ "nodes": [
+  {
+   "id": "angle.triangle.exterior.explain",
+   "concept": "angle",
+   "facet": "measure",
+   "level": 4,
+   "type": "justification",
+   "name": "Explain why an exterior angle equals the sum of the two remote interior angles",
+   "statement": "The exterior angle and the interior angle next to it form a straight angle, so the exterior angle is 180 degrees minus that interior angle; by the angle sum, the other two interior angles also add to 180 degrees minus that interior angle, so the exterior angle equals their sum.",
+   "assess": "In triangle ABC, side BC is extended past C to point D. Explain why angle ACD = angle A + angle B for every triangle.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1311",
+     "prerequisite": "angle.straight-line.sum-180",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The exterior angle and the interior angle next to it form a straight angle, so the exterior angle is 180 degrees minus that interior angle."
+    },
+    {
+     "edge_id": "e1312",
+     "prerequisite": "angle.triangle.exterior",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The explanation justifies the exterior angle fact and uses its terms exterior angle and remote interior angles."
+    },
+    {
+     "edge_id": "e1313",
+     "prerequisite": "angle.triangle.sum",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The other two interior angles add to 180 degrees minus the adjacent interior angle, which uses the triangle angle sum."
+    }
+   ]
+  },
+  {
+   "id": "angle.application.triangles-parallel-lines",
+   "concept": "angle",
+   "facet": "measure",
+   "level": 3,
+   "type": "application",
+   "name": "Find an unknown angle in a diagram with parallel lines and a triangle",
+   "statement": "Solve problems that find an unknown angle measure in a diagram combining two parallel lines, a transversal, and a triangle, by chaining a transversal angle fact with the triangle angle sum or the exterior angle fact; all given measures are numbers.",
+   "assess": "Lines m and n are parallel. Point A is on m, and points B and C are on n, with B to the left of C. The angle between segment AB and the part of line m to the left of A measures 50 degrees, and angle ACB measures 70 degrees. Find the measure of angle BAC.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1314",
+     "prerequisite": "angle.transversal.alternate-interior",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The chain starts with a transversal angle fact: the 50 degree angle at A equals angle ABC across the parallel lines."
+    },
+    {
+     "edge_id": "e1315",
+     "prerequisite": "angle.transversal.find-angles",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The first link of the chain carries the given angle across the transversal to an angle of the triangle using the parallel-line angle relations."
+    },
+    {
+     "edge_id": "e1316",
+     "prerequisite": "angle.triangle.exterior",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement allows the chain to end with the exterior angle fact instead of the angle sum, so the exterior angle equal to two remote angles is used."
+    },
+    {
+     "edge_id": "e1317",
+     "prerequisite": "angle.triangle.sum",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The second link finds the unknown triangle angle from the other two by the triangle angle sum."
+    },
+    {
+     "edge_id": "e1318",
+     "prerequisite": "subtraction.within-1000",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem subtracts the 50 and 70 degree angles from 180 degrees to get the unknown angle."
+    }
+   ]
+  },
+  {
+   "id": "pythagorean-theorem.squares-on-sides",
+   "concept": "pythagorean-theorem",
+   "facet": "area",
+   "level": 2,
+   "type": "concept",
+   "name": "The square on the hypotenuse has the area of the two squares on the legs together",
+   "statement": "For a right triangle, the area of the square built on the hypotenuse (the side opposite the right angle) equals the sum of the areas of the squares built on the two legs.",
+   "assess": "On a grid, a right triangle has legs 3 units and 4 units long, and a square is built on each side of the triangle. The squares on the legs have areas 9 and 16 square units. Without counting, what is the area of the square on the hypotenuse?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1319",
+     "prerequisite": "addition.within-100",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem adds the areas 9 and 16 of the squares on the legs to get the area on the hypotenuse."
+    },
+    {
+     "edge_id": "e1320",
+     "prerequisite": "area.covering.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement compares the areas of squares, each area being the number of unit squares that cover the square."
+    },
+    {
+     "edge_id": "e1321",
+     "prerequisite": "shapes.name.any-orientation",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The squares built on the slanted sides must be recognized as squares even when tilted."
+    },
+    {
+     "edge_id": "e1322",
+     "prerequisite": "shapes.square.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A square built on a side has four equal sides, each equal to that side, and four right angles."
+    },
+    {
+     "edge_id": "e1323",
+     "prerequisite": "shapes.triangle.right.identify",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about a right triangle and names its hypotenuse as the side opposite the right angle."
+    }
+   ]
+  },
+  {
+   "id": "pythagorean-theorem.statement",
+   "concept": "pythagorean-theorem",
+   "facet": "length",
+   "level": 3,
+   "type": "concept",
+   "name": "The Pythagorean theorem a^2 + b^2 = c^2",
+   "statement": "In a right triangle with legs of lengths a and b and hypotenuse (the side opposite the right angle) of length c, a^2 + b^2 = c^2.",
+   "assess": "Triangle PQR has its right angle at Q. Write the Pythagorean theorem as an equation in the lengths PQ, QR, and PR.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1324",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The notation a^2, b^2 and c^2 means each length times itself."
+    },
+    {
+     "edge_id": "e1325",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The letters a, b and c stand for the side lengths of the triangle."
+    },
+    {
+     "edge_id": "e1326",
+     "prerequisite": "pythagorean-theorem.squares-on-sides",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation a^2 + b^2 = c^2 writes the area fact about squares on the legs and hypotenuse in symbols for side lengths."
+    },
+    {
+     "edge_id": "e1327",
+     "prerequisite": "shapes.triangle.right.identify",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about a right triangle, its legs, and the hypotenuse opposite the right angle."
+    }
+   ]
+  },
+  {
+   "id": "pythagorean-theorem.proof.explain",
+   "concept": "pythagorean-theorem",
+   "facet": "area",
+   "level": 4,
+   "type": "justification",
+   "name": "Explain a proof of the Pythagorean theorem by rearranging triangles",
+   "statement": "Four copies of a right triangle with legs a and b and hypotenuse c fit inside a square of side a + b in two ways: around a tilted square of side c, or beside a square of side a and a square of side b; the uncovered area is the same both times, so c^2 = a^2 + b^2.",
+   "assess": "The diagram shows two arrangements of four copies of a right triangle with legs a and b and hypotenuse c inside a square of side a + b. Use them to explain why a^2 + b^2 = c^2.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1328",
+     "prerequisite": "area.additive",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The uncovered area is the big square minus four equal triangles, so the area of a region equals the sum of the areas of its parts."
+    },
+    {
+     "edge_id": "e1329",
+     "prerequisite": "area.rectangle.length-times-width",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The squares of side a, b, c and a + b have areas found by multiplying a side by itself."
+    },
+    {
+     "edge_id": "e1330",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The conclusion c^2 = a^2 + b^2 and the area (a + b)^2 of the large square are written with squared lengths."
+    },
+    {
+     "edge_id": "e1331",
+     "prerequisite": "pythagorean-theorem.statement",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The explanation concludes the equation c^2 = a^2 + b^2 with legs a, b and hypotenuse c."
+    },
+    {
+     "edge_id": "e1332",
+     "prerequisite": "shapes.triangle.right.identify",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The argument uses a right triangle with legs a and b and hypotenuse c."
+    }
+   ]
+  },
+  {
+   "id": "pythagorean-theorem.converse",
+   "concept": "pythagorean-theorem",
+   "facet": "length",
+   "level": 3,
+   "type": "concept",
+   "name": "The converse of the Pythagorean theorem",
+   "statement": "If the side lengths a, b, and c of a triangle satisfy a^2 + b^2 = c^2, the triangle is a right triangle with its right angle opposite the side of length c.",
+   "assess": "A triangle has side lengths a, b, and c with a^2 + b^2 = c^2. What can you conclude about the angle opposite the side of length c?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1333",
+     "prerequisite": "pythagorean-theorem.statement",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The converse reverses the theorem: it starts from a^2 + b^2 = c^2 and concludes a right triangle, so the theorem's statement must be known."
+    },
+    {
+     "edge_id": "e1334",
+     "prerequisite": "shapes.triangle.right.identify",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The conclusion names the triangle as a right triangle with its right angle opposite the side c."
+    }
+   ]
+  },
+  {
+   "id": "pythagorean-theorem.converse.explain",
+   "concept": "pythagorean-theorem",
+   "facet": "length",
+   "level": 4,
+   "type": "justification",
+   "name": "Explain a proof of the converse of the Pythagorean theorem",
+   "statement": "Given a triangle with sides a, b, and c and a^2 + b^2 = c^2, build a right triangle with legs a and b; by the Pythagorean theorem its hypotenuse is c, so the two triangles have the same three side lengths, they are congruent, and the angle opposite c in the given triangle is a right angle.",
+   "assess": "Triangle ABC has AC = 5, BC = 12, and AB = 13, so AC^2 + BC^2 = AB^2. Explain, by comparing it with a right triangle whose legs are 5 and 12, why angle C must be a right angle.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1335",
+     "prerequisite": "congruence.rigid-motion.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The argument concludes the two triangles are congruent, meaning one can be moved onto the other by rigid motions."
+    },
+    {
+     "edge_id": "e1336",
+     "prerequisite": "construction.triangle.two-sides-included-angle",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The proof builds a right triangle with legs a and b, which is a triangle drawn from two sides and the right angle between them."
+    },
+    {
+     "edge_id": "e1337",
+     "prerequisite": "pythagorean-theorem.statement",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The theorem applied to the built triangle gives its hypotenuse squared as a^2 + b^2."
+    },
+    {
+     "edge_id": "e1338",
+     "prerequisite": "pythagorean-theorem.unknown-side.whole",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem finds the hypotenuse of the right triangle with legs 5 and 12 as 13."
+    },
+    {
+     "edge_id": "e1339",
+     "prerequisite": "root.square.meaning",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Since the built hypotenuse and c are positive lengths with the same square, the two lengths are equal."
+    },
+    {
+     "edge_id": "e1340",
+     "prerequisite": "transformation.rigid-motion.preserves-angle",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Congruent triangles have equal corresponding angles, so the angle opposite c equals the right angle of the built triangle."
+    },
+    {
+     "edge_id": "e1341",
+     "prerequisite": "triangle.determined.three-sides",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Two triangles with the same three side lengths must be the same triangle, which is the step that makes them congruent."
+    }
+   ]
+  },
+  {
+   "id": "pythagorean-theorem.right-triangle.decide",
+   "concept": "pythagorean-theorem",
+   "facet": "length",
+   "level": 3,
+   "type": "procedure",
+   "name": "Decide from side lengths whether a triangle is a right triangle",
+   "statement": "Decide whether a triangle with given side lengths is a right triangle by comparing the sum of the squares of the two shorter sides with the square of the longest side: equal means right (by the converse), unequal means not right (by the theorem).",
+   "assess": "A triangle has side lengths 6, 8, and 11. Is it a right triangle?",
+   "procedure": [
+    "Name the longest side c and the two shorter sides a and b.",
+    "Compute a^2 + b^2 and c^2.",
+    "If they are equal, the triangle is a right triangle; if not, it is not a right triangle."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1342",
+     "prerequisite": "addition.within-1000",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The procedure adds a^2 and b^2, a sum that can exceed 100."
+    },
+    {
+     "edge_id": "e1343",
+     "prerequisite": "comparing.whole-numbers.magnitude",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Naming the longest side c means deciding which of the given side lengths is greatest."
+    },
+    {
+     "edge_id": "e1344",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The procedure squares each side length to compute a^2, b^2 and c^2."
+    },
+    {
+     "edge_id": "e1345",
+     "prerequisite": "pythagorean-theorem.converse",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Equal sums mean a right triangle by the converse of the theorem."
+    },
+    {
+     "edge_id": "e1346",
+     "prerequisite": "pythagorean-theorem.statement",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Unequal values mean the triangle is not right, which follows from the theorem itself."
+    }
+   ]
+  },
+  {
+   "id": "pythagorean-theorem.unknown-side.whole",
+   "concept": "pythagorean-theorem",
+   "facet": "length",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find an unknown side of a right triangle when the answer is a whole number",
+   "statement": "Find an unknown side length of a right triangle from the other two, when the squares of the sides make the unknown length a whole number, using a^2 + b^2 = c^2.",
+   "assess": "A right triangle has a hypotenuse of length 13 and one leg of length 5. Find the length of the other leg.",
+   "procedure": [
+    "Identify the hypotenuse (opposite the right angle) and the legs.",
+    "If the hypotenuse is unknown, compute a^2 + b^2; if a leg is unknown, compute c^2 minus the square of the known leg.",
+    "The result is a perfect square; its square root is the unknown length."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1347",
+     "prerequisite": "addition.within-1000",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "When the hypotenuse is unknown the procedure adds the two squares."
+    },
+    {
+     "edge_id": "e1348",
+     "prerequisite": "equation.one-step.addition.solve",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Finding a leg squared from c^2 minus the known leg squared solves a one-step addition equation."
+    },
+    {
+     "edge_id": "e1349",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The procedure computes the squares of the known sides."
+    },
+    {
+     "edge_id": "e1350",
+     "prerequisite": "pythagorean-theorem.statement",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The procedure solves a^2 + b^2 = c^2 for the unknown side."
+    },
+    {
+     "edge_id": "e1351",
+     "prerequisite": "root.square.perfect-square.evaluate",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The last step takes the square root of a perfect square to get the whole-number length."
+    },
+    {
+     "edge_id": "e1352",
+     "prerequisite": "shapes.triangle.right.identify",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Identifying the hypotenuse means finding the side opposite the right angle of a right triangle."
+    },
+    {
+     "edge_id": "e1353",
+     "prerequisite": "subtraction.within-1000",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "When a leg is unknown the procedure subtracts the square of the known leg from c^2."
+    }
+   ]
+  },
+  {
+   "id": "pythagorean-theorem.unknown-side.irrational",
+   "concept": "pythagorean-theorem",
+   "facet": "length",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the exact unknown side of a right triangle as a square root",
+   "statement": "Find an unknown side length of a right triangle from the other two when its square n is not a perfect square, giving the exact length sqrt(n).",
+   "assess": "A right triangle has legs of lengths 2 and 5. Give the exact length of its hypotenuse.",
+   "procedure": [
+    "Identify the hypotenuse (opposite the right angle) and the legs.",
+    "If the hypotenuse is unknown, compute n = a^2 + b^2; if a leg is unknown, compute n = c^2 minus the square of the known leg.",
+    "Write the exact length as sqrt(n)."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1354",
+     "prerequisite": "addition.within-1000",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "When the hypotenuse is unknown the procedure adds the two squares to get n."
+    },
+    {
+     "edge_id": "e1355",
+     "prerequisite": "equation.one-step.addition.solve",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Finding a leg squared from c^2 minus the known leg squared solves a one-step addition equation."
+    },
+    {
+     "edge_id": "e1356",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The procedure computes the squares of the known sides."
+    },
+    {
+     "edge_id": "e1357",
+     "prerequisite": "pythagorean-theorem.statement",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The procedure solves a^2 + b^2 = c^2 for the unknown side."
+    },
+    {
+     "edge_id": "e1358",
+     "prerequisite": "root.square.meaning",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The last step writes the exact length as sqrt(n), the positive number whose square is n."
+    },
+    {
+     "edge_id": "e1359",
+     "prerequisite": "shapes.triangle.right.identify",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Identifying the hypotenuse means finding the side opposite the right angle of a right triangle."
+    },
+    {
+     "edge_id": "e1360",
+     "prerequisite": "subtraction.within-1000",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "When a leg is unknown the procedure subtracts the square of the known leg from c^2 to get n."
+    }
+   ]
+  },
+  {
+   "id": "pythagorean-theorem.unknown-side.3d",
+   "concept": "pythagorean-theorem",
+   "facet": "length",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the interior diagonal of a rectangular prism",
+   "statement": "Find the length of the diagonal of a rectangular prism from a bottom corner to the opposite top corner by applying the Pythagorean theorem twice: first to the diagonal of the base, then to the right triangle formed by that diagonal, a vertical edge, and the interior diagonal.",
+   "assess": "A rectangular box is 3 cm long, 4 cm wide, and 12 cm tall. Find the length of the diagonal from a bottom corner to the opposite top corner.",
+   "procedure": [
+    "Find the length d of the diagonal of the base rectangle from d^2 = l^2 + w^2.",
+    "Use the right triangle whose legs are the base diagonal and a vertical edge of length h, with the right angle at the base, and whose hypotenuse is the interior diagonal.",
+    "Find the interior diagonal D from D^2 = d^2 + h^2."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1361",
+     "prerequisite": "pythagorean-theorem.statement",
+     "relation": "definitional",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The statement applies the theorem twice, the second time to the triangle of the base diagonal, a vertical edge and the interior diagonal."
+    },
+    {
+     "edge_id": "e1362",
+     "prerequisite": "pythagorean-theorem.unknown-side.whole",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Finding the base diagonal and then the interior diagonal are each a hypotenuse found from two legs."
+    },
+    {
+     "edge_id": "e1363",
+     "prerequisite": "shapes.prism.right.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The vertical edge is perpendicular to the base, which gives the right angle at the base in the second triangle."
+    },
+    {
+     "edge_id": "e1364",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The base diagonal is the hypotenuse of a right triangle because the corner of the base rectangle is a right angle."
+    }
+   ]
+  },
+  {
+   "id": "pythagorean-theorem.application.2d.whole",
+   "concept": "pythagorean-theorem",
+   "facet": "length",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world right-triangle problems with whole-number answers",
+   "statement": "Solve real-world problems in which the unknown length is a side of one right triangle in a plane, such as a ladder against a wall or the diagonal of a rectangle, and the answer is a whole number.",
+   "assess": "A 13-foot ladder leans against a vertical wall, with its foot on level ground 5 feet from the wall. How high up the wall does the top of the ladder reach?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1365",
+     "prerequisite": "pythagorean-theorem.unknown-side.whole",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The problem reduces to finding an unknown side of one right triangle with a whole-number answer."
+    },
+    {
+     "edge_id": "e1366",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A diagonal of a rectangle forms a right triangle because the corners of a rectangle are right angles."
+    },
+    {
+     "edge_id": "e1367",
+     "prerequisite": "shapes.triangle.right.identify",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The unknown length is a side of a right triangle that the solver must see in the wall, ground and ladder."
+    }
+   ]
+  },
+  {
+   "id": "pythagorean-theorem.application.2d.approximate",
+   "concept": "pythagorean-theorem",
+   "facet": "length",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world right-triangle problems with answers rounded to the nearest tenth",
+   "statement": "Solve real-world problems in which the unknown length is a side of one right triangle in a plane and is not a whole number, giving the length rounded to the nearest tenth.",
+   "assess": "A rectangular screen is 8 inches wide and 5 inches tall. How long is its diagonal, to the nearest tenth of an inch?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1368",
+     "prerequisite": "pythagorean-theorem.unknown-side.irrational",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The unknown side is found as an exact square root of a number that is not a perfect square."
+    },
+    {
+     "edge_id": "e1369",
+     "prerequisite": "real-number.approximate.square-root",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The answer must be located as a decimal by bounding the square root between squares of decimals."
+    },
+    {
+     "edge_id": "e1370",
+     "prerequisite": "rounding.decimal.any-place",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The decimal length is rounded to the nearest tenth."
+    },
+    {
+     "edge_id": "e1371",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The screen diagonal forms a right triangle with the width and height because a rectangle has right angles."
+    },
+    {
+     "edge_id": "e1372",
+     "prerequisite": "shapes.triangle.right.identify",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The unknown length is a side of one right triangle that must be seen in the situation."
+    }
+   ]
+  },
+  {
+   "id": "pythagorean-theorem.application.3d",
+   "concept": "pythagorean-theorem",
+   "facet": "length",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems about the interior diagonal of a box",
+   "statement": "Solve real-world problems that find the length from a bottom corner to the opposite top corner of a box-shaped object, by applying the Pythagorean theorem twice, when the answer is a whole number.",
+   "assess": "A storage box is 6 inches long, 8 inches wide, and 24 inches tall. How long is the longest straight rod that fits inside it, from a bottom corner to the opposite top corner?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1373",
+     "prerequisite": "pythagorean-theorem.unknown-side.3d",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The problem is solved by finding the interior diagonal of a rectangular box with two applications of the theorem."
+    }
+   ]
+  },
+  {
+   "id": "pythagorean-theorem.distance.coordinates",
+   "concept": "pythagorean-theorem",
+   "facet": "length",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the distance between two points in the coordinate plane",
+   "statement": "Find the distance between two points in the coordinate plane that are not on the same horizontal or vertical line as the hypotenuse of the right triangle whose legs are the horizontal and vertical distances between the points.",
+   "assess": "Find the distance between the points (-2, 1) and (1, 5).",
+   "procedure": [
+    "Find the horizontal distance between the points from their x-coordinates and the vertical distance from their y-coordinates.",
+    "Use these distances as the legs of a right triangle whose hypotenuse is the segment joining the two points.",
+    "Find the length of the hypotenuse with the Pythagorean theorem."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1374",
+     "prerequisite": "coordinate-plane.four-quadrants.plot",
+     "relation": "representational",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 uses the points plotted in the plane, with horizontal and vertical legs drawn to form a right triangle."
+    },
+    {
+     "edge_id": "e1375",
+     "prerequisite": "coordinate-plane.segment-length.opposite-sign",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The horizontal or vertical distance is found from coordinates that can have opposite signs, as -2 and 1 do."
+    },
+    {
+     "edge_id": "e1376",
+     "prerequisite": "coordinate-plane.segment-length.same-sign",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The horizontal or vertical distance is found from coordinates that can have the same sign, as 1 and 5 do."
+    },
+    {
+     "edge_id": "e1377",
+     "prerequisite": "pythagorean-theorem.unknown-side.irrational",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 also covers distances whose squared value is not a perfect square, giving an exact square root."
+    },
+    {
+     "edge_id": "e1378",
+     "prerequisite": "pythagorean-theorem.unknown-side.whole",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The last step finds the hypotenuse from the two legs."
+    },
+    {
+     "edge_id": "e1379",
+     "prerequisite": "shapes.triangle.right.identify",
+     "relation": "definitional",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The horizontal and vertical distances are the legs of a right triangle whose hypotenuse joins the points."
+    }
+   ]
+  },
+  {
+   "id": "pythagorean-theorem.distance.application",
+   "concept": "pythagorean-theorem",
+   "facet": "length",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world straight-line distance problems on a coordinate grid",
+   "statement": "Solve real-world problems that find the straight-line distance between two places given by coordinates on a map grid, using the Pythagorean theorem and giving the distance rounded to the nearest tenth.",
+   "assess": "On a town map where each grid unit is 1 km, the school is at (1, 2) and the library is at (4, 7). What is the straight-line distance between them, to the nearest tenth of a kilometer?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1380",
+     "prerequisite": "pythagorean-theorem.distance.coordinates",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The distance between the two places is found as the hypotenuse of the right triangle on the grid."
+    },
+    {
+     "edge_id": "e1381",
+     "prerequisite": "real-number.approximate.square-root",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The distance is the square root of a number that is not a perfect square, so it is bounded as a decimal."
+    },
+    {
+     "edge_id": "e1382",
+     "prerequisite": "rounding.decimal.any-place",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The distance is rounded to the nearest tenth of a kilometer."
+    }
+   ]
+  },
+  {
+   "id": "volume.cylinder.formula",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 3,
+   "type": "concept",
+   "name": "The volume formula for a cylinder",
+   "statement": "The volume of a cylinder with base radius r and height h is V = pi x r^2 x h, the area of its circular base times its height.",
+   "assess": "Which expression gives the volume of a cylinder with radius 3 cm and height 10 cm: pi x 3^2 x 10; 2 x pi x 3 x 10; pi x 3 x 10^2?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1383",
+     "prerequisite": "circle.area.formula",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula uses the area of the circular base, pi x r^2."
+    },
+    {
+     "edge_id": "e1384",
+     "prerequisite": "circle.center-radius",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula is written with the radius r of the circular base."
+    },
+    {
+     "edge_id": "e1385",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The term r^2 in the formula means the radius times itself."
+    },
+    {
+     "edge_id": "e1386",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The letters r and h stand for the radius and height of the cylinder."
+    },
+    {
+     "edge_id": "e1387",
+     "prerequisite": "shapes.name.solids",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula is about the solid shape called a cylinder."
+    },
+    {
+     "edge_id": "e1388",
+     "prerequisite": "volume.prism.formula.base-height",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula is a base area times a height, the same form as V = B x h for a prism."
+    },
+    {
+     "edge_id": "e1389",
+     "prerequisite": "volume.prism.right.base-height",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Volume as base area times height is the layering idea carried over from prisms to a circular base."
+    }
+   ]
+  },
+  {
+   "id": "volume.cylinder.compute",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the volume of a cylinder in terms of pi",
+   "statement": "Find the volume of a cylinder from its radius or diameter and its height with V = pi x r^2 x h, giving the answer in terms of pi.",
+   "assess": "A cylinder has radius 3 cm and height 10 cm. Find its volume in terms of pi.",
+   "procedure": [
+    "If the diameter is given, halve it to get the radius r.",
+    "Compute r^2 x h.",
+    "Write the volume as that number times pi, in cubic units."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1390",
+     "prerequisite": "circle.diameter",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Halving a given diameter to get the radius uses the fact that a diameter is twice a radius."
+    },
+    {
+     "edge_id": "e1391",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Halving the diameter is a division by 2."
+    },
+    {
+     "edge_id": "e1392",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The second step computes r^2 by multiplying the radius by itself."
+    },
+    {
+     "edge_id": "e1393",
+     "prerequisite": "multiplication.two-digit-by-two-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The procedure multiplies r^2 by the height h, a product of numbers that can have two digits each."
+    },
+    {
+     "edge_id": "e1394",
+     "prerequisite": "volume.cylinder.formula",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The procedure applies V = pi x r^2 x h."
+    },
+    {
+     "edge_id": "e1395",
+     "prerequisite": "volume.unit-cube",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The answer is written in cubic units, the units of volume."
+    }
+   ]
+  },
+  {
+   "id": "volume.cylinder.find-height",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the height of a cylinder from its volume and radius",
+   "statement": "Find the height of a cylinder from its volume and radius by dividing the volume by the base area pi x r^2.",
+   "assess": "A cylinder has a volume of 72 x pi cubic cm and a radius of 3 cm. Find its height.",
+   "procedure": [
+    "Compute the base area pi x r^2.",
+    "Divide the volume by the base area; the quotient is the height."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1396",
+     "prerequisite": "circle.area.formula.apply",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The first step computes the base area pi x r^2 from the radius."
+    },
+    {
+     "edge_id": "e1397",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem divides 72 by 9 once the common factor pi is removed."
+    },
+    {
+     "edge_id": "e1398",
+     "prerequisite": "division.unknown-factor.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Dividing the volume by the base area finds the unknown factor in V = base area x h."
+    },
+    {
+     "edge_id": "e1399",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 squares the radius inside the base area pi x r^2."
+    },
+    {
+     "edge_id": "e1400",
+     "prerequisite": "volume.cylinder.formula",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The volume is the base area pi x r^2 times the height, so the height is the factor that is missing."
+    }
+   ]
+  },
+  {
+   "id": "volume.cylinder.find-radius",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the radius of a cylinder from its volume and height",
+   "statement": "Find the radius of a cylinder from its volume and height by dividing the volume by pi x h to get r^2 and then taking the square root.",
+   "assess": "A cylinder has a volume of 80 x pi cubic cm and a height of 5 cm. Find its radius.",
+   "procedure": [
+    "Divide the volume by pi x h; the quotient is r^2.",
+    "Take the positive square root of r^2 to get r."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1401",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem divides 80 by 5 once the common factor pi is removed."
+    },
+    {
+     "edge_id": "e1402",
+     "prerequisite": "division.unknown-factor.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Dividing the volume by pi x h finds the unknown factor r^2 in the product."
+    },
+    {
+     "edge_id": "e1403",
+     "prerequisite": "root.square.perfect-square.evaluate",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The second step takes the positive square root of r^2, a perfect square in the test problem."
+    },
+    {
+     "edge_id": "e1404",
+     "prerequisite": "root.square.solve-x-squared",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 solves r^2 = Q for the positive radius with a square root."
+    },
+    {
+     "edge_id": "e1405",
+     "prerequisite": "volume.cylinder.formula",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The volume is pi x r^2 x h, so dividing by pi x h leaves r^2."
+    }
+   ]
+  },
+  {
+   "id": "volume.cylinder.application",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems that find the volume of a cylinder",
+   "statement": "Solve real-world problems that find the volume or capacity of a cylindrical object from its radius or diameter and its height, using 3.14 for pi.",
+   "assess": "A cylindrical water tank has a diameter of 2 m and a height of 3 m. About how many cubic meters of water does it hold? Use 3.14 for pi.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1406",
+     "prerequisite": "expressions.numerical.fractions-decimals.evaluate",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The 3.14 value of pi makes the volume computation a product or quotient of decimals."
+    },
+    {
+     "edge_id": "e1407",
+     "prerequisite": "volume.cylinder.compute",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The problem finds a volume from a radius or diameter and a height with V = pi x r^2 x h."
+    }
+   ]
+  },
+  {
+   "id": "volume.cylinder.application.find-height",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems that find the height of a cylinder from its volume",
+   "statement": "Solve real-world problems that find the height of a cylindrical object from its volume and radius, using 3.14 for pi.",
+   "assess": "A cylindrical can holds 785 cubic cm and has a radius of 5 cm. How tall is the can? Use 3.14 for pi.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1408",
+     "prerequisite": "expressions.numerical.fractions-decimals.evaluate",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The 3.14 value of pi makes the volume computation a product or quotient of decimals."
+    },
+    {
+     "edge_id": "e1409",
+     "prerequisite": "volume.cylinder.find-height",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The problem finds a height by dividing the volume by the base area pi x r^2."
+    }
+   ]
+  },
+  {
+   "id": "volume.cylinder.application.find-radius",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems that find the radius of a cylinder from its volume",
+   "statement": "Solve real-world problems that find the radius of a cylindrical object from its volume and height, using 3.14 for pi.",
+   "assess": "A cylindrical tank is 2 m tall and holds 56.52 cubic meters of water. What is its radius? Use 3.14 for pi.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1410",
+     "prerequisite": "expressions.numerical.fractions-decimals.evaluate",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The 3.14 value of pi makes the volume computation a product or quotient of decimals."
+    },
+    {
+     "edge_id": "e1411",
+     "prerequisite": "volume.cylinder.find-radius",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The problem finds a radius by dividing the volume by pi x h and taking a square root."
+    }
+   ]
+  },
+  {
+   "id": "volume.cone.formula",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 3,
+   "type": "concept",
+   "name": "The volume formula for a cone",
+   "statement": "The volume of a cone with base radius r and height h is V = (1/3) x pi x r^2 x h, one third of the volume of the cylinder with the same base and height.",
+   "assess": "A cylinder and a cone have the same radius and the same height. The cylinder holds 30 cubic cm. How much does the cone hold?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1412",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The term r^2 in the formula means the radius times itself."
+    },
+    {
+     "edge_id": "e1413",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The letters r and h stand for the radius and height of the cone."
+    },
+    {
+     "edge_id": "e1414",
+     "prerequisite": "fraction.multiplication.parts-of-partition.whole-number",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "One third of the cylinder volume is one of three equal parts of that volume."
+    },
+    {
+     "edge_id": "e1415",
+     "prerequisite": "shapes.name.solids",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula is about the solid shape called a cone."
+    },
+    {
+     "edge_id": "e1416",
+     "prerequisite": "volume.cylinder.formula",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement defines the cone volume as one third of the volume of the cylinder with the same base and height."
+    }
+   ]
+  },
+  {
+   "id": "volume.cone.compute",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the volume of a cone in terms of pi",
+   "statement": "Find the volume of a cone from its radius or diameter and its height with V = (1/3) x pi x r^2 x h, giving the answer in terms of pi.",
+   "assess": "A cone has radius 3 cm and height 5 cm. Find its volume in terms of pi.",
+   "procedure": [
+    "If the diameter is given, halve it to get the radius r.",
+    "Compute r^2 x h and divide by 3.",
+    "Write the volume as that number times pi, in cubic units."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1417",
+     "prerequisite": "circle.diameter",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Halving a given diameter to get the radius uses the fact that a diameter is twice a radius."
+    },
+    {
+     "edge_id": "e1418",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The procedure halves the diameter and divides r^2 x h by 3."
+    },
+    {
+     "edge_id": "e1419",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The second step computes r^2 by multiplying the radius by itself."
+    },
+    {
+     "edge_id": "e1420",
+     "prerequisite": "multiplication.two-digit-by-two-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The procedure multiplies r^2 by the height h, a product of numbers that can have two digits each."
+    },
+    {
+     "edge_id": "e1421",
+     "prerequisite": "volume.cone.formula",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The procedure applies V = (1/3) x pi x r^2 x h."
+    },
+    {
+     "edge_id": "e1422",
+     "prerequisite": "volume.unit-cube",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The answer is written in cubic units, the units of volume."
+    }
+   ]
+  },
+  {
+   "id": "volume.cone.find-height",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the height of a cone from its volume and radius",
+   "statement": "Find the height of a cone from its volume and radius by multiplying the volume by 3 and dividing by the base area pi x r^2.",
+   "assess": "A cone has a volume of 12 x pi cubic cm and a radius of 3 cm. Find its height.",
+   "procedure": [
+    "Multiply the volume by 3.",
+    "Divide by the base area pi x r^2; the quotient is the height."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1423",
+     "prerequisite": "circle.area.formula.apply",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The second step divides by the base area pi x r^2 computed from the radius."
+    },
+    {
+     "edge_id": "e1424",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem divides 36 by 9 once the common factor pi is removed."
+    },
+    {
+     "edge_id": "e1425",
+     "prerequisite": "division.unknown-factor.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Dividing 3 x V by the base area finds the unknown factor in base area x h."
+    },
+    {
+     "edge_id": "e1426",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 squares the radius inside the base area pi x r^2."
+    },
+    {
+     "edge_id": "e1427",
+     "prerequisite": "multiplication.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The first step multiplies the volume by 3."
+    },
+    {
+     "edge_id": "e1428",
+     "prerequisite": "volume.cone.formula",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The volume is one third of the base area times the height, so 3 x V equals the base area times the height."
+    }
+   ]
+  },
+  {
+   "id": "volume.cone.application",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems that find the volume of a cone",
+   "statement": "Solve real-world problems that find the volume or capacity of a cone-shaped object from its radius or diameter and its height, using 3.14 for pi.",
+   "assess": "A paper cone cup has a radius of 3 cm and a height of 10 cm. About how many cubic cm of water does it hold? Use 3.14 for pi.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1429",
+     "prerequisite": "expressions.numerical.fractions-decimals.evaluate",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The 3.14 value of pi makes the volume computation a product or quotient of decimals."
+    },
+    {
+     "edge_id": "e1430",
+     "prerequisite": "volume.cone.compute",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The problem finds a volume from a radius or diameter and a height with V = (1/3) x pi x r^2 x h."
+    }
+   ]
+  },
+  {
+   "id": "volume.sphere.formula",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 3,
+   "type": "concept",
+   "name": "The volume formula for a sphere",
+   "statement": "The volume of a sphere with radius r is V = (4/3) x pi x r^3.",
+   "assess": "Which expression gives the volume of a sphere with radius 3 cm: (4/3) x pi x 3^3; (4/3) x pi x 3^2; 4 x pi x 3^2?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1431",
+     "prerequisite": "circle.center-radius",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula is written with the radius r of the sphere, measured from its center."
+    },
+    {
+     "edge_id": "e1432",
+     "prerequisite": "circle.pi.ratio",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula contains the constant pi, the ratio of circumference to diameter."
+    },
+    {
+     "edge_id": "e1433",
+     "prerequisite": "exponent.whole-number-power.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The term r^3 in the formula means the radius used as a factor three times."
+    },
+    {
+     "edge_id": "e1434",
+     "prerequisite": "expressions.variable.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The letter r stands for the radius of the sphere."
+    },
+    {
+     "edge_id": "e1435",
+     "prerequisite": "fraction.as-number",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The coefficient 4/3 is a fraction used as a number that multiplies pi x r^3."
+    },
+    {
+     "edge_id": "e1436",
+     "prerequisite": "shapes.name.solids",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The formula is about the solid shape called a sphere."
+    },
+    {
+     "edge_id": "e1437",
+     "prerequisite": "volume.space-occupied",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement gives the amount of space a sphere takes up, which is its volume."
+    }
+   ]
+  },
+  {
+   "id": "volume.sphere.compute",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the volume of a sphere in terms of pi",
+   "statement": "Find the volume of a sphere from its radius or diameter with V = (4/3) x pi x r^3, giving the answer in terms of pi.",
+   "assess": "A sphere has radius 3 cm. Find its volume in terms of pi.",
+   "procedure": [
+    "If the diameter is given, halve it to get the radius r.",
+    "Compute r^3, multiply by 4, and divide by 3.",
+    "Write the volume as that number times pi, in cubic units."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1438",
+     "prerequisite": "circle.diameter",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Halving a given diameter to get the radius uses the fact that a diameter is twice a radius."
+    },
+    {
+     "edge_id": "e1439",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The procedure halves the diameter and divides by 3."
+    },
+    {
+     "edge_id": "e1440",
+     "prerequisite": "exponent.whole-number-power.evaluate.whole-base",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The second step computes r^3 by using the radius as a factor three times."
+    },
+    {
+     "edge_id": "e1441",
+     "prerequisite": "multiplication.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The second step multiplies the whole number r^3 by 4 before dividing by 3."
+    },
+    {
+     "edge_id": "e1442",
+     "prerequisite": "volume.sphere.formula",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The procedure applies V = (4/3) x pi x r^3."
+    },
+    {
+     "edge_id": "e1443",
+     "prerequisite": "volume.unit-cube",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "The answer is written in cubic units, the units of volume."
+    }
+   ]
+  },
+  {
+   "id": "volume.sphere.find-radius",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 3,
+   "type": "procedure",
+   "name": "Find the radius of a sphere from its volume",
+   "statement": "Find the radius of a sphere from its volume by multiplying the volume by 3 and dividing by 4 x pi to get r^3, then taking the cube root.",
+   "assess": "A sphere has a volume of 36 x pi cubic cm. Find its radius.",
+   "procedure": [
+    "Multiply the volume by 3 and divide by 4 x pi; the quotient is r^3.",
+    "Take the cube root of r^3 to get r."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e1444",
+     "prerequisite": "division.by-one-digit",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem divides 108 by 4 once the common factor pi is removed."
+    },
+    {
+     "edge_id": "e1445",
+     "prerequisite": "division.unknown-factor.meaning",
+     "relation": "definitional",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Dividing 3 x V by 4 x pi finds the unknown factor r^3 in the product."
+    },
+    {
+     "edge_id": "e1446",
+     "prerequisite": "multiplication.by-one-digit",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "The first step multiplies the volume by 3."
+    },
+    {
+     "edge_id": "e1447",
+     "prerequisite": "root.cube.perfect-cube.evaluate",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "The second step takes the cube root of r^3, a perfect cube in the test problem."
+    },
+    {
+     "edge_id": "e1448",
+     "prerequisite": "root.cube.solve-x-cubed",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 solves r^3 = Q for the radius with a cube root."
+    },
+    {
+     "edge_id": "e1449",
+     "prerequisite": "volume.sphere.formula",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The volume is (4/3) x pi x r^3, so multiplying by 3 and dividing by 4 x pi leaves r^3."
+    }
+   ]
+  },
+  {
+   "id": "volume.sphere.application",
+   "concept": "volume",
+   "facet": "unit-cubes",
+   "level": 3,
+   "type": "application",
+   "name": "Solve real-world problems that find the volume of a sphere",
+   "statement": "Solve real-world problems that find the volume of a ball or other sphere-shaped object from its radius or diameter, using 3.14 for pi.",
+   "assess": "A ball has a diameter of 6 inches. About how many cubic inches of air does it hold? Use 3.14 for pi.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1450",
+     "prerequisite": "expressions.numerical.fractions-decimals.evaluate",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The 3.14 value of pi makes the volume computation a product or quotient of decimals."
+    },
+    {
+     "edge_id": "e1451",
+     "prerequisite": "volume.sphere.compute",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The problem finds a volume from a radius or diameter with V = (4/3) x pi x r^3."
+    }
+   ]
+  },
+  {
+   "id": "shapes.square-corner",
+   "concept": "shapes",
+   "facet": "properties",
+   "level": 1,
+   "type": "concept",
+   "name": "A square corner",
+   "statement": "A square corner is a corner of a shape that the corner of a sheet of paper or an index card fits exactly, with no gap on either side; whether a corner is square is checked by fitting such a corner into it.",
+   "assess": "Test each corner of this four-sided shape with the corner of an index card. Which of its corners are square corners?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1452",
+     "prerequisite": "shapes.corners.count",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A square corner is a kind of corner of a shape, so the learner must already pick out the corners of a shape to test them."
+    }
+   ]
+  },
+  {
+   "id": "shapes.name.prototype.rectangle-hexagon",
+   "concept": "shapes",
+   "facet": "core",
+   "level": 1,
+   "type": "representation",
+   "name": "Name typical rectangles and hexagons",
+   "statement": "Say the names rectangle and hexagon for typical examples of those shapes shown in their usual orientation.",
+   "assess": "Show, one at a time, a rectangle resting on a long side and a regular hexagon resting on a side. 'What shape is this?' Credit the correct name for each.",
+   "proposed_edges": []
+  },
+  {
+   "id": "shapes.rectangle.opposite-sides-equal",
+   "concept": "shapes",
+   "facet": "properties",
+   "level": 2,
+   "type": "concept",
+   "name": "Opposite sides of a rectangle are equal",
+   "statement": "In every rectangle each pair of opposite sides has the same length, so a rectangle has two sides of one length and two sides of another, or four equal sides when it is a square.",
+   "assess": "A rectangle has one side 7 cm long and the side next to it 3 cm long. How long are the other two sides?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1453",
+     "prerequisite": "shapes.attribute.equal-sides",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Opposite sides having the same length is a noticing of equal side lengths."
+    },
+    {
+     "edge_id": "e1454",
+     "prerequisite": "shapes.rectangle.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement is about every rectangle, a quadrilateral with four right angles, and its pairs of opposite sides."
+    },
+    {
+     "edge_id": "e1455",
+     "prerequisite": "shapes.square.define",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says a square is the case of a rectangle with four equal sides."
+    }
+   ]
+  },
+  {
+   "id": "parallel.perpendicular-to-same-line",
+   "concept": "parallel",
+   "facet": "core",
+   "level": 3,
+   "type": "concept",
+   "name": "Two lines perpendicular to the same line are parallel",
+   "statement": "Two lines in a plane that are each perpendicular to the same line are parallel to each other.",
+   "assess": "In this plane, lines p and q are each drawn perpendicular to line r. Are p and q parallel? How do you know without extending them?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1456",
+     "prerequisite": "parallel.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The conclusion is that the two lines are parallel, meaning they never meet."
+    },
+    {
+     "edge_id": "e1457",
+     "prerequisite": "perpendicular.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement starts from two lines that are each perpendicular to the same line, meeting it at right angles."
+    }
+   ]
+  },
+  {
+   "id": "area.attribute",
+   "concept": "area",
+   "facet": "attribute",
+   "level": 1,
+   "type": "concept",
+   "name": "Area is the amount of flat surface a figure covers",
+   "statement": "The area of a flat figure is the amount of surface it covers, an attribute different from its length: a long thin strip can cover less surface than a short wide square.",
+   "assess": "A long thin ribbon and a square sheet of paper lie on a table; the ribbon is longer. Which covers more of the table? Is the longer figure always the one that covers more?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1458",
+     "prerequisite": "measurement.attributes.several",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Area is a second attribute that one figure has beside its length."
+    },
+    {
+     "edge_id": "e1459",
+     "prerequisite": "measurement.length.attribute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement sets area apart from length, so length as an attribute of an object is already known."
+    },
+    {
+     "edge_id": "e1460",
+     "prerequisite": "shapes.dimension.flat-solid",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Area belongs to flat figures, so the learner must tell a flat figure from a solid."
+    }
+   ]
+  },
+  {
+   "id": "volume.space-occupied",
+   "concept": "volume",
+   "facet": "attribute",
+   "level": 1,
+   "type": "concept",
+   "name": "Volume is the amount of space a solid takes up",
+   "statement": "The volume of a solid is the amount of space it takes up, an attribute different from its height: a short wide box can take up more space than a tall thin one.",
+   "assess": "Which takes up more space, a basketball or a tennis ball? Can a taller object take up less space than a shorter one? Give an example.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1461",
+     "prerequisite": "measurement.attributes.several",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Volume is a second attribute that one solid has beside its height."
+    },
+    {
+     "edge_id": "e1462",
+     "prerequisite": "measurement.length.attribute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement sets volume apart from height, a length, so length as an attribute is already known."
+    },
+    {
+     "edge_id": "e1463",
+     "prerequisite": "shapes.dimension.flat-solid",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Volume belongs to solids, so the learner must tell a solid from a flat figure."
+    }
+   ]
+  },
+  {
+   "id": "measurement.liquid-volume.liter-unit",
+   "concept": "measurement",
+   "facet": "liquid-volume",
+   "level": 2,
+   "type": "concept",
+   "name": "The liter as a unit of liquid volume",
+   "statement": "A liter is a standard unit of liquid volume, the amount of liquid that fills a 1-liter container; a liquid volume in liters is the number of times it fills that container.",
+   "assess": "The water in this jug fills a 1-liter bottle exactly 3 times. How many liters of water are in the jug?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1464",
+     "prerequisite": "counting.events",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A liquid volume in liters is the number of times the liquid fills the 1-liter container, a count of fillings."
+    },
+    {
+     "edge_id": "e1465",
+     "prerequisite": "volume.space-occupied",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Liquid volume is the amount of space a liquid takes up, and the liter is a unit for that attribute."
+    }
+   ]
+  },
+  {
+   "id": "measurement.mass.gram-kilogram-unit",
+   "concept": "measurement",
+   "facet": "mass",
+   "level": 2,
+   "type": "concept",
+   "name": "The gram and the kilogram as units of mass",
+   "statement": "The gram and the kilogram are standard units of mass, a kilogram being much heavier than a gram; the mass of an object in grams or kilograms is the number of those unit masses that balance it on a pan balance.",
+   "assess": "A bag of rice balances 2 one-kilogram masses on a pan balance. What is the mass of the bag? Is 1 gram heavier or lighter than 1 kilogram?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1466",
+     "prerequisite": "comparing.weight.direct",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Balancing an object against unit masses on a pan balance compares two weights directly."
+    },
+    {
+     "edge_id": "e1467",
+     "prerequisite": "counting.objects",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The mass in grams or kilograms is the count of unit masses that balance the object."
+    },
+    {
+     "edge_id": "e1468",
+     "prerequisite": "measurement.weight.attribute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Mass is the heaviness of an object that the pan balance compares, kept separate from the size of the object."
+    }
+   ]
+  },
+  {
+   "id": "measurement.weight.ounces-pounds.measure",
+   "concept": "measurement",
+   "facet": "weight",
+   "level": 2,
+   "type": "procedure",
+   "name": "Measure weight in ounces or pounds with a scale",
+   "statement": "The weight of an object in ounces or pounds is read from a scale marked in that unit, reported as the number with the unit.",
+   "assess": "A scale marked in ounces shows its pointer at 12. How much does the bag of beans on it weigh?",
+   "proposed_edges": [
+    {
+     "edge_id": "e1469",
+     "prerequisite": "measurement.weight.attribute",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The procedure measures the weight of an object, an attribute separate from its size."
+    },
+    {
+     "edge_id": "e1470",
+     "prerequisite": "number-line.measurement-scale",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A scale marked in ounces or pounds is read like a number line with a measurement scale."
+    },
+    {
+     "edge_id": "e1471",
+     "prerequisite": "numeral.read",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The weight is the number at the pointer, so the written numeral on the scale is read."
+    }
+   ]
+  },
+  {
+   "id": "measurement.length.whole-plus-fraction",
+   "concept": "measurement",
+   "facet": "length",
+   "level": 2,
+   "type": "representation",
+   "name": "A length of whole units plus a fraction of a unit",
+   "statement": "A length of a whole number of units and a fraction of a unit more, such as 2 1/4 inches, is the point on a ruler or number line that fraction of the way from that whole-number mark to the next; it is written as the whole number followed by the fraction and read two and one fourth.",
+   "assess": "On this inch ruler marked in fourths, mark 2 1/4 inches and 3 3/4 inches.",
+   "proposed_edges": [
+    {
+     "edge_id": "e1472",
+     "prerequisite": "fraction.mixed-number.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The length 2 1/4 is written as the whole number followed by the fraction, a mixed number."
+    },
+    {
+     "edge_id": "e1473",
+     "prerequisite": "fraction.non-unit.number-line",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The fraction of a unit is a point that fraction of the way from one whole-number mark to the next, as in 3/4."
+    },
+    {
+     "edge_id": "e1474",
+     "prerequisite": "measurement.length.ruler.from-zero",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The whole-number marks on a ruler count whole units from 0, so the mark 2 is two units from the start."
+    }
+   ]
+  }
+ ]
+}
