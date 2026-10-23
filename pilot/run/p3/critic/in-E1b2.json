@@ -1,0 +1,806 @@
+{
+ "boundary_nodes": [],
+ "nodes": [
+  {
+   "id": "rational-number.estimate.reasonableness",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 3,
+   "type": "justification",
+   "name": "Check an answer with rational numbers by estimating",
+   "statement": "Judge whether a computed answer with rational numbers in any form is reasonable by comparing it with an estimate made by mental computation with rounded or friendly numbers.",
+   "assess": "A towel bar 9 3/4 inches long is centered on a door 27 1/2 inches wide. Sam computes that each end of the bar is 8 7/8 inches from the edge of the door. Estimate the distance mentally, and say whether Sam's answer is reasonable.",
+   "proposed_edges": [
+    {
+     "edge_id": "e227",
+     "prerequisite": "fraction.estimate.benchmark.difference",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Estimating a difference of fractions or mixed numbers, such as 27 1/2 minus 9 3/4, uses benchmarks and judges reasonableness."
+    },
+    {
+     "edge_id": "e228",
+     "prerequisite": "fraction.estimate.benchmark.sum",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Estimating a sum of fractions or mixed numbers with benchmark or rounded values is the mental estimate the answer is compared with."
+    },
+    {
+     "edge_id": "e229",
+     "prerequisite": "rounding.decimal.any-place",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A decimal in the computation is replaced by a rounded or friendly number to make the mental estimate."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.application.multistep.real-world",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 3,
+   "type": "application",
+   "name": "Solve multi-step real-world problems with positive and negative rational numbers",
+   "statement": "Solve a real-world problem that takes two or more operations on rational numbers given in different forms, at least one of them negative.",
+   "assess": "At 6 a.m. the temperature was -4.5 degrees. It rose 1 1/2 degrees each hour for 4 hours and then fell 2.25 degrees. What was the temperature then?",
+   "proposed_edges": [
+    {
+     "edge_id": "e230",
+     "prerequisite": "rational-number.application.addition",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Adding a signed change to a signed value, as when the temperature rises, is one of the operations the problem takes."
+    },
+    {
+     "edge_id": "e231",
+     "prerequisite": "rational-number.application.division",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Sharing a signed change equally is one of the operations the problem may take."
+    },
+    {
+     "edge_id": "e232",
+     "prerequisite": "rational-number.application.multiplication",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Multiplying a signed change per unit, such as 1 1/2 degrees an hour for 4 hours, is one of the operations the problem takes."
+    },
+    {
+     "edge_id": "e233",
+     "prerequisite": "rational-number.application.subtraction",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Finding a signed change between two values is one of the operations the problem may take."
+    },
+    {
+     "edge_id": "e234",
+     "prerequisite": "rational-number.compute.mixed-forms",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The numbers in the problem, such as -4.5, 1 1/2 and 2.25, are in different forms and must be computed with together."
+    }
+   ]
+  },
+  {
+   "id": "rational-number.application.multistep.mathematical",
+   "concept": "rational-number",
+   "facet": "core",
+   "level": 3,
+   "type": "application",
+   "name": "Solve multi-step mathematical problems with positive and negative rational numbers",
+   "statement": "Solve a problem about numbers, stated without a real-world context, that takes two or more operations on rational numbers given in different forms, at least one of them negative.",
+   "assess": "Points A and B are at -2.4 and 1 3/5 on a number line. What number is halfway between A and B?",
+   "proposed_edges": [
+    {
+     "edge_id": "e235",
+     "prerequisite": "number.halfway-between",
+     "relation": "definitional",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem asks for the number halfway between -2.4 and 1 3/5, which uses the idea of halfway between two numbers."
+    },
+    {
+     "edge_id": "e236",
+     "prerequisite": "rational-number.compute.mixed-forms",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The numbers, such as -2.4 and 1 3/5, are in different forms and must be computed with together in each operation."
+    },
+    {
+     "edge_id": "e237",
+     "prerequisite": "rational-number.fraction-decimal.number-line",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem places the points A and B at negative and mixed-number positions on a number line."
+    }
+   ]
+  },
+  {
+   "id": "equation.two-step.px-plus-q.solve",
+   "concept": "equation",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "procedure",
+   "name": "Solve px + q = r",
+   "statement": "Solve an equation px + q = r, where p, q and r are rational numbers and p is not 0, by subtracting q from both sides and then dividing both sides by p.",
+   "assess": "Solve -4x + 7 = -5.",
+   "procedure": [
+    "Subtract q from both sides, giving px = r - q.",
+    "Divide both sides by p, giving x = (r - q) divided by p."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e238",
+     "prerequisite": "equation.equality-preserved.same-operation",
+     "relation": "justificatory",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Subtracting q from both sides, then dividing both sides by p, is valid because the same operation on both sides keeps the solutions."
+    },
+    {
+     "edge_id": "e239",
+     "prerequisite": "expressions.notation.implicit-multiplication",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation is written px + q = r, with the number p next to the letter x meaning p times x."
+    },
+    {
+     "edge_id": "e240",
+     "prerequisite": "rational-number.division.rationals",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 divides r - q by p, which may be negative or a fraction, as in -12 divided by -4."
+    },
+    {
+     "edge_id": "e241",
+     "prerequisite": "rational-number.subtraction.rationals",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 computes r - q for signed rational numbers, as in -5 - 7 for the test problem."
+    }
+   ]
+  },
+  {
+   "id": "equation.two-step.p-times-sum.solve",
+   "concept": "equation",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "procedure",
+   "name": "Solve p(x + q) = r",
+   "statement": "Solve an equation p(x + q) = r, where p, q and r are rational numbers and p is not 0, by dividing both sides by p and then subtracting q from both sides.",
+   "assess": "Solve -2(x - 3) = 10.",
+   "procedure": [
+    "Divide both sides by p, giving x + q = r divided by p.",
+    "Subtract q from both sides, giving x = (r divided by p) - q."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e242",
+     "prerequisite": "equation.equality-preserved.same-operation",
+     "relation": "justificatory",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Dividing both sides by p, then subtracting q from both sides, is valid because the same operation on both sides keeps the solutions."
+    },
+    {
+     "edge_id": "e243",
+     "prerequisite": "expressions.notation.implicit-multiplication",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation is written p(x + q) = r, with the number p next to the parenthesis meaning p times the sum."
+    },
+    {
+     "edge_id": "e244",
+     "prerequisite": "expressions.parts.single-entity",
+     "relation": "representational",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Dividing both sides by p leaves x + q, which step 1 treats as a single quantity multiplied by p."
+    },
+    {
+     "edge_id": "e245",
+     "prerequisite": "rational-number.division.rationals",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 divides r by p, which may be negative or a fraction, as in 10 divided by -2."
+    },
+    {
+     "edge_id": "e246",
+     "prerequisite": "rational-number.subtraction.rationals",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 subtracts q from the quotient for signed rational numbers, as in -5 - (-3)."
+    }
+   ]
+  },
+  {
+   "id": "equation.two-step.compare-arithmetic-algebraic",
+   "concept": "equation",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "justification",
+   "name": "Compare an arithmetic solution with an algebraic solution",
+   "statement": "An arithmetic solution of a word problem works backward from the known result, undoing the operations applied to the unknown in reverse order; the algebraic solution of the equation px + q = r or p(x + q) = r that describes the problem the same way does the same operations on the same numbers, in the same order, to both sides.",
+   "assess": "A rectangle has perimeter 54 cm and length 6 cm. Ana finds the width by computing 54 - 12 = 42 and then 42 divided by 2 = 21. Ben solves 2w + 12 = 54 by subtracting 12 from both sides and then dividing both sides by 2. List the operations each used, in order, and say how the two lists match.",
+   "proposed_edges": [
+    {
+     "edge_id": "e247",
+     "prerequisite": "equation.equality-preserved.same-operation",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The algebraic solution does the same operations on the same numbers to both sides of the equation."
+    },
+    {
+     "edge_id": "e248",
+     "prerequisite": "equation.two-step.p-times-sum.solve",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement also covers the algebraic solution of p(x + q) = r, which divides first and then subtracts."
+    },
+    {
+     "edge_id": "e249",
+     "prerequisite": "equation.two-step.px-plus-q.solve",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The algebraic solution being compared is the solution of px + q = r by subtracting from and dividing both sides."
+    },
+    {
+     "edge_id": "e250",
+     "prerequisite": "operations.application.multistep",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The arithmetic solution is a two-step solution of a word problem, worked backward from the known result."
+    }
+   ]
+  },
+  {
+   "id": "equation.two-step.write.px-plus-q",
+   "concept": "equation",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "representation",
+   "name": "Write px + q = r for a word problem",
+   "statement": "For a word problem in which a known rational number p times an unknown quantity, plus a known amount q, gives a known amount r, write the equation px + q = r, saying what x stands for.",
+   "assess": "A gym charges a $25 sign-up fee plus $12.50 per month. Lee paid $100 in all. Write an equation for the number of months m that Lee paid for.",
+   "proposed_edges": [
+    {
+     "edge_id": "e251",
+     "prerequisite": "equation.one-step.write.addition",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The added known amount q, such as the $25 sign-up fee, is written as in x + p = q, with the total set equal to r."
+    },
+    {
+     "edge_id": "e252",
+     "prerequisite": "equation.one-step.write.multiplication",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The part p times the unknown quantity, such as $12.50 per month for m months, is written as in px = q."
+    }
+   ]
+  },
+  {
+   "id": "equation.two-step.write.p-times-sum",
+   "concept": "equation",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "representation",
+   "name": "Write p(x + q) = r for a word problem",
+   "statement": "For a word problem in which an unknown quantity is increased or decreased by a known amount q and the result is multiplied by a known rational number p to give a known amount r, write the equation p(x + q) = r, saying what x stands for.",
+   "assess": "Each of 4 friends buys a movie ticket and a $3.50 snack. Together they spend $46. Write an equation for the price t, in dollars, of one ticket.",
+   "proposed_edges": [
+    {
+     "edge_id": "e253",
+     "prerequisite": "equation.one-step.write.addition",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The unknown increased or decreased by a known amount q, such as ticket price plus $3.50, is written as x + q."
+    },
+    {
+     "edge_id": "e254",
+     "prerequisite": "equation.one-step.write.multiplication",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The multiplication by the known number p, such as 4 friends, and the setting equal to the total are written as in px = q."
+    },
+    {
+     "edge_id": "e255",
+     "prerequisite": "expressions.notation.implicit-multiplication",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The equation is written p(x + q) = r, with the number p next to the parenthesis meaning p times the sum."
+    },
+    {
+     "edge_id": "e256",
+     "prerequisite": "expressions.parts.single-entity",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The sum x + q is treated as a single quantity that is multiplied by p."
+    }
+   ]
+  },
+  {
+   "id": "equation.two-step.application.px-plus-q",
+   "concept": "equation",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "application",
+   "name": "Solve word problems leading to px + q = r",
+   "statement": "Solve a word problem in which a known rational number times an unknown quantity, plus a known amount, gives a known total, by writing px + q = r and solving it.",
+   "assess": "A phone repair costs $35 for parts plus $22.50 per hour of labor. The bill was $80. Write an equation and solve it to find how many hours of labor were charged.",
+   "proposed_edges": [
+    {
+     "edge_id": "e257",
+     "prerequisite": "equation.two-step.px-plus-q.solve",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement requires solving the written equation, as in 22.5x + 35 = 80, for the unknown quantity."
+    },
+    {
+     "edge_id": "e258",
+     "prerequisite": "equation.two-step.write.px-plus-q",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement requires writing px + q = r for the word problem, saying what x stands for."
+    }
+   ]
+  },
+  {
+   "id": "equation.two-step.application.p-times-sum",
+   "concept": "equation",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "application",
+   "name": "Solve word problems leading to p(x + q) = r",
+   "statement": "Solve a word problem in which an unknown quantity is increased or decreased by a known amount and the result is multiplied by a known rational number to give a known total, by writing p(x + q) = r and solving it.",
+   "assess": "Sara bought 5 notebooks, each on sale for $1.20 off the regular price, and paid $14 in all. Write an equation and solve it to find the regular price of one notebook.",
+   "proposed_edges": [
+    {
+     "edge_id": "e259",
+     "prerequisite": "equation.two-step.p-times-sum.solve",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement requires solving the written equation, as in 5(x - 1.20) = 14, for the unknown quantity."
+    },
+    {
+     "edge_id": "e260",
+     "prerequisite": "equation.two-step.write.p-times-sum",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement requires writing p(x + q) = r for the word problem, saying what x stands for."
+    }
+   ]
+  },
+  {
+   "id": "inequality.symbols.inclusive",
+   "concept": "inequality",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "concept",
+   "name": "The symbols >= and <=",
+   "statement": "x >= c means x is greater than c or equal to c, and x <= c means x is less than c or equal to c; unlike x > c and x < c, the boundary value c is a solution.",
+   "assess": "Which of 4, 5 and 6 are solutions of x >= 5? Which of them are solutions of x > 5?",
+   "proposed_edges": [
+    {
+     "edge_id": "e261",
+     "prerequisite": "comparing.whole-numbers.symbols",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The symbols >= and <= are read as the symbols > or < together with =, and contrasted with the strict symbols."
+    },
+    {
+     "edge_id": "e262",
+     "prerequisite": "inequality.solution.check-substitution",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Deciding which of 4, 5 and 6 are solutions of x >= 5 and of x > 5 is checking values by substitution."
+    },
+    {
+     "edge_id": "e263",
+     "prerequisite": "inequality.solution.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says whether the boundary value c is a solution, which uses the meaning of a solution of an inequality."
+    }
+   ]
+  },
+  {
+   "id": "inequality.same-operation.preserved",
+   "concept": "inequality",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "concept",
+   "name": "Operations that keep the direction of an inequality",
+   "statement": "Adding the same number to both sides of an inequality, subtracting the same number from both sides, or multiplying or dividing both sides by the same positive number keeps the direction of the inequality and gives an inequality with the same solutions.",
+   "assess": "3 < 7 is true. Is 3 + (-10) < 7 + (-10) true? Is 3 x 2 < 7 x 2 true? Is 3 x (-2) < 7 x (-2) true?",
+   "proposed_edges": [
+    {
+     "edge_id": "e264",
+     "prerequisite": "inequality.solution.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement says the new inequality has the same solutions, which uses the meaning of a solution of an inequality."
+    },
+    {
+     "edge_id": "e265",
+     "prerequisite": "rational-number.addition.integers",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem computes 3 + (-10) and 7 + (-10), which are sums of integers."
+    },
+    {
+     "edge_id": "e266",
+     "prerequisite": "rational-number.compare.integers",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem asks whether each new inequality is true, which means deciding which of two integers is greater."
+    },
+    {
+     "edge_id": "e267",
+     "prerequisite": "rational-number.multiplication.integers",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem computes 3 x (-2) and 7 x (-2), which are products of integers with a negative factor."
+    },
+    {
+     "edge_id": "e268",
+     "prerequisite": "rational-number.order.number-line",
+     "relation": "justificatory",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The direction of an inequality is the relative position of two numbers on the number line, and adding or scaling by a positive number keeps it."
+    }
+   ]
+  },
+  {
+   "id": "inequality.multiply-negative.reverse",
+   "concept": "inequality",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "concept",
+   "name": "Multiplying or dividing by a negative number reverses an inequality",
+   "statement": "Multiplying or dividing both sides of an inequality by the same negative number reverses its direction: if a < b and c is negative, then a x c > b x c.",
+   "assess": "Start with 2 < 5 and multiply both sides by -3. Which symbol, < or >, belongs between -6 and -15? Why is it not the same symbol as in 2 < 5?",
+   "proposed_edges": [
+    {
+     "edge_id": "e269",
+     "prerequisite": "inequality.same-operation.preserved",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The reversal is the contrast with multiplying or dividing by a positive number, which keeps the direction."
+    },
+    {
+     "edge_id": "e270",
+     "prerequisite": "rational-number.compare.integers",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "Choosing the symbol between -6 and -15 means deciding which of two negative integers is greater."
+    },
+    {
+     "edge_id": "e271",
+     "prerequisite": "rational-number.division.integers",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement also covers dividing both sides by a negative number, so quotients with a negative divisor must be known."
+    },
+    {
+     "edge_id": "e272",
+     "prerequisite": "rational-number.multiplication.integers",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement compares the products a x c and b x c where c is negative, so products with a negative factor must be known."
+    },
+    {
+     "edge_id": "e273",
+     "prerequisite": "rational-number.multiplication.sign-rule",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The products a x c and b x c have a negative factor c, so their signs follow the sign rule."
+    },
+    {
+     "edge_id": "e274",
+     "prerequisite": "rational-number.opposite.number-line",
+     "relation": "justificatory",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem asks why the symbol changes, which can be explained by negative multiples moving to the opposite side of 0."
+    },
+    {
+     "edge_id": "e275",
+     "prerequisite": "rational-number.order.number-line",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Reversal means a < b becomes a x c > b x c, a change in left-right order on the number line."
+    }
+   ]
+  },
+  {
+   "id": "inequality.two-step.solve",
+   "concept": "inequality",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "procedure",
+   "name": "Solve px + q > r and related inequalities",
+   "statement": "Solve an inequality px + q > r, px + q < r, px + q >= r or px + q <= r, where p, q and r are rational numbers and p is not 0, by subtracting q from both sides and dividing both sides by p, reversing the inequality symbol when p is negative.",
+   "assess": "Solve -2x + 5 >= 11.",
+   "procedure": [
+    "Subtract q from both sides.",
+    "Divide both sides by p.",
+    "If p is negative, reverse the direction of the inequality symbol."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e276",
+     "prerequisite": "inequality.multiply-negative.reverse",
+     "relation": "procedural",
+     "points_to": "procedure.3",
+     "scope": "concept",
+     "rationale": "Step 3 reverses the symbol when p is negative, because dividing both sides by a negative number reverses the inequality."
+    },
+    {
+     "edge_id": "e277",
+     "prerequisite": "inequality.same-operation.preserved",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Steps 1 and 2 subtract q from both sides and divide both sides by a positive p, which keep the direction of the inequality."
+    },
+    {
+     "edge_id": "e278",
+     "prerequisite": "inequality.symbols.inclusive",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement covers the forms px + q >= r and px + q <= r, which use the symbols >= and <=."
+    },
+    {
+     "edge_id": "e279",
+     "prerequisite": "rational-number.division.rationals",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 divides r - q by p, which may be negative or a fraction, as in 6 divided by -2."
+    },
+    {
+     "edge_id": "e280",
+     "prerequisite": "rational-number.subtraction.rationals",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 computes r - q for signed rational numbers, as in 11 - 5."
+    }
+   ]
+  },
+  {
+   "id": "inequality.solution-set.number-line.inclusive",
+   "concept": "inequality",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "representation",
+   "name": "Graph the solutions of x >= c or x <= c on a number line",
+   "statement": "The solutions of x >= c or x <= c, for a rational number c, are shown on a number line by a filled circle at c, which is a solution, and a ray from c to the right for x >= c or to the left for x <= c.",
+   "assess": "Show all solutions of x >= 2.5 on a number line.",
+   "procedure": [
+    "Locate c on the number line and draw a filled circle there.",
+    "Draw a ray from c to the right for x >= c, or to the left for x <= c."
+   ],
+   "proposed_edges": [
+    {
+     "edge_id": "e281",
+     "prerequisite": "inequality.simple.infinitely-many-solutions",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "A ray shows the solutions because every number on one side of c, not only whole numbers, is a solution."
+    },
+    {
+     "edge_id": "e282",
+     "prerequisite": "inequality.symbols.inclusive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The filled circle at c shows that c is a solution, which is the meaning of the symbols >= and <=."
+    },
+    {
+     "edge_id": "e283",
+     "prerequisite": "rational-number.fraction-decimal.number-line",
+     "relation": "procedural",
+     "points_to": "procedure.1",
+     "scope": "concept",
+     "rationale": "Step 1 locates c, such as 2.5, on the number line, which can mean placing a decimal or fraction."
+    },
+    {
+     "edge_id": "e284",
+     "prerequisite": "rational-number.order.number-line",
+     "relation": "procedural",
+     "points_to": "procedure.2",
+     "scope": "concept",
+     "rationale": "Step 2 chooses the ray direction from the symbol, since x >= c lies to the right of c and x <= c to the left."
+    },
+    {
+     "edge_id": "e285",
+     "prerequisite": "ray.meaning",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement shows the solutions as a ray from c, a part of a line starting at c and going on without end one way."
+    }
+   ]
+  },
+  {
+   "id": "inequality.solution-set.interpret",
+   "concept": "inequality",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "representation",
+   "name": "Interpret the solution set of an inequality in its context",
+   "statement": "Describe which values satisfy a problem's condition, from the solution set of its inequality together with the values the context allows (for example, only whole numbers of items).",
+   "assess": "You are paid $50 per week plus $3 per sale and want to earn at least $100 this week. Solving 50 + 3s >= 100 gives s >= 16 2/3. Which numbers of sales meet your goal?",
+   "proposed_edges": [
+    {
+     "edge_id": "e286",
+     "prerequisite": "fraction.between-whole-numbers",
+     "relation": "procedural",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem places 16 2/3 between 16 and 17 to find the least whole number of sales that meets the goal."
+    },
+    {
+     "edge_id": "e287",
+     "prerequisite": "inequality.simple.infinitely-many-solutions",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The solution set includes values like fractions that the context may rule out, so it must be seen as every number on one side."
+    },
+    {
+     "edge_id": "e288",
+     "prerequisite": "inequality.solution.meaning",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement starts from the solution set of the inequality, the set of all values that make it true."
+    },
+    {
+     "edge_id": "e289",
+     "prerequisite": "inequality.symbols.inclusive",
+     "relation": "representational",
+     "points_to": "assess",
+     "scope": "task",
+     "rationale": "The test problem gives the solution as s >= 16 2/3, which must be read with the inclusive symbol."
+    },
+    {
+     "edge_id": "e290",
+     "prerequisite": "rational-number.compare.rationals",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "Deciding which allowed values satisfy the condition means comparing candidate values with the boundary, such as 16 and 17 with 16 2/3."
+    }
+   ]
+  },
+  {
+   "id": "inequality.two-step.write",
+   "concept": "inequality",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "representation",
+   "name": "Write px + q > r or a related inequality for a word problem",
+   "statement": "For a word problem in which a known rational number times an unknown quantity, plus a known amount, must be more than, less than, at least or at most a known amount, write the matching inequality px + q > r, px + q < r, px + q >= r or px + q <= r.",
+   "assess": "A phone plan costs $20 per month plus $0.10 per text. Kim wants to spend at most $35 this month. Write an inequality for the number of texts t she can send.",
+   "proposed_edges": [
+    {
+     "edge_id": "e291",
+     "prerequisite": "equation.two-step.write.px-plus-q",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The left side px + q is written from the word problem the same way as in the equation px + q = r."
+    },
+    {
+     "edge_id": "e292",
+     "prerequisite": "expressions.variable.write-for-situation",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The left side px + q is an expression with a variable written for a fixed fee plus a rate times a count, like 20 + 0.10t."
+    },
+    {
+     "edge_id": "e293",
+     "prerequisite": "inequality.simple.write-constraint",
+     "relation": "representational",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The relation between the quantity and the known amount is written from words such as 'more than' or 'less than'."
+    },
+    {
+     "edge_id": "e294",
+     "prerequisite": "inequality.symbols.inclusive",
+     "relation": "definitional",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "'At least' and 'at most' are written with the symbols >= and <=, as in the test problem."
+    }
+   ]
+  },
+  {
+   "id": "inequality.two-step.application",
+   "concept": "inequality",
+   "facet": "open-sentence",
+   "level": 3,
+   "type": "application",
+   "name": "Solve word problems leading to px + q > r or a related inequality",
+   "statement": "Solve a word problem in which a known rational number times an unknown quantity, plus a known amount, must be more than, less than, at least or at most a known amount, by writing the inequality, solving it, and describing the solutions the context allows.",
+   "assess": "A taxi ride costs $3 plus $2.50 per mile. Ravi has $18. Write an inequality, solve it, and describe how far he can ride.",
+   "proposed_edges": [
+    {
+     "edge_id": "e295",
+     "prerequisite": "inequality.solution-set.interpret",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement requires describing the solutions the context allows, such as the distances that are possible."
+    },
+    {
+     "edge_id": "e296",
+     "prerequisite": "inequality.two-step.solve",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement requires solving the written inequality, as in 3 + 2.5m <= 18, for the unknown quantity."
+    },
+    {
+     "edge_id": "e297",
+     "prerequisite": "inequality.two-step.write",
+     "relation": "procedural",
+     "points_to": "statement",
+     "scope": "concept",
+     "rationale": "The statement requires writing the inequality for the word problem before solving it."
+    }
+   ]
+  }
+ ]
+}
