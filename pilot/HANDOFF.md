@@ -1,40 +1,60 @@
-# Handoff: phase 3 proposers running (2026-10-21)
+# Handoff: phase 3 merged; review queue waits on Daniel (2026-10-22)
 
 Read this first in a new session. Then RULES.md.
 
-## Proposers done; critics running (2026-10-22)
+## Phase 3 (grades 6-8): done, awaiting review
 
-- All 24 proposer passes done (proposers cost 4.64M, about 193k each by the harness
-  metric). Union pilot/run/p3/union.json: 1,964 edges, Jaccard 0.68 (phase 1 0.68,
-  phase 2 0.69), 0 rule violations, 16 edges to 9 ids outside the map (turn direction
-  x2 spellings, transversal, plane, pigeonhole x2, distributive over subtraction,
-  decimal subtraction to hundredths, multi-digit subtraction). Report:
-  pilot/run/p3/passes_report.md. Critic batches blinded (checked: no pass labels).
-- Session and weekly limits stopped agents three times; each resumed with SendMessage.
-  Reports lost to a container restart were read from transcripts (last non-zero
+- Map: 1,166 nodes, 4,427 edges, 0 errors. Benchmark (Coherence slice): 81% direct,
+  92% through chains (back from 90%). Common Core order: 1,111 placements consistent,
+  21 findings; IM 360: 957 consistent, 128 findings. 30 ids outside the map, all
+  new-node candidates (queue item 136).
+- Critic verdicts on the 1,964-edge union: necessary 1,355, scaffold 201, task-only
+  172, route-only 98, wrong 60, undecided 45, indirect 17, related 16. Merge: kept
+  1,527, disputed 343, dropped 278, undecided 43.
+- Review queue pilot/run/p3/REVIEW.md, 141 items: A 40 random kept edges (precision),
+  B 20 critic drops, C 43 open questions, D 30 disputed, F 8 structural and Claude's
+  calls (134-141; 141 lists the five items still pending from the phase 2 review).
+  Answers go to pilot/run/p3/overrides.yaml, which so far holds only Claude's renames
+  of new-node spellings.
+- After the merge, by Claude: duplicate spellings of new-node ids folded by rename;
+  merge_run.rename_all keeps one edge per node per route; area.composite-additive
+  renamed to area.additive in a p1 common_path entry; shapes.square-corner also cites
+  1.G.A.1 and shapes.rectangle.opposite-sides-equal also cites 3.MD.D.8 (Common Core
+  findings 24 -> 21).
+- Critic E1b failed twice on the 64,000 output-token cap (it drafts every verdict in one
+  response); rerun as E1b1 and E1b2 on a split input, told to write about 25 verdicts at
+  a time. For future critics on batches over ~120 edges, ask for chunked writing from
+  the start.
+- Cost, phase 3: 8,689,492 (writers 1,147,275; proposers 4,604,667; critics 2,937,550,
+  including 218,695 for the failed E1b). Proposers and critics together came to 7.54M
+  against the 7.5M re-estimate at the hold. Running total 14,918,888.
+- Session limits stopped agents five times and the weekly limit once (Daniel reset it);
+  each was resumed with SendMessage. Two reports lost to a container restart and two
+  stopped agents whose files were complete were read from transcripts (last non-zero
   usage record).
-- Critics (Sonnet, 12): G4a, G3a, G3b, E2a running; then Q1b, E2b, G4b, E1a, E1b, Q1a,
-  S1a, S1b. Then `sh tools/rebuild.sh`, check, benchmark, explorer, review queue.
+- Explorer rebuilt (explorer/index.html, docs/); the published copy
+  (claude.ai/artifact/Q7RWducGX1KtkuZeSAu6Vq) is still stale.
 
-## Hold lifted (2026-10-21, evening): Daniel chose to continue with both passes at ~6.5M more
+## Next
 
-Was: proposers paused pending Daniel.
+1. Daniel reviews pilot/run/p3/REVIEW.md (and the phase 2 pending items, now item 141).
+2. Encode the answers in pilot/run/p3/overrides.yaml, `sh tools/rebuild.sh`, benchmark,
+   explorer; precision from section A.
+3. A fix-up slice for the new nodes Daniel accepts from item 136 (written inline or by
+   one writer, attached to one batch, as in phases 2 and 3).
+4. Grades 9-12 are out of scope unless Daniel decides otherwise (project instructions).
 
-The first four proposers (Q1a, Q1b) averaged 196k tokens, 1.30x the fitted 151k
-(more edges per node: 2.3-3.6 versus phase 2). Re-estimate at that ratio: the 20
-remaining proposers ~3.8M plus 12 critics ~2.8M = ~6.7M more; proposers and critics
-together ~7.5M against the 5.7M Daniel approved (option A); phase 3 ~9M; running total
-~15.3M at the end. Claude stopped launching new agents; E1a (P, Q) and E1b P were
-already running and are committed as they finish. Resume only on Daniel's answer
-(next unit: p3.E1b.proposer-b).
+# Earlier: phase 3 build log (2026-10-20 to 2026-10-22)
 
-Single-pass option, measured: on Q1a, Q1b, E1a the passes agree at Jaccard 0.68 (as in
-phases 1 and 2); pass P alone carries 84% of the union. In phases 1-2 the critic kept
-93-94% of two-pass edges and 68-75% of one-pass edges, so dropping pass Q would lose
-about 10-11% of the edges that survive the critic. Saves ~1.9M (10 fewer proposers).
-Done when the hold began: Q1a, Q1b, E1a (both passes), E1b (P). Running total 9,141,423.
+- Hold (2026-10-21): the first proposers cost 1.30x the fitted estimate (more edges
+  per node), so Claude paused launches; Daniel chose to continue with both passes.
+  Measured then for the single-pass option: passes agree at Jaccard 0.68, pass P alone
+  carries 84% of the union, and the critic kept 68-75% of one-pass edges in phases 1-2,
+  so one pass would lose about 10-11% of the edges that survive the critic.
+- Proposer union: 1,964 edges, Jaccard 0.68, 0 rule violations
+  (pilot/run/p3/passes_report.md). Critic batches checked blinded.
 
-## Phase 3 (grades 6-8): writers done, retarget done, proposers running
+## Writers, retarget, proposers
 
 - Daniel approved phase 3 at ~3.9M (2026-10-20); the writers produced 491 nodes, not
   ~276, and on the re-estimate below he chose option A, 12 batches (2026-10-21).
