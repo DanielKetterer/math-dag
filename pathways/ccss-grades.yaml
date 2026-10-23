@@ -58,6 +58,7 @@ steps:
   - shapes.dimension.flat-solid
   - shapes.draw.named
   - shapes.name.any-orientation
+  - shapes.name.prototype.rectangle-hexagon
   - shapes.name.real-objects
   - shapes.name.solids
   - shapes.recognize
@@ -170,8 +171,11 @@ steps:
   - addition.within-20.fluency
   - comparing.whole-numbers.magnitude.three-digit
   - counting.array.squares
+  - counting.number-word.thousand
   - counting.skip.fives
   - counting.skip.hundreds
+  - counting.skip.twenty-fives
+  - counting.skip.twos
   - data.bar-graph.compare
   - data.bar-graph.draw
   - data.bar-graph.put-together
@@ -232,6 +236,7 @@ steps:
   nodes:
   - addition.within-1000
   - area.additive
+  - area.attribute
   - area.covering.meaning
   - area.rectangle.application
   - area.rectangle.length-times-width
@@ -283,12 +288,15 @@ steps:
   - fraction.unit.part-whole
   - fraction.whole-number.as-fraction
   - measurement.length.ruler.nearest-fourth-inch
+  - measurement.length.whole-plus-fraction
+  - measurement.liquid-volume.liter-unit
   - measurement.liquid-volume.liters.estimate
   - measurement.liquid-volume.liters.measure
   - measurement.mass-volume.application.addition
   - measurement.mass-volume.application.division
   - measurement.mass-volume.application.multiplication
   - measurement.mass-volume.application.subtraction
+  - measurement.mass.gram-kilogram-unit
   - measurement.mass.grams-kilograms.estimate
   - measurement.mass.grams-kilograms.measure
   - measurement.time.application.addition
@@ -314,6 +322,7 @@ steps:
   - multiplication.equal-groups.situation-to-expression
   - multiplication.facts.within-100
   - multiplication.unknown-factor.solve
+  - number.halfway-between
   - operations.application.multistep
   - operations.application.multistep.equation
   - operations.application.reasonableness
@@ -340,13 +349,16 @@ steps:
   - shapes.quadrilateral.subcategories-included
   - shapes.rectangle.define
   - shapes.rhombus.define
+  - shapes.square-corner
   - shapes.square.define
   - subtraction.base-ten.add-up
   - subtraction.within-1000
   - table.read-two-way
+  - time.hour.sixty-minutes
 - position: 4
   grade: '4'
   nodes:
+  - addition.multi-digit
   - addition.standard-algorithm
   - angle.acute-obtuse.classify
   - angle.additive
@@ -365,6 +377,7 @@ steps:
   - area.application.rectangle
   - area.rectangle.unknown-side
   - comparing.whole-numbers.magnitude.multi-digit
+  - counting.number-word.thousand-million
   - data.line-plot.fraction-scale.make
   - data.line-plot.fraction.add-subtract
   - decimal.compare
@@ -377,6 +390,7 @@ steps:
   - division.by-one-digit.remainder
   - division.partial-quotients.one-digit-divisor
   - division.partial-quotients.one-digit-divisor.remainder
+  - division.remainder.meaning
   - factors.factor-pair.meaning
   - factors.factor-pairs.find-all
   - factors.is-multiple.decide
@@ -417,6 +431,7 @@ steps:
   - fraction.multiply-whole.symbolic
   - fraction.multiply-whole.unit-fraction
   - fraction.non-unit.unit-sum
+  - fraction.subtraction.comparison
   - fraction.subtraction.like-denominators
   - fraction.subtraction.like-denominators.model
   - fraction.subtraction.separating
@@ -438,6 +453,7 @@ steps:
   - measurement.unit-conversion.to-smaller.fraction
   - measurement.unit-conversion.to-smaller.mixed-units
   - measurement.unit-conversion.to-smaller.whole
+  - measurement.weight.ounces-pounds.measure
   - measurement.weight.units.customary
   - multiplication.area-model.by-one-digit.explain
   - multiplication.area-model.two-digit-by-two-digit.explain
@@ -458,6 +474,7 @@ steps:
   - operations.application.justify-solution
   - operations.application.multistep.multi-digit
   - operations.application.multistep.remainder
+  - operations.application.reasonableness.multi-digit
   - parallel.draw
   - parallel.meaning
   - patterns.rule.generate-number
@@ -477,6 +494,7 @@ steps:
   - segment.meaning
   - shapes.classify.angle-type
   - shapes.classify.parallel-perpendicular
+  - shapes.rectangle.opposite-sides-equal
   - shapes.triangle.right.identify
   - subtraction.standard-algorithm
   - symmetry.line.draw
@@ -491,7 +509,9 @@ steps:
   - coordinate-plane.first-quadrant.plot
   - coordinate-plane.first-quadrant.read
   - coordinate-plane.ordered-pair.meaning
+  - coordinate.ordered-pair.notation
   - data.line-plot.fraction.multistep
+  - data.table-graph.read-values
   - decimal.addition.model
   - decimal.addition.relate-written
   - decimal.division.by-decimal.model
@@ -508,9 +528,12 @@ steps:
   - division.application.unit-fraction-by-whole
   - division.application.whole-by-unit-fraction
   - division.area-model.two-digit-divisor.explain
+  - division.by-two-digit
+  - division.by-two-digit.remainder
   - division.partial-quotients.two-digit-divisor
   - division.power-of-ten.explain
   - division.power-of-ten.rule
+  - division.successive-division
   - division.unit-fraction-by-whole.compute
   - division.unit-fraction-by-whole.equation
   - division.unit-fraction-by-whole.explain
@@ -568,6 +591,7 @@ steps:
   - multiplication.scaling.resize
   - multiplication.scaling.size-principle
   - multiplication.standard-algorithm
+  - parallel.perpendicular-to-same-line
   - patterns.numerical.corresponding-pairs
   - patterns.numerical.graph-pairs
   - patterns.numerical.relationship
@@ -595,11 +619,65 @@ steps:
   - volume.prism.formula.lwh
   - volume.prism.formula.lwh.apply
   - volume.prism.layers.explain
+  - volume.space-occupied
   - volume.three-factor-product
   - volume.unit-cube
 - position: 6
   grade: '6'
   nodes:
+  - absolute-value.distance.integer
+  - absolute-value.distance.rational
+  - absolute-value.magnitude.context
+  - absolute-value.vs-order
+  - absolute-value.vs-order.context
+  - area.application.polygon
+  - area.application.triangle
+  - area.parallelogram.formula
+  - area.parallelogram.formula.apply
+  - area.parallelogram.rearrange
+  - area.polygon.decompose
+  - area.polygon.subtract
+  - area.triangle.formula
+  - area.triangle.formula.apply
+  - area.triangle.half-parallelogram
+  - area.triangle.right.half-rectangle
+  - center.choose
+  - center.mean-median.outlier-effect
+  - center.mean.compute
+  - center.meaning
+  - center.median.find
+  - coordinate-plane.application.distance.real-world
+  - coordinate-plane.application.missing-corner.real-world
+  - coordinate-plane.application.perimeter
+  - coordinate-plane.application.real-world.four-quadrants
+  - coordinate-plane.application.rectangle-area
+  - coordinate-plane.four-quadrants.fraction-decimal.plot
+  - coordinate-plane.four-quadrants.fraction-decimal.read
+  - coordinate-plane.four-quadrants.plot
+  - coordinate-plane.four-quadrants.read
+  - coordinate-plane.polygon.draw
+  - coordinate-plane.polygon.missing-vertex
+  - coordinate-plane.quadrants.signs
+  - coordinate-plane.reflection.signs
+  - coordinate-plane.segment-length.meaning
+  - coordinate-plane.segment-length.opposite-sign
+  - coordinate-plane.segment-length.same-sign
+  - data.attribute.describe
+  - data.box-plot.make
+  - data.box-plot.read
+  - data.dot-plot.read
+  - data.histogram.make
+  - data.histogram.read
+  - data.observations.count
+  - decimal.addition.algorithm
+  - decimal.division.by-decimal.algorithm
+  - decimal.division.by-whole.algorithm
+  - decimal.multiplication.algorithm
+  - decimal.subtraction.algorithm
+  - distribution.describe
+  - distribution.pattern-deviations
+  - distribution.shape.symmetric-skewed
+  - division.equal-scaling.quotient-unchanged
   - division.fractions.application.equation
   - division.fractions.application.model
   - division.fractions.check-by-multiplication
@@ -608,7 +686,62 @@ steps:
   - division.fractions.partitive
   - division.fractions.rule
   - division.fractions.unknown-factor
+  - division.nonunit-fraction-by-whole
+  - division.standard-algorithm.long-division
+  - equation.equality-preserved.same-operation
+  - equation.one-step.addition.application
+  - equation.one-step.addition.solve
+  - equation.one-step.multiplication.application
+  - equation.one-step.multiplication.solve
+  - equation.one-step.write.addition
+  - equation.one-step.write.multiplication
+  - equation.solution.check-substitution
+  - equation.solution.meaning
+  - exponent.whole-number-power.evaluate.decimal-base
+  - exponent.whole-number-power.evaluate.fraction-base
+  - exponent.whole-number-power.evaluate.whole-base
+  - exponent.whole-number-power.meaning
+  - exponent.whole-number-power.write
+  - expressions.distributive.expand
+  - expressions.distributive.factor
+  - expressions.equivalent.explain
+  - expressions.equivalent.meaning
+  - expressions.equivalent.test-properties
+  - expressions.equivalent.test-substitution
+  - expressions.exponents.evaluate
+  - expressions.formula.evaluate
+  - expressions.like-terms.combine
+  - expressions.like-terms.meaning
+  - expressions.notation.implicit-multiplication
+  - expressions.numerical.fractions-decimals.evaluate
+  - expressions.order-of-operations.exponents
+  - expressions.parts.name
+  - expressions.parts.single-entity
+  - expressions.product.regroup-factors
+  - expressions.sum.rearrange-terms
+  - expressions.variable.evaluate
+  - expressions.variable.meaning
+  - expressions.variable.read
+  - expressions.variable.situation-from-expression
+  - expressions.variable.unknown-vs-varying
+  - expressions.variable.write-for-situation
+  - expressions.variable.write-from-words
+  - factors.common-factor.meaning
+  - factors.common-multiple.meaning
+  - factors.common-multiple.product
+  - factors.gcf.find
+  - factors.lcm.find
   - fraction.division.symbolic
+  - fraction.reciprocal
+  - height.base-height
+  - inequality.simple.infinitely-many-solutions
+  - inequality.simple.number-line
+  - inequality.simple.write-constraint
+  - inequality.solution.check-substitution
+  - inequality.solution.meaning
+  - multiplication.distributive.factor-common
+  - net.draw
+  - net.meaning
   - percent.application.find-whole
   - percent.of-quantity
   - percent.rate-per-100
@@ -628,15 +761,134 @@ steps:
   - ratio.unit-rate
   - ratio.unit-rate.find
   - ratio.unit-rate.language
+  - rational-number.compare.integers
+  - rational-number.compare.rationals
+  - rational-number.fraction-decimal.number-line
+  - rational-number.integer.number-line
   - rational-number.negative-as-decrease
+  - rational-number.opposite.number-line
+  - rational-number.opposite.of-opposite
+  - rational-number.opposite.of-zero
+  - rational-number.order.context.explain
+  - rational-number.order.context.write
+  - rational-number.order.number-line
+  - rational-number.signed.meaning
+  - rational-number.signed.represent-context
+  - rational-number.zero.meaning-in-context
+  - relationship.application.find-dependent
+  - relationship.change.relate-equation
+  - relationship.dependent-independent.meaning
+  - relationship.equation.from-table
+  - relationship.equation.write.additive
+  - relationship.equation.write.rate
+  - relationship.graph.plot
+  - relationship.table.from-equation
+  - shapes.prism.right.meaning
+  - shapes.pyramid.meaning
+  - statistical-question.recognize
+  - surface-area.application.rectangular-prism
+  - surface-area.application.triangle-faces
+  - surface-area.meaning
+  - surface-area.net.rectangular-prism
+  - surface-area.net.triangle-faces
+  - variability.choose
+  - variability.iqr.compute
+  - variability.mad.compute
+  - variability.meaning
+  - variability.quartiles.find
+  - volume.application.prism.fraction-edges.base-height
+  - volume.application.prism.fraction-edges.lwh
+  - volume.prism.fraction-edges.base-height.apply
+  - volume.prism.fraction-edges.lwh.apply
+  - volume.prism.fraction-edges.packing
+  - volume.prism.fraction-edges.packing-equals-product
+  - volume.unit-fraction-cube
 - position: 7
   grade: '7'
   nodes:
+  - absolute-value.distance.application
+  - absolute-value.distance.between-numbers
+  - absolute-value.distance.between-numbers.explain
+  - angle.adjacent
+  - angle.application.multi-step
+  - angle.complementary
+  - angle.straight-line.sum-180
+  - angle.supplementary
+  - angle.unknown.equation.solve
+  - angle.unknown.equation.write
+  - angle.vertical
+  - angle.vertical.equal
+  - circle.application.area
+  - circle.application.circumference
+  - circle.area.derive-from-circumference
+  - circle.area.formula
+  - circle.area.formula.apply
+  - circle.center-radius
+  - circle.circumference.formula
+  - circle.circumference.formula.apply
+  - circle.circumference.meaning
+  - circle.diameter
+  - circle.pi.ratio
+  - construction.circle.radius-diameter
+  - construction.triangle.three-sides
+  - construction.triangle.two-angles-included-side
+  - construction.triangle.two-sides-included-angle
+  - cross-section.meaning
+  - cross-section.prism.oblique
+  - cross-section.prism.parallel-to-base
+  - cross-section.prism.perpendicular-to-base
+  - cross-section.pyramid.oblique
+  - cross-section.pyramid.parallel-to-base
+  - cross-section.pyramid.perpendicular-to-base
+  - cross-section.side-per-face
+  - distribution.compare.center-difference-in-variability
+  - distribution.compare.overlap
+  - equation.two-step.application.p-times-sum
+  - equation.two-step.application.px-plus-q
+  - equation.two-step.compare-arithmetic-algebraic
+  - equation.two-step.p-times-sum.solve
+  - equation.two-step.px-plus-q.solve
+  - equation.two-step.write.p-times-sum
+  - equation.two-step.write.px-plus-q
+  - expressions.interpret.equivalent-forms
+  - expressions.linear.add.rational
+  - expressions.linear.expand.rational
+  - expressions.linear.factor.rational
+  - expressions.linear.subtract.rational
+  - expressions.opposite-of-sum
+  - expressions.rewrite.in-context
   - fraction.complex-fraction
+  - inequality.multiply-negative.reverse
+  - inequality.same-operation.preserved
+  - inequality.solution-set.interpret
+  - inequality.solution-set.number-line.inclusive
+  - inequality.symbols.inclusive
+  - inequality.two-step.application
+  - inequality.two-step.solve
+  - inequality.two-step.write
+  - inference.compare.two-populations
+  - inference.estimate.population-mean
+  - inference.estimate.population-proportion
   - percent.application.decrease-amount
   - percent.application.increase-amount
   - percent.application.multistep
   - percent.application.percent-change
+  - probability.compound.event-outcomes
+  - probability.compound.fraction-of-outcomes
+  - probability.likelihood.interpret
+  - probability.likelihood.zero-to-one
+  - probability.model.from-frequencies
+  - probability.model.nonuniform.event
+  - probability.model.uniform.develop
+  - probability.model.uniform.event
+  - probability.relative-frequency.estimate
+  - probability.relative-frequency.more-trials
+  - probability.relative-frequency.predict-count
+  - probability.sample-space.list
+  - probability.sample-space.table
+  - probability.sample-space.tree
+  - probability.simulation.design
+  - probability.simulation.use
   - proportional-relationship.constant
   - proportional-relationship.constant.diagram
   - proportional-relationship.constant.equation
@@ -651,9 +903,132 @@ steps:
   - proportional-relationship.test.table
   - ratio.application.multistep
   - ratio.unit-rate.fractions
+  - rational-number.addition.context.describe
+  - rational-number.addition.integers
+  - rational-number.addition.number-line
+  - rational-number.addition.properties-strategy
+  - rational-number.addition.rationals
+  - rational-number.additive-inverse
+  - rational-number.additive-inverse.explain
+  - rational-number.application.addition
+  - rational-number.application.division
+  - rational-number.application.multiplication
+  - rational-number.application.multistep.mathematical
+  - rational-number.application.multistep.real-world
+  - rational-number.application.subtraction
+  - rational-number.compute.mixed-forms
+  - rational-number.decimal-expansion.terminate-or-repeat
+  - rational-number.division.context.describe
+  - rational-number.division.integers
+  - rational-number.division.properties-strategy
+  - rational-number.division.rationals
+  - rational-number.division.sign-rule
+  - rational-number.estimate.reasonableness
+  - rational-number.fraction-to-decimal.application
+  - rational-number.fraction-to-decimal.long-division
+  - rational-number.integer-quotient
+  - rational-number.multiplication.context.describe
+  - rational-number.multiplication.integers
+  - rational-number.multiplication.properties-strategy
+  - rational-number.multiplication.rationals
+  - rational-number.multiplication.sign-rule
+  - rational-number.multiplication.sign-rule.explain
+  - rational-number.negative-fraction.sign-placement
+  - rational-number.opposites.combine-to-zero.context
+  - rational-number.subtraction.add-inverse
+  - rational-number.subtraction.integers
+  - rational-number.subtraction.properties-strategy
+  - rational-number.subtraction.rationals
+  - sampling.population-sample.meaning
+  - sampling.random.meaning
+  - sampling.random.representative
+  - sampling.representative
+  - sampling.variability.meaning
+  - sampling.variability.simulate.categorical
+  - sampling.variability.simulate.numerical
+  - scale-drawing.actual-area
+  - scale-drawing.actual-length
+  - scale-drawing.area.scale-factor-squared
+  - scale-drawing.meaning
+  - scale-drawing.reproduce
+  - surface-area.prism.from-dimensions
+  - surface-area.rectangular-prism.from-dimensions
+  - triangle.ambiguous.two-sides-non-included-angle
+  - triangle.conditions.classify
+  - triangle.determined.three-sides
+  - triangle.determined.two-angles-included-side
+  - triangle.determined.two-sides-included-angle
+  - triangle.inequality
+  - triangle.three-angles
+  - variability.mad.interpret
+  - volume.application.composite.right-prisms
+  - volume.application.right-prism
+  - volume.composite.right-prisms
+  - volume.prism.right.base-height
+  - volume.prism.right.base-height.apply
 - position: 8
   grade: '8'
   nodes:
+  - angle.application.triangles-parallel-lines
+  - angle.transversal.alternate-interior
+  - angle.transversal.alternate-interior.explain
+  - angle.transversal.corresponding
+  - angle.transversal.corresponding.explain
+  - angle.transversal.find-angles
+  - angle.triangle.exterior
+  - angle.triangle.exterior.explain
+  - angle.triangle.sum
+  - angle.triangle.sum.explain
+  - angle.triangle.third-angle
+  - association.categorical.describe
+  - association.categorical.meaning
+  - association.numerical.clusters-outliers
+  - association.numerical.direction
+  - association.numerical.form
+  - association.numerical.strength
+  - congruence.rigid-motion.meaning
+  - congruence.sequence.describe
+  - data.scatter-plot.make
+  - equation.linear.clear-fractions
+  - equation.linear.expand-collect
+  - equation.linear.rational-coefficients
+  - equation.linear.solution-count.cases
+  - equation.linear.solution-count.generate
+  - equation.linear.solution-count.inspection
+  - equation.linear.solution-count.reduce
+  - equation.linear.variable-both-sides
+  - equation.two-variable.graph-as-solutions
+  - equations.linear.solve
+  - exponent.integer.equivalent-expressions
+  - exponent.integer.properties
+  - exponent.negative
+  - exponent.power-of-ten.negative
+  - exponent.whole-number.power-of-power
+  - exponent.whole-number.power-of-product
+  - exponent.whole-number.power-of-quotient
+  - exponent.whole-number.product-rule
+  - exponent.whole-number.quotient-rule
+  - exponent.zero
+  - functions.definition
+  - functions.graph.meaning
+  - functions.identify.graph
+  - functions.identify.table
+  - functions.qualitative.increasing-decreasing
+  - functions.qualitative.linear-nonlinear
+  - functions.qualitative.sketch
+  - geometry.similar-triangles
+  - linear-function.compare.initial-value
+  - linear-function.compare.rate-of-change
+  - linear-function.fitted-line.assess-fit
+  - linear-function.fitted-line.fit
+  - linear-function.fitted-line.intercept.interpret
+  - linear-function.fitted-line.meaning
+  - linear-function.fitted-line.predict
+  - linear-function.fitted-line.slope.interpret
+  - linear-function.fitted-line.solve-for-input
+  - linear-function.line.equation-defines
+  - linear-function.line.graph
+  - linear-function.line.graph-is-line
   - linear-function.line.y-mx-plus-b.derive
   - linear-function.line.y-mx-plus-b.write
   - linear-function.line.y-mx.derive
@@ -665,12 +1040,127 @@ steps:
   - linear-function.model.rate.from-description
   - linear-function.model.rate.from-two-values
   - linear-function.model.rate.interpret
+  - linear-function.nonlinear.example
+  - linear-function.nonlinear.identify
+  - linear-system.application.mathematical
+  - linear-system.application.mathematical.simple
+  - linear-system.application.real-world
+  - linear-system.application.real-world.simple
+  - linear-system.elimination
+  - linear-system.graph.estimate
+  - linear-system.graph.read
+  - linear-system.inspection
+  - linear-system.set-expressions-equal
+  - linear-system.solution-count.slopes
+  - linear-system.solution.intersection
+  - linear-system.solution.meaning
+  - linear-system.substitution
   - proportional-relationship.compare.representations
   - proportional-relationship.graph.make
+  - pythagorean-theorem.application.2d.approximate
+  - pythagorean-theorem.application.2d.whole
+  - pythagorean-theorem.application.3d
+  - pythagorean-theorem.converse
+  - pythagorean-theorem.converse.explain
+  - pythagorean-theorem.distance.application
+  - pythagorean-theorem.distance.coordinates
+  - pythagorean-theorem.proof.explain
+  - pythagorean-theorem.right-triangle.decide
+  - pythagorean-theorem.squares-on-sides
+  - pythagorean-theorem.statement
+  - pythagorean-theorem.unknown-side.3d
+  - pythagorean-theorem.unknown-side.irrational
+  - pythagorean-theorem.unknown-side.whole
+  - rational-number.decimal-expansion.terminate-or-repeat.explain
+  - rational-number.definition
+  - rational-number.repeating-decimal.to-fraction
+  - real-number.approximate.square-root
+  - real-number.approximate.truncate
+  - real-number.compare.approximation
+  - real-number.decimal-expansion
+  - real-number.expression.estimate
+  - real-number.irrational.definition
+  - real-number.irrational.identify
+  - real-number.number-line.approximate
+  - root.cube.meaning
+  - root.cube.perfect-cube.evaluate
+  - root.cube.solve-x-cubed
+  - root.square.meaning
+  - root.square.perfect-square.evaluate
+  - root.square.solve-x-squared
+  - root.square.sqrt2-irrational
+  - scientific-notation.add.different-exponents
+  - scientific-notation.add.same-exponent
+  - scientific-notation.compare.order
+  - scientific-notation.compare.times-as-much
+  - scientific-notation.divide
+  - scientific-notation.divide.mixed-forms
+  - scientific-notation.estimate.large
+  - scientific-notation.estimate.small
+  - scientific-notation.from-decimal.large
+  - scientific-notation.from-decimal.small
+  - scientific-notation.meaning
+  - scientific-notation.multiply
+  - scientific-notation.multiply.mixed-forms
+  - scientific-notation.normalize
+  - scientific-notation.subtract.different-exponents
+  - scientific-notation.subtract.same-exponent
+  - scientific-notation.technology.interpret
+  - scientific-notation.to-decimal.large
+  - scientific-notation.to-decimal.small
+  - scientific-notation.units.choose
+  - similarity.sequence.describe
+  - similarity.transformation.meaning
+  - similarity.triangle.angle-angle
+  - similarity.triangle.angle-angle.decide
+  - similarity.triangle.angle-angle.explain
   - slope.between-two-points
   - slope.constant-on-line
   - slope.constant-on-line.explain
   - slope.unit-rate
+  - table.two-way.construct
+  - table.two-way.interpret
+  - table.two-way.relative-frequency
+  - transformation.dilation.center.coordinates
+  - transformation.dilation.meaning
+  - transformation.dilation.origin.coordinates
+  - transformation.dilation.preserves-angle
+  - transformation.dilation.scale-lengths
+  - transformation.reflection.axis.coordinates.image
+  - transformation.reflection.axis.coordinates.rule
+  - transformation.reflection.diagonal.coordinates
+  - transformation.reflection.meaning
+  - transformation.reflection.parallel-to-axis.coordinates
+  - transformation.rigid-motion.preserves-angle
+  - transformation.rigid-motion.preserves-angle.verify
+  - transformation.rigid-motion.preserves-length
+  - transformation.rigid-motion.preserves-length.verify
+  - transformation.rigid-motion.preserves-parallel
+  - transformation.rigid-motion.preserves-parallel.verify
+  - transformation.rotation.center.coordinates
+  - transformation.rotation.draw
+  - transformation.rotation.meaning
+  - transformation.rotation.origin.coordinates
+  - transformation.sequence.coordinates
+  - transformation.sequence.with-dilation.coordinates
+  - transformation.translation.coordinates.image
+  - transformation.translation.coordinates.rule
+  - transformation.translation.meaning
+  - volume.cone.application
+  - volume.cone.compute
+  - volume.cone.find-height
+  - volume.cone.formula
+  - volume.cylinder.application
+  - volume.cylinder.application.find-height
+  - volume.cylinder.application.find-radius
+  - volume.cylinder.compute
+  - volume.cylinder.find-height
+  - volume.cylinder.find-radius
+  - volume.cylinder.formula
+  - volume.sphere.application
+  - volume.sphere.compute
+  - volume.sphere.find-radius
+  - volume.sphere.formula
 assumes:
 - addition.add-to.nonverbal
 - cardinality.conservation
@@ -705,3 +1195,4 @@ assumes:
 - subitizing.nonverbal
 - subitizing.perceptual
 - subtraction.take-away.nonverbal
+- time.parts-of-day
