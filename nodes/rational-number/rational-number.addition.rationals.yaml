@@ -1,0 +1,130 @@
+id: rational-number.addition.rationals
+concept: rational-number
+facet: core
+level: 3
+type: procedure
+name: Add two signed fractions or decimals
+statement: Add two rational numbers given as signed fractions or decimals by the sign rules for addition,
+  computing the sum or difference of their absolute values as fractions or decimals.
+procedure:
+- If one addend is 0, the sum is the other addend.
+- If the addends have the same sign, add their absolute values as fractions or decimals and give the sum
+  that sign.
+- If they have opposite signs, subtract the smaller absolute value from the larger as fractions or decimals
+  and give the result the sign of the addend with the larger absolute value; if the absolute values are
+  equal, the sum is 0.
+assess: Compute -2.4 + 0.75 and -1/2 + (-1/3).
+sources:
+  ccss:
+  - 7.NS.A.1
+  - 7.NS.A.3
+  learning_components:
+  - 2f8040bb
+requires:
+- clause: standard
+  all_of:
+  - node: absolute-value.distance.rational
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 and 3 work with the absolute values of fraction and decimal addends such as 2.4 and 1/2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.unlike-denominators
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds absolute values given as fractions, as in 1/2 + 1/3, and the denominators may differ.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.addition.algorithm
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds absolute values given as decimals, and the decimal points must be lined up in the
+      sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.unlike-denominators
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 subtracts the smaller absolute value from the larger when these are fractions with different
+      denominators.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.subtraction.algorithm
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 subtracts decimal absolute values, such as 2.4 - 0.75, which have different numbers of
+      decimal places.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.compare
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 decides which decimal addend has the larger absolute value, such as 2.4 against 0.75,
+      to choose the sign.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.compare.common-denominator
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 must decide which fraction absolute value is larger to know what to subtract and which
+      sign to keep.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.signed.meaning
+    relation: definitional
+    points_to: statement
+    why: The sign rules refer to whether each addend is positive or negative. If addition.integers is
+      not a prerequisite (it only restates the same rules), this node needs the meaning of the signs directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

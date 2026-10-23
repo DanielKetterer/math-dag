@@ -1,0 +1,51 @@
+id: distribution.shape.symmetric-skewed
+concept: distribution
+facet: core
+level: 2
+type: concept
+name: Symmetric and skewed distributions
+statement: A distribution is symmetric when its two sides about the center are close to mirror images,
+  skewed right when its values trail off in a long tail toward larger values, and skewed left when they
+  trail off in a long tail toward smaller values.
+assess: 'Three dot plots use a scale from 0 to 10. Plot A has most dots at 1 to 3 and a few stretching
+  out to 9. Plot B has most dots at 7 to 9 and a few stretching down to 1. Plot C has its dots piled around
+  5 and falling off equally on both sides. Name the shape of each: symmetric, skewed left, or skewed right.'
+sources:
+  ccss:
+  - 6.SP.A.2
+  learning_components:
+  - 24b6a84f
+requires:
+- clause: standard
+  all_of:
+  - node: distribution.describe
+    relation: definitional
+    points_to: statement
+    why: Symmetric and skewed name kinds of the overall shape of a distribution, described about its center
+      and spread as first described informally.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.dot-plot.read
+    relation: representational
+    points_to: assess
+    why: The test problem shows each distribution as a dot plot on a scale, so the learner reads where
+      dots pile up and where they trail off.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test problem displays the three distributions as dot plots; the idea of symmetric
+        and skewed shapes does not depend on that display (a histogram shows the same shapes).'
+    status: proposed
+status: proposed

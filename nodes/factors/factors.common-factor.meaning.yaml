@@ -1,0 +1,47 @@
+id: factors.common-factor.meaning
+concept: factors
+facet: core
+level: 3
+type: concept
+name: A common factor of two whole numbers
+statement: A common factor of two whole numbers is a whole number that is a factor of each of them.
+assess: Which of 2, 3, 4, and 6 are common factors of 12 and 18?
+sources:
+  ccss:
+  - 6.NS.B.4
+  learning_components:
+  - 9bf54462
+requires:
+- clause: standard
+  all_of:
+  - node: factors.factor-pair.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement defines a common factor as a number that is a factor of each of two numbers, so
+      it uses the meaning of factor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: factors.is-multiple.decide
+    relation: procedural
+    points_to: assess
+    why: The test problem asks whether 2, 3, 4 and 6 divide both 12 and 18, which is deciding whether
+      a number is a multiple of a one-digit number.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The definition needs only what a factor is; the test asks whether 2, 3, 4 and
+        6 divide 12 and 18, which is deciding whether those numbers are multiples of them.'
+    status: proposed
+status: proposed

@@ -1,0 +1,76 @@
+id: expressions.linear.add.rational
+concept: expressions
+facet: algebraic
+level: 3
+type: procedure
+name: Add linear expressions with rational coefficients
+statement: Add two linear expressions whose coefficients and constants are rational numbers, possibly
+  negative, by combining the terms with the variable and combining the constants.
+procedure:
+- Remove the parentheses around each expression being added.
+- Group the terms with the variable together and the constants together.
+- Add the coefficients of the variable terms, and add the constants.
+assess: 'Add: ((1/2)x - 3) + ((-1/4)x + 5).'
+sources:
+  ccss:
+  - 7.EE.A.1
+  learning_components:
+  - 6b8e01c1
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.like-terms.combine
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 combines the terms with the variable by adding their coefficients, as in combining like
+      terms.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.sum.rearrange-terms
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 1 and 2 remove the parentheses and group the variable terms and the constants by reordering
+      and regrouping the terms of a sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.addition.rationals
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds signed fraction or decimal coefficients and constants, such as (1/2) + (-1/4) and
+      -3 + 5.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.like-terms.meaning
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 groups the terms with the variable together and the constants together, which requires
+      telling like terms apart.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

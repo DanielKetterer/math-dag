@@ -1,0 +1,132 @@
+id: triangle.conditions.classify
+concept: triangle
+facet: determination
+level: 2
+type: procedure
+name: Decide whether three measures give one triangle, more than one, or none
+statement: Given three measures of sides or angles, decide whether they determine exactly one triangle,
+  more than one triangle, or no triangle.
+procedure:
+- 'Name which kind of condition the three measures are: three sides, two sides and the angle between them,
+  two sides and an angle not between them, two angles and the side between them, or three angles.'
+- 'Check whether the measures can fit any triangle: the two shorter sides must add to more than the longest,
+  and the angles must add to less than 180 degrees, or to exactly 180 degrees when all three are angles.'
+- If they fit, decide from the kind of condition whether only one triangle fits, or try to draw a second,
+  different triangle that also meets them.
+assess: 'For each set, say whether it gives exactly one triangle, more than one, or none: (a) sides of
+  4 cm, 5 cm and 10 cm; (b) angles of 30, 60 and 90 degrees; (c) sides of 6 cm and 8 cm with a 50-degree
+  angle between them.'
+sources:
+  ccss:
+  - 7.G.A.2
+  learning_components:
+  - 9ddaee28
+requires:
+- clause: standard
+  all_of:
+  - node: triangle.determined.three-sides
+    relation: procedural
+    points_to: procedure.3
+    why: Three sides is one of the five kinds, and it gives exactly one triangle once the sides fit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: triangle.determined.two-sides-included-angle
+    relation: procedural
+    points_to: procedure.3
+    why: Two sides with the angle between them is one of the five kinds, and it gives exactly one triangle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: triangle.ambiguous.two-sides-non-included-angle
+    relation: procedural
+    points_to: procedure.3
+    why: Two sides with an angle not between them is a kind that can give more than one triangle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: triangle.determined.two-angles-included-side
+    relation: procedural
+    points_to: procedure.3
+    why: Two angles with the side between them is one of the five kinds, and it gives exactly one triangle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: triangle.three-angles
+    relation: procedural
+    points_to: procedure.3
+    why: Three angles is a kind that gives no triangle or infinitely many, depending on the angle sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: triangle.inequality
+    relation: procedural
+    points_to: procedure.2
+    why: Checking whether three sides can fit a triangle applies the rule that the two shorter must exceed
+      the longest.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: procedural
+    points_to: procedure.2
+    why: Checking angle sums against 180 means adding the given angle measures.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude.three-digit
+    relation: procedural
+    points_to: procedure.2
+    why: The angle sum is compared with 180 to see whether it is less than or equal to it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,140 @@
+id: real-number.irrational.identify
+concept: real-number
+facet: core
+level: 3
+type: procedure
+name: Classify a number as rational or irrational
+statement: 'Classify a number given in one of these forms: integers, fractions of integers, terminating
+  decimals, eventually repeating decimals and square roots of perfect squares are rational; square roots
+  of whole numbers that are not perfect squares, pi, and decimals that neither terminate nor repeat are
+  irrational.'
+procedure:
+- If the number is an integer, a fraction of integers, or a terminating or eventually repeating decimal,
+  it is rational.
+- If it is the square root of a whole number, it is rational when that whole number is a perfect square
+  and irrational otherwise.
+- If it is pi, or a decimal that neither terminates nor repeats, it is irrational.
+assess: 'Classify each as rational or irrational: sqrt(16); sqrt(15); 0.121212... with 12 repeating; 0.1211211121111...
+  with one more 1 each time; pi; -4/9.'
+sources:
+  ccss:
+  - 8.NS.A.1
+  learning_components:
+  - a622aa0e
+requires:
+- clause: standard
+  all_of:
+  - node: real-number.irrational.definition
+    relation: definitional
+    points_to: statement
+    why: The classification sorts numbers into rational and irrational, where irrational means not rational.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.definition
+    relation: definitional
+    points_to: procedure.1
+    why: Step 1 calls integers and fractions of integers rational, which applies the definition of a quotient
+      of integers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.repeating-decimal.to-fraction
+    relation: justificatory
+    points_to: procedure.1
+    why: Step 1 calls eventually repeating decimals rational because each can be written as a quotient
+      of integers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.decimal-expansion.terminate-or-repeat
+    relation: justificatory
+    points_to: procedure.3
+    why: Step 3 calls a decimal irrational if it neither terminates nor repeats, because every rational
+      decimal does one or the other.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: root.square.perfect-square.evaluate
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 decides whether a whole number is a perfect square, as in sqrt(16) equal to 4 against
+      sqrt(15).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: root.square.sqrt2-irrational
+    relation: justificatory
+    points_to: procedure.2
+    why: Step 2 calls the square root of a non-square whole number irrational, which is the known case
+      of sqrt(2).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: root.square.meaning
+    relation: definitional
+    points_to: statement
+    why: Step 2 classifies square roots of whole numbers (sqrt(15)); the statement itself uses what a
+      square root of a whole number is, so this is direct, not only through perfect-square evaluation.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: real-number.pi.irrational
+    relation: definitional
+    points_to: statement
+    why: Step 3 asserts that pi is irrational, but only sqrt(2) has a node establishing a case. The fact
+      that pi is irrational is stated without a node that supplies it.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: real-number.decimal-expansion
+    relation: definitional
+    points_to: statement
+    why: 'Possible, with lower confidence: the test problem classifies a never-ending, non-repeating decimal
+      (0.1211211121111...), which treats such a decimal as a number.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

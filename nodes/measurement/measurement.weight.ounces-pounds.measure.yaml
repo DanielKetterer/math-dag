@@ -1,0 +1,54 @@
+id: measurement.weight.ounces-pounds.measure
+concept: measurement
+facet: weight
+level: 2
+type: procedure
+name: Measure weight in ounces or pounds with a scale
+statement: The weight of an object in ounces or pounds is read from a scale marked in that unit, reported
+  as the number with the unit.
+assess: A scale marked in ounces shows its pointer at 12. How much does the bag of beans on it weigh?
+sources:
+  ccss:
+  - 4.MD.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.weight.attribute
+    relation: definitional
+    points_to: statement
+    why: The procedure measures the weight of an object, an attribute separate from its size.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number-line.measurement-scale
+    relation: representational
+    points_to: statement
+    why: A scale marked in ounces or pounds is read like a number line with a measurement scale.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: numeral.read
+    relation: procedural
+    points_to: statement
+    why: The weight is the number at the pointer, so the written numeral on the scale is read.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,66 @@
+id: transformation.sequence.coordinates
+concept: transformation
+facet: coordinate
+level: 2
+type: procedure
+name: Find the coordinates of the image of a polygon after a sequence of rigid motions
+statement: Find the coordinates of the image of a polygon after a sequence of translations, reflections,
+  and rotations by applying each motion, in the given order, to the image produced by the one before.
+procedure:
+- Apply the first motion to each vertex and record the image vertices.
+- Apply the next motion to those image vertices, not to the original figure.
+- Repeat until every motion in the sequence has been applied; the last set of vertices is the final image.
+assess: Triangle ABC has vertices A(1, 2), B(4, 2), and C(1, 4). It is reflected across the x-axis, and
+  the image is then translated 3 units left. Give the coordinates of the vertices of the final image.
+sources:
+  ccss:
+  - 8.G.A.3
+  learning_components:
+  - dd9fa6a3
+  - 128d2c8f
+  - 2d10f542
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.translation.coordinates.image
+    relation: procedural
+    points_to: procedure.1
+    why: Each translation in a sequence is applied by shifting the current vertices, as the test's final
+      move 3 units left.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.reflection.axis.coordinates.image
+    relation: procedural
+    points_to: procedure.1
+    why: Each reflection in a sequence is applied by flipping the current vertices across an axis, as
+      the test's first move across the x-axis.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rotation.center.coordinates
+    relation: procedural
+    points_to: procedure.1
+    why: Each rotation in a sequence is applied by turning the current vertices' offsets from the center.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

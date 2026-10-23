@@ -1,0 +1,86 @@
+id: surface-area.application.triangle-faces
+concept: surface-area
+facet: core
+level: 3
+type: application
+name: Solve real-world problems about the surface area of an object with triangular and rectangular faces
+statement: A real-world problem describes an object shaped like a solid whose faces are triangles and
+  rectangles, such as a triangular prism or a pyramid, with the lengths needed, and asks how much material
+  covers it; the learner finds its surface area.
+assess: A tent is a triangular prism 8 ft long, with a floor. Each triangular end has a base of 6 ft,
+  a height of 4 ft and slanted sides of 5 ft. How many square feet of canvas make the tent, floor included?
+sources:
+  ccss:
+  - 6.G.A.4
+  - 7.G.B.6
+  learning_components:
+  - 6179a7ca
+  - 8b731d33
+requires:
+- clause: standard
+  all_of:
+  - node: surface-area.net.triangle-faces
+    relation: definitional
+    points_to: statement
+    why: The learner adds the areas of the rectangles and triangles of an object such as a triangular
+      prism or pyramid.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: surface-area.meaning
+    relation: definitional
+    points_to: statement
+    why: The material that covers the object exactly is its surface area, the total area of its faces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: height.base-height
+    relation: procedural
+    points_to: assess
+    why: The tent's triangular end has a given height of 4 ft that must be chosen over the slanted side
+      of 5 ft.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem has the tent''s triangular end with a slanted side of 5
+        ft beside the height of 4 ft that must be chosen.'
+    status: proposed
+  - node: shapes.prism.right.meaning
+    relation: definitional
+    points_to: statement
+    why: The object may be a triangular prism, so the learner must identify its two triangular ends and
+      rectangular sides.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.pyramid.meaning
+    relation: definitional
+    points_to: statement
+    why: The object may be a pyramid, so the learner must identify its base and triangular faces.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

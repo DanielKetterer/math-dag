@@ -1,0 +1,48 @@
+id: rational-number.application.multistep.mathematical
+concept: rational-number
+facet: core
+level: 3
+type: application
+name: Solve multi-step mathematical problems with positive and negative rational numbers
+statement: Solve a problem about numbers, stated without a real-world context, that takes two or more
+  operations on rational numbers given in different forms, at least one of them negative.
+assess: Points A and B are at -2.4 and 1 3/5 on a number line. What number is halfway between A and B?
+sources:
+  ccss:
+  - 7.EE.B.3
+  learning_components:
+  - ec2a48cb
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.compute.mixed-forms
+    relation: procedural
+    points_to: statement
+    why: The numbers, such as -2.4 and 1 3/5, are in different forms and must be computed with together
+      in each operation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number.halfway-between
+    relation: definitional
+    points_to: assess
+    why: The test problem asks for the number halfway between -2.4 and 1 3/5, which uses the idea of halfway
+      between two numbers.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem asks for the number halfway between two points; the statement
+        is about any two-operation problem on rationals.'
+    status: proposed
+status: proposed

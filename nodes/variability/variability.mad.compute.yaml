@@ -1,0 +1,60 @@
+id: variability.mad.compute
+concept: variability
+facet: mad
+level: 3
+type: procedure
+name: Find the mean absolute deviation
+statement: The mean absolute deviation (MAD) of a numerical data set is the mean of the distances of its
+  values from the mean of the data set.
+procedure:
+- Find the mean of the data set.
+- For each value, find its distance from the mean (the larger of the two numbers minus the smaller).
+- Find the mean of these distances.
+assess: Find the mean absolute deviation of 2, 4, 6, 8. (The mean is 5.)
+sources:
+  ccss:
+  - 6.SP.B.5.c
+  learning_components:
+  - 3280abf4
+requires:
+- clause: standard
+  all_of:
+  - node: center.mean.compute
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds the mean of the data set, and step 3 finds the mean of the distances, so the mean
+      procedure is used twice.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts the smaller number from the larger for each value and the mean, as in 5 minus
+      2 and 8 minus 5 in the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude
+    relation: definitional
+    points_to: statement
+    why: Step 2 takes the larger of the value and the mean minus the smaller, so it decides which of the
+      two is greater.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

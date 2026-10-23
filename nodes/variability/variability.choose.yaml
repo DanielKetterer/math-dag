@@ -1,0 +1,88 @@
+id: variability.choose
+concept: variability
+facet: core
+level: 3
+type: concept
+name: Choose the IQR or the MAD to fit the distribution
+statement: For a strongly skewed distribution or one with outliers the IQR, reported with the median,
+  describes variability better, because extreme values inflate the MAD; for a roughly symmetric distribution
+  without outliers the MAD, reported with the mean, is a good summary.
+assess: Commute times for 30 workers are strongly skewed right, with three commutes much longer than the
+  rest. Should you report the IQR or the MAD as the measure of variability? Why?
+sources:
+  ccss:
+  - 6.SP.B.5.d
+  learning_components:
+  - 5b18f52e
+requires:
+- clause: standard
+  all_of:
+  - node: variability.iqr.compute
+    relation: definitional
+    points_to: statement
+    why: One of the two measures being chosen between is the IQR, so the learner must know it as the interval
+      holding the middle half of the data.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: variability.mad.compute
+    relation: definitional
+    points_to: statement
+    why: The other measure being chosen between is the MAD, and the reason extreme values inflate it comes
+      from averaging distances from the mean.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: distribution.shape.symmetric-skewed
+    relation: definitional
+    points_to: statement
+    why: The choice depends on whether the distribution is strongly skewed or roughly symmetric, so the
+      learner must recognize those shapes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: distribution.pattern-deviations
+    relation: definitional
+    points_to: statement
+    why: The statement separates distributions with outliers from those without, so the learner must recognize
+      values that depart strikingly from the pattern.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: variability.meaning
+    relation: definitional
+    points_to: statement
+    why: The choice is about which number better describes variability, which is the job of a measure
+      of variation.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

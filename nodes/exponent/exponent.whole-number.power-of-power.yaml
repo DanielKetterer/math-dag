@@ -1,0 +1,55 @@
+id: exponent.whole-number.power-of-power
+concept: exponent
+facet: whole-number-power
+level: 3
+type: concept
+name: 'Power of a power: (a^m)^n = a^(m x n)'
+statement: 'For any number a and positive whole numbers m and n, (a^m)^n = a^(m x n): raising a power
+  to a power multiplies the exponents.'
+assess: 'Without computing any power, decide whether each is true: (3^2)^4 = 3^8; (3^2)^4 = 3^6; (3^2)^4
+  = 9^8.'
+sources:
+  ccss:
+  - 8.EE.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The rule is stated with letters, each standing for any number or any whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: (a^m)^n is n equal factors of a^m, and each a^m is itself m equal factors of a.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problems need the product 2 x 4 to tell 3^8 apart from 3^6.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement multiplies general whole-number exponents; only the test problem
+        needs the specific product 2 x 4.'
+    status: proposed
+status: proposed

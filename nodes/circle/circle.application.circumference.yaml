@@ -1,0 +1,45 @@
+id: circle.application.circumference
+concept: circle
+facet: measure
+level: 3
+type: application
+name: Solve real-world problems about the distance around a circular object
+statement: A real-world problem gives the radius or diameter of a circular object and asks for the distance
+  once around it; the learner finds the circumference.
+assess: A circular garden has a radius of 5 m. How many meters of fencing go once around it? Use 3.14
+  for pi.
+sources:
+  ccss:
+  - 7.G.B.4
+  learning_components:
+  - 3e117ec0
+requires:
+- clause: standard
+  all_of:
+  - node: circle.circumference.formula.apply
+    relation: procedural
+    points_to: statement
+    why: The learner finds the circumference from the given radius or diameter with the formula.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.circumference.meaning
+    relation: definitional
+    points_to: statement
+    why: The problem asks for the distance once around a circular object, which is its circumference.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

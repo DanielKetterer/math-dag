@@ -1,0 +1,61 @@
+id: expressions.order-of-operations.exponents
+concept: expressions
+facet: numerical
+level: 3
+type: concept
+name: Powers come before multiplication and division
+statement: In the conventional order of operations, powers are evaluated after the work inside grouping
+  symbols and before multiplication and division.
+assess: In 2 x 3^2, which is done first, the multiplication or the power? Is the value 36 or 18?
+sources:
+  ccss:
+  - 6.EE.A.2.c
+  learning_components:
+  - ceb07b7c
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.order-of-operations
+    relation: definitional
+    points_to: statement
+    why: The statement places powers inside the existing conventional order, after grouping symbols and
+      before multiplication and division.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: Deciding when a power is evaluated requires knowing that a power is an operation that makes a
+      product of equal factors.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: procedural
+    points_to: assess
+    why: Telling whether 2 x 3^2 is 36 or 18 requires evaluating 3^2 as 9 before multiplying.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs an actual value of 3^2 (to tell 36 from 18); the rule
+        about where powers fall in the order does not require evaluating one.'
+    status: proposed
+status: proposed

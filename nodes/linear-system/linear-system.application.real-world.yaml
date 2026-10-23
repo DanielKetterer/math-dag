@@ -1,0 +1,105 @@
+id: linear-system.application.real-world
+concept: linear-system
+facet: algebraic
+level: 3
+type: application
+name: Solve real-world problems about two unknowns given two linear conditions
+statement: Solve real-world problems about two unknown quantities related by two linear conditions, such
+  as a total count and a total value, by writing a system of two linear equations and solving it algebraically.
+assess: A club sold 20 tickets, some at $2 and some at $5, and took in $76. How many tickets of each price
+  did it sell?
+sources:
+  ccss:
+  - 8.EE.C.8.c
+  learning_components:
+  - 158e0231
+requires:
+- clause: via-substitution
+  all_of:
+  - node: expressions.variable.write-for-situation
+    relation: representational
+    points_to: statement
+    why: Each condition is written with letters for the two unknown counts, such as 2x + 5y for the total
+      value of the tickets.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The two conditions become two equations that the unknown pair must satisfy together, which is
+      a solution of a system.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.substitution
+    relation: procedural
+    points_to: statement
+    why: The system is solved algebraically, for example by solving x + y = 20 for y and substituting
+      into the value equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement says ''solving it algebraically''; substitution is one algebraic
+        method. | other route: Solve the system by elimination (linear-system.elimination).'
+    status: disputed
+- clause: elimination
+  all_of:
+  - node: expressions.variable.write-for-situation
+    relation: representational
+    points_to: statement
+    why: Each condition is written with letters for the two unknown counts, such as 2x + 5y for the total
+      value of the tickets.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The two conditions become two equations that the unknown pair must satisfy together, which is
+      a solution of a system.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.elimination
+    relation: procedural
+    points_to: statement
+    why: The system of two linear equations is solved algebraically by adding or subtracting the equations
+      to eliminate one variable.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement says ''solving it algebraically''; elimination is one algebraic
+        method.'
+    status: disputed
+status: proposed

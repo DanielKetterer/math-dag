@@ -1,0 +1,43 @@
+id: fraction.reciprocal
+concept: fraction
+facet: operator
+level: 3
+type: concept
+name: The reciprocal of a fraction
+statement: The reciprocal of a nonzero fraction a/b is b/a, the number whose product with a/b is 1.
+assess: 'Which pairs are reciprocals: 2/3 and 3/2; 2/3 and 1/3; 5 and 1/5; 1/4 and 4/1?'
+sources:
+  ccss:
+  - 6.NS.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.multiplication.symbolic
+    relation: definitional
+    points_to: statement
+    why: The reciprocal is defined as the number whose product with a/b is 1, found by multiplying a/b
+      by b/a.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.whole-number.as-fraction
+    relation: representational
+    points_to: assess
+    why: The test pairs 5 with 1/5 and 1/4 with 4/1, which requires writing a whole number as a fraction.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is about a nonzero fraction a/b; only the test pair 5 and 1/5 needs
+        5 read as 5/1.'
+    status: proposed
+status: proposed

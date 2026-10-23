@@ -1,0 +1,55 @@
+id: rational-number.opposite.of-opposite
+concept: rational-number
+facet: core
+level: 3
+type: concept
+name: The opposite of the opposite of a number is the number
+statement: 'For every number a, the opposite of the opposite of a is a itself: -(-a) = a.'
+assess: What number is -(-7)? If a = -3, what number is -(-a)?
+sources:
+  ccss:
+  - 6.NS.C.6.a
+  learning_components:
+  - a40a923f
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.opposite.number-line
+    relation: justificatory
+    points_to: statement
+    why: Taking the opposite twice crosses to the other side of 0 and back at the same distance, which
+      is why -(-a) returns to a.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.opposite.of-zero
+    relation: definitional
+    points_to: statement
+    why: The statement holds for every number a, including 0, whose opposite is 0 so that -(-0) = 0.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: representational
+    points_to: assess
+    why: The test problem gives a = -3 and asks for -(-a), which requires reading the letter a as standing
+      for a number.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

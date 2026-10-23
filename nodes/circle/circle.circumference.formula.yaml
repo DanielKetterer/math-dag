@@ -1,0 +1,171 @@
+id: circle.circumference.formula
+concept: circle
+facet: measure
+level: 3
+type: concept
+name: The circumference formula C = pi x d
+statement: The circumference of a circle with diameter d and radius r is C = pi x d, which is the same
+  as C = 2 x pi x r.
+assess: 'True or false: a circle with radius 4 cm has circumference pi x 4 cm. Say which rule decides
+  it.'
+sources:
+  ccss:
+  - 7.G.B.4
+  learning_components: []
+requires:
+- clause: via-meaning
+  all_of:
+  - node: circle.pi.ratio
+    relation: definitional
+    points_to: statement
+    why: The formula C = pi x d restates that circumference divided by diameter is the number pi.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.diameter
+    relation: definitional
+    points_to: statement
+    why: The formula uses the diameter d and says C = 2 x pi x r because a diameter is twice the radius.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.center-radius
+    relation: definitional
+    points_to: statement
+    why: The second form of the formula is written with the radius r of the circle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: representational
+    points_to: statement
+    why: The formula is written with the letters C, d and r, each standing for a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.evaluate
+    relation: definitional
+    points_to: assess
+    why: Testing pi x 4 for a radius of 4 cm means substituting values into the formula.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test substitutes a value (radius 4) into the formula to decide the claim.'
+    status: proposed
+  - node: division.unknown-factor.meaning
+    relation: justificatory
+    points_to: statement
+    why: Turning circumference divided by diameter equals pi into C = pi x d uses a quotient as an unknown
+      factor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Turning circumference divided by diameter equals pi into C = pi x d uses a quotient
+        as an unknown factor. | other route: Read pi as the number of diameters that fit around the circle,
+        a multiplicative comparison (multiplication.comparison), so C = pi x d is read directly.'
+    status: disputed
+- clause: critic-route-2
+  note: 'Comparison route: pi as the number of diameters around the circle.'
+  all_of:
+  - node: circle.pi.ratio
+    relation: definitional
+    points_to: statement
+    why: The formula C = pi x d restates that circumference divided by diameter is the number pi.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.diameter
+    relation: definitional
+    points_to: statement
+    why: The formula uses the diameter d and says C = 2 x pi x r because a diameter is twice the radius.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.center-radius
+    relation: definitional
+    points_to: statement
+    why: The second form of the formula is written with the radius r of the circle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: representational
+    points_to: statement
+    why: The formula is written with the letters C, d and r, each standing for a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.evaluate
+    relation: definitional
+    points_to: assess
+    why: Testing pi x 4 for a radius of 4 cm means substituting values into the formula.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test substitutes a value (radius 4) into the formula to decide the claim.'
+    status: proposed
+  - node: multiplication.comparison
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Comparison route: pi as the number of diameters around
+      the circle.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

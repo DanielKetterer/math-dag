@@ -1,0 +1,124 @@
+id: angle.application.triangles-parallel-lines
+concept: angle
+facet: measure
+level: 3
+type: application
+name: Find an unknown angle in a diagram with parallel lines and a triangle
+statement: Solve problems that find an unknown angle measure in a diagram combining two parallel lines,
+  a transversal, and a triangle, by chaining a transversal angle fact with the triangle angle sum or the
+  exterior angle fact; all given measures are numbers.
+assess: Lines m and n are parallel. Point A is on m, and points B and C are on n, with B to the left of
+  C. The angle between segment AB and the part of line m to the left of A measures 50 degrees, and angle
+  ACB measures 70 degrees. Find the measure of angle BAC.
+sources:
+  ccss:
+  - 8.G.A.5
+  learning_components:
+  - b4b423c9
+requires:
+- clause: via-sum
+  all_of:
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: assess
+    why: The test problem subtracts the 50 and 70 degree angles from 180 degrees to get the unknown angle.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.triangle.sum
+    relation: procedural
+    points_to: statement
+    why: The second link finds the unknown triangle angle from the other two by the triangle angle sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement allows the chain to end with the exterior angle fact instead of
+        the angle sum. | other route: Finish with the exterior angle fact (angle.triangle.exterior, using
+        angle.straight-line.sum-180 to get the exterior angle) instead of the triangle angle sum.'
+    status: disputed
+- clause: via-exterior
+  all_of:
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: assess
+    why: The test problem subtracts the 50 and 70 degree angles from 180 degrees to get the unknown angle.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.triangle.exterior
+    relation: procedural
+    points_to: statement
+    why: The statement allows the chain to end with the exterior angle fact instead of the angle sum,
+      so the exterior angle equal to two remote angles is used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement says the chain ends with the angle sum or the exterior angle fact;
+        either one alone completes the test problem. | other route: Finish with the triangle angle sum
+        (angle.triangle.sum) instead of the exterior angle fact.'
+    status: disputed
+- clause: via-alternate-interior
+  all_of:
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: assess
+    why: The test problem subtracts the 50 and 70 degree angles from 180 degrees to get the unknown angle.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.transversal.alternate-interior
+    relation: definitional
+    points_to: statement
+    why: 'The chain starts with a transversal angle fact: the 50 degree angle at A equals angle ABC across
+      the parallel lines.'
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement asks only for ''a transversal angle fact''; alternate interior
+        angles is one such fact and the test problem happens to use it. | other route: Carry the 50 degrees
+        across the transversal with corresponding angles plus vertical angles (angle.transversal.corresponding
+        and angle.vertical.equal) to get angle ABC.'
+    status: disputed
+related:
+- node: angle.transversal.corresponding
+  relation: common_path
+  note: 'Common path, not required: route ''critic-route-1'' needed everything another route needs and
+    more, so it was removed.'
+- node: angle.vertical.equal
+  relation: common_path
+  note: 'Common path, not required: route ''critic-route-1'' needed everything another route needs and
+    more, so it was removed.'
+- node: angle.straight-line.sum-180
+  relation: common_path
+  note: 'Common path, not required: route ''critic-route-2'' needed everything another route needs and
+    more, so it was removed.'
+status: proposed

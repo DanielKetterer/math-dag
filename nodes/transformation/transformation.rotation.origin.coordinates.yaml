@@ -1,0 +1,108 @@
+id: transformation.rotation.origin.coordinates
+concept: transformation
+facet: coordinate
+level: 3
+type: procedure
+name: Find the coordinates of the image of a polygon rotated about the origin by a multiple of 90 degrees
+statement: Find the coordinates of the image of a polygon rotated about the origin by a multiple of 90
+  degrees with the rules (x, y) -> (-y, x) for 90 degrees counterclockwise, (x, y) -> (-x, -y) for 180
+  degrees, and (x, y) -> (y, -x) for 90 degrees clockwise.
+procedure:
+- 'Choose the rule for the angle and direction: 90 degrees counterclockwise (the same as 270 degrees clockwise)
+  is (x, y) -> (-y, x); 180 degrees is (x, y) -> (-x, -y); 90 degrees clockwise (the same as 270 degrees
+  counterclockwise) is (x, y) -> (y, -x).'
+- Apply the rule to each vertex.
+- Join the image vertices in the same order.
+assess: Triangle ABC has vertices A(1, 1), B(4, 1), and C(1, 3). Give the coordinates of the vertices
+  of its image after a rotation of 90 degrees counterclockwise about the origin.
+sources:
+  ccss:
+  - 8.G.A.3
+  learning_components:
+  - 61d83709
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.rotation.meaning
+    relation: definitional
+    points_to: statement
+    why: The rules give the image of a vertex under a rotation through a multiple of 90 degrees about
+      the origin.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.axes-origin
+    relation: definitional
+    points_to: statement
+    why: The rotation is about the origin, the point where the axes meet, which is the center O of the
+      rotation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: spatial.turn-direction
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 chooses the rule by direction, clockwise or counterclockwise, which are different rules
+      for the same number of degrees.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: This id does not appear in index.txt or in boundary_nodes, so its statement cannot
+        be checked. The skill it appears to name, telling a clockwise turn from a counterclockwise one,
+        is used directly by the target''s own statement, procedure or '
+    status: disputed
+  - node: coordinate.ordered-pair.notation
+    relation: representational
+    points_to: procedure.2
+    why: Step 2 applies a rule such as (x, y) -> (-y, x), which rearranges the two parts of an ordered
+      pair.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.opposite.number-line
+    relation: procedural
+    points_to: procedure.2
+    why: The rules negate a coordinate, which is taking the opposite of a number, and the test's image
+      has negative coordinates.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.measure.circle-fraction
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 uses that 90 degrees counterclockwise is the same as 270 degrees clockwise, which rests
+      on a full turn being 360 degrees.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

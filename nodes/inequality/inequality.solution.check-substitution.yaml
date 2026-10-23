@@ -1,0 +1,73 @@
+id: inequality.solution.check-substitution
+concept: inequality
+facet: open-sentence
+level: 3
+type: procedure
+name: Check by substitution which numbers solve an inequality
+statement: Decide which numbers in a given set, if any, make an inequality true by substituting each for
+  the variable and checking whether the resulting comparison is true.
+procedure:
+- Substitute a number from the set for the variable.
+- Evaluate each side.
+- If the comparison is true, the number is a solution; repeat for each number in the set.
+assess: Which numbers in the set {1, 3, 5, 7} make 2x - 1 > 6 true?
+sources:
+  ccss:
+  - 6.EE.B.5
+  learning_components:
+  - 8fec2d18
+  - a9e1847a
+requires:
+- clause: standard
+  all_of:
+  - node: inequality.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: A number is kept as a solution only when substituting it makes the inequality true, which is
+      the meaning of a solution.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.evaluate
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 1 and 2 substitute a number for the variable and evaluate each side, as in 2x - 1 with
+      x = 5.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 decides whether the comparison of the two evaluated sides is true, as in 9 > 6, by telling
+      which number is greater.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: definitional
+    points_to: statement
+    why: 'Task-only: the test problem writes a number directly next to a letter (2x); this is otherwise
+      reached only through another prerequisite.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

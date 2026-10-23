@@ -1,0 +1,79 @@
+id: linear-function.fitted-line.fit
+concept: linear-function
+facet: fitted-line
+level: 2
+type: procedure
+name: Informally fit a straight line to a scatter plot
+statement: For a scatter plot that suggests a linear association, draw a straight line that follows the
+  trend of the points, with the points as close to the line as possible and roughly as many above it as
+  below it along its length.
+procedure:
+- Judge the direction of the trend from the points.
+- Place a straight edge along the trend so that the points are as close to it as possible.
+- Adjust it until roughly as many points lie above it as below it, at both ends and in the middle.
+- Draw the line across the range of the data.
+assess: Plot the points (1, 3), (2, 4), (3, 6), (4, 6), (5, 8), (6, 9) and draw a straight line that fits
+  the data.
+sources:
+  ccss:
+  - 8.SP.A.2
+  learning_components:
+  - bf455cde
+requires:
+- clause: standard
+  all_of:
+  - node: linear-function.fitted-line.meaning
+    relation: definitional
+    points_to: statement
+    why: The line drawn is the line that models the trend, summarizing the data without having to pass
+      through every point.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: association.numerical.direction
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 judges from the points whether the trend rises or falls, which is deciding positive or
+      negative association.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.scatter-plot.make
+    relation: procedural
+    points_to: assess
+    why: The test problem asks for the six given points to be plotted as a scatter plot before the line
+      is drawn.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem asks the learner to plot the six points first; the procedure
+        starts from a scatter plot that already suggests a linear association.'
+    status: proposed
+  - node: association.numerical.form
+    relation: definitional
+    points_to: statement
+    why: The procedure applies to a scatter plot that suggests a linear association, so the learner must
+      be able to judge that; this node's own statement uses it.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

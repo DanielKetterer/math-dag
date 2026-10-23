@@ -1,0 +1,92 @@
+id: linear-system.substitution
+concept: linear-system
+facet: algebraic
+level: 3
+type: procedure
+name: Solve a system of two linear equations by substitution
+statement: Solve a system of two linear equations by expressing one variable in terms of the other from
+  one equation, substituting that expression into the other equation, solving for the remaining variable,
+  and substituting back.
+procedure:
+- If neither equation is already solved for a variable, solve one of them for one variable.
+- Substitute that expression for the variable in the other equation.
+- Solve the resulting one-variable equation.
+- Substitute the value back to find the other variable.
+assess: Solve the system y = 2x + 1 and 3x + y = 11 by substitution.
+sources:
+  ccss:
+  - 8.EE.C.8.b
+  learning_components:
+  - c7a43025
+requires:
+- clause: standard
+  all_of:
+  - node: linear-system.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The method finds the pair that satisfies both equations, so the meaning of a solution of a system
+      is used throughout.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.equality-preserved.same-operation
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 solves one equation for one variable, which is done by applying the same operation to
+      both sides of that equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.parts.single-entity
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 replaces a variable by a whole expression, which must be treated as one quantity, in parentheses,
+      inside the other equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.linear.expand-collect
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 solves the one-variable equation that results, which needs combining like terms and sometimes
+      expanding, as in 3x + (2x + 1) = 11.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.evaluate
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 substitutes the value of the first variable back into an expression for the other variable
+      and evaluates it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

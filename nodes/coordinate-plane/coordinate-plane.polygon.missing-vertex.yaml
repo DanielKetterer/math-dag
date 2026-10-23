@@ -1,0 +1,67 @@
+id: coordinate-plane.polygon.missing-vertex
+concept: coordinate-plane
+facet: location
+level: 2
+type: procedure
+name: Find the missing vertex of a rectangle with sides parallel to the axes
+statement: 'Find the fourth vertex of a rectangle with sides parallel to the axes from three given vertices
+  with coordinates of any sign, by any reliable method: plotting the points and completing the rectangle,
+  or using that each vertex shares its first coordinate with one neighboring vertex and its second coordinate
+  with the other.'
+assess: Three vertices of a rectangle with sides parallel to the axes are (-4, 3), (2, 3) and (2, -1).
+  What are the coordinates of the fourth vertex?
+sources:
+  ccss:
+  - 6.G.A.3
+  - 6.NS.C.8
+  learning_components:
+  - 89c16385
+  - c7645c9c
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.rectangle.define
+    relation: definitional
+    points_to: statement
+    why: The fourth corner is found by completing a rectangle, a quadrilateral with four right angles.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: parallel.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement says the sides are parallel to the axes, so the learner must know what parallel
+      means.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.ordered-pair.meaning
+    relation: definitional
+    points_to: statement
+    why: The shared-coordinate method needs that points with the same first (or second) coordinate lie
+      on one vertical (or horizontal) line, replacing the wrong edge e753.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: coordinate-plane.four-quadrants.plot
+  relation: common_path
+  note: 'Common path, not required: route ''via-plot'' needed everything another route needs and more,
+    so it was removed.'
+- node: coordinate-plane.four-quadrants.read
+  relation: common_path
+  note: 'Common path, not required: route ''via-read'' needed everything another route needs and more,
+    so it was removed.'
+status: proposed

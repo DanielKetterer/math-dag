@@ -1,0 +1,71 @@
+id: transformation.translation.meaning
+concept: transformation
+facet: geometric
+level: 2
+type: concept
+name: A translation moves every point the same distance in the same direction
+statement: A translation moves every point of the plane the same distance in the same direction; the image
+  of a figure is the set of the moved points.
+assess: Picture A shows a flag after every point of it moved 4 cm to the right. Picture B shows the flag
+  after it was turned about the foot of its pole, so points far from the foot moved farther than points
+  near it. Which picture shows a translation, and which condition of a translation does the other one
+  break?
+sources:
+  ccss:
+  - 8.G.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: point.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement moves every point of the plane and calls the image the set of moved points, so
+      a point must already be an exact location.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: spatial.position.relative
+    relation: definitional
+    points_to: assess
+    why: The condition 'the same direction' and the test's 'to the right' use position words to say which
+      way every point moves.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The idea ''same direction'' does not need position words for where an object is;
+        only the test''s phrase ''to the right'' uses a position word.'
+    status: proposed
+  - node: measurement.length.attribute
+    relation: definitional
+    points_to: statement
+    why: The condition 'same distance' compares how far each point moves, which treats that distance as
+      a length that can be equal or unequal.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: direction.of-motion
+    relation: definitional
+    points_to: statement
+    why: '''Same direction'' needs the notion that a move has a direction and that two moves can point
+      the same way; no index node teaches this at the target''s level (spatial.position.body is the nearest,
+      at the level of body movement).'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

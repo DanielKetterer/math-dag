@@ -1,0 +1,135 @@
+id: pythagorean-theorem.statement
+concept: pythagorean-theorem
+facet: length
+level: 3
+type: concept
+name: The Pythagorean theorem a^2 + b^2 = c^2
+statement: In a right triangle with legs of lengths a and b and hypotenuse (the side opposite the right
+  angle) of length c, a^2 + b^2 = c^2.
+assess: Triangle PQR has its right angle at Q. Write the Pythagorean theorem as an equation in the lengths
+  PQ, QR, and PR.
+sources:
+  ccss:
+  - 8.G.B.6
+  - 8.G.B.7
+  learning_components: []
+requires:
+- clause: via-squares-on-sides
+  all_of:
+  - node: shapes.triangle.right.identify
+    relation: definitional
+    points_to: statement
+    why: The statement is about a right triangle, its legs, and the hypotenuse opposite the right angle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: representational
+    points_to: statement
+    why: The notation a^2, b^2 and c^2 means each length times itself.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The letters a, b and c stand for the side lengths of the triangle.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: pythagorean-theorem.squares-on-sides
+    relation: representational
+    points_to: statement
+    why: The equation a^2 + b^2 = c^2 writes the area fact about squares on the legs and hypotenuse in
+      symbols for side lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The equation can be reached without the area picture, by checking a^2 + b^2 =
+        c^2 numerically on right triangles with given or measured side lengths (3-4-5, 5-12-13). The squares-on-sides
+        fact is one way to give the equation meaning, not th | other route: Numerical investigation: square
+        the two shorter sides and the longest side of several right triangles with given lengths, add,
+        and observe a^2 + b^2 = c^2 each time.'
+    status: disputed
+- clause: critic-route-1
+  note: Reach the equation by numerical investigation of right triangles with given side lengths, without
+    the squares-on-sides picture.
+  all_of:
+  - node: shapes.triangle.right.identify
+    relation: definitional
+    points_to: statement
+    why: The statement is about a right triangle, its legs, and the hypotenuse opposite the right angle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: representational
+    points_to: statement
+    why: The notation a^2, b^2 and c^2 means each length times itself.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The letters a, b and c stand for the side lengths of the triangle.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Reach the equation by numerical investigation of right
+      triangles with given side lengths, without the squares-on-sides picture.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: addition.within-1000
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Reach the equation by numerical investigation of right
+      triangles with given side lengths, without the squares-on-sides picture.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

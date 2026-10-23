@@ -1,0 +1,61 @@
+id: exponent.whole-number-power.evaluate.whole-base
+concept: exponent
+facet: whole-number-power
+level: 3
+type: procedure
+name: Evaluate a power of a whole number
+statement: Find the value of a^b, for a whole number a and a whole-number exponent b of at least 1, by
+  multiplying b factors of a.
+procedure:
+- Write a^b as a product of b factors of a.
+- Multiply the factors.
+assess: Evaluate 3^4.
+sources:
+  ccss:
+  - 6.EE.A.1
+  learning_components:
+  - fe47029d
+requires:
+- clause: standard
+  all_of:
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: procedure.1
+    why: Step 1 rewrites a^b as a product of b factors of a, which is exactly what the power means.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: assess
+    why: Step 2 multiplies the factors one at a time, as in 9 x 3 and then 27 x 3 for 3^4, each a whole
+      number times a one-digit factor.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Step 2 multiplies whole numbers, but only the test problem (3^4 via 9 x 3, 27
+        x 3) pins it to a one-digit multiplier; the statement allows any whole-number base (12^2 needs
+        a two-digit multiplier), see missing prerequisite multiplication.tw'
+    status: proposed
+  - node: multiplication.two-digit-by-two-digit
+    relation: definitional
+    points_to: statement
+    why: The statement allows any whole-number base, so the running product can need a multi-digit multiplier
+      (12^2, 12^3); the test (3^4) uses only a one-digit multiplier.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

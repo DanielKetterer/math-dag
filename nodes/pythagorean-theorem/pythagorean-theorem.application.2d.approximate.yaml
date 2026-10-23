@@ -1,0 +1,83 @@
+id: pythagorean-theorem.application.2d.approximate
+concept: pythagorean-theorem
+facet: length
+level: 3
+type: application
+name: Solve real-world right-triangle problems with answers rounded to the nearest tenth
+statement: Solve real-world problems in which the unknown length is a side of one right triangle in a
+  plane and is not a whole number, giving the length rounded to the nearest tenth.
+assess: A rectangular screen is 8 inches wide and 5 inches tall. How long is its diagonal, to the nearest
+  tenth of an inch?
+sources:
+  ccss:
+  - 8.G.B.7
+  learning_components:
+  - b922397f
+requires:
+- clause: standard
+  all_of:
+  - node: pythagorean-theorem.unknown-side.irrational
+    relation: procedural
+    points_to: statement
+    why: The unknown side is found as an exact square root of a number that is not a perfect square.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: real-number.approximate.square-root
+    relation: procedural
+    points_to: statement
+    why: The answer must be located as a decimal by bounding the square root between squares of decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rounding.decimal.any-place
+    relation: procedural
+    points_to: statement
+    why: The decimal length is rounded to the nearest tenth.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.triangle.right.identify
+    relation: definitional
+    points_to: statement
+    why: The unknown length is a side of one right triangle that must be seen in the situation.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.rectangle.define
+    relation: definitional
+    points_to: assess
+    why: The screen diagonal forms a right triangle with the width and height because a rectangle has
+      right angles.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s rectangular screen needs the rectangle''s right angles
+        to see the right triangle; the statement does not mention rectangles.'
+    status: proposed
+status: proposed

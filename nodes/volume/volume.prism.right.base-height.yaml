@@ -1,0 +1,70 @@
+id: volume.prism.right.base-height
+concept: volume
+facet: multiplicative
+level: 3
+type: concept
+name: The volume of any right prism is V = B x h
+statement: The volume of any right prism is the area B of its base times its height h, whatever polygon
+  the base is.
+assess: 'True or false: a right prism 10 cm long whose bases are right triangles with legs 3 cm and 4
+  cm has volume 3 x 4 x 10 = 120 cubic cm. Say which rule decides it.'
+sources:
+  ccss:
+  - 7.G.B.6
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.prism.right.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement is about any right prism, whatever polygon its bases are.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.prism.formula.base-height
+    relation: definitional
+    points_to: statement
+    why: The statement extends V = B x h from rectangular prisms to right prisms with any base.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.triangle.right.half-rectangle
+    relation: procedural
+    points_to: assess
+    why: Testing the claim needs the base area of a right triangle, which is half of 3 x 4.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test claim needs the area of a right triangular base (half of 3 x 4);
+        the idea of V = B x h for any base does not.'
+    status: proposed
+  - node: area.covering.meaning
+    relation: definitional
+    points_to: statement
+    why: B is the area of the base, the number of unit squares that cover it.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

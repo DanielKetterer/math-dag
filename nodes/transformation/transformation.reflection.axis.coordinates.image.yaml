@@ -1,0 +1,101 @@
+id: transformation.reflection.axis.coordinates.image
+concept: transformation
+facet: coordinate
+level: 2
+type: procedure
+name: Find the coordinates of the image of a polygon reflected across an axis
+statement: Find the coordinates of the image of a polygon reflected across the x-axis or the y-axis by
+  moving each vertex to the point the same distance from the axis on the other side.
+procedure:
+- For each vertex, find its distance from the axis of reflection.
+- Locate the point the same distance from the axis on the other side, on the line through the vertex perpendicular
+  to the axis, and record its coordinates.
+- Join the image vertices in the same order.
+assess: Triangle ABC has vertices A(1, 2), B(4, 2), and C(1, 5). Give the coordinates of the vertices
+  of its image after a reflection across the x-axis.
+sources:
+  ccss:
+  - 8.G.A.3
+  learning_components:
+  - 0af11eff
+  - 44df92bc
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.reflection.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure carries out a reflection, taking each vertex to the point the same distance away
+      on the other side of the axis.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.ordered-pair.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds a vertex's distance from an axis, which is the size of one of its coordinates as
+      a distance from the origin.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.four-quadrants.plot
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 locates the image point across the axis, which in the test lands below the x-axis.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.four-quadrants.read
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 records the coordinates of the image point, which in the test are negative.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.axes-origin
+    relation: definitional
+    points_to: statement
+    why: The statement reflects across the x-axis or the y-axis, so the axes of the coordinate plane must
+      be known.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: perpendicular.meaning
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 moves along the line through the vertex perpendicular to the axis, which uses lines meeting
+      at right angles.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

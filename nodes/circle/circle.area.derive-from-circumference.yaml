@@ -1,0 +1,147 @@
+id: circle.area.derive-from-circumference
+concept: circle
+facet: measure
+level: 4
+type: justification
+name: Derive the area of a circle from its circumference by rearranging sectors
+statement: A circle cut into many equal sectors, arranged alternately point up and point down, is close
+  to a parallelogram whose base is half the circumference and whose height is the radius, and closer the
+  more sectors are used; so the area is (1/2) x C x r, which is (1/2) x 2 x pi x r x r = pi x r^2.
+assess: A circle of radius r is cut into 16 equal sectors, which are rearranged as in the picture. Use
+  the picture to explain why the area of the circle is half its circumference times its radius, and why
+  that equals pi x r^2.
+sources:
+  ccss:
+  - 7.G.B.4
+  learning_components:
+  - b220156e
+requires:
+- clause: standard
+  all_of:
+  - node: circle.center-radius
+    relation: definitional
+    points_to: statement
+    why: The height of the rearranged shape is the radius of the circle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.circumference.formula
+    relation: justificatory
+    points_to: statement
+    why: The derivation replaces C by 2 x pi x r when simplifying (1/2) x C x r.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.additive
+    relation: justificatory
+    points_to: statement
+    why: Rearranging the sectors into a parallelogram keeps the total area, since area adds across non-overlapping
+      parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.parallelogram.formula
+    relation: justificatory
+    points_to: statement
+    why: The area of the rearranged shape is its base times its height, the parallelogram area formula.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: height.base-height
+    relation: representational
+    points_to: statement
+    why: The base of the near-parallelogram is half the circumference and its height is the radius.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.product.regroup-factors
+    relation: justificatory
+    points_to: statement
+    why: Regrouping the factors of (1/2) x 2 x pi x r x r shows the product equals pi x r x r.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.write
+    relation: representational
+    points_to: statement
+    why: The product r x r is written as r^2 in the final area formula.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiply-whole.symbolic
+    relation: justificatory
+    points_to: statement
+    why: The last step turns (1/2) x 2 x pi x r x r into pi x r x r by multiplying 2 by 1/2.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.circumference.meaning
+    relation: definitional
+    points_to: statement
+    why: The base of the near-parallelogram is half the circumference, so circumference as the length
+      around is used directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The derivation is written with the letters C and r.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: approximation.by-refinement
+    relation: definitional
+    points_to: statement
+    why: The statement says the shape gets closer to a parallelogram the more sectors are used, an informal
+      idea of approximation not named in the index.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

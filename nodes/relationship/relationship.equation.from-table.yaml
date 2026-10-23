@@ -1,0 +1,66 @@
+id: relationship.equation.from-table
+concept: relationship
+facet: dependent-independent
+level: 3
+type: representation
+name: Write an equation for a relationship given by a table
+statement: From a table of a relationship in which the dependent variable is the independent variable
+  plus a fixed number, or a fixed number times the independent variable, write an equation that gives
+  the dependent variable in terms of the independent variable and fits every row.
+assess: A table pairs x = 1, 2, 3, 4 with y = 5, 10, 15, 20. Write an equation for y in terms of x.
+sources:
+  ccss:
+  - 6.EE.C.9
+  learning_components:
+  - d29c0749
+requires:
+- clause: standard
+  all_of:
+  - node: patterns.numerical.relationship
+    relation: procedural
+    points_to: statement
+    why: Finding the fixed number added to, or multiplying, the independent values is identifying a relationship
+      between corresponding terms.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: relationship.dependent-independent.meaning
+    relation: definitional
+    points_to: statement
+    why: The equation gives the dependent variable in terms of the independent variable, so the writer
+      must tell which is which.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.table-graph.read-values
+    relation: representational
+    points_to: statement
+    why: The statement starts from a table, so the writer reads the paired x and y values off each row.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The written equation uses letters for the table's columns; with the situation-writing edges judged
+      scaffold, this is the direct skill behind the form y = x + c or y = rx.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

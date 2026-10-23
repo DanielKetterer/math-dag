@@ -1,0 +1,73 @@
+id: fraction.subtraction.comparison
+concept: fraction
+facet: part-whole
+level: 2
+type: concept
+name: Subtracting fractions as comparing parts of the same whole
+statement: 'Subtracting one fraction from another also tells how much more the first amount is than the
+  second: the difference is the part that would have to be joined to the smaller amount to make the larger,
+  where both fractions refer to the same whole.'
+assess: Using one bar as the whole, show how much more 5/6 is than 2/6, and say what the difference counts.
+sources:
+  ccss:
+  - 4.NF.B.3.d
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.addition.joining
+    relation: definitional
+    points_to: statement
+    why: The difference is described as the part joined to the smaller amount to make the larger, which
+      is joining fractions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.compare.same-whole
+    relation: definitional
+    points_to: statement
+    why: The statement requires both fractions to refer to the same whole for the comparison to make sense.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: representational
+    points_to: assess
+    why: Saying what the difference between 5/6 and 2/6 counts means seeing 3/6 as three parts of size
+      1/6 on the bar.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs 5/6 and 2/6 as counts of 1/6 parts on a bar.'
+    status: proposed
+  - node: fraction.compare.same-denominator
+    relation: definitional
+    points_to: statement
+    why: '''How much more'' presupposes knowing which of 5/6 and 2/6 is greater; moderate confidence because
+      the bar model may carry this.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: fraction.subtraction.separating
+  relation: same_idea_different_form
+  note: Separating is a different meaning of subtracting fractions; the comparison meaning (how much must
+    be joined) does not use it.
+status: proposed

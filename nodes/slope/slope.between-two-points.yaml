@@ -14,7 +14,7 @@ sources:
 requires:
 - clause: standard
   all_of:
-  - node: coordinate-plane.four-quadrants
+  - node: coordinate-plane.four-quadrants.read
     relation: representational
     points_to: statement
     why: The two points may lie in any quadrant, as in (2, 5) and (6, -3), so they are read and located
@@ -27,8 +27,13 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired coordinate-plane.four-quadrants: FLAG: the statement is the formula
+        on given coordinates; no point is read or plotted, so the edge is probably not needed. Least candidate
+        kept for review.'
     status: proposed
-  - node: rational-numbers.operations
+  - node: rational-number.subtraction.rationals
     relation: definitional
     points_to: statement
     why: The vertical and horizontal changes are signed differences and their quotient is a signed rational
@@ -41,6 +46,28 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired rational-numbers.operations: The slope is a quotient of signed differences
+        of coordinates, which may be fractions.'
+    status: proposed
+  - node: rational-number.division.rationals
+    relation: definitional
+    points_to: statement
+    why: The vertical and horizontal changes are signed differences and their quotient is a signed rational
+      number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired rational-numbers.operations: The slope is a quotient of signed differences
+        of coordinates, which may be fractions.'
     status: proposed
 related:
 - node: ratio.unit-rate

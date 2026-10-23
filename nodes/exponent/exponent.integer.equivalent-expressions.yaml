@@ -1,0 +1,115 @@
+id: exponent.integer.equivalent-expressions
+concept: exponent
+facet: integer-power
+level: 3
+type: procedure
+name: Rewrite a numerical expression with integer exponents using the exponent properties
+statement: Rewrite a numerical expression made of products, quotients and powers of powers with integer
+  exponents as an equivalent single power, or as a fraction without exponents, by applying the exponent
+  properties.
+procedure:
+- Combine powers with the same base into one power, using the product, quotient and power-of-a-power rules.
+- Combine powers with the same exponent into one power of a product or quotient where that helps.
+- 'Rewrite any negative exponent as a reciprocal: a^(-n) = 1/a^n.'
+- If a value is asked for, evaluate the remaining whole-number power.
+assess: Write 3^2 x 3^-5 as a fraction with no exponents.
+sources:
+  ccss:
+  - 8.EE.A.1
+  learning_components:
+  - 95a6521a
+requires:
+- clause: standard
+  all_of:
+  - node: exponent.integer.properties
+    relation: procedural
+    points_to: procedure.1
+    why: Steps 1 and 2 combine powers with the same base or the same exponent, using the rules for integer
+      exponents.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.negative
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 rewrites each remaining negative exponent as a reciprocal with a^(-n) = 1/a^n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 evaluates the remaining whole-number power, such as 3^3 = 27, to give a value.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.addition.integers
+    relation: procedural
+    points_to: procedure.1
+    why: Combining 3^2 x 3^-5 adds the exponents 2 and -5, which are integers of either sign.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.subtraction.integers
+    relation: procedural
+    points_to: procedure.1
+    why: Combining a quotient of powers subtracts exponents, which may be negative integers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.multiplication.integers
+    relation: procedural
+    points_to: procedure.1
+    why: Combining a power of a power multiplies exponents, which may be negative integers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.order-of-operations.exponents
+    relation: representational
+    points_to: statement
+    why: The expressions mix powers with products and quotients, so powers are read before multiplying
+      or dividing.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

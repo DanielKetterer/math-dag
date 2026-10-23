@@ -1,0 +1,60 @@
+id: rational-number.division.integers
+concept: rational-number
+facet: core
+level: 3
+type: procedure
+name: Divide an integer by an integer that divides it evenly
+statement: Divide an integer by a nonzero integer that divides it evenly by dividing their absolute values
+  and giving the quotient the sign from the sign rule.
+procedure:
+- If the dividend is 0, the quotient is 0.
+- Divide the absolute value of the dividend by the absolute value of the divisor.
+- Make the quotient positive if the two numbers have the same sign and negative if they have opposite
+  signs.
+assess: Compute -42 divided by 6, -36 divided by (-4), and 0 divided by (-5).
+sources:
+  ccss:
+  - 7.NS.A.2
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: absolute-value.distance.integer
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides the absolute values of the two integers, so each must be read as its distance
+      from 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.division.sign-rule
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 gives the quotient its sign by the rule for same signs and opposite signs.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides one whole number by another that divides it evenly, and any method will do.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

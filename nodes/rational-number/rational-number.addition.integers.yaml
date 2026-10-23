@@ -1,0 +1,181 @@
+id: rational-number.addition.integers
+concept: rational-number
+facet: core
+level: 3
+type: procedure
+name: Add two integers
+statement: 'Add two integers by the sign rules: with the same sign, add the absolute values and keep the
+  sign; with opposite signs, subtract the smaller absolute value from the larger and take the sign of
+  the addend with the larger absolute value.'
+procedure:
+- If one addend is 0, the sum is the other addend.
+- If the addends have the same sign, add their absolute values and give the sum that sign.
+- If they have opposite signs, subtract the smaller absolute value from the larger and give the result
+  the sign of the addend with the larger absolute value; if the absolute values are equal, the sum is
+  0.
+assess: Compute -9 + 4, -6 + (-8), and 7 + (-7).
+sources:
+  ccss:
+  - 7.NS.A.1
+  learning_components: []
+requires:
+- clause: via-number-line
+  all_of:
+  - node: rational-number.signed.meaning
+    relation: definitional
+    points_to: statement
+    why: The sign rules refer to whether each addend is positive or negative, so the meaning of the sign
+      of an integer is used throughout.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: absolute-value.distance.integer
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 and 3 add or subtract the absolute values of the addends, which are the distances of
+      -6 and -8 from 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds the absolute values of two same-sign addends, such as 6 + 8, and any method for that
+      sum will do.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 subtracts the smaller absolute value from the larger, such as 9 - 4, and any method for
+      that difference will do.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 must decide which addend has the larger absolute value, which means deciding which of
+      two whole numbers is greater.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.addition.number-line
+    relation: definitional
+    points_to: statement
+    why: The sign rules compute the sum of signed numbers, which is defined as a move along the number
+      line.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The sign rules are a symbolic procedure; the number-line move is one way to give
+        a sum of signed numbers its meaning. Credit/debt contexts or counters with zero pairs give the
+        same meaning without a number line. | other route: Give signed sums meaning through gains and
+        losses in context (negative-as-decrease, signed.meaning) or counters, then apply the sign rules.'
+    status: disputed
+- clause: critic-route-1
+  note: Give signed sums meaning through gains and losses in context (or counters with zero pairs) instead
+    of the number-line move, then apply the sign rules.
+  all_of:
+  - node: rational-number.signed.meaning
+    relation: definitional
+    points_to: statement
+    why: The sign rules refer to whether each addend is positive or negative, so the meaning of the sign
+      of an integer is used throughout.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: absolute-value.distance.integer
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 and 3 add or subtract the absolute values of the addends, which are the distances of
+      -6 and -8 from 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds the absolute values of two same-sign addends, such as 6 + 8, and any method for that
+      sum will do.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 subtracts the smaller absolute value from the larger, such as 9 - 4, and any method for
+      that difference will do.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 must decide which addend has the larger absolute value, which means deciding which of
+      two whole numbers is greater.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.negative-as-decrease
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Give signed sums meaning through gains and losses
+      in context (or counters with zero pairs) instead of the number-line move, then apply the sign rules.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

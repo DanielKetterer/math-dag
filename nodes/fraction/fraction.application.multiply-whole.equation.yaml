@@ -30,7 +30,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: expressions.variables
+  - node: equation.unknown-symbol
     relation: definitional
     points_to: statement
     why: The unknown total t is a variable in the equation.
@@ -40,6 +40,11 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired expressions.variables: The letter t stands for the unknown total
+        of a story equation, an unknown number, which equation.unknown-symbol gives; no variable that
+        varies is used. Not a listed candidate (Claude).'
     status: proposed
   - node: fraction.as-number
     relation: definitional

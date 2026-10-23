@@ -1,0 +1,45 @@
+id: volume.cylinder.application.find-radius
+concept: volume
+facet: unit-cubes
+level: 3
+type: application
+name: Solve real-world problems that find the radius of a cylinder from its volume
+statement: Solve real-world problems that find the radius of a cylindrical object from its volume and
+  height, using 3.14 for pi.
+assess: A cylindrical tank is 2 m tall and holds 56.52 cubic meters of water. What is its radius? Use
+  3.14 for pi.
+sources:
+  ccss:
+  - 8.G.C.9
+  learning_components:
+  - '73140379'
+requires:
+- clause: standard
+  all_of:
+  - node: volume.cylinder.find-radius
+    relation: procedural
+    points_to: statement
+    why: The problem finds a radius by dividing the volume by pi x h and taking a square root.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.numerical.fractions-decimals.evaluate
+    relation: procedural
+    points_to: statement
+    why: The 3.14 value of pi makes the volume computation a product or quotient of decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

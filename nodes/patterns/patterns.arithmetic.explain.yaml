@@ -41,7 +41,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: expressions.variables
+  - node: expressions.variable.meaning
     relation: representational
     points_to: statement
     why: The statement uses n for any whole number in the general explanation 4 x n = 2 x n + 2 x n.
@@ -53,5 +53,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired expressions.variables: FLAG: the statement writes 4 x n = 2 x n +
+        2 x n, but the test (why is 4 times any whole number even) needs no letter; probably not a prerequisite.
+        Least candidate kept for review.'
     status: proposed
 status: proposed

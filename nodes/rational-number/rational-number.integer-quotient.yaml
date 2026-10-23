@@ -1,0 +1,71 @@
+id: rational-number.integer-quotient
+concept: rational-number
+facet: core
+level: 3
+type: concept
+name: A quotient of integers is a rational number
+statement: For integers p and q with q not 0, p divided by q is the rational number p/q, even when q does
+  not divide p evenly.
+assess: 'Write (-7) divided by 2 as a fraction. Which of these quotients is a rational number and which
+  is undefined: 0 divided by (-3); 4 divided by 0?'
+sources:
+  ccss:
+  - 7.NS.A.2.b
+  learning_components:
+  - 17876f9a
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.quotient.symbolic
+    relation: definitional
+    points_to: statement
+    why: The statement says p divided by q is the fraction p/q, which extends a divided by b equals a/b
+      from whole numbers to integers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-zero.undefined
+    relation: definitional
+    points_to: statement
+    why: The statement requires q not 0, and the test problem asks which quotient is undefined, such as
+      4 divided by 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: Dividing integers, including negative ones, means finding the factor that multiplies the divisor
+      to give the dividend, as for (-7) divided by 2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: If (-7) divided by 2 is meant to rest on a prior meaning of division for negative
+        dividends, the unknown-factor meaning (with the multiplication sign rule) is needed. If the node
+        only identifies p divided by q with p/q, it is a scaffold.'
+    status: disputed
+  - node: rational-number.signed.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement is about integers p and q including negative ones, such as (-7) divided by 2, so
+      the meaning of a negative integer is used.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

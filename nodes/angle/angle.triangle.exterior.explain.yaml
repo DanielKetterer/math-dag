@@ -1,0 +1,48 @@
+id: angle.triangle.exterior.explain
+concept: angle
+facet: measure
+level: 4
+type: justification
+name: Explain why an exterior angle equals the sum of the two remote interior angles
+statement: The exterior angle and the interior angle next to it form a straight angle, so the exterior
+  angle is 180 degrees minus that interior angle; by the angle sum, the other two interior angles also
+  add to 180 degrees minus that interior angle, so the exterior angle equals their sum.
+assess: In triangle ABC, side BC is extended past C to point D. Explain why angle ACD = angle A + angle
+  B for every triangle.
+sources:
+  ccss:
+  - 8.G.A.5
+  learning_components:
+  - b9325562
+requires:
+- clause: standard
+  all_of:
+  - node: angle.straight-line.sum-180
+    relation: justificatory
+    points_to: statement
+    why: The exterior angle and the interior angle next to it form a straight angle, so the exterior angle
+      is 180 degrees minus that interior angle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.triangle.sum
+    relation: justificatory
+    points_to: statement
+    why: The other two interior angles add to 180 degrees minus the adjacent interior angle, which uses
+      the triangle angle sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

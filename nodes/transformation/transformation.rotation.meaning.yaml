@@ -1,0 +1,100 @@
+id: transformation.rotation.meaning
+concept: transformation
+facet: geometric
+level: 2
+type: concept
+name: A rotation about a center through an angle
+statement: A rotation about a center O through d degrees in a given direction (clockwise or counterclockwise)
+  takes each point P to the point P' with OP' = OP and angle POP' = d degrees, turned in that direction;
+  O stays where it is.
+assess: Point P is 4 cm from point O. Point Q is 4 cm from O, 90 degrees counterclockwise from ray OP.
+  Point R is 6 cm from O, 90 degrees counterclockwise from ray OP. Point S is 4 cm from O, 90 degrees
+  clockwise from ray OP. Which point is the image of P under a rotation of 90 degrees counterclockwise
+  about O?
+sources:
+  ccss:
+  - 8.G.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: point.meaning
+    relation: definitional
+    points_to: statement
+    why: The definition names a center point O and takes each point P to an image point P', so points
+      are exact locations.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: segment.meaning
+    relation: definitional
+    points_to: statement
+    why: The condition OP' = OP compares the lengths of two segments that both start at the center O.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The condition that angle POP' is d degrees uses the degree measure of an angle between rays OP
+      and OP'.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: spatial.turn-direction
+    relation: definitional
+    points_to: statement
+    why: The definition and the test both distinguish a clockwise turn from a counterclockwise turn of
+      the same size.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: This id does not appear in index.txt or in boundary_nodes, so its statement cannot
+        be checked. The skill it appears to name, telling a clockwise turn from a counterclockwise one,
+        is used directly by the target''s own statement, procedure or '
+    status: disputed
+  - node: measurement.length.attribute
+    relation: definitional
+    points_to: statement
+    why: The condition OP' = OP says the image point is the same distance from the center as the original
+      point.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.right.meaning
+    relation: definitional
+    points_to: assess
+    why: The test places points 90 degrees from ray OP, and a 90 degree turn is a square corner turn,
+      which picks out the correct image point.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is for any d degrees; only the test uses 90 degrees, where knowing
+        a 90 degree turn is a square corner turn helps pick the point.'
+    status: proposed
+status: proposed

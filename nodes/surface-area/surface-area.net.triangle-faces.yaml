@@ -1,0 +1,205 @@
+id: surface-area.net.triangle-faces
+concept: surface-area
+facet: core
+level: 2
+type: procedure
+name: Find the surface area of a solid with triangular faces from its net
+statement: The surface area of a solid whose net is made of rectangles and triangles, such as a triangular
+  prism or a pyramid, is the sum of the areas of the rectangles and triangles in its net.
+procedure:
+- Find the area of each rectangle in the net.
+- Find the area of each triangle in the net from its base and height.
+- Add all the areas.
+assess: A net of a square pyramid has a square base 4 cm on a side and four triangles, each with base
+  4 cm and height 3 cm. Find the surface area of the pyramid.
+sources:
+  ccss:
+  - 6.G.A.4
+  learning_components:
+  - eed1bb5e
+  - 20ceb752
+requires:
+- clause: via-half-parallelogram
+  all_of:
+  - node: surface-area.meaning
+    relation: definitional
+    points_to: statement
+    why: The surface area is the sum of the areas of all the faces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: net.meaning
+    relation: representational
+    points_to: statement
+    why: The rectangles and triangles are read from a net, a flat figure of all the faces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: procedure.1
+    why: The area of each rectangle in the net is its length times its width.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: height.base-height
+    relation: procedural
+    points_to: procedure.2
+    why: Each triangle's base and the height to that base are identified from the net.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The square base 4 x 4 and the triangle product 4 x 3 are single-digit products.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 4 x 4 and 4 x 3 are single-digit products.'
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The areas of the square and the four triangles are added.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s total of 16 and four 6s is a sum; the idea is summing
+        the faces.'
+    status: proposed
+  - node: area.triangle.half-parallelogram
+    relation: procedural
+    points_to: procedure.2
+    why: The area of each triangle in the net is found from its base and height.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Step 2 needs the area of each triangle from its base and height, which the half-parallelogram
+        model gives. | other route: Use the triangle formula (area.triangle.formula.apply), as in e816.'
+    status: disputed
+- clause: via-apply
+  all_of:
+  - node: surface-area.meaning
+    relation: definitional
+    points_to: statement
+    why: The surface area is the sum of the areas of all the faces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: net.meaning
+    relation: representational
+    points_to: statement
+    why: The rectangles and triangles are read from a net, a flat figure of all the faces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: procedure.1
+    why: The area of each rectangle in the net is its length times its width.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: height.base-height
+    relation: procedural
+    points_to: procedure.2
+    why: Each triangle's base and the height to that base are identified from the net.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The square base 4 x 4 and the triangle product 4 x 3 are single-digit products.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 4 x 4 and 4 x 3 are single-digit products.'
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The areas of the square and the four triangles are added.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s total of 16 and four 6s is a sum; the idea is summing
+        the faces.'
+    status: proposed
+  - node: area.triangle.formula.apply
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds the area of each triangle in the net from its base and height.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Step 2 needs the area of each triangle from its base and height, which the formula
+        gives. | other route: Find each triangle''s area as half of a parallelogram with the same base
+        and height (area.triangle.half-parallelogram), as in e817.'
+    status: disputed
+status: proposed

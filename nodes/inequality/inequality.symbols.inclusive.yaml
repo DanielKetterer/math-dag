@@ -1,0 +1,61 @@
+id: inequality.symbols.inclusive
+concept: inequality
+facet: open-sentence
+level: 3
+type: concept
+name: The symbols >= and <=
+statement: x >= c means x is greater than c or equal to c, and x <= c means x is less than c or equal
+  to c; unlike x > c and x < c, the boundary value c is a solution.
+assess: Which of 4, 5 and 6 are solutions of x >= 5? Which of them are solutions of x > 5?
+sources:
+  ccss:
+  - 7.EE.B.4.b
+  learning_components:
+  - 4d78d954
+requires:
+- clause: standard
+  all_of:
+  - node: inequality.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement says whether the boundary value c is a solution, which uses the meaning of a solution
+      of an inequality.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.symbols
+    relation: representational
+    points_to: statement
+    why: The symbols >= and <= are read as the symbols > or < together with =, and contrasted with the
+      strict symbols.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: inequality.solution.check-substitution
+    relation: procedural
+    points_to: assess
+    why: Deciding which of 4, 5 and 6 are solutions of x >= 5 and of x > 5 is checking values by substitution.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem asks which given numbers are solutions; the statement itself
+        is about whether the boundary c counts, which solution.meaning carries.'
+    status: proposed
+status: proposed

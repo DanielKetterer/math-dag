@@ -1,0 +1,61 @@
+id: functions.identify.graph
+concept: functions
+facet: graph
+level: 3
+type: procedure
+name: Decide from a graph whether y is a function of x
+statement: A graph in the coordinate plane shows y as a function of x exactly when no vertical line meets
+  it in more than one point, since two points on one vertical line are one input with two outputs.
+procedure:
+- Picture vertical lines placed across the whole graph.
+- If some vertical line meets the graph in two or more points, y is not a function of x; otherwise it
+  is.
+assess: 'Which of these graphs show y as a function of x: a circle; a V shape opening upward; a vertical
+  line; a horizontal line?'
+sources:
+  ccss:
+  - 8.F.A.1
+  learning_components:
+  - d37fc186
+requires:
+- clause: standard
+  all_of:
+  - node: functions.graph.meaning
+    relation: definitional
+    points_to: statement
+    why: The test reads points of the graph as input-output pairs, so two points on one vertical line
+      are two outputs of one input.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: functions.definition
+    relation: justificatory
+    points_to: statement
+    why: The criterion holds because a function gives each input exactly one output, so a repeated input
+      with two outputs fails.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: line.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure pictures vertical lines across the graph and asks how many points of the graph
+      each meets.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

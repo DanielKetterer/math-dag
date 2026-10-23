@@ -1,0 +1,55 @@
+id: table.two-way.interpret
+concept: table
+facet: two-way
+level: 2
+type: concept
+name: What the cells and totals of a two-way table count
+statement: In a two-way table of two categorical variables, a cell counts the subjects that are in both
+  its row category and its column category, a row or column total counts the subjects in that one category
+  whatever their other category, and the grand total counts all the subjects.
+assess: 'A two-way table has rows ''curfew: yes'' and ''curfew: no'' and columns ''chores: yes'' and ''chores:
+  no''. Row ''curfew: yes'' reads 16, 4, total 20. Row ''curfew: no'' reads 6, 14, total 20. The column
+  totals are 22 and 18, and the grand total is 40. What does the 4 mean? What does the column total 22
+  mean?'
+sources:
+  ccss:
+  - 8.SP.A.4
+  learning_components:
+  - bf631804
+requires:
+- clause: standard
+  all_of:
+  - node: table.read-two-way
+    relation: representational
+    points_to: statement
+    why: The statement is about what the entries and totals of a table of rows and columns count, so reading
+      an entry by its row and column is used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.categorical.count-each
+    relation: definitional
+    points_to: statement
+    why: A row or column total is the count of the subjects in one category; the count of a category is
+      the underlying skill, not chart reading.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: data.categorical.read-count
+  relation: same_idea_different_form
+  note: Reading one category's count from a chart is the same idea as a margin total, in a different display.
+    The underlying need is the count of a category (data.categorical.count-each), not chart reading.
+- node: data.categorical.total
+  relation: same_idea_different_form
+  note: Finding the total of the data points in a chart is the same idea as the grand total of a table;
+    the test problem does not ask about the grand total, and the target defines it itself.
+status: proposed

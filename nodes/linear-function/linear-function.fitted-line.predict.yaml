@@ -1,0 +1,74 @@
+id: linear-function.fitted-line.predict
+concept: linear-function
+facet: fitted-line
+level: 3
+type: application
+name: Predict a value from the equation of a line fitted to data
+statement: Problems that give the equation of a line fitted to bivariate data and a value of the first
+  quantity, and ask for the value of the second quantity that the model predicts; the answer is a prediction
+  from the trend, not an exact value for any individual.
+assess: A line fitted to data on hours of sunlight per day (x) and mature plant height in cm (y) is y
+  = 1.5x + 10. Predict the mature height of a plant that gets 6 hours of sunlight a day.
+sources:
+  ccss:
+  - 8.SP.A.3
+  learning_components:
+  - 31ebd1b1
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.variable.evaluate
+    relation: procedural
+    points_to: statement
+    why: Finding the predicted value substitutes the given value of the first quantity into the equation
+      and evaluates it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.numerical.fractions-decimals.evaluate
+    relation: procedural
+    points_to: assess
+    why: The test problem evaluates 1.5 x 6 + 10 after substituting, which is a numerical expression with
+      a decimal.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs 1.5 x 6 + 10 with a decimal; the statement''s equation
+        could have whole-number coefficients.'
+    status: proposed
+  - node: linear-function.fitted-line.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement says the answer is a prediction from the trend and not an exact value for any individual,
+      which uses the line as a model.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: relationship.dependent-independent.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement gives a value of 'the first quantity' and asks for 'the second', so the learner
+      must know which variable is the input and which the output.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

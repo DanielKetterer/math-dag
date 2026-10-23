@@ -1,0 +1,82 @@
+id: root.square.sqrt2-irrational
+concept: root
+facet: square
+level: 3
+type: concept
+name: sqrt(2) is irrational
+statement: 'sqrt(2) is irrational: it is not equal to any fraction a/b of integers, so every fraction
+  or finite decimal written for it, such as 1.414, is only an approximation.'
+assess: Ana says sqrt(2) = 1.414 exactly. Ben says sqrt(2) = 99/70 exactly. Is either of them right? What
+  kind of number is sqrt(2)?
+sources:
+  ccss:
+  - 8.EE.A.2
+  learning_components:
+  - 5c1fe43a
+requires:
+- clause: standard
+  all_of:
+  - node: root.square.meaning
+    relation: definitional
+    points_to: statement
+    why: sqrt(2) is the number 0 or greater whose square is 2, the number the claim is about.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.definition
+    relation: definitional
+    points_to: statement
+    why: Irrational here means equal to no fraction a/b of integers, which is what a rational number is.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.decimal-base
+    relation: procedural
+    points_to: assess
+    why: Testing Ana's claim squares 1.414 to see whether the result is exactly 2.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only Ana''s claim in the test item requires squaring 1.414; the statement is settled
+        by the definition of rational numbers.'
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.fraction-base
+    relation: procedural
+    points_to: assess
+    why: Testing Ben's claim squares 99/70 to see whether the result is exactly 2.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only Ben''s claim in the test item requires squaring 99/70; the statement is settled
+        by the definition of rational numbers.'
+    status: proposed
+  - node: decimal.thousandths.notation
+    relation: definitional
+    points_to: statement
+    why: a finite decimal such as 1.414 is the fraction 1414/1000 of integers, so it cannot equal sqrt(2)
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,77 @@
+id: exponent.whole-number.power-of-product
+concept: exponent
+facet: whole-number-power
+level: 3
+type: concept
+name: 'Power of a product: (a x b)^n = a^n x b^n'
+statement: 'For any numbers a and b and positive whole number n, (a x b)^n = a^n x b^n. The rule is for
+  a product only: (a + b)^n is not in general a^n + b^n.'
+assess: 'Without computing any power, decide whether each is true: (2 x 5)^3 = 2^3 x 5^3; (2 x 5)^3 =
+  2 x 5^3; (2 + 5)^3 = 2^3 + 5^3.'
+sources:
+  ccss:
+  - 8.EE.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The rule is stated with letters, each standing for any number or any whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: (a x b)^n is n equal factors of the product a x b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.product.regroup-factors
+    relation: justificatory
+    points_to: statement
+    why: Reordering and regrouping n copies of a x b gathers n factors of a and n factors of b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.parentheses
+    relation: representational
+    points_to: statement
+    why: The parentheses make the whole product a x b the base, so the exponent n applies to both factors.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.order-of-operations.exponents
+    relation: representational
+    points_to: statement
+    why: In 2 x 5^3 and a^n x b^n a power applies only to the base beside it, before the multiplication.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

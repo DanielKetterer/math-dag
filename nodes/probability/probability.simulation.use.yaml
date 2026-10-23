@@ -1,0 +1,52 @@
+id: probability.simulation.use
+concept: probability
+facet: relative-frequency
+level: 2
+type: procedure
+name: Estimate the probability of a compound event from simulation results
+statement: Given the results of a simulation and its rule for when the compound event occurs, decide for
+  each trial whether the event occurred and estimate the probability as the fraction of trials in which
+  it did.
+procedure:
+- For each trial, apply the rule to decide whether the compound event occurred.
+- Count the trials in which the event occurred.
+- Divide that count by the number of trials.
+assess: 'In a simulation, digits 0 to 3 stand for a donor with type A blood and digits 4 to 9 for a donor
+  without; each trial reads digits until the first 0 to 3. Ten trials gave: 2, 71, 9550, 861, 0, 47943,
+  3, 52, 6681, 91. Estimate the probability that at least 4 donors are needed to find one with type A
+  blood.'
+sources:
+  ccss:
+  - 7.SP.C.8.c
+  learning_components:
+  - 88b14085
+requires:
+- clause: standard
+  all_of:
+  - node: probability.relative-frequency.estimate
+    relation: procedural
+    points_to: procedure.3
+    why: Steps 2 and 3 count the trials in which the event occurred and divide by the number of trials,
+      the relative frequency estimate itself.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: probability.compound.event-outcomes
+    relation: procedural
+    points_to: procedure.1
+    why: Applying the rule to each trial checks that trial's outcome against the description of the compound
+      event.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

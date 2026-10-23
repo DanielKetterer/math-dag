@@ -1,0 +1,105 @@
+id: expressions.variable.write-for-situation
+concept: expressions
+facet: algebraic
+level: 3
+type: representation
+name: Write an expression with a variable for a real-world quantity
+statement: Write an expression, with a letter for a number that can vary, for a quantity in a real-world
+  situation that depends on that number.
+assess: Pencils cost $2 each and a notebook costs $3. Write an expression for the cost, in dollars, of
+  p pencils and one notebook.
+sources:
+  ccss:
+  - 6.EE.B.6
+  learning_components:
+  - 60a51673
+requires:
+- clause: via-write-from-words
+  all_of:
+  - node: expressions.variable.unknown-vs-varying
+    relation: definitional
+    points_to: statement
+    why: The letter stands for a number that can vary, such as the number of pencils, rather than one
+      fixed unknown.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.situation-to-expression
+    relation: representational
+    points_to: assess
+    why: The cost of p pencils at $2 each is an equal-groups situation written as 2 x p.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem (p pencils at $2 each) needs equal groups written as 2 x
+        p; the statement covers any real-world quantity.'
+    status: proposed
+  - node: expressions.variable.write-from-words
+    relation: representational
+    points_to: statement
+    why: Once the operations of the situation are stated, writing 2p + 3 uses the skill of writing an
+      expression with a letter from a phrase.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The expression can be built by recording the calculation for a particular number
+        of pencils and then replacing the number by the letter, without first stating the situation as
+        a verbal phrase. | other route: Record the cost calculation with a specific number (expressions.write.record-calculation,
+        multiplication.equal-groups.situation-to-expression), then replace the number by the letter p.'
+    status: disputed
+- clause: critic-route-1
+  note: Record the calculation for a particular count (for example 2 x 4 + 3 for 4 pencils) and then replace
+    the number by the letter, without first stating the situation as a verbal phrase.
+  all_of:
+  - node: expressions.variable.unknown-vs-varying
+    relation: definitional
+    points_to: statement
+    why: The letter stands for a number that can vary, such as the number of pencils, rather than one
+      fixed unknown.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.situation-to-expression
+    relation: representational
+    points_to: assess
+    why: The cost of p pencils at $2 each is an equal-groups situation written as 2 x p.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem (p pencils at $2 each) needs equal groups written as 2 x
+        p; the statement covers any real-world quantity.'
+    status: proposed
+  - node: expressions.write.record-calculation
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Record the calculation for a particular count (for
+      example 2 x 4 + 3 for 4 pencils) and then replace the number by the letter, without first stating
+      the situation as a verbal phrase.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

@@ -1,0 +1,62 @@
+id: real-number.compare.approximation
+concept: real-number
+facet: decimal-expansion
+level: 3
+type: procedure
+name: Compare irrational numbers with decimal bounds
+statement: Compare two numbers, at least one irrational, by bounding each between decimals with more and
+  more places until the two bounding intervals do not overlap; the number in the higher interval is greater.
+procedure:
+- Bound each number between two consecutive tenths.
+- If the two intervals overlap, bound each between consecutive hundredths, and so on, until they do not
+  overlap.
+- The number whose interval lies to the right is the greater.
+assess: Which is greater, sqrt(10) or pi? Use decimal bounds for each to decide.
+sources:
+  ccss:
+  - 8.NS.A.2
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: real-number.approximate.truncate
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 bounds a number such as pi between consecutive tenths by cutting off its decimal expansion.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: real-number.approximate.square-root
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 bounds a number such as sqrt(10) between consecutive tenths by squaring trial values.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.compare
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 decides which interval lies to the right by comparing the decimal endpoints of the two
+      intervals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

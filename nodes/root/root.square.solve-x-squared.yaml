@@ -1,0 +1,57 @@
+id: root.square.solve-x-squared
+concept: root
+facet: square
+level: 3
+type: procedure
+name: Write the solutions of x^2 = p with square roots
+statement: For a positive rational number p, the equation x^2 = p has exactly two solutions, x = sqrt(p)
+  and x = -sqrt(p).
+procedure:
+- Write the two solutions x = sqrt(p) and x = -sqrt(p).
+- If p is a perfect square, the roots may be replaced by their values.
+assess: Find every solution of x^2 = 10. Write the solutions with the square root symbol.
+sources:
+  ccss:
+  - 8.EE.A.2
+  learning_components:
+  - 1c9b3eef
+requires:
+- clause: standard
+  all_of:
+  - node: root.square.meaning
+    relation: definitional
+    points_to: statement
+    why: The two solutions are written as sqrt(p) and -sqrt(p), where sqrt(p) is the square root of p.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: A solution of x^2 = p is a value of x that makes the equation true, and exactly two such values
+      exist.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: The equation x^2 = p is written with power notation, used directly in the statement.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

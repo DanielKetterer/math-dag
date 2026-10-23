@@ -1,0 +1,78 @@
+id: equation.two-step.write.px-plus-q
+concept: equation
+facet: open-sentence
+level: 3
+type: representation
+name: Write px + q = r for a word problem
+statement: For a word problem in which a known rational number p times an unknown quantity, plus a known
+  amount q, gives a known amount r, write the equation px + q = r, saying what x stands for.
+assess: A gym charges a $25 sign-up fee plus $12.50 per month. Lee paid $100 in all. Write an equation
+  for the number of months m that Lee paid for.
+sources:
+  ccss:
+  - 7.EE.B.4.a
+  learning_components:
+  - aad9e34e
+requires:
+- clause: via-multiplication
+  all_of:
+  - node: equation.one-step.write.multiplication
+    relation: representational
+    points_to: statement
+    why: The part p times the unknown quantity, such as $12.50 per month for m months, is written as in
+      px = q.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: One-step equation writing is one way to build px + q = r; the product of a rate
+        and the unknown can be written directly as part of an expression for the situation. | other route:
+        Write the expression px + q for the situation (expressions.variable.write-for-situation), then
+        set it equal to the known total (equation.equal-sign.meaning), skipping one-step equation writing.'
+    status: disputed
+- clause: via-addition
+  all_of:
+  - node: equation.one-step.write.addition
+    relation: representational
+    points_to: statement
+    why: The added known amount q, such as the $25 sign-up fee, is written as in x + p = q, with the total
+      set equal to r.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: One-step equation writing is one way to build px + q = r; the added amount can
+        be written directly as part of an expression for the situation. | other route: Write the expression
+        px + q for the situation (expressions.variable.write-for-situation), then set it equal to the
+        known total (equation.equal-sign.meaning), skipping one-step equation writing.'
+    status: disputed
+- clause: critic-route-2
+  note: Write the expression px + q directly for the situation, then set it equal to the known total.
+  all_of:
+  - node: expressions.variable.write-for-situation
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Write the expression px + q directly for the situation,
+      then set it equal to the known total.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: equation.equal-sign.meaning
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Write the expression px + q directly for the situation,
+      then set it equal to the known total.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

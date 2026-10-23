@@ -1,0 +1,58 @@
+id: division.successive-division
+concept: division
+facet: unknown-factor
+level: 3
+type: concept
+name: Dividing by a and then by b is dividing by a x b
+statement: For nonzero whole numbers a and b, dividing a number by a and then dividing the result by b
+  gives the same quotient as dividing the number by a x b.
+assess: Maya divides 720 by 8 and then divides that answer by 10. Without computing, what single division
+  gives the same answer?
+sources:
+  ccss:
+  - 5.NBT.A.2
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.by-multiple-of-ten
+    relation: procedural
+    points_to: assess
+    why: The test problem needs the single divisor 8 x 10 = 80 to name the equivalent division.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs 8 x 10 = 80 to name the single division.'
+    status: proposed
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: Dividing by a then by b is read as two unknown-factor equations, n = a x m and m = b x q.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.associative
+    relation: justificatory
+    points_to: statement
+    why: Combining the two equations gives n = a x (b x q) = (a x b) x q, which needs the associative
+      property.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: division.measurement.meaning
+  relation: same_idea_different_form
+  note: Grouping is another reading of a quotient; the node's facet is unknown-factor, whose meaning is
+    e624.
+status: proposed

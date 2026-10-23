@@ -1,0 +1,53 @@
+id: expressions.variable.situation-from-expression
+concept: expressions
+facet: algebraic
+level: 3
+type: representation
+name: Describe a situation that an expression with a variable represents
+statement: Given an expression with a variable, describe a real-world situation the expression could represent,
+  saying what the variable stands for.
+assess: Describe a situation that 20 - 3x could represent, and say what x stands for.
+sources:
+  ccss:
+  - 6.EE.B.6
+  learning_components:
+  - 306ce9f4
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The learner must say what the variable stands for, which uses the letter as a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: assess
+    why: The test problem needs a situation for 3x, such as x items at 3 dollars each, which is x equal
+      groups of 3.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem (a situation for 3x) needs equal groups, and a comparison
+        situation would also do; the more specific node is multiplication.equal-groups.expression-to-situation.'
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: definitional
+    points_to: statement
+    why: 'Task-only: the test problem writes a number directly next to a letter (3x); this is otherwise
+      reached only through another prerequisite.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

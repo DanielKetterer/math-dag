@@ -1,0 +1,142 @@
+id: congruence.sequence.describe
+concept: congruence
+facet: rigid-motion
+level: 2
+type: procedure
+name: Describe a sequence of rigid motions that shows two figures are congruent
+statement: Given two congruent figures and their corresponding vertices, describe a sequence of translations,
+  reflections, and rotations that takes the first figure onto the second.
+procedure:
+- Match each vertex of the first figure with its corresponding vertex in the second.
+- Translate the first figure so that one vertex lands on its corresponding vertex.
+- Rotate about that vertex so that a side from it lies along the corresponding side of the second figure.
+- If the figures still do not match, reflect across the line containing that side.
+assess: On a coordinate grid, triangle ABC has A(1, 1), B(4, 1), C(1, 3), and the congruent triangle DEF
+  has D(9, 4), E(6, 4), F(9, 6), with A -> D, B -> E, C -> F. Describe a sequence of translations, reflections,
+  and rotations that takes triangle ABC onto triangle DEF.
+sources:
+  ccss:
+  - 8.G.A.2
+  learning_components:
+  - 07f4ca9a
+requires:
+- clause: standard
+  all_of:
+  - node: congruence.rigid-motion.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure describes motions that take one figure exactly onto the other, which is the definition
+      of congruent figures.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.translation.meaning
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 translates the first figure so that one vertex lands on its corresponding vertex.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rotation.meaning
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 rotates about that vertex so a side lies along the corresponding side, as the test needs
+      a half turn.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.reflection.meaning
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 reflects across the line containing that side when the figures still do not match, as
+      the test needs.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate.ordered-pair.notation
+    relation: representational
+    points_to: assess
+    why: The test gives the vertices as ordered pairs, and the solver must read them to find the translation
+      and the line of reflection.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test gives vertices as ordered pairs; the procedure and statement do
+        not use coordinates.'
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: assess
+    why: The translation is found by subtracting coordinates, such as 9 - 1 and 4 - 1 from A to D.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test finds the translation by subtracting coordinates (9 - 1, 4 - 1);
+        subtraction.within-20 would cover the numbers used.'
+    status: proposed
+  - node: coordinate-plane.first-quadrant.plot
+    relation: procedural
+    points_to: assess
+    why: The test gives the six vertices as coordinates on a grid, and the learner must locate them to
+      see how the two triangles sit.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test gives vertices as coordinates; the procedure and statement work
+        on any two congruent figures.'
+    status: proposed
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: Step 3 must state how far to rotate in degrees; this is the method-neutral node behind the protractor
+      edge e1136.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: spatial.turn-direction
+    relation: definitional
+    points_to: statement
+    why: The target turns something in a stated direction (clockwise or counterclockwise); the index has
+      no node for telling the two directions apart, and the proposed ids angle.turn-direction and spatial.turn-direction
+      are not in the index.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

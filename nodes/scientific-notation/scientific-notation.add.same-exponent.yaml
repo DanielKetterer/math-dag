@@ -1,0 +1,59 @@
+id: scientific-notation.add.same-exponent
+concept: scientific-notation
+facet: core
+level: 3
+type: procedure
+name: Add numbers in scientific notation with the same power of 10
+statement: '(a x 10^n) + (b x 10^n) = (a + b) x 10^n: add the leading factors and keep the power of 10.'
+procedure:
+- Add the leading factors.
+- Keep the common power of 10.
+- If the new leading factor is 10 or more, rewrite the result in scientific notation.
+assess: Find 3.2 x 10^5 + 4.5 x 10^5. Give the answer in scientific notation.
+sources:
+  ccss:
+  - 8.EE.A.4
+  learning_components:
+  - d4f29aa5
+requires:
+- clause: standard
+  all_of:
+  - node: scientific-notation.meaning
+    relation: representational
+    points_to: statement
+    why: Both numbers and the result are written as a leading factor times a power of 10 in scientific
+      notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.addition.algorithm
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 adds the leading factors, which are decimals such as 3.2 and 4.5.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: scientific-notation.normalize
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 rewrites a sum whose leading factor is 10 or more in scientific notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

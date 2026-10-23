@@ -1,0 +1,47 @@
+id: similarity.triangle.angle-angle
+concept: similarity
+facet: transformation
+level: 3
+type: concept
+name: The angle-angle criterion for similar triangles
+statement: If two angles of one triangle have the same measures as two angles of another triangle, the
+  two triangles are similar.
+assess: Triangle ABC has angles of 40 degrees and 75 degrees. Triangle DEF is larger and also has angles
+  of 40 degrees and 75 degrees. Triangle GHI has one angle of 40 degrees; its other angles are not given.
+  Which of DEF and GHI must be similar to ABC?
+sources:
+  ccss:
+  - 8.G.A.5
+  learning_components:
+  - 6f4e508f
+requires:
+- clause: standard
+  all_of:
+  - node: similarity.transformation.meaning
+    relation: definitional
+    points_to: statement
+    why: The criterion concludes that the triangles are similar, which means a dilation and rigid motions
+      take one onto the other.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The condition is that two angles have the same measures, and the test gives the angles in degrees.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

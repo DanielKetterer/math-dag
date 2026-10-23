@@ -1,0 +1,72 @@
+id: rational-number.additive-inverse.explain
+concept: rational-number
+facet: change
+level: 2
+type: justification
+name: Show on a number line that a number plus its opposite is 0
+statement: On a number line, starting at a and moving |a| in the direction of -a, back toward 0, lands
+  exactly on 0, so a + (-a) = 0.
+assess: Use a number line to show why 3.5 + (-3.5) = 0.
+sources:
+  ccss:
+  - 7.NS.A.1.b
+  learning_components:
+  - 67ca75ab
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.addition.number-line
+    relation: definitional
+    points_to: statement
+    why: The explanation starts at a and moves |a| along the number line, which is the move that the sum
+      a + (-a) means.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.opposite.number-line
+    relation: definitional
+    points_to: statement
+    why: The statement moves in the direction of -a back toward 0, using that -a lies on the other side
+      of 0 at the same distance as a.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.fraction-decimal.number-line
+    relation: representational
+    points_to: assess
+    why: The test problem places 3.5 and -3.5 on a number line before moving 3.5 units back to 0.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is about a general a; only the test problem uses 3.5, a decimal,
+        so only it needs negative decimals placed on the line. Placing integers (rational-number.integer.number-line)
+        would carry the idea.'
+    status: proposed
+  - node: absolute-value.distance.rational
+    relation: definitional
+    points_to: statement
+    why: The statement moves |a| and relies on a lying |a| from 0, so absolute value as distance from
+      0 is used directly (3.5 in the test problem).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

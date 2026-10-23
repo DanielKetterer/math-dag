@@ -1,0 +1,48 @@
+id: scientific-notation.from-decimal.small
+concept: scientific-notation
+facet: core
+level: 3
+type: representation
+name: Write a positive number less than 1 in scientific notation
+statement: Write a positive number less than 1 as a x 10^n, with a at least 1 and less than 10 and n a
+  negative integer, by moving the decimal point right to just after the first nonzero digit and taking
+  n as minus the number of places it moved.
+procedure:
+- Move the decimal point right to just after the first nonzero digit; the number formed is a.
+- Count the places the decimal point moved; n is the negative of that count.
+- Write a x 10^n.
+assess: Write 0.00073 in scientific notation.
+sources:
+  ccss:
+  - 8.EE.A.4
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: scientific-notation.meaning
+    relation: definitional
+    points_to: statement
+    why: The result must have the form a x 10^n with a at least 1 and less than 10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.power-of-ten.negative
+    relation: representational
+    points_to: procedure.3
+    why: Writing a x 10^n with n = -k uses 10^-k = 1/10^k to express dividing by 10^k.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

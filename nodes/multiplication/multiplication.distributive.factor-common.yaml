@@ -1,0 +1,91 @@
+id: multiplication.distributive.factor-common
+concept: multiplication
+facet: core
+level: 3
+type: procedure
+name: Write a sum of two whole numbers as a common factor times a sum
+statement: Use the distributive property to rewrite a sum a + b of two whole numbers whose greatest common
+  factor g is greater than 1 as g x (c + d), where a = g x c and b = g x d, so that c and d have no common
+  factor greater than 1.
+procedure:
+- Find the greatest common factor g of a and b.
+- Find c and d with a = g x c and b = g x d.
+- Write a + b = g x c + g x d = g x (c + d).
+assess: Write 36 + 8 as a whole number times a sum of two whole numbers that have no common factor greater
+  than 1.
+sources:
+  ccss:
+  - 6.NS.B.4
+  learning_components:
+  - c587f727
+requires:
+- clause: standard
+  all_of:
+  - node: factors.gcf.find
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds the greatest common factor g of the two addends, such as 4 for 36 and 8.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.unknown-factor.solve
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds c and d with a = g x c and b = g x d, which is finding an unknown factor in a multiplication
+      equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.distributive
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 rewrites g x c + g x d as g x (c + d), which is the distributive property of multiplication
+      over addition.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: factors.common-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement requires that c and d have no common factor greater than 1, which is worded with
+      common factors.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.parentheses
+    relation: representational
+    points_to: statement
+    why: The target form g x (c + d) uses parentheses to show that the sum is computed first and then
+      multiplied by g.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

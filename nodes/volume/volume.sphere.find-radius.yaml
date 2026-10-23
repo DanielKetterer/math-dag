@@ -1,0 +1,85 @@
+id: volume.sphere.find-radius
+concept: volume
+facet: unit-cubes
+level: 3
+type: procedure
+name: Find the radius of a sphere from its volume
+statement: Find the radius of a sphere from its volume by multiplying the volume by 3 and dividing by
+  4 x pi to get r^3, then taking the cube root.
+procedure:
+- Multiply the volume by 3 and divide by 4 x pi; the quotient is r^3.
+- Take the cube root of r^3 to get r.
+assess: A sphere has a volume of 36 x pi cubic cm. Find its radius.
+sources:
+  ccss:
+  - 8.G.C.9
+  learning_components:
+  - 8e127d06
+requires:
+- clause: standard
+  all_of:
+  - node: volume.sphere.formula
+    relation: definitional
+    points_to: statement
+    why: The volume is (4/3) x pi x r^3, so multiplying by 3 and dividing by 4 x pi leaves r^3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: procedure.1
+    why: The first step multiplies the volume by 3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: assess
+    why: The test problem divides 108 by 4 once the common factor pi is removed.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: root.cube.perfect-cube.evaluate
+    relation: procedural
+    points_to: procedure.2
+    why: The second step takes the cube root of r^3, a perfect cube in the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.multiples-of-pi.quotient
+    relation: definitional
+    points_to: statement
+    why: When the volume is given in terms of pi, the quotient of two multiples of pi, (m x pi) divided
+      by (n x pi) = m divided by n, has to be cancelled before dividing; no listed node covers it. It
+      is needed only when the volume is given as a multiple of pi, as in the test problem.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

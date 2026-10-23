@@ -1,0 +1,80 @@
+id: probability.model.nonuniform.event
+concept: probability
+facet: model
+level: 3
+type: procedure
+name: Find the probability of an event in a model whose outcomes are not equally likely
+statement: When a probability model gives outcomes different probabilities, the probability of an event
+  is the sum of the probabilities of the outcomes that make it up, not the number of those outcomes divided
+  by the number of outcomes.
+procedure:
+- List the outcomes that make up the event.
+- Read the probability of each of those outcomes from the model.
+- Add those probabilities.
+assess: A spinner's model gives P(red) = 0.5, P(blue) = 0.3, and P(green) = 0.2. What is the probability
+  that the spinner lands on red or green?
+sources:
+  ccss:
+  - 7.SP.C.7.b
+  learning_components:
+  - 25cdf64d
+requires:
+- clause: via-develop
+  all_of:
+  - node: decimal.addition.to-hundredths
+    relation: definitional
+    points_to: statement
+    why: Step 3 adds probabilities, here decimals; the index has decimal addition only as a model or as
+      the standard algorithm, not as a method-neutral skill (fraction.addition.like-denominators serves
+      for fraction probabilities).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: probability.model.uniform.develop
+    relation: definitional
+    points_to: statement
+    why: A probability model that lists outcomes with their probabilities is first set up in the uniform
+      model, which this statement then generalizes.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A model listing outcomes with probabilities can be met first through observed
+        frequencies, which already gives a non-uniform model. | other route: Reach the model idea from
+        probability.model.from-frequencies (outcomes with different probabilities), then add the probabilities.'
+    status: disputed
+- clause: critic-route-1
+  note: Reach the model from observed frequencies (a non-uniform model) and add the probabilities of the
+    outcomes in the event.
+  all_of:
+  - node: probability.model.from-frequencies
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Reach the model from observed frequencies (a non-uniform
+      model) and add the probabilities of the outcomes in the event.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: decimal.addition.to-hundredths
+    relation: definitional
+    points_to: statement
+    why: Step 3 adds probabilities, here decimals; the index has decimal addition only as a model or as
+      the standard algorithm, not as a method-neutral skill (fraction.addition.like-denominators serves
+      for fraction probabilities).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: probability.model.uniform.event
+  relation: generalizes
+  note: The target generalizes the uniform rule (k outcomes of probability 1/n sum to k/n) and mentions
+    the count-over-total rule only to contrast it; the sum rule is not learned from the uniform rule alone
+    and does not need it.
+status: proposed

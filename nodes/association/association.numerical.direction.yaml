@@ -1,0 +1,63 @@
+id: association.numerical.direction
+concept: association
+facet: numerical
+level: 2
+type: concept
+name: Positive, negative, and no association in a scatter plot
+statement: Two quantities have a positive association when larger values of one tend to go with larger
+  values of the other, a negative association when larger values of one tend to go with smaller values
+  of the other, and no association when there is no such tendency; a tendency allows individual exceptions.
+assess: In a scatter plot of hours of practice (x) and free throws missed (y) for 20 players, the points
+  fall from the upper left to the lower right, though a few players who practiced more missed more than
+  some who practiced less. Is the association positive, negative, or none? What does it say about practice
+  and missed free throws?
+sources:
+  ccss:
+  - 8.SP.A.1
+  learning_components:
+  - bfb3223b
+  - f333277a
+requires:
+- clause: via-make
+  all_of:
+  - node: data.scatter-plot.make
+    relation: representational
+    points_to: statement
+    why: The statement describes tendencies shown by a scatter plot, where each point is a pair of values
+      of the two quantities.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement interprets a scatter plot that is given; making one is a stronger
+        skill than reading one, and the test problem describes a finished plot. | other route: Interpret
+        ready-made scatter plots by reading each point as a pair of values (data.table-graph.read-values
+        and coordinate-plane.first-quadrant.read).'
+    status: disputed
+- clause: critic-route-1
+  note: Interpret a given scatter plot by reading each point as a pair of values, without making one.
+  all_of:
+  - node: data.table-graph.read-values
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Interpret a given scatter plot by reading each point
+      as a pair of values, without making one.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: coordinate-plane.first-quadrant.read
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Interpret a given scatter plot by reading each point
+      as a pair of values, without making one.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

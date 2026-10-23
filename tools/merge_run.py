@@ -249,8 +249,22 @@ def rename_all(doc, rename):
     for c in doc.get("requires", []):
         for e in c["all_of"]:
             e["node"] = rename.get(e["node"], e["node"])
+        # several old ids renamed to one (spellings of one skill) leave one edge per node per route
+        seen, out = set(), []
+        for e in c["all_of"]:
+            if e["node"] not in seen:
+                seen.add(e["node"])
+                out.append(e)
+        c["all_of"] = out
     for r in doc.get("related", []):
         r["node"] = rename.get(r["node"], r["node"])
+    seen, out = set(), []
+    for r in doc.get("related", []) or []:
+        if (r["node"], r["relation"]) not in seen:
+            seen.add((r["node"], r["relation"]))
+            out.append(r)
+    if doc.get("related"):
+        doc["related"] = out
 
 
 class NoAlias(yaml.SafeDumper):

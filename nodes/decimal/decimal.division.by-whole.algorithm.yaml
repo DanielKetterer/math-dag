@@ -1,0 +1,65 @@
+id: decimal.division.by-whole.algorithm
+concept: decimal
+facet: decimal-fraction
+level: 3
+type: procedure
+name: Divide a decimal by a whole number with the standard algorithm
+statement: Divide a decimal by a whole number with long division, placing the decimal point of the quotient
+  directly above the decimal point of the dividend and writing zeros after the last digit of the dividend
+  to keep dividing.
+procedure:
+- Set up long division with the decimal dividend and the whole-number divisor.
+- Place the decimal point in the quotient directly above the decimal point of the dividend.
+- Divide as with whole numbers, bringing down one digit at a time.
+- If the digits of the dividend run out and the difference is not 0, write a 0 after the last digit of
+  the dividend and keep dividing, until the difference is 0 or the quotient has the required number of
+  places.
+assess: 'Use the standard algorithm: 9.3 divided by 4.'
+sources:
+  ccss:
+  - 6.NS.B.3
+  learning_components:
+  - 0c3f03b8
+requires:
+- clause: standard
+  all_of:
+  - node: division.standard-algorithm.long-division
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 divides as with whole numbers, bringing down one digit at a time, which is the long-division
+      algorithm.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.thousandths.notation
+    relation: representational
+    points_to: procedure.4
+    why: Step 4 writes a 0 after the last digit of the decimal dividend and keeps dividing, which reads
+      those digits as decimal places.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.equivalent.trailing-zeros
+    relation: definitional
+    points_to: statement
+    why: The procedure writes zeros after the last decimal digit (15 becomes 15.00, 3.7 becomes 3.70,
+      9.3 becomes 9.30) and relies on the number being unchanged; no index node states that a decimal
+      is unchanged by appending zeros after its last decimal digit.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

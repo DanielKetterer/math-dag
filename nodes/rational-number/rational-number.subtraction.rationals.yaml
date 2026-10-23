@@ -1,0 +1,62 @@
+id: rational-number.subtraction.rationals
+concept: rational-number
+facet: core
+level: 3
+type: procedure
+name: Subtract two signed fractions or decimals
+statement: Subtract one rational number given as a signed fraction or decimal from another by rewriting
+  the subtraction as adding the opposite and adding the two numbers.
+procedure:
+- Rewrite p - q as p + (-q).
+- Add p and -q by the sign rules for adding signed fractions or decimals.
+assess: Compute -1.2 - 3.5 and 1/4 - (-2/3).
+sources:
+  ccss:
+  - 7.NS.A.1
+  - 7.NS.A.3
+  learning_components:
+  - 1781e56e
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.subtraction.add-inverse
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites p - q as p + (-q), which is exactly the identity that the add-the-opposite concept
+      states.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.opposite.of-opposite
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 produces -q, and for 1/4 - (-2/3) the result -(-2/3) must be seen as 2/3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.addition.rationals
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds p and -q by the sign rules for adding signed fractions or decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

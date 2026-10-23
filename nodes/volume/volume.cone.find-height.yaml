@@ -1,0 +1,97 @@
+id: volume.cone.find-height
+concept: volume
+facet: unit-cubes
+level: 3
+type: procedure
+name: Find the height of a cone from its volume and radius
+statement: Find the height of a cone from its volume and radius by multiplying the volume by 3 and dividing
+  by the base area pi x r^2.
+procedure:
+- Multiply the volume by 3.
+- Divide by the base area pi x r^2; the quotient is the height.
+assess: A cone has a volume of 12 x pi cubic cm and a radius of 3 cm. Find its height.
+sources:
+  ccss:
+  - 8.G.C.9
+  learning_components:
+  - 74823f49
+requires:
+- clause: standard
+  all_of:
+  - node: volume.cone.formula
+    relation: definitional
+    points_to: statement
+    why: The volume is one third of the base area times the height, so 3 x V equals the base area times
+      the height.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: procedure.1
+    why: The first step multiplies the volume by 3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.area.formula.apply
+    relation: procedural
+    points_to: procedure.2
+    why: The second step divides by the base area pi x r^2 computed from the radius.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: assess
+    why: The test problem divides 36 by 9 once the common factor pi is removed.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement fixes no divisor size (the divisor is the base area pi x r^2); dividing
+        36 by 9 once pi cancels is specific to the test problem. Cancelling the common factor pi is a
+        further step no listed edge covers (see missing prerequisite'
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 squares the radius inside the base area pi x r^2.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.multiples-of-pi.quotient
+    relation: definitional
+    points_to: statement
+    why: When the volume is given in terms of pi, the quotient of two multiples of pi, (m x pi) divided
+      by (n x pi) = m divided by n, has to be cancelled before dividing; no listed node covers it. It
+      is needed only when the volume is given as a multiple of pi, as in the test problem.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,89 @@
+id: circle.area.formula.apply
+concept: circle
+facet: measure
+level: 3
+type: procedure
+name: Find the area of a circle with the formula
+statement: The area of a circle is found by multiplying pi by the radius times itself, halving the diameter
+  first when the diameter is given.
+procedure:
+- If the diameter is given, halve it to get the radius.
+- Multiply the radius by itself.
+- Multiply the result by pi, or by an approximation such as 3.14.
+assess: Find the area of a circle with radius 10 cm. Use 3.14 for pi.
+sources:
+  ccss:
+  - 7.G.B.4
+  learning_components:
+  - a6134b89
+requires:
+- clause: standard
+  all_of:
+  - node: circle.area.formula
+    relation: definitional
+    points_to: statement
+    why: The procedure carries out the formula A = pi x r x r.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.diameter
+    relation: procedural
+    points_to: procedure.1
+    why: Halving a given diameter to get the radius relies on a diameter being twice the radius.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: procedure.1
+    why: Halving the diameter is dividing it by 2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Halving a given diameter is a real step but the test gives a radius; division.by-one-digit
+        (multi-digit dividends) may be stronger than the target uses.'
+    status: disputed
+  - node: multiplication.two-digit-by-two-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Multiplying the radius by itself is a whole-number product such as 10 x 10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Multiplying the radius by itself is a real step but the test squares 10, a multiple-of-ten
+        product; two-digit by two-digit multiplication may be stronger than the target uses.'
+    status: disputed
+  - node: decimal.multiplication.algorithm
+    relation: procedural
+    points_to: procedure.3
+    why: Multiplying the result by 3.14 is multiplying a whole number by a decimal.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

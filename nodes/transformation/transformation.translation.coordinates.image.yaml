@@ -1,0 +1,79 @@
+id: transformation.translation.coordinates.image
+concept: transformation
+facet: coordinate
+level: 2
+type: procedure
+name: Find the coordinates of the image of a polygon after a translation
+statement: Find the coordinates of the image of a polygon after a translation of a given number of units
+  horizontally and vertically; a horizontal move changes only the x-coordinate and a vertical move changes
+  only the y-coordinate.
+procedure:
+- Move each vertex the given number of units right or left and the given number of units up or down on
+  the grid.
+- 'Record each image vertex: the x-coordinate changes by the horizontal move and the y-coordinate by the
+  vertical move.'
+- Join the image vertices in the same order.
+assess: Triangle ABC has vertices A(1, 2), B(4, 2), and C(1, 5). Give the coordinates of the vertices
+  of its image after a translation 3 units left and 2 units down.
+sources:
+  ccss:
+  - 8.G.A.3
+  learning_components:
+  - 0efc2703
+  - c01f36a2
+  - c78dcad7
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.translation.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure carries out a translation, moving every vertex the same distance in the same direction
+      on the grid.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.four-quadrants.plot
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 locates each vertex on the grid and moves it, and the test's image vertices cross to a
+      negative x-coordinate.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.four-quadrants.read
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 records each image vertex as coordinates, read from any quadrant of the plane.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.ordered-pair.meaning
+    relation: definitional
+    points_to: statement
+    why: The claim that a horizontal move changes only the x-coordinate and a vertical move only the y-coordinate
+      is exactly what each coordinate measures (a distance from an axis).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

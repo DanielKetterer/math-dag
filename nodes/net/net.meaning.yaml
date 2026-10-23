@@ -1,0 +1,59 @@
+id: net.meaning
+concept: net
+facet: core
+level: 2
+type: concept
+name: A net of a solid
+statement: A net of a solid with flat faces is a flat figure made of all of its faces, joined edge to
+  edge, that folds up into the solid with no gaps and no overlaps.
+assess: 'Three arrangements of six equal squares are shown: (a) a row of four squares with one square
+  above and one below the second square, (b) a row of four squares with one square above each of the first
+  two, (c) a 2-by-3 block. Which fold into a cube?'
+sources:
+  ccss:
+  - 6.G.A.4
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.solid.parts
+    relation: definitional
+    points_to: statement
+    why: A net contains every face of the solid, so the learner must be able to identify the faces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.dimension.flat-solid
+    relation: definitional
+    points_to: statement
+    why: A net is a flat figure that folds up into a solid shape.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.cube.identify
+    relation: definitional
+    points_to: assess
+    why: The test asks which arrangements of six equal squares fold into a cube, which has six equal square
+      faces.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem asks about a cube; the idea of a net applies to any solid
+        with flat faces.'
+    status: proposed
+status: proposed

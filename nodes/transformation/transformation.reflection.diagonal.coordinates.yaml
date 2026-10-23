@@ -1,0 +1,65 @@
+id: transformation.reflection.diagonal.coordinates
+concept: transformation
+facet: coordinate
+level: 3
+type: procedure
+name: Find the coordinates of the image of a polygon reflected across y = x or y = -x
+statement: Find the coordinates of the image of a polygon reflected across the line y = x with the rule
+  (x, y) -> (y, x), or across the line y = -x with the rule (x, y) -> (-y, -x).
+procedure:
+- For a reflection across y = x, swap the two coordinates of each vertex.
+- For a reflection across y = -x, swap the two coordinates of each vertex and change the sign of both.
+- Join the image vertices in the same order.
+assess: Triangle ABC has vertices A(1, 2), B(1, 5), and C(3, 2). Give the coordinates of the vertices
+  of its image after a reflection across the line y = -x.
+sources:
+  ccss:
+  - 8.G.A.3
+  learning_components:
+  - 402e7eef
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.reflection.meaning
+    relation: definitional
+    points_to: statement
+    why: The rules give the image of a vertex under a reflection across a line, here the diagonal line
+      y = x or y = -x.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate.ordered-pair.notation
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 swaps the two coordinates of an ordered pair, so the solver must know which number is
+      x and which is y.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.opposite.number-line
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 changes the sign of both coordinates, which is taking the opposite of each number, as
+      the test's y = -x requires.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

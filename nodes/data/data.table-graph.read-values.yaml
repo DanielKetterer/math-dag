@@ -1,0 +1,47 @@
+id: data.table-graph.read-values
+concept: data
+facet: paired-values
+level: 2
+type: representation
+name: Read paired values from a table or a graph
+statement: When pairs of values of two quantities are shown, the value of the second quantity that goes
+  with a given value of the first is read in the same row of a table, or at the point of the graph above
+  that value on the horizontal axis.
+assess: A table shows hours 1, 2, 3, 4 and miles 6, 12, 18, 24. How many miles go with 3 hours? On a graph
+  of the same pairs, what is the y-value of the point above x = 4?
+sources:
+  ccss:
+  - 5.G.A.2
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: table.read-two-way
+    relation: representational
+    points_to: statement
+    why: Reading the second value in the same row as a given first value is reading an entry of a table
+      of rows and columns.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.first-quadrant.read
+    relation: representational
+    points_to: statement
+    why: Reading the y-value of the point above a given x-value on a graph is reading a coordinate of
+      a point in the first quadrant.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,79 @@
+id: area.parallelogram.formula
+concept: area
+facet: multiplicative
+level: 3
+type: concept
+name: The area formula for a parallelogram, A = b x h
+statement: The area of any parallelogram is its base times its height, A = b x h, for any side chosen
+  as the base and the height to that base.
+assess: 'True or false: a parallelogram with sides of 6 cm and 5 cm, and a height of 4 cm to the 6 cm
+  side, has an area of 30 square cm. Say which rule decides it.'
+sources:
+  ccss:
+  - 6.G.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: height.base-height
+    relation: definitional
+    points_to: statement
+    why: The formula uses a base and the height to that base, for any side chosen as the base.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.quadrilateral.parallel-sides.define
+    relation: definitional
+    points_to: statement
+    why: The rule is stated for any parallelogram, a quadrilateral with two pairs of parallel sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: Checking 6 x 4 against the claimed area of 30 is a single-digit product.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 6 x 4 check is a single-digit product.'
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: representational
+    points_to: statement
+    why: The rule is written with the letters A, b and h, each standing for a number.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: definitional
+    points_to: statement
+    why: The rule generalizes length times width to base times height; a learner must already read an
+      area as a product of two perpendicular lengths.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,131 @@
+id: surface-area.prism.from-dimensions
+concept: surface-area
+facet: core
+level: 3
+type: procedure
+name: Find the surface area of a right prism from its base and height
+statement: The surface area of a right prism is the sum of the areas of its two congruent bases and of
+  its rectangular side faces; each side face has one side of the base as one dimension and the prism's
+  height as the other.
+procedure:
+- Find the area of the base and double it.
+- For each side of the base, multiply its length by the height of the prism.
+- Add the doubled base area and all the side-face areas.
+assess: A right prism is 10 cm long. Its bases are right triangles with sides 3 cm, 4 cm and 5 cm. Find
+  its surface area.
+sources:
+  ccss:
+  - 7.G.B.6
+  learning_components:
+  - 22098a76
+requires:
+- clause: via-decompose
+  all_of:
+  - node: surface-area.meaning
+    relation: definitional
+    points_to: statement
+    why: The surface area is the sum of the areas of the two bases and the side faces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.prism.right.meaning
+    relation: definitional
+    points_to: statement
+    why: The solid is a right prism with congruent bases and rectangular side faces whose other dimension
+      is the prism's height.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: procedure.2
+    why: Each side face is a rectangle with a side of the base and the prism's height as its dimensions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-multiple-of-ten
+    relation: procedural
+    points_to: assess
+    why: The side faces 3 x 10, 4 x 10 and 5 x 10 multiply a one-digit number by a multiple of 10.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s side faces 3 x 10, 4 x 10 and 5 x 10 multiply a one-digit
+        number by a multiple of 10.'
+    status: proposed
+  - node: addition.within-1000
+    relation: procedural
+    points_to: assess
+    why: The doubled base area and the three side-face areas total 132, a sum within 1000.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s total 12 + 30 + 40 + 50 = 132 is a sum within 1000.'
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 doubles the base area, and step 2 multiplies each side length by the height.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.triangle.formula.apply
+    relation: procedural
+    points_to: assess
+    why: The assess problem has right triangles as bases, so the base area comes from base and height.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s bases are right triangles whose area comes from base
+        and height; the statement allows any polygon base.'
+    status: proposed
+  - node: area.polygon.decompose
+    relation: procedural
+    points_to: procedure.1
+    why: The area of the base, a polygon, is found before it is doubled.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The base is a polygon whose area is needed; decomposing it into triangles and
+        rectangles is one way to find it. | other route: Find the base polygon''s area by enclosing it
+        and subtracting the outside pieces (area.polygon.subtract), or directly from its formula when
+        the base is a rectangle or triangle.'
+    status: disputed
+status: proposed

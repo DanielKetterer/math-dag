@@ -1,0 +1,89 @@
+id: transformation.rigid-motion.preserves-length.verify
+concept: transformation
+facet: geometric
+level: 2
+type: justification
+name: Verify experimentally that rigid motions keep lengths
+statement: Moving a tracing of a segment by translations, reflections, and rotations, and comparing each
+  image with the original, shows experimentally that the image is always a segment of the same length.
+assess: Trace segment AB on transparent paper. Translate the tracing, then reflect it, then rotate it,
+  comparing the image with segment AB after each move. What do you find about the image, and how does
+  the tracing show it?
+sources:
+  ccss:
+  - 8.G.A.1.a
+  learning_components:
+  - 715f7b83
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.translation.meaning
+    relation: justificatory
+    points_to: statement
+    why: The experiment slides a tracing of the segment, which is performing a translation and comparing
+      the result with the original.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.reflection.meaning
+    relation: justificatory
+    points_to: statement
+    why: The experiment flips the tracing over a line, which is performing a reflection and comparing
+      the result with the original.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rotation.meaning
+    relation: justificatory
+    points_to: statement
+    why: The experiment turns the tracing about a point, which is performing a rotation and comparing
+      the result with the original.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: segment.meaning
+    relation: justificatory
+    points_to: statement
+    why: The thing traced and moved is a segment, and the finding is about the image being a segment of
+      the same length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.size.direct
+    relation: justificatory
+    points_to: statement
+    why: Laying the image beside the original segment after each move is a direct comparison of two lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

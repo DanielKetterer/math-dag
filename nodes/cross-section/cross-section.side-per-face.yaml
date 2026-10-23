@@ -1,0 +1,59 @@
+id: cross-section.side-per-face
+concept: cross-section
+facet: core
+level: 2
+type: concept
+name: A cross-section has one side in each face the plane crosses
+statement: When a plane slices a solid with flat faces, the cross-section is a polygon with exactly one
+  side in each face the plane crosses.
+assess: A plane slices a box so that it crosses exactly five of the box's six faces. How many sides does
+  the cross-section have?
+sources:
+  ccss:
+  - 7.G.A.3
+  learning_components:
+  - 4c290798
+requires:
+- clause: standard
+  all_of:
+  - node: cross-section.meaning
+    relation: definitional
+    points_to: statement
+    why: The result is described as the cross-section, the flat figure where the plane meets the solid.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.solid.parts
+    relation: definitional
+    points_to: statement
+    why: The statement counts the faces of a solid that the plane crosses, so the learner must identify
+      faces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.sides.count
+    relation: definitional
+    points_to: statement
+    why: The statement counts the sides of the cross-section polygon, one for each face crossed.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

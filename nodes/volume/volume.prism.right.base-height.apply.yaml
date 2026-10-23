@@ -1,0 +1,101 @@
+id: volume.prism.right.base-height.apply
+concept: volume
+facet: multiplicative
+level: 3
+type: procedure
+name: Find the volume of a right prism with a non-rectangular base
+statement: The volume of a right prism whose base is a triangle or another polygon is found by computing
+  the area of the base and multiplying it by the height of the prism.
+procedure:
+- Find the area B of the base.
+- Find the height h, the distance between the two bases.
+- Multiply B by h.
+assess: A right prism is 10 cm long. Its bases are right triangles with legs of 6 cm and 4 cm. Find its
+  volume.
+sources:
+  ccss:
+  - 7.G.B.6
+  learning_components:
+  - c9233a4b
+requires:
+- clause: standard
+  all_of:
+  - node: volume.prism.right.base-height
+    relation: definitional
+    points_to: statement
+    why: The procedure carries out V = B x h for a right prism with a non-rectangular base.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.triangle.formula.apply
+    relation: procedural
+    points_to: procedure.1
+    why: Finding the area B of a triangular base uses the triangle area formula.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.polygon.decompose
+    relation: procedural
+    points_to: procedure.1
+    why: Finding the area B of a base that is another polygon uses decomposing it into triangles and rectangles.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Finding the area of a base that is another polygon is a real step, but decomposing
+        into triangles and rectangles is one method; subtracting pieces (area.polygon.subtract) would
+        do equally well and the test base is a triangle. The index has '
+    status: disputed
+  - node: shapes.prism.right.meaning
+    relation: procedural
+    points_to: procedure.2
+    why: The height is the distance between the two bases, which is the length of an edge of a right prism.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.two-digit-by-two-digit
+    relation: procedural
+    points_to: procedure.3
+    why: Multiplying the base area B by the height h is a whole-number product.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Multiplying B by h is a real step, but the test multiplies 12 by 10, a place-value
+        product; two-digit by two-digit multiplication may be stronger than the target uses.'
+    status: disputed
+  - node: area.polygon.find
+    relation: definitional
+    points_to: statement
+    why: A method-neutral node for the area of a polygon base (by decomposing, subtracting or any method)
+      is what step 1 needs for non-triangular bases.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

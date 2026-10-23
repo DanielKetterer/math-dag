@@ -1,0 +1,103 @@
+id: distribution.compare.center-difference-in-variability
+concept: distribution
+facet: core
+level: 3
+type: procedure
+name: Express the difference between two centers as a multiple of a measure of variability
+statement: For two numerical distributions with similar variability, the difference between their centers
+  is measured in units of that variability by dividing the difference by the common measure of variability
+  (such as the MAD).
+procedure:
+- Subtract the smaller center from the larger center.
+- Divide the difference by the common measure of variability.
+- Report the result as the number of measures of variability that separate the centers.
+assess: The mean height of the basketball team is 190 cm and the mean height of the soccer team is 180
+  cm. The MAD of each team's heights is 5 cm. The difference between the means is how many MADs?
+sources:
+  ccss:
+  - 7.SP.B.3
+  learning_components:
+  - 5f41fba8
+requires:
+- clause: standard
+  all_of:
+  - node: center.meaning
+    relation: definitional
+    points_to: statement
+    why: The quantity compared is the difference between the centers of the two distributions, so the
+      learner must know a center as one typical value.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: variability.meaning
+    relation: definitional
+    points_to: statement
+    why: The difference is measured in units of a common measure of variability such as the MAD, so the
+      learner must know what such a measure is.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 subtracts the smaller center from the larger center, such as 190 minus 180 in the test
+      problem; any method of subtracting will do.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides the difference by the common measure of variability, such as 10 divided by 5 in
+      the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.measurement.meaning
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 reports how many measures of variability fit in the difference, which is a quotient read
+      as the number of equal groups.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude
+    relation: definitional
+    points_to: statement
+    why: Step 1 subtracts the smaller center from the larger, so it decides which center is greater.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

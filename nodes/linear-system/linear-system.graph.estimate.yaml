@@ -1,0 +1,74 @@
+id: linear-system.graph.estimate
+concept: linear-system
+facet: graphical
+level: 3
+type: procedure
+name: Estimate the solution of a system by graphing
+statement: Estimate the solution of a system of two equations of the form y = mx + b by graphing both
+  lines on the same axes and reading the coordinates of their intersection, estimating them when the intersection
+  is not at a grid point.
+procedure:
+- Graph each equation as a line on the same coordinate axes.
+- Locate the point where the lines cross.
+- Read or estimate its coordinates.
+assess: Graph y = x + 1 and y = -2x + 6 on the same axes and estimate the solution of the system.
+sources:
+  ccss:
+  - 8.EE.C.8.b
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: linear-function.line.graph
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 graphs each equation y = mx + b as a line, by plotting two points and drawing the line
+      through them.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.graph.read
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 and 3 find the crossing point and take its coordinates as the solution, which is reading
+      a solution from drawn graphs.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.four-quadrants.fraction-decimal.read
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 estimates coordinates when the crossing falls between grid points, as the lines in the
+      test problem cross at fractional coordinates.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement asks for the solution of a system, so the meaning of a solution is used directly
+      (it is also reached through linear-system.graph.read).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

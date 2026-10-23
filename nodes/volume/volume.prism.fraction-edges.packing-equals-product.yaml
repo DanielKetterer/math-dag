@@ -1,0 +1,74 @@
+id: volume.prism.fraction-edges.packing-equals-product
+concept: volume
+facet: unit-cubes
+level: 2
+type: justification
+name: Show that packing and multiplying edge lengths give the same volume for fractional edges
+statement: For a right rectangular prism with fractional edge lengths, the volume found by packing with
+  unit-fraction cubes equals the product of the edge lengths, because counting the cubes and multiplying
+  by the volume of one cube computes the same product of fractions.
+assess: A prism is 3/4 unit by 1/2 unit by 1 unit. Find its volume by packing it with cubes of edge 1/4
+  unit, and show why the result must equal 3/4 x 1/2 x 1.
+sources:
+  ccss:
+  - 6.G.A.2
+  learning_components:
+  - f3bed57a
+requires:
+- clause: standard
+  all_of:
+  - node: volume.prism.fraction-edges.packing
+    relation: definitional
+    points_to: statement
+    why: The statement compares the volume found by packing with unit-fraction cubes to the product of
+      the edge lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.product-rule
+    relation: justificatory
+    points_to: statement
+    why: Multiplying (a/n) x (b/n) x (c/n) gives (a x b x c)/(n x n x n), the cube count times one cube's
+      volume.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.symbolic
+    relation: procedural
+    points_to: assess
+    why: The product 3/4 x 1/2 x 1 must be computed to compare it with the packing result.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 3/4 x 1/2 x 1 must be computed; the justification rests
+        on the product rule (e734), and any fraction-product method gives the number.'
+    status: proposed
+  - node: fraction.equivalent.simple.generate
+    relation: procedural
+    points_to: assess
+    why: Packing with cubes of edge 1/4 requires writing the 1/2 unit edge as 2/4.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs 1/2 and 1 rewritten as 2/4 and 4/4 for the 1/4 cubes;
+        the justification itself does not.'
+    status: proposed
+status: proposed

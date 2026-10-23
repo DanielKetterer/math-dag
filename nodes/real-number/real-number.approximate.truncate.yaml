@@ -1,0 +1,62 @@
+id: real-number.approximate.truncate
+concept: real-number
+facet: decimal-expansion
+level: 3
+type: procedure
+name: Bound a number between truncations of its decimal expansion
+statement: If t is the decimal expansion of a positive number x cut off after n decimal places, then t
+  <= x <= t + 1/10^n, which bounds x between two decimals with n places.
+procedure:
+- Cut off the decimal expansion of x after n decimal places to get t.
+- Add 1 in the last place kept to get t + 1/10^n.
+- State that x lies between t and t + 1/10^n.
+assess: pi = 3.14159... Between which two consecutive hundredths does pi lie?
+sources:
+  ccss:
+  - 8.NS.A.2
+  learning_components:
+  - bac2efb6
+requires:
+- clause: standard
+  all_of:
+  - node: real-number.decimal-expansion
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 cuts off the decimal expansion of x after n places, so the expansion and its digits must
+      be understood.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.addition.algorithm
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds 1 in the last place kept to t, a decimal addition that can carry, as in 3.149 + 0.001.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.power-of-ten.notation
+    relation: representational
+    points_to: statement
+    why: The bounds t and t + 1/10^n are written with a power of 10 with a whole-number exponent.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

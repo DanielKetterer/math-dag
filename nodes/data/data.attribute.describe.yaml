@@ -1,0 +1,59 @@
+id: data.attribute.describe
+concept: data
+facet: measurement
+level: 2
+type: concept
+name: Describe the attribute a numerical data set measures
+statement: Summarizing a numerical data set in context includes naming the attribute measured on each
+  individual, how it was measured, and its unit of measurement.
+assess: 'Each student in a class timed the trip to school with a phone, from leaving home to arriving
+  at school, and reported the result: 12, 25, 8, 15, 30. What attribute was measured, how was it measured,
+  and in what unit?'
+sources:
+  ccss:
+  - 6.SP.B.5.b
+  learning_components:
+  - 6c56f94a
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.attributes.several
+    relation: definitional
+    points_to: statement
+    why: Naming the attribute measured on each individual uses the idea that one object has several measurable
+      attributes and one of them is chosen.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.time.units
+    relation: definitional
+    points_to: assess
+    why: The test problem's trip times need a unit of time, and choosing minutes over hours or seconds
+      uses their relative sizes.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem (trip times, answer in minutes) needs to pick a unit of
+        time by relative size; naming the unit of a data set does not.'
+    status: proposed
+  - node: measurement.length.no-gaps-overlaps
+    relation: definitional
+    points_to: statement
+    why: The weaker node for the unit idea (a measurement is a number of units) that replaces the ruler
+      edge e1806; a general unit-of-measurement concept for any attribute (new:measurement.unit.meaning)
+      would fit better if one is added.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

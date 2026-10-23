@@ -1,0 +1,77 @@
+id: rational-number.definition
+concept: rational-number
+facet: core
+level: 3
+type: concept
+name: A rational number is a quotient of integers
+statement: A rational number is a number that can be written as p/q for some integers p and q with q not
+  0.
+assess: Show that -1.25, 3 1/2 and 6 are rational numbers by writing each as a quotient of two integers.
+sources:
+  ccss:
+  - 8.NS.A.1
+  learning_components:
+  - 1de87160
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.integer-quotient
+    relation: definitional
+    points_to: statement
+    why: The definition says a rational number is p/q for integers p and q, which is the quotient of integers
+      that this concept names.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.whole-number.as-fraction
+    relation: representational
+    points_to: assess
+    why: The test problem writes the whole number 6 as a quotient of integers, 6/1.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs it: 6 is written as 6/1. The definition does not involve
+        whole numbers written as fractions.'
+    status: proposed
+  - node: fraction.mixed-number.to-fraction
+    relation: procedural
+    points_to: assess
+    why: The test problem writes the mixed number 3 1/2 as the quotient 7/2.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs it: 3 1/2 is rewritten as 7/2. The definition does
+        not involve mixed numbers.'
+    status: proposed
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: assess
+    why: The test problem writes -1.25 as a quotient of integers, which uses reading 1.25 as 125 hundredths.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs it: -1.25 is written as a quotient of integers by
+        reading 1.25 as 125 hundredths. The definition itself does not involve decimals.'
+    status: proposed
+status: proposed

@@ -1,0 +1,77 @@
+id: angle.transversal.find-angles
+concept: angle
+facet: measure
+level: 3
+type: procedure
+name: Find all eight angles at parallel lines cut by a transversal from one angle
+statement: Given one of the eight angles formed when a transversal crosses two parallel lines, find the
+  other seven using vertical angles, adjacent angles on a line that add to 180 degrees, and corresponding
+  angles.
+procedure:
+- At the crossing with the given angle, give its vertical angle the same measure.
+- Give each of the two angles next to it on a line the measure 180 degrees minus the given angle.
+- At the other crossing, give each angle the measure of its corresponding angle.
+assess: Parallel lines m and n are crossed by line t. One of the eight angles formed measures 115 degrees.
+  Find the measures of the other seven angles.
+sources:
+  ccss:
+  - 8.G.A.5
+  learning_components:
+  - 2b003d7c
+requires:
+- clause: standard
+  all_of:
+  - node: angle.vertical.equal
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 gives the vertical angle at the same crossing the same measure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.straight-line.sum-180
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 gives each angle next to the given one on a line the supplement of it, since adjacent
+      angles on a line add to 180 degrees.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 computes 180 degrees minus the given angle, as 180 minus 115 in the test.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.transversal.corresponding
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 gives each angle at the other crossing the measure of its corresponding angle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

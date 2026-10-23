@@ -1,0 +1,69 @@
+id: division.standard-algorithm.long-division
+concept: division
+facet: base-ten
+level: 3
+type: procedure
+name: Divide multi-digit whole numbers with the standard algorithm
+statement: Divide a multi-digit whole number by a whole number of one or more digits (not greater than
+  the dividend) with the standard long-division algorithm, working from the greatest place of the dividend,
+  to get the whole-number quotient and remainder.
+procedure:
+- Take the fewest leading digits of the dividend that form a number at least as large as the divisor;
+  this is the current number.
+- Find the greatest digit q (0 to 9) with q x divisor at most the current number, and write q in the quotient
+  above the last digit used.
+- Subtract q x divisor from the current number.
+- If digits of the dividend remain, bring down the next one to the right of the difference to form the
+  new current number, and return to step 2.
+- When no digits remain, the last difference is the remainder.
+assess: Use the standard algorithm to divide 9,374 by 26. Give the quotient and the remainder.
+sources:
+  ccss:
+  - 6.NS.B.2
+  learning_components:
+  - 019a93e7
+  - fa745fbb
+requires:
+- clause: standard
+  all_of:
+  - node: comparing.whole-numbers.magnitude.multi-digit
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 takes the fewest leading digits that form a number at least as large as the divisor, which
+      compares multi-digit numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds the greatest digit q by multiplying a multi-digit divisor by q and checking the
+      product against the current number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.standard-algorithm
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 subtracts the product q x divisor from the current multi-digit number, and the last difference
+      is the remainder.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

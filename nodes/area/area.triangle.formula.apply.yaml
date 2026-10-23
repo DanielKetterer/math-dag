@@ -1,0 +1,88 @@
+id: area.triangle.formula.apply
+concept: area
+facet: multiplicative
+level: 3
+type: procedure
+name: Find the area of a triangle with A = (1/2) x b x h
+statement: The area of a triangle is found by multiplying a base by the height to that base and taking
+  half of the product.
+procedure:
+- Choose a side as the base and identify the height to that base, which may lie outside the triangle.
+- Multiply the base by the height.
+- Take half of the product.
+assess: An obtuse triangle has a base of 6 cm, another side of 5 cm, and a height of 4 cm to the base,
+  drawn outside the triangle. Find its area.
+sources:
+  ccss:
+  - 6.G.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: area.triangle.formula
+    relation: definitional
+    points_to: statement
+    why: The procedure applies the rule that the area is half of a base times the height to that base.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: height.base-height
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 identifies the height to the base, which may lie outside the triangle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The base times height product 6 x 4 is a single-digit product.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 6 x 4 is a single-digit product.'
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: assess
+    why: Taking half of the product 24 is dividing by 2.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 24 / 2 is a division; the products in general need not
+        be even, so division by a one-digit number with no remainder does not cover the step.'
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies the base by the height, here 6 times 4.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The procedure says only ''multiply the base by the height'' with no number range;
+        the test uses 6 x 4, a recalled fact (e698), so this node is stronger than the test needs but
+        too weak for general whole-number lengths.'
+    status: disputed
+status: proposed

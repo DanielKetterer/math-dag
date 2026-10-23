@@ -1,0 +1,48 @@
+id: expressions.linear.factor.rational
+concept: expressions
+facet: algebraic
+level: 3
+type: procedure
+name: Factor a given rational number out of a linear expression
+statement: 'Rewrite a linear expression bx + c as a times an expression, for a given nonzero rational
+  factor a that may be negative or a fraction, by dividing each term by a: bx + c = a((b/a)x + c/a).'
+procedure:
+- Divide the variable term and the constant by a.
+- Write a times the sum of the two quotients.
+assess: Rewrite -6x + 9 as -3 times an expression.
+sources:
+  ccss:
+  - 7.EE.A.1
+  learning_components:
+  - cde129c9
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.division.rationals
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 divides the coefficient and the constant by a, which may be negative or a fraction, as
+      in 9 divided by -3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.distributive.factor
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 writes the expression as a times a sum, which is factoring a common factor out of a sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,90 @@
+id: inequality.two-step.solve
+concept: inequality
+facet: open-sentence
+level: 3
+type: procedure
+name: Solve px + q > r and related inequalities
+statement: Solve an inequality px + q > r, px + q < r, px + q >= r or px + q <= r, where p, q and r are
+  rational numbers and p is not 0, by subtracting q from both sides and dividing both sides by p, reversing
+  the inequality symbol when p is negative.
+procedure:
+- Subtract q from both sides.
+- Divide both sides by p.
+- If p is negative, reverse the direction of the inequality symbol.
+assess: Solve -2x + 5 >= 11.
+sources:
+  ccss:
+  - 7.EE.B.4.b
+  learning_components:
+  - 4d78d954
+requires:
+- clause: standard
+  all_of:
+  - node: inequality.same-operation.preserved
+    relation: procedural
+    points_to: procedure.1
+    why: Steps 1 and 2 subtract q from both sides and divide both sides by a positive p, which keep the
+      direction of the inequality.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: inequality.multiply-negative.reverse
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 reverses the symbol when p is negative, because dividing both sides by a negative number
+      reverses the inequality.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: inequality.symbols.inclusive
+    relation: representational
+    points_to: statement
+    why: The statement covers the forms px + q >= r and px + q <= r, which use the symbols >= and <=.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.subtraction.rationals
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 computes r - q for signed rational numbers, as in 11 - 5.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.division.rationals
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides r - q by p, which may be negative or a fraction, as in 6 divided by -2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

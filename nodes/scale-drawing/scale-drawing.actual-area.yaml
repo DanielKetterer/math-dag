@@ -1,0 +1,73 @@
+id: scale-drawing.actual-area
+concept: scale-drawing
+facet: core
+level: 2
+type: procedure
+name: Find an actual area from a scale drawing
+statement: The actual area of a figure in a scale drawing is found by converting the drawing lengths it
+  needs to actual lengths with the scale and then computing the area from the actual lengths.
+procedure:
+- Convert each drawing length needed for the area to an actual length with the scale.
+- Compute the area from the actual lengths.
+assess: A rectangular room is drawn 4 cm by 3 cm. The scale is 1 cm to 2 m. What is the actual area of
+  the room?
+sources:
+  ccss:
+  - 7.G.A.1
+  learning_components:
+  - f75552e4
+requires:
+- clause: standard
+  all_of:
+  - node: scale-drawing.actual-length
+    relation: procedural
+    points_to: procedure.1
+    why: Each drawing length that the area calculation uses is converted to an actual length with the
+      scale.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: assess
+    why: The room is a rectangle, so its area is the product of its actual length and width.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s rectangular room uses length times width; the statement
+        computes the area of any figure from its actual lengths.'
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The actual room area 8 x 6 is a single-digit product.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 8 x 6 is a single-digit product.'
+    status: proposed
+  - node: area.covering.meaning
+    relation: definitional
+    points_to: statement
+    why: The target finds an actual area; the meaning of area is used by the statement and is reached
+      only through a task-only edge.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

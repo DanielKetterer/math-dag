@@ -1,0 +1,84 @@
+id: volume.cylinder.find-height
+concept: volume
+facet: unit-cubes
+level: 3
+type: procedure
+name: Find the height of a cylinder from its volume and radius
+statement: Find the height of a cylinder from its volume and radius by dividing the volume by the base
+  area pi x r^2.
+procedure:
+- Compute the base area pi x r^2.
+- Divide the volume by the base area; the quotient is the height.
+assess: A cylinder has a volume of 72 x pi cubic cm and a radius of 3 cm. Find its height.
+sources:
+  ccss:
+  - 8.G.C.9
+  learning_components:
+  - ba4daaa8
+  - 2249c3b7
+requires:
+- clause: standard
+  all_of:
+  - node: volume.cylinder.formula
+    relation: definitional
+    points_to: statement
+    why: The volume is the base area pi x r^2 times the height, so the height is the factor that is missing.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.area.formula.apply
+    relation: procedural
+    points_to: procedure.1
+    why: The first step computes the base area pi x r^2 from the radius.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: assess
+    why: The test problem divides 72 by 9 once the common factor pi is removed.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement fixes no divisor size (the divisor is the base area pi x r^2); dividing
+        72 by 9 once pi cancels is specific to the test problem. Cancelling the common factor pi is a
+        further step no listed edge covers (see missing prerequisite'
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 squares the radius inside the base area pi x r^2.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.multiples-of-pi.quotient
+    relation: definitional
+    points_to: statement
+    why: When the volume is given in terms of pi, the quotient of two multiples of pi, (m x pi) divided
+      by (n x pi) = m divided by n, has to be cancelled before dividing; no listed node covers it. It
+      is needed only when the volume is given as a multiple of pi, as in the test problem.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

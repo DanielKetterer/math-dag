@@ -1,0 +1,101 @@
+id: area.triangle.formula
+concept: area
+facet: multiplicative
+level: 3
+type: concept
+name: The area formula for a triangle, A = (1/2) x b x h
+statement: The area of any triangle is half of its base times its height, A = (1/2) x b x h, for any side
+  chosen as the base and the height to that base.
+assess: 'True or false: a right triangle with legs of 6 cm and 8 cm and a hypotenuse of 10 cm has an area
+  of 40 square cm. Say which rule decides it.'
+sources:
+  ccss:
+  - 6.G.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: height.base-height
+    relation: definitional
+    points_to: statement
+    why: The formula uses a base and the height to that base, for any side chosen as the base.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: Checking the product 6 x 8 against the claimed area is a single-digit product.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 6 x 8 check is a single-digit product.'
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: assess
+    why: Half of the product 48 is found by dividing by 2.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem halves 48; halving is not part of the rule''s meaning.'
+    status: proposed
+  - node: fraction.multiplication.parts-of-partition.whole-number
+    relation: representational
+    points_to: statement
+    why: The factor 1/2 in the rule means taking one of two equal parts of the product b x h.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: representational
+    points_to: statement
+    why: The rule is written with the letters A, b and h, each standing for a number.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: definitional
+    points_to: statement
+    why: The rule is half of a product of two perpendicular lengths; a learner must already read an area
+      as such a product.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: shapes.triangle.right.identify
+    relation: definitional
+    points_to: statement
+    why: 'Task only: the test problem gives a right triangle by its legs and hypotenuse and the learner
+      must take the legs as base and height.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

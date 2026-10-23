@@ -1,0 +1,78 @@
+id: probability.sample-space.table
+concept: probability
+facet: equally-likely
+level: 2
+type: representation
+name: Represent the sample space of a two-stage compound event with a table
+statement: For a compound event with two stages, a table whose rows are the outcomes of the first stage
+  and whose columns are the outcomes of the second stage has one cell for each outcome in the sample space.
+assess: A coin is tossed and a number cube is rolled. Make a table that shows every possible outcome.
+sources:
+  ccss:
+  - 7.SP.C.8.b
+  learning_components:
+  - 8eb843cd
+  - 2ee8400d
+requires:
+- clause: via-list
+  all_of:
+  - node: table.read-two-way
+    relation: representational
+    points_to: statement
+    why: The statement is stated in a table whose rows are first-stage outcomes and columns second-stage
+      outcomes, with one cell per outcome.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: probability.sample-space.list
+    relation: definitional
+    points_to: statement
+    why: The statement counts one cell per outcome in the sample space, the set of all combinations of
+      stage outcomes defined with the organized list.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The table uses the idea of all combinations of stage outcomes but not the fix-the-first-stage
+        listing procedure of the organized list. | other route: Build the table directly from the lists
+        of single-stage outcomes, rows for the first stage and columns for the second, which itself shows
+        all combinations.'
+    status: disputed
+- clause: critic-route-1
+  note: Build the table straight from the lists of single-stage outcomes, rows for the first stage and
+    columns for the second.
+  all_of:
+  - node: table.read-two-way
+    relation: representational
+    points_to: statement
+    why: The statement is stated in a table whose rows are first-stage outcomes and columns second-stage
+      outcomes, with one cell per outcome.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: probability.outcomes.list
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Build the table straight from the lists of single-stage
+      outcomes, rows for the first stage and columns for the second.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

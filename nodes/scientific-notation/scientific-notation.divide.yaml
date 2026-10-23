@@ -1,0 +1,74 @@
+id: scientific-notation.divide
+concept: scientific-notation
+facet: core
+level: 3
+type: procedure
+name: Divide numbers in scientific notation
+statement: '(a x 10^m) divided by (b x 10^n) = (a divided by b) x 10^(m - n): divide the leading factors
+  and subtract the exponents.'
+procedure:
+- Divide the leading factors.
+- Subtract the exponent of the divisor from the exponent of the dividend.
+- If the new leading factor is less than 1, rewrite the result in scientific notation.
+assess: Find (9 x 10^4) divided by (3 x 10^-2). Give the answer in scientific notation.
+sources:
+  ccss:
+  - 8.EE.A.4
+  learning_components:
+  - 93a8423a
+  - 2687e8fb
+requires:
+- clause: standard
+  all_of:
+  - node: scientific-notation.meaning
+    relation: representational
+    points_to: statement
+    why: Both numbers and the result are written as a leading factor times a power of 10 in scientific
+      notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.division.by-decimal.algorithm
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 divides the leading factors, which are decimals and may have a decimal divisor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.subtraction.integers
+    relation: procedural
+    points_to: procedure.2
+    why: Subtracting the divisor's exponent, as in 4 - (-2), is integer subtraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: scientific-notation.normalize
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 rewrites a quotient whose leading factor is less than 1 in scientific notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

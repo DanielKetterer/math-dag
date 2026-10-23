@@ -1,0 +1,66 @@
+id: linear-function.nonlinear.example
+concept: linear-function
+facet: line
+level: 3
+type: procedure
+name: Give an example of a function that is not linear
+statement: Produce a function that is not linear and show that it is not linear by exhibiting three of
+  its points that do not lie on one line.
+procedure:
+- Choose a rule whose output does not change by equal amounts for equal changes in input, such as squaring
+  the input.
+- Compute three points of the rule.
+- Show that the rates of change between two pairs of these points differ, so the points are not on one
+  line.
+assess: Give a rule for a function that is not linear, and use three of its points to show that it is
+  not linear.
+sources:
+  ccss:
+  - 8.F.A.3
+  learning_components:
+  - 469afc42
+requires:
+- clause: standard
+  all_of:
+  - node: functions.definition
+    relation: definitional
+    points_to: statement
+    why: The example must be a function, a rule giving each input exactly one output, before it can be
+      shown not linear.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.evaluate
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 computes three points of the chosen rule by evaluating it at three inputs.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.nonlinear.identify
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 shows two rates differ between pairs of the three points, which is the test for a function
+      not being linear.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

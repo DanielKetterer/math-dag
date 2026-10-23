@@ -1,0 +1,57 @@
+id: root.cube.solve-x-cubed
+concept: root
+facet: cube
+level: 3
+type: procedure
+name: Write the solution of x^3 = p with a cube root
+statement: For a positive rational number p, the equation x^3 = p has exactly one solution, the cube root
+  of p.
+procedure:
+- Write the single solution x = the cube root of p.
+- If p is a perfect cube, the root may be replaced by its value.
+assess: Find every solution of x^3 = 20. Write the solution with the cube root symbol.
+sources:
+  ccss:
+  - 8.EE.A.2
+  learning_components:
+  - 1c9b3eef
+requires:
+- clause: standard
+  all_of:
+  - node: root.cube.meaning
+    relation: definitional
+    points_to: statement
+    why: The one solution is written as the cube root of p, the number whose cube is p.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: A solution of x^3 = p is a value of x that makes the equation true, and exactly one such value
+      exists.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: The equation x^3 = p is written with power notation, used directly in the statement.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

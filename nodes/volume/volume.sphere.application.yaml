@@ -1,0 +1,45 @@
+id: volume.sphere.application
+concept: volume
+facet: unit-cubes
+level: 3
+type: application
+name: Solve real-world problems that find the volume of a sphere
+statement: Solve real-world problems that find the volume of a ball or other sphere-shaped object from
+  its radius or diameter, using 3.14 for pi.
+assess: A ball has a diameter of 6 inches. About how many cubic inches of air does it hold? Use 3.14 for
+  pi.
+sources:
+  ccss:
+  - 8.G.C.9
+  learning_components:
+  - 77fac757
+requires:
+- clause: standard
+  all_of:
+  - node: volume.sphere.compute
+    relation: procedural
+    points_to: statement
+    why: The problem finds a volume from a radius or diameter with V = (4/3) x pi x r^3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.numerical.fractions-decimals.evaluate
+    relation: procedural
+    points_to: statement
+    why: The 3.14 value of pi makes the volume computation a product or quotient of decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

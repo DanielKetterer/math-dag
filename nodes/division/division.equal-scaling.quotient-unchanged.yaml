@@ -1,0 +1,58 @@
+id: division.equal-scaling.quotient-unchanged
+concept: division
+facet: measurement
+level: 3
+type: concept
+name: Scaling dividend and divisor by the same number leaves the quotient unchanged
+statement: 'Multiplying the dividend and the divisor by the same nonzero number does not change the quotient:
+  a divided by b = (a x k) divided by (b x k).'
+assess: 'Without dividing, decide which of these are equal to 7.38 divided by 0.6: 73.8 divided by 6;
+  738 divided by 6; 738 divided by 60.'
+sources:
+  ccss:
+  - 6.NS.B.3
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: division.measurement.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement treats the quotient as the number of equal groups of size b in a, which is the
+      grouping meaning of division.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.power-of-ten.decimal.rule
+    relation: procedural
+    points_to: assess
+    why: The test problem needs 7.38 and 0.6 rewritten as 73.8 and 6 or as 738 and 60 by multiplying decimals
+      by powers of 10.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is general; only the test problem needs 7.38 and 0.6 rewritten as
+        73.8 and 6 or 738 and 60 by multiplying decimals by powers of 10.'
+    status: proposed
+related:
+- node: fraction.quotient.symbolic
+  relation: same_idea_different_form
+  note: Reading a divided by b as the fraction a/b is the bridge to the fraction form of the identity
+    (e1520); the measurement-facet principle does not need it.
+- node: fraction.equivalent.multiply-principle
+  relation: same_idea_different_form
+  note: (a x k)/(b x k) = a/b is the fraction form of the same identity; proving the claim that way reads
+    the quotient as a fraction, which changes the facet (measurement) of this node. Keep as a link, not
+    a prerequisite.
+status: proposed

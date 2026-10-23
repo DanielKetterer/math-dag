@@ -1,0 +1,75 @@
+id: scale-drawing.area.scale-factor-squared
+concept: scale-drawing
+facet: core
+level: 3
+type: concept
+name: Scaling lengths by k scales area by k x k
+statement: When every length of a figure is multiplied by k, its area is multiplied by k x k.
+assess: Every side of a rectangle is multiplied by 3. Is its area multiplied by 3? If not, by what number
+  is it multiplied?
+sources:
+  ccss:
+  - 7.G.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: area.rectangle.length-times-width
+    relation: justificatory
+    points_to: assess
+    why: Area as length times width shows that multiplying both lengths by k multiplies the area by k
+      x k.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is about the area of any figure; only the test problem''s rectangle
+        calls for area as length times width.'
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The test's factor 3 gives the product 3 x 3, a single-digit product.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s factor 3 gives the single-digit product 3 x 3.'
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: representational
+    points_to: statement
+    why: The statement uses the letter k for any factor.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.scaling.resize
+    relation: definitional
+    points_to: statement
+    why: Multiplying every length by k is multiplication as resizing; it replaces the wrong edge e862.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: area.covering.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement is about how area changes; the meaning of area is not covered by any necessary
+      edge.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

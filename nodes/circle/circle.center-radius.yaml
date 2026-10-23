@@ -1,0 +1,69 @@
+id: circle.center-radius
+concept: circle
+facet: figure
+level: 2
+type: concept
+name: A circle as the points at one distance from a center
+statement: A circle is all the points in a plane at one fixed distance, the radius, from a fixed point,
+  the center.
+assess: A circle has center O and radius 5 cm. Point Q is 4 cm from O and point R is 6 cm from O. Which
+  of Q and R is on the circle, inside it, or outside it?
+sources:
+  ccss:
+  - 7.G.A.2
+  - 7.G.B.4
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: point.meaning
+    relation: definitional
+    points_to: statement
+    why: The center is a fixed point, and the circle is made of points at one distance from it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.attribute
+    relation: definitional
+    points_to: statement
+    why: The radius is a distance, which is the length between the center and a point of the circle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.numerals-within-10
+    relation: procedural
+    points_to: assess
+    why: Telling whether Q at 4 cm and R at 6 cm are inside or outside means comparing each distance with
+      5.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem compares numbers (4 and 6 against 5) to say inside, on or
+        outside; the idea of a circle as points at one distance from a center does not need numeral comparison.'
+    status: proposed
+  - node: spatial.position.relative
+    relation: definitional
+    points_to: statement
+    why: The test asks which point is inside or outside the circle; the position words inside and outside
+      are used directly (test-level, low weight).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

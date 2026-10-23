@@ -1,0 +1,97 @@
+id: expressions.formula.evaluate
+concept: expressions
+facet: algebraic
+level: 3
+type: application
+name: Use a given formula to find a quantity in a real-world problem
+statement: In a real-world problem that gives a formula, such as V = s^3 or A = 6s^2, find the quantity
+  the formula names by evaluating it at the given measurements, and state the result with its unit.
+assess: The volume of a cube with edge length s is V = s^3. Find the volume of a cube whose edges are
+  1/2 inch long.
+sources:
+  ccss:
+  - 6.EE.A.2.c
+  learning_components:
+  - 06806313
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.variable.evaluate
+    relation: procedural
+    points_to: statement
+    why: Finding the quantity a formula names means replacing the letters in V = s^3 or A = 6s^2 with
+      the given measurements and evaluating.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.exponents.evaluate
+    relation: procedural
+    points_to: statement
+    why: The formulas V = s^3 and A = 6s^2 contain powers, so evaluating them after substitution puts
+      the power before the multiplication by 6.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.fraction-base
+    relation: procedural
+    points_to: assess
+    why: The test problem evaluates (1/2)^3 for an edge of 1/2 inch, a power of a fraction.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem evaluates a power of a fraction ((1/2)^3); the statement
+        is satisfied for whole-number or decimal measurements without it.'
+    status: proposed
+  - node: volume.unit-cube
+    relation: definitional
+    points_to: assess
+    why: The answer to the cube problem must be stated in cubic inches, the unit that comes from a unit
+      cube.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem (a cube volume) requires cubic units; the statement says
+        ''state the result with its unit'' for any formula, and an area formula such as A = 6s^2 needs
+        square units instead, see missing prerequisite area.unit-square.'
+    status: proposed
+  - node: expressions.numerical.fractions-decimals.evaluate
+    relation: procedural
+    points_to: statement
+    why: The measurements may be fractions or decimals and formulas such as A = 6s^2 contain powers, so
+      the substituted expression is evaluated with those numbers.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.unit-square
+    relation: definitional
+    points_to: statement
+    why: The statement's formula A = 6s^2 gives an area, whose result must be stated in square units;
+      volume.unit-cube covers only the cubic-unit case (task-only for the test).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

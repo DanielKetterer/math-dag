@@ -47,7 +47,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: coordinate-plane.four-quadrants
+  - node: coordinate-plane.four-quadrants.read
     relation: representational
     points_to: statement
     why: The crossing point (0, b) lies on the vertical axis and b may be negative, so axis points in
@@ -60,8 +60,12 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired coordinate-plane.four-quadrants: Step 1 reads points off the line,
+        which may lie in any quadrant, with integer coordinates.'
     status: proposed
-  - node: rational-numbers.operations
+  - node: rational-number.subtraction.rationals
     relation: definitional
     points_to: statement
     why: Slopes and intercepts may be negative or fractional, as the statement allows any non-vertical
@@ -70,8 +74,40 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired rational-numbers.operations: Steps 2-3 compute (y2 - y1)/(x2 - x1)
+        and y1 - m x x1, and the statement allows negative or fractional values.'
     status: disputed
-  - node: expressions.variables
+  - node: rational-number.division.rationals
+    relation: definitional
+    points_to: statement
+    why: Slopes and intercepts may be negative or fractional, as the statement allows any non-vertical
+      line.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired rational-numbers.operations: Steps 2-3 compute (y2 - y1)/(x2 - x1)
+        and y1 - m x x1, and the statement allows negative or fractional values.'
+    status: disputed
+  - node: rational-number.multiplication.rationals
+    relation: definitional
+    points_to: statement
+    why: Slopes and intercepts may be negative or fractional, as the statement allows any non-vertical
+      line.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired rational-numbers.operations: Steps 2-3 compute (y2 - y1)/(x2 - x1)
+        and y1 - m x x1, and the statement allows negative or fractional values.'
+    status: disputed
+  - node: expressions.variable.meaning
     relation: definitional
     points_to: statement
     why: 'Critic: The result is an equation with variables. (proposed as a missing direct prerequisite
@@ -80,6 +116,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired expressions.variables: The equation is written with x and y standing
+        for numbers; nothing is evaluated or written from words.'
     status: disputed
 related:
 - node: linear-function.line.y-mx.write

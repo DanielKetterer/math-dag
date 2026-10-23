@@ -82,7 +82,7 @@ requires:
       note: 're-pointed from retired subtraction.whole-number: The difference 50 - 40 is 5 tens - 4 tens,
         within 10.'
     status: disputed
-  - node: decimal.division.algorithm
+  - node: decimal.division.by-whole.algorithm
     relation: procedural
     points_to: statement
     why: Computing new - original and dividing by the original, as in 10 divided by 50 equals 0.2, uses
@@ -102,6 +102,10 @@ requires:
       note: 're-pointed from retired decimal.operations: 10 divided by 50 gives the decimal 0.2 and then
         0.2 x 100 is a decimal times a whole number. Claude: the source is symbolic (L3), so the skill
         is the 6.NS.B.3 standard algorithm, a later-phase boundary id, not the L2 model node.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired decimal.division.algorithm: The divisor is a whole number with a
+        decimal quotient (10 divided by 50, 9 divided by 12); no decimal divisor occurs.'
     status: disputed
   - node: decimal.multiplication.algorithm
     relation: procedural
@@ -124,7 +128,7 @@ requires:
         0.2 x 100 is a decimal times a whole number. Claude: the source is symbolic (L3), so the skill
         is the 6.NS.B.3 standard algorithm, a later-phase boundary id, not the L2 model node.'
     status: disputed
-  - node: rational-numbers.operations
+  - node: rational-number.subtraction.integers
     relation: definitional
     points_to: statement
     why: The formula (new - original)/original gives a negative number for a decrease, so signed subtraction
@@ -137,6 +141,28 @@ requires:
       note: 'route-only: Signed values appear only if a decrease is recorded as negative; the magnitude
         of the change with the word increase or decrease avoids negatives. | other route: Compute the
         difference as a positive amount and label it increase or decrease (subtraction.whole-number).'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired rational-numbers.operations: 40 - 50 = -10 is an integer difference;
+        -10 divided by 50 = -0.2 is a signed quotient that is not an integer.'
+    status: disputed
+  - node: rational-number.division.rationals
+    relation: definitional
+    points_to: statement
+    why: The formula (new - original)/original gives a negative number for a decrease, so signed subtraction
+      and division are used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Signed values appear only if a decrease is recorded as negative; the magnitude
+        of the change with the word increase or decrease avoids negatives. | other route: Compute the
+        difference as a positive amount and label it increase or decrease (subtraction.whole-number).'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired rational-numbers.operations: 40 - 50 = -10 is an integer difference;
+        -10 divided by 50 = -0.2 is a signed quotient that is not an integer.'
     status: disputed
 - clause: via-symbolic
   all_of:

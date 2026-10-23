@@ -1,0 +1,111 @@
+id: scientific-notation.units.choose
+concept: scientific-notation
+facet: core
+level: 3
+type: procedure
+name: Choose a unit of suitable size for a very large or very small measurement
+statement: Given a very large or very small measurement in scientific notation and a set of metric units,
+  choose the unit that makes its measure a number from 1 to 1000, and rewrite the measurement in that
+  unit using powers of 10.
+procedure:
+- Write the size of each offered unit as a power of 10 times the given unit.
+- For each unit, divide the measurement by that power of 10 and find the unit that gives a number from
+  1 to 1000.
+- Write the measurement in that unit.
+assess: 'The Atlantic seafloor widens by about 2.5 x 10^-5 kilometers each year. Which unit makes this
+  rate a number from 1 to 1000: kilometers, meters, or millimeters per year? Give the rate in that unit.'
+sources:
+  ccss:
+  - 8.EE.A.4
+  learning_components:
+  - dc8db438
+requires:
+- clause: standard
+  all_of:
+  - node: scientific-notation.meaning
+    relation: representational
+    points_to: statement
+    why: The measurement is given in scientific notation as a leading factor times a power of 10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.units.metric
+    relation: definitional
+    points_to: procedure.1
+    why: Step 1 writes each offered unit, such as meters or millimeters, in terms of kilometers using
+      metric unit sizes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.power-of-ten.notation
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 writes a larger unit's size as a positive power of 10 times the given unit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.power-of-ten.negative
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 writes a smaller unit's size as a negative power of 10 times the given unit, such as 10^-6
+      km.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.unit-conversion.multiplicative-relation
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 rewrites the measurement in the chosen unit, whose number is a fixed multiple of the number
+      in the given unit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: scientific-notation.divide
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides the measurement by each unit's power of 10, a division in scientific notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.compare
+    relation: procedural
+    points_to: procedure.2
+    why: deciding whether a converted number is from 1 to 1000 compares decimals such as 0.025 with 1
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

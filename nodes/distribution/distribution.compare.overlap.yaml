@@ -1,0 +1,51 @@
+id: distribution.compare.overlap
+concept: distribution
+facet: core
+level: 2
+type: concept
+name: Judge the visual overlap of two distributions with similar variability
+statement: For two numerical distributions with similar variability shown on the same scale, the less
+  their plots overlap, the larger the difference between their centers is compared with their spread;
+  distributions that barely overlap are clearly separated.
+assess: Four dot plots share one scale and have about the same spread. Plot A runs from 150 to 170 and
+  plot B from 152 to 172. Plot C runs from 150 to 170 and plot D from 175 to 195. Which pair of plots
+  overlaps more? In which pair are the two groups clearly separated?
+sources:
+  ccss:
+  - 7.SP.B.3
+  learning_components:
+  - 5f434177
+requires:
+- clause: standard
+  all_of:
+  - node: distribution.describe
+    relation: definitional
+    points_to: statement
+    why: Comparing the centers of two distributions against their spread uses the informal description
+      of each distribution by its center and spread.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.dot-plot.read
+    relation: representational
+    points_to: assess
+    why: The test problem shows each group as a dot plot on one shared scale, so the learner reads where
+      each plot starts and ends.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement speaks of plots in general; only the test problem shows dot plots
+        (histograms or box plots would serve the idea equally).'
+    status: proposed
+status: proposed

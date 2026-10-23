@@ -1,0 +1,87 @@
+id: equation.two-step.p-times-sum.solve
+concept: equation
+facet: open-sentence
+level: 3
+type: procedure
+name: Solve p(x + q) = r
+statement: Solve an equation p(x + q) = r, where p, q and r are rational numbers and p is not 0, by dividing
+  both sides by p and then subtracting q from both sides.
+procedure:
+- Divide both sides by p, giving x + q = r divided by p.
+- Subtract q from both sides, giving x = (r divided by p) - q.
+assess: Solve -2(x - 3) = 10.
+sources:
+  ccss:
+  - 7.EE.B.4.a
+  learning_components:
+  - 9d36a76f
+requires:
+- clause: standard
+  all_of:
+  - node: equation.equality-preserved.same-operation
+    relation: justificatory
+    points_to: procedure.1
+    why: Dividing both sides by p, then subtracting q from both sides, is valid because the same operation
+      on both sides keeps the solutions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.division.rationals
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 divides r by p, which may be negative or a fraction, as in 10 divided by -2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.subtraction.rationals
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts q from the quotient for signed rational numbers, as in -5 - (-3).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.parts.single-entity
+    relation: representational
+    points_to: procedure.1
+    why: Dividing both sides by p leaves x + q, which step 1 treats as a single quantity multiplied by
+      p.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: representational
+    points_to: statement
+    why: The equation is written p(x + q) = r, with the number p next to the parenthesis meaning p times
+      the sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

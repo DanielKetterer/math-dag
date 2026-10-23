@@ -1,0 +1,65 @@
+id: linear-system.inspection
+concept: linear-system
+facet: algebraic
+level: 3
+type: procedure
+name: Tell by inspection how many solutions a simple system has
+statement: 'For a system written as ax + by = c and dx + ey = f: if the left side of one equation is k
+  times the left side of the other, the system has infinitely many solutions when the right sides are
+  in the same ratio k and no solution when they are not; otherwise it has exactly one solution.'
+procedure:
+- Write both equations with the x and y terms on the left and the constant on the right.
+- Check whether the left side of one equation is a number k times the left side of the other.
+- 'If not, the system has exactly one solution. If so, compare the right sides: k times the other right
+  side means infinitely many solutions, anything else means no solution.'
+assess: 'Without solving, say how many solutions each system has: 3x + 2y = 5 and 3x + 2y = 6; x + y =
+  4 and 2x + 2y = 8; x + y = 4 and x - y = 2.'
+sources:
+  ccss:
+  - 8.EE.C.8.b
+  learning_components:
+  - 9cdd3a07
+requires:
+- clause: standard
+  all_of:
+  - node: linear-system.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The conclusions are counts of solutions of a system, one, none or infinitely many, so what a
+      solution of a system is must be known.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.multiplication.rationals
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 checks whether one left side is a number k times the other, which multiplies the coefficients
+      by k and compares.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.division.rationals
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds the number k that multiplies one left side into the other by dividing coefficients,
+      which may be fractions or negative.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

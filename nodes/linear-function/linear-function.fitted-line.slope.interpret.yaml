@@ -1,0 +1,63 @@
+id: linear-function.fitted-line.slope.interpret
+concept: linear-function
+facet: fitted-line
+level: 3
+type: concept
+name: Interpret the slope of a line fitted to data
+statement: The slope of a line fitted to bivariate data is the predicted change in the second quantity
+  for each increase of one unit in the first, in units of the second per unit of the first; it describes
+  the trend of the data, not the exact change for every individual.
+assess: A line fitted to data on hours of sunlight per day (x) and mature plant height in cm (y) is y
+  = 1.5x + 10. What does the slope 1.5 mean in this context?
+sources:
+  ccss:
+  - 8.SP.A.3
+  learning_components:
+  - 68c64407
+requires:
+- clause: standard
+  all_of:
+  - node: linear-function.model.rate.interpret
+    relation: definitional
+    points_to: statement
+    why: The slope is read as the change in the second quantity per one unit of the first, the rate of
+      change of a linear model in context.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.fitted-line.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement says the slope describes the trend of the data, not the exact change for each individual,
+      which uses the line as a model.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.equation-defines
+    relation: representational
+    points_to: assess
+    why: The test problem gives y = 1.5x + 10 and asks about the slope 1.5, so the learner must see the
+      coefficient of x as the slope.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem presents the line as y = 1.5x + 10 and asks which number
+        is the slope. Reading the coefficient as the slope is better supported by linear-function.line.y-mx-plus-b.write
+        than by equation-defines, which says only that t'
+    status: proposed
+status: proposed

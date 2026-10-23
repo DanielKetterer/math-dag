@@ -1,0 +1,87 @@
+id: surface-area.rectangular-prism.from-dimensions
+concept: surface-area
+facet: core
+level: 3
+type: procedure
+name: Find the surface area of a rectangular prism from its length, width and height
+statement: A right rectangular prism has three pairs of identical faces, l by w, l by h and w by h, so
+  its surface area is twice the sum of lw, lh and wh.
+procedure:
+- Find the areas l x w, l x h and w x h of three faces that meet at one corner.
+- Add the three areas.
+- Double the sum.
+assess: Without drawing a net, find the surface area of a right rectangular prism that is 5 cm long, 3
+  cm wide and 2 cm tall.
+sources:
+  ccss:
+  - 7.G.B.6
+  learning_components:
+  - 42c0d603
+requires:
+- clause: standard
+  all_of:
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: procedure.1
+    why: The areas l x w, l x h and w x h are areas of rectangles.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The products 5 x 3, 5 x 2 and 3 x 2 are single-digit products.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 5 x 3, 5 x 2 and 3 x 2 are single-digit products.'
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The three face areas 15, 10 and 6 are added to 31.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 15 + 10 + 6 is a sum; the idea is twice the sum of three
+        face areas.'
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: assess
+    why: Doubling the sum 31 multiplies a two-digit number by 2.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: surface-area.meaning
+    relation: definitional
+    points_to: statement
+    why: The target finds a surface area; the meaning of surface area as the total of all faces is reached
+      only through the scaffold edge e829.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

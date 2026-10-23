@@ -1,0 +1,103 @@
+id: transformation.rotation.center.coordinates
+concept: transformation
+facet: coordinate
+level: 2
+type: procedure
+name: Find the coordinates of the image of a polygon rotated by a multiple of 90 degrees about a grid
+  point
+statement: Find the coordinates of the image of a polygon rotated by a multiple of 90 degrees about a
+  grid point other than the origin by turning each vertex's horizontal and vertical offsets from the center.
+procedure:
+- 'For each vertex, count its offset from the center: a units across and b units up, with a negative for
+  left and b negative for down.'
+- 'Turn the offset: (a, b) becomes (-b, a) for 90 degrees counterclockwise, (-a, -b) for 180 degrees,
+  and (b, -a) for 90 degrees clockwise.'
+- Count the turned offset from the center to locate the image vertex, and record its coordinates.
+- Join the image vertices in the same order.
+assess: Triangle ABC has vertices A(2, 1), B(5, 1), and C(2, 3). Give the coordinates of the vertices
+  of its image after a rotation of 90 degrees counterclockwise about A.
+sources:
+  ccss:
+  - 8.G.A.3
+  learning_components:
+  - b12819c6
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.rotation.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure carries out a rotation about a center, turning each vertex's offset from the center
+      through the given angle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.signed.represent-context
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 counts a vertex's offset from the center as signed numbers, a negative for left and b
+      negative for down.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: spatial.turn-direction
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 chooses how the offset turns by direction, clockwise or counterclockwise.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: This id does not appear in index.txt or in boundary_nodes, so its statement cannot
+        be checked. The skill it appears to name, telling a clockwise turn from a counterclockwise one,
+        is used directly by the target''s own statement, procedure or '
+    status: disputed
+  - node: rational-number.opposite.number-line
+    relation: procedural
+    points_to: procedure.2
+    why: Turning the offset (a, b) into (-b, a) or (-a, -b) takes the opposite of a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.first-quadrant.plot
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 locates each vertex and counts its offset from the center on the grid, which in the test
+      stays in the first quadrant.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.first-quadrant.read
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 counts the turned offset from the center and records the coordinates of the image vertex,
+      which in the test has positive coordinates.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

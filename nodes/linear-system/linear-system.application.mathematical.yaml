@@ -1,0 +1,367 @@
+id: linear-system.application.mathematical
+concept: linear-system
+facet: algebraic
+level: 3
+type: application
+name: Decide whether and where two lines given by two points each intersect
+statement: For two lines, each given by any two of its points, decide whether they intersect and, if they
+  do, find the intersection point, which may have fraction coordinates, by writing an equation for each
+  line and solving the system.
+assess: Does the line through (1, 2) and (3, 6) meet the line through (0, 5) and (5, 0)? If so, at what
+  point?
+sources:
+  ccss:
+  - 8.EE.C.8.c
+  learning_components:
+  - c7120f98
+requires:
+- clause: via-slopes
+  all_of:
+  - node: slope.between-two-points
+    relation: definitional
+    points_to: statement
+    why: A line given by any two of its points has its slope found from those two points before an equation
+      can be written.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.model.initial.from-two-values
+    relation: procedural
+    points_to: statement
+    why: When neither given point is on the y-axis, b must be found from the two points before y = mx
+      + b can be written.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx-plus-b.write
+    relation: representational
+    points_to: statement
+    why: The statement writes an equation for each line, in the form y = mx + b once m and b are known.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.solution.intersection
+    relation: definitional
+    points_to: statement
+    why: The intersection point of the two lines is the solution of the system of their equations, which
+      is what the problem asks for.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx.write
+    relation: procedural
+    points_to: assess
+    why: A line given by two points may pass through the origin, as in the assessment, and then its equation
+      is y = mx.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem has a line through the origin (through (1, 2) and (3, 6),
+        y = 2x); the general y = mx + b with b = 0 carries the idea.'
+    status: proposed
+  - node: linear-system.solution-count.slopes
+    relation: definitional
+    points_to: statement
+    why: Deciding whether the lines intersect uses that equal slopes with different intercepts give parallel
+      lines with no common point.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Equal slopes with different intercepts is the graphical way to decide whether
+        the lines meet. | other route: Solve the system algebraically and read a false equation a = b
+        as no intersection (equation.linear.solution-count.reduce).'
+    status: disputed
+- clause: via-set-expressions-equal
+  all_of:
+  - node: slope.between-two-points
+    relation: definitional
+    points_to: statement
+    why: A line given by any two of its points has its slope found from those two points before an equation
+      can be written.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.model.initial.from-two-values
+    relation: procedural
+    points_to: statement
+    why: When neither given point is on the y-axis, b must be found from the two points before y = mx
+      + b can be written.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx-plus-b.write
+    relation: representational
+    points_to: statement
+    why: The statement writes an equation for each line, in the form y = mx + b once m and b are known.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.solution.intersection
+    relation: definitional
+    points_to: statement
+    why: The intersection point of the two lines is the solution of the system of their equations, which
+      is what the problem asks for.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx.write
+    relation: procedural
+    points_to: assess
+    why: A line given by two points may pass through the origin, as in the assessment, and then its equation
+      is y = mx.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem has a line through the origin (through (1, 2) and (3, 6),
+        y = 2x); the general y = mx + b with b = 0 carries the idea.'
+    status: proposed
+  - node: linear-system.set-expressions-equal
+    relation: procedural
+    points_to: statement
+    why: Finding the intersection, possibly with fraction coordinates, sets the two expressions for y
+      equal and solves for x.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Solving the system is one computation that several methods do; setting the y-expressions
+        equal is one of them. | other route: Solve the pair of equations by substitution or by elimination.'
+    status: disputed
+- clause: critic-route-4
+  note: Solve by substitution and read a false equation as no intersection.
+  all_of:
+  - node: slope.between-two-points
+    relation: definitional
+    points_to: statement
+    why: A line given by any two of its points has its slope found from those two points before an equation
+      can be written.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.model.initial.from-two-values
+    relation: procedural
+    points_to: statement
+    why: When neither given point is on the y-axis, b must be found from the two points before y = mx
+      + b can be written.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx-plus-b.write
+    relation: representational
+    points_to: statement
+    why: The statement writes an equation for each line, in the form y = mx + b once m and b are known.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.solution.intersection
+    relation: definitional
+    points_to: statement
+    why: The intersection point of the two lines is the solution of the system of their equations, which
+      is what the problem asks for.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx.write
+    relation: procedural
+    points_to: assess
+    why: A line given by two points may pass through the origin, as in the assessment, and then its equation
+      is y = mx.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem has a line through the origin (through (1, 2) and (3, 6),
+        y = 2x); the general y = mx + b with b = 0 carries the idea.'
+    status: proposed
+  - node: linear-system.substitution
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Solve by substitution and read a false equation as
+      no intersection.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: equation.linear.solution-count.reduce
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Solve by substitution and read a false equation as
+      no intersection.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+- clause: critic-route-5
+  note: Solve by elimination and read a false equation as no intersection.
+  all_of:
+  - node: slope.between-two-points
+    relation: definitional
+    points_to: statement
+    why: A line given by any two of its points has its slope found from those two points before an equation
+      can be written.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.model.initial.from-two-values
+    relation: procedural
+    points_to: statement
+    why: When neither given point is on the y-axis, b must be found from the two points before y = mx
+      + b can be written.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx-plus-b.write
+    relation: representational
+    points_to: statement
+    why: The statement writes an equation for each line, in the form y = mx + b once m and b are known.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.solution.intersection
+    relation: definitional
+    points_to: statement
+    why: The intersection point of the two lines is the solution of the system of their equations, which
+      is what the problem asks for.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx.write
+    relation: procedural
+    points_to: assess
+    why: A line given by two points may pass through the origin, as in the assessment, and then its equation
+      is y = mx.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem has a line through the origin (through (1, 2) and (3, 6),
+        y = 2x); the general y = mx + b with b = 0 carries the idea.'
+    status: proposed
+  - node: linear-system.elimination
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Solve by elimination and read a false equation as
+      no intersection.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: equation.linear.solution-count.reduce
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Solve by elimination and read a false equation as
+      no intersection.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

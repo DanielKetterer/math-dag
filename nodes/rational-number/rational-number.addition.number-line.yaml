@@ -1,0 +1,59 @@
+id: rational-number.addition.number-line
+concept: rational-number
+facet: change
+level: 2
+type: concept
+name: p + q as a move of |q| from p on the number line
+statement: p + q is the number located a distance |q| from p on the number line, in the positive direction
+  if q is positive and in the negative direction if q is negative.
+assess: 'Without computing, describe where -2 + 5 and -2 + (-5) are on a number line: from which point
+  do you start, which way do you move, and how far?'
+sources:
+  ccss:
+  - 7.NS.A.1.b
+  learning_components:
+  - bffbcffa
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.integer.number-line
+    relation: representational
+    points_to: statement
+    why: The statement places p + q on the number line by moving in the positive or negative direction,
+      which uses positions of negative and positive integers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: absolute-value.distance.integer
+    relation: definitional
+    points_to: statement
+    why: The statement moves a distance |q| from p, which is the absolute value of q as its distance from
+      0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.add-to.number-line
+    relation: definitional
+    points_to: statement
+    why: For positive q the sum p + q is the point reached by moving q units in the positive direction,
+      as when a whole-number sum is shown on a number line.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

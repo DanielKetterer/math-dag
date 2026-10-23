@@ -1,0 +1,128 @@
+id: area.triangle.right.half-rectangle
+concept: area
+facet: additive
+level: 2
+type: procedure
+name: Find the area of a right triangle as half of a rectangle
+statement: A right triangle is half of the rectangle whose sides are its two legs, so its area is half
+  of that rectangle's area.
+procedure:
+- Draw the rectangle that has the two legs of the right triangle as two of its sides.
+- Note that the hypotenuse is a diagonal that cuts the rectangle into two copies of the triangle.
+- Find the area of the rectangle and take half of it.
+assess: A right triangle has legs of 6 cm and 4 cm. Draw the rectangle it is half of and use it to find
+  the area of the triangle.
+sources:
+  ccss:
+  - 6.G.A.1
+  learning_components:
+  - c2509042
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.triangle.right.identify
+    relation: definitional
+    points_to: statement
+    why: The statement is about right triangles, with two legs forming the right angle and the hypotenuse
+      opposite it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.rectangle.define
+    relation: procedural
+    points_to: procedure.1
+    why: Drawing the rectangle that has the two legs as sides requires knowing a rectangle has four right
+      angles.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: procedure.3
+    why: The area of the rectangle is found from its two side lengths, which are the legs.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.additive
+    relation: justificatory
+    points_to: statement
+    why: The rectangle's area is the sum of its two equal triangular halves, so each triangle has half
+      of it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: assess
+    why: Taking half of the rectangle's area of 24 square cm is dividing by 2.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem halves 24; the idea is that the triangle is half the rectangle,
+        and halving a number is a computation any method does.'
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The rectangle's area 6 x 4 is a single-digit product.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 6 x 4 is a single-digit product; the rectangle''s area
+        is covered by the area-of-rectangle edge.'
+    status: proposed
+  - node: shapes.compare.same-different
+    relation: procedural
+    points_to: procedure.2
+    why: Seeing that the diagonal cuts the rectangle into two copies of the triangle means judging the
+      two pieces to be the same shape.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: partitioning.equal-shares.name
+    relation: definitional
+    points_to: statement
+    why: The statement and procedure use 'half' of the rectangle's area; naming halves is not covered
+      by any proposed edge.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

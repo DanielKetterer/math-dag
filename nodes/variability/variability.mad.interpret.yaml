@@ -1,0 +1,48 @@
+id: variability.mad.interpret
+concept: variability
+facet: mad
+level: 2
+type: concept
+name: Interpret the mean absolute deviation
+statement: 'The MAD of a data set is the typical distance of its values from the mean, in the units of
+  the data: a small MAD means the values lie close to the mean and a larger MAD means they lie farther
+  from it.'
+assess: Class A's reading times have mean 30 minutes and MAD 2 minutes. Class B's have mean 30 minutes
+  and MAD 9 minutes. What do the two MADs tell you about the reading times in each class?
+sources:
+  ccss:
+  - 7.SP.B.3
+  learning_components:
+  - a6f3f96d
+requires:
+- clause: standard
+  all_of:
+  - node: variability.mad.compute
+    relation: definitional
+    points_to: statement
+    why: Interpreting the MAD as a typical distance from the mean uses its definition as the mean of the
+      distances of the values from the mean.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: variability.meaning
+    relation: definitional
+    points_to: statement
+    why: A small MAD meaning values close to the mean and a larger MAD meaning values farther away applies
+      the idea of a measure of variation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

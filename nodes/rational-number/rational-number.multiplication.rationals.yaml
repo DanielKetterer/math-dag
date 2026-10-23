@@ -1,0 +1,90 @@
+id: rational-number.multiplication.rationals
+concept: rational-number
+facet: core
+level: 3
+type: procedure
+name: Multiply two signed fractions or decimals
+statement: Multiply two rational numbers given as signed fractions or decimals by multiplying their absolute
+  values as fractions or decimals and giving the product the sign from the sign rule.
+procedure:
+- If either factor is 0, the product is 0.
+- Multiply the absolute values of the factors as fractions or decimals.
+- Make the product positive if the factors have the same sign and negative if they have opposite signs.
+assess: Compute -0.6 x 2.5 and (-3/4) x (-2/9).
+sources:
+  ccss:
+  - 7.NS.A.2
+  - 7.NS.A.3
+  learning_components:
+  - 8c3bf1a0
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.by-zero
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 says the product is 0 if either factor is 0, whether the factors are fractions or decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: absolute-value.distance.rational
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies the absolute values of the factors, so each fraction or decimal must be read
+      as its distance from 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.symbolic
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies fraction absolute values such as 3/4 and 2/9.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.multiplication.algorithm
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies decimal absolute values such as 0.6 and 2.5 and places the decimal point in
+      the product.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.multiplication.sign-rule
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 gives the product its sign by the rule for same signs and opposite signs.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

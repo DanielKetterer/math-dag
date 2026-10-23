@@ -1,0 +1,132 @@
+id: probability.model.uniform.event
+concept: probability
+facet: equally-likely
+level: 3
+type: procedure
+name: Find the probability of an event in a uniform model
+statement: In a uniform probability model, the probability of an event is the number of outcomes in the
+  event divided by the total number of outcomes.
+procedure:
+- Count the total number of equally likely outcomes.
+- Count the outcomes that make up the event.
+- Divide the number of outcomes in the event by the total number of outcomes.
+assess: A student is selected at random from a class of 12 girls and 13 boys. What is the probability
+  that a girl is selected?
+sources:
+  ccss:
+  - 7.SP.C.7.a
+  learning_components:
+  - f578a7d0
+requires:
+- clause: via-symbolic
+  all_of:
+  - node: probability.model.uniform.develop
+    relation: definitional
+    points_to: statement
+    why: The statement works inside a uniform probability model, whose list of n equally likely outcomes
+      supplies the total in the division.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.objects
+    relation: procedural
+    points_to: procedure.1
+    why: Counting the total number of equally likely outcomes, and the outcomes in the event, is counting
+      a collection.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem needs the class total 12 + 13 to get the number of equally likely outcomes.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs 12 + 13; the procedure takes the total of outcomes
+        as counted.'
+    status: proposed
+  - node: fraction.quotient.symbolic
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 divides the number of outcomes in the event by the total number of outcomes, written as
+      the fraction event over total.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The event probability can be reached without a divided by b = a/b: each of the
+        n outcomes has probability 1/n (uniform.develop), so k outcomes make k parts of size 1/n. | other
+        route: Read k favorable outcomes among n equally likely outcomes as k parts of size 1/n (fraction.non-unit.part-whole
+        with probability.model.uniform.develop).'
+    status: disputed
+- clause: critic-route-1
+  note: Each of the n equally likely outcomes has probability 1/n, so the k outcomes of the event make
+    k parts of size 1/n; no division of counts.
+  all_of:
+  - node: probability.model.uniform.develop
+    relation: definitional
+    points_to: statement
+    why: The statement works inside a uniform probability model, whose list of n equally likely outcomes
+      supplies the total in the division.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.objects
+    relation: procedural
+    points_to: procedure.1
+    why: Counting the total number of equally likely outcomes, and the outcomes in the event, is counting
+      a collection.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem needs the class total 12 + 13 to get the number of equally likely outcomes.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs 12 + 13; the procedure takes the total of outcomes
+        as counted.'
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Each of the n equally likely outcomes has probability
+      1/n, so the k outcomes of the event make k parts of size 1/n; no division of counts.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

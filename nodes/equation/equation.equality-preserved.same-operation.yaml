@@ -1,0 +1,72 @@
+id: equation.equality-preserved.same-operation
+concept: equation
+facet: relational
+level: 3
+type: concept
+name: Doing the same operation to both sides keeps an equation's solutions
+statement: Adding the same number to both sides of an equation, subtracting the same number from both
+  sides, or multiplying or dividing both sides by the same nonzero number gives an equation with exactly
+  the same solutions.
+assess: 'Which of these equations have exactly the same solutions as n + 5 = 12: n + 5 - 5 = 12 - 5; n
+  + 5 - 5 = 12; 3 x (n + 5) = 3 x 12; 0 x (n + 5) = 0 x 12?'
+sources:
+  ccss:
+  - 6.EE.B.7
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: equation.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement says the new equation has exactly the same solutions, which uses what a solution
+      of an equation is.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.equal-sign.meaning
+    relation: definitional
+    points_to: statement
+    why: Doing the same operation to both sides keeps the two sides equal in value, which is what the
+      equal sign says.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-zero
+    relation: definitional
+    points_to: assess
+    why: The test option 0 x (n + 5) = 0 x 12 reduces to 0 = 0, so multiplying by 0 changes the solutions.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test option 0 x (n + 5) = 0 x 12 needs multiplication by 0; the statement''s
+        nonzero restriction is stated, not derived.'
+    status: proposed
+  - node: expressions.parentheses
+    relation: definitional
+    points_to: statement
+    why: 'Task-only: the test options 3 x (n + 5) = 3 x 12 and 0 x (n + 5) = 0 x 12 put a sum in parentheses
+      that is multiplied.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

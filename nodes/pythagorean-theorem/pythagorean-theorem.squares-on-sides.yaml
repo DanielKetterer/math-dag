@@ -1,0 +1,74 @@
+id: pythagorean-theorem.squares-on-sides
+concept: pythagorean-theorem
+facet: area
+level: 2
+type: concept
+name: The square on the hypotenuse has the area of the two squares on the legs together
+statement: For a right triangle, the area of the square built on the hypotenuse (the side opposite the
+  right angle) equals the sum of the areas of the squares built on the two legs.
+assess: On a grid, a right triangle has legs 3 units and 4 units long, and a square is built on each side
+  of the triangle. The squares on the legs have areas 9 and 16 square units. Without counting, what is
+  the area of the square on the hypotenuse?
+sources:
+  ccss:
+  - 8.G.B.6
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.triangle.right.identify
+    relation: definitional
+    points_to: statement
+    why: The statement is about a right triangle and names its hypotenuse as the side opposite the right
+      angle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.covering.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement compares the areas of squares, each area being the number of unit squares that
+      cover the square.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The test problem adds the areas 9 and 16 of the squares on the legs to get the area on the hypotenuse.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Adding 9 and 16 is needed only to answer the test problem; the concept (the area
+        on the hypotenuse equals the sum of the other two areas) is an area relation that can be seen
+        with the squares drawn, without computing the sum.'
+    status: proposed
+  - node: shapes.name.any-orientation
+    relation: definitional
+    points_to: statement
+    why: The squares built on the slanted sides must be recognized as squares even when tilted.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,73 @@
+id: rational-number.addition.properties-strategy
+concept: rational-number
+facet: core
+level: 3
+type: procedure
+name: Add signed numbers by reordering and regrouping
+statement: Add several rational numbers by using the commutative and associative properties of addition
+  to reorder and regroup them so that opposites, or addends with an easy sum, are combined first.
+procedure:
+- Look for addends that are opposites or whose sum is easy, such as a whole number.
+- Use the commutative and associative properties to move those addends next to each other and group them.
+- Add each group, then add the results.
+assess: Compute -3.7 + 8 + 3.7 by first reordering and grouping the addends. Show the rewritten sum.
+sources:
+  ccss:
+  - 7.NS.A.1.d
+  learning_components:
+  - 685131ac
+  - ce4afd4b
+requires:
+- clause: standard
+  all_of:
+  - node: addition.commutative
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 moves addends next to each other, which uses the commutative property of addition.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.associative.strategy
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 groups chosen addends with parentheses, which uses the associative property to decide
+      which to add first.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.additive-inverse
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 looks for opposites such as -3.7 and 3.7, which combine to 0 because they are additive
+      inverses.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.addition.rationals
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds each group and then the results, and these sums are of signed fractions or decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,61 @@
+id: scientific-notation.compare.order
+concept: scientific-notation
+facet: core
+level: 3
+type: procedure
+name: Decide which of two numbers in scientific notation is greater
+statement: Of two positive numbers in scientific notation, the one with the greater exponent is greater;
+  when the exponents are equal, the one with the greater leading factor is greater.
+procedure:
+- Compare the exponents; the number with the greater exponent is greater.
+- If the exponents are equal, compare the leading factors.
+assess: Which is greater, 9 x 10^-6 or 2 x 10^-5?
+sources:
+  ccss:
+  - 8.EE.A.3
+  learning_components:
+  - 97d917b6
+requires:
+- clause: standard
+  all_of:
+  - node: scientific-notation.meaning
+    relation: definitional
+    points_to: statement
+    why: The rule that the greater exponent wins relies on every leading factor being at least 1 and less
+      than 10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.compare.integers
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 compares the exponents, which can be negative integers such as -6 and -5.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.compare
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 compares the leading factors, which are decimals when the exponents are equal.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

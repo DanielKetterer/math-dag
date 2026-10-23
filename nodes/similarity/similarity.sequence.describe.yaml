@@ -1,0 +1,159 @@
+id: similarity.sequence.describe
+concept: similarity
+facet: transformation
+level: 2
+type: procedure
+name: Describe a sequence of transformations that shows two figures are similar
+statement: Given two similar figures and their corresponding vertices, describe a sequence of a dilation
+  and translations, reflections, and rotations that takes the first figure onto the second.
+procedure:
+- Match each vertex of the first figure with its corresponding vertex in the second.
+- 'Find the scale factor k: the length of a side of the second figure divided by the length of the corresponding
+  side of the first.'
+- Dilate the first figure by k about any center; the image is congruent to the second figure.
+- Describe a sequence of translations, reflections, and rotations that takes the dilated image onto the
+  second figure.
+assess: On a coordinate grid, triangle ABC has A(0, 0), B(2, 0), C(0, 1), and the similar triangle DEF
+  has D(6, 2), E(6, 6), F(4, 2), with A -> D, B -> E, C -> F. Describe a sequence of a dilation and rigid
+  motions that takes triangle ABC onto triangle DEF.
+sources:
+  ccss:
+  - 8.G.A.4
+  learning_components:
+  - 655932cc
+requires:
+- clause: standard
+  all_of:
+  - node: similarity.transformation.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure describes a dilation and rigid motions that take one figure onto the other, which
+      is the definition of similar figures.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.dilation.scale-lengths
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds the scale factor as a corresponding side of the second figure divided by that of
+      the first, because a dilation multiplies every length by k.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.dilation.meaning
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 dilates the first figure by k about a center, so the dilation must be understood.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: congruence.sequence.describe
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 describes rigid motions taking the dilated image onto the second figure, which is the
+      congruence-sequence procedure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.dilation.origin.coordinates
+    relation: procedural
+    points_to: assess
+    why: The test is on a coordinate grid, and the solver finds where the dilated triangle lies by multiplying
+      the vertices' coordinates.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test needs the dilated image''s coordinates; either this node or transformation.dilation.center.coordinates
+        would do, and the origin rule is a level-3 node for a level-2 procedure.'
+    status: proposed
+  - node: coordinate-plane.segment-length.same-sign
+    relation: procedural
+    points_to: assess
+    why: The test sides AB and DE are horizontal or vertical, and the solver finds the scale factor from
+      their lengths read from coordinates.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test reads side lengths from same-sign coordinates; the procedure and
+        statement do not use coordinates.'
+    status: proposed
+  - node: fraction.quotient.symbolic
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides one side length by another to get the scale factor, and a quotient that is not
+      whole is written as a fraction.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.segment-length.meaning
+    relation: procedural
+    points_to: assess
+    why: The test gives the vertices as coordinates, and the side lengths come from the distances between
+      horizontal or vertical neighbors.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test gives the vertices as coordinates; the procedure finds side lengths
+        from the figures however they are given.'
+    status: proposed
+  - node: transformation.dilation.center.coordinates
+    relation: procedural
+    points_to: assess
+    why: The learner needs the coordinates of the dilated image to see which rigid motions finish the
+      job in the test.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test needs the dilated image''s coordinates, and the test''s center is
+        free to choose (A is the origin), so this node and transformation.dilation.origin.coordinates
+        are interchangeable for the test.'
+    status: proposed
+  - node: division.by-one-digit
+    relation: definitional
+    points_to: statement
+    why: 'Task-only: the test divides 4 by 2 for the scale factor; this is the method-neutral node that
+      replaces the recall-fact edge e1240.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

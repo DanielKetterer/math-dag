@@ -1,0 +1,91 @@
+id: equation.linear.rational-coefficients
+concept: equation
+facet: linear-one-variable
+level: 3
+type: procedure
+name: Solve a linear equation with fraction or decimal coefficients by operating on them directly
+statement: Solve a linear equation whose coefficients and constants are fractions or decimals, with the
+  variable on both sides, by applying the same operations to both sides and computing with the fractions
+  or decimals as they are.
+procedure:
+- Subtract one variable term from both sides, combining the fractional or decimal coefficients of x.
+- Add or subtract the constant on the variable side from both sides.
+- Divide both sides by the coefficient of x.
+assess: Solve (2/3)x - 1 = (1/6)x + 2 without first clearing the fractions.
+sources:
+  ccss:
+  - 8.EE.C.7.b
+  learning_components:
+  - 47943e2b
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.linear.subtract.rational
+    relation: procedural
+    points_to: procedure.1
+    why: Combining the coefficients 2/3 and 1/6 of x is subtracting linear expressions with rational coefficients.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.two-step.px-plus-q.solve
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 and 3 solve px + q = r with rational p, q and r by undoing the constant, then dividing
+      by p.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.addition.rationals
+    relation: procedural
+    points_to: procedure.2
+    why: step 2 adds a fraction or decimal constant to both sides
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.subtraction.rationals
+    relation: procedural
+    points_to: procedure.2
+    why: step 2 subtracts a fraction or decimal constant from both sides
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.division.rationals
+    relation: procedural
+    points_to: procedure.3
+    why: step 3 divides both sides by a fraction or decimal coefficient of x
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.equality-preserved.same-operation
+    relation: definitional
+    points_to: statement
+    why: Each step applies the same operation to both sides, and nothing else proposed supplies that principle
+      once e473 is not required.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,44 @@
+id: root.cube.meaning
+concept: root
+facet: cube
+level: 3
+type: concept
+name: The cube root of a number
+statement: For a positive number p, the cube root of p is the number whose cube is p.
+assess: 'Which of these is the cube root of 64: 8, 4, or 64/3?'
+sources:
+  ccss:
+  - 8.EE.A.2
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: The cube of a number is the number multiplied by itself three times, a power with exponent 3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: procedural
+    points_to: assess
+    why: Deciding which of 8, 4 and 64/3 has cube 64 needs cubes such as 4^3 and 8^3 evaluated.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement defines the cube root without evaluating a cube; only the test item
+        needs 4^3 and 8^3 evaluated.'
+    status: proposed
+status: proposed

@@ -1,0 +1,173 @@
+id: angle.straight-line.sum-180
+concept: angle
+facet: measure
+level: 2
+type: concept
+name: Adjacent angles along a straight line add to 180 degrees
+statement: Adjacent angles whose outer sides form a straight line together make a straight angle, so their
+  measures add to 180 degrees.
+assess: Ray OC is drawn from point O on line AB. Angle AOC measures 130 degrees. Without measuring, find
+  angle COB.
+sources:
+  ccss:
+  - 7.G.B.5
+  learning_components: []
+requires:
+- clause: protractor
+  all_of:
+  - node: angle.adjacent
+    relation: definitional
+    points_to: statement
+    why: The statement is about adjacent angles, which share a vertex and a side.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: line.meaning
+    relation: definitional
+    points_to: statement
+    why: The outer sides of the two angles form a straight line, which extends both ways.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.additive
+    relation: justificatory
+    points_to: statement
+    why: The two adjacent angles together make one straight angle, because angle measure adds.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: assess
+    why: Finding angle COB from 130 degrees on a straight line means subtracting 130 from 180.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem subtracts 130 from 180 to find the unknown angle; the statement
+        says the measures add to 180.'
+    status: proposed
+  - node: addition.within-1000
+    relation: definitional
+    points_to: statement
+    why: The statement says the two measures add to 180, so adding angle measures past 100 is used directly,
+      as in angle.supplementary.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: angle.protractor.measure
+    relation: justificatory
+    points_to: statement
+    why: Measuring the two adjacent angles on a line and adding them gives 180 degrees.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Measuring two adjacent angles on a line and adding them is one way to see they
+        total 180.'
+    status: disputed
+- clause: via-circle-fraction
+  all_of:
+  - node: angle.adjacent
+    relation: definitional
+    points_to: statement
+    why: The statement is about adjacent angles, which share a vertex and a side.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: line.meaning
+    relation: definitional
+    points_to: statement
+    why: The outer sides of the two angles form a straight line, which extends both ways.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.additive
+    relation: justificatory
+    points_to: statement
+    why: The two adjacent angles together make one straight angle, because angle measure adds.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: assess
+    why: Finding angle COB from 130 degrees on a straight line means subtracting 130 from 180.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem subtracts 130 from 180 to find the unknown angle; the statement
+        says the measures add to 180.'
+    status: proposed
+  - node: addition.within-1000
+    relation: definitional
+    points_to: statement
+    why: The statement says the two measures add to 180, so adding angle measures past 100 is used directly,
+      as in angle.supplementary.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: angle.measure.circle-fraction
+    relation: justificatory
+    points_to: statement
+    why: A straight angle is half of a full turn of the circle, which is why its measure is 180 degrees.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A straight angle as half a circle is one way to know it measures 180. | other
+        route: Read 180 degrees for a straight angle on a protractor and measure adjacent angles along
+        a line (angle.protractor.measure).'
+    status: disputed
+status: proposed

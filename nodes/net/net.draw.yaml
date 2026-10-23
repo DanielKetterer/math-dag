@@ -1,0 +1,118 @@
+id: net.draw
+concept: net
+facet: core
+level: 2
+type: representation
+name: Draw a net of a prism or pyramid made of rectangles and triangles
+statement: A net of a right prism or a pyramid is drawn by laying out each of its rectangular and triangular
+  faces, with its dimensions, so that faces that meet along an edge in the solid share that edge in the
+  net wherever the net is joined.
+procedure:
+- List the faces of the solid and the dimensions of each.
+- Draw one face, usually a base.
+- Draw each face that meets it along an edge against that edge, and continue until every face is drawn
+  once.
+- Check that the net would fold into the solid with no gaps or overlaps, and label the edge lengths.
+assess: Draw and label a net of a square pyramid whose base edges are 4 cm and whose triangular faces
+  each have a height of 3 cm.
+sources:
+  ccss:
+  - 6.G.A.4
+  learning_components:
+  - ff4ee7ca
+requires:
+- clause: standard
+  all_of:
+  - node: net.meaning
+    relation: justificatory
+    points_to: procedure.4
+    why: Checking that the net folds into the solid with no gaps or overlaps uses what a net is.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.prism.right.meaning
+    relation: definitional
+    points_to: statement
+    why: Drawing the net of a right prism requires knowing its bases and its rectangular side faces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.pyramid.meaning
+    relation: definitional
+    points_to: statement
+    why: Drawing the net of a pyramid requires knowing its polygon base and its triangular faces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.ruler
+    relation: procedural
+    points_to: procedure.3
+    why: Faces are drawn with their dimensions and labeled with edge lengths, using a ruler.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: height.base-height
+    relation: procedural
+    points_to: assess
+    why: Each triangular face is drawn with a base of 4 cm and a height of 3 cm.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem gives the triangular faces by base and height; the idea
+        is laying out faces with their dimensions.'
+    status: proposed
+  - node: perpendicular.draw
+    relation: procedural
+    points_to: assess
+    why: The triangle's height of 3 cm is drawn perpendicular to its base.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s triangle height of 3 cm is drawn perpendicular to the
+        base; the statement does not require drawing a height.'
+    status: proposed
+  - node: shapes.rectangle.define
+    relation: definitional
+    points_to: statement
+    why: Prism nets are laid out from rectangular faces, which are drawn with four right angles; no proposed
+      edge covers drawing rectangles.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

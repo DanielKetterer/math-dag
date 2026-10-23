@@ -1,0 +1,48 @@
+id: exponent.whole-number-power.evaluate.fraction-base
+concept: exponent
+facet: whole-number-power
+level: 3
+type: procedure
+name: Evaluate a power of a fraction
+statement: Find the value of (a/c)^b, for a fraction a/c and a whole-number exponent b of at least 1,
+  by multiplying b factors of a/c.
+procedure:
+- Write (a/c)^b as a product of b factors of a/c.
+- Multiply the fractions.
+assess: Evaluate (2/3)^3.
+sources:
+  ccss:
+  - 6.EE.A.1
+  learning_components:
+  - fe47029d
+requires:
+- clause: standard
+  all_of:
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: procedure.1
+    why: Step 1 rewrites (a/c)^b as a product of b factors of the fraction a/c, which is what the power
+      means.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.symbolic
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies b copies of a fraction two at a time, as in (2/3) x (2/3) x (2/3).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

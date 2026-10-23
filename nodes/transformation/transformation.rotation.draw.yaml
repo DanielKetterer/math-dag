@@ -1,0 +1,81 @@
+id: transformation.rotation.draw
+concept: transformation
+facet: geometric
+level: 2
+type: procedure
+name: Draw the image of a figure under a rotation through any angle
+statement: Draw the image of a polygon under a rotation about a given center through a given angle, including
+  angles that are not multiples of 90 degrees, by rotating each vertex with a protractor and ruler.
+procedure:
+- For one vertex P, draw segment OP from the center O.
+- With a protractor centered at O, draw a ray that makes the given angle with ray OP, turned in the given
+  direction.
+- Mark P' on that ray so that OP' = OP.
+- Repeat for every vertex and join the image vertices in the same order.
+assess: Triangle ABC and a point O are drawn on a coordinate grid. Draw the image of triangle ABC under
+  a rotation of 60 degrees counterclockwise about O.
+sources:
+  ccss:
+  - 8.G.A.3
+  learning_components:
+  - 4815a989
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.rotation.meaning
+    relation: definitional
+    points_to: statement
+    why: 'The drawing carries out the rotation definition: each image vertex keeps its distance from the
+      center and turns through the given angle.'
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.protractor.sketch
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 draws a ray at the given angle from ray OP with a protractor centered at O, including
+      angles like 60 degrees.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: spatial.turn-direction
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 turns the ray in the given direction, so the drawer must tell clockwise from counterclockwise,
+      as the test asks for counterclockwise.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: This id does not appear in index.txt or in boundary_nodes, so its statement cannot
+        be checked. The skill it appears to name, telling a clockwise turn from a counterclockwise one,
+        is used directly by the target''s own statement, procedure or '
+    status: disputed
+  - node: measurement.length.ruler
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 marks P' on the new ray with OP' = OP, which means measuring the length OP with a ruler
+      and copying it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

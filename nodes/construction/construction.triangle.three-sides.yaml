@@ -1,0 +1,73 @@
+id: construction.triangle.three-sides
+concept: construction
+facet: core
+level: 2
+type: procedure
+name: Draw a triangle from three side lengths with a compass
+statement: A triangle with three given side lengths is drawn by laying down one side and finding the third
+  vertex where two arcs, with radii equal to the other two lengths, meet.
+procedure:
+- Draw one side to its given length.
+- From one endpoint, draw an arc with radius equal to the second length.
+- From the other endpoint, draw an arc with radius equal to the third length.
+- Join the point where the arcs meet to both endpoints.
+assess: With a ruler and compass, draw a triangle with sides of 5 cm, 6 cm and 7 cm.
+sources:
+  ccss:
+  - 7.G.A.2
+  learning_components:
+  - 52ffb8ee
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.length.ruler
+    relation: procedural
+    points_to: procedure.1
+    why: Drawing the first side to its given length uses a ruler to measure that length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: construction.circle.radius-diameter
+    relation: procedural
+    points_to: procedure.2
+    why: Each arc is part of a circle drawn with the compass opened to a given length about a chosen center.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: segment.meaning
+    relation: procedural
+    points_to: procedure.4
+    why: Joining the meeting point to both endpoints draws the other two sides as segments.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.polygon.name-by-sides
+    relation: definitional
+    points_to: statement
+    why: The figure drawn is a triangle, a closed figure with three sides and three vertices.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

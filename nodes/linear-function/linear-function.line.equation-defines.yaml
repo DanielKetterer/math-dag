@@ -1,0 +1,77 @@
+id: linear-function.line.equation-defines
+concept: linear-function
+facet: line
+level: 3
+type: concept
+name: An equation y = mx + b defines a linear function
+statement: Every equation that can be written in the form y = mx + b, for numbers m and b, defines y as
+  a linear function of x.
+assess: 'Which of these define y as a linear function of x: y = 3x - 2; y = x^2 + 1; y = 5; y = 2/x; y
+  = 7 - x/2?'
+sources:
+  ccss:
+  - 8.F.A.3
+  learning_components:
+  - 646a03d8
+requires:
+- clause: standard
+  all_of:
+  - node: functions.definition
+    relation: definitional
+    points_to: statement
+    why: The claim is that the equation defines y as a function of x, which means each x gives exactly
+      one y.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: representational
+    points_to: statement
+    why: The form y = mx + b writes the product of m and x by placing them side by side.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: representational
+    points_to: statement
+    why: The form y = mx + b uses letters for the input, the output, and the numbers m and b.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.sum.rearrange-terms
+    relation: procedural
+    points_to: assess
+    why: Recognizing y = 7 - x/2 as the form mx + b requires reordering its terms into x-term then constant.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test item y = 7 - x/2 needs its terms reordered to see the form mx +
+        b.'
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: 'Test problem only: deciding that y = x^2 + 1 is not of the form mx + b needs the squared letter.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

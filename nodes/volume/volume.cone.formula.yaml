@@ -1,0 +1,83 @@
+id: volume.cone.formula
+concept: volume
+facet: unit-cubes
+level: 3
+type: concept
+name: The volume formula for a cone
+statement: The volume of a cone with base radius r and height h is V = (1/3) x pi x r^2 x h, one third
+  of the volume of the cylinder with the same base and height.
+assess: A cylinder and a cone have the same radius and the same height. The cylinder holds 30 cubic cm.
+  How much does the cone hold?
+sources:
+  ccss:
+  - 8.G.C.9
+  learning_components:
+  - 74823f49
+requires:
+- clause: standard
+  all_of:
+  - node: volume.cylinder.formula
+    relation: definitional
+    points_to: statement
+    why: The statement defines the cone volume as one third of the volume of the cylinder with the same
+      base and height.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.parts-of-partition.whole-number
+    relation: definitional
+    points_to: statement
+    why: One third of the cylinder volume is one of three equal parts of that volume.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: representational
+    points_to: statement
+    why: The term r^2 in the formula means the radius times itself.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.name.solids
+    relation: definitional
+    points_to: statement
+    why: The formula is about the solid shape called a cone.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: representational
+    points_to: statement
+    why: The letters r and h stand for the radius and height of the cone.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

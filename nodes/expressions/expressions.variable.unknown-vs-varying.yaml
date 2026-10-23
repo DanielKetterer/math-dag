@@ -1,0 +1,69 @@
+id: expressions.variable.unknown-vs-varying
+concept: expressions
+facet: algebraic
+level: 3
+type: concept
+name: A variable as one unknown number or as any number in a set
+statement: A letter can stand for one unknown number that a condition fixes, as in the equation n + 3
+  = 10, or for any number in a set, as in the expression 3n for the cost in dollars of n pencils at $3
+  each; the purpose at hand decides which.
+assess: In n + 3 = 10, which numbers can n be? In 'n pencils at $3 each cost 3n dollars', which numbers
+  can n be?
+sources:
+  ccss:
+  - 6.EE.B.6
+  learning_components:
+  - 12b69651
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: Both uses of a letter, an unknown number and any number in a set, start from the letter standing
+      for a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.unknown.addition
+    relation: procedural
+    points_to: assess
+    why: Telling which numbers n can be in n + 3 = 10 requires finding the unknown in an addition equation.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test question needs n = 7 from n + 3 = 10; the concept itself is that
+        a condition fixes the number, not how to find it.'
+    status: proposed
+  - node: equation.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: A letter fixed to one unknown number by a condition, as in n + 3 = 10, uses the idea of the solution
+      that makes an equation true.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: definitional
+    points_to: statement
+    why: 'Task-only: the test problem writes a number directly next to a letter (3n); this is otherwise
+      reached only through another prerequisite.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

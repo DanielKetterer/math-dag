@@ -1,0 +1,87 @@
+id: linear-function.compare.rate-of-change
+concept: linear-function
+facet: model
+level: 3
+type: procedure
+name: Compare the rates of change of two linear functions given in different forms
+statement: Given two linear functions represented in different ways (equation, table, graph, or verbal
+  description), find the rate of change of each and decide which is greater.
+procedure:
+- 'Find each function''s rate of change from its representation: m in y = mx + b, or the change in y divided
+  by the change in x between two points of a table or graph.'
+- Compare the two rates.
+assess: 'Function A is y = 3x + 2. Function B is given by the table x: 0, 2, 4 and y: 1, 9, 17. Which
+  function has the greater rate of change?'
+sources:
+  ccss:
+  - 8.F.A.2
+  learning_components:
+  - 74b65cd2
+requires:
+- clause: standard
+  all_of:
+  - node: linear-function.model.rate.from-two-values
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds the rate as the change in y over the change in x between two points of a table or
+      a graph.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.model.rate.from-description
+    relation: procedural
+    points_to: procedure.1
+    why: A function given by a verbal description has its rate of change read from the words, as step
+      1 allows.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx-plus-b.write
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 takes the rate of change to be m in y = mx + b, so the meaning of m in that form is used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.compare.rationals
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 decides which rate is greater, and rates can be negative fractions or decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.table-graph.read-values
+    relation: definitional
+    points_to: statement
+    why: Two points are taken from a table or a graph before the change in y over the change in x can
+      be found.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

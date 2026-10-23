@@ -1,0 +1,60 @@
+id: pythagorean-theorem.distance.application
+concept: pythagorean-theorem
+facet: length
+level: 3
+type: application
+name: Solve real-world straight-line distance problems on a coordinate grid
+statement: Solve real-world problems that find the straight-line distance between two places given by
+  coordinates on a map grid, using the Pythagorean theorem and giving the distance rounded to the nearest
+  tenth.
+assess: On a town map where each grid unit is 1 km, the school is at (1, 2) and the library is at (4,
+  7). What is the straight-line distance between them, to the nearest tenth of a kilometer?
+sources:
+  ccss:
+  - 8.G.B.8
+  learning_components:
+  - de09df1b
+requires:
+- clause: standard
+  all_of:
+  - node: pythagorean-theorem.distance.coordinates
+    relation: procedural
+    points_to: statement
+    why: The distance between the two places is found as the hypotenuse of the right triangle on the grid.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: real-number.approximate.square-root
+    relation: procedural
+    points_to: statement
+    why: The distance is the square root of a number that is not a perfect square, so it is bounded as
+      a decimal.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rounding.decimal.any-place
+    relation: procedural
+    points_to: statement
+    why: The distance is rounded to the nearest tenth of a kilometer.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

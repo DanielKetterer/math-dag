@@ -1,0 +1,125 @@
+id: area.parallelogram.rearrange
+concept: area
+facet: additive
+level: 2
+type: procedure
+name: Find the area of a parallelogram by rearranging it into a rectangle
+statement: Cutting a parallelogram along a segment perpendicular to the base, from the base to the opposite
+  side, and sliding the cut-off piece to the other end makes a rectangle with the same base and height,
+  so the parallelogram has the area of that rectangle. Such a cut always exists when a longer side is
+  used as the base.
+procedure:
+- Use a longer side as the base.
+- Cut along a segment from a vertex of the opposite side, perpendicular to the base, down to the base.
+- Move the cut-off right triangle to the other end so that its slanted side meets the other slanted side.
+- Find the area of the resulting rectangle, whose sides are the base and the height.
+assess: A parallelogram drawn on grid paper has a base of 7 units, a slanted side of 5 units and a height
+  of 4 units. Cut it and rearrange the pieces into a rectangle, and find its area.
+sources:
+  ccss:
+  - 6.G.A.1
+  learning_components:
+  - 0d09acef
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.quadrilateral.parallel-sides.define
+    relation: definitional
+    points_to: statement
+    why: The statement is about parallelograms, which are defined by two pairs of parallel sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: perpendicular.meaning
+    relation: procedural
+    points_to: procedure.2
+    why: The cut is made perpendicular to the base, so the learner must know what perpendicular means.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: height.base-height
+    relation: representational
+    points_to: procedure.4
+    why: The resulting rectangle has the base and the height as its sides, and the height is the perpendicular
+      cut.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.additive
+    relation: justificatory
+    points_to: statement
+    why: Moving the cut-off piece keeps the total area, so the parallelogram has the same area as the
+      rectangle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: procedure.4
+    why: The area of the resulting rectangle is its base times its height.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The rectangle on the grid is 7 by 4, which is a single-digit product.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 7 x 4 is a single-digit product.'
+    status: proposed
+  - node: perpendicular.draw
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 requires drawing a segment perpendicular to the base from a vertex of the opposite side
+      down to the base.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.rectangle.define
+    relation: definitional
+    points_to: statement
+    why: The statement says the rearranged piece makes a rectangle and the area is that rectangle's; the
+      learner must know what a rectangle is.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

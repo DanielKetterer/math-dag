@@ -1,0 +1,122 @@
+id: rational-number.additive-inverse
+concept: rational-number
+facet: core
+level: 3
+type: concept
+name: A number and its opposite are additive inverses
+statement: For every number a, a + (-a) = 0; a number and its opposite are additive inverses.
+assess: 'Which pairs are additive inverses: 4.5 and -4.5; -3/4 and 4/3; -7 and 7; 2 and 1/2?'
+sources:
+  ccss:
+  - 7.NS.A.1.b
+  learning_components:
+  - 67ca75ab
+requires:
+- clause: via-number-line
+  all_of:
+  - node: rational-number.opposite.number-line
+    relation: definitional
+    points_to: statement
+    why: The statement is about a number and its opposite, which lie on opposite sides of 0 at the same
+      distance.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.fraction-decimal.number-line
+    relation: representational
+    points_to: assess
+    why: The test pairs 4.5 with -4.5 and -3/4 with 4/3, which requires locating negative fractions and
+      decimals on a number line.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The idea a + (-a) = 0 does not need negative fractions or decimals; only the test
+        pairs (-4.5, -3/4) do. What they need is recognizing -a as the opposite of a, not locating a point
+        on a number line.'
+    status: proposed
+  - node: rational-number.addition.number-line
+    relation: justificatory
+    points_to: statement
+    why: Starting at a and moving a distance |a| in the direction of -a lands at 0, which uses the number-line
+      meaning of a + (-a).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The identity a + (-a) = 0 needs some meaning of adding a negative number. The
+        number-line move is one; a gain and an equal loss combining to 0 is another. | other route: Context
+        route: a quantity and an opposite quantity of the same size combine to 0 (rational-number.opposites.combine-to-zero.context),
+        with the gain written as a and the loss as -a.'
+    status: disputed
+- clause: from-context
+  all_of:
+  - node: rational-number.opposite.number-line
+    relation: definitional
+    points_to: statement
+    why: The statement is about a number and its opposite, which lie on opposite sides of 0 at the same
+      distance.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.fraction-decimal.number-line
+    relation: representational
+    points_to: assess
+    why: The test pairs 4.5 with -4.5 and -3/4 with 4/3, which requires locating negative fractions and
+      decimals on a number line.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The idea a + (-a) = 0 does not need negative fractions or decimals; only the test
+        pairs (-4.5, -3/4) do. What they need is recognizing -a as the opposite of a, not locating a point
+        on a number line.'
+    status: proposed
+  - node: rational-number.opposites.combine-to-zero.context
+    relation: justificatory
+    points_to: statement
+    why: A gain and a loss of the same size combining to 0 is the situation that a + (-a) = 0 describes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A gain and an equal loss combining to 0 is one way to give a + (-a) = 0 its meaning;
+        the number-line move is the other.'
+    status: disputed
+  - node: rational-number.signed.represent-context
+    relation: representational
+    points_to: statement
+    why: Writing the gain as a and the loss as -a turns the situation into the equation a + (-a) = 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Writing a gain as a and the loss as -a is the step that turns the context into
+        the equation on the context route only; the number-line route does not use it.'
+    status: disputed
+status: proposed

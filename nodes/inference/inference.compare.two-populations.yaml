@@ -1,0 +1,88 @@
+id: inference.compare.two-populations
+concept: inference
+facet: comparison
+level: 3
+type: application
+name: Compare two populations informally from random samples
+statement: Given the centers and measures of variability of random samples of numerical data from two
+  populations, decide informally whether the values in one population are generally greater than in the
+  other, judging the difference between the centers against the variability rather than against zero.
+assess: 'Random samples of 30 words from two books give these word lengths: Book A has mean 6.5 letters
+  and MAD 1 letter; Book B has mean 4 letters and MAD 1 letter. Are the words in Book A generally longer
+  than the words in Book B? Explain using the means and MADs.'
+sources:
+  ccss:
+  - 7.SP.B.4
+  learning_components:
+  - 60a6523a
+requires:
+- clause: standard
+  all_of:
+  - node: distribution.compare.center-difference-in-variability
+    relation: procedural
+    points_to: statement
+    why: Judging the difference between centers against the variability means expressing that difference
+      as a number of measures of variability.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: distribution.compare.overlap
+    relation: justificatory
+    points_to: statement
+    why: Deciding that one population is generally greater uses the idea that distributions with little
+      overlap relative to their spread are clearly separated.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: inference.estimate.population-mean
+    relation: definitional
+    points_to: statement
+    why: The centers of the random samples are used as estimates of the centers of the two populations
+      being compared.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: variability.mad.interpret
+    relation: definitional
+    points_to: assess
+    why: The test problem gives each sample's variability as a MAD and asks for an explanation, so the
+      learner reads a MAD as typical distance from the mean.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement takes any measure of variability of the samples; only the test problem
+        gives a MAD that has to be read as a typical distance from the mean.'
+    status: proposed
+  - node: decimal.subtraction.to-hundredths
+    relation: definitional
+    points_to: statement
+    why: 'Task level: the test needs 6.5 minus 4 by any method; replaces e1878.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

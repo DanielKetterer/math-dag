@@ -1,0 +1,203 @@
+id: triangle.ambiguous.two-sides-non-included-angle
+concept: triangle
+facet: determination
+level: 2
+type: concept
+name: Two sides and an angle not between them can give more than one triangle
+statement: 'Two side lengths and the measure of an angle that is not between those two sides do not always
+  determine one triangle: they can fit two different triangles.'
+assess: Angle A is 30 degrees, side AB is 6 cm and side BC is 4 cm. Draw two different triangles ABC that
+  meet all three conditions.
+sources:
+  ccss:
+  - 7.G.A.2
+  learning_components:
+  - 9ddaee28
+requires:
+- clause: via-center-radius
+  all_of:
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The condition gives the measure of an angle in degrees, 30 degrees in the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: construction.circle.radius-diameter
+    relation: procedural
+    points_to: assess
+    why: Finding the two possible third vertices draws an arc of radius 4 cm about B.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Drawing the arc of radius 4 cm is one way to find the two vertices for the test;
+        a ruler or stick pivot would also locate them, and the idea itself does not need the compass.'
+    status: proposed
+  - node: angle.protractor.sketch
+    relation: procedural
+    points_to: assess
+    why: Drawing angle A of 30 degrees on the 6 cm side uses a protractor.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem asks the learner to draw angle A of 30 degrees with a protractor;
+        the idea that two triangles can fit is not about the protractor skill.'
+    status: proposed
+  - node: measurement.length.ruler
+    relation: procedural
+    points_to: assess
+    why: Drawing side AB to 6 cm and setting the compass to 4 cm both use a ruler.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Drawing AB to 6 cm and setting 4 cm is needed only to carry out the test drawing.'
+    status: proposed
+  - node: shapes.compare.same-different
+    relation: definitional
+    points_to: statement
+    why: The claim is that two different triangles fit, which means telling two shapes apart.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement is about an angle that is not between two sides, so the position of an angle relative
+      to its sides is used directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: circle.center-radius
+    relation: justificatory
+    points_to: statement
+    why: An arc of radius BC about B is all points at that distance, and it can cross the ray from A twice.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The arc about B crossing the ray twice is one model for the two triangles. |
+        other route: Pivot a stick of length BC about B and see it touch the ray from A in two places,
+        using straws (shapes.compose.from-sides), without naming a circle.'
+    status: disputed
+- clause: critic-route-2
+  note: 'Stick model: swing a stick of length BC about B and see it reach the ray in two places.'
+  all_of:
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The condition gives the measure of an angle in degrees, 30 degrees in the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: construction.circle.radius-diameter
+    relation: procedural
+    points_to: assess
+    why: Finding the two possible third vertices draws an arc of radius 4 cm about B.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Drawing the arc of radius 4 cm is one way to find the two vertices for the test;
+        a ruler or stick pivot would also locate them, and the idea itself does not need the compass.'
+    status: proposed
+  - node: angle.protractor.sketch
+    relation: procedural
+    points_to: assess
+    why: Drawing angle A of 30 degrees on the 6 cm side uses a protractor.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem asks the learner to draw angle A of 30 degrees with a protractor;
+        the idea that two triangles can fit is not about the protractor skill.'
+    status: proposed
+  - node: measurement.length.ruler
+    relation: procedural
+    points_to: assess
+    why: Drawing side AB to 6 cm and setting the compass to 4 cm both use a ruler.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Drawing AB to 6 cm and setting 4 cm is needed only to carry out the test drawing.'
+    status: proposed
+  - node: shapes.compare.same-different
+    relation: definitional
+    points_to: statement
+    why: The claim is that two different triangles fit, which means telling two shapes apart.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement is about an angle that is not between two sides, so the position of an angle relative
+      to its sides is used directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: shapes.compose.from-sides
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Stick model: swing a stick of length BC about B and
+      see it reach the ray in two places.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

@@ -1,0 +1,61 @@
+id: equation.solution.check-substitution
+concept: equation
+facet: open-sentence
+level: 3
+type: procedure
+name: Check by substitution which numbers solve an equation
+statement: Decide which numbers in a given set, if any, make an equation true by substituting each for
+  the variable and checking whether the two sides have the same value.
+procedure:
+- Substitute a number from the set for the variable.
+- Evaluate each side.
+- If the sides are equal, the number is a solution; repeat for each number in the set.
+assess: Which numbers in the set {2, 3, 5} make 2x + 1 = 7 true?
+sources:
+  ccss:
+  - 6.EE.B.5
+  learning_components:
+  - 25259f33
+  - 10b7ec1d
+requires:
+- clause: standard
+  all_of:
+  - node: equation.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: A number is kept as a solution only when substituting it makes the equation true, which is the
+      meaning of a solution.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.evaluate
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 1 and 2 substitute a number for the variable and evaluate each side, as in 2x + 1 with
+      x = 3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: definitional
+    points_to: statement
+    why: 'Task-only: the test problem writes a number directly next to a letter (2x); this is otherwise
+      reached only through another prerequisite.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

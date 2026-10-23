@@ -1,0 +1,81 @@
+id: surface-area.meaning
+concept: surface-area
+facet: core
+level: 2
+type: concept
+name: Surface area as the total area of all faces
+statement: The surface area of a solid with flat faces is the sum of the areas of all of its faces, measured
+  in square units.
+assess: 'Which tells the surface area of a closed box: (a) the area of its bottom, (b) the total area
+  of all six of its faces, (c) the number of unit cubes that fill it, (d) the sum of its edge lengths?'
+sources:
+  ccss:
+  - 6.G.A.4
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: area.covering.meaning
+    relation: definitional
+    points_to: statement
+    why: Each face has an area, the number of unit squares that cover it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.additive
+    relation: definitional
+    points_to: statement
+    why: The surface area is the sum of the areas of the faces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.solid.parts
+    relation: definitional
+    points_to: statement
+    why: The surface area is defined over all the faces of a solid.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.packing
+    relation: definitional
+    points_to: assess
+    why: The test tells surface area apart from the number of unit cubes that fill the box.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s distractor (c) mixes surface area with the number of
+        unit cubes that fill the box.'
+    status: proposed
+  - node: area.unit-square
+    relation: definitional
+    points_to: statement
+    why: The surface area is measured in square units, the unit of one square unit of area.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

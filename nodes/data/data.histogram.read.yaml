@@ -1,0 +1,48 @@
+id: data.histogram.read
+concept: data
+facet: histogram
+level: 2
+type: representation
+name: Read interval counts from a histogram
+statement: Each bar of a histogram gives how many data values lie in its interval; a histogram does not
+  show the individual values, so exact values cannot be read from it.
+assess: A histogram of ages has a bar of height 3 over 10 to under 20, a bar of height 5 over 20 to under
+  30, and a bar of height 2 over 30 to under 40. How many people are 20 to under 30 years old? Can you
+  tell from the histogram how many people are exactly 25?
+sources:
+  ccss:
+  - 6.SP.B.4
+  learning_components:
+  - a5b32d92
+requires:
+- clause: standard
+  all_of:
+  - node: data.bar-graph.read
+    relation: representational
+    points_to: statement
+    why: A histogram bar's count is read against the vertical scale just as a bar graph category count
+      is read, giving how many values lie in the interval.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: statement
+    why: The bars stand over intervals marked on a number line axis, so interval ends such as 20 to under
+      30 are read as positions on that line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

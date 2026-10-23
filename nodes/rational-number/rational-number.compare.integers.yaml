@@ -1,0 +1,64 @@
+id: rational-number.compare.integers
+concept: rational-number
+facet: core
+level: 3
+type: procedure
+name: Decide which of two integers is greater
+statement: 'Decide which of two integers is greater without a number line: a positive integer is greater
+  than 0, 0 is greater than a negative integer, and of two negative integers the one closer to 0 is greater.'
+procedure:
+- If the integers have different signs, or one is 0, the order is negative < 0 < positive.
+- If both are positive, compare them as whole numbers.
+- If both are negative, compare their opposites; the negative integer whose opposite is smaller is the
+  greater.
+assess: 'Which is greater in each pair: -14 or -9; -6 or 0?'
+sources:
+  ccss:
+  - 6.NS.C.7
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.order.number-line
+    relation: definitional
+    points_to: statement
+    why: Deciding which integer is greater without a number line rests on what greater means as a position
+      to the right on the number line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude.multi-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 compares two positive integers as whole numbers, which is deciding which of two multi-digit
+      numbers is greater.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.opposite.number-line
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 compares the opposites of two negative integers, which uses the opposite of a number as
+      its mirror point across 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,87 @@
+id: angle.triangle.sum.explain
+concept: angle
+facet: measure
+level: 4
+type: justification
+name: Explain with a parallel line why the angles of a triangle add to 180 degrees
+statement: The line through one vertex parallel to the opposite side makes two angles at that vertex that
+  are alternate interior angles with the other two angles of the triangle; these two angles and the triangle's
+  angle at that vertex form a straight angle, so the three angles of the triangle add to 180 degrees.
+assess: Triangle ABC is drawn with the line through C parallel to AB. Use this line to explain why angle
+  A + angle B + angle C = 180 degrees for every triangle.
+sources:
+  ccss:
+  - 8.G.A.5
+  learning_components:
+  - b9325562
+requires:
+- clause: standard
+  all_of:
+  - node: angle.transversal.alternate-interior
+    relation: justificatory
+    points_to: statement
+    why: The two angles the parallel line makes at the vertex are alternate interior angles with the triangle's
+      other two angles, so they are equal.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.straight-line.sum-180
+    relation: justificatory
+    points_to: statement
+    why: The angles at the vertex lie along a straight line, so they together make a straight angle of
+      180 degrees.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.additive
+    relation: justificatory
+    points_to: statement
+    why: The three angles at the vertex are joined side by side, so their measures add to the measure
+      of the straight angle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: parallel.meaning
+    relation: definitional
+    points_to: statement
+    why: The explanation draws the line through a vertex parallel to the opposite side, so parallel lines
+      must be understood.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.triangle.sum
+    relation: justificatory
+    points_to: statement
+    why: The explanation shows why the angles add to 180 degrees, so the claim it proves must be known.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

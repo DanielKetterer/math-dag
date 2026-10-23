@@ -1,0 +1,70 @@
+id: operations.application.reasonableness.multi-digit
+concept: operations
+facet: whole-number
+level: 2
+type: justification
+name: Judge whether the answer to a multistep word problem is reasonable by estimating
+statement: An answer to a multistep whole-number word problem with multi-digit numbers and the four operations
+  is judged reasonable or not by estimating the answer with rounded numbers or mental computation and
+  comparing.
+assess: Lee says 4 boxes of 198 nails, minus 305 nails used, leaves 1,097 nails. Without computing exactly,
+  use rounding to decide whether his answer is reasonable, and explain.
+sources:
+  ccss:
+  - 4.OA.A.3
+  learning_components:
+  - 44a2143c
+requires:
+- clause: standard
+  all_of:
+  - node: rounding.whole-number.any-place
+    relation: procedural
+    points_to: statement
+    why: The estimate uses rounded numbers, and multi-digit numbers must be rounded to a suitable place
+      such as the nearest hundred.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The statement allows rounding ''or mental computation'' and the test rounds only
+        to the nearest hundred, which e630 covers; rounding to any place is needed only if intended problems
+        round to thousands or beyond.'
+    status: disputed
+  - node: operations.application.multistep.multi-digit
+    relation: definitional
+    points_to: statement
+    why: The statement is about multistep problems with multi-digit numbers, so the operations the story
+      needs must be identified to estimate.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rounding.whole-number.nearest-ten-hundred
+    relation: procedural
+    points_to: assess
+    why: The estimate is made by rounding the numbers, as in rounding 198 to 200 and 305 to 300.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement allows ''rounded numbers or mental computation''; only the test
+        problem requires rounding (198 to 200, 305 to 300).'
+    status: proposed
+  - node: comparing.whole-numbers.magnitude.multi-digit
+    relation: definitional
+    points_to: statement
+    why: The estimate is compared with the stated answer, which is a multi-digit number.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

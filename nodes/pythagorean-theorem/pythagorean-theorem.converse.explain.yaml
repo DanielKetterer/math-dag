@@ -1,0 +1,120 @@
+id: pythagorean-theorem.converse.explain
+concept: pythagorean-theorem
+facet: length
+level: 4
+type: justification
+name: Explain a proof of the converse of the Pythagorean theorem
+statement: Given a triangle with sides a, b, and c and a^2 + b^2 = c^2, build a right triangle with legs
+  a and b; by the Pythagorean theorem its hypotenuse is c, so the two triangles have the same three side
+  lengths, they are congruent, and the angle opposite c in the given triangle is a right angle.
+assess: Triangle ABC has AC = 5, BC = 12, and AB = 13, so AC^2 + BC^2 = AB^2. Explain, by comparing it
+  with a right triangle whose legs are 5 and 12, why angle C must be a right angle.
+sources:
+  ccss:
+  - 8.G.B.6
+  learning_components:
+  - 54ee8a5e
+requires:
+- clause: standard
+  all_of:
+  - node: pythagorean-theorem.statement
+    relation: justificatory
+    points_to: statement
+    why: The theorem applied to the built triangle gives its hypotenuse squared as a^2 + b^2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: root.square.meaning
+    relation: justificatory
+    points_to: statement
+    why: Since the built hypotenuse and c are positive lengths with the same square, the two lengths are
+      equal.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: triangle.determined.three-sides
+    relation: justificatory
+    points_to: statement
+    why: Two triangles with the same three side lengths must be the same triangle, which is the step that
+      makes them congruent.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: congruence.rigid-motion.meaning
+    relation: definitional
+    points_to: statement
+    why: The argument concludes the two triangles are congruent, meaning one can be moved onto the other
+      by rigid motions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rigid-motion.preserves-angle
+    relation: justificatory
+    points_to: statement
+    why: Congruent triangles have equal corresponding angles, so the angle opposite c equals the right
+      angle of the built triangle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: pythagorean-theorem.unknown-side.whole
+    relation: procedural
+    points_to: assess
+    why: The test problem finds the hypotenuse of the right triangle with legs 5 and 12 as 13.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem finds the hypotenuse of the 5-12 right triangle as 13 numerically;
+        the statement works symbolically with the theorem and the equal-squares step.'
+    status: proposed
+  - node: shapes.triangle.right.identify
+    relation: definitional
+    points_to: statement
+    why: The argument builds a right triangle with legs a and b and works with its hypotenuse.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: angle.right.meaning
+    relation: definitional
+    points_to: statement
+    why: The conclusion is that the angle opposite c is a right angle.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

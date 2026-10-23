@@ -1,0 +1,73 @@
+id: scientific-notation.multiply
+concept: scientific-notation
+facet: core
+level: 3
+type: procedure
+name: Multiply numbers in scientific notation
+statement: '(a x 10^m) x (b x 10^n) = (a x b) x 10^(m+n): multiply the leading factors and add the exponents.'
+procedure:
+- Multiply the leading factors.
+- Add the exponents.
+- If the new leading factor is 10 or more, rewrite the result in scientific notation.
+assess: Find (2 x 10^3) x (4 x 10^-5). Give the answer in scientific notation.
+sources:
+  ccss:
+  - 8.EE.A.4
+  learning_components:
+  - d4407237
+  - 2687e8fb
+requires:
+- clause: standard
+  all_of:
+  - node: scientific-notation.meaning
+    relation: representational
+    points_to: statement
+    why: Both numbers and the result are written as a leading factor times a power of 10 in scientific
+      notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.multiplication.algorithm
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 multiplies the leading factors, which are decimals such as 2.5 and 4.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.addition.integers
+    relation: procedural
+    points_to: procedure.2
+    why: Adding the exponents, as in 3 + (-5), is integer addition.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: scientific-notation.normalize
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 rewrites a product whose leading factor is 10 or more in scientific notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

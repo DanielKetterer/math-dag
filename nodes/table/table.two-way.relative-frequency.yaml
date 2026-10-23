@@ -1,0 +1,84 @@
+id: table.two-way.relative-frequency
+concept: table
+facet: two-way
+level: 3
+type: procedure
+name: Find row or column relative frequencies in a two-way table
+statement: A row relative frequency is a cell count divided by the total of its row, and a column relative
+  frequency is a cell count divided by the total of its column; the row relative frequencies in any one
+  row add to 1, as do the column relative frequencies in any one column.
+procedure:
+- Choose whether to compare rows or columns.
+- For rows, divide each cell count by the total of its row; for columns, divide each cell count by the
+  total of its column.
+- Write each result as a fraction, decimal, or percent.
+assess: 'A two-way table has rows ''curfew: yes'' (16 with chores, 4 without, total 20) and ''curfew:
+  no'' (6 with chores, 14 without, total 20). Find the row relative frequencies for the row ''curfew:
+  yes''.'
+sources:
+  ccss:
+  - 8.SP.A.4
+  learning_components:
+  - 13103f2c
+requires:
+- clause: via-symbolic
+  all_of:
+  - node: table.two-way.interpret
+    relation: definitional
+    points_to: statement
+    why: The statement divides a cell count by its row or column total, so what a cell and a total count
+      must be known.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.quotient.symbolic
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides each cell count by the total of its row or column, which is written as the fraction
+      cell over total.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A cell count out of its row total can be read as a fraction by part-whole, without
+        the identity a divided by b = a/b. | other route: Read each cell as ''cell out of row total''
+        with the part-whole meaning of a fraction (fraction.non-unit.part-whole).'
+    status: disputed
+- clause: critic-route-1
+  note: Read each cell as 'cell out of row (or column) total' with the part-whole meaning of a fraction
+    instead of dividing.
+  all_of:
+  - node: table.two-way.interpret
+    relation: definitional
+    points_to: statement
+    why: The statement divides a cell count by its row or column total, so what a cell and a total count
+      must be known.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Read each cell as ''cell out of row (or column) total''
+      with the part-whole meaning of a fraction instead of dividing.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

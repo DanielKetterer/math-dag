@@ -1,0 +1,80 @@
+id: rational-number.fraction-to-decimal.long-division
+concept: rational-number
+facet: decimal-expansion
+level: 3
+type: procedure
+name: Convert a fraction to a decimal with long division
+statement: Write a fraction a/b of whole numbers as a decimal by dividing a by b with long division, writing
+  zeros after the decimal point of a, until a remainder of 0 ends the decimal or a remainder recurs, after
+  which the digits repeat.
+procedure:
+- Write a with a decimal point and zeros after it, and set up a divided by b.
+- Divide with long division, placing the decimal point of the quotient above that of a.
+- 'If a remainder is 0, stop: the decimal terminates.'
+- 'If a remainder appears that has appeared before, stop: the quotient digits from where that remainder
+  first appeared repeat forever; record the repeating block.'
+assess: Use long division to write 5/12 as a decimal.
+sources:
+  ccss:
+  - 7.NS.A.2.d
+  learning_components:
+  - 2ab6ac49
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.quotient.symbolic
+    relation: definitional
+    points_to: statement
+    why: The statement writes the fraction a/b as the quotient a divided by b, which is why dividing a
+      by b gives its decimal.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.standard-algorithm.long-division
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides with long division, bringing down zeros and recording the remainder at each stage.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.division.by-whole.algorithm
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 places the decimal point of the quotient above that of a, as when dividing a decimal by
+      a whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.remainder.meaning
+    relation: procedural
+    points_to: procedure.3
+    why: Steps 3 and 4 watch each remainder, stopping at a remainder of 0 or at one seen before, so what
+      a remainder is must be known.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

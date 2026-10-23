@@ -1,0 +1,54 @@
+id: triangle.determined.three-sides
+concept: triangle
+facet: determination
+level: 2
+type: concept
+name: Three side lengths determine a unique triangle
+statement: 'Three lengths that can form a triangle determine exactly one triangle: any two triangles with
+  those side lengths are identical copies, angles included.'
+assess: Ana and Ben each build a triangle from straws of 5 cm, 6 cm and 8 cm. Must their triangles have
+  the same angles? Explain by trying to build a different one.
+sources:
+  ccss:
+  - 7.G.A.2
+  learning_components:
+  - 9ddaee28
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.compare.same-different
+    relation: definitional
+    points_to: statement
+    why: Saying two triangles are identical copies means comparing the whole shapes and finding no difference.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.meaning
+    relation: definitional
+    points_to: statement
+    why: The claim covers the angles of the triangles, which are formed at the corners by the sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: shapes.compose.from-sides
+  relation: common_path
+  note: 'Common path, not required: route ''sticks'' needed everything another route needs and more, so
+    it was removed.'
+- node: construction.triangle.three-sides
+  relation: common_path
+  note: 'Common path, not required: route ''compass'' needed everything another route needs and more,
+    so it was removed.'
+status: proposed

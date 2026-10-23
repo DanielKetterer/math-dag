@@ -1,0 +1,133 @@
+id: sampling.variability.simulate.numerical
+concept: sampling
+facet: core
+level: 2
+type: procedure
+name: Gauge the error of a sample mean from several samples
+statement: Draw several random samples (or simulated samples) of the same size from the same population
+  of numerical data, compute the mean of each, and use how far the sample means spread to judge how far
+  an estimate from one sample might be from the population mean.
+procedure:
+- Draw several random samples of the same size from the population, or simulate them.
+- Compute the mean of each sample.
+- Note the least and greatest sample means and how far apart they are.
+- Use that spread to say about how far one sample mean might be from the population mean.
+assess: Lin drew 4 random samples of 10 words each from a book. The sample mean word lengths were 4.1,
+  4.8, 4.4, and 4.7 letters. About how far off might an estimate of the book's mean word length from one
+  sample of 10 words be?
+sources:
+  ccss:
+  - 7.SP.A.2
+  learning_components:
+  - 8cf753cf
+  - 67bdbbc4
+requires:
+- clause: standard
+  all_of:
+  - node: sampling.random.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 draws several random samples of the same size, so the learner must know what makes a sample
+      random.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: center.mean.compute
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 computes the mean of each sample drawn, such as the mean word length of 10 words.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 finds how far apart the least and greatest sample means are, which is the difference of
+      the two numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.subtraction.to-hundredths
+    relation: procedural
+    points_to: assess
+    why: The test sample means 4.1, 4.8, 4.4, and 4.7 are decimals, so finding how far apart the least
+      and greatest are subtracts decimals.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The prerequisite id decimal.subtract-to-hundredths is not in the index or the
+        boundary list, so the edge cannot be judged as written. The idea (the test needs a method-neutral
+        decimal subtraction) is sound and duplicates e1850''s intent.'
+    status: disputed
+  - node: sampling.variability.meaning
+    relation: justificatory
+    points_to: procedure.4
+    why: Step 4 uses how far sample means differ as the likely error of one sample mean, which rests on
+      samples giving different values.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: inference.estimate.population-mean
+    relation: definitional
+    points_to: statement
+    why: The statement gauges how far one sample mean, used as an estimate of the population mean, might
+      be from that population mean.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.compare
+    relation: procedural
+    points_to: assess
+    why: The test problem's sample means are decimals in tenths, so picking the least and greatest means
+      compares decimals.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem has decimal sample means to order; the procedure only needs
+        to pick the least and greatest sample means (see missing: comparing.whole-numbers.magnitude).'
+    status: proposed
+  - node: comparing.whole-numbers.magnitude
+    relation: definitional
+    points_to: statement
+    why: Step 3 notes the least and greatest sample means, which means comparing numbers; decimal.compare
+      (e1849) is needed only for the decimal sample means of the test.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

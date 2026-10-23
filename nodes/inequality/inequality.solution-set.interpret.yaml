@@ -1,0 +1,74 @@
+id: inequality.solution-set.interpret
+concept: inequality
+facet: open-sentence
+level: 3
+type: representation
+name: Interpret the solution set of an inequality in its context
+statement: Describe which values satisfy a problem's condition, from the solution set of its inequality
+  together with the values the context allows (for example, only whole numbers of items).
+assess: You are paid $50 per week plus $3 per sale and want to earn at least $100 this week. Solving 50
+  + 3s >= 100 gives s >= 16 2/3. Which numbers of sales meet your goal?
+sources:
+  ccss:
+  - 7.EE.B.4.b
+  learning_components:
+  - e21b23ac
+requires:
+- clause: standard
+  all_of:
+  - node: inequality.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement starts from the solution set of the inequality, the set of all values that make
+      it true.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.compare.rationals
+    relation: procedural
+    points_to: statement
+    why: Deciding which allowed values satisfy the condition means comparing candidate values with the
+      boundary, such as 16 and 17 with 16 2/3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.between-whole-numbers
+    relation: procedural
+    points_to: assess
+    why: The test problem places 16 2/3 between 16 and 17 to find the least whole number of sales that
+      meets the goal.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem places 16 2/3 between 16 and 17 to find the least whole
+        number of sales; the statement does not need it.'
+    status: proposed
+  - node: inequality.symbols.inclusive
+    relation: representational
+    points_to: assess
+    why: The test problem gives the solution as s >= 16 2/3, which must be read with the inclusive symbol.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem reads the inclusive symbol (s >= 16 2/3); the statement
+        is about any inequality''s solution set.'
+    status: proposed
+status: proposed

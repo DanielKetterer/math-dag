@@ -1,0 +1,89 @@
+id: expressions.distributive.expand
+concept: expressions
+facet: algebraic
+level: 3
+type: procedure
+name: Expand a(b + c) with a variable using the distributive property
+statement: Rewrite a nonnegative number times a sum or difference that contains a variable, a(b + c) or
+  a(b - c), as ab + ac or ab - ac, using the distributive property.
+procedure:
+- Multiply the outside factor by each term inside the parentheses.
+- Write the products joined by the sign that joined the terms.
+assess: Rewrite 3(2 + x) without parentheses.
+sources:
+  ccss:
+  - 6.EE.A.3
+  learning_components:
+  - 977bc6f0
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.distributive
+    relation: definitional
+    points_to: statement
+    why: The statement rewrites a(b + c) as ab + ac, which is the distributive property of multiplication
+      over addition.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.distributive-over-subtraction
+    relation: definitional
+    points_to: statement
+    why: The statement also rewrites a(b - c) as ab - ac, which is the distributive property over subtraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The statement does cover a(b - c) = ab - ac, so some prerequisite for the distributive
+        property over subtraction is plausible, but the id multiplication.distributive-over-subtraction
+        is not in index.txt (multiplication.distributive covers o'
+    status: disputed
+  - node: expressions.parts.single-entity
+    relation: definitional
+    points_to: procedure.1
+    why: Step 1 multiplies the outside factor by each term, treating the parenthesized sum as one factor
+      that is also a sum of terms.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: representational
+    points_to: statement
+    why: The expression 3(2 + x) and the product 3x both hide the multiplication sign, so the notation
+      must be read as multiplication.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: Rewriting 3(2 + x) as 6 + 3x requires finding 3 x 2.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs the fact 3 x 2; the expansion rule does not depend
+        on a particular product.'
+    status: proposed
+status: proposed

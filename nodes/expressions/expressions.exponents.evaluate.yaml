@@ -1,0 +1,80 @@
+id: expressions.exponents.evaluate
+concept: expressions
+facet: numerical
+level: 3
+type: procedure
+name: Evaluate a numerical expression that contains powers
+statement: 'Evaluate a numerical expression of whole numbers that contains whole-number exponents, in
+  the conventional order: grouping symbols, then powers, then multiplication and division from left to
+  right, then addition and subtraction from left to right.'
+procedure:
+- Evaluate inside grouping symbols, innermost first.
+- Evaluate powers.
+- Multiply and divide from left to right.
+- Add and subtract from left to right.
+assess: Evaluate 20 - 2 x 3^2.
+sources:
+  ccss:
+  - 6.EE.A.1
+  - 6.EE.A.2.c
+  learning_components:
+  - ceb07b7c
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.grouping.nested.evaluate
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 evaluates inside grouping symbols, innermost first, which is the nested-grouping evaluation
+      procedure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.order-of-operations.exponents
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 evaluates powers after grouping and before multiplication and division, which is where
+      the rule places them.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds the value of each power of a whole number, such as 3^2 = 9 in the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.order-of-operations
+    relation: procedural
+    points_to: procedure.3
+    why: Steps 3 and 4 apply the left-to-right convention to multiplication and division and then to addition
+      and subtraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

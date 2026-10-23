@@ -1,0 +1,98 @@
+id: transformation.dilation.center.coordinates
+concept: transformation
+facet: coordinate
+level: 2
+type: procedure
+name: Find the coordinates of the image of a polygon under a dilation with another center
+statement: Find the coordinates of the image of a polygon under a dilation whose center is a point other
+  than the origin by multiplying each vertex's horizontal and vertical offsets from the center by the
+  scale factor.
+procedure:
+- 'For each vertex, count its offset from the center: a units across and b units up, with a negative for
+  left and b negative for down.'
+- Multiply both parts of the offset by the scale factor k.
+- Count the new offset from the center to locate the image vertex, and record its coordinates.
+- Join the image vertices in the same order.
+assess: Triangle ABC has vertices A(1, 1), B(3, 1), and C(1, 4). Give the coordinates of the vertices
+  of its image under a dilation with center A and scale factor 2.
+sources:
+  ccss:
+  - 8.G.A.3
+  learning_components:
+  - c169f8f0
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.dilation.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure carries out a dilation, taking each vertex to the point k times as far from the
+      center on the same ray.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.signed.represent-context
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 counts a vertex's offset from the center as signed numbers, a negative for left and b
+      negative for down.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.first-quadrant.plot
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 locates each vertex and counts its offset from the center on the grid, which in the test
+      stays in the first quadrant.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies both parts of the offset by the scale factor, which in the test is a whole
+      number times a whole number.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.first-quadrant.read
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 counts the new offset from the center and records the coordinates of the image vertex,
+      which in the test has positive coordinates.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.symbolic
+    relation: definitional
+    points_to: statement
+    why: Procedure step 2 multiplies by 'the scale factor k' and a dilation allows any k > 0, so a fractional
+      k needs this node; the test happens to use a whole number.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

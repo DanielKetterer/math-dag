@@ -1,0 +1,63 @@
+id: factors.lcm.find
+concept: factors
+facet: core
+level: 3
+type: procedure
+name: Find the least common multiple of two whole numbers
+statement: The least common multiple of two nonzero whole numbers up to 12 is the smallest nonzero common
+  multiple; find it by listing the multiples of the greater number in order until one is also a multiple
+  of the smaller number.
+procedure:
+- 'List the multiples of the greater number in order: 1 times it, 2 times it, 3 times it, and so on.'
+- For each one, decide whether it is a multiple of the smaller number.
+- The first one that is a multiple of the smaller number is the least common multiple.
+assess: Find the least common multiple of 6 and 8.
+sources:
+  ccss:
+  - 6.NS.B.4
+  learning_components:
+  - 926bf4b0
+requires:
+- clause: standard
+  all_of:
+  - node: factors.common-multiple.meaning
+    relation: definitional
+    points_to: statement
+    why: The least common multiple is defined as the smallest nonzero common multiple of the two numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 lists multiples of the greater number as 1 times it, 2 times it, 3 times it, which multiplies
+      a number up to 12 by a one-digit number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: factors.is-multiple.decide
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 decides for each listed multiple whether it is also a multiple of the smaller number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,92 @@
+id: expressions.product.regroup-factors
+concept: expressions
+facet: algebraic
+level: 3
+type: procedure
+name: Reorder and regroup the factors of a product
+statement: Generate an expression equivalent to a product by writing its factors in a different order
+  or grouping them differently, using the commutative and associative properties of multiplication, so
+  that the number factors can be multiplied together.
+procedure:
+- Write the number factors next to each other.
+- Group the number factors with parentheses and multiply them.
+assess: Rewrite 4 x (y x 5) as a single number times y.
+sources:
+  ccss:
+  - 6.EE.A.3
+  learning_components:
+  - e1d1c595
+  - a629106a
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.commutative
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 writes the number factors next to each other, which is allowed because the order of factors
+      does not change the product.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.associative
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 groups the number factors with parentheses, which relies on the associative property of
+      multiplication.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The properties apply to a product with a letter because the letter stands for a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.parentheses
+    relation: representational
+    points_to: procedure.2
+    why: Step 2 groups the number factors by putting parentheses around them.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: Rewriting 4 x (y x 5) as a single number times y requires finding 4 x 5.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs the product 4 x 5; the regrouping idea does not depend
+        on a particular fact.'
+    status: proposed
+status: proposed

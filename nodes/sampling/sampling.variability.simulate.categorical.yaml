@@ -1,0 +1,119 @@
+id: sampling.variability.simulate.categorical
+concept: sampling
+facet: core
+level: 2
+type: procedure
+name: Gauge the error of a sample proportion from several samples
+statement: Draw several random samples (or simulated samples) of the same size from the same population
+  of categorical data, find the proportion in the category of interest in each, and use how far the sample
+  proportions spread to judge how far an estimate from one sample might be from the population proportion.
+procedure:
+- Draw several random samples of the same size from the population, or simulate them.
+- In each sample, find the fraction of members in the category of interest.
+- Note the least and greatest sample proportions and how far apart they are.
+- Use that spread to say about how far one sample proportion might be from the population proportion.
+assess: Four random samples of 20 voters each were asked whether they will vote for Candidate A. The numbers
+  saying yes were 11, 13, 9, and 12. About how far off might an estimate of Candidate A's share of all
+  voters from one sample of 20 be?
+sources:
+  ccss:
+  - 7.SP.A.2
+  learning_components:
+  - 6f445725
+  - 67bdbbc4
+requires:
+- clause: standard
+  all_of:
+  - node: sampling.random.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 draws several random samples of the same size, so the learner must know what makes a sample
+      random.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 writes the fraction of each sample in the category of interest, such as 11 of 20 voters,
+      as a fraction of the sample.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.compare.same-denominator
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 finds the least and greatest sample proportions, and samples of equal size give fractions
+      with the same denominator to compare.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.like-denominators
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 finds how far apart the least and greatest proportions are, a difference of fractions
+      with the same denominator such as 13/20 minus 9/20.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: sampling.variability.meaning
+    relation: justificatory
+    points_to: procedure.4
+    why: Step 4 uses how far sample proportions differ as the likely error of one sample proportion, which
+      rests on samples giving different values.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: inference.estimate.population-proportion
+    relation: definitional
+    points_to: statement
+    why: The statement gauges how far one sample proportion, used as an estimate of the population proportion,
+      might be from that population proportion.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.categorical.count-each
+    relation: definitional
+    points_to: statement
+    why: Step 2 finds the fraction of each sample in the category of interest, which first counts the
+      members of that category in the sample.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

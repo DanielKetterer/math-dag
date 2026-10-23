@@ -45,7 +45,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: coordinate-plane.four-quadrants
+  - node: coordinate-plane.four-quadrants.read
     relation: procedural
     points_to: procedure.1
     why: Step 1 reads the coordinates of a point on the line other than the origin.
@@ -55,8 +55,12 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired coordinate-plane.four-quadrants: Step 1 reads points off the line,
+        which may lie in any quadrant, with integer coordinates.'
     status: proposed
-  - node: expressions.variables
+  - node: expressions.variable.meaning
     relation: definitional
     points_to: statement
     why: The equation y = mx is written with variables.
@@ -64,11 +68,15 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired expressions.variables: The equation is written with x and y standing
+        for numbers; nothing is evaluated or written from words.'
     status: disputed
 - clause: via-proportional
   note: Write the line as a proportional relationship y = kx (Daniel E111, route-only).
   all_of:
-  - node: coordinate-plane.four-quadrants
+  - node: coordinate-plane.four-quadrants.read
     relation: procedural
     points_to: procedure.1
     why: Step 1 reads the coordinates of a point on the line other than the origin.
@@ -78,8 +86,12 @@ requires:
     - kind: content
       source: critic-sonnet
       note: necessary
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired coordinate-plane.four-quadrants: Step 1 reads points off the line,
+        which may lie in any quadrant, with integer coordinates.'
     status: proposed
-  - node: expressions.variables
+  - node: expressions.variable.meaning
     relation: definitional
     points_to: statement
     why: The equation y = mx is written with variables.
@@ -87,6 +99,10 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired expressions.variables: The equation is written with x and y standing
+        for numbers; nothing is evaluated or written from words.'
     status: disputed
   - node: proportional-relationship.equation.write
     relation: definitional

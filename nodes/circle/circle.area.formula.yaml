@@ -1,0 +1,97 @@
+id: circle.area.formula
+concept: circle
+facet: measure
+level: 3
+type: concept
+name: The area formula A = pi x r^2
+statement: The area of a circle with radius r is A = pi x r x r, written pi x r^2.
+assess: 'True or false: a circle with diameter 6 m has area pi x 6 x 6 square m. Say which rule decides
+  it.'
+sources:
+  ccss:
+  - 7.G.B.4
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: circle.center-radius
+    relation: definitional
+    points_to: statement
+    why: The formula uses r, the radius, which is the distance from the center to the circle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.pi.ratio
+    relation: definitional
+    points_to: statement
+    why: The formula contains pi, the number defined as circumference divided by diameter.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.covering.meaning
+    relation: definitional
+    points_to: statement
+    why: The formula gives the area, a number of unit squares that cover the circle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: representational
+    points_to: statement
+    why: The area is written pi x r^2, where r^2 stands for r times r.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: representational
+    points_to: statement
+    why: The formula uses the letter r for the radius, a letter standing for a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.diameter
+    relation: definitional
+    points_to: assess
+    why: Deciding the diameter-6 claim means knowing the radius is half the diameter, so it is 3 m.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test gives a diameter (6 m) and needs the radius; the formula itself
+        is stated with the radius.'
+    status: proposed
+status: proposed

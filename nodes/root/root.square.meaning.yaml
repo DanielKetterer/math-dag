@@ -1,0 +1,60 @@
+id: root.square.meaning
+concept: root
+facet: square
+level: 3
+type: concept
+name: The square root of a number
+statement: For a number p that is 0 or greater, sqrt(p) is the number that is 0 or greater and whose square
+  is p.
+assess: 'Which of these is sqrt(36): 18, 6, or -6?'
+sources:
+  ccss:
+  - 8.EE.A.2
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: The square of a number is the number multiplied by itself, a power with exponent 2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: procedural
+    points_to: assess
+    why: Deciding which of 18, 6 and -6 has square 36 needs squares such as 6^2 and 18^2 evaluated.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement defines the root without evaluating any square; only the test item
+        needs 6^2 and 18^2 evaluated.'
+    status: proposed
+  - node: rational-number.compare.integers
+    relation: definitional
+    points_to: assess
+    why: The test problem rules out -6 because -6 is less than 0 and the root must be 0 or greater.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test item has the distractor -6, which is ruled out by being below 0;
+        a learner who knows only nonnegative numbers can still meet the statement as written.'
+    status: proposed
+status: proposed

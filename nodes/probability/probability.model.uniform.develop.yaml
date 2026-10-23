@@ -1,0 +1,58 @@
+id: probability.model.uniform.develop
+concept: probability
+facet: equally-likely
+level: 2
+type: concept
+name: Develop a uniform probability model
+statement: When the outcomes of a chance process are equally likely, a uniform probability model lists
+  all n possible outcomes and assigns each one the probability 1/n.
+assess: Spinner 1 has 5 equal sections labeled A, B, C, D, E. List the outcomes of one spin and give the
+  probability of each. Spinner 2 has 3 sections, one of which is half of the circle. Would a uniform model
+  fit spinner 2? Why or why not?
+sources:
+  ccss:
+  - 7.SP.C.7.a
+  learning_components:
+  - 7752d0b0
+requires:
+- clause: standard
+  all_of:
+  - node: probability.likelihood.zero-to-one
+    relation: definitional
+    points_to: statement
+    why: The model assigns each outcome a probability, a number from 0 to 1 that says how likely that
+      outcome is.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.unit.part-whole
+    relation: representational
+    points_to: statement
+    why: The probability assigned to each of n equally likely outcomes is written as the unit fraction
+      1/n, one of n equal parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: probability.outcomes.equally-likely
+    relation: definitional
+    points_to: statement
+    why: The statement starts from the outcomes of a chance process being equally likely and listing all
+      of them; no index node introduces outcomes or the meaning of equally likely.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

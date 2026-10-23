@@ -1,0 +1,90 @@
+id: pythagorean-theorem.proof.explain
+concept: pythagorean-theorem
+facet: area
+level: 4
+type: justification
+name: Explain a proof of the Pythagorean theorem by rearranging triangles
+statement: 'Four copies of a right triangle with legs a and b and hypotenuse c fit inside a square of
+  side a + b in two ways: around a tilted square of side c, or beside a square of side a and a square
+  of side b; the uncovered area is the same both times, so c^2 = a^2 + b^2.'
+assess: The diagram shows two arrangements of four copies of a right triangle with legs a and b and hypotenuse
+  c inside a square of side a + b. Use them to explain why a^2 + b^2 = c^2.
+sources:
+  ccss:
+  - 8.G.B.6
+  learning_components:
+  - 9ca7bb46
+requires:
+- clause: standard
+  all_of:
+  - node: area.additive
+    relation: justificatory
+    points_to: statement
+    why: The uncovered area is the big square minus four equal triangles, so the area of a region equals
+      the sum of the areas of its parts.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: justificatory
+    points_to: statement
+    why: The squares of side a, b, c and a + b have areas found by multiplying a side by itself.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.triangle.right.identify
+    relation: definitional
+    points_to: statement
+    why: The argument uses a right triangle with legs a and b and hypotenuse c.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: representational
+    points_to: statement
+    why: The conclusion c^2 = a^2 + b^2 and the area (a + b)^2 of the large square are written with squared
+      lengths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement and the test problem use the letters a, b and c for the leg and hypotenuse lengths
+      and conclude c^2 = a^2 + b^2.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: shapes.name.any-orientation
+    relation: definitional
+    points_to: statement
+    why: The argument relies on seeing the central region, tilted, as a square of side c; a tilted square
+      must be recognized as a square.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

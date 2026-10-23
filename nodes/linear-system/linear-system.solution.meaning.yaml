@@ -1,0 +1,72 @@
+id: linear-system.solution.meaning
+concept: linear-system
+facet: algebraic
+level: 3
+type: concept
+name: A solution of a system of two equations
+statement: A solution of a system of two equations in x and y is a pair (a, b) that makes both equations
+  true at the same time.
+assess: Is (2, 3) a solution of the system x + y = 5 and 2x - y = 1? Is (1, 4)?
+sources:
+  ccss:
+  - 8.EE.C.8.a
+  learning_components:
+  - b6895508
+requires:
+- clause: standard
+  all_of:
+  - node: equation.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: A solution of a system is a pair that makes each equation true, so what it means to satisfy one
+      equation is used twice.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate.ordered-pair.notation
+    relation: representational
+    points_to: statement
+    why: The solution is written as an ordered pair (a, b) with the x-value first and the y-value second.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.solution.check-substitution
+    relation: procedural
+    points_to: assess
+    why: Testing (2, 3) and (1, 4) in x + y = 5 and 2x - y = 1 means substituting into both equations.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem tests (2, 3) and (1, 4); the idea is that a pair satisfies
+        both equations.'
+    status: proposed
+  - node: expressions.variable.evaluate
+    relation: procedural
+    points_to: assess
+    why: Deciding whether (2, 3) or (1, 4) is a solution means substituting the pair into both equations
+      and evaluating each side.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem evaluates the sides at the pairs; this overlaps e504, which
+        itself rests on evaluation.'
+    status: proposed
+status: proposed

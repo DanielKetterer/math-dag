@@ -1,0 +1,56 @@
+id: scientific-notation.meaning
+concept: scientific-notation
+facet: core
+level: 3
+type: concept
+name: What scientific notation is
+statement: A positive number is written in scientific notation when it has the form a x 10^n, where n
+  is an integer and the leading factor a is at least 1 and less than 10.
+assess: 'Which of these are written in scientific notation: 4.5 x 10^6; 45 x 10^5; 0.45 x 10^7; 4.5 x
+  10^-3; 4.5 x 2^6?'
+sources:
+  ccss:
+  - 8.EE.A.4
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: exponent.power-of-ten.notation
+    relation: representational
+    points_to: statement
+    why: The form a x 10^n uses powers of 10 with whole-number exponents, as in 10^6.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.power-of-ten.negative
+    relation: representational
+    points_to: statement
+    why: The form allows n to be a negative integer, as in 4.5 x 10^-3, using 10^-n as a decimal.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.compare
+    relation: definitional
+    points_to: statement
+    why: The leading factor a must be at least 1 and less than 10, which compares a decimal with 1 and
+      10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

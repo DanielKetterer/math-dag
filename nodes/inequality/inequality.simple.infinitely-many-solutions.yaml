@@ -1,0 +1,78 @@
+id: inequality.simple.infinitely-many-solutions
+concept: inequality
+facet: open-sentence
+level: 3
+type: concept
+name: x > c and x < c have infinitely many solutions
+statement: An inequality x > c or x < c is true for every number on one side of c, not only for whole
+  numbers, so it has infinitely many solutions.
+assess: Give three solutions of x > 4 that are not whole numbers. How many solutions does x > 4 have?
+sources:
+  ccss:
+  - 6.EE.B.8
+  learning_components:
+  - 94bdf387
+requires:
+- clause: via-number-line
+  all_of:
+  - node: inequality.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: Counting the solutions of x > c or x < c uses the meaning of a solution as a value that makes
+      the inequality true.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.order.number-line
+    relation: definitional
+    points_to: statement
+    why: Every number on one side of c is a solution because greater or less means farther right or left
+      of c on the number line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement needs only that every number greater (or less) than c is a solution;
+        that can be reached by comparing non-whole decimals/fractions with c, without number-line position.
+        | other route: Show by substitution that 4.5, 4.1, 4.01, ... all satisfy x > 4 using comparison
+        of signed rationals, and conclude there is no last solution.'
+    status: disputed
+- clause: critic-route-1
+  note: Reach 'infinitely many' by substituting non-whole numbers (4.5, 4.1, 4.01, ...) into x > c, deciding
+    each by comparing signed rationals, without number-line position.
+  all_of:
+  - node: inequality.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: Counting the solutions of x > c or x < c uses the meaning of a solution as a value that makes
+      the inequality true.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.compare.rationals
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Reach ''infinitely many'' by substituting non-whole
+      numbers (4.5, 4.1, 4.01, ...) into x > c, deciding each by comparing signed rationals, without number-line
+      position.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

@@ -1,0 +1,65 @@
+id: rational-number.application.multistep.real-world
+concept: rational-number
+facet: core
+level: 3
+type: application
+name: Solve multi-step real-world problems with positive and negative rational numbers
+statement: Solve a real-world problem that takes two or more operations on rational numbers given in different
+  forms, at least one of them negative.
+assess: At 6 a.m. the temperature was -4.5 degrees. It rose 1 1/2 degrees each hour for 4 hours and then
+  fell 2.25 degrees. What was the temperature then?
+sources:
+  ccss:
+  - 7.EE.B.3
+  learning_components:
+  - a314cbdc
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.compute.mixed-forms
+    relation: procedural
+    points_to: statement
+    why: The numbers in the problem, such as -4.5, 1 1/2 and 2.25, are in different forms and must be
+      computed with together.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.application.addition
+    relation: procedural
+    points_to: assess
+    why: Adding a signed change to a signed value, as when the temperature rises, is one of the operations
+      the problem takes.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test problem adds a signed change to a signed value (-4.5 plus the hourly
+        rises); the statement only asks for two or more operations, none named.'
+    status: proposed
+  - node: rational-number.application.multiplication
+    relation: procedural
+    points_to: assess
+    why: Multiplying a signed change per unit, such as 1 1/2 degrees an hour for 4 hours, is one of the
+      operations the problem takes.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test problem multiplies a signed change per unit (1 1/2 degrees an hour for
+        4 hours); the statement does not name multiplication.'
+    status: proposed
+status: proposed

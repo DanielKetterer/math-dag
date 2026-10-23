@@ -1,0 +1,91 @@
+id: rational-number.compare.rationals
+concept: rational-number
+facet: core
+level: 3
+type: procedure
+name: Decide which of two signed fractions or decimals is greater
+statement: 'Decide which of two rational numbers given as fractions or decimals is greater without a number
+  line: negative < 0 < positive, and of two negative numbers the one closer to 0, whose opposite is smaller,
+  is greater.'
+procedure:
+- If the numbers have different signs, or one is 0, the order is negative < 0 < positive.
+- If both are positive, compare them as fractions or decimals.
+- If both are negative, compare their opposites as fractions or decimals; the negative number whose opposite
+  is smaller is the greater.
+assess: 'Which is greater in each pair: -4.5 or -4.05; -2/3 or -3/4?'
+sources:
+  ccss:
+  - 6.NS.C.7
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.order.number-line
+    relation: definitional
+    points_to: statement
+    why: Deciding which rational number is greater without a number line rests on what greater means as
+      a position to the right on the number line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.compare.common-denominator
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 compares positive fractions such as 2/3 and 3/4, which have unlike denominators and numerators,
+      so the comparison must handle any pair.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Common denominator, common numerator and benchmarks are interchangeable methods
+        for the same comparison of two positive fractions, so an edge to one method is wrong unless it
+        is the map''s general method; the index has no method-neutral ''com'
+    status: disputed
+  - node: decimal.compare
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 compares positive decimals such as 4.5 and 4.05, which is deciding which of two decimals
+      is greater.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.opposite.number-line
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 compares the opposites of two negative numbers, which uses the opposite of a number as
+      its mirror point across 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.fraction-decimal.number-line
+    relation: definitional
+    points_to: procedure.3
+    why: Step 3 compares the opposites of two negative fractions or decimals, which are the positive numbers
+      at the same distance from 0.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

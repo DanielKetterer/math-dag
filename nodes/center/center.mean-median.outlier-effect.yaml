@@ -1,0 +1,48 @@
+id: center.mean-median.outlier-effect
+concept: center
+facet: core
+level: 2
+type: concept
+name: An extreme value pulls the mean but barely moves the median
+statement: Changing one value to an extreme value pulls the mean toward it, because every value enters
+  the sum, but changes the median little or not at all, because the median depends only on the middle
+  position of the ordered values.
+assess: The data set 2, 3, 4, 5, 6 has mean 4 and median 4. If the 6 is replaced by 56, which changes
+  a lot, the mean or the median? Explain without computing.
+sources:
+  ccss:
+  - 6.SP.B.5.d
+  learning_components:
+  - 8f6aea95
+requires:
+- clause: standard
+  all_of:
+  - node: center.mean.compute
+    relation: justificatory
+    points_to: statement
+    why: The explanation that the mean moves because every value enters the sum uses the definition of
+      the mean as the sum divided by the number of values.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: center.median.find
+    relation: justificatory
+    points_to: statement
+    why: The explanation that the median barely moves uses its definition as the middle value of the ordered
+      list, which depends only on position.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

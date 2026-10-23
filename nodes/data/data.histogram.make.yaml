@@ -1,0 +1,94 @@
+id: data.histogram.make
+concept: data
+facet: histogram
+level: 2
+type: representation
+name: Make a histogram from a numerical data set
+statement: A histogram groups numerical data into equal-width intervals along a number line and draws
+  over each interval a bar, with no gaps between adjacent bars, whose height is the number of values in
+  that interval.
+procedure:
+- Choose equal-width intervals that together cover all the values, such as 10 to under 20 and 20 to under
+  30.
+- Count the values in each interval; a value on a boundary goes in the interval that starts there.
+- Draw a number line marked at the interval boundaries and a vertical scale for the counts.
+- Draw a bar over each interval up to its count, with no gaps between adjacent intervals.
+assess: 'Ages of 10 people: 12, 15, 21, 23, 24, 30, 31, 38, 39, 45. Make a histogram with the intervals
+  10 to under 20, 20 to under 30, 30 to under 40, and 40 to under 50.'
+sources:
+  ccss:
+  - 6.SP.B.4
+  learning_components:
+  - a8fd1516
+requires:
+- clause: standard
+  all_of:
+  - node: addition.within-100
+    relation: procedural
+    points_to: procedure.1
+    why: Choosing equal-width intervals means adding the same width again and again to get each boundary,
+      such as 10, 20, 30, and 40.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude
+    relation: procedural
+    points_to: procedure.2
+    why: Placing each value in its interval means deciding which boundaries it is at least as great as
+      and less than, including values that sit on a boundary.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.categorical.count-each
+    relation: procedural
+    points_to: procedure.2
+    why: Counting the values in each interval treats every interval as a category and counts the data
+      values that fall in each one.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: procedure.3
+    why: The horizontal axis is a number line marked at equally spaced interval boundaries, so whole numbers
+      must be placed at their lengths from 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.bar-graph.draw
+    relation: representational
+    points_to: procedure.4
+    why: Each histogram bar is drawn up to its count on a vertical scale, the way a bar graph bar is drawn,
+      here with no gaps between bars.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

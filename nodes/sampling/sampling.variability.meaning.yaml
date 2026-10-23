@@ -1,0 +1,51 @@
+id: sampling.variability.meaning
+concept: sampling
+facet: core
+level: 2
+type: concept
+name: Sample statistics estimate population statistics and vary from sample to sample
+statement: A statistic computed from a sample, such as a sample mean or a sample proportion, estimates
+  the matching population statistic but is usually not equal to it, and different samples of the same
+  size usually give different values.
+assess: The mean height of all 600 students in a school is 152 cm. Ana's random sample of 20 students
+  has mean height 150 cm and Tom's random sample of 20 students has mean height 155 cm. Did either of
+  them make a mistake? Explain.
+sources:
+  ccss:
+  - 7.SP.A.2
+  learning_components:
+  - 78dd8689
+requires:
+- clause: standard
+  all_of:
+  - node: sampling.population-sample.meaning
+    relation: definitional
+    points_to: statement
+    why: A sample statistic is computed from a sample and estimates the matching statistic of the population,
+      so the learner must know sample and population.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: center.mean.compute
+    relation: definitional
+    points_to: assess
+    why: The test problem compares two sample means with the population mean, so the learner must know
+      the mean of a data set as the statistic computed.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test problem uses sample means, but the statement allows a sample mean or
+        a sample proportion as the statistic, so the idea itself does not require the mean.'
+    status: proposed
+status: proposed

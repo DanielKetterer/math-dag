@@ -1,0 +1,60 @@
+id: relationship.change.relate-equation
+concept: relationship
+facet: dependent-independent
+level: 3
+type: concept
+name: Relate the constant change in a table to the equation y = rx
+statement: For an equation y = rx, each increase of 1 in the independent variable increases the dependent
+  variable by r; this constant change appears between consecutive rows of a table whose independent values
+  go up by 1, and it is the number that multiplies the independent variable in the equation.
+assess: A table for d = 65t lists t = 0, 1, 2, 3. By how much does d increase from each row to the next,
+  and which number in the equation shows that increase?
+sources:
+  ccss:
+  - 6.EE.C.9
+  learning_components:
+  - d29c0749
+requires:
+- clause: standard
+  all_of:
+  - node: relationship.table.from-equation
+    relation: representational
+    points_to: statement
+    why: The statement reads the constant change off consecutive rows of a table made from the equation,
+      as in the table for d = 65t.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: relationship.dependent-independent.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement compares an increase of 1 in the independent variable with the resulting increase
+      in the dependent variable.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: assess
+    why: The test problem finds how much d increases from row to row by subtracting consecutive values
+      such as 130 - 65.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem subtracts consecutive values (130 - 65); the idea does not
+        depend on it. Subtract within 1000 is the method-neutral node.'
+    status: proposed
+status: proposed

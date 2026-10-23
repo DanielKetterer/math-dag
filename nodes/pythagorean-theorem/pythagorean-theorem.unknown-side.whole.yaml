@@ -1,0 +1,100 @@
+id: pythagorean-theorem.unknown-side.whole
+concept: pythagorean-theorem
+facet: length
+level: 3
+type: procedure
+name: Find an unknown side of a right triangle when the answer is a whole number
+statement: Find an unknown side length of a right triangle from the other two, when the squares of the
+  sides make the unknown length a whole number, using a^2 + b^2 = c^2.
+procedure:
+- Identify the hypotenuse (opposite the right angle) and the legs.
+- If the hypotenuse is unknown, compute a^2 + b^2; if a leg is unknown, compute c^2 minus the square of
+  the known leg.
+- The result is a perfect square; its square root is the unknown length.
+assess: A right triangle has a hypotenuse of length 13 and one leg of length 5. Find the length of the
+  other leg.
+sources:
+  ccss:
+  - 8.G.B.7
+  learning_components:
+  - cac68ba0
+requires:
+- clause: standard
+  all_of:
+  - node: pythagorean-theorem.statement
+    relation: definitional
+    points_to: statement
+    why: The procedure solves a^2 + b^2 = c^2 for the unknown side.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.triangle.right.identify
+    relation: procedural
+    points_to: procedure.1
+    why: Identifying the hypotenuse means finding the side opposite the right angle of a right triangle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: procedural
+    points_to: procedure.2
+    why: The procedure computes the squares of the known sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: procedural
+    points_to: procedure.2
+    why: When the hypotenuse is unknown the procedure adds the two squares.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: procedure.2
+    why: When a leg is unknown the procedure subtracts the square of the known leg from c^2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: root.square.perfect-square.evaluate
+    relation: procedural
+    points_to: procedure.3
+    why: The last step takes the square root of a perfect square to get the whole-number length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

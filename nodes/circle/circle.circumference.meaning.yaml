@@ -1,0 +1,91 @@
+id: circle.circumference.meaning
+concept: circle
+facet: measure
+level: 2
+type: concept
+name: The circumference of a circle
+statement: 'The circumference of a circle is its length: the distance once around the circle.'
+assess: A string wrapped once around the circular bottom of a can and then laid straight is 19 cm long.
+  The can is 6 cm across and 12 cm tall. What is the circumference of the bottom of the can?
+sources:
+  ccss:
+  - 7.G.B.4
+  learning_components: []
+requires:
+- clause: via-meaning
+  all_of:
+  - node: shapes.name.prototype
+    relation: definitional
+    points_to: statement
+    why: The figure whose length is measured is a circle, so the learner must recognize a circle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.attribute
+    relation: definitional
+    points_to: statement
+    why: The statement defines the circumference as a length, so length is used directly on every route.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: perimeter.meaning
+    relation: definitional
+    points_to: statement
+    why: The circumference is the perimeter of a circle, the length once around it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Perimeter as the length around a figure is one way into distance around a circle.
+        | other route: Wrap a string once around a circular object and lay it straight to measure it,
+        as the test itself describes (measurement.length.attribute, measurement.length.ruler), without
+        a prior perimeter concept.'
+    status: disputed
+- clause: critic-route-2
+  note: 'String route: wrap a string around the circle and measure it laid straight.'
+  all_of:
+  - node: shapes.name.prototype
+    relation: definitional
+    points_to: statement
+    why: The figure whose length is measured is a circle, so the learner must recognize a circle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.attribute
+    relation: definitional
+    points_to: statement
+    why: The statement defines the circumference as a length, so length is used directly on every route.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: measurement.length.ruler
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: String route: wrap a string around the circle and
+      measure it laid straight.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+related:
+- node: circle.diameter
+  relation: contrasts_with
+  note: The test's 6 cm across is a distractor that measures across rather than around; the learner can
+    set it aside without the term diameter.
+status: proposed

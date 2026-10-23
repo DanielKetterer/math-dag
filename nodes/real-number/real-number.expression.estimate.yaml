@@ -1,0 +1,73 @@
+id: real-number.expression.estimate
+concept: real-number
+facet: decimal-expansion
+level: 3
+type: procedure
+name: Estimate an expression in an irrational number from decimal bounds
+statement: Estimate the value of an expression in a positive irrational number, such as pi^2, that increases
+  as the number increases, by evaluating it at a lower and an upper decimal bound of the number; its value
+  lies between the two results.
+procedure:
+- Bound the irrational number between two decimals.
+- Evaluate the expression at the lower bound and at the upper bound.
+- State that the value of the expression lies between the two results.
+assess: Use 3.1 < pi < 3.2 to find two numbers that pi^2 lies between.
+sources:
+  ccss:
+  - 8.NS.A.2
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: real-number.approximate.truncate
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 bounds the irrational number, such as pi, between two decimals by cutting off its decimal
+      expansion.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: real-number.approximate.square-root
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 bounds an irrational square root between two decimals by squaring trial values.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.decimal-base
+    relation: procedural
+    points_to: assess
+    why: The test problem evaluates pi^2 at the bounds 3.1 and 3.2, which means squaring decimals.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs it: pi^2 is evaluated at 3.1 and 3.2, which means
+        squaring decimals. The idea works for any expression increasing in the number.'
+    status: proposed
+  - node: expressions.numerical.fractions-decimals.evaluate
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 evaluates the expression at the lower and upper decimal bounds.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,109 @@
+id: angle.transversal.corresponding.explain
+concept: angle
+facet: measure
+level: 4
+type: justification
+name: Explain with a translation why corresponding angles are equal
+statement: Translating along the transversal by the distance between the two crossing points moves line
+  m to a line through the other crossing point parallel to m, which must be n; since a translation keeps
+  angle measures, each angle at the first crossing lands on its corresponding angle at the second, so
+  corresponding angles are equal.
+assess: Parallel lines m and n are crossed by line t at points P and Q. Explain, using a translation,
+  why each angle at P has the same measure as its corresponding angle at Q.
+sources:
+  ccss:
+  - 8.G.A.5
+  learning_components:
+  - 2b003d7c
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.translation.meaning
+    relation: justificatory
+    points_to: statement
+    why: The explanation translates along the transversal by the distance between the two crossing points.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rigid-motion.preserves-length
+    relation: justificatory
+    points_to: statement
+    why: The explanation uses that the image of line m is a line, which is the line through the other
+      crossing point.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'necessary: Only the ''a translation takes a line to a line'' part of this node is used (the
+        image of line m is a line); no weaker node holds it alone, so the whole node is the prerequisite.'
+    status: proposed
+  - node: parallel.meaning
+    relation: definitional
+    points_to: statement
+    why: The explanation concludes the translated line is parallel to m and so equals n, which uses what
+      parallel lines are.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rigid-motion.preserves-angle
+    relation: justificatory
+    points_to: statement
+    why: The explanation says the translation keeps angle measures, so each angle at P lands on an angle
+      of the same measure at Q.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.transversal.corresponding
+    relation: definitional
+    points_to: statement
+    why: The explanation shows that each angle at the first crossing and its corresponding angle at the
+      second are equal, which needs the term corresponding angles.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: parallel.unique-through-point
+    relation: definitional
+    points_to: statement
+    why: The argument says the translated line is parallel to m and passes through the other crossing
+      point, 'which must be n'; this needs that only one line through a point is parallel to a given line.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: transformation.translation.image-line-parallel
+    relation: definitional
+    points_to: statement
+    why: The argument says a translation moves line m to a line parallel to m; the index has parallel-to-parallel
+      (preserves-parallel) but no node saying a translation takes a line to a parallel line.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,62 @@
+id: equation.linear.variable-both-sides
+concept: equation
+facet: linear-one-variable
+level: 3
+type: procedure
+name: Solve a linear equation with the variable on both sides
+statement: Solve an equation of the form ax + b = cx + d with integer coefficients and a not equal to
+  c by subtracting one variable term from both sides, which leaves an equation with the variable on one
+  side, and solving that equation.
+procedure:
+- Subtract one of the variable terms, cx or ax, from both sides so the variable appears on one side only.
+- Solve the resulting equation of the form px + q = r.
+assess: Solve 7x - 4 = 3x + 16.
+sources:
+  ccss:
+  - 8.EE.C.7.b
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: equation.equality-preserved.same-operation
+    relation: procedural
+    points_to: procedure.1
+    why: Subtracting the same variable term from both sides keeps the solutions of the equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.linear.subtract.rational
+    relation: procedural
+    points_to: procedure.1
+    why: Subtracting cx from ax + b and from cx + d combines variable terms whose integer coefficients
+      may be negative.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.two-step.px-plus-q.solve
+    relation: procedural
+    points_to: procedure.2
+    why: The resulting equation px + q = r is solved by undoing the added constant and then dividing by
+      p.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

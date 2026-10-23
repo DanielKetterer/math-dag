@@ -1,0 +1,68 @@
+id: transformation.translation.coordinates.rule
+concept: transformation
+facet: coordinate
+level: 3
+type: representation
+name: Write a translation as a coordinate rule
+statement: A translation of a units horizontally and b units vertically is the coordinate rule (x, y)
+  -> (x + a, y + b), with a negative for a move left and b negative for a move down.
+assess: Write the coordinate rule (x, y) -> ( , ) for a translation 3 units left and 4 units up.
+sources:
+  ccss:
+  - 8.G.A.3
+  learning_components:
+  - 5816f6d6
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.translation.coordinates.image
+    relation: representational
+    points_to: statement
+    why: The rule (x, y) -> (x + a, y + b) is the symbolic form of what the image procedure does to each
+      vertex.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.signed.represent-context
+    relation: representational
+    points_to: statement
+    why: The rule uses a negative number for a move left and for a move down, and the test asks for 3
+      left as -3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: representational
+    points_to: statement
+    why: The rule uses the letters x, y, a, and b, each standing for a number, inside the expressions
+      x + a and y + b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate.ordered-pair.notation
+    relation: definitional
+    points_to: statement
+    why: The rule is written as an arrow between ordered pairs, (x, y) -> (x + a, y + b), so the notation
+      is used directly by the statement and the test.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

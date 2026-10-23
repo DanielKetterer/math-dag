@@ -1,0 +1,106 @@
+id: inequality.two-step.write
+concept: inequality
+facet: open-sentence
+level: 3
+type: representation
+name: Write px + q > r or a related inequality for a word problem
+statement: For a word problem in which a known rational number times an unknown quantity, plus a known
+  amount, must be more than, less than, at least or at most a known amount, write the matching inequality
+  px + q > r, px + q < r, px + q >= r or px + q <= r.
+assess: A phone plan costs $20 per month plus $0.10 per text. Kim wants to spend at most $35 this month.
+  Write an inequality for the number of texts t she can send.
+sources:
+  ccss:
+  - 7.EE.B.4.b
+  learning_components:
+  - 3cdfa046
+requires:
+- clause: via-px-plus-q
+  all_of:
+  - node: inequality.simple.write-constraint
+    relation: representational
+    points_to: statement
+    why: The relation between the quantity and the known amount is written from words such as 'more than'
+      or 'less than'.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: inequality.symbols.inclusive
+    relation: definitional
+    points_to: statement
+    why: '''At least'' and ''at most'' are written with the symbols >= and <=, as in the test problem.'
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.two-step.write.px-plus-q
+    relation: representational
+    points_to: statement
+    why: The left side px + q is written from the word problem the same way as in the equation px + q
+      = r.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Writing px + q = r is one way to get the left side; it can equally be written
+        directly as an expression for the situation and then related to the known amount. | other route:
+        Write the left side px + q with expressions.variable.write-for-situation instead of through the
+        equation-writing node.'
+    status: disputed
+- clause: via-write-for-situation
+  all_of:
+  - node: inequality.simple.write-constraint
+    relation: representational
+    points_to: statement
+    why: The relation between the quantity and the known amount is written from words such as 'more than'
+      or 'less than'.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: inequality.symbols.inclusive
+    relation: definitional
+    points_to: statement
+    why: '''At least'' and ''at most'' are written with the symbols >= and <=, as in the test problem.'
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.write-for-situation
+    relation: representational
+    points_to: statement
+    why: The left side px + q is an expression with a variable written for a fixed fee plus a rate times
+      a count, like 20 + 0.10t.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Writing a variable expression for the situation is one way to get the left side;
+        it can equally come from the equation-writing node, which already writes px + q. | other route:
+        Write the left side as in equation.two-step.write.px-plus-q and replace the equal sign by the
+        inequality symbol.'
+    status: disputed
+status: proposed

@@ -1,0 +1,95 @@
+id: expressions.distributive.factor
+concept: expressions
+facet: algebraic
+level: 3
+type: procedure
+name: Factor a common whole-number factor out of a sum
+statement: Rewrite a sum of terms that share a whole-number factor f as f times a sum, such as 24x + 18y
+  = 6(4x + 3y), using the distributive property in reverse.
+procedure:
+- Divide each term by the common factor f.
+- Write f times the sum of the quotients.
+assess: Rewrite 24x + 18y as a product with 6 as one factor.
+sources:
+  ccss:
+  - 6.EE.A.3
+  learning_components:
+  - 8819fa6b
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.distributive
+    relation: definitional
+    points_to: statement
+    why: The statement uses the distributive property in reverse to write a sum as a common factor times
+      a sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: factors.common-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: The terms must share a whole-number factor f, which is a common factor of the coefficients such
+      as 6 for 24 and 18.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 divides each term's coefficient by f exactly, as in 24 / 6 and 18 / 6.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: representational
+    points_to: statement
+    why: The terms 24x and 18y and the result 6(4x + 3y) are all written with a hidden multiplication
+      sign.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.parts.single-entity
+    relation: definitional
+    points_to: procedure.2
+    why: Step 2 writes f times a sum, treating the sum of the quotients as a single factor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-two-digit
+    relation: definitional
+    points_to: statement
+    why: The common factor f is any whole number, so dividing each coefficient by f exactly can need a
+      two-digit divisor (f = 12); the test (f = 6) needs only division.by-one-digit.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

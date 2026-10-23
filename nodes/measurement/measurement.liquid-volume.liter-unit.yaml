@@ -1,0 +1,77 @@
+id: measurement.liquid-volume.liter-unit
+concept: measurement
+facet: liquid-volume
+level: 2
+type: concept
+name: The liter as a unit of liquid volume
+statement: A liter is a standard unit of liquid volume, the amount of liquid that fills a 1-liter container;
+  a liquid volume in liters is the number of times it fills that container.
+assess: The water in this jug fills a 1-liter bottle exactly 3 times. How many liters of water are in
+  the jug?
+sources:
+  ccss:
+  - 3.MD.A.2
+  learning_components: []
+requires:
+- clause: via-space-occupied
+  all_of:
+  - node: counting.events
+    relation: definitional
+    points_to: statement
+    why: A liquid volume in liters is the number of times the liquid fills the 1-liter container, a count
+      of fillings.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.space-occupied
+    relation: definitional
+    points_to: statement
+    why: Liquid volume is the amount of space a liquid takes up, and the liter is a unit for that attribute.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The liter measures the amount of liquid, and that amount can be introduced directly
+        through pouring and comparing how much containers hold, as grade 3 curricula do before volume
+        of solids; the solid-volume node is not needed for it. | other route: Introduce liquid volume
+        as how much liquid a container holds, comparing amounts by pouring, then iterate the 1-liter container
+        and count the fillings (no solid-volume idea).'
+    status: disputed
+- clause: critic-route-1
+  note: Introduce liquid volume directly as how much liquid a container holds, comparing amounts by pouring,
+    then iterate the 1-liter container and count fillings.
+  all_of:
+  - node: counting.events
+    relation: definitional
+    points_to: statement
+    why: A liquid volume in liters is the number of times the liquid fills the 1-liter container, a count
+      of fillings.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.liquid-volume.attribute
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Introduce liquid volume directly as how much liquid
+      a container holds, comparing amounts by pouring, then iterate the 1-liter container and count fillings.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

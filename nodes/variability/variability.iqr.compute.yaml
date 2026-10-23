@@ -1,0 +1,50 @@
+id: variability.iqr.compute
+concept: variability
+facet: iqr
+level: 3
+type: procedure
+name: Find the interquartile range
+statement: The interquartile range (IQR) of a numerical data set is the upper quartile minus the lower
+  quartile, the length of the interval that holds the middle half of the ordered data.
+procedure:
+- Find the lower quartile and the upper quartile.
+- Subtract the lower quartile from the upper quartile.
+assess: A data set has minimum 4, lower quartile 12, median 15, upper quartile 20, and maximum 31. Find
+  its interquartile range.
+sources:
+  ccss:
+  - 6.SP.B.5.c
+  learning_components:
+  - 3280abf4
+requires:
+- clause: standard
+  all_of:
+  - node: variability.quartiles.find
+    relation: definitional
+    points_to: statement
+    why: The IQR is defined as the upper quartile minus the lower quartile, so the learner must know what
+      the two quartiles of a data set are.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts the lower quartile from the upper quartile, such as 20 minus 12 in the test
+      problem; any method of subtracting will do.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

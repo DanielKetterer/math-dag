@@ -1,0 +1,92 @@
+id: transformation.dilation.meaning
+concept: transformation
+facet: geometric
+level: 2
+type: concept
+name: A dilation with a center and a scale factor
+statement: A dilation with center O and scale factor k, where k > 0, takes each point P to the point P'
+  on ray OP with OP' = k x OP; the center O stays where it is.
+assess: Point P is 2 cm from point O. Point Q is on ray OP, 6 cm from O. Point R is on ray OP, 5 cm from
+  O. Point S is 6 cm from O but not on ray OP. Which point is the image of P under the dilation with center
+  O and scale factor 3?
+sources:
+  ccss:
+  - 8.G.A.3
+  learning_components:
+  - e8c6b8a4
+requires:
+- clause: standard
+  all_of:
+  - node: point.meaning
+    relation: definitional
+    points_to: statement
+    why: The definition has a center O and takes each point P to an image point P', so points are exact
+      locations.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ray.meaning
+    relation: definitional
+    points_to: statement
+    why: The image P' lies on ray OP, so the ray from the center through P must be understood.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: segment.meaning
+    relation: definitional
+    points_to: statement
+    why: The condition OP' = k x OP compares the lengths of segments OP' and OP from the center.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.scaling.resize
+    relation: definitional
+    points_to: statement
+    why: The condition OP' = k x OP resizes the length OP by the factor k, which is multiplication as
+      resizing.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.attribute
+    relation: definitional
+    points_to: statement
+    why: The condition OP' = k x OP compares lengths, so length as a quantity is used directly by the
+      statement.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: multiplication.by-one-digit
+    relation: definitional
+    points_to: statement
+    why: 'Task-only: the test computes 3 x 2; this is the method-neutral node that replaces the recall-fact
+      edge e1144.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

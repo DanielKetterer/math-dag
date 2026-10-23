@@ -1,0 +1,47 @@
+id: real-number.decimal-expansion
+concept: real-number
+facet: decimal-expansion
+level: 2
+type: concept
+name: Every number has a decimal expansion
+statement: Every number on the number line has a decimal expansion, possibly never ending, whose digits
+  record which tenth, then which hundredth, and so on, the number lies in.
+assess: A point P on the number line lies between 0.7 and 0.8, and between 0.73 and 0.74. What are the
+  first two digits after the decimal point in the decimal expansion of P?
+sources:
+  ccss:
+  - 8.NS.A.1
+  learning_components:
+  - ab61aaed
+requires:
+- clause: standard
+  all_of:
+  - node: decimal.number-line
+    relation: representational
+    points_to: statement
+    why: The statement and test problem place a point between consecutive tenths and then between consecutive
+      hundredths on the number line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: place-value.ten-times-right.decimal
+    relation: definitional
+    points_to: statement
+    why: Each tenth is split into ten hundredths, which is the decimal-place relation that each place
+      is ten times the place to its right.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

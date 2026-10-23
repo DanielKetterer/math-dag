@@ -1,0 +1,56 @@
+id: transformation.sequence.with-dilation.coordinates
+concept: transformation
+facet: coordinate
+level: 2
+type: procedure
+name: Find the coordinates of the image of a polygon after a sequence that includes a dilation
+statement: Find the coordinates of the image of a polygon after a sequence of a dilation and rigid motions
+  by applying each transformation, in the given order, to the image produced by the one before.
+procedure:
+- Apply the first transformation to each vertex and record the image vertices.
+- Apply the next transformation to those image vertices, not to the original figure.
+- Repeat until every transformation in the sequence has been applied; the last set of vertices is the
+  final image.
+assess: Triangle ABC has vertices A(1, 1), B(3, 1), and C(1, 2). It is dilated with center at the origin
+  and scale factor 2, and the image is then translated 1 unit down. Give the coordinates of the vertices
+  of the final image.
+sources:
+  ccss:
+  - 8.G.A.3
+  learning_components:
+  - 4c98d1fb
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.sequence.coordinates
+    relation: procedural
+    points_to: procedure.1
+    why: The rigid motions in the sequence are applied one after another to the current image, the method
+      taught for sequences of rigid motions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.dilation.center.coordinates
+    relation: procedural
+    points_to: procedure.1
+    why: The dilation step is carried out by scaling each vertex's offset from the center, whatever the
+      center is.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: transformation.dilation.origin.coordinates
+  relation: common_path
+  note: 'Common path, not required: route ''via-coordinates'' needed everything another route needs and
+    more, so it was removed.'
+status: proposed

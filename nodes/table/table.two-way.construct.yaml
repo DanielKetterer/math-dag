@@ -1,0 +1,80 @@
+id: table.two-way.construct
+concept: table
+facet: two-way
+level: 2
+type: representation
+name: Construct a two-way table from data on two categorical variables
+statement: 'A two-way table summarizes data on two categorical variables collected from the same subjects:
+  the categories of one variable label the rows, the categories of the other label the columns, each cell
+  holds the number of subjects in both its row category and its column category, and the row totals, column
+  totals, and grand total are written at the margins.'
+procedure:
+- Label one row for each category of the first variable and one column for each category of the second
+  variable.
+- For each subject, add one to the cell for that subject's pair of categories.
+- Add across each row and down each column to write the row and column totals, and add all the cells for
+  the grand total.
+assess: 'Ten students answered two questions, ''Do you have a curfew?'' and ''Do you have chores?''. Their
+  answers (curfew, chores) were: (yes, yes), (yes, yes), (yes, no), (no, yes), (no, no), (yes, yes), (no,
+  no), (no, yes), (yes, yes), (no, no). Make a two-way table of the counts with row and column totals.'
+sources:
+  ccss:
+  - 8.SP.A.4
+  learning_components:
+  - 412a2d72
+requires:
+- clause: standard
+  all_of:
+  - node: data.categorical.count-each
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 tallies the subjects falling in each pair of categories, which is counting the objects
+      in each category.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds across each row and down each column and adds all the cells for the grand total,
+      which are sums of whole numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The test problem''s sums stay within 10 (row and column totals 5, 5, 6, 4; grand
+        total 10), which addition.within-10 covers; within-100 may be stronger than the node is meant
+        to use.'
+    status: disputed
+  - node: table.read-two-way
+    relation: representational
+    points_to: statement
+    why: The table is laid out with a row for each category of one variable and a column for each of the
+      other, with a cell where they meet.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.categorical-variables.pair
+    relation: definitional
+    points_to: statement
+    why: The statement is about two categorical variables recorded on the same subjects, so each subject
+      falls in one category of each; no index node introduces classifying the same subjects two ways.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

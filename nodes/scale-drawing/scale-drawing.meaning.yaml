@@ -1,0 +1,60 @@
+id: scale-drawing.meaning
+concept: scale-drawing
+facet: core
+level: 2
+type: concept
+name: A scale drawing multiplies every length by the same factor
+statement: A scale drawing of a figure has the same angles as the figure, and every length in the drawing
+  is the actual length multiplied by one and the same factor; the scale states which actual length a drawing
+  length stands for.
+assess: Rectangle A is 4 cm by 6 cm. Rectangle B is 6 cm by 8 cm. Rectangle C is 6 cm by 9 cm. Which of
+  B and C is a scale drawing of A?
+sources:
+  ccss:
+  - 7.G.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.scaling.resize
+    relation: definitional
+    points_to: statement
+    why: Every length in the drawing is the actual length multiplied by one and the same factor, a resizing.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.meaning
+    relation: definitional
+    points_to: statement
+    why: The drawing has the same angles as the figure, so the learner must know what an angle is.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.composed-unit
+    relation: definitional
+    points_to: statement
+    why: The scale states which actual length one drawing length stands for, such as for every 1 cm there
+      are 2 m.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: ratio.equivalent
+  relation: same_idea_different_form
+  note: The test's check that corresponding sides are in equivalent ratios restates 'every length is multiplied
+    by the same factor'; the factor can also be found and compared directly with multiplication.scaling.resize.
+status: proposed

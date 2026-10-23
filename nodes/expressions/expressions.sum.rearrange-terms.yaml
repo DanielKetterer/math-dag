@@ -1,0 +1,90 @@
+id: expressions.sum.rearrange-terms
+concept: expressions
+facet: algebraic
+level: 3
+type: procedure
+name: Reorder and regroup the terms of a sum
+statement: Generate an expression equivalent to a sum by writing its terms in a different order or grouping
+  them differently, using the commutative and associative properties of addition.
+procedure:
+- Write the terms in the new order.
+- Group the terms to be combined with parentheses.
+assess: Rewrite 3 + x + 7 as x plus a single number.
+sources:
+  ccss:
+  - 6.EE.A.3
+  learning_components:
+  - e1d1c595
+  - a629106a
+requires:
+- clause: standard
+  all_of:
+  - node: addition.commutative
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 writes the terms in a new order, which is allowed because the order of addends does not
+      change the sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.associative.strategy
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 groups the terms differently, which relies on choosing which two numbers to add first.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The properties apply to a sum with a letter because the letter stands for a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.parentheses
+    relation: representational
+    points_to: procedure.2
+    why: Step 2 groups the terms to be combined by putting parentheses around them.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-10
+    relation: procedural
+    points_to: assess
+    why: Rewriting 3 + x + 7 as x plus a single number requires finding 3 + 7.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs the sum 3 + 7; the idea of reordering and regrouping
+        terms does not depend on any particular addition fact.'
+    status: proposed
+status: proposed

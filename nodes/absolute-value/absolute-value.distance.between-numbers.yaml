@@ -1,0 +1,128 @@
+id: absolute-value.distance.between-numbers
+concept: absolute-value
+facet: distance
+level: 3
+type: concept
+name: The distance between two numbers is the absolute value of their difference
+statement: The distance between two rational numbers p and q on the number line is |p - q|, which equals
+  |q - p|.
+assess: 'Which expressions give the distance between -6 and 2 on the number line: |-6 - 2|; |-6 + 2|;
+  |2 - (-6)|; -6 - 2?'
+sources:
+  ccss:
+  - 7.NS.A.1.c
+  learning_components:
+  - 5bb0a92d
+requires:
+- clause: via-add-inverse
+  all_of:
+  - node: absolute-value.distance.rational
+    relation: definitional
+    points_to: statement
+    why: The statement uses the absolute value |p - q| of a rational number, defined as its distance from
+      0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.fraction-decimal.number-line
+    relation: representational
+    points_to: statement
+    why: Distance between p and q is stated on the number line, so the learner must place negative fractions
+      and decimals there.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.subtraction.integers
+    relation: procedural
+    points_to: assess
+    why: The test problem evaluates -6 - 2 and 2 - (-6) to compare the options with the distance.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test problem evaluates -6 - 2 and 2 - (-6) to compare options with the distance.
+        The concept states the formula and does not need the procedure.'
+    status: proposed
+  - node: rational-number.subtraction.add-inverse
+    relation: definitional
+    points_to: statement
+    why: The difference p - q of signed numbers inside the absolute value means p + (-q).
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The difference p - q of signed numbers can be given its meaning as p + (-q) or
+        as the signed amount that takes q to p; the formula |p - q| needs one of them. | other route:
+        Read p - q as the unknown addend, the signed move from q to p (subtraction.unknown-addend.meaning),
+        with no appeal to adding the opposite.'
+    status: disputed
+- clause: critic-route-1
+  note: Read p - q as the unknown addend, the signed move from q to p, instead of as p + (-q).
+  all_of:
+  - node: absolute-value.distance.rational
+    relation: definitional
+    points_to: statement
+    why: The statement uses the absolute value |p - q| of a rational number, defined as its distance from
+      0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.fraction-decimal.number-line
+    relation: representational
+    points_to: statement
+    why: Distance between p and q is stated on the number line, so the learner must place negative fractions
+      and decimals there.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.subtraction.integers
+    relation: procedural
+    points_to: assess
+    why: The test problem evaluates -6 - 2 and 2 - (-6) to compare the options with the distance.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test problem evaluates -6 - 2 and 2 - (-6) to compare options with the distance.
+        The concept states the formula and does not need the procedure.'
+    status: proposed
+  - node: subtraction.unknown-addend.meaning
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Read p - q as the unknown addend, the signed move
+      from q to p, instead of as p + (-q).'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

@@ -1,0 +1,107 @@
+id: probability.likelihood.zero-to-one
+concept: probability
+facet: likelihood
+level: 2
+type: concept
+name: A probability is a number from 0 to 1
+statement: 'The probability of a chance event is a number from 0 to 1 that expresses how likely the event
+  is: 0 for an impossible event, 1 for a certain event, and larger numbers for more likely events.'
+assess: 'Which of these numbers could be the probability of an event: 0.7, 4/3, 0, -0.2, 1, 1/5?'
+sources:
+  ccss:
+  - 7.SP.C.5
+  learning_components:
+  - 96be5b29
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.compare.to-one
+    relation: procedural
+    points_to: assess
+    why: The test problem asks whether 4/3 can be a probability, which needs seeing that 4/3 is greater
+      than 1.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem asks whether 4/3 can be a probability; the concept (a number
+        from 0 to 1) is stated without comparing any fraction with 1.'
+    status: proposed
+  - node: decimal.tenths.notation
+    relation: representational
+    points_to: assess
+    why: The test problem lists 0.7 as a possible probability, which is read as 7 tenths and so lies between
+      0 and 1.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement never mentions decimals; only the test lists 0.7 and must read it
+        as 7 tenths.'
+    status: proposed
+  - node: rational-number.signed.meaning
+    relation: procedural
+    points_to: assess
+    why: The test problem lists -0.2, a negative number on the opposite side of 0 from every probability,
+      so it is ruled out.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem uses a negative number; the statement does not. Same need
+        as e1887, both are task-only.'
+    status: proposed
+  - node: decimal.compare
+    relation: procedural
+    points_to: assess
+    why: The test problem asks whether 0.7 lies from 0 to 1, which compares a decimal with the whole numbers
+      0 and 1.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem compares a decimal (0.7) with 0 and 1; the idea that a probability
+        is a number from 0 to 1 does not need decimal comparison, and the test needs only a decimal against
+        whole numbers.'
+    status: proposed
+  - node: rational-number.order.number-line
+    relation: representational
+    points_to: assess
+    why: Ruling out -0.2 in the test problem needs negative numbers to lie left of 0 on the number line
+      and so be less than 0.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Negative numbers appear only in the test problem (-0.2); the statement says only
+        ''a number from 0 to 1''.'
+    status: proposed
+  - node: probability.chance.impossible-certain-likely
+    relation: definitional
+    points_to: statement
+    why: The statement ties 0 to an impossible event, 1 to a certain event and larger numbers to more
+      likely events, so the qualitative idea of impossible, certain and more or less likely must already
+      be there; no index node holds it.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: fraction.as-number
+  relation: common_path
+  note: 'Common path, not required: route ''via-as-number'' needed everything another route needs and
+    more, so it was removed.'
+status: proposed

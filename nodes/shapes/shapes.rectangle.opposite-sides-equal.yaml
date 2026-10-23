@@ -1,0 +1,54 @@
+id: shapes.rectangle.opposite-sides-equal
+concept: shapes
+facet: properties
+level: 2
+type: concept
+name: Opposite sides of a rectangle are equal
+statement: In every rectangle each pair of opposite sides has the same length, so a rectangle has two
+  sides of one length and two sides of another, or four equal sides when it is a square.
+assess: A rectangle has one side 7 cm long and the side next to it 3 cm long. How long are the other two
+  sides?
+sources:
+  ccss:
+  - 4.MD.A.3
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.rectangle.define
+    relation: definitional
+    points_to: statement
+    why: The statement is about every rectangle, a quadrilateral with four right angles, and its pairs
+      of opposite sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.square.define
+    relation: definitional
+    points_to: statement
+    why: The statement says a square is the case of a rectangle with four equal sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.attribute.equal-sides
+    relation: definitional
+    points_to: statement
+    why: Opposite sides having the same length is a noticing of equal side lengths.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

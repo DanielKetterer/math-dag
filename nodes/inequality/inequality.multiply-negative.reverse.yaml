@@ -1,0 +1,59 @@
+id: inequality.multiply-negative.reverse
+concept: inequality
+facet: open-sentence
+level: 3
+type: concept
+name: Multiplying or dividing by a negative number reverses an inequality
+statement: 'Multiplying or dividing both sides of an inequality by the same negative number reverses its
+  direction: if a < b and c is negative, then a x c > b x c.'
+assess: Start with 2 < 5 and multiply both sides by -3. Which symbol, < or >, belongs between -6 and -15?
+  Why is it not the same symbol as in 2 < 5?
+sources:
+  ccss:
+  - 7.EE.B.4.b
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.multiplication.integers
+    relation: definitional
+    points_to: statement
+    why: The statement compares the products a x c and b x c where c is negative, so products with a negative
+      factor must be known.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.division.integers
+    relation: definitional
+    points_to: statement
+    why: The statement also covers dividing both sides by a negative number, so quotients with a negative
+      divisor must be known.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.compare.integers
+    relation: procedural
+    points_to: assess
+    why: Choosing the symbol between -6 and -15 means deciding which of two negative integers is greater.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test problem asks which symbol belongs between -6 and -15, which compares
+        two negative integers; the statement itself could be grasped through number-line position.'
+    status: proposed
+status: proposed

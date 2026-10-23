@@ -1,0 +1,48 @@
+id: coordinate-plane.polygon.draw
+concept: coordinate-plane
+facet: location
+level: 2
+type: procedure
+name: Draw a polygon in the coordinate plane from the coordinates of its vertices
+statement: A polygon is drawn in the coordinate plane by plotting its vertices, given as ordered pairs
+  in any of the four quadrants, and joining them in the given order with segments.
+procedure:
+- Plot each vertex from its ordered pair.
+- Join consecutive vertices in the given order with segments, and join the last vertex to the first.
+assess: On a coordinate grid, draw polygon ABCD with A(-3, 2), B(2, 2), C(2, -1) and D(-3, -1).
+sources:
+  ccss:
+  - 6.G.A.3
+  learning_components:
+  - 9dbe375b
+  - 89c16385
+requires:
+- clause: standard
+  all_of:
+  - node: coordinate-plane.four-quadrants.plot
+    relation: procedural
+    points_to: procedure.1
+    why: Each vertex given as an ordered pair in any quadrant is plotted on the grid.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: segment.meaning
+    relation: procedural
+    points_to: procedure.2
+    why: Consecutive vertices are joined with line segments, each the part of a line between two endpoints.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

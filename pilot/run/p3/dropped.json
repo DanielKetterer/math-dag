@@ -1,0 +1,3150 @@
+[
+ {
+  "node": "exponent.whole-number-power.evaluate.fraction-base",
+  "target": "expressions.parentheses",
+  "verdict": "scaffold",
+  "reason": "Nothing is computed inside the parentheses; they only mark the whole fraction as the base, which the target's own definition (b factors of a/c) already fixes. The grouping-to-compute-first meaning is a different use and is not needed.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The base is written (a/c) inside parentheses so that the exponent applies to the whole fraction, not just to the denominator."
+ },
+ {
+  "node": "exponent.whole-number-power.evaluate.decimal-base",
+  "target": "expressions.parentheses",
+  "verdict": "scaffold",
+  "reason": "The parentheses in (0.2)^3 only mark the base and the statement itself (d^b) does not use them; a learner told that the exponent applies to the decimal in parentheses can proceed without the compute-first meaning of parentheses.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The test problem writes the base as (0.2) in parentheses, so the exponent 3 applies to the whole decimal."
+ },
+ {
+  "node": "expressions.variable.meaning",
+  "target": "expressions.write.record-calculation",
+  "verdict": "scaffold",
+  "reason": "The target only needs a learner to read operations such as 3 x b on a letter; writing numerical expressions that record calculations is an earlier skill that helps but is not required, since reading products comes from multiplication notation.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The statement speaks of operations written with the letter, so the learner must already see an expression as a record of operations on numbers."
+ },
+ {
+  "node": "expressions.variable.read",
+  "target": "expressions.interpret.without-evaluating",
+  "verdict": "scaffold",
+  "reason": "Interpreting a numerical expression in words is the number-only version of the same skill; a learner can be taught the phrase-to-operation order directly with a letter, so it helps but is not required.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Choosing a phrase for 5 - y reads the operations of an expression in words without computing it, as is first done with numbers."
+ },
+ {
+  "node": "expressions.variable.write-from-words",
+  "target": "expressions.write.record-calculation",
+  "verdict": "scaffold",
+  "reason": "Recording a described calculation with numbers is the number-only version of this skill; the new demand here is the letter and the phrase order ('7 less than'), which can be taught directly, so the numerical node helps but is not required.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Writing an expression for '7 less than 3 times a number n' repeats the numerical skill of recording described operations in the order given."
+ },
+ {
+  "node": "expressions.sum.rearrange-terms",
+  "target": "expressions.parts.name",
+  "verdict": "scaffold",
+  "reason": "'Terms' here is only the label for the addends being reordered; the skill needs addends, not the structural names (factor, quotient, coefficient) that expressions.parts.name teaches.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The statement speaks of the terms of a sum, which uses the word term for each part added."
+ },
+ {
+  "node": "expressions.product.regroup-factors",
+  "target": "expressions.parts.name",
+  "verdict": "scaffold",
+  "reason": "'Factors' is only the label for the numbers being reordered; the skill needs factors as multiplied numbers, not the full set of names in expressions.parts.name.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The statement speaks of the factors of a product, which uses the word factor for each part multiplied."
+ },
+ {
+  "node": "expressions.product.regroup-factors",
+  "target": "expressions.notation.implicit-multiplication",
+  "verdict": "scaffold",
+  "reason": "The test asks for 'a single number times y', which can be written 20 x y; the compact notation 20y is a convenient form, not something the regrouping skill needs.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The goal 'a single number times y' is written as a number next to a letter, such as 20y."
+ },
+ {
+  "node": "expressions.like-terms.combine",
+  "target": "multiplication.distributive",
+  "verdict": "scaffold",
+  "reason": "The rule ax + bx = (a + b)x is the distributive property read right to left, but a level 3 procedure only needs the rule (add the coefficients, as in 3 apples + 4 apples); knowing why it works is the justification, not a requirement of the procedure.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The identity ax + bx = (a + b)x is the distributive property of multiplication over addition read from right to left."
+ },
+ {
+  "node": "expressions.like-terms.combine",
+  "target": "addition.within-100",
+  "verdict": "indirect",
+  "reason": "Whole-number coefficients are unrestricted in the statement, so the node needs the general whole-number addition; within-100 is a lower part of that skill (1 + 1 + 1 in the test is within 10).",
+  "via": "addition.multi-digit",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 2 adds whole-number coefficients, as in 1 + 1 + 1 for y + y + y."
+ },
+ {
+  "node": "expressions.distributive.expand",
+  "target": "expressions.parts.name",
+  "verdict": "scaffold",
+  "reason": "The procedure multiplies by each addend inside the parentheses; 'term' is a label for an addend, so the vocabulary helps but the skill does not require expressions.parts.name.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 1 multiplies by each term inside the parentheses, which uses the name term for a part joined by addition."
+ },
+ {
+  "node": "expressions.distributive.factor",
+  "target": "division.facts.within-100",
+  "verdict": "wrong",
+  "reason": "Dividing a coefficient by f exactly is a computation any method would do, and f is any common factor, so recalling facts within 100 is one method that does not cover it; the method-neutral node is division.by-one-digit (and division.by-two-digit for a two-digit f).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 1 divides each term by the common factor, as in 24 divided by 6 and 18 divided by 6."
+ },
+ {
+  "node": "expressions.distributive.factor",
+  "target": "expressions.parts.name",
+  "verdict": "scaffold",
+  "reason": "The procedure divides the number factor of each addend, which comes from reading 24x as 24 x x (implicit multiplication); 'term' and 'coefficient' are labels for these, not extra requirements.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement is about a sum of terms and the number factor of each term, which uses those names."
+ },
+ {
+  "node": "equation.solution.meaning",
+  "target": "equation.true-false",
+  "verdict": "scaffold",
+  "reason": "The test gives which values make the equation true or false, and the concept needs only the meaning of a true equation (equal sign); deciding truth by computation is the later skill equation.solution.check-substitution, and this node covers addition and subtraction equations only.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "A solution is a value that makes the equation true, which uses deciding whether an equation is true or false."
+ },
+ {
+  "node": "inequality.solution.check-substitution",
+  "target": "comparing.whole-numbers.magnitude.multi-digit",
+  "verdict": "wrong",
+  "reason": "The evaluated sides in the test are at most two digits (13 against 6) and the procedure only compares two evaluated values; multi-digit comparison is stronger than the target uses. The weaker node is comparing.whole-numbers.magnitude (already proposed).",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 3 decides whether the comparison of the two evaluated sides is true, such as 13 > 6, by judging which number is greater."
+ },
+ {
+  "node": "expressions.variable.unknown-vs-varying",
+  "target": "equation.unknown-symbol",
+  "verdict": "indirect",
+  "reason": "The fixed-unknown use is the solution of an equation; the symbol for an unknown number in 8 + _ = 11 is the earlier form of that idea and is reached through the solution concept.",
+  "via": "equation.solution.meaning",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The first use, one unknown number fixed by a condition as in n + 3 = 10, extends the symbol for an unknown number in an equation."
+ },
+ {
+  "node": "expressions.variable.unknown-vs-varying",
+  "target": "multiplication.equal-groups.meaning",
+  "verdict": "scaffold",
+  "reason": "The test question asks which numbers n can be (counts of pencils), which does not need 3n read as n groups of 3; the context only makes the example concrete.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The test problem reads 3n as the cost of n pencils at 3 dollars each, which is n equal groups of 3."
+ },
+ {
+  "node": "expressions.variable.situation-from-expression",
+  "target": "expressions.variable.read",
+  "verdict": "scaffold",
+  "reason": "A situation can be built from the operations of 20 - 3x directly (start with 20, take away x items at 3 each); choosing a verbal phrase is an intermediate step that helps but is not required.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "A situation for 20 - 3x must match the operations in the right order, which is what describing the expression in words does."
+ },
+ {
+  "node": "expressions.variable.situation-from-expression",
+  "target": "expressions.variable.unknown-vs-varying",
+  "verdict": "scaffold",
+  "reason": "The statement only asks what the variable stands for in a situation (a count of items); treating the letter as a number (variable.meaning) is enough, the contrast between fixed unknown and varying number is not used.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The situation must let the variable take any number in a set, such as a count of items, rather than one fixed unknown."
+ },
+ {
+  "node": "equation.equality-preserved.same-operation",
+  "target": "division.by-zero.undefined",
+  "verdict": "scaffold",
+  "reason": "The restriction to a nonzero number explains why zero is excluded, but the claim for nonzero divisors is understood without it; division by zero is not used by the concept or the test.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The statement allows dividing both sides only by a nonzero number, because division by zero is undefined."
+ },
+ {
+  "node": "equation.equality-preserved.same-operation",
+  "target": "equation.solution.check-substitution",
+  "verdict": "scaffold",
+  "reason": "Substituting n = 7 only shows that 7 remains a solution; it cannot show that two equations have exactly the same solutions (0 x (n + 5) = 0 x 12 is also true at n = 7), so the principle itself, not substitution, decides.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Deciding which listed equations share the solution of n + 5 = 12 can be done by substituting n = 7 into each."
+ },
+ {
+  "node": "equation.one-step.addition.solve",
+  "target": "subtraction.within-100",
+  "verdict": "indirect",
+  "reason": "Whole-number values are unrestricted in the statement, and within-100 is a lower part of the whole-number subtraction needed for q - p.",
+  "via": "subtraction.within-1000",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 2 computes q - p for whole-number values."
+ },
+ {
+  "node": "equation.one-step.write.addition",
+  "target": "expressions.variable.unknown-vs-varying",
+  "verdict": "scaffold",
+  "reason": "The target uses only the fixed-unknown use of a letter, which equation.unknown-symbol (through equation.situation.one-step) and expressions.variable.meaning already supply; the contrast with the varying use is not needed.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The letter stands for one unknown quantity fixed by the story, and the learner must say what it stands for."
+ },
+ {
+  "node": "equation.one-step.write.multiplication",
+  "target": "expressions.variable.unknown-vs-varying",
+  "verdict": "scaffold",
+  "reason": "The target uses only the fixed-unknown use of a letter, already supplied by expressions.variable.meaning and the story-to-equation prerequisite; the contrast with the varying use is not needed.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The letter stands for one unknown quantity fixed by the story, and the learner must say what it stands for."
+ },
+ {
+  "node": "equation.one-step.write.multiplication",
+  "target": "equation.situation.one-step",
+  "verdict": "scaffold",
+  "reason": "This node appears to cover additive one-step stories; the multiplicative story-to-equation skill is supplied by division.unknown-factor.equation-from-story (e144) and multiplication.equal-groups.equation-unknown, so it helps but is not needed here.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Writing an equation with an unknown for a one-step story is the same skill, now with a letter and rational amounts."
+ },
+ {
+  "node": "inequality.simple.number-line",
+  "target": "ray.meaning",
+  "verdict": "scaffold",
+  "reason": "'Ray' is vocabulary here; the procedure only asks to draw a line from c with an arrow in one direction, which a learner can do from the number-line convention without the geometric ray concept.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The statement shows the solutions as a ray from c, a part of a line starting at c and going on without end one way."
+ },
+ {
+  "node": "inequality.simple.number-line",
+  "target": "inequality.simple.infinitely-many-solutions",
+  "verdict": "scaffold",
+  "reason": "The open circle and ray are drawn by following the procedure; knowing why a ray rather than dots is the reason, not something the procedure needs.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "A ray, not a row of dots, shows the solutions because every number on one side of c is a solution, not only whole numbers."
+ },
+ {
+  "node": "inequality.simple.write-constraint",
+  "target": "inequality.solution.meaning",
+  "verdict": "scaffold",
+  "reason": "Translating 'taller than 52' to h > 52 is language-to-symbol; the solution meaning is a check on the result, not needed to write it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The inequality must have as its solutions exactly the values that satisfy the stated condition, which is what a solution is."
+ },
+ {
+  "node": "relationship.dependent-independent.meaning",
+  "target": "expressions.variable.unknown-vs-varying",
+  "verdict": "scaffold",
+  "reason": "The statement is about quantities that change together and which determines which; roles can be assigned from the story with letters simply given (Let h be ...), without the letter-as-varying concept.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Both quantities are letters that stand for any of many values that change together, not for one unknown number."
+ },
+ {
+  "node": "relationship.table.from-equation",
+  "target": "data.table-graph.read-values",
+  "verdict": "scaffold",
+  "reason": "The procedure itself specifies the column layout and pairing; reading values from a table or graph is the receptive skill, and the node includes graphs the target does not use.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 3 records each pair of values side by side in a table, which is the table of paired values."
+ },
+ {
+  "node": "relationship.equation.from-table",
+  "target": "relationship.equation.write.additive",
+  "verdict": "scaffold",
+  "reason": "Table-first 'what's my rule' sequences reach y = x + c from the pattern without a prior situation-to-equation node; the target's own statement carries the writing.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "In the plus-a-fixed-number case the result is an equation y = x + c with the dependent variable alone on one side."
+ },
+ {
+  "node": "relationship.equation.from-table",
+  "target": "relationship.equation.write.rate",
+  "verdict": "scaffold",
+  "reason": "Table-first 'what's my rule' sequences reach y = rx from the pattern without a prior situation-to-equation node; the target's own statement carries the writing.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "In the fixed-number-times case the result is an equation y = rx with the dependent variable alone on one side."
+ },
+ {
+  "node": "relationship.equation.from-table",
+  "target": "expressions.variable.evaluate",
+  "verdict": "scaffold",
+  "reason": "Substituting each row checks the equation but is not needed to find it from the pattern; 'fits every row' is a property of the output, not a step the learner must perform.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The equation must fit every row, so each row's independent value is substituted to confirm the dependent value."
+ },
+ {
+  "node": "relationship.change.relate-equation",
+  "target": "relationship.equation.write.rate",
+  "verdict": "scaffold",
+  "reason": "The target is given the equation and a table; it never writes y = rx, and the constant change can be seen from the table and the coefficient. Rate meaning explains why but is not required.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The meaning of r in y = rx as a fixed amount for each unit of x is why each increase of 1 in x adds r."
+ },
+ {
+  "node": "relationship.application.find-dependent",
+  "target": "expressions.formula.evaluate",
+  "verdict": "scaffold",
+  "reason": "Substituting into a given formula in a real-world problem is the same skill the target's statement carries (find the value, state the unit); the formula node is an earlier parallel application, and the target is reachable through Evaluate an expression at given values plus the roles of the variables.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Finding d from d = 65t at t = 2.5 is substituting into a given formula to find a quantity in a real-world problem."
+ },
+ {
+  "node": "relationship.application.find-dependent",
+  "target": "expressions.numerical.fractions-decimals.evaluate",
+  "verdict": "wrong",
+  "reason": "The test problem needs one decimal product (65 x 2.5), not evaluation of a numerical expression with several operations; the weaker node is decimal.multiplication.algorithm (or rational-number.multiplication.rationals).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The test problem multiplies 65 by the decimal 2.5 to find the distance."
+ },
+ {
+  "node": "expressions.linear.add.rational",
+  "target": "rational-number.subtraction.add-inverse",
+  "verdict": "scaffold",
+  "reason": "At level 3 the sign stays with its term when regrouping (-3 + 5), and rational-number.addition.rationals handles -3 + 5; 'subtracting is adding the opposite' explains the rule but the procedure does not use it.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Grouping a subtracted constant such as the 3 in x/2 - 3 treats it as adding its opposite, -3."
+ },
+ {
+  "node": "expressions.linear.subtract.rational",
+  "target": "expressions.linear.add.rational",
+  "verdict": "scaffold",
+  "reason": "Steps 2 and 3 repeat the add procedure, but the target carries them itself through combine, like-terms.meaning, rearrange and rational addition, all proposed directly; adding linear expressions is the earlier narrower node in teaching order.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Steps 2 and 3 group the variable terms and constants and add them, exactly as when adding linear expressions."
+ },
+ {
+  "node": "expressions.interpret.equivalent-forms",
+  "target": "expressions.parts.name",
+  "verdict": "scaffold",
+  "reason": "Seeing 1.05a as a multiple of a and a + 0.05a as a plus a part is reading structure; the names product, sum, term and factor are vocabulary the statement does not use.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Seeing 1.05a as a multiple of a and a + 0.05a as a plus a part uses the names product, sum, term and factor."
+ },
+ {
+  "node": "expressions.interpret.equivalent-forms",
+  "target": "multiplication.scaling.resize",
+  "verdict": "scaffold",
+  "reason": "The statement only says 1.05a shows a multiple of a; stating that the new price is 1.05 times the original does not need resizing intuition, which gives the size reason.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Seeing 1.05a as a multiple of a means seeing multiplication by 1.05 as resizing a slightly larger."
+ },
+ {
+  "node": "rational-number.estimate.reasonableness",
+  "target": "fraction.estimate.benchmark.sum",
+  "verdict": "scaffold",
+  "reason": "A sum estimate is a sibling of the difference estimate; neither the test problem nor the idea of checking by estimate needs a sum, and a learner who estimates fraction differences can estimate sums with the same moves.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Estimating a sum of fractions or mixed numbers with benchmark or rounded values is the mental estimate the answer is compared with."
+ },
+ {
+  "node": "rational-number.application.multistep.real-world",
+  "target": "rational-number.application.subtraction",
+  "verdict": "scaffold",
+  "reason": "The test problem is given the changes and never finds a change between two values; this sibling application is not required by the statement or the test.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Finding a signed change between two values is one of the operations the problem may take."
+ },
+ {
+  "node": "rational-number.application.multistep.real-world",
+  "target": "rational-number.application.division",
+  "verdict": "scaffold",
+  "reason": "Neither the statement (any two or more operations) nor the test problem divides; sharing a signed change equally is a sibling application.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Sharing a signed change equally is one of the operations the problem may take."
+ },
+ {
+  "node": "rational-number.application.multistep.mathematical",
+  "target": "rational-number.fraction-decimal.number-line",
+  "verdict": "scaffold",
+  "reason": "The number line only sets the scene in the test problem; the answer is found by computing with -2.4 and 1 3/5, not by locating them.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The test problem places the points A and B at negative and mixed-number positions on a number line."
+ },
+ {
+  "node": "inequality.same-operation.preserved",
+  "target": "rational-number.order.number-line",
+  "verdict": "scaffold",
+  "reason": "The statement claims the property for numbers and symbols; the number-line picture of order explains it but is not needed to state or use it, and the test's signed comparisons are carried by compare.integers.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The direction of an inequality is the relative position of two numbers on the number line, and adding or scaling by a positive number keeps it."
+ },
+ {
+  "node": "inequality.multiply-negative.reverse",
+  "target": "inequality.same-operation.preserved",
+  "verdict": "scaffold",
+  "reason": "The reversal can be learned directly from products with a negative factor; the contrast with the positive case is good teaching but the statement and test do not use the preserving rule.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The reversal is the contrast with multiplying or dividing by a positive number, which keeps the direction."
+ },
+ {
+  "node": "inequality.multiply-negative.reverse",
+  "target": "rational-number.order.number-line",
+  "verdict": "scaffold",
+  "reason": "The statement says the symbol reverses; the left-right picture of order on the number line explains it but is not needed to state the rule, and ordering the signed products is done by compare.integers.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Reversal means a < b becomes a x c > b x c, a change in left-right order on the number line."
+ },
+ {
+  "node": "inequality.multiply-negative.reverse",
+  "target": "rational-number.multiplication.sign-rule",
+  "verdict": "indirect",
+  "reason": "The statement needs products with a negative factor, which is Multiply two integers; the sign rule is how that procedure works, and the products in the test are given, not computed.",
+  "via": "rational-number.multiplication.integers",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The products a x c and b x c have a negative factor c, so their signs follow the sign rule."
+ },
+ {
+  "node": "inequality.multiply-negative.reverse",
+  "target": "rational-number.opposite.number-line",
+  "verdict": "scaffold",
+  "reason": "The 'why' in the test problem can be answered in several ways (for example by comparing -6 and -15 directly); the opposite-sides picture is one helpful explanation, not required by the idea.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The test problem asks why the symbol changes, which can be explained by negative multiples moving to the opposite side of 0."
+ },
+ {
+  "node": "inequality.solution-set.interpret",
+  "target": "inequality.simple.infinitely-many-solutions",
+  "verdict": "scaffold",
+  "reason": "The statement needs the solution set as all values that satisfy the inequality (solution.meaning); that it is infinite and includes fractions follows from this and is not separately required.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The solution set includes values like fractions that the context may rule out, so it must be seen as every number on one side."
+ },
+ {
+  "node": "exponent.whole-number.power-of-power",
+  "target": "multiplication.equal-groups.meaning",
+  "verdict": "indirect",
+  "reason": "Seeing n groups of m factors uses multiplication as equal groups, but that comes in through the meaning of a power as a product of equal factors, which the statement uses directly.",
+  "via": "exponent.whole-number-power.meaning",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "n groups of m factors of a make m x n factors of a in all, which is a^(m x n)."
+ },
+ {
+  "node": "exponent.zero",
+  "target": "exponent.whole-number.product-rule",
+  "verdict": "scaffold",
+  "reason": "A justification for the convention (keeping the product rule true); the L3 statement a^0 = 1 does not need it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "For the product rule to hold at exponent 0, a^0 x a^n = a^(0 + n) = a^n, so a^0 leaves a^n unchanged."
+ },
+ {
+  "node": "exponent.zero",
+  "target": "multiplication.by-one",
+  "verdict": "scaffold",
+  "reason": "Part of one justification for the convention; the L3 statement a^0 = 1 does not need it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The factor that leaves a^n unchanged under multiplication is 1, so a^0 must equal 1."
+ },
+ {
+  "node": "exponent.zero",
+  "target": "exponent.whole-number.quotient-rule",
+  "verdict": "scaffold",
+  "reason": "A justification for the convention (a^n divided by a^n); the L3 statement a^0 = 1 does not need it, and the quotient rule as stated needs m greater than n.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The quotient rule applied to a^n divided by a^n gives a^(n - n), which is a^0."
+ },
+ {
+  "node": "exponent.zero",
+  "target": "division.measurement.meaning",
+  "verdict": "scaffold",
+  "reason": "One of several ways to motivate a^0 = 1; the statement is a convention that can be stated and used without any single justification.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "A nonzero number divided by itself makes exactly one equal group, so a^n divided by a^n is 1."
+ },
+ {
+  "node": "exponent.negative",
+  "target": "exponent.zero",
+  "verdict": "scaffold",
+  "reason": "Part of the justification (a^(-n) x a^n = a^0 = 1); the statement is about positive n and does not use a^0.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "a^(-n) x a^n = a^0 = 1 uses a^0 = 1 to show a^(-n) pairs with a^n to make 1."
+ },
+ {
+  "node": "exponent.negative",
+  "target": "exponent.whole-number.product-rule",
+  "verdict": "scaffold",
+  "reason": "Justifies the definition by keeping the product rule true; the L3 statement a^(-n) = 1/a^n can be known and used without it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Keeping the product rule true at exponent -n gives a^(-n) x a^n = a^(-n + n)."
+ },
+ {
+  "node": "root.square.meaning",
+  "target": "rational-number.multiplication.integers",
+  "verdict": "scaffold",
+  "reason": "The item is settled by 18^2 not equal 36, 6^2 = 36 and -6 being below 0; squaring -6 is not needed because the definition only squares numbers 0 or greater. The sign rule explains why -6 is a distractor.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "the choice -6 also has square 36, so the learner must see that a product of two negatives is positive"
+ },
+ {
+  "node": "root.cube.perfect-cube.evaluate",
+  "target": "comparing.whole-numbers.magnitude.multi-digit",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: only p = 1000 has four digits and it is itself the cube 10^3, so no four-digit comparison is made; the three-digit comparison covers the rest.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "locating p up to 1000 between two known cubes compares p with cubes of up to four digits"
+ },
+ {
+  "node": "root.square.solve-x-squared",
+  "target": "rational-number.multiplication.sign-rule",
+  "verdict": "scaffold",
+  "reason": "Explains why -sqrt(p) is also a solution; the L3 procedure writes both solutions by rule, and the explanation belongs to a justification node.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "(-sqrt(p))^2 = p because a negative times a negative is positive, so -sqrt(p) is also a solution."
+ },
+ {
+  "node": "root.square.solve-x-squared",
+  "target": "root.square.perfect-square.evaluate",
+  "verdict": "scaffold",
+  "reason": "The step is optional ('may be replaced'), and the test item x^2 = 10 is not a perfect square; the solutions can be written with the root symbol without evaluating it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "When p is a perfect square, each root is replaced by its whole-number value."
+ },
+ {
+  "node": "root.cube.solve-x-cubed",
+  "target": "rational-number.multiplication.sign-rule",
+  "verdict": "scaffold",
+  "reason": "Explains why the solution is unique; the L3 procedure writes the single cube root by rule, and the explanation belongs to a justification node.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "A negative number cubed is negative, so no negative x solves x^3 = p and the solution is unique."
+ },
+ {
+  "node": "root.cube.solve-x-cubed",
+  "target": "root.cube.perfect-cube.evaluate",
+  "verdict": "scaffold",
+  "reason": "The step is optional ('may be replaced'), and the test item x^3 = 20 is not a perfect cube; the solution can be written with the root symbol without evaluating it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "When p is a perfect cube, the root is replaced by its whole-number value."
+ },
+ {
+  "node": "scientific-notation.meaning",
+  "target": "exponent.negative",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: only powers of 10 with negative exponents are needed, not a negative exponent on any base; the weaker node is exponent.power-of-ten.negative (e383).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "the exponent n may be a negative integer, as in 4.5 x 10^-3 where 10^-3 is 1/10^3"
+ },
+ {
+  "node": "scientific-notation.from-decimal.large",
+  "target": "multiplication.power-of-ten.decimal.rule",
+  "verdict": "scaffold",
+  "reason": "Explains why the places moved left equal the exponent; the L3 procedure states this count as a recipe and can be carried out without the rule.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Multiplying by 10^n moves the point n places right, so the places moved left give the exponent n."
+ },
+ {
+  "node": "scientific-notation.from-decimal.small",
+  "target": "multiplication.power-of-ten.decimal.rule",
+  "verdict": "scaffold",
+  "reason": "Explains why the exponent is minus the places moved; the L3 procedure states this as a recipe and can be carried out without the rule.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Moving the point right k places multiplies by 10^k, so the original number is a divided by 10^k."
+ },
+ {
+  "node": "scientific-notation.from-decimal.small",
+  "target": "division.power-of-ten.rule",
+  "verdict": "scaffold",
+  "reason": "Explains why the exponent is minus the places moved; the L3 procedure states this as a recipe and can be carried out without the rule.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "a x 10^-k equals a divided by 10^k, which moves the point left k places and undoes the right moves counted"
+ },
+ {
+  "node": "scientific-notation.estimate.large",
+  "target": "multiplication.power-of-ten.whole-number.rule",
+  "verdict": "scaffold",
+  "reason": "Explains why a digit followed by n zeros is d x 10^n; step 2 of the procedure states 'number of places after the digit' as n, so the L3 procedure carries it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "A digit followed by n zeros is d x 10^n, so n is the number of places after the digit."
+ },
+ {
+  "node": "scientific-notation.normalize",
+  "target": "multiplication.power-of-ten.decimal.rule",
+  "verdict": "scaffold",
+  "reason": "Explains why moving the point right changes the value; the procedure itself states the compensating change to the exponent, so it carries the skill.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Moving the decimal point of a right, as for 0.6 becoming 6, multiplies a by a power of 10."
+ },
+ {
+  "node": "scientific-notation.normalize",
+  "target": "division.power-of-ten.rule",
+  "verdict": "scaffold",
+  "reason": "Explains why moving the point left changes the value; the procedure itself states the compensating change to the exponent, so it carries the skill.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Moving the decimal point of a left, as for 34.5 becoming 3.45, divides a by a power of 10."
+ },
+ {
+  "node": "scientific-notation.normalize",
+  "target": "exponent.integer.properties",
+  "verdict": "scaffold",
+  "reason": "Justifies why the value is unchanged (10^k x 10^n = 10^(n+k)); the L3 procedure states the exponent change as a recipe and does not need the rule.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The value stays the same because 10^k x 10^n = 10^(n + k) holds for positive or negative integer n."
+ },
+ {
+  "node": "scientific-notation.add.same-exponent",
+  "target": "multiplication.distributive",
+  "verdict": "scaffold",
+  "reason": "Explains why the common power can be factored out; the L3 procedure states 'add the leading factors, keep the power' and can be carried out without the property.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "a x 10^n + b x 10^n = (a + b) x 10^n takes the common 10^n out of the sum by the distributive property."
+ },
+ {
+  "node": "scientific-notation.add.same-exponent",
+  "target": "rational-number.addition.rationals",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: it covers signed fractions and decimals, but the leading factors are positive decimals; the weaker node is decimal.addition.algorithm (e413).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "step 1 adds the leading factors, which are decimals such as 3.2 and 4.5"
+ },
+ {
+  "node": "scientific-notation.subtract.same-exponent",
+  "target": "multiplication.distributive",
+  "verdict": "scaffold",
+  "reason": "Explains why the common power can be factored out; the L3 procedure states 'subtract the leading factors, keep the power' and can be carried out without the property.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "a x 10^n - b x 10^n = (a - b) x 10^n takes the common 10^n out of the difference by the distributive property."
+ },
+ {
+  "node": "scientific-notation.subtract.same-exponent",
+  "target": "rational-number.subtraction.rationals",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: it covers signed fractions and decimals, but the leading factors are positive decimals; the weaker node is decimal.subtraction.algorithm (e418).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "step 1 subtracts the leading factors, which are decimals such as 8.6 and 2.3"
+ },
+ {
+  "node": "scientific-notation.add.different-exponents",
+  "target": "scientific-notation.normalize",
+  "verdict": "scaffold",
+  "reason": "The same exponent-for-point trade is taught in normalize, but step 1 states it in full here; normalize is the earlier, narrower use (the result there has a leading factor from 1 to 10, here it does not).",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Rewriting a x 10^n with a larger exponent moves the decimal point left and raises the exponent, keeping the value."
+ },
+ {
+  "node": "scientific-notation.add.different-exponents",
+  "target": "division.power-of-ten.rule",
+  "verdict": "scaffold",
+  "reason": "Explains why moving the point left offsets a larger exponent; step 1 of the procedure states the rule (one place left per 1 added), so it carries the skill.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "moving the decimal point one place left per 1 added to the exponent is dividing by 10 each time"
+ },
+ {
+  "node": "scientific-notation.subtract.different-exponents",
+  "target": "scientific-notation.normalize",
+  "verdict": "scaffold",
+  "reason": "The same exponent-for-point trade is taught in normalize, but step 1 states it in full here; normalize is the earlier, narrower use (the result there has a leading factor from 1 to 10, here it does not).",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Rewriting a x 10^n with a larger exponent moves the decimal point left and raises the exponent, keeping the value."
+ },
+ {
+  "node": "scientific-notation.subtract.different-exponents",
+  "target": "division.power-of-ten.rule",
+  "verdict": "scaffold",
+  "reason": "Explains why moving the point left offsets a larger exponent; step 1 of the procedure states the rule (one place left per 1 added), so it carries the skill.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "moving the decimal point one place left per 1 added to the exponent is dividing by 10 each time"
+ },
+ {
+  "node": "scientific-notation.multiply",
+  "target": "expressions.product.regroup-factors",
+  "verdict": "scaffold",
+  "reason": "Explains why the factors can be regrouped; the L3 procedure states 'multiply the leading factors, add the exponents' and does not need the regrouping argument.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "(a x 10^m) x (b x 10^n) is regrouped as (a x b) x (10^m x 10^n) by reordering the factors."
+ },
+ {
+  "node": "scientific-notation.multiply",
+  "target": "exponent.integer.properties",
+  "verdict": "scaffold",
+  "reason": "Explains why exponents add (10^m x 10^n = 10^(m+n)); the L3 procedure states 'add the exponents' and can be carried out without the exponent properties.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 2 adds exponents with 10^m x 10^n = 10^(m + n), for integer exponents including negative ones."
+ },
+ {
+  "node": "scientific-notation.multiply",
+  "target": "rational-number.multiplication.rationals",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: it covers signed fractions and decimals, but the leading factors are positive decimals; the weaker node is decimal.multiplication.algorithm (e433).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "step 1 multiplies the leading factors, which are decimals"
+ },
+ {
+  "node": "scientific-notation.divide",
+  "target": "fraction.multiplication.product-rule",
+  "verdict": "scaffold",
+  "reason": "Explains why the quotient splits into a quotient of leading factors times a quotient of powers; the L3 procedure states the two steps and does not need the argument.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The quotient is regrouped as (a divided by b) x (10^m divided by 10^n), splitting the product over the quotient."
+ },
+ {
+  "node": "scientific-notation.divide",
+  "target": "exponent.integer.properties",
+  "verdict": "scaffold",
+  "reason": "Explains why exponents subtract (10^m divided by 10^n = 10^(m-n)); the L3 procedure states 'subtract the exponents' and can be carried out without the exponent properties.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 2 subtracts exponents with 10^m divided by 10^n = 10^(m - n), for integer exponents including negative ones."
+ },
+ {
+  "node": "scientific-notation.divide",
+  "target": "rational-number.division.rationals",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: it covers signed fractions and decimals, but the leading factors are positive decimals; the weaker node is decimal.division.by-decimal.algorithm (e440).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "step 1 divides the leading factors, which are decimals"
+ },
+ {
+  "node": "equation.linear.clear-fractions",
+  "target": "multiplication.distributive",
+  "verdict": "indirect",
+  "reason": "The distributive property is the reason multiplying a several-term side by the common multiple works, but the procedure applies it only through expanding a product with rational numbers.",
+  "via": "expressions.linear.expand.rational",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Multiplying a side made of several terms by the common multiple multiplies each term, by the distributive property."
+ },
+ {
+  "node": "equation.linear.clear-fractions",
+  "target": "rational-number.multiplication.rationals",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: it multiplies any two signed fractions or decimals, while step 3 multiplies a fraction by a whole-number multiple; the weaker nodes are fraction.multiply-whole.symbolic (e470) and, for a term such as -1 times 6, rational-number.multiplication.integers.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "step 3 simplifies each product, such as 6 x (2/3), so the coefficient is an integer"
+ },
+ {
+  "node": "equation.linear.rational-coefficients",
+  "target": "equation.linear.variable-both-sides",
+  "verdict": "scaffold",
+  "reason": "The integer-coefficient version of the same strategy; this procedure states its own steps (subtract a variable term, undo the constant, divide), so the narrower earlier node is not needed. The direct need is the same-operation principle.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Subtracting one variable term from both sides is the same strategy, now with fraction or decimal coefficients."
+ },
+ {
+  "node": "equation.linear.solution-count.reduce",
+  "target": "equation.linear.expand-collect",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: it solves a whole equation, but step 1 only expands and collects each side; the weaker nodes are expressions.linear.expand.rational (e492) and expressions.linear.add.rational (e491).",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 1 expands products and collects like terms on each side, as for 3(x + 2)."
+ },
+ {
+  "node": "equation.linear.solution-count.inspection",
+  "target": "equation.linear.solution-count.reduce",
+  "verdict": "scaffold",
+  "reason": "The comparison rule is a shortcut for the transformation, but it can be learned and applied from the three cases directly; the reduction is the longer route and not required by this procedure.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The comparison rule is the shortcut for the transformation, where subtracting px leaves x = a, a = a or a = b."
+ },
+ {
+  "node": "equation.linear.solution-count.generate",
+  "target": "equation.linear.solution-count.inspection",
+  "verdict": "scaffold",
+  "reason": "The node's own procedure states the coefficient and constant rules it applies; inspection is the recognition direction of the same rules and can be taught before or after generating.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The coefficient and constant rules that decide one, no, or infinitely many solutions are the rules used to choose the blanks."
+ },
+ {
+  "node": "linear-system.graph.read",
+  "target": "coordinate-plane.four-quadrants.read",
+  "verdict": "wrong",
+  "reason": "The statement, procedure and test read a crossing at a grid point and never require negative coordinates; the weaker node is coordinate-plane.first-quadrant.read. If the node is amended to include crossings in any quadrant, this edge becomes necessary.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 2 reads the x and y coordinates of the crossing point, which may lie in any quadrant of the grid."
+ },
+ {
+  "node": "linear-system.inspection",
+  "target": "equation.equality-preserved.same-operation",
+  "verdict": "scaffold",
+  "reason": "The statement restricts the input to systems already written as ax + by = c and dx + ey = f, and every test system is in that form, so step 1 is a no-op for the node as stated.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 1 moves the x and y terms to the left and the constant to the right by doing the same operation to both sides."
+ },
+ {
+  "node": "linear-system.substitution",
+  "target": "equations.linear.solve",
+  "verdict": "wrong",
+  "reason": "The equation left after substituting into a standard-form equation needs expanding and collecting like terms (the node equation.linear.expand-collect, e526); the full multi-step solver is a stronger node than the step uses.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 3 solves the resulting one-variable linear equation, which may need expanding and collecting terms."
+ },
+ {
+  "node": "linear-system.elimination",
+  "target": "equations.linear.solve",
+  "verdict": "wrong",
+  "reason": "Step 3 always leaves a one-step equation py = q and step 4 leaves px + q = r; the weaker nodes are equation.one-step.multiplication.solve (e532) and equation.two-step.px-plus-q.solve (e533). Negative coefficients would need signed versions of those nodes, which are not in the index.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 3 solves the one-variable equation left after elimination, whose coefficient may be negative or a fraction."
+ },
+ {
+  "node": "linear-function.compare.rate-of-change",
+  "target": "functions.definition",
+  "verdict": "scaffold",
+  "reason": "Shared vocabulary only: finding and comparing rates never uses the one-output-per-input property.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement compares two functions, each assigning one output to every input."
+ },
+ {
+  "node": "linear-function.compare.rate-of-change",
+  "target": "linear-function.line.equation-defines",
+  "verdict": "scaffold",
+  "reason": "The procedure reads m from a given equation (e567); it does not use the claim that every such equation defines a function or that other equations do not.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "A linear function is given by an equation y = mx + b, one of the representations the node compares."
+ },
+ {
+  "node": "linear-function.compare.initial-value",
+  "target": "functions.definition",
+  "verdict": "scaffold",
+  "reason": "Shared vocabulary only: finding and comparing outputs at input 0 never uses the one-output-per-input property.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement compares two functions, each assigning one output to every input, at input 0."
+ },
+ {
+  "node": "linear-function.compare.initial-value",
+  "target": "linear-function.line.equation-defines",
+  "verdict": "scaffold",
+  "reason": "The procedure reads b from a given equation (e573); it does not use the claim that every such equation defines a function.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "A linear function is given by an equation y = mx + b, one of the representations the node compares."
+ },
+ {
+  "node": "linear-function.line.graph-is-line",
+  "target": "functions.identify.graph",
+  "verdict": "scaffold",
+  "reason": "The vertical-line exclusion follows directly from functions.definition and functions.graph.meaning (two points on a vertical line are one input with two outputs), both already prerequisites.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Vertical lines are excluded because two points on a vertical line give one input two outputs, so they are not graphs of functions."
+ },
+ {
+  "node": "linear-function.line.graph-is-line",
+  "target": "linear-function.line.y-mx.write",
+  "verdict": "indirect",
+  "reason": "Lines through the origin are the b = 0 case of y = mx + b; this assumes y = mx writing precedes y = mx + b writing. If it does not, the edge is necessary.",
+  "via": "linear-function.line.y-mx-plus-b.write",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Non-vertical lines through the origin have equations y = mx, which the converse claim also covers."
+ },
+ {
+  "node": "functions.qualitative.sketch",
+  "target": "functions.qualitative.increasing-decreasing",
+  "verdict": "scaffold",
+  "reason": "Describing a graph is the inverse direction of sketching one; the correspondence between words and shape can be taught in either order.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The sketch must show increasing, decreasing and constant parts that match the description, so those parts of a graph must be known."
+ },
+ {
+  "node": "functions.qualitative.sketch",
+  "target": "functions.qualitative.linear-nonlinear",
+  "verdict": "scaffold",
+  "reason": "Telling straight from curved parts of a given graph is the inverse direction of sketching them; either can be taught first.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The sketch must show straight and curved parts that match constant and changing rates in the description."
+ },
+ {
+  "node": "functions.qualitative.sketch",
+  "target": "coordinate-plane.application.real-world",
+  "verdict": "wrong",
+  "reason": "Plotting paired quantities on a scaled grid is stronger than the sketch uses, which has no numerical scale; the weaker node is coordinate-plane.axes-origin (e609).",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Drawing the graph puts the two quantities of the situation on labeled axes, as in graphing paired quantities."
+ },
+ {
+  "node": "addition.multi-digit",
+  "target": "addition.within-1000",
+  "verdict": "scaffold",
+  "reason": "The statement already covers sums of any size up to 1,000,000, including those within 1000, so addition.within-1000 is the earlier narrower case of the same skill; the unshared core is one-digit sums in each place (addition.within-20.fluency).",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Adding numbers with more digits uses the same sum-finding on each place, extending the sums found within 1000."
+ },
+ {
+  "node": "division.by-two-digit",
+  "target": "division.by-one-digit",
+  "verdict": "scaffold",
+  "reason": "Division by a one-digit number is an earlier, easier case of the same family; a learner can reach two-digit divisors through multiples of the divisor and the meaning of a quotient without it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Finding a quotient of a dividend up to four digits is the same task with a larger divisor, using the same place-by-place reasoning."
+ },
+ {
+  "node": "division.by-two-digit.remainder",
+  "target": "division.by-two-digit",
+  "verdict": "scaffold",
+  "reason": "Exact division is the remainder-zero case of what this node covers, so it is the earlier narrower case; the core needs are multiplication.by-one-digit, place-value.factor-of-ten and multi-digit subtraction, listed as missing.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The quotient is found as in division by a two-digit number with no remainder, then a remainder is left over."
+ },
+ {
+  "node": "division.remainder.meaning",
+  "target": "comparing.whole-numbers.magnitude",
+  "verdict": "wrong",
+  "reason": "The test compares 6 with 5, and the idea compares a leftover with the group size; comparing two-digit numbers is stronger than used. The weaker node is comparing.whole-numbers.numerals-within-10.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The reason a remainder is less than the group size compares two numbers: a leftover as large as the group size would make another group."
+ },
+ {
+  "node": "operations.application.reasonableness.multi-digit",
+  "target": "operations.application.reasonableness",
+  "verdict": "scaffold",
+  "reason": "The statement covers multistep problems with any numbers and so carries the two-step case; the two-step node is the earlier narrower version of the same estimating-and-comparing skill.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Judging an answer by estimating and comparing is the method of the two-step version, here extended to multi-digit numbers."
+ },
+ {
+  "node": "counting.number-word.thousand",
+  "target": "place-value.hundreds.multiples",
+  "verdict": "scaffold",
+  "reason": "The target is a level 1 fact; place-value.hundreds.multiples is a level 2 concept that explains the count by hundreds but is not needed to say that 1000 follows 900.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Counting by hundreds to nine hundred uses 100, 200, through 900 as numbers of hundreds, and one thousand comes next."
+ },
+ {
+  "node": "counting.number-word.thousand-million",
+  "target": "numeral.read.to-1000",
+  "verdict": "scaffold",
+  "reason": "Number names in words are given and read as words; reading written numerals is not used. The number words below 1000 come from counting.sequence.within-1000 (listed as missing).",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The number said before thousand or million is a number name below one thousand, such as two hundred or fifteen."
+ },
+ {
+  "node": "area.triangle.right.half-rectangle",
+  "target": "shapes.rectangle.opposite-sides-equal",
+  "verdict": "scaffold",
+  "reason": "The L2 procedure only notes that the diagonal cuts two copies, which can be seen by comparing the pieces (e661); the equal-opposite-sides property explains why and is a justification, not a requirement of drawing or using the rectangle (right angles at the leg ends fix the rectangle).",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The two missing sides of the rectangle equal the legs, which is why the diagonal cuts off two matching triangles."
+ },
+ {
+  "node": "area.parallelogram.formula",
+  "target": "area.parallelogram.rearrange",
+  "verdict": "scaffold",
+  "reason": "An L3 concept is knowing the rule A = b x h; the rearrangement explains why it works but is not required to hold the rule. It also only covers a longer side as base, while the rule says any side.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The rearrangement into a rectangle with the same base and height is why the area is base times height."
+ },
+ {
+  "node": "area.triangle.formula",
+  "target": "area.triangle.half-parallelogram",
+  "verdict": "scaffold",
+  "reason": "An L3 concept is knowing the rule A = (1/2) x b x h; the two-copies argument explains why but is not required to hold the rule.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Two copies of the triangle form a parallelogram, which is why the area is half of base times height."
+ },
+ {
+  "node": "area.polygon.decompose",
+  "target": "subtraction.within-100",
+  "verdict": "wrong",
+  "reason": "The test needs only 10 - 4, a difference within 10; subtraction within 100 is stronger than the test uses. Use subtraction.within-10 (e709).",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The triangles' bases come from subtracting 4 from 10 in the picture."
+ },
+ {
+  "node": "area.polygon.decompose",
+  "target": "division.by-one-digit",
+  "verdict": "wrong",
+  "reason": "The test splits 6 into two equal 3s, which is the recalled fact 6 / 2; division by a one-digit number is stronger than the test uses. Use division.facts.within-100 (e705).",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The difference 6 is split between two equal triangles by dividing by 2."
+ },
+ {
+  "node": "area.polygon.subtract",
+  "target": "addition.within-100",
+  "verdict": "wrong",
+  "reason": "The test adds 6 + 6 + 5 = 17, a sum within 20; addition within 100 is stronger than the test uses. Use addition.within-20.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The three outside areas 6, 6 and 5 are added."
+ },
+ {
+  "node": "volume.prism.fraction-edges.packing",
+  "target": "fraction.whole-number.as-fraction",
+  "verdict": "scaffold",
+  "reason": "The needed fact is that a whole unit edge is n lengths of 1/n, which follows from the unit-fraction part-whole meaning; writing 1 as n/n is a representation the procedure does not use.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "An edge of 1 unit must be seen as n lengths of 1/n when counting cubes along it."
+ },
+ {
+  "node": "volume.prism.fraction-edges.lwh.apply",
+  "target": "volume.prism.fraction-edges.packing-equals-product",
+  "verdict": "scaffold",
+  "reason": "An L3 procedure does not need to know why the product works with fractional edges; the packing argument explains it and belongs to the justification node.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Packing with unit-fraction cubes shows the product of fractional edge lengths still gives the volume."
+ },
+ {
+  "node": "volume.prism.fraction-edges.base-height.apply",
+  "target": "volume.prism.fraction-edges.packing-equals-product",
+  "verdict": "scaffold",
+  "reason": "An L3 procedure does not need to know why the product gives the volume; the packing argument explains it and belongs to the justification node.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Packing with unit-fraction cubes shows that multiplying fractional measures still gives the volume."
+ },
+ {
+  "node": "coordinate-plane.polygon.draw",
+  "target": "shapes.polygon.name-by-sides",
+  "verdict": "scaffold",
+  "reason": "Plotting the vertices and joining them in order does not require naming the polygon by its number of sides; the order of the vertices fixes the figure.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement is about drawing a polygon, a closed figure of straight sides such as a triangle or quadrilateral."
+ },
+ {
+  "node": "coordinate-plane.polygon.missing-vertex",
+  "target": "coordinate-plane.segment-length.meaning",
+  "verdict": "wrong",
+  "reason": "Sharing a coordinate puts two points on one vertical or horizontal line, which is the ordered-pair meaning; the length of the segment is stronger than the target uses. Use coordinate-plane.ordered-pair.meaning.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Points sharing a first or second coordinate lie on one vertical or horizontal line, which fixes the shared coordinates."
+ },
+ {
+  "node": "coordinate-plane.segment-length.same-sign",
+  "target": "coordinate-plane.quadrants.signs",
+  "verdict": "scaffold",
+  "reason": "The L3 procedure only needs the signs of the two differing coordinates to choose the rule; that the signs fix the quadrant is stronger than needed and is not used by the steps.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement says same-sign coordinates put the points on the same side of the axis, which the signs of coordinates tell."
+ },
+ {
+  "node": "coordinate-plane.segment-length.opposite-sign",
+  "target": "coordinate-plane.quadrants.signs",
+  "verdict": "scaffold",
+  "reason": "The L3 procedure only needs the signs of the two differing coordinates to choose the rule; that the signs fix the quadrant is stronger than needed and is not used by the steps.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement says opposite-sign coordinates put the points on opposite sides of the axis, which the signs of coordinates tell."
+ },
+ {
+  "node": "coordinate-plane.application.perimeter",
+  "target": "coordinate-plane.polygon.draw",
+  "verdict": "scaffold",
+  "reason": "The L3 application works from the coordinates, pairing consecutive listed vertices; drawing the polygon helps the learner see which pairs share a coordinate but is not required.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Consecutive vertices in the list are joined by sides, as when a polygon is drawn from its vertices."
+ },
+ {
+  "node": "coordinate-plane.application.rectangle-area",
+  "target": "coordinate-plane.polygon.draw",
+  "verdict": "scaffold",
+  "reason": "The L3 application works from the coordinates; drawing the rectangle helps the learner see which vertices share a coordinate but is not required.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Consecutive vertices in the list are joined by sides, as when a polygon is drawn from its vertices."
+ },
+ {
+  "node": "surface-area.net.rectangular-prism",
+  "target": "shapes.prism.right.meaning",
+  "verdict": "scaffold",
+  "reason": "The net is given as six rectangles, and the steps never use the solid's identity; knowing what a right prism is helps the learner see why the faces are rectangles but is not needed to sum them.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The solid is a right rectangular prism whose faces are rectangles."
+ },
+ {
+  "node": "surface-area.net.triangle-faces",
+  "target": "shapes.prism.right.meaning",
+  "verdict": "scaffold",
+  "reason": "The net is given and the steps read rectangles and triangles from it; 'such as a triangular prism' is an example, and the solid's identity is not used by the steps.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The solid may be a triangular prism, a right prism with triangular bases."
+ },
+ {
+  "node": "surface-area.net.triangle-faces",
+  "target": "shapes.pyramid.meaning",
+  "verdict": "scaffold",
+  "reason": "The net is given and the steps read rectangles and triangles from it; 'such as a pyramid' is an example, and the solid's identity is not used by the steps.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The solid may be a pyramid, with a polygon base and triangular faces."
+ },
+ {
+  "node": "surface-area.rectangular-prism.from-dimensions",
+  "target": "surface-area.net.rectangular-prism",
+  "verdict": "scaffold",
+  "reason": "An L3 procedure does not need the net argument that shows the three identical pairs; a learner can see the pairs on the box itself. The net node explains the doubling but is not required.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "A net shows six rectangles in three identical pairs, so the surface area is twice the sum of three areas."
+ },
+ {
+  "node": "surface-area.rectangular-prism.from-dimensions",
+  "target": "expressions.variable.meaning",
+  "verdict": "scaffold",
+  "reason": "The statement writes l, w and h as shorthand for length, width and height; the procedure and test can be carried out with those words, so reading letters as numbers is not required.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The rule is written with the letters l, w and h, each standing for a number."
+ },
+ {
+  "node": "scale-drawing.meaning",
+  "target": "angle.measure.degrees",
+  "verdict": "wrong",
+  "reason": "Having the same angles can be judged by matching the corners, and in the test all angles are right angles; comparing degree measures is stronger than the statement uses. Use angle.meaning (e845), or angle.right.meaning for the test.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement says the drawing has the same angles as the figure, so the learner must compare angle measures."
+ },
+ {
+  "node": "scale-drawing.area.scale-factor-squared",
+  "target": "scale-drawing.meaning",
+  "verdict": "wrong",
+  "reason": "The statement only multiplies every length by k; it does not use a scale drawing's same angles or the idea of a scale. Use multiplication.scaling.resize.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The statement multiplies every length of a figure by k, as a scale drawing does."
+ },
+ {
+  "node": "scale-drawing.area.scale-factor-squared",
+  "target": "expressions.product.regroup-factors",
+  "verdict": "scaffold",
+  "reason": "Regrouping (k x l) x (k x w) as (k x k) x (l x w) is the justification, which an L3 concept does not need; the fact can be known and applied without it.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Rewriting (k x l) x (k x w) as (k x k) x (l x w) reorders and regroups the factors."
+ },
+ {
+  "node": "circle.center-radius",
+  "target": "segment.meaning",
+  "verdict": "scaffold",
+  "reason": "The statement and test speak of a distance from the center, not of a segment; picturing the radius as a segment helps but the idea can be met without the formal segment node.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The radius is the distance from the center to a point, which is the length of the segment joining those two points."
+ },
+ {
+  "node": "circle.diameter",
+  "target": "addition.doubles.fact",
+  "verdict": "wrong",
+  "reason": "A recalled doubles fact is one method for the sub-computation 3 + 3; the method-neutral node is addition.within-10, and the idea of a diameter does not depend on a recalled doubles fact.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Finding the diameter for a 3 cm radius means doubling 3, since the diameter is twice the radius."
+ },
+ {
+  "node": "construction.triangle.two-sides-included-angle",
+  "target": "shapes.name.prototype",
+  "verdict": "scaffold",
+  "reason": "Naming typical triangles is the earlier, narrower step; the target draws triangles of any shape and is carried by naming a polygon as a triangle by its three sides (shapes.polygon.name-by-sides).",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The figure being drawn is a triangle, so the learner must know what a triangle is."
+ },
+ {
+  "node": "construction.triangle.two-angles-included-side",
+  "target": "shapes.name.prototype",
+  "verdict": "scaffold",
+  "reason": "Naming typical triangles is the earlier, narrower step; the target draws triangles of any shape and is carried by shapes.polygon.name-by-sides.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The figure being drawn is a triangle, so the learner must know what a triangle is."
+ },
+ {
+  "node": "construction.triangle.three-sides",
+  "target": "circle.center-radius",
+  "verdict": "indirect",
+  "reason": "The procedure uses radius and center only through opening the compass and turning it about an endpoint; that operational use is carried by construction.circle.radius-diameter. That the vertex is at the given distance from both endpoints explains why the method works and is not needed to carry it out at level 2.",
+  "via": "construction.circle.radius-diameter",
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The third vertex is where two arcs meet, so it lies at the given distance from both endpoints."
+ },
+ {
+  "node": "construction.triangle.three-sides",
+  "target": "shapes.name.prototype",
+  "verdict": "scaffold",
+  "reason": "Naming typical triangles is the earlier, narrower step; the target draws triangles of any shape and is carried by shapes.polygon.name-by-sides.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The figure being drawn is a triangle, so the learner must know what a triangle is."
+ },
+ {
+  "node": "cross-section.prism.parallel-to-base",
+  "target": "shapes.rectangle.define",
+  "verdict": "wrong",
+  "reason": "The statement and test only name the cut as a rectangle the same size as the base; naming rectangles (shapes.name.prototype.rectangle-hexagon) is enough, not the full definition as a quadrilateral with four right angles.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The cross-section is named as a rectangle, a quadrilateral with four right angles."
+ },
+ {
+  "node": "cross-section.prism.perpendicular-to-base",
+  "target": "shapes.rectangle.define",
+  "verdict": "wrong",
+  "reason": "The statement names the cut as a rectangle with a height and a width; naming rectangles (shapes.name.prototype.rectangle-hexagon) is enough, not the full definition with four right angles.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The cross-section is named as a rectangle, a quadrilateral with four right angles."
+ },
+ {
+  "node": "cross-section.prism.perpendicular-to-base",
+  "target": "segment.meaning",
+  "verdict": "scaffold",
+  "reason": "The statement needs the length of the cut across the base, a length the learner can read without the formal segment concept.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The width of the cross-section is the length of the cut across the base, which is a segment."
+ },
+ {
+  "node": "cross-section.pyramid.parallel-to-base",
+  "target": "shapes.rectangle.define",
+  "verdict": "wrong",
+  "reason": "The statement and test only name the cut as a rectangle (a square in the test); naming rectangles and squares (shapes.name.prototype.rectangle-hexagon, shapes.name.prototype) is enough, not the full definition of a rectangle.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The cross-section is named as a rectangle, a quadrilateral with four right angles."
+ },
+ {
+  "node": "cross-section.side-per-face",
+  "target": "segment.meaning",
+  "verdict": "scaffold",
+  "reason": "Seeing why a flat plane meets a flat face in a straight piece explains the claim, but the statement only counts sides and faces crossed.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Each side is the segment where the flat plane meets one flat face of the solid."
+ },
+ {
+  "node": "circle.circumference.meaning",
+  "target": "circle.center-radius",
+  "verdict": "wrong",
+  "reason": "The statement only needs the learner to know the figure is a circle; the definition by center and radius is stronger than used, and shapes.name.prototype covers recognizing a circle.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement names the circle whose length once around is measured."
+ },
+ {
+  "node": "circle.circumference.formula",
+  "target": "expressions.product.regroup-factors",
+  "verdict": "scaffold",
+  "reason": "That the two forms agree follows from d = 2 x r by substitution, as the test does with r = 4; regrouping the factors symbolically explains why but is not needed to state or use the formula at level 3.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Showing pi x d equals 2 x pi x r puts 2 x r in place of d and regroups the factors."
+ },
+ {
+  "node": "circle.area.derive-from-circumference",
+  "target": "partitioning.equal-shares.area",
+  "verdict": "scaffold",
+  "reason": "The test gives the circle already cut into 16 equal sectors, so the learner interprets equal shares rather than partitioning a circle.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Cutting the circle into many equal sectors is partitioning a circle into equal shares."
+ },
+ {
+  "node": "circle.area.derive-from-circumference",
+  "target": "fraction.multiplication.symbolic",
+  "verdict": "wrong",
+  "reason": "The only fraction product used is (1/2) x 2; that needs multiplying a fraction by a whole number (fraction.multiply-whole.symbolic), not the stronger node for multiplying by a fraction.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Simplifying (1/2) x 2 x pi x r x r requires multiplying a fraction by a whole number."
+ },
+ {
+  "node": "circle.area.derive-from-circumference",
+  "target": "exponent.whole-number-power.meaning",
+  "verdict": "indirect",
+  "reason": "The final step only writes r x r as r^2, so the meaning of a power is exercised through writing a power.",
+  "via": "exponent.whole-number-power.write",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The result is written pi x r^2, with r x r written as a power."
+ },
+ {
+  "node": "angle.straight-line.sum-180",
+  "target": "angle.fraction-of-turn.degrees",
+  "verdict": "wrong",
+  "reason": "The statement only needs to know a straight angle is half a turn, which angle.measure.circle-fraction gives; the level 3 procedure for computing a degree measure from a fraction of a turn is stronger than used.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "A straight angle is half a turn, which measures 180 degrees."
+ },
+ {
+  "node": "transformation.translation.meaning",
+  "target": "comparing.size.direct",
+  "verdict": "scaffold",
+  "reason": "The statement needs the idea that two distances can be equal or unequal, which is measurement.length.attribute (e1081). Laying two lengths side by side is one method of judging that; the test gives distances in cm and in words (farther, nearer), so no direct-comparison procedure is performed.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The condition 'the same distance' means each point's move has an equal length, which is judged by comparing two lengths directly."
+ },
+ {
+  "node": "transformation.translation.meaning",
+  "target": "spatial.position.body",
+  "verdict": "scaffold",
+  "reason": "Following directions for one's own body is a kindergarten precursor of a sense of direction. The target's 'same direction' is a direction of motion in the plane, which this node does not teach, and a learner reaches it without this node by pointing or arrows.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The condition 'same direction' and the test's 'to the right' use direction words for the way a point moves."
+ },
+ {
+  "node": "transformation.reflection.meaning",
+  "target": "partitioning.segment.equal-lengths",
+  "verdict": "scaffold",
+  "reason": "The statement needs the midpoint as the point giving two equal lengths, and the test compares distances of 3 cm and 5 cm; both rest on equal length (measurement.length.attribute), not on the procedure of partitioning a segment into equal lengths.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The line l must pass through the midpoint of PP', the point that splits the segment into two equal lengths."
+ },
+ {
+  "node": "transformation.rigid-motion.preserves-parallel",
+  "target": "transformation.rigid-motion.preserves-length",
+  "verdict": "scaffold",
+  "reason": "The target's own statement already asserts that images of lines are lines; it uses only that part of the length node and never uses lengths. The length node is an earlier, wider node in the usual teaching order (lines, lengths, angles, parallels), not something the parallel claim needs.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The claim speaks of the images of the lines being lines, which is the first part of the rigid-motion line and length property."
+ },
+ {
+  "node": "congruence.sequence.describe",
+  "target": "angle.protractor.measure",
+  "verdict": "wrong",
+  "reason": "Measuring with a protractor is one method of finding how far to rotate; the target only needs to state the angle, and in the test a half turn is seen from the grid without measuring. The method-neutral node is angle.measure.degrees.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 3 must state how far to rotate, which is the measure of the angle between the two sides found by measuring it."
+ },
+ {
+  "node": "transformation.dilation.meaning",
+  "target": "multiplication.facts.within-100",
+  "verdict": "wrong",
+  "reason": "Recalling all one-digit products is one method of getting 3 x 2 in the test; the statement does not need recall, and any method would do. The method-neutral node is multiplication.by-one-digit (task-only here).",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The test needs the product 3 x 2 to find the image point 6 cm from O."
+ },
+ {
+  "node": "transformation.dilation.scale-lengths",
+  "target": "fraction.multiplication.symbolic",
+  "verdict": "wrong",
+  "reason": "The test multiplies a fraction by a whole number (1/2 of 4 cm); fraction x fraction is stronger than that. The weaker node is fraction.multiply-whole.symbolic (e1150).",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The test multiplies a length of 4 cm by the scale factor 1/2 to find the image length."
+ },
+ {
+  "node": "transformation.translation.coordinates.image",
+  "target": "coordinate-plane.polygon.draw",
+  "verdict": "scaffold",
+  "reason": "Step 3 joins the image vertices, a drawing step. The statement and the test ask only for the coordinates of the image vertices, so the answer does not need it; polygon.draw also includes plotting, which is already covered by the plot and read edges.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 3 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+ },
+ {
+  "node": "transformation.translation.coordinates.rule",
+  "target": "rational-number.signed.meaning",
+  "verdict": "indirect",
+  "reason": "The rule needs a negative number written for a move left or down, which is writing a signed number for a quantity in context; the opposite-directions meaning of signed numbers is reached through that node.",
+  "via": "rational-number.signed.represent-context",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The rule uses a negative a for a move left and a negative b for a move down, so signed numbers as opposite directions are used."
+ },
+ {
+  "node": "transformation.reflection.axis.coordinates.image",
+  "target": "coordinate-plane.segment-length.meaning",
+  "verdict": "scaffold",
+  "reason": "The distance from a vertex to an axis is the vertex's own coordinate, which ordered-pair.meaning (e1167) already gives; reading it as the length of a segment between two points that share a coordinate is a more general idea than step 1 uses.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 1 finds each vertex's distance from the axis, which is the length of a vertical or horizontal segment read from coordinates."
+ },
+ {
+  "node": "transformation.reflection.axis.coordinates.image",
+  "target": "coordinate-plane.polygon.draw",
+  "verdict": "scaffold",
+  "reason": "Step 3 joins the image vertices, a drawing step. The statement and test ask only for coordinates, so the answer does not need it.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 3 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+ },
+ {
+  "node": "transformation.reflection.parallel-to-axis.coordinates",
+  "target": "coordinate-plane.polygon.draw",
+  "verdict": "scaffold",
+  "reason": "Step 3 joins the image vertices, a drawing step. The statement and test ask only for coordinates, so the answer does not need it.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 3 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+ },
+ {
+  "node": "transformation.reflection.diagonal.coordinates",
+  "target": "equation.two-variable.graph-as-solutions",
+  "verdict": "scaffold",
+  "reason": "The rules for y = x and y = -x are given in the statement, and a level-3 procedure does not require knowing why it works; the learner picks the rule from the equation without needing the line as a solution set.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The mirror lines y = x and y = -x are given by equations, and the line is the set of points whose coordinates satisfy the equation."
+ },
+ {
+  "node": "transformation.reflection.diagonal.coordinates",
+  "target": "coordinate-plane.polygon.draw",
+  "verdict": "scaffold",
+  "reason": "Step 3 joins the image vertices, a drawing step. The statement and test ask only for coordinates, so the answer does not need it.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 3 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+ },
+ {
+  "node": "transformation.rotation.origin.coordinates",
+  "target": "coordinate-plane.polygon.draw",
+  "verdict": "scaffold",
+  "reason": "Step 3 joins the image vertices, a drawing step. The statement and test ask only for coordinates, so the answer does not need it.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 3 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+ },
+ {
+  "node": "transformation.rotation.center.coordinates",
+  "target": "coordinate-plane.four-quadrants.plot",
+  "verdict": "scaffold",
+  "reason": "The statement, procedure and test never need coordinates outside the first quadrant; the first-quadrant plot and read edges cover the node as written, and four quadrants only matter if an image crosses an axis.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 3 counts the turned offset from the center to locate the image vertex, which may fall in any quadrant."
+ },
+ {
+  "node": "transformation.rotation.center.coordinates",
+  "target": "coordinate-plane.four-quadrants.read",
+  "verdict": "scaffold",
+  "reason": "The statement, procedure and test never need coordinates outside the first quadrant; the first-quadrant plot and read edges cover the node as written, and four quadrants only matter if an image crosses an axis.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 3 records the coordinates of the located image vertex, which may be negative."
+ },
+ {
+  "node": "transformation.rotation.center.coordinates",
+  "target": "rational-number.signed.meaning",
+  "verdict": "indirect",
+  "reason": "Step 1 records an offset as a signed number for left or down, which is writing a signed number for a quantity in context; the opposite-directions meaning is reached through that node.",
+  "via": "rational-number.signed.represent-context",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 1 records an offset with a negative number for a move left or down, which uses signed numbers as opposite directions."
+ },
+ {
+  "node": "transformation.rotation.center.coordinates",
+  "target": "coordinate-plane.polygon.draw",
+  "verdict": "scaffold",
+  "reason": "Step 4 joins the image vertices, a drawing step. The statement and test ask only for coordinates, so the answer does not need it.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 4 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+ },
+ {
+  "node": "transformation.dilation.origin.coordinates",
+  "target": "rational-number.multiplication.rationals",
+  "verdict": "scaffold",
+  "reason": "Signed multiplication is needed only if a vertex has a negative coordinate, which the statement and test do not use (k is positive and the test coordinates are positive). The weaker node fraction.multiplication.symbolic (e1215) covers the test.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 1 multiplies both coordinates of each vertex by k, which may be a fraction or decimal and a coordinate may be negative."
+ },
+ {
+  "node": "transformation.dilation.origin.coordinates",
+  "target": "coordinate-plane.polygon.draw",
+  "verdict": "scaffold",
+  "reason": "Step 2 joins the image vertices, a drawing step. The statement and test ask only for coordinates, so the answer does not need it.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 2 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+ },
+ {
+  "node": "transformation.dilation.center.coordinates",
+  "target": "rational-number.multiplication.rationals",
+  "verdict": "scaffold",
+  "reason": "A negative part of an offset is just a move left or down, resized by k without a sign rule for multiplication, so signed multiplication is not needed at this level; the fraction case, if scale factors below 1 are in scope, is covered by fraction.multiplication.symbolic.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 2 multiplies both parts of the offset by the scale factor, which may be a fraction and a part may be negative."
+ },
+ {
+  "node": "transformation.dilation.center.coordinates",
+  "target": "coordinate-plane.four-quadrants.plot",
+  "verdict": "scaffold",
+  "reason": "The statement, procedure and test never need coordinates outside the first quadrant; the first-quadrant plot and read edges cover the node as written.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 3 counts the new offset from the center to locate the image vertex, which may fall in any quadrant."
+ },
+ {
+  "node": "transformation.dilation.center.coordinates",
+  "target": "coordinate-plane.four-quadrants.read",
+  "verdict": "scaffold",
+  "reason": "The statement, procedure and test never need coordinates outside the first quadrant; the first-quadrant plot and read edges cover the node as written.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 3 records the coordinates of the located image vertex, which may be negative."
+ },
+ {
+  "node": "transformation.dilation.center.coordinates",
+  "target": "rational-number.signed.meaning",
+  "verdict": "indirect",
+  "reason": "Step 1 records an offset as a signed number for left or down, which is writing a signed number for a quantity in context; the opposite-directions meaning is reached through that node.",
+  "via": "rational-number.signed.represent-context",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 1 records an offset with a negative number for a move left or down, which uses signed numbers as opposite directions."
+ },
+ {
+  "node": "transformation.dilation.center.coordinates",
+  "target": "coordinate-plane.polygon.draw",
+  "verdict": "scaffold",
+  "reason": "Step 4 joins the image vertices, a drawing step. The statement and test ask only for coordinates, so the answer does not need it.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 4 joins the image vertices in the same order, which is drawing a polygon from the coordinates of its vertices."
+ },
+ {
+  "node": "similarity.sequence.describe",
+  "target": "division.facts.within-100",
+  "verdict": "wrong",
+  "reason": "Recalling division facts is one method of getting 4 / 2 in the test; the procedure only needs a quotient of two side lengths, and any method would do. The method-neutral node is division.by-one-digit (task-only here).",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The test finds the scale factor as a quotient of two side lengths, 4 divided by 2."
+ },
+ {
+  "node": "geometry.similar-triangles",
+  "target": "transformation.dilation.scale-lengths",
+  "verdict": "scaffold",
+  "reason": "This is the reason the ratios are equal (a dilation multiplies every length by k). The target is a level-3 concept, which states the property and does not require knowing why it holds; the derivation belongs to a level-4 justification.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The dilation part of such a sequence multiplies every side by one factor k, which gives the equal ratios DE/AB = EF/BC = DF/AC."
+ },
+ {
+  "node": "geometry.similar-triangles",
+  "target": "transformation.rigid-motion.preserves-length",
+  "verdict": "scaffold",
+  "reason": "This is part of the reason k is the ratio of corresponding sides (rigid motions keep lengths). The target is a level-3 concept, which does not require knowing why the property holds.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The rigid motions in the sequence keep every side length, so the factor k from the dilation is the ratio of corresponding sides."
+ },
+ {
+  "node": "similarity.triangle.angle-angle.explain",
+  "target": "congruence.sequence.describe",
+  "verdict": "scaffold",
+  "reason": "The argument places the side on DE using the three motions directly (e1263, e1265, e1266); describing a sequence for two given congruent figures is a worked case of the same moves, not something the explanation requires.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Rigid motions place the matching side on DE with the third vertex on the same side as F, which is a translate, rotate, then reflect-if-needed sequence."
+ },
+ {
+  "node": "angle.triangle.sum",
+  "target": "shapes.polygon.name-by-sides",
+  "verdict": "wrong",
+  "reason": "The statement only needs to know what a triangle is (a closed three-sided figure of any shape); naming pentagons and hexagons as well, as shapes.polygon.name-by-sides does, is stronger than that. The weaker node is shapes.name.any-orientation.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The claim is about any triangle, so a triangle must be known as a polygon with three sides."
+ },
+ {
+  "node": "angle.triangle.sum",
+  "target": "addition.within-1000",
+  "verdict": "scaffold",
+  "reason": "The statement and test give the sum as 180 and perform no addition; the relevant idea is that angle measures are numbers that can be added, not fluency in addition within 1000.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The claim is that the three measures add to 180, so the sum of whole-number measures must be understood."
+ },
+ {
+  "node": "angle.triangle.third-angle",
+  "target": "addition.within-100",
+  "verdict": "indirect",
+  "reason": "The two known angles can sum to more than 100 (47 + 68 = 115), so the addition needed is addition within 1000, which builds on addition within 100.",
+  "via": "addition.within-1000",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 1 adds the two known angle measures, as 47 plus 68 in the test."
+ },
+ {
+  "node": "angle.triangle.exterior",
+  "target": "shapes.polygon.name-by-sides",
+  "verdict": "wrong",
+  "reason": "The statement only needs to know what a triangle is (a closed three-sided figure of any shape); naming pentagons and hexagons as well, as shapes.polygon.name-by-sides does, is stronger than that. The weaker node is shapes.name.any-orientation.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The claim is about a triangle's interior and exterior angles, so a triangle must be known as a polygon with three sides."
+ },
+ {
+  "node": "angle.triangle.exterior",
+  "target": "angle.triangle.sum",
+  "verdict": "scaffold",
+  "reason": "This is the reason behind the theorem (the three angles of the triangle add to 180). The target is a level-3 concept and the test can be answered from its own statement, which does not require knowing why the equality holds.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "To choose between the options, the learner reasons from the three angles of the triangle adding to 180 degrees."
+ },
+ {
+  "node": "angle.triangle.exterior",
+  "target": "angle.straight-line.sum-180",
+  "verdict": "scaffold",
+  "reason": "This is the reason behind the theorem (the exterior angle and its adjacent interior angle lie on a line). The target is a level-3 concept and the test can be answered from its own statement, which does not require knowing why the equality holds.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "To choose between the options, the learner reasons that the exterior angle and its adjacent interior angle lie on a straight line and add to 180 degrees."
+ },
+ {
+  "node": "angle.triangle.exterior.explain",
+  "target": "angle.triangle.exterior",
+  "verdict": "scaffold",
+  "reason": "The explanation derives this fact and uses only the straight angle and the triangle angle sum; the test problem states the equality and names the angles, so the L3 fact is the claim being justified, not something the argument uses. Teaching it first is order, not need.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The explanation justifies the exterior angle fact and uses its terms exterior angle and remote interior angles."
+ },
+ {
+  "node": "angle.application.triangles-parallel-lines",
+  "target": "angle.transversal.find-angles",
+  "verdict": "wrong",
+  "reason": "A stronger node than the target uses: the target needs one transversal angle fact for one link, while find-angles finds all eight angles and so includes corresponding, alternate interior, vertical and supplementary facts. The weaker node is angle.transversal.alternate-interior (or angle.transversal.corresponding).",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The first link of the chain carries the given angle across the transversal to an angle of the triangle using the parallel-line angle relations."
+ },
+ {
+  "node": "pythagorean-theorem.squares-on-sides",
+  "target": "shapes.square.define",
+  "verdict": "wrong",
+  "reason": "A stronger node than the target uses: the statement only needs the learner to recognize the figures built on the sides as squares, which is naming squares whatever their orientation (shapes.name.any-orientation, edge e1321), not the full definition of four equal sides and four right angles.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "A square built on a side has four equal sides, each equal to that side, and four right angles."
+ },
+ {
+  "node": "pythagorean-theorem.proof.explain",
+  "target": "pythagorean-theorem.statement",
+  "verdict": "scaffold",
+  "reason": "The explanation derives the equation as its conclusion and the test problem states it, so the learner need not already know the theorem to follow the argument. Knowing it first is teaching order.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The explanation concludes the equation c^2 = a^2 + b^2 with legs a, b and hypotenuse c."
+ },
+ {
+  "node": "pythagorean-theorem.converse",
+  "target": "pythagorean-theorem.statement",
+  "verdict": "scaffold",
+  "reason": "The converse is a stand-alone conditional (if a^2 + b^2 = c^2 then the angle opposite c is right). It needs the equation notation and the right-angle idea, not the forward theorem; a learner can meet it by drawing triangles with sides 3-4-5 and 5-12-13 and checking the angle with a square corner. Teaching it after the theorem is curriculum order.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The converse reverses the theorem: it starts from a^2 + b^2 = c^2 and concludes a right triangle, so the theorem's statement must be known."
+ },
+ {
+  "node": "pythagorean-theorem.converse.explain",
+  "target": "construction.triangle.two-sides-included-angle",
+  "verdict": "scaffold",
+  "reason": "The argument only needs a right triangle with legs a and b to exist, and the test problem supplies the 5-12 right triangle. Drawing a triangle from two sides and the included angle with tools makes it concrete but the explanation does not use the drawing skill.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The proof builds a right triangle with legs a and b, which is a triangle drawn from two sides and the right angle between them."
+ },
+ {
+  "node": "pythagorean-theorem.unknown-side.whole",
+  "target": "equation.one-step.addition.solve",
+  "verdict": "wrong",
+  "reason": "A stronger node than the procedure uses: step 2 says to compute c^2 minus the square of the known leg, which is whole-number subtraction (subtraction.within-1000, edge e1353). Solving x + p = q over nonnegative rationals is a more general skill than the target needs.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Finding a leg squared from c^2 minus the known leg squared solves a one-step addition equation."
+ },
+ {
+  "node": "pythagorean-theorem.unknown-side.irrational",
+  "target": "equation.one-step.addition.solve",
+  "verdict": "wrong",
+  "reason": "A stronger node than the procedure uses: step 2 says to compute c^2 minus the square of the known leg, which is whole-number subtraction (subtraction.within-1000, edge e1360). Solving x + p = q over nonnegative rationals is a more general skill than the target needs.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Finding a leg squared from c^2 minus the known leg squared solves a one-step addition equation."
+ },
+ {
+  "node": "pythagorean-theorem.application.2d.whole",
+  "target": "shapes.rectangle.define",
+  "verdict": "scaffold",
+  "reason": "The rectangle diagonal appears only as an example ('such as'); the test problem is a ladder against a wall and uses no property of rectangles. It would matter only for rectangle-diagonal problems if the node were meant to include them.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "A diagonal of a rectangle forms a right triangle because the corners of a rectangle are right angles."
+ },
+ {
+  "node": "pythagorean-theorem.distance.coordinates",
+  "target": "coordinate-plane.four-quadrants.plot",
+  "verdict": "scaffold",
+  "reason": "Step 1 computes both legs from the coordinates and step 2 takes them as legs of a right triangle, so the procedure can be carried out from the numbers without plotting. Sketching the points helps see the triangle but is not used.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 2 uses the points plotted in the plane, with horizontal and vertical legs drawn to form a right triangle."
+ },
+ {
+  "node": "volume.cylinder.formula",
+  "target": "volume.prism.formula.base-height",
+  "verdict": "indirect",
+  "reason": "The cylinder formula carries base area times height to a non-rectangular base, which is the content of the right-prism node; the rectangular-prism V = B x h is a prerequisite of that node, not a separate direct one.",
+  "via": "volume.prism.right.base-height",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The formula is a base area times a height, the same form as V = B x h for a prism."
+ },
+ {
+  "node": "volume.cylinder.find-height",
+  "target": "division.unknown-factor.meaning",
+  "verdict": "scaffold",
+  "reason": "The statement prescribes the operation (divide the volume by the base area), and a level 3 procedure does not require knowing why division finds the missing factor; the quotient-as-unknown-factor idea justifies the recipe.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Dividing the volume by the base area finds the unknown factor in V = base area x h."
+ },
+ {
+  "node": "volume.cylinder.find-radius",
+  "target": "division.unknown-factor.meaning",
+  "verdict": "scaffold",
+  "reason": "The statement prescribes the operation (divide the volume by pi x h), and a level 3 procedure does not require knowing why division finds the missing factor; the quotient-as-unknown-factor idea justifies the recipe.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Dividing the volume by pi x h finds the unknown factor r^2 in the product."
+ },
+ {
+  "node": "volume.cylinder.find-radius",
+  "target": "root.square.solve-x-squared",
+  "verdict": "scaffold",
+  "reason": "Step 2 is taking the positive square root of a number, which is evaluating a root (root.square.perfect-square.evaluate, edge e1403). Writing the solutions of x^2 = p is a related framing that also covers a negative root a radius never uses; the procedure does not need it.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 2 solves r^2 = Q for the positive radius with a square root."
+ },
+ {
+  "node": "volume.cone.find-height",
+  "target": "division.unknown-factor.meaning",
+  "verdict": "scaffold",
+  "reason": "The statement prescribes the operations (multiply by 3, divide by the base area), and a level 3 procedure does not require knowing why division finds the missing factor; the quotient-as-unknown-factor idea justifies the recipe.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Dividing 3 x V by the base area finds the unknown factor in base area x h."
+ },
+ {
+  "node": "volume.sphere.find-radius",
+  "target": "division.unknown-factor.meaning",
+  "verdict": "scaffold",
+  "reason": "The statement prescribes the operations (multiply the volume by 3, divide by 4 x pi), and a level 3 procedure does not require knowing why division finds the missing factor; the quotient-as-unknown-factor idea justifies the recipe.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Dividing 3 x V by 4 x pi finds the unknown factor r^3 in the product."
+ },
+ {
+  "node": "volume.sphere.find-radius",
+  "target": "root.cube.solve-x-cubed",
+  "verdict": "scaffold",
+  "reason": "Step 2 is taking the cube root of a number, which is evaluating a root (root.cube.perfect-cube.evaluate, edge e1447). Writing the solution of x^3 = p is a related framing the procedure does not need.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 2 solves r^3 = Q for the radius with a cube root."
+ },
+ {
+  "node": "area.attribute",
+  "target": "shapes.dimension.flat-solid",
+  "verdict": "scaffold",
+  "reason": "The idea that area is the amount of surface covered, different from length, does not require sorting figures into flat and solid; the test problem uses a ribbon and a sheet on a table. 'Flat' is context here, and the flat/solid contrast matters for choosing area or volume, not for this idea.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Area belongs to flat figures, so the learner must tell a flat figure from a solid."
+ },
+ {
+  "node": "volume.space-occupied",
+  "target": "shapes.dimension.flat-solid",
+  "verdict": "scaffold",
+  "reason": "That a ball takes up space and that a taller object can take up less space does not require sorting shapes into flat and solid; 'solid' is context here, and the contrast matters for choosing area or volume, not for this idea.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Volume belongs to solids, so the learner must tell a solid from a flat figure."
+ },
+ {
+  "node": "division.standard-algorithm.long-division",
+  "target": "subtraction.within-1000",
+  "verdict": "indirect",
+  "reason": "The statement allows a divisor of any length, so the current number can have more than three digits and the multi-digit subtraction node is the direct one; subtraction within 1000 only covers the sizes in the test problem.",
+  "via": "subtraction.standard-algorithm",
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 3 subtracts q times the divisor from the current number, such as 157 minus 156 in the test problem."
+ },
+ {
+  "node": "division.standard-algorithm.long-division",
+  "target": "place-value.ten-times-right",
+  "verdict": "scaffold",
+  "reason": "At level 3, bringing down a digit is a juxtaposition step; that each place is ten times the one to its right explains why it works but is not needed to carry it out.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 4 brings down the next digit to the right of the difference, which makes the difference ten times larger plus that digit."
+ },
+ {
+  "node": "division.standard-algorithm.long-division",
+  "target": "division.remainder.meaning",
+  "verdict": "scaffold",
+  "reason": "Step 5 defines the remainder as the last difference, so the algorithm can be run and its output named without the grouping meaning of a remainder; the meaning helps interpret the result but is not needed to carry out the procedure.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The statement asks for a whole-number quotient and a remainder, which is what is left after making as many whole groups as possible."
+ },
+ {
+  "node": "decimal.addition.algorithm",
+  "target": "place-value.ten-times-right.decimal",
+  "verdict": "scaffold",
+  "reason": "The rule 10 of a place regroups as 1 of the next place is carried over from the whole-number algorithm (e1481); the decimal ten-times relation explains why it works across the point but is not needed to run the procedure.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Aligned decimal points put digits of the same place value in one column, and 10 of a place regroup as 1 of the next place across the decimal point."
+ },
+ {
+  "node": "decimal.subtraction.algorithm",
+  "target": "decimal.compare",
+  "verdict": "scaffold",
+  "reason": "In a - b the minuend is given by the expression and is written on top, so the procedure does not need to decide which decimal is greater (15 - 3.72 is plain); comparison is only a sanity check.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 1 writes the greater number above the smaller, which requires deciding which of two decimals is greater."
+ },
+ {
+  "node": "decimal.subtraction.algorithm",
+  "target": "place-value.ten-times-right.decimal",
+  "verdict": "scaffold",
+  "reason": "Decomposing 1 of a place into 10 of the next place is the whole-number move (e1487) applied across the point; the decimal ten-to-one relation explains why but is not needed to run the procedure.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Decomposing 1 of the next place into 10 of this place, even across the decimal point, uses the ten-to-one relation between decimal places."
+ },
+ {
+  "node": "decimal.division.by-whole.algorithm",
+  "target": "place-value.ten-times-right.decimal",
+  "verdict": "scaffold",
+  "reason": "Appending 0 after the last digit is a stated rule in step 4; the ten-times relation explains why it keeps the value but is not needed to apply it. The fact actually used (trailing zeros do not change a decimal) has no index node; see missing prerequisite.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Writing a 0 after the last digit of the dividend and continuing keeps the dividend's value only because each decimal place is ten times the one to its right."
+ },
+ {
+  "node": "decimal.division.by-decimal.algorithm",
+  "target": "division.equal-scaling.quotient-unchanged",
+  "verdict": "scaffold",
+  "reason": "At level 3 the learner can scale divisor and dividend by 10^k as step 2 directs without having the principle; the principle justifies the step (a level 4 matter) and is not needed to run it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The statement says multiplying divisor and dividend by the same power of 10 leaves the quotient unchanged, which is this scaling principle."
+ },
+ {
+  "node": "decimal.division.by-decimal.algorithm",
+  "target": "multiplication.power-of-ten.whole-number.rule",
+  "verdict": "scaffold",
+  "reason": "Whole-number special case: step 2 already handles a whole-number dividend as a decimal with the point after the ones digit and zeros written in, and the test problem has a decimal dividend.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 2 also multiplies a whole-number dividend by 10^k, which appends k zeros to the dividend."
+ },
+ {
+  "node": "decimal.division.by-decimal.algorithm",
+  "target": "exponent.power-of-ten.notation",
+  "verdict": "scaffold",
+  "reason": "10^k only labels the multiplier; step 2 is carried out by moving the point k places, so the same procedure can be run with 10, 100, 1000 and no exponent notation.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement and step 2 name the multiplier as a power of 10, written 10^k with a whole-number exponent."
+ },
+ {
+  "node": "division.nonunit-fraction-by-whole",
+  "target": "division.unit-fraction-by-whole.rule",
+  "verdict": "scaffold",
+  "reason": "The unit-fraction rule is the special case a = 1 of the target rule; keep the numerator and multiply the denominator by n can be learned directly, so the special case is the usual entry and the base of one justification, not a requirement.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The rule (a/b) divided by n = a/(b x n) extends the unit-fraction rule (1/b) divided by n = 1/(b x n) from one part to a parts."
+ },
+ {
+  "node": "division.nonunit-fraction-by-whole",
+  "target": "fraction.multiple-of-unit",
+  "verdict": "scaffold",
+  "reason": "Reading a/b as a copies of 1/b justifies the rule, but the procedure only keeps a and multiplies b by n. What the procedure needs is reading the numerator and denominator of a/b; see missing prerequisite fraction.non-unit.part-whole.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The fraction a/b is read as a copies of the unit fraction 1/b, each of which is divided by n."
+ },
+ {
+  "node": "fraction.reciprocal",
+  "target": "fraction.multiplication.product-rule",
+  "verdict": "indirect",
+  "reason": "The statement checks that a product is 1 by multiplying fractions (and a whole number by a fraction in the test); the product rule is the justification of that procedure and is reached through it.",
+  "via": "fraction.multiplication.symbolic",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The reciprocal is defined as the number whose product with a/b is 1, which uses the product rule (a/b) x (c/d) = (a x c)/(b x d)."
+ },
+ {
+  "node": "division.equal-scaling.quotient-unchanged",
+  "target": "multiplication.scaling.resize",
+  "verdict": "scaffold",
+  "reason": "At level 3 the principle is stated and applied; resizing explains why it holds (the level 4 justification) but is not needed to state or use it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Resizing the dividend and the group size by the same factor k leaves the number of groups unchanged, which explains a divided by b = (a x k) divided by (b x k)."
+ },
+ {
+  "node": "rational-number.order.context.write",
+  "target": "rational-number.signed.represent-context",
+  "verdict": "scaffold",
+  "reason": "The statement and test already give the quantities as signed numbers (-12 m, -5 m), so writing a signed number from a context is not exercised; what is needed is reading a signed number as a quantity (see missing prerequisite rational-number.signed.meaning).",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Each quantity in the context, such as an elevation of -12 m, is first written as a signed number before the two are compared."
+ },
+ {
+  "node": "rational-number.order.context.write",
+  "target": "rational-number.compare.integers",
+  "verdict": "scaffold",
+  "reason": "The test says which town is higher, so the inequality is written by treating higher as greater (e1565), not by first deciding which of -12 and -5 is greater; the level 3 integer comparison is a later symbolic skill and a check here.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Writing a correct inequality for the two town elevations requires deciding which of -12 and -5 is greater."
+ },
+ {
+  "node": "absolute-value.distance.rational",
+  "target": "absolute-value.distance.integer",
+  "verdict": "scaffold",
+  "reason": "The target's own statement defines |a| as the distance from 0 for fractions and decimals and its test applies it, so the integer case is the usual earlier special case in teaching order rather than a requirement.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The statement gives the same distance-from-0 meaning and the |a| notation as for integers, now applied to fractions and decimals."
+ },
+ {
+  "node": "absolute-value.vs-order",
+  "target": "rational-number.order.number-line",
+  "verdict": "indirect",
+  "reason": "The explanation can be given with the rule that of two negatives the one nearer 0 is greater; the number-line meaning of order is reached through the integer comparison node, and the test does not require positions.",
+  "via": "rational-number.compare.integers",
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Explaining why -8 < -3 is true while |-8| < |-3| is false uses the positions of the two points on the number line."
+ },
+ {
+  "node": "rational-number.addition.integers",
+  "target": "rational-number.additive-inverse",
+  "verdict": "scaffold",
+  "reason": "For equal absolute values step 3's own subtraction gives 0, so 7 + (-7) = 0 follows from the procedure. The additive-inverse concept explains the special case but is not needed to run it.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 3 says the sum is 0 when the absolute values are equal, as in 7 + (-7), because opposites are additive inverses."
+ },
+ {
+  "node": "rational-number.addition.integers",
+  "target": "addition.within-1000",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: step 2 adds absolute values of the size the procedure and test use (one- and two-digit). The method-neutral node is addition.within-100.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 2 adds two absolute values, which are whole numbers, and any method for the sum will do."
+ },
+ {
+  "node": "rational-number.addition.integers",
+  "target": "subtraction.within-1000",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: step 3 subtracts small whole numbers (9 - 4). The method-neutral node is subtraction.within-100.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 3 subtracts the smaller absolute value from the larger, a whole-number difference by any method."
+ },
+ {
+  "node": "rational-number.addition.integers",
+  "target": "comparing.whole-numbers.magnitude.multi-digit",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: the larger absolute value is decided between small whole numbers (9 and 4, 6 and 8, 7 and 7). The needed node is comparing.whole-numbers.magnitude.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 3 first decides which absolute value is larger, to know what to subtract and whose sign to keep."
+ },
+ {
+  "node": "rational-number.addition.rationals",
+  "target": "rational-number.addition.integers",
+  "verdict": "scaffold",
+  "reason": "The target restates the full sign-rule procedure in its own steps and applies it to fractions and decimals; integer addition is the narrower earlier node in the teaching order, and the test problem does not use it. The meaning of the signs is the shared need (see missing prerequisite).",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The statement adds rational numbers by the sign rules for addition, which the integer node states and this node applies to fractions and decimals."
+ },
+ {
+  "node": "rational-number.addition.rationals",
+  "target": "fraction.compare.reasoning-size",
+  "verdict": "scaffold",
+  "reason": "An earlier, narrower L2 node. The L3 comparison of fractions (rewriting over a common denominator) carries the skill step 3 needs.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 3 decides which fraction addend has the larger absolute value when the addends have opposite signs."
+ },
+ {
+  "node": "rational-number.subtraction.add-inverse",
+  "target": "rational-number.addition.rationals",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: the concept needs the meaning of a sum with a negative addend, and its test problem uses integers only. The weaker node is rational-number.addition.integers; fraction and decimal addition is not used.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The right side p + (-q) is a sum of signed rational numbers, so the meaning and value of such sums is used."
+ },
+ {
+  "node": "absolute-value.distance.between-numbers",
+  "target": "rational-number.subtraction.rationals",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: the concept needs the meaning of the difference p - q, not the fraction and decimal subtraction procedure. The test problem uses only integer differences (rational-number.subtraction.integers).",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The statement forms the difference p - q of two signed rational numbers, whose value must be found to get the distance."
+ },
+ {
+  "node": "absolute-value.distance.between-numbers.explain",
+  "target": "rational-number.subtraction.integers",
+  "verdict": "scaffold",
+  "reason": "At level 2 both differences are read off the number line as signed moves (+8 and -8) using the move meaning and the unknown-addend meaning. The L3 subtraction procedure is a later skill and is not needed to show the equality.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The explanation computes both differences, 5 - (-3) and -3 - 5, which are subtractions of signed integers."
+ },
+ {
+  "node": "rational-number.addition.properties-strategy",
+  "target": "expressions.sum.rearrange-terms",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: reordering and regrouping the terms of an expression is the general skill, while this node only reorders and regroups numerical addends. The statement names the two properties, so the nodes it uses are addition.commutative and addition.associative.strategy.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 2 moves and groups addends with the commutative and associative properties of addition."
+ },
+ {
+  "node": "rational-number.subtraction.properties-strategy",
+  "target": "expressions.sum.rearrange-terms",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: the general reorder-and-regroup of expression terms is not needed for numerical addends. The statement names the commutative and associative properties (addition.commutative, addition.associative.strategy).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 2 moves and groups the addends with the commutative and associative properties of addition."
+ },
+ {
+  "node": "rational-number.multiplication.sign-rule",
+  "target": "fraction.multiplication.symbolic",
+  "verdict": "scaffold",
+  "reason": "The concept states the sign rule and the size of the product; the test problem says to give signs without computing. Multiplying nonnegative fractions is a procedure the concept does not use.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The product of the absolute values is an ordinary product of nonnegative fractions or whole numbers."
+ },
+ {
+  "node": "rational-number.multiplication.sign-rule",
+  "target": "decimal.multiplication.algorithm",
+  "verdict": "scaffold",
+  "reason": "The concept states the sign rule and the size of the product; the test problem says to give signs without computing. Multiplying nonnegative decimals is a procedure the concept does not use.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The product of the absolute values is an ordinary product of nonnegative decimals, as in 3.1 x 4.7."
+ },
+ {
+  "node": "rational-number.multiplication.integers",
+  "target": "multiplication.facts.within-100",
+  "verdict": "wrong",
+  "reason": "Recalled facts are one way to multiply the absolute values; any method for the whole-number product will do. The method-neutral node is multiplication.by-one-digit.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 2 multiplies absolute values such as 6 and 7, and recalled facts or any other method will do."
+ },
+ {
+  "node": "rational-number.integer-quotient",
+  "target": "rational-number.fraction-decimal.number-line",
+  "verdict": "scaffold",
+  "reason": "Locating (-7)/2 on the number line is a representation of the fraction; neither the statement nor the test problem uses it.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "A quotient such as (-7) divided by 2 is a fraction with a negative numerator, a point left of 0 on the number line."
+ },
+ {
+  "node": "rational-number.division.sign-rule",
+  "target": "fraction.division.symbolic",
+  "verdict": "scaffold",
+  "reason": "The concept states the sign rule and the size of the quotient; the test problem says to give signs without computing. Dividing nonnegative fractions is a procedure the concept does not use.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The quotient of the absolute values is an ordinary quotient of nonnegative fractions or whole numbers."
+ },
+ {
+  "node": "rational-number.division.sign-rule",
+  "target": "decimal.division.by-decimal.algorithm",
+  "verdict": "scaffold",
+  "reason": "The concept states the sign rule and the size of the quotient; the test problem says to give signs without computing. Dividing nonnegative decimals is a procedure the concept does not use.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The quotient of the absolute values is an ordinary quotient of nonnegative decimals, as in 2.4 divided by 0.8."
+ },
+ {
+  "node": "rational-number.division.integers",
+  "target": "division.facts.within-100",
+  "verdict": "wrong",
+  "reason": "Recalled division facts are one way to divide the absolute values; any method for an exact whole-number quotient will do. The method-neutral node is division.by-one-digit.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 2 divides absolute values such as 42 by 6, which are recalled division facts, and the zero dividend case follows from them."
+ },
+ {
+  "node": "rational-number.multiplication.properties-strategy",
+  "target": "expressions.product.regroup-factors",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: regrouping the factors of a general product is the expression-level skill, while this node regroups numerical factors. The statement names the properties (multiplication.commutative, multiplication.associative).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 2 moves and groups factors with the commutative and associative properties of multiplication."
+ },
+ {
+  "node": "rational-number.multiplication.properties-strategy",
+  "target": "multiplication.distributive.strategy",
+  "verdict": "scaffold",
+  "reason": "The whole-number strategy of breaking apart a factor is the earlier, narrower node. The target's own step 2 splits the factor and multiplies each part, and the distributive property (e1706) supplies what it uses.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 2 splits a factor into a sum and multiplies each part, which is breaking apart a factor."
+ },
+ {
+  "node": "rational-number.division.properties-strategy",
+  "target": "fraction.division.symbolic",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: step 1 only rewrites a division as multiplication by the reciprocal and does not divide fractions. The weaker node is division.fractions.rule, which states the invert-and-multiply relation.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 1 uses that dividing by a fraction equals multiplying by its flipped fraction, as in (-18) divided by (2/3)."
+ },
+ {
+  "node": "rational-number.division.properties-strategy",
+  "target": "expressions.product.regroup-factors",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: regrouping the factors of a general product is the expression-level skill, while this node regroups numerical factors. The statement names the properties (multiplication.commutative, multiplication.associative).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "Step 2 moves and groups factors with the commutative and associative properties of multiplication."
+ },
+ {
+  "node": "rational-number.definition",
+  "target": "rational-number.negative-fraction.sign-placement",
+  "verdict": "scaffold",
+  "reason": "Writing -1.25 as (-125)/100 puts an integer, -125, in the numerator, which the integer-quotient node already allows. The sign-placement identity is not needed to produce a quotient of integers.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Writing -1.25 as (-125)/100 puts the negative sign in the numerator, as the sign placement identity allows."
+ },
+ {
+  "node": "rational-number.repeating-decimal.to-fraction",
+  "target": "rational-number.fraction-to-decimal.long-division",
+  "verdict": "scaffold",
+  "reason": "Long division is the usual source of repeating decimals, but the procedure starts from a decimal that is already given with its repeating block. Producing one by long division is not needed to convert it.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The statement starts from an eventually repeating decimal with a repeating block, which long division of fractions produces and records."
+ },
+ {
+  "node": "rational-number.repeating-decimal.to-fraction",
+  "target": "rational-number.decimal-expansion.terminate-or-repeat",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: the concept is a theorem about the decimal forms of all rationals. The procedure only needs to read an eventually repeating decimal and find its repeating block, which is a weaker notion with no node of its own in the index (see missing prerequisite).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement refers to an eventually repeating decimal and its repeating block, which that node defines."
+ },
+ {
+  "node": "real-number.irrational.definition",
+  "target": "root.square.meaning",
+  "verdict": "scaffold",
+  "reason": "The test problem states for each number whether it can be written as a quotient of integers, so the learner only reads sqrt(2) as a name. The definition of irrational does not use what a square root is.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The test problem lists sqrt(2) among the numbers to classify, so the learner must know what a square root is."
+ },
+ {
+  "node": "real-number.irrational.identify",
+  "target": "circle.pi.ratio",
+  "verdict": "scaffold",
+  "reason": "Classifying pi uses the stated fact that pi is irrational, not its definition as circumference over diameter. Knowing pi as a ratio of lengths is not what makes it irrational.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "Step 3 classifies pi, so the learner must know pi as the ratio of circumference to diameter."
+ },
+ {
+  "node": "real-number.approximate.square-root",
+  "target": "real-number.decimal-expansion",
+  "verdict": "scaffold",
+  "reason": "The procedure is carried by squaring trial values and comparing with n. Reading the result as the digits of a decimal expansion interprets the answer but is not used to produce it.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Finding consecutive tenths and then consecutive hundredths for sqrt(n) mirrors how decimal digits locate a number."
+ },
+ {
+  "node": "real-number.number-line.approximate",
+  "target": "real-number.decimal-expansion",
+  "verdict": "scaffold",
+  "reason": "The test problem supplies the two bounding decimals (2.6 and 2.7), so the learner only places the point between marked decimals. Knowing that expansion digits locate a number is not needed.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Placing the number between the two bounding decimals uses that its digits say which tenth and hundredth it lies in."
+ },
+ {
+  "node": "real-number.number-line.approximate",
+  "target": "real-number.irrational.definition",
+  "verdict": "scaffold",
+  "reason": "Placing a number between two given decimals works the same whether or not the number is irrational. Knowing what irrational means is context for the node, not something its task uses.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The node marks an irrational number, so the meaning of irrational as not a quotient of integers is used."
+ },
+ {
+  "node": "real-number.number-line.approximate",
+  "target": "root.square.meaning",
+  "verdict": "scaffold",
+  "reason": "The test problem gives the bounds for sqrt(7), so the learner need only treat it as a number between 2.6 and 2.7. Knowing what a square root is would not change the placement.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The test problem names sqrt(7), so the learner must know what the square root of 7 means."
+ },
+ {
+  "node": "real-number.expression.estimate",
+  "target": "expressions.variable.evaluate",
+  "verdict": "scaffold",
+  "reason": "Substituting a lower and an upper bound into the expression is part of evaluating a numerical expression with decimals (e1777). Treating the irrational number as a variable adds nothing the procedure needs.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Step 2 evaluates the expression at the lower bound and at the upper bound, as at given values of a variable."
+ },
+ {
+  "node": "real-number.expression.estimate",
+  "target": "real-number.irrational.definition",
+  "verdict": "scaffold",
+  "reason": "The estimate works for any positive number with decimal bounds; that the number is irrational is context, not something the procedure uses.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement is about an expression in a positive irrational number, a number that is not a quotient of integers."
+ },
+ {
+  "node": "distribution.describe",
+  "target": "statistical-question.recognize",
+  "verdict": "scaffold",
+  "reason": "Describing center, spread and shape needs a numerical data set that varies; it does not need the learner to classify questions as statistical. The phrase 'collected to answer a statistical question' is context in the definition, not a skill the node uses.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The statement defines a distribution as the values of a data set collected to answer a statistical question, so the learner must know what that question is."
+ },
+ {
+  "node": "distribution.shape.symmetric-skewed",
+  "target": "symmetry.line.meaning",
+  "verdict": "scaffold",
+  "reason": "The statement defines symmetric in its own terms (two sides close to mirror images), so matching halves of a figure is a helpful analogy but not required. Could be recorded as related (same_idea_different_form).",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "A symmetric distribution has two sides about the center that are close to mirror images, which is the matching-halves idea of a line of symmetry."
+ },
+ {
+  "node": "data.attribute.describe",
+  "target": "measurement.length.ruler",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: naming a unit needs only the idea that a measurement is a number of units, not measuring with a ruler. The weaker node is measurement.length.no-gaps-overlaps (length as the number of units that span an object); there is no unit-of-measurement node for attributes other than length.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "Stating the unit of measurement uses the idea that a measurement is a number of standard units, as when a length is read in inches or centimeters."
+ },
+ {
+  "node": "variability.mad.compute",
+  "target": "subtraction.comparison.number-line",
+  "verdict": "scaffold",
+  "reason": "The procedure itself defines the distance as the larger number minus the smaller, so the number-line picture of a difference gives meaning but is not needed to carry out or state the MAD.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The MAD averages the distances of values from the mean, and a distance between two numbers is the gap between them on a number line."
+ },
+ {
+  "node": "distribution.pattern-deviations",
+  "target": "data.attribute.describe",
+  "verdict": "scaffold",
+  "reason": "A possible reason for a striking value comes from reading the situation given in the problem; it does not require having practiced naming the attribute, how it was measured, and its unit.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "A reason for a striking deviation comes from how the data were gathered and measured, which is the attribute, method, and unit of the data."
+ },
+ {
+  "node": "variability.choose",
+  "target": "center.choose",
+  "verdict": "scaffold",
+  "reason": "The variability choice follows from the same features (skew, outliers) and can be made directly; pairing the IQR with the median and the MAD with the mean is stated in this node's own statement. Choosing a center first is a helpful parallel, not a requirement.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The IQR is reported with the median and the MAD with the mean, so the learner must know which center fits which distribution."
+ },
+ {
+  "node": "variability.choose",
+  "target": "center.mean-median.outlier-effect",
+  "verdict": "scaffold",
+  "reason": "Why extreme values inflate the MAD but not the IQR can be seen directly (an extreme value is far from the mean; quartiles depend on position). The mean/median effect is a parallel result, helpful but not required.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The reason extreme values inflate the MAD but not the IQR parallels how an extreme value pulls the mean but not the median."
+ },
+ {
+  "node": "sampling.population-sample.meaning",
+  "target": "statistical-question.recognize",
+  "verdict": "scaffold",
+  "reason": "Population and sample need only a question about a group and the part of it actually surveyed; the learner does not have to classify questions as statistical, as Mia's question in the test is plainly about all 900 students.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The population is defined as the whole group a statistical question is about, so the learner must know what a statistical question asks about."
+ },
+ {
+  "node": "sampling.variability.meaning",
+  "target": "sampling.random.representative",
+  "verdict": "scaffold",
+  "reason": "The statement and test need that a sample statistic estimates the population value and differs from sample to sample; the reason (random samples tend to be representative) is justification, and the chance variation is stated in this node itself.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "A random sample's statistic estimates the population's because random samples tend to be representative, yet any one sample can differ by chance."
+ },
+ {
+  "node": "sampling.variability.simulate.numerical",
+  "target": "decimal.subtraction.algorithm",
+  "verdict": "wrong",
+  "reason": "Method edge: the test subtracts 4.1 from 4.8 and any method of subtracting decimals will do, but this node is the standard algorithm. The index has no method-neutral decimal subtraction node (only decimal.subtraction.model and decimal.subtraction.algorithm); 48 minus 41 tenths with subtraction.within-100 also works.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The test problem needs the difference between decimal sample means such as 4.8 and 4.1, and any method for subtracting decimals will do."
+ },
+ {
+  "node": "inference.estimate.population-mean",
+  "target": "sampling.random.representative",
+  "verdict": "scaffold",
+  "reason": "This L3 application needs the condition 'random sample' (sampling.random.meaning, listed as missing) but not the justification that random samples tend to be representative; that justification is a different level than applying the estimate.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The sample mean is a reasonable estimate only when the data come from a random sample, which tends to be representative of the population."
+ },
+ {
+  "node": "inference.estimate.population-proportion",
+  "target": "sampling.random.representative",
+  "verdict": "scaffold",
+  "reason": "Same as the mean version: the application needs to know what a random sample is, not the justification that random sampling tends to give representative samples.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The sample fraction is a reasonable estimate only when the data come from a random sample, which tends to be representative of the population."
+ },
+ {
+  "node": "distribution.compare.overlap",
+  "target": "center.meaning",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: the statement and test compare where the plots center and how far they spread by sight, which is the informal center and spread of distribution.describe; reducing each to one number (center.meaning) is not needed until the next node. Weaker node: distribution.describe.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement compares the difference between two centers, so each center must be understood as one number summarizing a data set."
+ },
+ {
+  "node": "distribution.compare.overlap",
+  "target": "variability.meaning",
+  "verdict": "wrong",
+  "reason": "Stronger than the target uses: 'similar variability' here is judged by sight (the test says 'about the same spread'), which is the informal spread of distribution.describe, not a one-number measure of variation. Weaker node: distribution.describe.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement sets the difference between centers against similar variability, so each spread must be understood as one number."
+ },
+ {
+  "node": "distribution.compare.center-difference-in-variability",
+  "target": "distribution.compare.overlap",
+  "verdict": "scaffold",
+  "reason": "This node is an L3 procedure (subtract, divide, report in units of variability); the visual overlap idea explains why the quotient matters but is not needed to carry out or report it.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement turns the idea of a center difference compared with spread into a number of variability units."
+ },
+ {
+  "node": "inference.compare.two-populations",
+  "target": "decimal.subtraction.algorithm",
+  "verdict": "wrong",
+  "reason": "Method edge: the test subtracts 4 from 6.5 and any method of subtracting decimals will do, but this node is the standard algorithm. The index has no method-neutral decimal subtraction node; 65 minus 40 tenths with subtraction.within-100 also works.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The test problem needs the difference between decimal means such as 6.5 and 4, and any method for subtracting decimals will do."
+ },
+ {
+  "node": "probability.model.nonuniform.event",
+  "target": "decimal.addition.algorithm",
+  "verdict": "wrong",
+  "reason": "The edge names one method (the standard algorithm for multi-digit decimals) for 0.5 + 0.2, a tenths-plus-tenths sum any method would do. The index has no method-neutral decimal addition node; the need is adding decimals to hundredths.",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "The test problem adds P(red) = 0.5 and P(green) = 0.2, which is a sum of two decimals."
+ },
+ {
+  "node": "probability.sample-space.list",
+  "target": "probability.model.uniform.develop",
+  "verdict": "wrong",
+  "reason": "A sample space lists outcomes and uses no probabilities; uniform.develop adds assigning 1/n to each outcome, which this target never uses. The weaker need is listing the possible outcomes of one chance process, which has no index node (new:probability.outcomes.list).",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The sample space combines the outcomes of each stage, and listing all the possible outcomes of one chance process is set up in the uniform model node."
+ },
+ {
+  "node": "association.numerical.form",
+  "target": "line.meaning",
+  "verdict": "wrong",
+  "reason": "The statement needs only 'straight' versus 'curved'; line.meaning adds extending without end both ways, a stronger idea the target never uses. The weaker need is an informal straight-versus-curved sense (new:line.straight-vs-curved).",
+  "via": null,
+  "proposed_by": [
+   "P",
+   "Q"
+  ],
+  "why": "A linear association is one whose points lie roughly along a straight line, so the idea of a straight line is used."
+ },
+ {
+  "node": "table.two-way.construct",
+  "target": "table.two-way.interpret",
+  "verdict": "scaffold",
+  "reason": "The statement and procedure of the target already carry what each cell and total counts, built by the tally in step 2; interpreting a finished table is a companion skill, not a requirement for constructing one.",
+  "via": null,
+  "proposed_by": [
+   "P"
+  ],
+  "why": "The statement says what each cell, row total, column total, and grand total of the table counts, which is the meaning of the cells and totals."
+ },
+ {
+  "node": "table.two-way.relative-frequency",
+  "target": "fraction.addition.like-denominators",
+  "verdict": "scaffold",
+  "reason": "That the relative frequencies in a row sum to 1 is a check on the result, not a step of the procedure; the test problem only asks for the relative frequencies, and the frequencies may be written as decimals or percents rather than like-denominator fractions.",
+  "via": null,
+  "proposed_by": [
+   "Q"
+  ],
+  "why": "The statement claims the relative frequencies in one row add to 1, which adds fractions with the same denominator, the row total."
+ }
+]

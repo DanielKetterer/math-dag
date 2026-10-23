@@ -1,0 +1,62 @@
+id: rational-number.decimal-expansion.terminate-or-repeat.explain
+concept: rational-number
+facet: decimal-expansion
+level: 4
+type: justification
+name: Explain why the decimal of a fraction terminates or repeats
+statement: In the long division of a whole number a by a positive whole number b, every remainder is one
+  of 0, 1, ..., b - 1, and once the digits of a are used up each step depends only on the remainder; so
+  within b such steps either a remainder is 0 and the decimal terminates, or a remainder recurs and from
+  then on the digits repeat.
+assess: When you divide 1 by 7 with long division, explain why some remainder must recur within 7 steps
+  after the decimal point, and why the digits of the quotient repeat from then on.
+sources:
+  ccss:
+  - 8.NS.A.1
+  learning_components:
+  - 796584cf
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.fraction-to-decimal.long-division
+    relation: justificatory
+    points_to: statement
+    why: The argument is about the steps of the long division of a by b, each step depending on the remainder
+      before it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.remainder.meaning
+    relation: justificatory
+    points_to: statement
+    why: The argument lists the possible remainders 0, 1, ..., b - 1, which are the remainders smaller
+      than the divisor b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.pigeonhole
+    relation: justificatory
+    points_to: statement
+    why: The argument concludes that a remainder must recur within b steps because only b different remainders
+      exist.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'necessary: Judged by name only (the node is not in the index): the argument''s last step
+        is that a remainder must recur within b steps because only b values are possible.'
+    status: proposed
+status: proposed

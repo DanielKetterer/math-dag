@@ -1,0 +1,60 @@
+id: scientific-notation.normalize
+concept: scientific-notation
+facet: core
+level: 3
+type: procedure
+name: Rewrite a x 10^n in scientific notation when a is 10 or more or less than 1
+statement: 'When the leading factor of a x 10^n is 10 or more or less than 1, rewrite the number in scientific
+  notation by moving the decimal point of a and changing the exponent so the value is unchanged: each
+  place moved left adds 1 to n, each place moved right subtracts 1.'
+procedure:
+- Move the decimal point of a until a is at least 1 and less than 10, counting the places moved.
+- If the point moved k places left, add k to the exponent; if it moved k places right, subtract k.
+assess: Write 34.5 x 10^5 and 0.6 x 10^-2 in scientific notation.
+sources:
+  ccss:
+  - 8.EE.A.4
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: scientific-notation.meaning
+    relation: definitional
+    points_to: statement
+    why: The goal is a form a x 10^n with a at least 1 and less than 10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.addition.integers
+    relation: procedural
+    points_to: procedure.2
+    why: Adding k to the exponent n, which may be negative, is integer addition.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.subtraction.integers
+    relation: procedural
+    points_to: procedure.2
+    why: Subtracting k from the exponent n, as in -2 - 1, is integer subtraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

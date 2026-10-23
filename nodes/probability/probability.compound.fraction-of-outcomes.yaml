@@ -1,0 +1,185 @@
+id: probability.compound.fraction-of-outcomes
+concept: probability
+facet: equally-likely
+level: 3
+type: concept
+name: The probability of a compound event as a fraction of the sample space
+statement: When the outcomes in the sample space of a compound event are equally likely, the probability
+  of the event is the number of outcomes in which it occurs divided by the number of outcomes in the sample
+  space, just as for a simple event.
+assess: Two fair coins are tossed. The sample space is HH, HT, TH, TT. Sam says the probability of exactly
+  one head is 1/3, because the result can be 0 heads, 1 head, or 2 heads. What is the probability of exactly
+  one head, and what is wrong with Sam's reasoning?
+sources:
+  ccss:
+  - 7.SP.C.8.a
+  learning_components:
+  - d4d78b01
+requires:
+- clause: via-list
+  all_of:
+  - node: probability.model.uniform.event
+    relation: definitional
+    points_to: statement
+    why: The statement says the probability is outcomes in the event over outcomes in the sample space
+      'just as for a simple event', the uniform rule.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: probability.compound.event-outcomes
+    relation: definitional
+    points_to: statement
+    why: The numerator counts the outcomes in which the compound event occurs, found by checking each
+      outcome against the event's description.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: probability.model.uniform.develop
+    relation: justificatory
+    points_to: assess
+    why: Explaining Sam's error uses that 0, 1 and 2 heads are not equally likely outcomes, unlike the
+      four outcomes HH, HT, TH and TT.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem asks why Sam''s three results are not equally likely; the
+        statement itself is the count-over-count rule.'
+    status: proposed
+  - node: probability.sample-space.list
+    relation: definitional
+    points_to: statement
+    why: The denominator is the number of outcomes in the sample space of the compound event, defined
+      in the list node.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The denominator is the number of outcomes in the sample space, which may be written
+        as a list, a table or a tree; the test problem gives the sample space already. | other route:
+        Count the outcomes of the sample space as a table or a tree diagram instead of an organized list.'
+    status: disputed
+- clause: critic-route-1
+  note: Count the sample space from a table.
+  all_of:
+  - node: probability.model.uniform.event
+    relation: definitional
+    points_to: statement
+    why: The statement says the probability is outcomes in the event over outcomes in the sample space
+      'just as for a simple event', the uniform rule.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: probability.compound.event-outcomes
+    relation: definitional
+    points_to: statement
+    why: The numerator counts the outcomes in which the compound event occurs, found by checking each
+      outcome against the event's description.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: probability.model.uniform.develop
+    relation: justificatory
+    points_to: assess
+    why: Explaining Sam's error uses that 0, 1 and 2 heads are not equally likely outcomes, unlike the
+      four outcomes HH, HT, TH and TT.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem asks why Sam''s three results are not equally likely; the
+        statement itself is the count-over-count rule.'
+    status: proposed
+  - node: probability.sample-space.table
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Count the sample space from a table.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+- clause: critic-route-2
+  note: Count the sample space from a tree diagram.
+  all_of:
+  - node: probability.model.uniform.event
+    relation: definitional
+    points_to: statement
+    why: The statement says the probability is outcomes in the event over outcomes in the sample space
+      'just as for a simple event', the uniform rule.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: probability.compound.event-outcomes
+    relation: definitional
+    points_to: statement
+    why: The numerator counts the outcomes in which the compound event occurs, found by checking each
+      outcome against the event's description.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: probability.model.uniform.develop
+    relation: justificatory
+    points_to: assess
+    why: Explaining Sam's error uses that 0, 1 and 2 heads are not equally likely outcomes, unlike the
+      four outcomes HH, HT, TH and TT.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem asks why Sam''s three results are not equally likely; the
+        statement itself is the count-over-count rule.'
+    status: proposed
+  - node: probability.sample-space.tree
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Count the sample space from a tree diagram.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

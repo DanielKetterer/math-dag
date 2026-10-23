@@ -1,0 +1,69 @@
+id: triangle.determined.two-sides-included-angle
+concept: triangle
+facet: determination
+level: 2
+type: concept
+name: Two sides and the angle between them determine a unique triangle
+statement: Two side lengths and the measure of the angle between those two sides determine exactly one
+  triangle.
+assess: Ana draws a triangle with sides of 5 cm and 7 cm and a 40-degree angle between them. Ben draws
+  one with the same three measures. Must the third sides of their triangles be equal? Explain.
+sources:
+  ccss:
+  - 7.G.A.2
+  learning_components:
+  - 9ddaee28
+requires:
+- clause: standard
+  all_of:
+  - node: construction.triangle.two-sides-included-angle
+    relation: justificatory
+    points_to: statement
+    why: Drawing from two sides and the angle between them shows every step is forced, so the third vertex
+      is fixed.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The condition gives the measure of the angle between the two sides in degrees.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.compare.same-different
+    relation: definitional
+    points_to: statement
+    why: Concluding that the third sides are equal means judging the two triangles to be identical.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement speaks of the angle between two sides; angle.measure.degrees is proposed but the
+      figure idea of an angle between two sides is used directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

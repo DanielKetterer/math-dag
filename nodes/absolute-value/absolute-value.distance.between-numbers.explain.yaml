@@ -1,0 +1,93 @@
+id: absolute-value.distance.between-numbers.explain
+concept: absolute-value
+facet: distance
+level: 2
+type: justification
+name: Show on a number line that distance is the absolute value of the difference
+statement: For a specific pair of rational numbers, a number line shows that the distance between them
+  equals the absolute value of their difference, taken in either order.
+assess: Use a number line to show that the distance between -3 and 5 equals |5 - (-3)| and also |-3 -
+  5|.
+sources:
+  ccss:
+  - 7.NS.A.1.c
+  learning_components:
+  - 5bb0a92d
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.integer.number-line
+    relation: representational
+    points_to: assess
+    why: The explanation places both integers on a number line and counts the distance between the points,
+      such as -3 and 5.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is about rational numbers, so the fraction-decimal line is the node
+        it uses. Only the test problem, with integers, uses the integer number line.'
+    status: proposed
+  - node: absolute-value.distance.integer
+    relation: justificatory
+    points_to: assess
+    why: The explanation compares the counted distance with |5 - (-3)| and |-3 - 5|, so absolute value
+      as distance from 0 is used.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is about rational numbers, so absolute-value.distance.rational is
+        the node it uses. Only the test problem, with integers -3 and 5, uses the integer version.'
+    status: proposed
+  - node: rational-number.fraction-decimal.number-line
+    relation: representational
+    points_to: statement
+    why: The explanation places the two rational numbers, negative ones included, as points on a number
+      line.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.addition.number-line
+    relation: representational
+    points_to: statement
+    why: The difference is shown as the signed move that takes one point to the other along the number
+      line.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.unknown-addend.meaning
+    relation: definitional
+    points_to: statement
+    why: The difference p - q is read as the amount to add to q to land on p, in either order.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: absolute-value.distance.rational
+    relation: definitional
+    points_to: statement
+    why: The distance equals the size of that signed move, which is its absolute value.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

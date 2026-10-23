@@ -1,0 +1,51 @@
+id: scientific-notation.compare.times-as-much
+concept: scientific-notation
+facet: core
+level: 3
+type: procedure
+name: Find how many times as large one number written with a power of 10 is as another
+statement: For positive numbers a x 10^m and b x 10^n, the first is (a divided by b) x 10^(m - n) times
+  as large as the second.
+procedure:
+- 'Divide the leading factors: a divided by b.'
+- 'Subtract the exponents: m - n.'
+- Write the result as (a divided by b) x 10^(m - n) and state it as a number of times.
+assess: How many times as large is 6 x 10^4 as 2 x 10^-3?
+sources:
+  ccss:
+  - 8.EE.A.3
+  learning_components:
+  - 97d917b6
+  - '52599614'
+requires:
+- clause: standard
+  all_of:
+  - node: scientific-notation.divide
+    relation: procedural
+    points_to: procedure.1
+    why: Dividing the leading factors and subtracting the exponents is division of two numbers in scientific
+      notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.comparison
+    relation: definitional
+    points_to: statement
+    why: Saying one number is some number of times as large as another uses a multiplication equation
+      as a comparison.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

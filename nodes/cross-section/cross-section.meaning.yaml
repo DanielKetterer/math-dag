@@ -1,0 +1,58 @@
+id: cross-section.meaning
+concept: cross-section
+facet: core
+level: 2
+type: concept
+name: A cross-section is the flat figure where a plane slices a solid
+statement: 'When a plane slices through a solid, the cross-section is the flat figure where the plane
+  and the solid meet: the shape of the cut face.'
+assess: 'A block of cheese shaped like a box is cut straight through with a knife. Which is the cross-section:
+  (a) the shape of the cut face, (b) the piece that was cut off, (c) the whole block?'
+sources:
+  ccss:
+  - 7.G.A.3
+  learning_components:
+  - 4fa7e2b4
+  - 851942b6
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.dimension.flat-solid
+    relation: definitional
+    points_to: statement
+    why: A cross-section is a flat figure cut from a solid, so the learner must tell flat shapes from
+      solids.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.solid.parts
+    relation: definitional
+    points_to: statement
+    why: The cross-section is the shape of the cut face, so the faces of a solid must be known.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: plane.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement is about a plane slicing through a solid, a flat surface that goes on past the
+      solid.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The concept of a plane is genuinely used by the statement, but plane.meaning is
+        not in index.txt or the boundary nodes, so the edge cannot be tied to a node in this map.'
+    status: disputed
+status: proposed

@@ -1,0 +1,61 @@
+id: root.cube.perfect-cube.evaluate
+concept: root
+facet: cube
+level: 3
+type: procedure
+name: Evaluate the cube root of a perfect cube up to 1000
+statement: 'For a perfect cube p from 1 to 1000, find the cube root of p: the whole number from 1 to 10
+  whose cube is p.'
+procedure:
+- Recall a cube equal to p, or locate p between two known cubes and try the whole numbers between their
+  roots.
+- Check by cubing that the number found gives p.
+assess: Find the cube root of 343 and the cube root of 1000.
+sources:
+  ccss:
+  - 8.EE.A.2
+  learning_components:
+  - a0e9560a
+  - 4e8760e7
+requires:
+- clause: standard
+  all_of:
+  - node: root.cube.meaning
+    relation: definitional
+    points_to: statement
+    why: The goal is the cube root of p, the number whose cube is p.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: procedural
+    points_to: procedure.1
+    why: Recalling or trying cubes of whole numbers up to 10, and checking by cubing, evaluates powers
+      such as 7^3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude.three-digit
+    relation: procedural
+    points_to: procedure.1
+    why: Locating p between two known cubes compares p with three-digit cubes to see which is greater.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

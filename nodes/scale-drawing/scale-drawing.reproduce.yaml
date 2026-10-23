@@ -1,0 +1,136 @@
+id: scale-drawing.reproduce
+concept: scale-drawing
+facet: core
+level: 2
+type: procedure
+name: Redraw a scale drawing at a different scale
+statement: A scale drawing is redrawn at a new scale by finding each actual length from the old scale,
+  converting it to a drawing length with the new scale, and drawing the figure with those lengths and
+  the same angles.
+procedure:
+- Find the actual length of each side from the old scale.
+- Find the new drawing length of each side from the new scale.
+- Draw the figure with the new lengths and the same angles.
+assess: A rectangular garden is drawn 6 cm by 4 cm with the scale 1 cm to 2 m. Redraw it with the scale
+  1 cm to 4 m, labeling the new side lengths.
+sources:
+  ccss:
+  - 7.G.A.1
+  learning_components:
+  - 48cb8621
+requires:
+- clause: standard
+  all_of:
+  - node: scale-drawing.actual-length
+    relation: procedural
+    points_to: procedure.1
+    why: The actual length of each side is found from the old scale.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: scale-drawing.meaning
+    relation: definitional
+    points_to: statement
+    why: The redrawn figure is a scale drawing with the same angles and all lengths multiplied by one
+      factor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.ruler
+    relation: procedural
+    points_to: procedure.3
+    why: The figure is drawn with the new lengths, measured out with a ruler.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.draw-by-type
+    relation: procedural
+    points_to: assess
+    why: The garden's corners are right angles that must be drawn again.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s right-angled garden needs right angles drawn; the statement
+        allows any angles, which e864 covers.'
+    status: proposed
+  - node: ratio.equivalent
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 turns an actual length into a drawing length with the new scale, which uses equivalent
+      ratios in the other direction.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides each actual length by the new scale's actual length to find how many drawing units
+      it takes.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Step 2 asks how many drawing units an actual length takes, with no stated range;
+        the test''s 12 / 4 and 8 / 4 are recalled division facts, so division by a one-digit number is
+        stronger than the test needs but may be too weak for other length'
+    status: disputed
+  - node: angle.protractor.sketch
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 draws the figure with the same angles, which requires drawing an angle of given measure.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.measurement.meaning
+    relation: definitional
+    points_to: statement
+    why: Step 2 asks how many drawing units an actual length takes, a grouping (measurement) division.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: angle.protractor.measure
+    relation: definitional
+    points_to: statement
+    why: 'Task-light: the statement redraws with the same angles, which must be read from the original
+      figure unless they are all right angles.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: ratio.table.missing-value
+  relation: same_idea_different_form
+  note: Step 2 is the scale-up of a pair of corresponding lengths that the missing-value procedure carries
+    out in a table; the target needs only the step, not a table.
+status: proposed

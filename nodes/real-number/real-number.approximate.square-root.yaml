@@ -1,0 +1,78 @@
+id: real-number.approximate.square-root
+concept: real-number
+facet: decimal-expansion
+level: 3
+type: procedure
+name: Find decimal bounds for a square root by squaring
+statement: 'Find decimals with a given number of places between which sqrt(n) lies, for a whole number
+  n that is not a perfect square, by squaring trial values: first consecutive whole numbers, then consecutive
+  tenths, then consecutive hundredths.'
+procedure:
+- Find the whole number a with a^2 < n < (a + 1)^2.
+- Square a + 0.1, a + 0.2, and so on, until a square first exceeds n; sqrt(n) lies between that value
+  and the one before it.
+- Repeat inside that interval with steps of 0.01, and so on, for each further decimal place.
+assess: Without a calculator, show that sqrt(5) is between 2 and 3, and then between 2.2 and 2.3.
+sources:
+  ccss:
+  - 8.NS.A.2
+  learning_components:
+  - bac2efb6
+  - e96d5914
+requires:
+- clause: standard
+  all_of:
+  - node: root.square.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure places sqrt(n) between decimals whose squares straddle n, so sqrt(n) must be known
+      as the number whose square is n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds the whole number a with a^2 < n < (a + 1)^2 by squaring whole numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.decimal-base
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 squares decimals such as 2.2 and 2.3 until a square first exceeds n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.compare
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 compares each squared decimal with n to see where the square first exceeds n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

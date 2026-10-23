@@ -1,0 +1,194 @@
+id: expressions.numerical.fractions-decimals.evaluate
+concept: expressions
+facet: numerical
+level: 3
+type: procedure
+name: Evaluate a numerical expression with fractions or decimals
+statement: Evaluate a numerical expression with two or more operations, possibly including whole-number
+  exponents, whose numbers are nonnegative fractions or decimals, in the conventional order of operations.
+procedure:
+- Evaluate inside grouping symbols, innermost first.
+- Evaluate powers.
+- Multiply and divide from left to right.
+- Add and subtract from left to right.
+assess: Evaluate 1/2 + 3 x (1/2)^2.
+sources:
+  ccss:
+  - 6.EE.A.2.c
+  learning_components:
+  - ceb07b7c
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.grouping.nested.evaluate
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 evaluates inside grouping symbols, innermost first, now in expressions whose numbers are
+      fractions or decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.order-of-operations.exponents
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 puts powers before multiplication and division, as in 3 x (1/2)^2 in the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.fraction-base
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 evaluates a power of a fraction, such as (1/2)^2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.decimal-base
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 evaluates a power of a decimal when the expression's numbers are decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.order-of-operations
+    relation: procedural
+    points_to: procedure.3
+    why: Steps 3 and 4 apply the left-to-right convention to multiplication and division and then to addition
+      and subtraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.symbolic
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 multiplies fractions, as in 3 x (1/4) in the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.division.symbolic
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 divides fractions when the expression has a division.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.multiplication.algorithm
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 multiplies decimals when the expression's numbers are decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.division.by-decimal.algorithm
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 divides decimals when the expression has a division.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.unlike-denominators
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 adds fractions, as in 1/2 + 3/4 in the test problem, where the denominators differ.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.unlike-denominators
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 subtracts fractions when the expression has a subtraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.addition.algorithm
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 adds decimals when the expression's numbers are decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.subtraction.algorithm
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 subtracts decimals when the expression has a subtraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

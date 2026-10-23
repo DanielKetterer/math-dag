@@ -1,0 +1,74 @@
+id: transformation.rigid-motion.preserves-angle.verify
+concept: transformation
+facet: geometric
+level: 2
+type: justification
+name: Verify experimentally that rigid motions keep angle measures
+statement: Moving a tracing of an angle by translations, reflections, and rotations, and comparing each
+  image with the original, shows experimentally that the image is always an angle of the same measure.
+assess: Trace angle ABC on transparent paper. Translate the tracing, then reflect it, then rotate it,
+  comparing the image with angle ABC after each move. What do you find about the image angle, and how
+  does the tracing show it?
+sources:
+  ccss:
+  - 8.G.A.1.b
+  learning_components:
+  - 2d077eff
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.translation.meaning
+    relation: justificatory
+    points_to: statement
+    why: The experiment slides a tracing of the angle, which is performing a translation and comparing
+      the image with the original.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.reflection.meaning
+    relation: justificatory
+    points_to: statement
+    why: The experiment flips the tracing of the angle over a line, which is performing a reflection.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rotation.meaning
+    relation: justificatory
+    points_to: statement
+    why: The experiment turns the tracing of the angle about a point, which is performing a rotation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.measure.degrees
+    relation: justificatory
+    points_to: statement
+    why: The finding is that the image angle has the same measure, which means it opens by the same number
+      of one-degree angles.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

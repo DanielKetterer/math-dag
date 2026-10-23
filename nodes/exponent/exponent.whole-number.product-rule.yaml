@@ -1,0 +1,55 @@
+id: exponent.whole-number.product-rule
+concept: exponent
+facet: whole-number-power
+level: 3
+type: concept
+name: 'Product of powers with the same base: a^m x a^n = a^(m+n)'
+statement: 'For any number a and any positive whole numbers m and n, a^m x a^n = a^(m+n): multiplying
+  powers of the same base adds the exponents.'
+assess: 'Without computing any power, decide whether each is true: 5^3 x 5^4 = 5^7; 5^3 x 5^4 = 5^12;
+  5^3 x 5^4 = 25^7.'
+sources:
+  ccss:
+  - 8.EE.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The rule is stated with letters, each standing for any number or any whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: a^m and a^n are products of m and n equal factors, so their product has m + n factors of a.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-10
+    relation: procedural
+    points_to: assess
+    why: The test problems need the sum 3 + 4 to tell 5^7 apart from 5^12 and 25^7.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement adds general whole-number exponents m + n; only the test problem
+        needs the specific sum 3 + 4 within 10.'
+    status: proposed
+status: proposed

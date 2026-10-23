@@ -1,0 +1,79 @@
+id: inequality.same-operation.preserved
+concept: inequality
+facet: open-sentence
+level: 3
+type: concept
+name: Operations that keep the direction of an inequality
+statement: Adding the same number to both sides of an inequality, subtracting the same number from both
+  sides, or multiplying or dividing both sides by the same positive number keeps the direction of the
+  inequality and gives an inequality with the same solutions.
+assess: 3 < 7 is true. Is 3 + (-10) < 7 + (-10) true? Is 3 x 2 < 7 x 2 true? Is 3 x (-2) < 7 x (-2) true?
+sources:
+  ccss:
+  - 7.EE.B.4.b
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: inequality.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement says the new inequality has the same solutions, which uses the meaning of a solution
+      of an inequality.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.addition.integers
+    relation: procedural
+    points_to: assess
+    why: The test problem computes 3 + (-10) and 7 + (-10), which are sums of integers.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem computes 3 + (-10) and 7 + (-10); the statement is about
+        any added number.'
+    status: proposed
+  - node: rational-number.multiplication.integers
+    relation: procedural
+    points_to: assess
+    why: The test problem computes 3 x (-2) and 7 x (-2), which are products of integers with a negative
+      factor.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem computes 3 x (-2) and 7 x (-2); the statement is about multiplying
+        by positive numbers.'
+    status: proposed
+  - node: rational-number.compare.integers
+    relation: procedural
+    points_to: assess
+    why: The test problem asks whether each new inequality is true, which means deciding which of two
+      integers is greater.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test problem needs to decide which of two integers is greater (-7 versus -3,
+        and so on); the statement is stated for the order relation in general.'
+    status: proposed
+status: proposed

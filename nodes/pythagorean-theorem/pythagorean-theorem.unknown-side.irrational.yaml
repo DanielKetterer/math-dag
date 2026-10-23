@@ -1,0 +1,99 @@
+id: pythagorean-theorem.unknown-side.irrational
+concept: pythagorean-theorem
+facet: length
+level: 3
+type: procedure
+name: Find the exact unknown side of a right triangle as a square root
+statement: Find an unknown side length of a right triangle from the other two when its square n is not
+  a perfect square, giving the exact length sqrt(n).
+procedure:
+- Identify the hypotenuse (opposite the right angle) and the legs.
+- If the hypotenuse is unknown, compute n = a^2 + b^2; if a leg is unknown, compute n = c^2 minus the
+  square of the known leg.
+- Write the exact length as sqrt(n).
+assess: A right triangle has legs of lengths 2 and 5. Give the exact length of its hypotenuse.
+sources:
+  ccss:
+  - 8.G.B.7
+  learning_components:
+  - cac68ba0
+requires:
+- clause: standard
+  all_of:
+  - node: pythagorean-theorem.statement
+    relation: definitional
+    points_to: statement
+    why: The procedure solves a^2 + b^2 = c^2 for the unknown side.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.triangle.right.identify
+    relation: procedural
+    points_to: procedure.1
+    why: Identifying the hypotenuse means finding the side opposite the right angle of a right triangle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: procedural
+    points_to: procedure.2
+    why: The procedure computes the squares of the known sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: procedural
+    points_to: procedure.2
+    why: When the hypotenuse is unknown the procedure adds the two squares to get n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: procedure.2
+    why: When a leg is unknown the procedure subtracts the square of the known leg from c^2 to get n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: root.square.meaning
+    relation: procedural
+    points_to: procedure.3
+    why: The last step writes the exact length as sqrt(n), the positive number whose square is n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

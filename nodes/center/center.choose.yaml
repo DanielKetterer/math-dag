@@ -1,0 +1,103 @@
+id: center.choose
+concept: center
+facet: core
+level: 3
+type: concept
+name: Choose the mean or the median to fit the distribution
+statement: For a roughly symmetric distribution without outliers the mean and median are close and the
+  mean is a good summary of a typical value; for a strongly skewed distribution or one with outliers the
+  median better describes a typical value.
+assess: 'Prices in thousands of dollars of the 7 houses on a street: 200, 210, 215, 220, 225, 230, 900.
+  The mean is about 314 and the median is 220. Which better describes the price of a typical house on
+  this street, and why?'
+sources:
+  ccss:
+  - 6.SP.B.5.d
+  learning_components:
+  - 8f6aea95
+requires:
+- clause: standard
+  all_of:
+  - node: center.mean-median.outlier-effect
+    relation: justificatory
+    points_to: statement
+    why: The reason the median describes a typical value better with outliers is that an extreme value
+      pulls the mean but barely moves the median.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: distribution.shape.symmetric-skewed
+    relation: definitional
+    points_to: statement
+    why: The choice depends on whether the distribution is roughly symmetric or strongly skewed, so the
+      learner must recognize those shapes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: distribution.pattern-deviations
+    relation: definitional
+    points_to: statement
+    why: The statement separates distributions without outliers from those with outliers, so the learner
+      must recognize values that depart strikingly from the pattern.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: center.meaning
+    relation: definitional
+    points_to: assess
+    why: The test problem asks which measure better describes a typical house, which is judging a measure
+      of center as one typical value.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'necessary: Points at the test problem, but the statement also uses it: choosing the mean
+        or median to give a typical value rests on a measure of center being one typical value.'
+    status: proposed
+  - node: center.mean.compute
+    relation: definitional
+    points_to: statement
+    why: The statement compares the mean with the median as summaries, so it uses what the mean of a data
+      set is.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: center.median.find
+    relation: definitional
+    points_to: statement
+    why: The statement compares the median with the mean as summaries, so it uses what the median of a
+      data set is.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

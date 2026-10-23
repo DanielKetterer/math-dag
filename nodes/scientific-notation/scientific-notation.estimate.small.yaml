@@ -1,0 +1,49 @@
+id: scientific-notation.estimate.small
+concept: scientific-notation
+facet: core
+level: 3
+type: procedure
+name: Estimate a small number as a single digit times a power of 10
+statement: Estimate a positive number less than 1 as d x 10^n, with d a single digit from 1 to 9 and n
+  a negative integer, by rounding the number to the place of its first nonzero digit.
+procedure:
+- Round the number to the place of its first nonzero digit.
+- Take that digit as d; if it is in the k-th decimal place, n = -k.
+- Write d x 10^n.
+assess: Estimate 0.000062 as a single digit times a power of 10.
+sources:
+  ccss:
+  - 8.EE.A.3
+  learning_components:
+  - 36effa5a
+requires:
+- clause: standard
+  all_of:
+  - node: rounding.decimal.any-place
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rounds the number to the place of its first nonzero digit, which is rounding a decimal
+      to any place.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.power-of-ten.negative
+    relation: representational
+    points_to: procedure.2
+    why: A digit d in the k-th decimal place equals d x 10^-k, since 10^-k has a 1 in the k-th place.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

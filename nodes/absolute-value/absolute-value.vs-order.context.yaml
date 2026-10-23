@@ -1,0 +1,47 @@
+id: absolute-value.vs-order.context
+concept: absolute-value
+facet: magnitude
+level: 2
+type: application
+name: Tell order statements from size statements about signed quantities in context
+statement: A real-world problem states the order of a negative quantity, such as an account balance less
+  than -30 dollars, and asks what it says about the quantity's size, here a debt greater than 30 dollars.
+assess: Maya's account balance is less than -30 dollars. Is her debt more than or less than 30 dollars?
+  Explain.
+sources:
+  ccss:
+  - 6.NS.C.7.d
+  learning_components:
+  - ea4abac5
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.order.context.explain
+    relation: definitional
+    points_to: statement
+    why: A balance less than -30 dollars is an order statement about a signed quantity, and its meaning
+      in context is the kind of reasoning explained there.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: absolute-value.magnitude.context
+    relation: definitional
+    points_to: statement
+    why: The question asks for the size of the debt, which is the absolute value of the signed balance
+      in context.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

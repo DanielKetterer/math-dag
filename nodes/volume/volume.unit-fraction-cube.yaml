@@ -1,0 +1,96 @@
+id: volume.unit-fraction-cube
+concept: volume
+facet: unit-cubes
+level: 2
+type: concept
+name: Volume of a cube with a unit-fraction edge
+statement: A cube with edge length 1/n unit has volume 1/(n x n x n) cubic unit, because n x n x n such
+  cubes pack one unit cube.
+assess: A 1-inch cube is cut into equal small cubes, each with edge 1/2 inch (picture). What is the volume,
+  in cubic inches, of one small cube?
+sources:
+  ccss:
+  - 6.G.A.2
+  learning_components:
+  - '79258680'
+requires:
+- clause: standard
+  all_of:
+  - node: volume.unit-cube
+    relation: definitional
+    points_to: statement
+    why: The volume of the small cube is compared with the volume of one cubic unit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.packing
+    relation: definitional
+    points_to: statement
+    why: Volume is the number of unit cubes that pack a solid, and here the small cubes pack a unit cube.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.three-factor-product
+    relation: justificatory
+    points_to: statement
+    why: The count of n x n x n small cubes in a unit cube is a product of three whole numbers modeled
+      as a prism.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.cube.identify
+    relation: definitional
+    points_to: statement
+    why: The solid being measured is a cube, with equal edges and square faces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: The edge 1/n is a unit fraction of a unit length, and the volume 1/(n x n x n) is also a unit
+      fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.additive
+    relation: justificatory
+    points_to: statement
+    why: Each small cube has an equal share of the unit cube's volume because the equal pieces together
+      make the whole volume.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

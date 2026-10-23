@@ -1,0 +1,78 @@
+id: rational-number.division.rationals
+concept: rational-number
+facet: core
+level: 3
+type: procedure
+name: Divide signed fractions or decimals
+statement: Divide a rational number by a nonzero rational number, given as signed fractions or decimals,
+  by dividing their absolute values as fractions or decimals and giving the quotient the sign from the
+  sign rule.
+procedure:
+- If the dividend is 0, the quotient is 0.
+- Divide the absolute value of the dividend by the absolute value of the divisor as fractions or decimals.
+- Make the quotient positive if the two numbers have the same sign and negative if they have opposite
+  signs.
+assess: Compute -1.8 divided by 0.3 and (-2/3) divided by (-4/5).
+sources:
+  ccss:
+  - 7.NS.A.2
+  - 7.NS.A.3
+  learning_components:
+  - d69891ac
+requires:
+- clause: standard
+  all_of:
+  - node: absolute-value.distance.rational
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides the absolute values of the two numbers, so each fraction or decimal must be read
+      as its distance from 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.division.symbolic
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides fraction absolute values such as 2/3 by 4/5.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.division.by-decimal.algorithm
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides decimal absolute values such as 1.8 by 0.3, which needs division by a decimal.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.division.sign-rule
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 gives the quotient its sign by the rule for same signs and opposite signs.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

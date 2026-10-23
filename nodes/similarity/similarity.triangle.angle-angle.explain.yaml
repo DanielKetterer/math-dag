@@ -1,0 +1,167 @@
+id: similarity.triangle.angle-angle.explain
+concept: similarity
+facet: transformation
+level: 4
+type: justification
+name: Explain informally why two pairs of equal angles make triangles similar
+statement: If angle A = angle D and angle B = angle E in triangles ABC and DEF, dilating ABC with scale
+  factor DE/AB gives a triangle whose side matching AB is as long as DE and whose angles are unchanged;
+  rigid motions then place that side on DE with the third vertex on the same side as F, and because the
+  rays from D and E at the matching angles meet only at F, the image lands exactly on DEF, so the triangles
+  are similar.
+assess: Triangles ABC and DEF have angle A = angle D and angle B = angle E. Explain, using a dilation
+  and rigid motions, why the triangles must be similar.
+sources:
+  ccss:
+  - 8.G.A.5
+  learning_components:
+  - 6f4e508f
+requires:
+- clause: standard
+  all_of:
+  - node: similarity.transformation.meaning
+    relation: justificatory
+    points_to: statement
+    why: The explanation ends by showing a dilation followed by rigid motions lands exactly on DEF, which
+      is what similar means.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.dilation.scale-lengths
+    relation: justificatory
+    points_to: statement
+    why: Dilating by the factor DE/AB makes the side matching AB exactly as long as DE, because a dilation
+      multiplies every length by the factor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.dilation.preserves-angle
+    relation: justificatory
+    points_to: statement
+    why: The explanation says the dilated triangle's angles are unchanged, so it still has the angles
+      equal to angle D and angle E.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.translation.meaning
+    relation: justificatory
+    points_to: statement
+    why: The explanation uses a translation to bring the side matching AB onto DE.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rotation.meaning
+    relation: justificatory
+    points_to: statement
+    why: The explanation uses a rotation to line the side matching AB up with DE.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.reflection.meaning
+    relation: justificatory
+    points_to: statement
+    why: The explanation uses a reflection when needed to put the third vertex on the same side as F.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rigid-motion.preserves-angle
+    relation: justificatory
+    points_to: statement
+    why: After the rigid motions the angles at the ends of the placed side must still equal angle D and
+      angle E.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: triangle.determined.two-angles-included-side
+    relation: justificatory
+    points_to: statement
+    why: The rays at the matching angles from the ends of DE meet only at F, because two angles and the
+      side between them fix one triangle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: similarity.triangle.angle-angle
+    relation: justificatory
+    points_to: statement
+    why: The explanation proves the angle-angle criterion, so the claim it proves must be known.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.dilation.meaning
+    relation: justificatory
+    points_to: statement
+    why: The explanation begins by dilating ABC with scale factor DE/AB about a center.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ray.meaning
+    relation: justificatory
+    points_to: statement
+    why: The argument that the rays from D and E meet only at F uses rays starting at an endpoint and
+      extending one way.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rigid-motion.preserves-length
+    relation: definitional
+    points_to: statement
+    why: The dilated side is as long as DE, and the side lands exactly on DE (not beyond or short of it)
+      because the rigid motions keep its length.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

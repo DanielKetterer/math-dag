@@ -1,0 +1,90 @@
+id: data.scatter-plot.make
+concept: data
+facet: scatter-plot
+level: 2
+type: representation
+name: Make a scatter plot of bivariate measurement data
+statement: A scatter plot shows data on two quantities measured on the same individuals by plotting, for
+  each individual, the point whose coordinates are its two values, one variable on each axis, without
+  connecting the points.
+procedure:
+- Choose which variable goes on the horizontal axis and which on the vertical axis.
+- Scale each axis to cover the range of that variable's values.
+- For each individual, plot the point (first value, second value).
+assess: 'Make a scatter plot of hours studied (x) and test score (y) for six students: (1, 60), (2, 65),
+  (3, 70), (4, 72), (5, 80), (6, 85).'
+sources:
+  ccss:
+  - 8.SP.A.1
+  learning_components:
+  - cb4fa2a9
+requires:
+- clause: via-draw
+  all_of:
+  - node: coordinate-plane.first-quadrant.plot
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 plots the point (first value, second value) for each individual, which is plotting a point
+      with whole-number coordinates in the first quadrant.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.bivariate.measurement
+    relation: definitional
+    points_to: statement
+    why: The statement presupposes two quantities measured on the same individuals, each individual giving
+      a pair of values; no index node introduces bivariate data.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: data.bar-graph.scaled.draw
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 chooses and marks a scale on each axis that covers the range of the values, as when choosing
+      the scale of a bar graph.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Choosing and marking an axis scale to cover a range is not specific to bar graphs;
+        the target needs it on two numeric axes, and a bar graph only scales one. | other route: Learn
+        scale choice on a measurement number line (number-line.measurement-scale) and apply it to the
+        two plot axes.'
+    status: disputed
+- clause: critic-route-1
+  note: Axis scales learned on a measurement number line and applied to the two plot axes.
+  all_of:
+  - node: coordinate-plane.first-quadrant.plot
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 plots the point (first value, second value) for each individual, which is plotting a point
+      with whole-number coordinates in the first quadrant.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: number-line.measurement-scale
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Axis scales learned on a measurement number line and
+      applied to the two plot axes.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

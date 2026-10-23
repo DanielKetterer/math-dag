@@ -1,0 +1,125 @@
+id: expressions.like-terms.combine
+concept: expressions
+facet: algebraic
+level: 3
+type: procedure
+name: Combine like terms with nonnegative coefficients
+statement: Combine like terms whose coefficients are nonnegative whole numbers, fractions or decimals
+  by adding their coefficients, ax + bx = (a + b)x, where a term written x has coefficient 1.
+procedure:
+- Identify the like terms.
+- Add their coefficients, counting a term written x as 1x.
+- Write the sum of the coefficients times the shared variable part.
+assess: Write y + y + y as a single term. Write 2.5x + 4x as a single term.
+sources:
+  ccss:
+  - 6.EE.A.3
+  - 6.EE.A.4
+  learning_components:
+  - e1d1c595
+  - a629106a
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.like-terms.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 identifies which terms are like terms before any coefficients are added.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.parts.name
+    relation: definitional
+    points_to: statement
+    why: The statement adds coefficients in ax + bx = (a + b)x, which uses the word coefficient for the
+      number factor of a term.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one
+    relation: procedural
+    points_to: procedure.2
+    why: Counting a term written x as 1x relies on multiplying by 1 leaving a number unchanged.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.multi-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds the coefficients, which are whole numbers that may have more than one digit.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.addition.unlike-denominators
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds the coefficients when they are fractions, which may have unlike denominators.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.addition.algorithm
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds the coefficients when they are decimals, as in 2.5 + 4 in the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: assess
+    why: Writing y + y + y as a single term 3y reads three equal addends as three groups of y.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem asks for y + y + y as a single term, which reads three equal
+        addends as three groups of y; the procedure itself (add coefficients, counting x as 1x) does not
+        use equal groups.'
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: definitional
+    points_to: statement
+    why: The statement and test read terms such as 2.5x, 4x as a number times a letter (the coefficient
+      and the shared variable part); this is otherwise reached only through expressions.parts.name.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

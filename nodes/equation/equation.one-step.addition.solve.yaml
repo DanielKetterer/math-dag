@@ -1,0 +1,73 @@
+id: equation.one-step.addition.solve
+concept: equation
+facet: open-sentence
+level: 3
+type: procedure
+name: Solve x + p = q with nonnegative rational numbers
+statement: Solve an equation x + p = q, where p and q are nonnegative whole numbers, fractions or decimals
+  with q at least p, by subtracting p from both sides, so that x = q - p.
+procedure:
+- Subtract p from both sides of the equation.
+- Compute q - p; the result is the value of x.
+assess: Solve x + 2/3 = 7/6.
+sources:
+  ccss:
+  - 6.EE.B.7
+  learning_components:
+  - 1981017a
+requires:
+- clause: standard
+  all_of:
+  - node: equation.equality-preserved.same-operation
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 subtracts p from both sides, which is justified because the same operation on both sides
+      keeps the solutions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 computes q - p, which is a whole-number difference when p and q are whole numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.subtraction.unlike-denominators
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 computes q - p for fractions, as in 7/6 - 2/3 in the test problem, where the denominators
+      differ.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.subtraction.algorithm
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 computes q - p when p and q are decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

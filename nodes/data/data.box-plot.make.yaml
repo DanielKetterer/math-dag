@@ -1,0 +1,70 @@
+id: data.box-plot.make
+concept: data
+facet: box-plot
+level: 2
+type: representation
+name: Draw a box plot from a five-number summary
+statement: 'A box plot shows the five-number summary of a numerical data set on a number line: a box from
+  the lower quartile to the upper quartile with a line across it at the median, and whiskers from the
+  box out to the minimum and to the maximum.'
+procedure:
+- Draw a number line whose scale covers the minimum and the maximum.
+- Mark the minimum, lower quartile, median, upper quartile, and maximum above the line.
+- Draw a box from the lower quartile to the upper quartile and a segment across the box at the median.
+- Draw a whisker from the lower quartile out to the minimum and one from the upper quartile out to the
+  maximum.
+assess: A data set has minimum 2, lower quartile 5, median 7, upper quartile 10, and maximum 15. Draw
+  its box plot on a number line from 0 to 16.
+sources:
+  ccss:
+  - 6.SP.B.4
+  learning_components:
+  - b81144de
+requires:
+- clause: standard
+  all_of:
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: procedure.1
+    why: The learner draws a number line whose scale covers the minimum and maximum and marks the five
+      summary values at their positions on it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: center.median.find
+    relation: representational
+    points_to: statement
+    why: The line across the box marks the median of the data set, so the learner must know what the median
+      of a data set is.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'necessary: Close call: the box plot only places a given median, but it is defined as showing
+        the median, and no weaker node for what a median is exists in the index; a lesson drawing it without
+        knowing what the median is would not be a credible route.'
+    status: proposed
+  - node: variability.quartiles.find
+    relation: representational
+    points_to: statement
+    why: The box runs from the lower quartile to the upper quartile, so the learner must know what those
+      two quartiles of a data set are.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

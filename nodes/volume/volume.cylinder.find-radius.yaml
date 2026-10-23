@@ -1,0 +1,74 @@
+id: volume.cylinder.find-radius
+concept: volume
+facet: unit-cubes
+level: 3
+type: procedure
+name: Find the radius of a cylinder from its volume and height
+statement: Find the radius of a cylinder from its volume and height by dividing the volume by pi x h to
+  get r^2 and then taking the square root.
+procedure:
+- Divide the volume by pi x h; the quotient is r^2.
+- Take the positive square root of r^2 to get r.
+assess: A cylinder has a volume of 80 x pi cubic cm and a height of 5 cm. Find its radius.
+sources:
+  ccss:
+  - 8.G.C.9
+  learning_components:
+  - ba4daaa8
+requires:
+- clause: standard
+  all_of:
+  - node: volume.cylinder.formula
+    relation: definitional
+    points_to: statement
+    why: The volume is pi x r^2 x h, so dividing by pi x h leaves r^2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: root.square.perfect-square.evaluate
+    relation: procedural
+    points_to: procedure.2
+    why: The second step takes the positive square root of r^2, a perfect square in the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: assess
+    why: The test problem divides 80 by 5 once the common factor pi is removed.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement fixes no divisor size (the divisor is pi x h); dividing 80 by 5
+        once pi cancels is specific to the test problem. Cancelling the common factor pi is a further
+        step no listed edge covers (see missing prerequisites).'
+    status: proposed
+  - node: division.multiples-of-pi.quotient
+    relation: definitional
+    points_to: statement
+    why: When the volume is given in terms of pi, the quotient of two multiples of pi, (m x pi) divided
+      by (n x pi) = m divided by n, has to be cancelled before dividing; no listed node covers it. It
+      is needed only when the volume is given as a multiple of pi, as in the test problem.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

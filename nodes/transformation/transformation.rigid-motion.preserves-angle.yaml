@@ -1,0 +1,74 @@
+id: transformation.rigid-motion.preserves-angle
+concept: transformation
+facet: geometric
+level: 3
+type: concept
+name: Rigid motions keep angle measures the same
+statement: A translation, reflection, or rotation, or any sequence of them, takes every angle to an angle
+  of the same measure.
+assess: Angle ABC measures 35 degrees. It is translated, and the image is then reflected across a line.
+  Without measuring, what is the measure of the final image angle?
+sources:
+  ccss:
+  - 8.G.A.1.b
+  learning_components:
+  - 2d077eff
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.translation.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement covers translations, so a reader must know that a translation moves every point
+      the same distance in the same direction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.reflection.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement covers reflections, so a reader must know how a reflection across a line moves
+      points.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rotation.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement covers rotations, so a reader must know how a rotation about a center moves points.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The claim is that the image angle has the same measure, and the test asks for a degree measure
+      of the final image angle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

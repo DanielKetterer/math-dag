@@ -1,0 +1,55 @@
+id: angle.triangle.sum
+concept: angle
+facet: measure
+level: 3
+type: concept
+name: The angles of a triangle add to 180 degrees
+statement: The three angle measures of any triangle add to 180 degrees.
+assess: Without measuring, what is the sum of the three angle measures of the long, thin obtuse triangle
+  shown?
+sources:
+  ccss:
+  - 8.G.A.5
+  learning_components:
+  - b9325562
+requires:
+- clause: standard
+  all_of:
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The claim is about the three angle measures of a triangle, each a number of degrees.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.triangle.by-angles.define
+    relation: definitional
+    points_to: assess
+    why: The test describes the triangle as obtuse, so the solver must know a triangle with one obtuse
+      angle.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement is about any triangle; only the test describes the triangle as obtuse,
+        and the sum does not depend on that.'
+    status: proposed
+  - node: shapes.name.any-orientation
+    relation: definitional
+    points_to: statement
+    why: 'The weaker node that replaces shapes.polygon.name-by-sides: the target only needs to name a
+      triangle of any size or shape.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

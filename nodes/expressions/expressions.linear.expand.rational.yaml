@@ -1,0 +1,62 @@
+id: expressions.linear.expand.rational
+concept: expressions
+facet: algebraic
+level: 3
+type: procedure
+name: Expand a(bx + c) with rational numbers
+statement: Rewrite a(bx + c), where a, b and c are rational numbers and may be negative, as (ab)x + ac,
+  using the distributive property.
+procedure:
+- Multiply a by the variable term bx to get (ab)x.
+- Multiply a by the constant c to get ac.
+- Write the sum of the two products.
+assess: Expand (-2/3)(6x - 9).
+sources:
+  ccss:
+  - 7.EE.A.1
+  learning_components:
+  - 4ef42a2b
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.distributive.expand
+    relation: procedural
+    points_to: statement
+    why: Rewriting a(bx + c) as (ab)x + ac applies the distributive property to a product that contains
+      a variable term.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.product.regroup-factors
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 turns a times (b times x) into (ab) times x by regrouping the factors of a product.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.multiplication.rationals
+    relation: procedural
+    points_to: procedure.1
+    why: Steps 1 and 2 multiply the signed fraction or decimal numbers a and b, and a and c.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

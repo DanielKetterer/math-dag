@@ -1,0 +1,91 @@
+id: triangle.determined.two-angles-included-side
+concept: triangle
+facet: determination
+level: 2
+type: concept
+name: Two angles and the side between them determine a unique triangle
+statement: Two angle measures whose sum is less than 180 degrees, and the length of the side between those
+  two angles, determine exactly one triangle.
+assess: Ana and Ben each draw a triangle with a 5 cm side that has a 40-degree angle at one end and a
+  60-degree angle at the other. Must their triangles be identical? Explain.
+sources:
+  ccss:
+  - 7.G.A.2
+  learning_components:
+  - 9ddaee28
+requires:
+- clause: standard
+  all_of:
+  - node: construction.triangle.two-angles-included-side
+    relation: justificatory
+    points_to: statement
+    why: Drawing from two angles and the side between them shows every step is forced, so the third vertex
+      is fixed.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The condition gives the two angle measures in degrees.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.compare.same-different
+    relation: definitional
+    points_to: statement
+    why: Concluding that Ana's and Ben's triangles are identical means comparing the whole shapes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: definitional
+    points_to: statement
+    why: The statement requires the sum of the two angle measures, which is found by adding them.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude.three-digit
+    relation: definitional
+    points_to: statement
+    why: The statement requires that sum to be less than 180, which is a comparison of numbers.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement speaks of the side between two angles; the angle as a figure is used directly alongside
+      its degree measure.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

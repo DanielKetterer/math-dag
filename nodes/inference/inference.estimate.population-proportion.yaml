@@ -1,0 +1,58 @@
+id: inference.estimate.population-proportion
+concept: inference
+facet: estimate
+level: 3
+type: application
+name: Estimate a population proportion from a random sample
+statement: When categorical data come from a random sample, the fraction of the sample in a category is
+  used as an estimate of the unknown fraction of the population in that category.
+assess: In a random sample of 50 students at a school, 30 said they would vote for Maria and 20 said they
+  would vote for Leo. Estimate the fraction of all the students at the school who would vote for Maria.
+sources:
+  ccss:
+  - 7.SP.A.2
+  learning_components:
+  - c5ae0dd5
+requires:
+- clause: standard
+  all_of:
+  - node: sampling.variability.meaning
+    relation: definitional
+    points_to: statement
+    why: Using the sample fraction as an estimate of the unknown population fraction applies the idea
+      that a sample statistic estimates the matching population statistic.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: assess
+    why: The test problem writes 30 of the 50 sampled students as the fraction 30/50 before using it as
+      the estimate.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: sampling.random.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement applies only when the data come from a random sample, so the learner must know
+      what makes a sample random.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

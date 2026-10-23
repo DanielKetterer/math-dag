@@ -1,0 +1,48 @@
+id: exponent.whole-number-power.evaluate.decimal-base
+concept: exponent
+facet: whole-number-power
+level: 3
+type: procedure
+name: Evaluate a power of a decimal
+statement: Find the value of d^b, for a decimal d and a whole-number exponent b of at least 1, by multiplying
+  b factors of d.
+procedure:
+- Write d^b as a product of b factors of d.
+- Multiply the decimals.
+assess: Evaluate (0.2)^3.
+sources:
+  ccss:
+  - 6.EE.A.1
+  learning_components:
+  - fe47029d
+requires:
+- clause: standard
+  all_of:
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: procedure.1
+    why: Step 1 rewrites d^b as a product of b factors of the decimal d, which is what the power means.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.multiplication.algorithm
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies b copies of a decimal two at a time and places the decimal point in each product,
+      as in 0.2 x 0.2 x 0.2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

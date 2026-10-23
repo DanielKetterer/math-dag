@@ -1,0 +1,81 @@
+id: equation.linear.clear-fractions
+concept: equation
+facet: linear-one-variable
+level: 3
+type: procedure
+name: Clear the fractions from a linear equation
+statement: Multiplying every term on both sides of an equation by a common multiple of its denominators
+  gives an equivalent equation with integer coefficients.
+procedure:
+- Find a common multiple of all the denominators in the equation.
+- Multiply every term on both sides by it.
+- Simplify each term so its coefficient is an integer.
+assess: Multiply both sides of (2/3)x - 1 = (1/6)x + 2 by a number that clears every fraction, and write
+  the new equation.
+sources:
+  ccss:
+  - 8.EE.C.7.b
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: factors.common-multiple.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds a common multiple of all the denominators, such as 6 for denominators 3 and 6.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.equality-preserved.same-operation
+    relation: justificatory
+    points_to: statement
+    why: Multiplying every term on both sides by the same nonzero number keeps the solutions, so the new
+      equation is equivalent.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiply-whole.symbolic
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 simplifies each product such as 6 x (2/3) to a whole-number coefficient.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.linear.expand.rational
+    relation: procedural
+    points_to: procedure.2
+    why: multiplying a side made of several terms by the common multiple distributes it over every term
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.multiplication.integers
+    relation: definitional
+    points_to: statement
+    why: Multiplying every term includes negative terms such as -1 x 6 in the test equation; the unsigned
+      fraction node does not cover the sign.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

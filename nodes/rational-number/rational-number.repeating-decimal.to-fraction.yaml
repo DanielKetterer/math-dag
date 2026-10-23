@@ -1,0 +1,137 @@
+id: rational-number.repeating-decimal.to-fraction
+concept: rational-number
+facet: decimal-expansion
+level: 3
+type: procedure
+name: Write an eventually repeating decimal as a quotient of integers
+statement: Write an eventually repeating decimal x as a quotient of integers by subtracting x from 10^k
+  x, where k is the number of digits in the repeating block, so that the repeating parts cancel, and solving
+  for x.
+procedure:
+- Let x be the decimal and k the number of digits in its repeating block.
+- Write 10^k x by moving the decimal point of x k places to the right.
+- Subtract x from 10^k x; the repeating parts cancel, leaving (10^k - 1) x = d, where d is a terminating
+  decimal.
+- Write x = d/(10^k - 1), and multiply the numerator and denominator by a power of 10 if needed so both
+  are integers.
+assess: Write 0.8333..., with the 3 repeating, as a quotient of two integers.
+sources:
+  ccss:
+  - 8.NS.A.1
+  learning_components:
+  - 7608d2f3
+requires:
+- clause: standard
+  all_of:
+  - node: exponent.power-of-ten.notation
+    relation: representational
+    points_to: procedure.2
+    why: Step 2 writes the multiplier as 10^k, a power of 10 with a whole-number exponent.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.power-of-ten.decimal.rule
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 forms 10^k x by moving the decimal point of x k places to the right.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.subtraction.algorithm
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 subtracts x from 10^k x as decimals so that the repeating parts cancel and a terminating
+      decimal d remains.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.one-step.multiplication.solve
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 solves (10^k - 1) x = d for x by dividing both sides by 10^k - 1.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.quotient.symbolic
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 writes the solution x as the fraction d/(10^k - 1), a division written as a fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.equivalent.multiply-principle.generate
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 multiplies the numerator and denominator by a power of 10 to clear the decimal, producing
+      an equivalent fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: representational
+    points_to: statement
+    why: The decimal is named x, a letter standing for one number, so that 10^k x and x can be subtracted.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.like-terms.combine
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 combines 10^k x - x as (10^k - 1) x, the like terms in x.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.repeating.block
+    relation: definitional
+    points_to: statement
+    why: The procedure starts from an eventually repeating decimal with a repeating block. Reading such
+      a decimal, and treating it as a number x, is a weaker notion than the terminate-or-repeat theorem
+      and has no node of its own in the index.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,46 @@
+id: scientific-notation.to-decimal.large
+concept: scientific-notation
+facet: core
+level: 3
+type: representation
+name: Write a number in scientific notation with a positive exponent as a decimal
+statement: Write a x 10^n, with n a positive integer, as a decimal by moving the decimal point of a n
+  places to the right, writing zeros in any empty places.
+procedure:
+- Move the decimal point of a n places to the right.
+- Write a zero in each place passed that has no digit.
+assess: Write 6.02 x 10^5 as a decimal.
+sources:
+  ccss:
+  - 8.EE.A.4
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: scientific-notation.meaning
+    relation: representational
+    points_to: statement
+    why: The number is given as a x 10^n in scientific notation, with a positive integer exponent n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.power-of-ten.decimal.rule
+    relation: procedural
+    points_to: procedure.1
+    why: Multiplying a by 10^n moves the decimal point of a n places to the right.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

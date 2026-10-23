@@ -1,0 +1,70 @@
+id: circle.diameter
+concept: circle
+facet: figure
+level: 2
+type: concept
+name: A diameter of a circle
+statement: A diameter of a circle is a segment that passes through the center and has both endpoints on
+  the circle; its length is twice the radius.
+assess: In the picture, segment AB has both endpoints on the circle but misses the center, and segment
+  CD passes through the center with both endpoints on the circle. Which is a diameter? The radius is 3
+  cm; how long is it?
+sources:
+  ccss:
+  - 7.G.A.2
+  - 7.G.B.4
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: circle.center-radius
+    relation: definitional
+    points_to: statement
+    why: A diameter is defined through the center and points on the circle, and its length is twice the
+      radius.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: segment.meaning
+    relation: definitional
+    points_to: statement
+    why: A diameter is a segment with two endpoints, and both endpoints lie on the circle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-10
+    relation: definitional
+    points_to: assess
+    why: Finding the diameter from a 3 cm radius means doubling it, which is the sum 3 + 3.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem computes a number (double 3); the idea that a diameter is
+        twice the radius is a relation, not a sum within 10.'
+    status: proposed
+  - node: multiplication.comparison
+    relation: definitional
+    points_to: statement
+    why: '''Twice the radius'' is a multiplicative comparison; if the map treats twice as two equal lengths
+      joined end to end (addition) this node is not needed, so low confidence.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

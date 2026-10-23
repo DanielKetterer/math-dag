@@ -1,0 +1,71 @@
+id: equation.two-variable.graph-as-solutions
+concept: equation
+facet: two-variable
+level: 3
+type: concept
+name: The graph of an equation in two variables is the set of its solutions
+statement: The graph of an equation in x and y is the set of all points (a, b) such that substituting
+  x = a and y = b makes the equation true.
+assess: Is the point (1, 1) on the graph of 3x + 2y = 5? Is the point (2, 0)?
+sources:
+  ccss:
+  - 8.EE.C.8.a
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: equation.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement calls a point part of the graph when its coordinates make the equation true, which
+      is what being a solution means.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.ordered-pair.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement treats each point as a pair (a, b) whose first and second numbers are its two coordinates
+      in the plane.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.solution.check-substitution
+    relation: procedural
+    points_to: assess
+    why: Deciding whether (1, 1) and (2, 0) lie on 3x + 2y = 5 requires substituting both coordinates
+      and checking the equation.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem asks for a check of (1, 1) and (2, 0); the idea itself needs
+        what a solution is (e501) and evaluation at given values (e502).'
+    status: proposed
+  - node: expressions.variable.evaluate
+    relation: definitional
+    points_to: statement
+    why: Substituting x = a and y = b into the equation to see whether it is true is an evaluation of
+      both sides at given values.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

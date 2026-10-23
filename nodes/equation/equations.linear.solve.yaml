@@ -1,0 +1,150 @@
+id: equations.linear.solve
+concept: equation
+facet: linear-one-variable
+level: 3
+type: procedure
+name: Solve a multi-step linear equation in one variable
+statement: 'Solve any linear equation in one variable with rational coefficients that has exactly one
+  solution, using whichever of these steps it needs: expanding products, collecting like terms, moving
+  the variable terms to one side, and isolating the variable.'
+procedure:
+- Expand products with the distributive property.
+- Collect like terms on each side.
+- Add or subtract the same terms on both sides so the variable terms are on one side and the constants
+  on the other.
+- Divide both sides by the coefficient of the variable.
+assess: Solve (1/2)(4x - 6) + x = 2x + 5.
+sources:
+  ccss:
+  - 8.EE.C.7.b
+  learning_components:
+  - 47943e2b
+requires:
+- clause: via-rational
+  all_of:
+  - node: equation.equality-preserved.same-operation
+    relation: definitional
+    points_to: statement
+    why: Step 3 adds or subtracts the same terms on both sides and step 4 divides both sides; this principle
+      is used on every route.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: expressions.linear.expand.rational
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 expands products with rational factors such as (1/2)(4x - 6) using the distributive property.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Expanding with rational factors such as (1/2)(4x - 6) is needed on the direct
+        route; clearing fractions first removes the rational factor. | other route: Clearing route: clear
+        the fractions first (equation.linear.clear-fractions), then solve the integer equation with equation.linear.expand-collect
+        and equation.linear.variable-both-sides.'
+    status: disputed
+  - node: expressions.linear.add.rational
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 collects like terms on each side, with rational coefficients of either sign.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Collecting like terms with rational coefficients is needed on the direct route;
+        after clearing fractions the coefficients are integers and equation.linear.expand-collect carries
+        it. | other route: Clearing route: clear the fractions first (equation.linear.clear-fractions),
+        then solve the integer equation with equation.linear.expand-collect and equation.linear.variable-both-sides.'
+    status: disputed
+- clause: via-rational-coefficients
+  all_of:
+  - node: equation.equality-preserved.same-operation
+    relation: definitional
+    points_to: statement
+    why: Step 3 adds or subtracts the same terms on both sides and step 4 divides both sides; this principle
+      is used on every route.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: equation.linear.rational-coefficients
+    relation: procedural
+    points_to: procedure.3
+    why: Steps 3 and 4 move the variable terms to one side and divide by a fraction or decimal coefficient.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Operating on fraction coefficients directly is one route; a learner who clears
+        fractions first never needs rational-coefficient solving. | other route: Clearing route: clear
+        the fractions first (equation.linear.clear-fractions), then solve the integer equation with equation.linear.expand-collect
+        and equation.linear.variable-both-sides.'
+    status: disputed
+- clause: clear-first
+  procedure:
+  - Clear the fractions by multiplying every term on both sides by a common multiple of the denominators.
+  - Expand products and collect like terms on each side.
+  - Subtract a variable term from both sides so the variable terms are on one side and the constants on
+    the other.
+  - Divide both sides by the coefficient of the variable.
+  all_of:
+  - node: equation.equality-preserved.same-operation
+    relation: definitional
+    points_to: statement
+    why: Step 3 adds or subtracts the same terms on both sides and step 4 divides both sides; this principle
+      is used on every route.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: equation.linear.clear-fractions
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 multiplies every term by a common multiple of the denominators so all coefficients are
+      integers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Clearing fractions is one way to handle fraction coefficients but is not in the
+        procedure; the equation can be solved with fractions as they are.'
+    status: disputed
+  - node: equation.linear.expand-collect
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 expands products and collects like terms on each side of the integer equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Integer expand-and-collect is needed only after fractions have been cleared;
+        on the direct route steps 1 and 2 use the rational-coefficient expression nodes.'
+    status: disputed
+  - node: equation.linear.variable-both-sides
+    relation: procedural
+    points_to: procedure.3
+    why: Steps 3 and 4 move the variable terms to one side and divide by the integer coefficient.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Integer variable-on-both-sides is needed only after fractions have been cleared;
+        the direct route uses equation.linear.rational-coefficients.'
+    status: disputed
+status: proposed

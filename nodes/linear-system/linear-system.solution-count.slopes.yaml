@@ -1,0 +1,87 @@
+id: linear-system.solution-count.slopes
+concept: linear-system
+facet: graphical
+level: 3
+type: concept
+name: The number of solutions of a system from the slopes and intercepts of its lines
+statement: For a system of two equations of the form y = mx + b, different slopes give lines that cross
+  once (one solution); equal slopes with different intercepts give parallel lines (no solution); equal
+  slopes with equal intercepts give the same line (infinitely many solutions).
+assess: 'Without graphing or solving, say how many solutions each system has: y = 2x + 1 and y = 2x -
+  3; y = 2x + 1 and y = -x + 1; y = 2x + 1 and y = 1 + 2x.'
+sources:
+  ccss:
+  - 8.EE.C.8.b
+  learning_components:
+  - 9cdd3a07
+requires:
+- clause: standard
+  all_of:
+  - node: linear-system.solution.intersection
+    relation: definitional
+    points_to: statement
+    why: The statement turns crossing, parallel and coinciding lines into one, none or infinitely many
+      solutions, which is the solutions-as-intersection fact.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx-plus-b.write
+    relation: representational
+    points_to: statement
+    why: The statement is written for equations y = mx + b, where m is the slope and b is the y-intercept
+      of the line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: parallel.meaning
+    relation: definitional
+    points_to: statement
+    why: Equal slopes with different intercepts give parallel lines, and the statement uses that parallel
+      lines never meet to conclude no solution.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.sum.rearrange-terms
+    relation: procedural
+    points_to: assess
+    why: Seeing that y = 1 + 2x is the same equation as y = 2x + 1 in the test problem needs reordering
+      the terms of a sum.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem writes one equation as y = 1 + 2x and must see it equals
+        y = 2x + 1; the idea works on equations already in y = mx + b order.'
+    status: proposed
+  - node: slope.between-two-points
+    relation: definitional
+    points_to: statement
+    why: The statement turns different or equal slopes into crossing or parallel lines, so what a slope
+      is, beyond reading m from the equation, is used directly; evidence is moderate because y-mx-plus-b.write
+      may already carry it.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

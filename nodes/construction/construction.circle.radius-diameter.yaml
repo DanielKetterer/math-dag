@@ -1,0 +1,86 @@
+id: construction.circle.radius-diameter
+concept: construction
+facet: core
+level: 2
+type: procedure
+name: Draw a circle with a given radius or diameter using a compass
+statement: A circle with a given radius is drawn with a compass opened to that radius and turned about
+  the center; for a given diameter the compass is opened to half the diameter.
+procedure:
+- If the diameter is given, halve it to get the radius.
+- Open the compass so its point and pencil are one radius apart, measured on a ruler.
+- Put the point on the center and turn the compass once around.
+assess: With a compass and ruler, draw a circle with a diameter of 8 cm.
+sources:
+  ccss:
+  - 7.G.A.2
+  learning_components:
+  - 52ffb8ee
+requires:
+- clause: standard
+  all_of:
+  - node: circle.center-radius
+    relation: definitional
+    points_to: statement
+    why: The compass turned about the center makes all points at one fixed distance, the radius, from
+      that center.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.diameter
+    relation: definitional
+    points_to: statement
+    why: A given diameter is converted to the radius, because a diameter is twice the radius.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: procedure.1
+    why: Halving the given diameter to get the radius is dividing it by 2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Halving the diameter is a real step, but the test halves 8, a division fact; division.by-one-digit
+        (multi-digit dividends) is stronger than the test uses.'
+    status: disputed
+  - node: measurement.length.ruler
+    relation: procedural
+    points_to: procedure.2
+    why: Opening the compass one radius apart is set by measuring that length on a ruler.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.facts.within-100
+    relation: definitional
+    points_to: statement
+    why: If the node only halves small diameters such as 8 cm, this is the weaker node that halving needs
+      (see e881).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

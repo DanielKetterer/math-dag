@@ -1,0 +1,69 @@
+id: angle.triangle.exterior
+concept: angle
+facet: measure
+level: 3
+type: concept
+name: An exterior angle of a triangle equals the sum of the two remote interior angles
+statement: An exterior angle of a triangle, formed by one side and the extension of an adjacent side,
+  has a measure equal to the sum of the two interior angles that are not next to it.
+assess: 'In triangle ABC, side BC is extended past C to point D. Which is always true: angle ACD = angle
+  A + angle B; angle ACD = 180 degrees - angle A; angle ACD = angle B + angle ACB?'
+sources:
+  ccss:
+  - 8.G.A.5
+  learning_components:
+  - b9325562
+requires:
+- clause: standard
+  all_of:
+  - node: line.meaning
+    relation: definitional
+    points_to: statement
+    why: The exterior angle is formed by extending a side, which continues the side along its line past
+      the vertex.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The claim is an equality of angle measures, and the test compares expressions such as angle A
+      + angle B.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.adjacent
+    relation: definitional
+    points_to: statement
+    why: The statement picks the two interior angles that are not next to the exterior angle, so adjacent
+      angles must be known.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.name.any-orientation
+    relation: definitional
+    points_to: statement
+    why: 'The weaker node that replaces shapes.polygon.name-by-sides: the target only needs to name a
+      triangle of any size or shape.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

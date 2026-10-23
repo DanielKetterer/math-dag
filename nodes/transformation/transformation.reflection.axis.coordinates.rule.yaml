@@ -1,0 +1,147 @@
+id: transformation.reflection.axis.coordinates.rule
+concept: transformation
+facet: coordinate
+level: 3
+type: representation
+name: Write a reflection across an axis as a coordinate rule
+statement: Reflection across the x-axis is the coordinate rule (x, y) -> (x, -y), and reflection across
+  the y-axis is the rule (x, y) -> (-x, y).
+assess: Write the coordinate rule (x, y) -> ( , ) for a reflection across the y-axis.
+sources:
+  ccss:
+  - 8.G.A.3
+  learning_components:
+  - 9483c9ac
+requires:
+- clause: via-image
+  all_of:
+  - node: rational-number.opposite.number-line
+    relation: representational
+    points_to: statement
+    why: The rules write -y and -x, the opposite of a coordinate, which lies the same distance from 0
+      on the other side.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: representational
+    points_to: statement
+    why: The rules use the letters x and y, each standing for a number, in the output of the arrow rule.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.reflection.meaning
+    relation: definitional
+    points_to: statement
+    why: The rules describe reflection across the x-axis or the y-axis, so what a reflection across a
+      line does must be known.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate.ordered-pair.notation
+    relation: definitional
+    points_to: statement
+    why: The rules are arrows between ordered pairs, (x, y) -> (x, -y), so the notation is used directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: transformation.reflection.axis.coordinates.image
+    relation: representational
+    points_to: statement
+    why: The rules (x, y) -> (x, -y) and (-x, y) are the symbolic form of what the image procedure does
+      to each vertex.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The rule can be reached by generalizing from images found on the grid, without
+        the separate sign fact. | other route: Start from coordinate-plane.reflection.signs (points that
+        differ only in sign are mirror images) and write it with variables.'
+    status: disputed
+- clause: from-sign-pairs
+  all_of:
+  - node: rational-number.opposite.number-line
+    relation: representational
+    points_to: statement
+    why: The rules write -y and -x, the opposite of a coordinate, which lies the same distance from 0
+      on the other side.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: representational
+    points_to: statement
+    why: The rules use the letters x and y, each standing for a number, in the output of the arrow rule.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.reflection.meaning
+    relation: definitional
+    points_to: statement
+    why: The rules describe reflection across the x-axis or the y-axis, so what a reflection across a
+      line does must be known.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate.ordered-pair.notation
+    relation: definitional
+    points_to: statement
+    why: The rules are arrows between ordered pairs, (x, y) -> (x, -y), so the notation is used directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: coordinate-plane.reflection.signs
+    relation: representational
+    points_to: statement
+    why: Points that differ only in sign being mirror images across the axes is the fact that the arrow
+      rules state for any point.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The rule can be reached from the sign fact alone (points that differ only in
+        sign are mirror images across the axes), without first finding images of polygons.'
+    status: disputed
+status: proposed

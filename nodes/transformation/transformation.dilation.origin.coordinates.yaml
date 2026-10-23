@@ -1,0 +1,73 @@
+id: transformation.dilation.origin.coordinates
+concept: transformation
+facet: coordinate
+level: 3
+type: procedure
+name: Find the coordinates of the image of a polygon under a dilation centered at the origin
+statement: Find the coordinates of the image of a polygon under a dilation with center at the origin and
+  scale factor k with the rule (x, y) -> (k x x, k x y).
+procedure:
+- Multiply both coordinates of each vertex by k.
+- Join the image vertices in the same order.
+assess: Triangle ABC has vertices A(2, 4), B(6, 4), and C(2, 8). Give the coordinates of the vertices
+  of its image under a dilation with center at the origin and scale factor 1/2.
+sources:
+  ccss:
+  - 8.G.A.3
+  learning_components:
+  - b6e6ec4d
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.dilation.meaning
+    relation: definitional
+    points_to: statement
+    why: The rule (x, y) -> (kx, ky) is the coordinate form of taking each point to the point k times
+      as far from the center on the same ray.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.axes-origin
+    relation: definitional
+    points_to: statement
+    why: The center of the dilation is the origin, the point where the axes meet.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate.ordered-pair.notation
+    relation: representational
+    points_to: statement
+    why: The rule is written on ordered pairs, with x and y each multiplied by k.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.symbolic
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 multiplies a coordinate by the scale factor k, which in the test is the fraction 1/2.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

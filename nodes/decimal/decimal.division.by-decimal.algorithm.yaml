@@ -1,0 +1,68 @@
+id: decimal.division.by-decimal.algorithm
+concept: decimal
+facet: decimal-fraction
+level: 3
+type: procedure
+name: Divide by a decimal with the standard algorithm
+statement: Divide a whole number or a decimal by a decimal by first multiplying the divisor and the dividend
+  by the same power of 10, which makes the divisor a whole number and leaves the quotient unchanged, and
+  then dividing by that whole number with long division.
+procedure:
+- Count the decimal places k in the divisor.
+- Multiply the divisor and the dividend by 10^k by moving each decimal point k places to the right, writing
+  zeros in the dividend if needed.
+- Divide the new dividend by the new whole-number divisor with long division, placing the decimal point
+  of the quotient above the new decimal point of the dividend.
+assess: 'Use the standard algorithm: 7.38 divided by 0.6.'
+sources:
+  ccss:
+  - 6.NS.B.3
+  learning_components:
+  - '95700724'
+  - 3b40f296
+requires:
+- clause: standard
+  all_of:
+  - node: decimal.thousandths.notation
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 counts the decimal places k in the divisor, which requires reading the decimal places
+      in its notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.power-of-ten.decimal.rule
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies a decimal dividend or divisor by 10^k by moving its decimal point k places
+      to the right, writing zeros if needed.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.division.by-whole.algorithm
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 divides the new decimal dividend by the new whole-number divisor and places the quotient
+      point above the dividend point.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

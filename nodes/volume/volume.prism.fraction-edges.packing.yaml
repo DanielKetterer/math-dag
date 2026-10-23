@@ -1,0 +1,98 @@
+id: volume.prism.fraction-edges.packing
+concept: volume
+facet: unit-cubes
+level: 2
+type: procedure
+name: Find the volume of a fraction-edged rectangular prism by packing it with unit-fraction cubes
+statement: A right rectangular prism whose edge lengths are multiples of 1/n unit is packed exactly by
+  cubes of edge 1/n; its volume is the number of those cubes times 1/(n x n x n) cubic unit.
+procedure:
+- Choose a unit fraction 1/n such that each edge length is a whole number of 1/n lengths.
+- Count the cubes of edge 1/n along each edge and multiply the three counts to get the number of cubes
+  that pack the prism.
+- Multiply the number of cubes by the volume of one cube, 1/(n x n x n) cubic unit.
+assess: A box is 3/2 units long, 1 unit wide, and 1/2 unit tall. It is packed exactly with cubes of edge
+  1/2 unit, as shown. Use the packing to find the volume of the box in cubic units.
+sources:
+  ccss:
+  - 6.G.A.2
+  learning_components:
+  - '79258680'
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.multiple-of-unit
+    relation: definitional
+    points_to: statement
+    why: Each edge is a whole number of 1/n lengths, and the volume is a whole number of unit-fraction
+      cubic units.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.packing
+    relation: definitional
+    points_to: statement
+    why: The volume is the number of cubes that pack the prism, each with a known volume.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.three-factor-product
+    relation: procedural
+    points_to: procedure.2
+    why: The number of cubes that pack the prism is the product of the three counts along the edges.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.unit-fraction-cube
+    relation: procedural
+    points_to: procedure.3
+    why: The volume of one packing cube, 1/(n x n x n) cubic unit, is multiplied by the number of cubes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiply-whole.unit-fraction
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 multiplies the number of cubes by a unit fraction of a cubic unit, as in 6 x 1/8.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.additive
+    relation: definitional
+    points_to: statement
+    why: The prism's volume is the number of cubes times the volume of one cube because the equal cubes
+      together make the prism.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

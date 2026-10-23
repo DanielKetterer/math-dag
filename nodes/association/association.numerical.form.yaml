@@ -1,0 +1,64 @@
+id: association.numerical.form
+concept: association
+facet: numerical
+level: 2
+type: concept
+name: Linear and nonlinear association
+statement: An association shown in a scatter plot is linear when the points lie roughly along a straight
+  line and nonlinear when they follow a curve.
+assess: 'Data set A: (1, 3), (2, 5), (3, 6), (4, 9), (5, 11). Data set B: (0, 9), (1, 4), (2, 1), (3,
+  0), (4, 1), (5, 4), (6, 9). Plot each. Which shows a linear association and which a nonlinear association?'
+sources:
+  ccss:
+  - 8.SP.A.1
+  learning_components:
+  - bfb3223b
+requires:
+- clause: standard
+  all_of:
+  - node: data.scatter-plot.make
+    relation: representational
+    points_to: assess
+    why: The statement classifies the pattern of points in a scatter plot, and the test problem asks for
+      both data sets to be plotted.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem asks the learner to plot both data sets; classifying the
+        form of a given plot needs only reading it.'
+    status: proposed
+  - node: data.table-graph.read-values
+    relation: definitional
+    points_to: statement
+    why: The statement classifies a given scatter plot, so the learner must read points as paired values;
+      plotting is needed only in the test problem.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: coordinate-plane.first-quadrant.read
+    relation: definitional
+    points_to: statement
+    why: Classifying the pattern of the points needs reading where each point lies in the plane.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: line.straight-vs-curved
+    relation: definitional
+    points_to: statement
+    why: The target needs only an informal sense of a straight versus a curved path, not the endless line
+      of line.meaning.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

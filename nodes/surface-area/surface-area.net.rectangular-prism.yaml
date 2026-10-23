@@ -1,0 +1,89 @@
+id: surface-area.net.rectangular-prism
+concept: surface-area
+facet: core
+level: 2
+type: procedure
+name: Find the surface area of a rectangular prism from its net
+statement: The surface area of a right rectangular prism is the sum of the areas of the six rectangles
+  in its net.
+procedure:
+- Find the area of each rectangle in the net.
+- Add the six areas.
+assess: 'A net of a box is made of six labeled rectangles: two are 5 cm by 3 cm, two are 5 cm by 2 cm,
+  and two are 3 cm by 2 cm. Find the surface area of the box.'
+sources:
+  ccss:
+  - 6.G.A.4
+  learning_components:
+  - eed1bb5e
+  - 20ceb752
+requires:
+- clause: standard
+  all_of:
+  - node: surface-area.meaning
+    relation: definitional
+    points_to: statement
+    why: The surface area is the sum of the areas of all the faces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: net.meaning
+    relation: representational
+    points_to: statement
+    why: The six rectangles are read from a net, a flat figure of all the faces.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: procedure.1
+    why: The area of each rectangle in the net is its length times its width.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: Each rectangle's area, such as 5 x 3, is a single-digit product.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s products such as 5 x 3 are single-digit products.'
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: The six rectangle areas 15, 15, 10, 10, 6 and 6 are added.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s six areas 15, 15, 10, 10, 6 and 6 are added; the idea
+        is summing the faces.'
+    status: proposed
+status: proposed

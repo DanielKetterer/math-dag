@@ -1,0 +1,82 @@
+id: rational-number.estimate.reasonableness
+concept: rational-number
+facet: core
+level: 3
+type: justification
+name: Check an answer with rational numbers by estimating
+statement: Judge whether a computed answer with rational numbers in any form is reasonable by comparing
+  it with an estimate made by mental computation with rounded or friendly numbers.
+assess: A towel bar 9 3/4 inches long is centered on a door 27 1/2 inches wide. Sam computes that each
+  end of the bar is 8 7/8 inches from the edge of the door. Estimate the distance mentally, and say whether
+  Sam's answer is reasonable.
+sources:
+  ccss:
+  - 7.EE.B.3
+  learning_components:
+  - e26b6696
+requires:
+- clause: via-any-place
+  all_of:
+  - node: fraction.estimate.benchmark.difference
+    relation: justificatory
+    points_to: assess
+    why: Estimating a difference of fractions or mixed numbers, such as 27 1/2 minus 9 3/4, uses benchmarks
+      and judges reasonableness.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test problem estimates a fraction difference (27 1/2 - 9 3/4), but the idea
+        of checking an answer against a friendly-number estimate does not need a difference in particular.'
+    status: proposed
+  - node: rounding.decimal.any-place
+    relation: procedural
+    points_to: statement
+    why: A decimal in the computation is replaced by a rounded or friendly number to make the mental estimate.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement says ''rounded or friendly numbers''; rounding a decimal to a place
+        is the rounded route, and the test problem has no decimals. | other route: Replace each decimal
+        by a friendly or benchmark number chosen by number sense (as the fraction benchmark estimate nodes
+        do) without a place-value rounding rule.'
+    status: disputed
+- clause: critic-route-1
+  note: Estimate with friendly or benchmark numbers chosen by number sense, with no place-value rounding
+    of decimals.
+  all_of:
+  - node: fraction.estimate.benchmark.difference
+    relation: justificatory
+    points_to: assess
+    why: Estimating a difference of fractions or mixed numbers, such as 27 1/2 minus 9 3/4, uses benchmarks
+      and judges reasonableness.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The test problem estimates a fraction difference (27 1/2 - 9 3/4), but the idea
+        of checking an answer against a friendly-number estimate does not need a difference in particular.'
+    status: proposed
+  - node: fraction.estimate.benchmark.sum
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Estimate with friendly or benchmark numbers chosen
+      by number sense, with no place-value rounding of decimals.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

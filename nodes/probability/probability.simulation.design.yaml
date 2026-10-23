@@ -1,0 +1,82 @@
+id: probability.simulation.design
+concept: probability
+facet: relative-frequency
+level: 2
+type: procedure
+name: Design a simulation for a compound event
+statement: A simulation for a compound event uses a random device whose outcomes have the same probabilities
+  as each stage of the real process, and states what one trial is and how to tell from a trial whether
+  the event occurred.
+procedure:
+- Choose a random device, such as random digits, a spinner, or a number cube, and assign its outcomes
+  so that each stage's outcomes have the right probabilities.
+- Define one trial as the sequence of draws that plays out the whole compound process once.
+- State the rule that decides from a trial's draws whether the event occurred.
+assess: 40% of blood donors have type A blood. Design a simulation with random digits 0 to 9 for finding
+  donors one at a time until one has type A blood. Say which digits stand for type A, what one trial is,
+  and how to tell whether a trial needed at least 4 donors.
+sources:
+  ccss:
+  - 7.SP.C.8.c
+  learning_components:
+  - eefa37d0
+requires:
+- clause: standard
+  all_of:
+  - node: probability.model.uniform.event
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 assigns k of n equally likely digits to an outcome so that its probability is k over n,
+      as in a uniform model.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: probability.compound.event-outcomes
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 states a rule that decides whether a trial's draws satisfy the event's description, which
+      is checking an outcome against that description.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: percent.rate-per-100
+    relation: procedural
+    points_to: assess
+    why: The test problem gives the probability as 40%, which must be read as 40 per 100 and turned into
+      4 of the 10 digits.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem states the probability as a percent; the procedure does
+        not require percent.'
+    status: proposed
+  - node: percent.of-quantity
+    relation: procedural
+    points_to: assess
+    why: The test problem gives 40% and asks how many of the 10 digits should stand for type A, which
+      is 40% of 10.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem gives 40% and needs 40% of 10 digits; the design idea (match
+        each stage''s probabilities with a device) holds for probabilities given as fractions.'
+    status: proposed
+status: proposed

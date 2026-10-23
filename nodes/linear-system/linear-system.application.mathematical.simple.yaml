@@ -1,0 +1,238 @@
+id: linear-system.application.mathematical.simple
+concept: linear-system
+facet: algebraic
+level: 3
+type: application
+name: Find where two lines meet when each is given by its y-intercept and a slope or second point, with
+  an integer meeting point
+statement: Solve mathematical problems about two lines, each given by its y-intercept together with its
+  slope or one other point, that meet at a point with integer coordinates, by writing both equations as
+  y = mx + b and solving the system.
+assess: Line A passes through (0, 1) and (2, 5). Line B passes through (0, 7) and (3, 4). At what point
+  do the two lines meet?
+sources:
+  ccss:
+  - 8.EE.C.8.c
+  learning_components:
+  - d77eb62e
+requires:
+- clause: via-set-expressions-equal
+  all_of:
+  - node: slope.between-two-points
+    relation: definitional
+    points_to: statement
+    why: When a line is given by its y-intercept and a second point, the slope is found from those two
+      points.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx-plus-b.write
+    relation: representational
+    points_to: statement
+    why: The statement writes each line as y = mx + b from its y-intercept and slope.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.solution.intersection
+    relation: definitional
+    points_to: statement
+    why: Where the two lines meet is the solution of the system of their equations, which turns the geometric
+      question into solving a system.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.set-expressions-equal
+    relation: procedural
+    points_to: statement
+    why: With both lines written as y = mx + b, the meeting point is found by setting the two expressions
+      for y equal and solving.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The statement says only ''solving the system''; setting the two y-expressions
+        equal is one method. | other route: Solve the system by substitution, by elimination, or by graphing
+        both lines, since the meeting point has integer coordinates.'
+    status: disputed
+- clause: critic-route-1
+  note: Solve the system of the two y = mx + b equations by substitution.
+  all_of:
+  - node: slope.between-two-points
+    relation: definitional
+    points_to: statement
+    why: When a line is given by its y-intercept and a second point, the slope is found from those two
+      points.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx-plus-b.write
+    relation: representational
+    points_to: statement
+    why: The statement writes each line as y = mx + b from its y-intercept and slope.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.solution.intersection
+    relation: definitional
+    points_to: statement
+    why: Where the two lines meet is the solution of the system of their equations, which turns the geometric
+      question into solving a system.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.substitution
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Solve the system of the two y = mx + b equations by
+      substitution.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+- clause: critic-route-2
+  note: Solve the system by elimination.
+  all_of:
+  - node: slope.between-two-points
+    relation: definitional
+    points_to: statement
+    why: When a line is given by its y-intercept and a second point, the slope is found from those two
+      points.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx-plus-b.write
+    relation: representational
+    points_to: statement
+    why: The statement writes each line as y = mx + b from its y-intercept and slope.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.solution.intersection
+    relation: definitional
+    points_to: statement
+    why: Where the two lines meet is the solution of the system of their equations, which turns the geometric
+      question into solving a system.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.elimination
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Solve the system by elimination.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+- clause: critic-route-3
+  note: Graph both lines and read the integer meeting point.
+  all_of:
+  - node: slope.between-two-points
+    relation: definitional
+    points_to: statement
+    why: When a line is given by its y-intercept and a second point, the slope is found from those two
+      points.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx-plus-b.write
+    relation: representational
+    points_to: statement
+    why: The statement writes each line as y = mx + b from its y-intercept and slope.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.solution.intersection
+    relation: definitional
+    points_to: statement
+    why: Where the two lines meet is the solution of the system of their equations, which turns the geometric
+      question into solving a system.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.graph.estimate
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Graph both lines and read the integer meeting point.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

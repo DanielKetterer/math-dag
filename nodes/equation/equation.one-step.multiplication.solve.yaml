@@ -1,0 +1,114 @@
+id: equation.one-step.multiplication.solve
+concept: equation
+facet: open-sentence
+level: 3
+type: procedure
+name: Solve px = q with nonnegative rational numbers
+statement: Solve an equation px = q, where p is a positive whole number, fraction or decimal and q is
+  a nonnegative one, by dividing both sides by p, so that x = q divided by p.
+procedure:
+- Divide both sides of the equation by p.
+- Compute q divided by p; the result is the value of x.
+assess: Solve (3/4)x = 6.
+sources:
+  ccss:
+  - 6.EE.B.7
+  learning_components:
+  - e50eda80
+requires:
+- clause: via-symbolic
+  all_of:
+  - node: equation.equality-preserved.same-operation
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 divides both sides by p, which is justified because dividing both sides by the same nonzero
+      number keeps the solutions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: representational
+    points_to: statement
+    why: The equation px = q and the test equation (3/4)x = 6 write the product of p and x with the multiplication
+      sign hidden.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 computes q divided by p for whole numbers when p is a one-digit number that divides q
+      evenly.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.division.symbolic
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 computes q divided by p for a fraction p, as in 6 divided by 3/4 in the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.division.by-decimal.algorithm
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 computes q divided by p when p is a decimal.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-two-digit
+    relation: definitional
+    points_to: statement
+    why: p may be any positive whole number, so q divided by p can need a two-digit divisor; the one-digit
+      node covers only part of the statement.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: fraction.quotient.symbolic
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 computes q divided by p for whole numbers when the quotient is not a whole number, writing
+      it as a fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: A whole-number quotient that does not come out even can also be given as a decimal
+        rather than a fraction, so writing it as a/b is one of two ways to state the value of x. | other
+        route: Compute the decimal quotient with decimal.division.by-whole.algorithm (dividing past the
+        ones place).'
+    status: disputed
+status: proposed

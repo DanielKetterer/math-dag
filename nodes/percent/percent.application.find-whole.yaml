@@ -29,7 +29,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: equations.one-step
+  - node: equation.one-step.multiplication.solve
     relation: procedural
     points_to: statement
     why: Solving (p/100) x W = part for W is a one-step equation solved by dividing both sides by p/100.
@@ -43,6 +43,10 @@ requires:
       note: 'route-only: Formal one-step equation solving is one route; the other reasons about the unknown
         factor or uses unit steps (30% is 18, so 10% is 6). | other route: Unit-percent reasoning with
         a ratio table (ratio.table.missing-value) or unknown-factor reasoning (division.fractions.unknown-factor).'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired equations.one-step: (p/100) x W = part is px = q, solved by dividing
+        both sides by p/100.'
     status: disputed
 - clause: via-symbolic
   all_of:

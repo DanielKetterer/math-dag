@@ -1,0 +1,49 @@
+id: scientific-notation.estimate.large
+concept: scientific-notation
+facet: core
+level: 3
+type: procedure
+name: Estimate a large number as a single digit times a power of 10
+statement: Estimate a whole number of 10 or more as d x 10^n, with d a single digit from 1 to 9 and n
+  a positive integer, by rounding the number to its greatest place.
+procedure:
+- Round the number to its greatest place, so that one nonzero digit is left.
+- Take that digit as d, and the number of places after it as n.
+- Write d x 10^n.
+assess: Estimate 4,120,000,000 as a single digit times a power of 10.
+sources:
+  ccss:
+  - 8.EE.A.3
+  learning_components:
+  - 36effa5a
+requires:
+- clause: standard
+  all_of:
+  - node: rounding.whole-number.any-place
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rounds the number to its greatest place, which is rounding a multi-digit whole number
+      to any place.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.power-of-ten.notation
+    relation: representational
+    points_to: procedure.3
+    why: Step 3 writes the estimate as d x 10^n using power-of-10 notation with a positive exponent.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

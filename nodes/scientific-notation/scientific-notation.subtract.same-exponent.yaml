@@ -1,0 +1,60 @@
+id: scientific-notation.subtract.same-exponent
+concept: scientific-notation
+facet: core
+level: 3
+type: procedure
+name: Subtract numbers in scientific notation with the same power of 10
+statement: '(a x 10^n) - (b x 10^n) = (a - b) x 10^n: subtract the leading factors and keep the power
+  of 10.'
+procedure:
+- Subtract the leading factors.
+- Keep the common power of 10.
+- If the new leading factor is less than 1, rewrite the result in scientific notation.
+assess: Find 8.6 x 10^-4 - 2.3 x 10^-4. Give the answer in scientific notation.
+sources:
+  ccss:
+  - 8.EE.A.4
+  learning_components:
+  - cad5a87d
+requires:
+- clause: standard
+  all_of:
+  - node: scientific-notation.meaning
+    relation: representational
+    points_to: statement
+    why: Both numbers and the result are written as a leading factor times a power of 10 in scientific
+      notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.subtraction.algorithm
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 subtracts the leading factors, which are decimals such as 8.6 and 2.3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: scientific-notation.normalize
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 rewrites a difference whose leading factor is less than 1 in scientific notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

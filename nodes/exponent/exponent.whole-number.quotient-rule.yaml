@@ -1,0 +1,193 @@
+id: exponent.whole-number.quotient-rule
+concept: exponent
+facet: whole-number-power
+level: 3
+type: concept
+name: 'Quotient of powers with the same base: a^m divided by a^n = a^(m - n)'
+statement: 'For any nonzero number a and positive whole numbers m and n with m greater than n, a^m divided
+  by a^n = a^(m - n): dividing powers of the same base subtracts the exponents.'
+assess: 'Without computing any power, decide whether each is true: 7^6 divided by 7^2 = 7^4; 7^6 divided
+  by 7^2 = 7^3; 7^6 divided by 7^2 = 1^4.'
+sources:
+  ccss:
+  - 8.EE.A.1
+  learning_components: []
+requires:
+- clause: via-product-rule
+  all_of:
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The rule is stated with letters, each standing for any number or any whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-10
+    relation: procedural
+    points_to: assess
+    why: The test problems need the difference 6 - 2 to tell 7^4 apart from 7^3 and 1^4.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement subtracts general whole-number exponents; only the test problem
+        needs the specific difference 6 - 2 within 10.'
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: a^m and a^n expand into m and n equal factors of a, which can be written out in full.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number.product-rule
+    relation: justificatory
+    points_to: statement
+    why: Since a^(m - n) x a^n = a^m by the product rule, a^(m - n) is the quotient of a^m by a^n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Only the unknown-factor route needs the product rule (a^(m-n) x a^n = a^m); expanding
+        into factors and cancelling reaches the quotient rule from the power meaning alone. | other route:
+        Expand a^m and a^n into m and n factors, write the quotient as a fraction and cancel n factors
+        (fraction.quotient.symbolic, fraction.equivalent.multiply-principle).'
+    status: disputed
+- clause: via-meaning
+  all_of:
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The rule is stated with letters, each standing for any number or any whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-10
+    relation: procedural
+    points_to: assess
+    why: The test problems need the difference 6 - 2 to tell 7^4 apart from 7^3 and 1^4.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement subtracts general whole-number exponents; only the test problem
+        needs the specific difference 6 - 2 within 10.'
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: a^m and a^n expand into m and n equal factors of a, which can be written out in full.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.unknown-factor.meaning
+    relation: definitional
+    points_to: statement
+    why: The quotient of a^m by a^n is the unknown factor that multiplies a^n to give a^m.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Division is needed, but the unknown-factor meaning is one way to read a^m divided
+        by a^n; the rule can be grasped by expanding both powers and cancelling common factors. | other
+        route: Write a^m divided by a^n as a fraction (fraction.quotient.symbolic) and cancel the n shared
+        factors of a, with no unknown-factor meaning and no product rule.'
+    status: disputed
+- clause: cancel-factors
+  all_of:
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The rule is stated with letters, each standing for any number or any whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-10
+    relation: procedural
+    points_to: assess
+    why: The test problems need the difference 6 - 2 to tell 7^4 apart from 7^3 and 1^4.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement subtracts general whole-number exponents; only the test problem
+        needs the specific difference 6 - 2 within 10.'
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: a^m and a^n expand into m and n equal factors of a, which can be written out in full.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.quotient.symbolic
+    relation: definitional
+    points_to: statement
+    why: a^m divided by a^n is written as the fraction a^m/a^n, with products of a above and below.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Writing the quotient as a fraction supports the cancelling route only; the statement
+        itself speaks of dividing and does not need the fraction form.'
+    status: disputed
+  - node: fraction.equivalent.multiply-principle
+    relation: justificatory
+    points_to: statement
+    why: Dividing numerator and denominator by the shared n factors of a leaves m - n factors of a.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Cancelling shared factors by dividing numerator and denominator is one route
+        to the rule; the unknown-factor route does not use equivalent fractions.'
+    status: disputed
+status: proposed

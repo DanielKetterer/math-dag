@@ -1,0 +1,96 @@
+id: volume.composite.right-prisms
+concept: volume
+facet: additive
+level: 3
+type: procedure
+name: Find the volume of a solid made of right prisms, not all rectangular
+statement: The volume of a solid made of non-overlapping right prisms, at least one with a non-rectangular
+  base, is the sum of the volumes of the prisms.
+procedure:
+- Split the solid into right prisms that do not overlap.
+- Find the volume of each prism with V = B x h.
+- Add the volumes.
+assess: A solid is a 6 m by 4 m by 3 m box with a triangular prism on top. The prism is 6 m long and its
+  triangular ends have a base of 4 m and a height of 2 m. Find the volume of the solid.
+sources:
+  ccss:
+  - 7.G.B.6
+  learning_components:
+  - c9233a4b
+requires:
+- clause: standard
+  all_of:
+  - node: shapes.prism.right.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Splitting the solid into right prisms needs recognizing which pieces are right prisms.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.prism.right.base-height.apply
+    relation: procedural
+    points_to: procedure.2
+    why: Each prism's volume is found with V = B x h, including prisms with a triangular base.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.additive
+    relation: definitional
+    points_to: statement
+    why: The volume of the whole solid is the sum of the volumes of the non-overlapping prisms.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: procedure.3
+    why: Adding the volumes of the prisms is a sum of whole numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.prism.formula.base-height.apply
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds the volume of the rectangular box using V = B x h.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds the prism volumes, such as 72 and 24.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The rationale cites 72 and 24, whose sum 96 is within 100, so addition within
+        1000 may be stronger than the target uses.'
+    status: disputed
+status: proposed

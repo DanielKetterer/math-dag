@@ -1,0 +1,71 @@
+id: area.parallelogram.formula.apply
+concept: area
+facet: multiplicative
+level: 3
+type: procedure
+name: Find the area of a parallelogram with A = b x h
+statement: The area of a parallelogram is found by multiplying a base by the height to that base.
+procedure:
+- Choose a side as the base and identify the height to that base.
+- Multiply the base by the height.
+assess: A parallelogram has a base of 9 m, a slanted side of 5 m, and a height of 4 m to the base. Find
+  its area.
+sources:
+  ccss:
+  - 6.G.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: area.parallelogram.formula
+    relation: definitional
+    points_to: statement
+    why: The procedure applies the rule that the area is a base times the height to that base.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: height.base-height
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 identifies the height to the chosen base and sets aside the slanted side.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The base times height product 9 x 4 is a single-digit product.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 9 x 4 is a single-digit product.'
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies the base by the height, here 9 times 4.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The procedure says only ''multiply the base by the height'' with no number range;
+        the test uses 9 x 4, which is a recalled fact (e687), so this node is stronger than the test needs
+        but too weak for general whole-number lengths.'
+    status: disputed
+status: proposed

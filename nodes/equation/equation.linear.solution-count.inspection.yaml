@@ -1,0 +1,64 @@
+id: equation.linear.solution-count.inspection
+concept: equation
+facet: linear-one-variable
+level: 3
+type: procedure
+name: Tell by inspection how many solutions a linear equation has
+statement: When each side of a linear equation is collected into the form px + q, the equation has exactly
+  one solution if the coefficients of x differ, no solution if they are equal and the constants differ,
+  and infinitely many solutions if both are equal.
+procedure:
+- If needed, expand and collect like terms mentally so each side has the form px + q.
+- 'Compare the coefficients of x: if they differ, there is exactly one solution.'
+- 'If they are equal, compare the constants: different constants mean no solution, equal constants mean
+  infinitely many.'
+assess: 'Without solving, say how many solutions each equation has: 4x + 1 = 4x + 7; 4x + 1 = 2x + 1;
+  2(2x + 3) = 4x + 6.'
+sources:
+  ccss:
+  - 8.EE.C.7.a
+  learning_components:
+  - d9f1f252
+requires:
+- clause: standard
+  all_of:
+  - node: equation.linear.solution-count.cases
+    relation: definitional
+    points_to: statement
+    why: The rule sorts equations into the three cases of one, no, or infinitely many solutions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.linear.expand.rational
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 expands products such as 2(2x + 3) so each side can be read as px + q.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.linear.add.rational
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 collects like terms so each side has the single form px + q.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

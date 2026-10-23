@@ -1,0 +1,61 @@
+id: equation.linear.expand-collect
+concept: equation
+facet: linear-one-variable
+level: 3
+type: procedure
+name: Solve a linear equation that needs expanding and collecting like terms
+statement: Solve a linear equation with integer coefficients in which a side must first be rewritten,
+  by expanding products with the distributive property and collecting like terms, as a single expression
+  px + q.
+procedure:
+- Expand each product such as 3(x - 2) with the distributive property.
+- Collect like terms on each side.
+- Solve the resulting equation.
+assess: Solve 3(x - 2) + 4x = 15.
+sources:
+  ccss:
+  - 8.EE.C.7.b
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.linear.expand.rational
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 expands products such as 3(x - 2) with the distributive property and signed numbers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.linear.add.rational
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 collects like terms such as 3x and 4x on a side into a single expression px + q.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.two-step.px-plus-q.solve
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 solves the equation px + q = r that remains, such as 7x - 6 = 15.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

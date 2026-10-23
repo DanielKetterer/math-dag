@@ -1,0 +1,76 @@
+id: exponent.negative
+concept: exponent
+facet: integer-power
+level: 3
+type: concept
+name: 'A negative exponent: a^(-n) = 1/a^n'
+statement: For any nonzero number a and positive whole number n, a^(-n) = 1/a^n, the reciprocal of a^n.
+assess: 'Which of these equals 2^-3: -8, -6, 1/8, or 1/6?'
+sources:
+  ccss:
+  - 8.EE.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The rule is stated with letters, each standing for any number or any whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.reciprocal
+    relation: definitional
+    points_to: statement
+    why: The statement says a^(-n) is the reciprocal of a^n, the number whose product with a^n is 1.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.signed.meaning
+    relation: representational
+    points_to: statement
+    why: The exponent -n is a negative number, so exponents now extend below zero.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: procedural
+    points_to: assess
+    why: The test problem needs 2^3 = 8 evaluated to choose 1/8 over -8, -6 and 1/6.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test item needs 2^3 = 8 evaluated to choose among 1/8, -8, -6, 1/6; the
+        statement itself does not evaluate a power.'
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement uses a^n for positive whole n as the quantity being reciprocated; the power notation
+      is used directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

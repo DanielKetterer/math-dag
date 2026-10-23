@@ -1,0 +1,57 @@
+id: expressions.parts.name
+concept: expressions
+facet: algebraic
+level: 3
+type: concept
+name: Name the parts of an expression
+statement: 'The parts of an expression are named by its operations: the parts added in a sum are terms,
+  the parts multiplied in a product are factors, an expression whose last operation is division is a quotient,
+  and the number factor of a term with a letter is its coefficient.'
+assess: 'In 5x + 2y + 8: how many terms are there, what is the coefficient of y, and what are the two
+  factors of 5x?'
+sources:
+  ccss:
+  - 6.EE.A.2.b
+  learning_components:
+  - adfe0503
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.notation.implicit-multiplication
+    relation: representational
+    points_to: statement
+    why: Finding the coefficient of y and the two factors of 5x requires reading 5x as 5 times x.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.order-of-operations
+    relation: definitional
+    points_to: statement
+    why: The names sum, product and quotient depend on which operation is last, as in seeing 5x + 2y +
+      8 as a sum of three terms.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The test expression 5x + 2y + 8 has letters, and 'the number factor of a term with a letter'
+      needs a letter read as a number in a product.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

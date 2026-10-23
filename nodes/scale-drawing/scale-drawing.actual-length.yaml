@@ -1,0 +1,90 @@
+id: scale-drawing.actual-length
+concept: scale-drawing
+facet: core
+level: 2
+type: procedure
+name: Find an actual length from a scale drawing
+statement: 'An actual length is found from its length in a scale drawing by proportional reasoning with
+  the scale: drawing length and actual length are in the same ratio as the two lengths named in the scale.'
+procedure:
+- Write the scale as a pair of corresponding lengths, drawing length to actual length.
+- Find how many times the scale's drawing length fits into the given drawing length.
+- Multiply the scale's actual length by that number.
+assess: On a plan, 2 cm represents 5 m. A wall is 8 cm long on the plan. How long is the actual wall?
+sources:
+  ccss:
+  - 7.G.A.1
+  learning_components:
+  - 9ffdee4b
+requires:
+- clause: standard
+  all_of:
+  - node: scale-drawing.meaning
+    relation: definitional
+    points_to: statement
+    why: The scale states which actual length one drawing length stands for.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.equivalent
+    relation: definitional
+    points_to: statement
+    why: Drawing length and actual length are in the same ratio as the two lengths named in the scale.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds how many times the scale's drawing length fits into the given drawing length, here
+      8 divided by 2.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Step 2 asks how many times one length fits into another, with no stated range;
+        the test''s 8 / 2 is a recalled division fact, so division by a one-digit number is stronger than
+        the test needs but may be too weak for other drawing lengths.'
+    status: disputed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 multiplies the scale's actual length by that number, here 4 times 5.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Step 3 multiplies two lengths with no stated range; the test''s 4 x 5 is a recalled
+        fact, so multiplication by a one-digit number is stronger than the test needs but may be too weak
+        for other lengths.'
+    status: disputed
+  - node: division.measurement.meaning
+    relation: definitional
+    points_to: statement
+    why: Step 2 asks how many times the scale's drawing length fits into the given length, a grouping
+      (measurement) division.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+related:
+- node: ratio.table.missing-value
+  relation: same_idea_different_form
+  note: The procedure's steps 2 and 3 are themselves the scale-up of a pair of corresponding values that
+    the missing-value procedure carries out in a table; the target needs only the steps, not a table.
+status: proposed

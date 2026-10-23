@@ -1,0 +1,106 @@
+id: linear-function.line.graph
+concept: linear-function
+facet: line
+level: 3
+type: procedure
+name: Graph a linear function from its equation y = mx + b
+statement: Graph y = mx + b by plotting two points whose coordinates satisfy the equation and drawing
+  the straight line through them.
+procedure:
+- Plot the point (0, b).
+- Substitute another value of x into the equation to find a second point, and plot it.
+- Draw the straight line through the two points.
+assess: Graph y = -2x + 3.
+sources:
+  ccss:
+  - 8.F.A.3
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: equation.two-variable.graph-as-solutions
+    relation: definitional
+    points_to: statement
+    why: The procedure plots points whose coordinates satisfy the equation, because the graph is the set
+      of such points.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.graph-is-line
+    relation: justificatory
+    points_to: statement
+    why: Drawing the straight line through two plotted points is valid because the graph of y = mx + b
+      is a straight line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.four-quadrants.plot
+    relation: procedural
+    points_to: procedure.1
+    why: Steps 1 and 2 plot the points (0, b) and a second point, whose coordinates may be negative.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.evaluate
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 substitutes another value of x into mx + b and evaluates to find the second point's y.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.multiplication.rationals
+    relation: procedural
+    points_to: procedure.2
+    why: Evaluating mx at a chosen x multiplies signed numbers, since m may be negative or a fraction.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.addition.rationals
+    relation: procedural
+    points_to: procedure.2
+    why: Evaluating mx + b adds a signed constant to the product.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: line.meaning
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 draws the straight line through the two points, extended in both directions.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

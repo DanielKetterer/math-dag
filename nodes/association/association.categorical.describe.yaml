@@ -1,0 +1,59 @@
+id: association.categorical.describe
+concept: association
+facet: categorical
+level: 3
+type: application
+name: Use relative frequencies in a two-way table to describe an association
+statement: Problems that give a two-way table of counts for two categorical variables and ask whether
+  the data suggest an association, answered by comparing row (or column) relative frequencies and describing
+  the association, if any, in context.
+assess: Of 30 students with a curfew, 24 have chores and 6 do not. Of 10 students without a curfew, 3
+  have chores and 7 do not. Is there evidence that students who have a curfew also tend to have chores?
+  Support your answer with relative frequencies.
+sources:
+  ccss:
+  - 8.SP.A.4
+  learning_components:
+  - 13103f2c
+requires:
+- clause: standard
+  all_of:
+  - node: association.categorical.meaning
+    relation: definitional
+    points_to: statement
+    why: The answer decides whether there is an association by judging whether the relative frequencies
+      differ between categories.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: table.two-way.relative-frequency
+    relation: procedural
+    points_to: statement
+    why: The statement says the answer is found by computing row or column relative frequencies from the
+      counts in the two-way table.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.compare
+    relation: definitional
+    points_to: statement
+    why: The answer rests on comparing row (or column) relative frequencies, for instance 0.8 and 0.3
+      in the test problem.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

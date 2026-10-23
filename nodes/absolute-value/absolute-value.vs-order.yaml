@@ -1,0 +1,46 @@
+id: absolute-value.vs-order
+concept: absolute-value
+facet: distance
+level: 3
+type: concept
+name: Comparing absolute values is not comparing numbers
+statement: 'A comparison of absolute values is a different statement from a comparison of the numbers:
+  of two negative numbers, the one with the greater absolute value is the lesser number.'
+assess: 'True or false: -8 < -3. True or false: |-8| < |-3|. Explain why the two answers differ.'
+sources:
+  ccss:
+  - 6.NS.C.7.d
+  learning_components:
+  - f1a27da7
+  - 20e0f0fc
+requires:
+- clause: standard
+  all_of:
+  - node: absolute-value.distance.integer
+    relation: definitional
+    points_to: statement
+    why: The statement compares absolute values such as |-8| and |-3|, which are distances from 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.compare.integers
+    relation: definitional
+    points_to: statement
+    why: The statement says that of two negative numbers the one with the greater absolute value is the
+      lesser number, which is the order of negative integers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

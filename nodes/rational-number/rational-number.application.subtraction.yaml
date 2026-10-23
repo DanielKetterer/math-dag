@@ -1,0 +1,56 @@
+id: rational-number.application.subtraction
+concept: rational-number
+facet: change
+level: 3
+type: application
+name: Solve real-world problems that find the signed change between two values
+statement: A real-world problem gives two signed values of the same kind, such as two temperatures or
+  elevations, and asks for the change from the first to the second, found by subtracting the first from
+  the second.
+assess: At noon the temperature was 4.5 degrees C. At midnight it was -7.25 degrees C. What was the change
+  in temperature from noon to midnight?
+sources:
+  ccss:
+  - 7.NS.A.3
+  learning_components:
+  - 39612eaf
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.subtraction.rationals
+    relation: procedural
+    points_to: statement
+    why: The change is found by subtracting the first value from the second, such as 4.5 from -7.25.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.negative-as-decrease
+    relation: representational
+    points_to: statement
+    why: The answer is a signed change, and a negative result must be read as a decrease in temperature.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.unknown-addend.meaning
+    relation: definitional
+    points_to: statement
+    why: The change from the first value to the second is the amount added to the first to reach the second,
+      so second minus first.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

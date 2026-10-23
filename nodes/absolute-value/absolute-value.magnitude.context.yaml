@@ -1,0 +1,46 @@
+id: absolute-value.magnitude.context
+concept: absolute-value
+facet: magnitude
+level: 2
+type: concept
+name: Absolute value as the size of a signed quantity in context
+statement: For a quantity in a real-world context written as a signed number, its absolute value is the
+  size of the quantity without its direction, such as the amount of a debt or a depth below sea level.
+assess: An account balance is -30 dollars. What does |-30| = 30 tell you about the account?
+sources:
+  ccss:
+  - 6.NS.C.7.c
+  learning_components:
+  - 8ef052eb
+requires:
+- clause: standard
+  all_of:
+  - node: absolute-value.distance.integer
+    relation: definitional
+    points_to: statement
+    why: The statement reads |a| as the size of a signed quantity, and the test uses |-30| = 30 as the
+      distance of -30 from 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.signed.meaning
+    relation: definitional
+    points_to: statement
+    why: A signed quantity in context, such as a balance of -30 dollars, has a direction from 0 that the
+      absolute value leaves out.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

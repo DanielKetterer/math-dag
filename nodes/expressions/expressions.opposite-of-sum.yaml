@@ -1,0 +1,72 @@
+id: expressions.opposite-of-sum
+concept: expressions
+facet: algebraic
+level: 3
+type: concept
+name: The opposite of a sum is the sum of the opposites
+statement: 'For any rational numbers a and b, -(a + b) = -a + (-b), so subtracting an expression in parentheses
+  subtracts each of its terms: c - (a + b) = c - a - b and c - (a - b) = c - a + b.'
+assess: 'Which expression equals 10 - (x - 4): 10 - x - 4, or 10 - x + 4? Explain using the opposite of
+  x - 4.'
+sources:
+  ccss:
+  - 7.EE.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.subtraction.add-inverse
+    relation: definitional
+    points_to: statement
+    why: The identities c - (a + b) = c - a - b start from subtracting the sum being the same as adding
+      its opposite.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.additive-inverse
+    relation: justificatory
+    points_to: statement
+    why: -a + (-b) is the opposite of a + b because the two sums together make 0, which is the meaning
+      of additive inverses.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.opposite.of-opposite
+    relation: definitional
+    points_to: statement
+    why: The identity c - (a - b) = c - a + b uses that the opposite of the opposite of b is b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.parts.single-entity
+    relation: representational
+    points_to: statement
+    why: The opposite is taken of the whole sum a + b, or of x - 4, viewed as a single quantity.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

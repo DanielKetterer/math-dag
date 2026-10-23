@@ -1,0 +1,154 @@
+id: equation.two-step.write.p-times-sum
+concept: equation
+facet: open-sentence
+level: 3
+type: representation
+name: Write p(x + q) = r for a word problem
+statement: For a word problem in which an unknown quantity is increased or decreased by a known amount
+  q and the result is multiplied by a known rational number p to give a known amount r, write the equation
+  p(x + q) = r, saying what x stands for.
+assess: Each of 4 friends buys a movie ticket and a $3.50 snack. Together they spend $46. Write an equation
+  for the price t, in dollars, of one ticket.
+sources:
+  ccss:
+  - 7.EE.B.4.a
+  learning_components:
+  - aad9e34e
+requires:
+- clause: via-addition
+  all_of:
+  - node: expressions.parts.single-entity
+    relation: representational
+    points_to: statement
+    why: The sum x + q is treated as a single quantity that is multiplied by p.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: representational
+    points_to: statement
+    why: The equation is written p(x + q) = r, with the number p next to the parenthesis meaning p times
+      the sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.one-step.write.addition
+    relation: representational
+    points_to: statement
+    why: The unknown increased or decreased by a known amount q, such as ticket price plus $3.50, is written
+      as x + q.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: One-step equation writing is one way to build p(x + q) = r; the sum x + q can
+        be written directly as an expression for the situation. | other route: Write the expression for
+        the situation (expressions.variable.write-for-situation), then set it equal to the known total
+        (equation.equal-sign.meaning), skipping one-step equation writing.'
+    status: disputed
+- clause: via-multiplication
+  all_of:
+  - node: expressions.parts.single-entity
+    relation: representational
+    points_to: statement
+    why: The sum x + q is treated as a single quantity that is multiplied by p.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: representational
+    points_to: statement
+    why: The equation is written p(x + q) = r, with the number p next to the parenthesis meaning p times
+      the sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.one-step.write.multiplication
+    relation: representational
+    points_to: statement
+    why: The multiplication by the known number p, such as 4 friends, and the setting equal to the total
+      are written as in px = q.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: One-step equation writing is one way to build p(x + q) = r; the multiplier p
+        times the quantity can be written directly as an expression. | other route: Write the expression
+        for the situation (expressions.variable.write-for-situation), then set it equal to the known total
+        (equation.equal-sign.meaning), skipping one-step equation writing.'
+    status: disputed
+- clause: critic-route-2
+  note: Write the expression p(x + q) directly for the situation, then set it equal to the known total.
+  all_of:
+  - node: expressions.parts.single-entity
+    relation: representational
+    points_to: statement
+    why: The sum x + q is treated as a single quantity that is multiplied by p.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: representational
+    points_to: statement
+    why: The equation is written p(x + q) = r, with the number p next to the parenthesis meaning p times
+      the sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.write-for-situation
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Write the expression p(x + q) directly for the situation,
+      then set it equal to the known total.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: equation.equal-sign.meaning
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Write the expression p(x + q) directly for the situation,
+      then set it equal to the known total.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

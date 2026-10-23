@@ -1,0 +1,63 @@
+id: center.mean.compute
+concept: center
+facet: mean
+level: 3
+type: procedure
+name: Find the mean of a numerical data set
+statement: The mean of a numerical data set is the sum of its values divided by the number of values.
+procedure:
+- Add all the values in the data set, counting repeated values each time.
+- Count the number of values.
+- Divide the sum by the number of values.
+assess: Find the mean of 4, 7, 7, 10, 12.
+sources:
+  ccss:
+  - 6.SP.B.5.c
+  learning_components:
+  - 2ad87414
+requires:
+- clause: standard
+  all_of:
+  - node: addition.within-100
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 adds all the values of the data set, repeats included, and the test sum of five values
+      stays within 100; any method of adding will do.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.observations.count
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 counts the number of values in the data set, counting a repeated value each time it occurs,
+      which is the number of observations.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 divides the sum by the number of values, and the test problem divides 40 by 5; any method
+      of dividing will do.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

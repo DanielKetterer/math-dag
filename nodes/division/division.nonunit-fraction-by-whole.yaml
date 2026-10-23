@@ -1,0 +1,56 @@
+id: division.nonunit-fraction-by-whole
+concept: division
+facet: partitive
+level: 3
+type: procedure
+name: Divide a fraction by a whole number
+statement: 'Divide a fraction a/b by a whole number n greater than 0 by multiplying the denominator by
+  n: (a/b) divided by n = a/(b x n).'
+procedure:
+- Keep the numerator a.
+- Multiply the denominator b by n.
+- Write a/(b x n) as the quotient.
+assess: Compute (3/4) divided by 2.
+sources:
+  ccss:
+  - 6.NS.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies the denominator b by n, such as 4 times 2 in the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: Step 2 multiplies the denominator b by n, a product of whole numbers such as 4 x 2 in the test
+      problem.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement multiplies b by any whole number n, so the general node is multiplication.by-one-digit
+        (e1514); only the test problem''s 4 x 2 is a recalled fact.'
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: The procedure keeps the numerator a and multiplies the denominator b by n, and the test uses
+      the non-unit fraction 3/4, so the learner must read a/b with numerator a and denominator b.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

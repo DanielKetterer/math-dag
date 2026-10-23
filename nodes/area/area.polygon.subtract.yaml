@@ -1,0 +1,232 @@
+id: area.polygon.subtract
+concept: area
+facet: additive
+level: 2
+type: procedure
+name: Find the area of a figure by subtracting the pieces outside it from a larger figure
+statement: The area of a figure equals the area of a larger figure that contains it minus the areas of
+  the non-overlapping pieces of the larger figure that lie outside it.
+procedure:
+- Enclose the figure in a larger figure whose area can be found, usually a rectangle.
+- Find the area of each piece of the larger figure that lies outside the given figure.
+- Subtract the sum of those areas from the area of the larger figure.
+assess: A triangle drawn on grid paper fits exactly inside a 6-by-5 rectangle. The three pieces of the
+  rectangle outside the triangle are right triangles with legs 6 and 2, 4 and 3, and 2 and 5. Find the
+  area of the triangle by subtracting.
+sources:
+  ccss:
+  - 6.G.A.1
+  - 7.G.B.6
+  learning_components:
+  - 5a75b6d4
+  - 370f42c5
+requires:
+- clause: via-half-rectangle
+  all_of:
+  - node: area.additive
+    relation: definitional
+    points_to: statement
+    why: The larger figure's area is the sum of the given figure and the outside pieces, so subtracting
+      recovers it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: procedure.1
+    why: The enclosing figure is usually a rectangle whose area is its length times its width.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The enclosing rectangle's area 6 x 5 is a single-digit product.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s enclosing 6 x 5 is a single-digit product.'
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: assess
+    why: The sum of the outside areas is subtracted from the rectangle's area of 30.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 30 - 17 needs subtracting; the idea is the subtraction
+        of areas, not the arithmetic.'
+    status: proposed
+  - node: area.triangle.right.half-rectangle
+    relation: procedural
+    points_to: assess
+    why: Each outside piece in the test problem is a right triangle with given legs, whose area is half
+      a rectangle.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The outside right triangles in the test have legs given, so half of the leg rectangle
+        gives each area; the statement allows any outside piece, so this covers only right-triangle pieces.
+        | other route: Use the triangle formula (area.triangle.formula.apply), as in e714, or half of
+        a parallelogram for pieces that are not right triangles.'
+    status: disputed
+- clause: via-apply
+  all_of:
+  - node: area.additive
+    relation: definitional
+    points_to: statement
+    why: The larger figure's area is the sum of the given figure and the outside pieces, so subtracting
+      recovers it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: procedure.1
+    why: The enclosing figure is usually a rectangle whose area is its length times its width.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The enclosing rectangle's area 6 x 5 is a single-digit product.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s enclosing 6 x 5 is a single-digit product.'
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: assess
+    why: The sum of the outside areas is subtracted from the rectangle's area of 30.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 30 - 17 needs subtracting; the idea is the subtraction
+        of areas, not the arithmetic.'
+    status: proposed
+  - node: area.triangle.formula.apply
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 finds the area of each outside piece, which are right triangles given by their legs.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Step 2 needs the area of each outside triangle from its legs or base and height,
+        which the formula gives. | other route: Find each outside right triangle''s area as half of the
+        rectangle on its legs (area.triangle.right.half-rectangle), or as half of a parallelogram (area.triangle.half-parallelogram).'
+    status: disputed
+- clause: critic-route-1
+  note: 'Model route: find each outside piece''s area as half of a parallelogram instead of by the formula'
+  all_of:
+  - node: area.additive
+    relation: definitional
+    points_to: statement
+    why: The larger figure's area is the sum of the given figure and the outside pieces, so subtracting
+      recovers it.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.rectangle.length-times-width
+    relation: procedural
+    points_to: procedure.1
+    why: The enclosing figure is usually a rectangle whose area is its length times its width.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.facts.within-100
+    relation: procedural
+    points_to: assess
+    why: The enclosing rectangle's area 6 x 5 is a single-digit product.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s enclosing 6 x 5 is a single-digit product.'
+    status: proposed
+  - node: subtraction.within-100
+    relation: procedural
+    points_to: assess
+    why: The sum of the outside areas is subtracted from the rectangle's area of 30.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 30 - 17 needs subtracting; the idea is the subtraction
+        of areas, not the arithmetic.'
+    status: proposed
+  - node: area.triangle.half-parallelogram
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Model route: find each outside piece''s area as half
+      of a parallelogram instead of by the formula'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

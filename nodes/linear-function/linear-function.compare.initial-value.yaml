@@ -1,0 +1,87 @@
+id: linear-function.compare.initial-value
+concept: linear-function
+facet: model
+level: 3
+type: procedure
+name: Compare the initial values of two linear functions given in different forms
+statement: Given two linear functions represented in different ways (equation, table, graph, or verbal
+  description), find the initial value of each, the output for input 0, and decide which is greater.
+procedure:
+- 'Find each function''s initial value: b in y = mx + b, the y-intercept of a graph, or, for a table,
+  the output reached by working back to input 0 at the constant rate.'
+- Compare the two initial values.
+assess: 'Function A is y = 4x + 1. Function B is given by the table x: 1, 2, 3 and y: 5, 7, 9. Which function
+  has the greater initial value?'
+sources:
+  ccss:
+  - 8.F.A.2
+  learning_components:
+  - 74b65cd2
+requires:
+- clause: standard
+  all_of:
+  - node: linear-function.model.initial.from-two-values
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds the initial value from a table or graph, working back to input 0 at the constant
+      rate.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.model.initial.from-description
+    relation: procedural
+    points_to: procedure.1
+    why: A function given by a verbal description has its initial value read from the words, as step 1
+      allows.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.line.y-mx-plus-b.write
+    relation: representational
+    points_to: procedure.1
+    why: Step 1 takes the initial value to be b in y = mx + b, so the meaning of b in that form is used.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.compare.rationals
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 decides which initial value is greater, and initial values can be negative fractions or
+      decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.table-graph.read-values
+    relation: definitional
+    points_to: statement
+    why: Values are read from a table or a graph to find the output at input 0.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

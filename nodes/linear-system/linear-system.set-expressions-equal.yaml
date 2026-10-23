@@ -1,0 +1,63 @@
+id: linear-system.set-expressions-equal
+concept: linear-system
+facet: algebraic
+level: 3
+type: procedure
+name: Solve a system of two equations y = mx + b by setting the expressions equal
+statement: When both equations of a system give y in terms of x, solve the system by setting the two expressions
+  for y equal, solving that equation for x, and substituting to find y.
+procedure:
+- Set the two expressions for y equal to each other.
+- Solve the resulting equation for x.
+- Substitute that value of x into either equation to find y.
+assess: Solve the system y = 3x - 2 and y = x + 4.
+sources:
+  ccss:
+  - 8.EE.C.8.b
+  learning_components:
+  - c7a43025
+requires:
+- clause: standard
+  all_of:
+  - node: linear-system.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: Setting the two expressions for y equal rests on a solution being one pair whose y-value satisfies
+      both equations at once.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.linear.variable-both-sides
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 solves the equation formed by the two expressions, which has x on both sides, as in 3x
+      - 2 = x + 4.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.evaluate
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 substitutes the value found for x into an expression for y and evaluates it to get y.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

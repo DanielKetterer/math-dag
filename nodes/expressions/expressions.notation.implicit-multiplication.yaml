@@ -1,0 +1,45 @@
+id: expressions.notation.implicit-multiplication
+concept: expressions
+facet: algebraic
+level: 3
+type: representation
+name: A number next to a letter or parenthesis means multiply
+statement: 'A number written directly before a letter or a parenthesis means multiplication: 4y means
+  4 x y, and 5(2 + n) means 5 x (2 + n).'
+assess: Rewrite 4y and 5(2 + n) with the multiplication sign x shown.
+sources:
+  ccss:
+  - 6.EE.A.2.c
+  - 6.EE.A.3
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: 4y means 4 times the number that y stands for, so the letter must already be read as a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.parentheses
+    relation: representational
+    points_to: statement
+    why: In 5(2 + n) a number sits directly before a parenthesized group, which must be read as one quantity
+      computed first.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

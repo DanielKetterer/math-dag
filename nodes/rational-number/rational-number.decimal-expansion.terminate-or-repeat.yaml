@@ -1,0 +1,45 @@
+id: rational-number.decimal-expansion.terminate-or-repeat
+concept: rational-number
+facet: decimal-expansion
+level: 3
+type: concept
+name: The decimal form of a rational number terminates or eventually repeats
+statement: The decimal form of a rational number either terminates, ending in 0s, or eventually repeats
+  one block of digits forever.
+assess: 'Which of these could be the decimal form of a fraction: 0.375; 0.41666... with the 6 repeating
+  forever; 0.1010010001... with one more 0 before each 1?'
+sources:
+  ccss:
+  - 7.NS.A.2.d
+  learning_components:
+  - 0bd082cc
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.definition
+    relation: definitional
+    points_to: statement
+    why: The statement is about the decimal form of a rational number, which is a number written as a
+      quotient of integers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.fraction-to-decimal.long-division
+    relation: definitional
+    points_to: statement
+    why: The decimal form of a fraction is found by long division, which produces terminating and repeating
+      decimals such as 0.375 and 0.41666...
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

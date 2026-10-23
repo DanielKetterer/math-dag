@@ -1,0 +1,61 @@
+id: rational-number.subtraction.integers
+concept: rational-number
+facet: core
+level: 3
+type: procedure
+name: Subtract two integers
+statement: Subtract one integer from another by rewriting the subtraction as adding the opposite and adding
+  the two integers.
+procedure:
+- Rewrite p - q as p + (-q).
+- Add p and -q by the sign rules for adding integers.
+assess: Compute 3 - 8, -5 - (-9), and -4 - 6.
+sources:
+  ccss:
+  - 7.NS.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.subtraction.add-inverse
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites p - q as p + (-q), which is exactly the identity that the add-the-opposite concept
+      states.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.opposite.of-opposite
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 produces -q, and when q is negative, as in -5 - (-9), the result -(-9) must be seen as
+      9.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.addition.integers
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds p and -q by the sign rules for adding integers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

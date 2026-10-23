@@ -1,0 +1,160 @@
+id: triangle.three-angles
+concept: triangle
+facet: determination
+level: 2
+type: concept
+name: Three angles give no triangle or infinitely many
+statement: Three angle measures fit no triangle unless their sum is 180 degrees; when the sum is 180 degrees
+  they fit infinitely many triangles, all the same shape and different in size.
+assess: Can you draw a triangle with angles of 50, 60 and 70 degrees? Can you draw two different ones?
+  Can you draw a triangle with angles of 50, 60 and 80 degrees?
+sources:
+  ccss:
+  - 7.G.A.2
+  learning_components:
+  - 9ddaee28
+requires:
+- clause: via-measure
+  all_of:
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The statement gives angle measures in degrees and says what their sum must be.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: definitional
+    points_to: statement
+    why: Deciding between no triangle and infinitely many means adding the three measures and comparing
+      with 180.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: construction.triangle.two-angles-included-side
+    relation: justificatory
+    points_to: statement
+    why: Drawing triangles from two angles and a side, with different side lengths, gives triangles of
+      one shape and different sizes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.match
+    relation: definitional
+    points_to: statement
+    why: Saying the triangles are all the same shape and different in size uses the informal idea of same
+      shape.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The statement needs same shape in the informal sense of scaled copies of different
+        sizes; it is not clear whether shapes.match covers that or only matching the same kind of shape.'
+    status: disputed
+  - node: angle.protractor.measure
+    relation: justificatory
+    points_to: statement
+    why: Measuring the third angle of triangles drawn with two chosen angles shows the three always total
+      180.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Measuring the three angles of drawn triangles is one way to see that they total
+        180. | other route: Tear off the three corners of a paper triangle and fit them along a straight
+        line, using that a straight angle is half a turn (angle.measure.circle-fraction).'
+    status: disputed
+- clause: critic-route-2
+  note: 'Tearing route: fit the three torn corners along a straight line.'
+  all_of:
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The statement gives angle measures in degrees and says what their sum must be.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: definitional
+    points_to: statement
+    why: Deciding between no triangle and infinitely many means adding the three measures and comparing
+      with 180.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: construction.triangle.two-angles-included-side
+    relation: justificatory
+    points_to: statement
+    why: Drawing triangles from two angles and a side, with different side lengths, gives triangles of
+      one shape and different sizes.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.measure.circle-fraction
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Tearing route: fit the three torn corners along a
+      straight line.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: shapes.match
+    relation: definitional
+    points_to: statement
+    why: Saying the triangles are all the same shape and different in size uses the informal idea of same
+      shape.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The statement needs same shape in the informal sense of scaled copies of different
+        sizes; it is not clear whether shapes.match covers that or only matching the same kind of shape.'
+    status: disputed
+status: proposed

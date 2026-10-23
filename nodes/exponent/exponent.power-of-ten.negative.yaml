@@ -1,0 +1,181 @@
+id: exponent.power-of-ten.negative
+concept: exponent
+facet: power-of-ten
+level: 3
+type: representation
+name: Negative powers of 10 as decimals
+statement: For a positive whole number n, 10^-n = 1/10^n, the decimal with the digit 1 in the n-th place
+  after the decimal point and zeros in the places before it.
+assess: Write 10^-4 as a decimal.
+sources:
+  ccss:
+  - 8.EE.A.3
+  learning_components: []
+requires:
+- clause: via-negative
+  all_of:
+  - node: exponent.power-of-ten.notation
+    relation: representational
+    points_to: statement
+    why: The denominator 10^n is a 1 followed by n zeros, which fixes the n-th decimal place.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.signed.meaning
+    relation: definitional
+    points_to: statement
+    why: The exponent -n is a negative number; on the place-value route the learner must read -n as a
+      negative integer without going through exponent.negative.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: exponent.negative
+    relation: definitional
+    points_to: statement
+    why: 10^-n = 1/10^n is the negative exponent rule with the base 10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: This node is the base-10 case of the negative exponent rule; it can be reached
+        from the powers-of-ten pattern or from place value without the general a^(-n) = 1/a^n, which is
+        stronger than base 10. | other route: Place-value route: 10^-n is the value of the n-th decimal
+        place (place-value.ten-times-right.decimal), with exponent.power-of-ten.notation for 10^n.'
+    status: disputed
+- clause: via-decimal
+  all_of:
+  - node: exponent.power-of-ten.notation
+    relation: representational
+    points_to: statement
+    why: The denominator 10^n is a 1 followed by n zeros, which fixes the n-th decimal place.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.signed.meaning
+    relation: definitional
+    points_to: statement
+    why: The exponent -n is a negative number; on the place-value route the learner must read -n as a
+      negative integer without going through exponent.negative.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: place-value.ten-times-right.decimal
+    relation: definitional
+    points_to: statement
+    why: The n-th place after the decimal point has value 1/10^n, since each place is a tenth of the one
+      to its left.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Place value of the n-th decimal place fixes the decimal for 1/10^n; the division
+        route reaches the same decimal by moving the point. | other route: Division route: exponent.negative
+        gives 10^-n = 1/10^n and division.power-of-ten.rule moves the point n places left from 1.'
+    status: disputed
+- clause: via-rule
+  all_of:
+  - node: exponent.power-of-ten.notation
+    relation: representational
+    points_to: statement
+    why: The denominator 10^n is a 1 followed by n zeros, which fixes the n-th decimal place.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.signed.meaning
+    relation: definitional
+    points_to: statement
+    why: The exponent -n is a negative number; on the place-value route the learner must read -n as a
+      negative integer without going through exponent.negative.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: division.power-of-ten.rule
+    relation: representational
+    points_to: statement
+    why: dividing 1 by 10^n moves the decimal point n places left, putting the digit 1 in the n-th place
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Reading 1/10^n as a decimal by dividing 1 by 10^n is one way to place the digit
+        1; the place-value definition of the n-th decimal place gives the same result. | other route:
+        Use place value: the n-th place after the decimal point has value 1/10^n (place-value.ten-times-right.decimal),
+        so 1/10^n is the decimal with a 1 in that place.'
+    status: disputed
+- clause: critic-route-1
+  note: 'Division route: 10^-n = 1/10^n by the negative exponent rule, then 1 divided by 10^n moves the
+    decimal point n places left from 1.'
+  all_of:
+  - node: exponent.power-of-ten.notation
+    relation: representational
+    points_to: statement
+    why: The denominator 10^n is a 1 followed by n zeros, which fixes the n-th decimal place.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.negative
+    relation: definitional
+    points_to: statement
+    why: 10^-n = 1/10^n is the negative exponent rule with the base 10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: This node is the base-10 case of the negative exponent rule; it can be reached
+        from the powers-of-ten pattern or from place value without the general a^(-n) = 1/a^n, which is
+        stronger than base 10. | other route: Place-value route: 10^-n is the value of the n-th decimal
+        place (place-value.ten-times-right.decimal), with exponent.power-of-ten.notation for 10^n.'
+    status: disputed
+  - node: division.power-of-ten.rule
+    relation: representational
+    points_to: statement
+    why: dividing 1 by 10^n moves the decimal point n places left, putting the digit 1 in the n-th place
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Reading 1/10^n as a decimal by dividing 1 by 10^n is one way to place the digit
+        1; the place-value definition of the n-th decimal place gives the same result. | other route:
+        Use place value: the n-th place after the decimal point has value 1/10^n (place-value.ten-times-right.decimal),
+        so 1/10^n is the decimal with a 1 in that place.'
+    status: disputed
+status: proposed

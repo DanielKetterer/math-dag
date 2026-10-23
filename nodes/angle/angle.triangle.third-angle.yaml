@@ -1,0 +1,58 @@
+id: angle.triangle.third-angle
+concept: angle
+facet: measure
+level: 3
+type: procedure
+name: Find the third angle of a triangle
+statement: Find the unknown angle measure of a triangle by subtracting the sum of the two known angle
+  measures from 180 degrees.
+procedure:
+- Add the two known angle measures.
+- Subtract the sum from 180 degrees.
+assess: Two angles of a triangle measure 47 degrees and 68 degrees. What is the measure of the third angle?
+sources:
+  ccss:
+  - 8.G.A.5
+  learning_components:
+  - b9325562
+requires:
+- clause: standard
+  all_of:
+  - node: angle.triangle.sum
+    relation: definitional
+    points_to: statement
+    why: The method subtracts from 180 degrees because the three angle measures of a triangle add to 180.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-1000
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts the sum from 180, which is a difference of numbers beyond 100.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-1000
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 adds the two known angle measures, as in 47 + 68, which is an addition within 1000.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

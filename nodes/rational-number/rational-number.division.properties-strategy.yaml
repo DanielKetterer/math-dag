@@ -1,0 +1,85 @@
+id: rational-number.division.properties-strategy
+concept: rational-number
+facet: core
+level: 3
+type: procedure
+name: Divide signed numbers by rewriting as multiplication and regrouping
+statement: Compute an expression that divides rational numbers by rewriting each division as multiplying
+  by the reciprocal of the divisor, then reordering and regrouping the factors with the commutative and
+  associative properties.
+procedure:
+- Rewrite each p divided by q, with q not 0, as p x (1/q), using the reciprocal of q.
+- Use the commutative and associative properties to group factors whose product is easy.
+- Multiply each group, then multiply the results.
+assess: Compute [(-18) divided by (2/3)] x (1/9) by rewriting the division as a multiplication and regrouping.
+  Show the rewritten product.
+sources:
+  ccss:
+  - 7.NS.A.2.c
+  learning_components:
+  - c48c1cff
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.reciprocal
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites division as multiplication by the reciprocal of the divisor, such as 3/2 for
+      2/3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.commutative
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 reorders factors to sit together, which uses the commutative property of multiplication.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.associative
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 groups factors whose product is easy, which uses the associative property of multiplication.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.multiplication.rationals
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 multiplies each group and then the results, and these products are of signed fractions
+      or integers.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.fractions.rule
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 replaces dividing by q with multiplying by 1/q, the invert-and-multiply rule for division.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

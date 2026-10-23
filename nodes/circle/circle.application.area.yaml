@@ -1,0 +1,45 @@
+id: circle.application.area
+concept: circle
+facet: measure
+level: 3
+type: application
+name: Solve real-world problems about the area of a circular region
+statement: A real-world problem gives the radius or diameter of a circular region and asks how much surface
+  it covers; the learner finds its area.
+assess: A circular rug has a diameter of 4 m. How many square meters of floor does it cover? Use 3.14
+  for pi.
+sources:
+  ccss:
+  - 7.G.B.4
+  learning_components:
+  - a6134b89
+requires:
+- clause: standard
+  all_of:
+  - node: circle.area.formula.apply
+    relation: procedural
+    points_to: statement
+    why: The learner finds the area from the given radius or diameter with the formula.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: area.attribute
+    relation: definitional
+    points_to: statement
+    why: The problem asks how much surface a circular region covers, which is its area.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

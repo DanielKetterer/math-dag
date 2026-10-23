@@ -1,0 +1,55 @@
+id: relationship.application.find-dependent
+concept: relationship
+facet: dependent-independent
+level: 3
+type: application
+name: Use an equation in two variables to find a value in a real-world relationship
+statement: In a real-world relationship given by an equation for the dependent variable, find the value
+  of the dependent variable for a given value of the independent variable, and state it with its unit.
+assess: A car travels at a constant speed, so that d = 65t, where d is the distance in miles and t is
+  the time in hours. How far does the car travel in 2.5 hours?
+sources:
+  ccss:
+  - 6.EE.C.9
+  learning_components:
+  - 3435b2aa
+requires:
+- clause: standard
+  all_of:
+  - node: relationship.dependent-independent.meaning
+    relation: definitional
+    points_to: statement
+    why: The task gives a value of the independent variable and asks for the dependent variable, so the
+      two roles must be told apart.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.evaluate
+    relation: procedural
+    points_to: statement
+    why: Finding the dependent value for a given independent value is evaluating the equation's expression
+      at that value.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.multiplication.algorithm
+    relation: definitional
+    points_to: statement
+    why: 'Task-only: the test problem multiplies 65 by 2.5; replaces the proposed edge to the broader
+      numerical-expression node.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

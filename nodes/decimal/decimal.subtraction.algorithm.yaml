@@ -1,0 +1,63 @@
+id: decimal.subtraction.algorithm
+concept: decimal
+facet: decimal-fraction
+level: 3
+type: procedure
+name: Subtract multi-digit decimals with the standard algorithm
+statement: Subtract decimals by writing them in columns with the decimal points aligned, writing zeros
+  so both numbers have the same number of decimal places, and subtracting as with whole numbers, decomposing
+  across the decimal point when needed.
+procedure:
+- Write the greater number above the smaller with the decimal points lined up (a whole number has its
+  decimal point after the ones digit).
+- Write zeros in empty places on the right so both numbers have the same number of decimal places.
+- Subtract each column from right to left, decomposing 1 of the next place to the left into 10 of this
+  place when a digit is too small.
+- Place the decimal point in the difference directly below the aligned decimal points.
+assess: 'Use the standard algorithm: 15 - 3.72.'
+sources:
+  ccss:
+  - 6.NS.B.3
+  learning_components:
+  - a58918aa
+requires:
+- clause: standard
+  all_of:
+  - node: subtraction.standard-algorithm
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 subtracts each column from right to left and decomposes the next place when a digit is
+      too small, as in the whole-number algorithm.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.thousandths.notation
+    relation: representational
+    points_to: statement
+    why: Lining up decimal points so digits of the same place share a column requires reading the place
+      of each decimal digit.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.equivalent.trailing-zeros
+    relation: definitional
+    points_to: statement
+    why: The procedure writes zeros after the last decimal digit (15 becomes 15.00, 3.7 becomes 3.70,
+      9.3 becomes 9.30) and relies on the number being unchanged; no index node states that a decimal
+      is unchanged by appending zeros after its last decimal digit.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

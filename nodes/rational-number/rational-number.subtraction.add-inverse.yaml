@@ -1,0 +1,133 @@
+id: rational-number.subtraction.add-inverse
+concept: rational-number
+facet: core
+level: 3
+type: concept
+name: Subtracting a number is adding its opposite
+statement: For all rational numbers p and q, p - q = p + (-q).
+assess: 'Which expressions equal 5 - (-8): 5 + 8; 5 + (-8); -5 + 8? Which equal -3 - 7: -3 + (-7); -3
+  + 7?'
+sources:
+  ccss:
+  - 7.NS.A.1.c
+  learning_components:
+  - ee49316b
+requires:
+- clause: via-number-line
+  all_of:
+  - node: rational-number.additive-inverse
+    relation: definitional
+    points_to: statement
+    why: Showing that p - q equals p + (-q) uses that q + (-q) = 0, so -q is the additive inverse of q.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.unknown-addend.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement treats p - q as the number that added to q gives p, which is the unknown addend
+      meaning of a difference.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.opposite.of-opposite
+    relation: definitional
+    points_to: assess
+    why: The test problem asks about 5 - (-8), where -q is -(-8), so the learner must know the opposite
+      of -8 is 8.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs this: 5 - (-8) must be matched with 5 + 8, which uses
+        that the opposite of -8 is 8. The identity itself is stated for any q.'
+    status: proposed
+  - node: rational-number.addition.number-line
+    relation: definitional
+    points_to: statement
+    why: The sum p + (-q) with a negative second addend is meant as a move along the number line.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The meaning of the sum p + (-q) can come from the number-line move or from the
+        sign rules for adding; either gives the identity a meaning. | other route: Know sums of signed
+        numbers by the sign rules (rational-number.addition.integers) together with additive inverses
+        and the unknown-addend meaning of a difference.'
+    status: disputed
+- clause: critic-route-1
+  note: Know sums of signed numbers by the sign rules rather than the number-line move; the identity is
+    then checked with additive inverses and the unknown-addend meaning of a difference.
+  all_of:
+  - node: rational-number.additive-inverse
+    relation: definitional
+    points_to: statement
+    why: Showing that p - q equals p + (-q) uses that q + (-q) = 0, so -q is the additive inverse of q.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.unknown-addend.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement treats p - q as the number that added to q gives p, which is the unknown addend
+      meaning of a difference.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.opposite.of-opposite
+    relation: definitional
+    points_to: assess
+    why: The test problem asks about 5 - (-8), where -q is -(-8), so the learner must know the opposite
+      of -8 is 8.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem needs this: 5 - (-8) must be matched with 5 + 8, which uses
+        that the opposite of -8 is 8. The identity itself is stated for any q.'
+    status: proposed
+  - node: rational-number.addition.integers
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Know sums of signed numbers by the sign rules rather
+      than the number-line move; the identity is then checked with additive inverses and the unknown-addend
+      meaning of a difference.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

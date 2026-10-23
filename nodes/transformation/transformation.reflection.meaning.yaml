@@ -1,0 +1,84 @@
+id: transformation.reflection.meaning
+concept: transformation
+facet: geometric
+level: 2
+type: concept
+name: A reflection across a line
+statement: A reflection across a line l takes each point P not on l to the point P' on the other side
+  of l such that segment PP' is perpendicular to l and l passes through its midpoint; each point on l
+  stays where it is.
+assess: Point P is 3 cm from line l. Point Q is 3 cm from l on the other side, on the perpendicular to
+  l through P. Point R is 3 cm from l on the other side, but not on that perpendicular. Point S is 5 cm
+  from l on the other side, on that perpendicular. Which point is the reflection of P across l?
+sources:
+  ccss:
+  - 8.G.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: point.meaning
+    relation: definitional
+    points_to: statement
+    why: The definition takes each point P not on l to a point P' and leaves points on l fixed, so points
+      are exact locations.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: line.meaning
+    relation: definitional
+    points_to: statement
+    why: The reflection is across a line l, a straight line that extends without end and has a side on
+      each of its two sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: segment.meaning
+    relation: definitional
+    points_to: statement
+    why: The definition joins each point P to its image P' by the segment PP' and talks about its midpoint.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: perpendicular.meaning
+    relation: definitional
+    points_to: statement
+    why: The definition requires segment PP' to be perpendicular to l, meeting it at a right angle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.attribute
+    relation: definitional
+    points_to: statement
+    why: Midpoint and the test's equal distances (3 cm, 3 cm, 5 cm) need length as a quantity that can
+      be equal or unequal; the proposed edge e1086 is a procedure that is stronger than this.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

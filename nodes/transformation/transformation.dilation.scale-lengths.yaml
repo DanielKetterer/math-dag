@@ -1,0 +1,75 @@
+id: transformation.dilation.scale-lengths
+concept: transformation
+facet: geometric
+level: 3
+type: concept
+name: A dilation multiplies every length by the scale factor
+statement: A dilation with scale factor k multiplies every length in a figure by k, so it enlarges the
+  figure when k > 1 and reduces it when k < 1; when k is not 1 it changes lengths, so it is not a rigid
+  motion.
+assess: A dilation has scale factor 1/2. A segment in the figure is 4 cm long. How long is the image of
+  the segment, and is this dilation a rigid motion?
+sources:
+  ccss:
+  - 8.G.A.3
+  learning_components:
+  - e8c6b8a4
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.dilation.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement extends the dilation definition, which scales distances from the center, to every
+      length in a figure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.scaling.size-principle
+    relation: definitional
+    points_to: statement
+    why: The statement says a factor above 1 enlarges and a factor below 1 reduces, which is the scaling
+      size principle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rigid-motion.preserves-length
+    relation: definitional
+    points_to: statement
+    why: The claim that the dilation is not a rigid motion rests on rigid motions keeping every length
+      the same.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiply-whole.symbolic
+    relation: procedural
+    points_to: assess
+    why: The test finds one half of a 4 cm segment, which is a fraction times a whole number.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test computes one half of 4 cm; the statement says a dilation multiplies
+        every length by k and does not itself carry out a fraction product.'
+    status: proposed
+status: proposed

@@ -1,0 +1,99 @@
+id: transformation.rigid-motion.preserves-length
+concept: transformation
+facet: geometric
+level: 3
+type: concept
+name: Rigid motions keep lines straight and lengths the same
+statement: A translation, reflection, or rotation, or any sequence of them, takes every line to a line
+  and every line segment to a line segment of the same length.
+assess: Segment AB is 7 cm long. It is reflected across a line, and the image is then rotated 90 degrees
+  about a point. Without measuring, what kind of figure is the final image of AB, and how long is it?
+sources:
+  ccss:
+  - 8.G.A.1.a
+  learning_components:
+  - 715f7b83
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.translation.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement is about translations, so a reader must know what a translation does to the points
+      of a figure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.reflection.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement is about reflections, so a reader must know what a reflection across a line does
+      to the points of a figure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rotation.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement is about rotations, so a reader must know what a rotation about a center does to
+      the points of a figure.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: line.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement claims that every line is taken to a line, so a line must be understood as a straight
+      extension without end.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: segment.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement claims that every line segment goes to a segment of the same length, and the test
+      follows segment AB through two motions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.attribute
+    relation: definitional
+    points_to: statement
+    why: The claim is that the image has 'the same length'; equal length as a quantity is used by the
+      statement and the test (7 cm in, how long out).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

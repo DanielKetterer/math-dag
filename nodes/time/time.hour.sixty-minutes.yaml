@@ -1,0 +1,61 @@
+id: time.hour.sixty-minutes
+concept: time
+facet: clock
+level: 2
+type: concept
+name: An hour is 60 minutes
+statement: In one hour the minute hand goes once around the clock, passing 60 minute marks, so an hour
+  is 60 minutes; the minutes past an hour run from 0 to 59, and at 60 minutes the next hour begins.
+assess: A clock shows 7:59. What time does it show one minute later? How many minutes are in one hour?
+sources:
+  ccss:
+  - 3.MD.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: time.analog.hour
+    relation: representational
+    points_to: statement
+    why: The statement follows the minute hand once around the clock face, and each hour the minute hand
+      returns to the 12.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: counting.sequence.to-100
+    relation: definitional
+    points_to: statement
+    why: Counting the 60 minute marks the minute hand passes uses the counting sequence by ones up to
+      sixty.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: time.digital.read
+    relation: representational
+    points_to: assess
+    why: The test problem shows the time 7:59 in digital notation, so the hour and minutes of a written
+      time must be read.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem shows 7:59 in digital notation; the idea follows the minute
+        hand around the clock face.'
+    status: proposed
+status: proposed

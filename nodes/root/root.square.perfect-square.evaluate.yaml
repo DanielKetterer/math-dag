@@ -1,0 +1,64 @@
+id: root.square.perfect-square.evaluate
+concept: root
+facet: square
+level: 3
+type: procedure
+name: Evaluate the square root of a perfect square up to 625
+statement: 'For a perfect square p from 0 to 625, find sqrt(p): the whole number from 0 to 25 whose square
+  is p.'
+procedure:
+- Recall a square equal to p, or locate p between two known squares and try the whole numbers between
+  their roots.
+- Check by squaring that the number found gives p.
+assess: Find sqrt(196) and sqrt(529).
+sources:
+  ccss:
+  - 8.EE.A.2
+  learning_components:
+  - 619c552c
+  - 62ce8911
+  - 4e8760e7
+requires:
+- clause: standard
+  all_of:
+  - node: root.square.meaning
+    relation: definitional
+    points_to: statement
+    why: The goal is sqrt(p), the number 0 or greater whose square is p.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: procedural
+    points_to: procedure.1
+    why: Recalling or trying squares of whole numbers up to 25, and checking by squaring, evaluates powers
+      such as 14^2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: comparing.whole-numbers.magnitude.three-digit
+    relation: procedural
+    points_to: procedure.1
+    why: Locating p between two known squares compares p with three-digit squares to see which is greater.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

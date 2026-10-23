@@ -1,0 +1,35 @@
+id: area.application.polygon
+concept: area
+facet: additive
+level: 2
+type: application
+name: Solve real-world problems that find the area of a region made of rectangles and triangles
+statement: A real-world problem describes a region, with a picture and lengths, that can be cut into rectangles
+  and triangles; the learner finds its area.
+assess: A patio is a 6 m by 4 m rectangle with a triangle added along one 4 m side; the triangle sticks
+  out 3 m from that side (picture). How many square meters of tile cover the patio?
+sources:
+  ccss:
+  - 6.G.A.1
+  - 7.G.B.6
+  learning_components:
+  - 68e69e23
+  - 924ca975
+  - 3bc46cc4
+requires:
+- clause: standard
+  all_of:
+  - node: area.polygon.decompose
+    relation: definitional
+    points_to: statement
+    why: The learner cuts the region into rectangles and triangles, finds each area, and adds the areas.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

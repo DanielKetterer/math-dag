@@ -1,0 +1,108 @@
+id: angle.vertical.equal
+concept: angle
+facet: measure
+level: 3
+type: concept
+name: Vertical angles are equal
+statement: Vertical angles have equal measures.
+assess: Two lines cross. One of the four angles measures 65 degrees. Without measuring, what is the measure
+  of the angle vertical to it?
+sources:
+  ccss:
+  - 7.G.B.5
+  learning_components: []
+requires:
+- clause: via-measure
+  all_of:
+  - node: angle.vertical
+    relation: definitional
+    points_to: statement
+    why: The statement is about pairs of vertical angles formed where two lines cross.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The statement compares angle measures, which are numbers of degrees.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.protractor.measure
+    relation: justificatory
+    points_to: statement
+    why: Measuring both angles of a vertical pair shows their degree measures are the same.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Measuring both angles of vertical pairs is one way to see they are equal. | other
+        route: Reason from straight lines: each vertical angle together with its neighbour makes 180,
+        so both equal 180 minus the same angle (angle.straight-line.sum-180, subtraction.within-1000).'
+    status: disputed
+- clause: straight-line
+  all_of:
+  - node: angle.vertical
+    relation: definitional
+    points_to: statement
+    why: The statement is about pairs of vertical angles formed where two lines cross.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The statement compares angle measures, which are numbers of degrees.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.straight-line.sum-180
+    relation: justificatory
+    points_to: statement
+    why: Each vertical angle together with the angle next to it makes 180, so both are 180 minus the same
+      angle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The straight-line reasoning is one way to see vertical angles are equal.'
+    status: disputed
+  - node: subtraction.within-1000
+    relation: justificatory
+    points_to: statement
+    why: Subtracting the same angle from 180 gives the same result for each of the two vertical angles.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Subtracting the same angle from 180 belongs only to the straight-line reasoning
+        route; the test asks for 65 degrees with no subtraction.'
+    status: disputed
+status: proposed

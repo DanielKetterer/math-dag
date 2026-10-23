@@ -1,0 +1,105 @@
+id: similarity.transformation.meaning
+concept: similarity
+facet: transformation
+level: 3
+type: concept
+name: Similar figures as figures related by rigid motions and dilations
+statement: One figure is similar to another when some sequence of translations, reflections, rotations,
+  and dilations takes the first figure exactly onto the second.
+assess: Rectangle A is 2 cm by 4 cm. Figure B is A dilated with scale factor 3 and then rotated 90 degrees.
+  Rectangle C is 5 cm by 7 cm, each side 3 cm longer than in A. Rectangle D is 2 cm by 8 cm, A stretched
+  in one direction only. Which of B, C, and D are similar to A?
+sources:
+  ccss:
+  - 8.G.A.4
+  learning_components:
+  - 92a7fb82
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.translation.meaning
+    relation: definitional
+    points_to: statement
+    why: The definition allows translations in the sequence that takes one figure onto the other.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.reflection.meaning
+    relation: definitional
+    points_to: statement
+    why: The definition allows reflections in the sequence that takes one figure onto the other.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rotation.meaning
+    relation: definitional
+    points_to: statement
+    why: The definition allows rotations in the sequence that takes one figure onto the other.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.dilation.meaning
+    relation: definitional
+    points_to: statement
+    why: The definition adds dilations to the allowed motions, which is what separates similar figures
+      from congruent ones.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.dilation.scale-lengths
+    relation: definitional
+    points_to: assess
+    why: To reject rectangles C and D, the solver uses that a dilation multiplies every length by the
+      same factor, which their side lengths do not match.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The definition does not need the scale-length property; only the test uses that
+        every length is multiplied by the same factor to reject rectangles C and D.'
+    status: proposed
+  - node: transformation.rigid-motion.preserves-length
+    relation: definitional
+    points_to: assess
+    why: The rigid motions that follow the dilation keep lengths, so the side ratios of the dilated figure
+      carry through to figure B and decide C and D.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The definition does not need that rigid motions keep lengths; only the test uses
+        it to carry the dilated side ratios through to figure B and decide C and D.'
+    status: proposed
+status: proposed

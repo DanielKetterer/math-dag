@@ -1,0 +1,50 @@
+id: decimal.addition.algorithm
+concept: decimal
+facet: decimal-fraction
+level: 3
+type: procedure
+name: Add multi-digit decimals with the standard algorithm
+statement: Add decimals by writing them in columns with the decimal points aligned, so that digits of
+  the same place value share a column, and adding as with whole numbers, regrouping across the decimal
+  point when needed.
+procedure:
+- Write the numbers in a column with their decimal points lined up (a whole number has its decimal point
+  after the ones digit), writing zeros in empty places on the right if helpful.
+- Add each column from right to left, regrouping 10 of a place as 1 of the next place to the left.
+- Place the decimal point in the sum directly below the aligned decimal points.
+assess: 'Use the standard algorithm: 27.6 + 4.385.'
+sources:
+  ccss:
+  - 6.NS.B.3
+  learning_components:
+  - d04b3e78
+requires:
+- clause: standard
+  all_of:
+  - node: addition.standard-algorithm
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds each column from right to left with regrouping, which is the whole-number standard
+      algorithm applied to aligned decimal digits.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.thousandths.notation
+    relation: representational
+    points_to: statement
+    why: Aligning digits of the same place value requires reading the place of every digit in decimals
+      such as 4.385.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,134 @@
+id: geometry.similar-triangles
+concept: similarity
+facet: proportional-sides
+level: 3
+type: concept
+name: Similar triangles have proportional corresponding sides
+statement: 'If triangle ABC is similar to triangle DEF with A -> D, B -> E, C -> F, then each side of
+  DEF is the same number k times the corresponding side of ABC: DE/AB = EF/BC = DF/AC = k.'
+assess: 'Triangle ABC is similar to triangle DEF with A -> D, B -> E, C -> F, and DE is 3 times as long
+  as AB. Which must be true: EF = 3 x BC; EF = BC + 3; EF = BC?'
+sources:
+  ccss:
+  - 8.G.A.4
+  - 8.G.A.5
+  learning_components: []
+requires:
+- clause: via-meaning
+  all_of:
+  - node: multiplication.comparison
+    relation: definitional
+    points_to: statement
+    why: The statement says each side of DEF is k times the corresponding side of ABC, which is a multiplicative
+      comparison.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.comparison.vs-additive
+    relation: definitional
+    points_to: assess
+    why: The test offers EF = 3 x BC against EF = BC + 3, so the solver must tell a multiplicative comparison
+      from an additive one.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement says each side is k times the corresponding side; only the test
+        offers an additive option (EF = BC + 3) that must be told apart from the multiplicative one.'
+    status: proposed
+  - node: fraction.quotient.symbolic
+    relation: representational
+    points_to: statement
+    why: The statement writes the equal ratios as quotients of lengths, DE/AB = EF/BC = DF/AC, which uses
+      a quotient written as a fraction.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: similarity.transformation.meaning
+    relation: definitional
+    points_to: statement
+    why: '''Similar'' here means one triangle is taken onto the other by dilations and rigid motions,
+      which is the transformation definition.'
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: ''Similar'' can come from the transformation definition without the scale-drawing
+        node. | other route: Read ''similar'' as a scale copy: scale-drawing.meaning, which multiplies
+        every length by the same factor.'
+    status: disputed
+- clause: from-scale-drawings
+  all_of:
+  - node: multiplication.comparison
+    relation: definitional
+    points_to: statement
+    why: The statement says each side of DEF is k times the corresponding side of ABC, which is a multiplicative
+      comparison.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.comparison.vs-additive
+    relation: definitional
+    points_to: assess
+    why: The test offers EF = 3 x BC against EF = BC + 3, so the solver must tell a multiplicative comparison
+      from an additive one.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement says each side is k times the corresponding side; only the test
+        offers an additive option (EF = BC + 3) that must be told apart from the multiplicative one.'
+    status: proposed
+  - node: fraction.quotient.symbolic
+    relation: representational
+    points_to: statement
+    why: The statement writes the equal ratios as quotients of lengths, DE/AB = EF/BC = DF/AC, which uses
+      a quotient written as a fraction.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: scale-drawing.meaning
+    relation: definitional
+    points_to: statement
+    why: A scale copy of a triangle multiplies every length by the same factor, which is the statement's
+      equal ratios of corresponding sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: ''Similar'' can be read as ''a scale copy'', where every length is multiplied
+        by the same factor; that gives the equal ratios directly without the transformation definition.'
+    status: disputed
+status: proposed

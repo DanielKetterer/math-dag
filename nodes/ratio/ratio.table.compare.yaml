@@ -35,7 +35,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: multiples.common-multiple
+  - node: factors.common-multiple.product
     relation: procedural
     points_to: procedure.2
     why: A common multiple of the two first-quantity values guarantees that both tables reach a shared
@@ -52,6 +52,11 @@ requires:
       source: retarget-sonnet
       note: 're-pointed from retired factors-multiples.whole-number: Step 2 needs a common multiple of
         the first-quantity values 3 and 4, which no candidate covers.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired multiples.common-multiple: Step 1 needs some common multiple, and
+        b x d always is one; the least common multiple is an alternative route, not required (Claude,
+        inline retarget).'
     status: proposed
   - node: comparing.whole-numbers.magnitude
     relation: procedural

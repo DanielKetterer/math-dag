@@ -1,0 +1,120 @@
+id: probability.likelihood.interpret
+concept: probability
+facet: likelihood
+level: 2
+type: concept
+name: Interpret a probability as unlikely, neither, or likely
+statement: A probability near 0 describes an unlikely event, a probability around 1/2 an event that is
+  neither unlikely nor likely, and a probability near 1 a likely event; of two events, the one with the
+  larger probability is the more likely.
+assess: The probability of rain tomorrow is 0.9, the probability of snow is 0.05, and the probability
+  a tossed coin lands heads is 1/2. Describe each event as unlikely, neither unlikely nor likely, or likely.
+  Which of the three is most likely?
+sources:
+  ccss:
+  - 7.SP.C.5
+  learning_components:
+  - f9c7d91a
+requires:
+- clause: via-benchmark
+  all_of:
+  - node: probability.likelihood.zero-to-one
+    relation: definitional
+    points_to: statement
+    why: The statement reads a probability as a number on the 0 to 1 scale of likelihood, with 0 impossible
+      and 1 certain.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.compare
+    relation: procedural
+    points_to: assess
+    why: The test problem gives 0.9 and 0.05 and asks which event is most likely, which compares these
+      two decimals.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem compares 0.9 with 0.05 (decimals); the statement compares
+        probabilities in general, which fractions and decimals both allow.'
+    status: proposed
+  - node: fraction.compare.benchmark
+    relation: definitional
+    points_to: statement
+    why: Deciding whether a probability is near 0, around 1/2, or near 1 compares a fraction with benchmark
+      fractions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Judging ''near 0, around 1/2, near 1'' is done here with fraction benchmarks,
+        but probabilities may be given as decimals, and the test problem gives 0.9 and 0.05 with no fraction
+        to compare. | other route: Place the decimal probability on a number line (decimal.number-line)
+        and judge its nearness to 0, 0.5 and 1, knowing 1/2 = 0.5.'
+    status: disputed
+- clause: critic-route-1
+  note: Judge a decimal probability by its position on the number line against 0, 0.5 and 1, with no fraction
+    comparison.
+  all_of:
+  - node: probability.likelihood.zero-to-one
+    relation: definitional
+    points_to: statement
+    why: The statement reads a probability as a number on the 0 to 1 scale of likelihood, with 0 impossible
+      and 1 certain.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.compare
+    relation: procedural
+    points_to: assess
+    why: The test problem gives 0.9 and 0.05 and asks which event is most likely, which compares these
+      two decimals.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem compares 0.9 with 0.05 (decimals); the statement compares
+        probabilities in general, which fractions and decimals both allow.'
+    status: proposed
+  - node: decimal.number-line
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Judge a decimal probability by its position on the
+      number line against 0, 0.5 and 1, with no fraction comparison.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: decimal.fraction-benchmark.one-half
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Judge a decimal probability by its position on the
+      number line against 0, 0.5 and 1, with no fraction comparison.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

@@ -1,0 +1,49 @@
+id: linear-system.solution.intersection
+concept: linear-system
+facet: graphical
+level: 3
+type: concept
+name: Solutions of a system as the intersection points of the graphs
+statement: The solutions of a system of two linear equations in two variables are exactly the points where
+  their graphs intersect, because a point lies on both graphs exactly when its coordinates satisfy both
+  equations.
+assess: Point P lies on the graph of the first equation of a system but not on the graph of the second.
+  Point Q is where the two graphs cross. Which point's coordinates solve the system, and why do the other
+  point's coordinates not?
+sources:
+  ccss:
+  - 8.EE.C.8.a
+  learning_components:
+  - b6895508
+requires:
+- clause: standard
+  all_of:
+  - node: linear-system.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement identifies the intersection points with the pairs that make both equations true,
+      which is the meaning of a solution of the system.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.two-variable.graph-as-solutions
+    relation: justificatory
+    points_to: statement
+    why: The because-clause says a point is on a graph exactly when its coordinates satisfy the equation,
+      which is the graph-as-solution-set idea.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,62 @@
+id: angle.unknown.equation.solve
+concept: angle
+facet: measure
+level: 3
+type: procedure
+name: Find an unknown angle by writing and solving a two-step equation
+statement: An unknown in angle measures given as expressions is found by writing an equation of the form
+  p x + q = r from an angle relationship and solving it.
+procedure:
+- Write the equation that the angle relationship gives.
+- Combine like terms so the equation has the form p x + q = r.
+- Solve the equation for x.
+assess: Two complementary angles measure x degrees and (2x + 15) degrees. Find x.
+sources:
+  ccss:
+  - 7.G.B.5
+  learning_components:
+  - 82575afc
+requires:
+- clause: standard
+  all_of:
+  - node: angle.unknown.equation.write
+    relation: procedural
+    points_to: procedure.1
+    why: The first step writes the equation that the angle relationship gives, from measures given as
+      expressions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.like-terms.combine
+    relation: procedural
+    points_to: procedure.2
+    why: Combining like terms puts the equation in the form p x + q = r.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.two-step.px-plus-q.solve
+    relation: procedural
+    points_to: procedure.3
+    why: The last step solves an equation of the form p x + q = r for x.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,47 @@
+id: association.categorical.meaning
+concept: association
+facet: categorical
+level: 2
+type: concept
+name: Association between two categorical variables
+statement: Two categorical variables are associated when the relative frequencies of the categories of
+  one variable differ from one category of the other variable to the next; when the row (or column) relative
+  frequencies are about the same in every row (or column), the data show no association, however the raw
+  counts differ.
+assess: 'Table A: of 40 students with a curfew, 30 have chores (75%); of 20 students without a curfew,
+  15 have chores (75%). Table B: of 20 students with a curfew, 16 have chores (80%); of 20 students without
+  a curfew, 6 have chores (30%). Which table shows an association between having a curfew and having chores?
+  Explain.'
+sources:
+  ccss:
+  - 8.SP.A.4
+  learning_components:
+  - 49eb9d6a
+requires:
+- clause: standard
+  all_of:
+  - node: table.two-way.relative-frequency
+    relation: definitional
+    points_to: statement
+    why: The statement defines association by whether row or column relative frequencies differ from one
+      category to the next.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.compare
+    relation: definitional
+    points_to: statement
+    why: Deciding whether relative frequencies are about the same or differ compares two numbers; fraction
+      or percent comparison would serve for those forms.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

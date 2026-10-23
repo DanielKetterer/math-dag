@@ -1,0 +1,85 @@
+id: expressions.equivalent.explain
+concept: expressions
+facet: algebraic
+level: 4
+type: justification
+name: Explain whether two expressions are equivalent
+statement: An argument that two expressions are equivalent rewrites one into the other with properties
+  of operations, which hold for every value of the variable; an argument that they are not gives one value
+  at which they differ.
+assess: Explain why y + y + y and 3y are equivalent, and why y + 3 and 3y are not.
+sources:
+  ccss:
+  - 6.EE.A.4
+  learning_components:
+  - 5ccfcd23
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.equivalent.meaning
+    relation: definitional
+    points_to: statement
+    why: The argument must show equal values for every number, or one value where they differ, which is
+      the meaning of equivalent.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.equivalent.test-properties
+    relation: procedural
+    points_to: statement
+    why: The argument for equivalence rewrites one expression into the other with properties of operations,
+      as in y + y + y = 3y.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.equivalent.test-substitution
+    relation: procedural
+    points_to: statement
+    why: The argument for non-equivalence gives one value at which the expressions differ, as for y +
+      3 and 3y.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.like-terms.combine
+    relation: procedural
+    points_to: assess
+    why: The test problem explains why y + y + y and 3y are equivalent, which rewrites a sum of equal
+      terms as one term.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem (y + y + y = 3y) combines like terms; the statement''s argument
+        rewrites with properties in general and does not itself invoke combining coefficients.'
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: definitional
+    points_to: statement
+    why: 'Task-only: the test problem writes a number directly next to a letter (3y); this is otherwise
+      reached only through another prerequisite.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,94 @@
+id: congruence.rigid-motion.meaning
+concept: congruence
+facet: rigid-motion
+level: 3
+type: concept
+name: Congruent figures as figures related by rigid motions
+statement: One figure is congruent to another when some sequence of translations, reflections, and rotations
+  takes the first figure exactly onto the second.
+assess: Figure B is figure A rotated 90 degrees and then reflected across a line. Figure C has the same
+  area as A but a different shape. Figure D is A enlarged with scale factor 2. Which of B, C, and D are
+  congruent to A?
+sources:
+  ccss:
+  - 8.G.A.2
+  learning_components:
+  - f56c2e0b
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.translation.meaning
+    relation: definitional
+    points_to: statement
+    why: The definition says a sequence of translations, reflections, and rotations takes one figure onto
+      the other, so each must be understood.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.reflection.meaning
+    relation: definitional
+    points_to: statement
+    why: A reflection across a line is one of the three motions the definition allows, and the test's
+      figure B uses one.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rotation.meaning
+    relation: definitional
+    points_to: statement
+    why: A rotation about a center is one of the three motions the definition allows, and the test's figure
+      B uses one.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rigid-motion.preserves-length
+    relation: justificatory
+    points_to: assess
+    why: To rule out figures C and D, the solver uses that these motions keep lengths, so a figure with
+      different side lengths cannot be matched.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The definition says what congruent means; only the test uses that rigid motions
+        keep lengths to rule out figures C and D.'
+    status: proposed
+  - node: scale-drawing.meaning
+    relation: definitional
+    points_to: assess
+    why: Figure D is described as an enlargement with scale factor 2, which is read as every length being
+      multiplied by the same factor.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The definition of congruence does not mention enlargements; only the test''s figure
+        D (''enlarged with scale factor 2'') needs scale-drawing.meaning to see that its lengths change.'
+    status: proposed
+status: proposed

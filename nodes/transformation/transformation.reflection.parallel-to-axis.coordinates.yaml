@@ -1,0 +1,121 @@
+id: transformation.reflection.parallel-to-axis.coordinates
+concept: transformation
+facet: coordinate
+level: 2
+type: procedure
+name: Find the coordinates of the image of a polygon reflected across a line x = h or y = k
+statement: Find the coordinates of the image of a polygon reflected across a vertical line x = h or a
+  horizontal line y = k by moving each vertex to the point the same distance from the line on the other
+  side, keeping the other coordinate.
+procedure:
+- For each vertex, find its horizontal distance to the line x = h, or its vertical distance to the line
+  y = k.
+- Move the same distance past the line on the other side, keeping the other coordinate the same, and record
+  the image vertex.
+- Join the image vertices in the same order.
+assess: Triangle ABC has vertices A(1, 1), B(3, 1), and C(1, 4). Give the coordinates of the vertices
+  of its image after a reflection across the line x = 5.
+sources:
+  ccss:
+  - 8.G.A.3
+  learning_components:
+  - 6827617f
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.reflection.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure carries out a reflection across a vertical or horizontal line, moving each vertex
+      to the point the same distance away on the other side.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.segment-length.same-sign
+    relation: procedural
+    points_to: assess
+    why: Step 1 finds the horizontal or vertical distance from a vertex to the line, as 5 - 1 in the test,
+      when the coordinates have the same sign.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test computes the distance by subtracting same-sign coordinates (5 -
+        1); the level-2 procedure only needs the distance as a segment length (e1182), which can also
+        be counted on the grid.'
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: assess
+    why: Step 2 moves the same distance past the line, which is adding that distance to the line's coordinate,
+      as 5 + 4 in the test.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test adds numbers (5 + 4); the procedure moves the same distance past
+        the line, which can be counted on the grid, and the level-2 target does not need a written sum.
+        The numbers used are within 20.'
+    status: proposed
+  - node: coordinate-plane.first-quadrant.plot
+    relation: procedural
+    points_to: procedure.1
+    why: The procedure starts from vertices given as coordinates and locates them on the grid, and the
+      test's vertices are in the first quadrant.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.first-quadrant.read
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 records the image vertex as coordinates read from the grid.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.ordered-pair.meaning
+    relation: definitional
+    points_to: statement
+    why: The line x = h is the set of points whose horizontal distance coordinate is h, and the other
+      coordinate is kept, which uses what each coordinate measures.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.segment-length.meaning
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds the horizontal distance to the line x = h or the vertical distance to y = k, which
+      is a segment length read from coordinates.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,54 @@
+id: equation.solution.meaning
+concept: equation
+facet: open-sentence
+level: 3
+type: concept
+name: A solution of an equation
+statement: A solution of an equation with a variable is a value of the variable that makes the equation
+  true; solving the equation means finding which values from a given set, if any, are solutions.
+assess: When x = 4, the equation 3x + 2 = 14 is true. When x = 5, it is false. Which of 4 and 5 is a solution
+  of 3x + 2 = 14, and why?
+sources:
+  ccss:
+  - 6.EE.B.5
+  learning_components:
+  - f7a9f0e5
+requires:
+- clause: standard
+  all_of:
+  - node: equation.equal-sign.meaning
+    relation: definitional
+    points_to: statement
+    why: An equation is true when both sides have the same value, which is what the equal sign says and
+      what makes a value a solution.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: A solution is a value of the variable, so the letter must already be read as standing for a number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: definitional
+    points_to: statement
+    why: 'Task-only: the test problem writes a number directly next to a letter (3x); this is otherwise
+      reached only through another prerequisite.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,107 @@
+id: coordinate-plane.reflection.signs
+concept: coordinate-plane
+facet: location
+level: 3
+type: concept
+name: Points that differ only in sign are mirror images across the axes
+statement: The points (a, b) and (a, -b) are mirror images across the x-axis, (a, b) and (-a, b) are mirror
+  images across the y-axis, and (a, b) and (-a, -b) are related by a flip across one axis followed by
+  a flip across the other.
+assess: 'Point P is (5, -2). Without plotting, which point is its mirror image across the y-axis: (-5,
+  -2), (5, 2), or (-5, 2)?'
+sources:
+  ccss:
+  - 6.NS.C.6.b
+  learning_components:
+  - 8e0a9454
+requires:
+- clause: via-plot
+  all_of:
+  - node: rational-number.opposite.number-line
+    relation: definitional
+    points_to: statement
+    why: Changing b to -b or a to -a puts the coordinate on the other side of 0 at the same distance,
+      which is the meaning of opposites.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: symmetry.line.meaning
+    relation: definitional
+    points_to: statement
+    why: Mirror images across an axis are matching parts on either side of a line of symmetry, which is
+      the informal meaning of a mirror image.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.four-quadrants.plot
+    relation: representational
+    points_to: statement
+    why: The statement describes where the points (a, b), (a, -b) and (-a, b) sit in the plane, which
+      uses placing points from signed coordinates.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The concept needs to see where (a, b), (a, -b) and (-a, b) sit; that can come
+        from plotting them, or from reading the coordinates of a plotted point and its mirror image and
+        noticing which sign changes. | other route: Read the coordinates of a point and its mirror image
+        on a grid (coordinate-plane.four-quadrants.read) and notice which sign changes, with no plotting.'
+    status: disputed
+- clause: critic-route-1
+  note: Read the coordinates of a point and its mirror image on a grid and notice which sign changes,
+    with no plotting.
+  all_of:
+  - node: rational-number.opposite.number-line
+    relation: definitional
+    points_to: statement
+    why: Changing b to -b or a to -a puts the coordinate on the other side of 0 at the same distance,
+      which is the meaning of opposites.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: symmetry.line.meaning
+    relation: definitional
+    points_to: statement
+    why: Mirror images across an axis are matching parts on either side of a line of symmetry, which is
+      the informal meaning of a mirror image.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.four-quadrants.read
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Read the coordinates of a point and its mirror image
+      on a grid and notice which sign changes, with no plotting.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

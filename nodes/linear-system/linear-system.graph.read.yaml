@@ -1,0 +1,46 @@
+id: linear-system.graph.read
+concept: linear-system
+facet: graphical
+level: 2
+type: procedure
+name: Read the solution of a system from its drawn graphs
+statement: When the graphs of the two equations of a system are drawn, the solution is the coordinate
+  pair of the point where the lines cross.
+procedure:
+- Find the point where the two lines cross.
+- Read its coordinates (x, y); that pair is the solution.
+assess: The graphs of the two equations of a system are drawn on a coordinate grid and cross at a grid
+  point (shown). What is the solution of the system?
+sources:
+  ccss:
+  - 8.EE.C.8.b
+  learning_components:
+  - 7477f174
+requires:
+- clause: standard
+  all_of:
+  - node: linear-system.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure answers with the solution of the system, so the learner must know a solution is
+      the pair satisfying both equations.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.first-quadrant.read
+    relation: definitional
+    points_to: statement
+    why: The weaker node that reading a crossing at a grid point actually needs; replaces the proposed
+      four-quadrant edge.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

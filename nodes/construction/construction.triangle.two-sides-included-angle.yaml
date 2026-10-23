@@ -1,0 +1,104 @@
+id: construction.triangle.two-sides-included-angle
+concept: construction
+facet: core
+level: 2
+type: procedure
+name: Draw a triangle from two sides and the angle between them
+statement: A triangle with two given side lengths and a given angle between them is drawn with a ruler
+  and protractor.
+procedure:
+- Draw one side to its given length.
+- At one endpoint, draw a ray making the given angle with that side, using a protractor.
+- Mark the second side length along the ray.
+- Join the two free endpoints.
+assess: With a ruler and protractor, draw triangle ABC with AB = 6 cm, AC = 4 cm and angle A = 50 degrees.
+sources:
+  ccss:
+  - 7.G.A.2
+  learning_components:
+  - 52ffb8ee
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.length.ruler
+    relation: procedural
+    points_to: procedure.1
+    why: Drawing the first side to its length and marking the second side along the ray both use a ruler.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.protractor.sketch
+    relation: procedural
+    points_to: procedure.2
+    why: The ray making the given angle with the first side is drawn with a protractor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ray.meaning
+    relation: procedural
+    points_to: procedure.2
+    why: The second side lies along a ray that starts at an endpoint of the first side.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.meaning
+    relation: definitional
+    points_to: statement
+    why: The given angle is the one formed at the shared endpoint by the two given sides.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: segment.meaning
+    relation: procedural
+    points_to: procedure.4
+    why: Joining the two free endpoints draws the third side as a segment.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.polygon.name-by-sides
+    relation: definitional
+    points_to: statement
+    why: The figure drawn is a triangle, a closed figure with three sides and three vertices.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The test gives the angle as 50 degrees and the protractor step reads degrees directly (test-level).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

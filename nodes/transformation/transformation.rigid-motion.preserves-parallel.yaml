@@ -1,0 +1,87 @@
+id: transformation.rigid-motion.preserves-parallel
+concept: transformation
+facet: geometric
+level: 3
+type: concept
+name: Rigid motions take parallel lines to parallel lines
+statement: A translation, reflection, or rotation, or any sequence of them, takes two parallel lines to
+  two parallel lines and two lines that meet to two lines that meet.
+assess: Lines m and n are parallel; lines p and q meet at a point. All four lines are rotated 50 degrees
+  about a point, and the images are then reflected across a line. Without drawing, which pair of final
+  image lines is parallel?
+sources:
+  ccss:
+  - 8.G.A.1.c
+  learning_components:
+  - d3571b9e
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.translation.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement covers translations, so a reader must know how a translation moves the points of
+      a line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.reflection.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement covers reflections, so a reader must know how a reflection across a line moves
+      the points of a line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rotation.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement covers rotations, so a reader must know how a rotation about a center moves the
+      points of a line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: parallel.meaning
+    relation: definitional
+    points_to: statement
+    why: The claim is that parallel lines, lines that never meet, stay parallel, and that lines that meet
+      still meet.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: line.meaning
+    relation: definitional
+    points_to: statement
+    why: The second half of the statement is about two lines that meet, which uses what a line is.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

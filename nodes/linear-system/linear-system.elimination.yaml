@@ -1,0 +1,129 @@
+id: linear-system.elimination
+concept: linear-system
+facet: algebraic
+level: 3
+type: procedure
+name: Solve a system of two linear equations by elimination
+statement: Solve a system of two linear equations by adding or subtracting the equations, after multiplying
+  one or both by a number if needed, so that one variable is eliminated; then solve for the other variable
+  and substitute back.
+procedure:
+- Multiply one or both equations by numbers so that one variable has equal or opposite coefficients.
+- Subtract the equations if the coefficients are equal, or add them if they are opposite, to eliminate
+  that variable.
+- Solve the resulting one-variable equation.
+- Substitute the value back to find the other variable.
+assess: Solve the system 2x + 3y = 12 and 2x - y = 4 by elimination.
+sources:
+  ccss:
+  - 8.EE.C.8.b
+  learning_components:
+  - c7a43025
+requires:
+- clause: standard
+  all_of:
+  - node: linear-system.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The method finds the pair that satisfies both equations, so the meaning of a solution of a system
+      is used throughout.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.equality-preserved.same-operation
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 multiplies both sides of an equation by a number, an operation that keeps the solutions
+      of the equation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.linear.expand.rational
+    relation: procedural
+    points_to: procedure.1
+    why: Multiplying an equation by a number multiplies every term of its left side, as in 3(2x - y) =
+      6x - 3y.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.linear.add.rational
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 adds the two equations, so the left sides are added as linear expressions and like terms
+      are combined.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.linear.subtract.rational
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 also subtracts one equation from the other, so one left side is subtracted from the other
+      as linear expressions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.one-step.multiplication.solve
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 solves an equation like 4y = 8 that remains once one variable has been eliminated.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.two-step.px-plus-q.solve
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 substitutes into an original equation and solves the result, of the form px + q = r, for
+      the other variable.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.evaluate
+    relation: procedural
+    points_to: procedure.4
+    why: Step 4 substitutes the value found back into an equation to find the other variable.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

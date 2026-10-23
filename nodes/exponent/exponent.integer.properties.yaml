@@ -1,0 +1,163 @@
+id: exponent.integer.properties
+concept: exponent
+facet: integer-power
+level: 3
+type: concept
+name: The exponent properties hold for all integer exponents
+statement: With a^0 = 1 and a^(-n) = 1/a^n, the rules a^m x a^n = a^(m+n), a^m divided by a^n = a^(m -
+  n), (a^m)^n = a^(m x n), (a x b)^n = a^n x b^n and (a/b)^n = a^n/b^n hold for all integers m and n,
+  with nonzero bases.
+assess: 'Without computing any power, decide whether each is true: 5^-2 x 5^6 = 5^4; 4^3 divided by 4^7
+  = 4^-4; (2^-3)^2 = 2^-1; 6^4 divided by 6^4 = 6^0.'
+sources:
+  ccss:
+  - 8.EE.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The rule is stated with letters, each standing for any number or any whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number.product-rule
+    relation: definitional
+    points_to: statement
+    why: The statement extends the product rule a^m x a^n = a^(m+n) from whole-number to integer exponents.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number.quotient-rule
+    relation: definitional
+    points_to: statement
+    why: The statement extends the quotient rule to every integer m and n, including m less than n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number.power-of-power
+    relation: definitional
+    points_to: statement
+    why: The statement extends (a^m)^n = a^(m x n) to integer exponents.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number.power-of-product
+    relation: definitional
+    points_to: statement
+    why: The statement extends (a x b)^n = a^n x b^n to integer exponents.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number.power-of-quotient
+    relation: definitional
+    points_to: statement
+    why: The statement extends (a/b)^n = a^n/b^n to integer exponents.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.zero
+    relation: definitional
+    points_to: statement
+    why: The statement fixes a^0 = 1, which the rules must still respect when an exponent is 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.negative
+    relation: definitional
+    points_to: statement
+    why: The statement fixes a^(-n) = 1/a^n, which the rules must still respect for negative exponents.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.addition.integers
+    relation: procedural
+    points_to: assess
+    why: The test problems add integer exponents such as -2 + 6 to check 5^-2 x 5^6 = 5^4.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.subtraction.integers
+    relation: procedural
+    points_to: assess
+    why: The test problems subtract integer exponents such as 3 - 7 to check 4^3 divided by 4^7.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.multiplication.integers
+    relation: procedural
+    points_to: assess
+    why: The test problems multiply integer exponents such as -3 x 2 to check (2^-3)^2.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

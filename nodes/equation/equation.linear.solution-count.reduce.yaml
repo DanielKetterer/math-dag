@@ -1,0 +1,85 @@
+id: equation.linear.solution-count.reduce
+concept: equation
+facet: linear-one-variable
+level: 3
+type: procedure
+name: Find the number of solutions by transforming to x = a, a = a, or a = b
+statement: Transform a linear equation in one variable into simpler equivalent equations until x = a (exactly
+  one solution), a = a (infinitely many solutions), or a = b with a and b different numbers (no solution)
+  results.
+procedure:
+- Expand products and collect like terms on each side.
+- Subtract a variable term from both sides so that at most one side has the variable.
+- If the variable is gone, the equation reads a = a (infinitely many solutions) or a = b with a not equal
+  to b (no solution).
+- Otherwise isolate the variable to reach x = a (one solution).
+assess: How many solutions does 3(x + 2) = 3x + 5 have? Show the simplest equivalent equation you reach.
+sources:
+  ccss:
+  - 8.EE.C.7.a
+  learning_components:
+  - c219ca3a
+requires:
+- clause: standard
+  all_of:
+  - node: equation.linear.solution-count.cases
+    relation: definitional
+    points_to: statement
+    why: The end forms x = a, a = a and a = b correspond to one, infinitely many and no solutions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.linear.variable-both-sides
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 subtracts a variable term from both sides so at most one side has the variable.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.equal-sign.meaning
+    relation: definitional
+    points_to: procedure.3
+    why: Reading a = a as always true and a = b as never true uses the equal sign meaning that both sides
+      have the same value.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.linear.expand.rational
+    relation: procedural
+    points_to: procedure.1
+    why: step 1 expands products such as 3(x + 2) on each side
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.linear.add.rational
+    relation: procedural
+    points_to: procedure.1
+    why: step 1 collects like terms on each side before the variable terms are moved
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

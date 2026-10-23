@@ -1,0 +1,53 @@
+id: similarity.triangle.angle-angle.decide
+concept: similarity
+facet: transformation
+level: 3
+type: procedure
+name: Decide from angle measures whether two triangles are similar
+statement: Decide whether two triangles are similar from given angle measures by finding any missing third
+  angle with the angle sum and checking for two pairs of equal angles.
+procedure:
+- For each triangle with only two angles given, find the third angle by subtracting their sum from 180
+  degrees.
+- Compare the angle measures of the two triangles.
+- If two angles of one triangle equal two angles of the other, the triangles are similar; otherwise they
+  are not.
+assess: Triangle ABC has angles of 50 degrees and 60 degrees. Triangle DEF has angles of 60 degrees and
+  70 degrees. Are the two triangles similar?
+sources:
+  ccss:
+  - 8.G.A.5
+  learning_components:
+  - 6f4e508f
+requires:
+- clause: standard
+  all_of:
+  - node: angle.triangle.third-angle
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 finds the missing third angle of each triangle by subtracting the sum of the two given
+      angles from 180 degrees.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: similarity.triangle.angle-angle
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 concludes the triangles are similar when two angles of one equal two angles of the other,
+      which is the angle-angle criterion.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

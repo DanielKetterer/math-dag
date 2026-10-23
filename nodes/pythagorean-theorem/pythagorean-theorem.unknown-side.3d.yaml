@@ -1,0 +1,89 @@
+id: pythagorean-theorem.unknown-side.3d
+concept: pythagorean-theorem
+facet: length
+level: 3
+type: procedure
+name: Find the interior diagonal of a rectangular prism
+statement: 'Find the length of the diagonal of a rectangular prism from a bottom corner to the opposite
+  top corner by applying the Pythagorean theorem twice: first to the diagonal of the base, then to the
+  right triangle formed by that diagonal, a vertical edge, and the interior diagonal.'
+procedure:
+- Find the length d of the diagonal of the base rectangle from d^2 = l^2 + w^2.
+- Use the right triangle whose legs are the base diagonal and a vertical edge of length h, with the right
+  angle at the base, and whose hypotenuse is the interior diagonal.
+- Find the interior diagonal D from D^2 = d^2 + h^2.
+assess: A rectangular box is 3 cm long, 4 cm wide, and 12 cm tall. Find the length of the diagonal from
+  a bottom corner to the opposite top corner.
+sources:
+  ccss:
+  - 8.G.B.7
+  learning_components:
+  - cac68ba0
+requires:
+- clause: standard
+  all_of:
+  - node: pythagorean-theorem.unknown-side.whole
+    relation: procedural
+    points_to: procedure.1
+    why: Finding the base diagonal and then the interior diagonal are each a hypotenuse found from two
+      legs.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: pythagorean-theorem.statement
+    relation: definitional
+    points_to: procedure.3
+    why: The statement applies the theorem twice, the second time to the triangle of the base diagonal,
+      a vertical edge and the interior diagonal.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.rectangle.define
+    relation: definitional
+    points_to: procedure.1
+    why: The base diagonal is the hypotenuse of a right triangle because the corner of the base rectangle
+      is a right angle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.prism.right.meaning
+    relation: definitional
+    points_to: procedure.2
+    why: The vertical edge is perpendicular to the base, which gives the right angle at the base in the
+      second triangle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.triangle.right.identify
+    relation: definitional
+    points_to: statement
+    why: Steps 2 and 3 pick out the right triangle formed by the base diagonal, a vertical edge and the
+      interior diagonal, with legs and hypotenuse.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,75 @@
+id: coordinate-plane.four-quadrants.plot
+concept: coordinate-plane
+facet: location
+level: 2
+type: procedure
+name: Plot a point with integer coordinates in any quadrant
+statement: Plot the point (a, b) with integer coordinates by moving from the origin along the x-axis to
+  a, right if a is positive and left if negative, and then parallel to the y-axis to b, up if b is positive
+  and down if negative.
+procedure:
+- Start at the origin.
+- 'Move |a| units along the x-axis: right if a is positive, left if a is negative.'
+- 'From there, move |b| units parallel to the y-axis: up if b is positive, down if b is negative.'
+- Mark the point and label it.
+assess: Plot A(-3, 4), B(2, -5), and C(-1, -2) on a coordinate grid.
+sources:
+  ccss:
+  - 6.NS.C.6.c
+  learning_components:
+  - 58c3fbf4
+requires:
+- clause: standard
+  all_of:
+  - node: coordinate-plane.ordered-pair.meaning
+    relation: definitional
+    points_to: statement
+    why: Plotting (a, b) uses the first coordinate as the distance along the x-axis and the second as
+      the distance parallel to the y-axis.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.integer.number-line
+    relation: representational
+    points_to: procedure.2
+    why: Steps 2 and 3 move right or up for positive coordinates and left or down for negative ones, which
+      is the signed position of an integer on each axis.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.axes-origin
+    relation: definitional
+    points_to: procedure.1
+    why: The procedure starts at the origin and moves along the x-axis and parallel to the y-axis.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate.ordered-pair.notation
+    relation: representational
+    points_to: statement
+    why: The point is given as an ordered pair (a, b), with the first number for horizontal position and
+      the second for vertical position.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,184 @@
+id: linear-system.application.real-world.simple
+concept: linear-system
+facet: algebraic
+level: 3
+type: application
+name: Solve real-world problems about when two constant-rate quantities are equal
+statement: Solve real-world problems about two quantities that each start at a given value and change
+  at a constant rate, finding when they are equal, by writing two equations of the form y = mx + b and
+  solving the system, in problems whose answers are whole numbers.
+assess: Plan A costs $20 plus $5 per month. Plan B costs $50 plus $2 per month. After how many months
+  do the two plans cost the same, and what is that cost?
+sources:
+  ccss:
+  - 8.EE.C.8.c
+  learning_components:
+  - 237c924f
+requires:
+- clause: via-set-expressions-equal
+  all_of:
+  - node: linear-function.model.construct
+    relation: representational
+    points_to: statement
+    why: Each quantity with a starting value and constant rate is written as y = mx + b, which constructs
+      its linear function.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The time at which the quantities are equal is the pair satisfying both equations at once, a solution
+      of the system.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.set-expressions-equal
+    relation: procedural
+    points_to: statement
+    why: When the two quantities are equal, their expressions of the form y = mx + b are set equal and
+      solved for x.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Setting the two y = mx + b expressions equal is one way to solve the system;
+        the statement says only ''solving the system''. | other route: Solve the system by substitution,
+        by elimination, or by graphing both lines (answers are whole numbers).'
+    status: disputed
+- clause: critic-route-1
+  note: Solve the pair of equations by substitution.
+  all_of:
+  - node: linear-function.model.construct
+    relation: representational
+    points_to: statement
+    why: Each quantity with a starting value and constant rate is written as y = mx + b, which constructs
+      its linear function.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The time at which the quantities are equal is the pair satisfying both equations at once, a solution
+      of the system.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.substitution
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Solve the pair of equations by substitution.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+- clause: critic-route-2
+  note: Solve the pair of equations by elimination.
+  all_of:
+  - node: linear-function.model.construct
+    relation: representational
+    points_to: statement
+    why: Each quantity with a starting value and constant rate is written as y = mx + b, which constructs
+      its linear function.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The time at which the quantities are equal is the pair satisfying both equations at once, a solution
+      of the system.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.elimination
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Solve the pair of equations by elimination.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+- clause: critic-route-3
+  note: Graph both equations and read the whole-number crossing.
+  all_of:
+  - node: linear-function.model.construct
+    relation: representational
+    points_to: statement
+    why: Each quantity with a starting value and constant rate is written as y = mx + b, which constructs
+      its linear function.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The time at which the quantities are equal is the pair satisfying both equations at once, a solution
+      of the system.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-system.graph.estimate
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Graph both equations and read the whole-number crossing.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

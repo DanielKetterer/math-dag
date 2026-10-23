@@ -1,0 +1,71 @@
+id: scientific-notation.subtract.different-exponents
+concept: scientific-notation
+facet: core
+level: 3
+type: procedure
+name: Subtract numbers in scientific notation with different powers of 10
+statement: To subtract two numbers in scientific notation with different powers of 10, rewrite one so
+  both have the same power of 10, then subtract the leading factors.
+procedure:
+- Rewrite the number with the smaller exponent to have the larger exponent, moving its decimal point one
+  place left for each 1 added to the exponent.
+- Subtract the leading factors and keep the common power of 10.
+- If needed, rewrite the result in scientific notation.
+assess: Find 7.2 x 10^-3 - 5 x 10^-4. Give the answer in scientific notation.
+sources:
+  ccss:
+  - 8.EE.A.4
+  learning_components:
+  - 52ad9e03
+  - 2687e8fb
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.compare.integers
+    relation: procedural
+    points_to: procedure.1
+    why: Finding which number has the smaller exponent compares integer exponents, which may be negative.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: scientific-notation.subtract.same-exponent
+    relation: procedural
+    points_to: procedure.2
+    why: Once both numbers share a power of 10, subtracting the leading factors is the same-exponent difference.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.subtraction.integers
+    relation: procedural
+    points_to: procedure.1
+    why: the number of places the point moves equals the difference of the two exponents
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: scientific-notation.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement is about two numbers in scientific notation and reads their leading factors and
+      exponents directly.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

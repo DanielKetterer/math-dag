@@ -1,0 +1,80 @@
+id: center.median.find
+concept: center
+facet: median
+level: 3
+type: procedure
+name: Find the median of a numerical data set
+statement: The median of a numerical data set is the middle value when the values are listed in order;
+  when there is an even number of values, it is the number halfway between the two middle values.
+procedure:
+- List the values in order from least to greatest, keeping repeated values.
+- If the number of values is odd, the median is the middle value of the list.
+- If the number of values is even, the median is the number halfway between the two middle values.
+assess: Find the median of 9, 3, 7, 12, 5, 10.
+sources:
+  ccss:
+  - 6.SP.B.5.c
+  learning_components:
+  - 2ad87414
+requires:
+- clause: standard
+  all_of:
+  - node: comparing.whole-numbers.magnitude
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 lists the values from least to greatest, which means deciding which of two values is greater,
+      as with 9, 3, 7, 12, 5, and 10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.observations.count
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 depends on how many values are listed, repeated values included, so the learner counts
+      the observations to find the middle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: parity.even-odd.pairing
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 and 3 branch on whether the number of values is odd or even, which is whether pairing
+      the values leaves one over.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'necessary: The procedure branches on odd or even in its own steps 2 and 3; parity.even-odd.pairing
+        is the definition node, the other parity nodes (skip-count, equal addends) are methods for the
+        same decision.'
+    status: proposed
+  - node: number.halfway-between
+    relation: procedural
+    points_to: procedure.3
+    why: For an even number of values, step 3 takes the number halfway between the two middle values,
+      such as the number halfway between 7 and 9.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

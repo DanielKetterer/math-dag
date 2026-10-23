@@ -1,0 +1,74 @@
+id: circle.circumference.formula.apply
+concept: circle
+facet: measure
+level: 3
+type: procedure
+name: Find the circumference of a circle with the formula
+statement: The circumference of a circle is found by multiplying its diameter by pi, doubling the radius
+  first when the radius is given.
+procedure:
+- If the radius is given, double it to get the diameter.
+- Multiply the diameter by pi, or by an approximation such as 3.14.
+assess: Find the circumference of a circle with radius 5 cm. Use 3.14 for pi.
+sources:
+  ccss:
+  - 7.G.B.4
+  learning_components:
+  - 3e117ec0
+requires:
+- clause: standard
+  all_of:
+  - node: circle.circumference.formula
+    relation: definitional
+    points_to: statement
+    why: The procedure multiplies the diameter by pi, which is the formula C = pi x d.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.diameter
+    relation: procedural
+    points_to: procedure.1
+    why: Doubling the radius to get the diameter relies on a diameter being twice the radius.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: procedure.1
+    why: Doubling the radius is multiplying a whole number by 2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Doubling the radius is a real step, but the test doubles 5; multiplication.by-one-digit
+        (multi-digit factors) is stronger than the test uses.'
+    status: disputed
+  - node: decimal.multiplication.algorithm
+    relation: procedural
+    points_to: procedure.2
+    why: Multiplying the diameter by 3.14 is multiplying a whole number by a decimal.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

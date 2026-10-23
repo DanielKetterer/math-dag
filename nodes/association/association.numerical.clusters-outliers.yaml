@@ -1,0 +1,83 @@
+id: association.numerical.clusters-outliers
+concept: association
+facet: numerical
+level: 2
+type: concept
+name: Clusters and outliers in a scatter plot
+statement: In a scatter plot, a cluster is a group of points lying close together and separated from the
+  other points by a gap, and an outlier is a point lying far from the overall pattern of the others.
+assess: A scatter plot shows the points (1, 2), (2, 3), (3, 4), (4, 5), (8, 9), (9, 10), (10, 11), and
+  (5, 15). Name the clusters and the outlier.
+sources:
+  ccss:
+  - 8.SP.A.1
+  learning_components:
+  - bfb3223b
+requires:
+- clause: via-make
+  all_of:
+  - node: distribution.pattern-deviations
+    relation: definitional
+    points_to: statement
+    why: An outlier is a point far from the overall pattern, which is the striking deviation from a pattern
+      described in that node.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.scatter-plot.make
+    relation: representational
+    points_to: statement
+    why: Clusters and outliers are groups and single points in a scatter plot, where each point is a pair
+      of values from one individual.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Clusters and outliers are seen in a given plot; the test lists the points, and
+        reading or plotting them both work, so making a plot is not required. | other route: Read ready-made
+        scatter plots (data.table-graph.read-values, coordinate-plane.first-quadrant.read) and use distribution.pattern-deviations
+        for ''far from the overall pattern''.'
+    status: disputed
+- clause: critic-route-1
+  note: Read a given scatter plot and judge distance from the overall pattern; no plotting.
+  all_of:
+  - node: distribution.pattern-deviations
+    relation: definitional
+    points_to: statement
+    why: An outlier is a point far from the overall pattern, which is the striking deviation from a pattern
+      described in that node.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.table-graph.read-values
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Read a given scatter plot and judge distance from
+      the overall pattern; no plotting.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: coordinate-plane.first-quadrant.read
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Read a given scatter plot and judge distance from
+      the overall pattern; no plotting.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

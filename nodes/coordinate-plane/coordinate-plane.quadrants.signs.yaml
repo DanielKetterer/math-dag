@@ -1,0 +1,74 @@
+id: coordinate-plane.quadrants.signs
+concept: coordinate-plane
+facet: location
+level: 3
+type: concept
+name: The signs of the coordinates tell the quadrant
+statement: With the quadrants numbered I to IV counterclockwise from the upper right, a point whose coordinates
+  have signs (+, +) is in quadrant I, (-, +) in quadrant II, (-, -) in quadrant III, and (+, -) in quadrant
+  IV; a point with a coordinate of 0 lies on an axis.
+assess: 'Without plotting, name the quadrant or axis for each point: (-4, 7), (3, -2), (-1, -5), (0, 6).'
+sources:
+  ccss:
+  - 6.NS.C.6.b
+  learning_components:
+  - ef1f09b2
+requires:
+- clause: via-plot
+  all_of:
+  - node: coordinate-plane.axes-origin
+    relation: definitional
+    points_to: statement
+    why: The quadrants are the four regions the axes cut the plane into, and a point with a coordinate
+      0 lies on an axis.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.four-quadrants.plot
+    relation: representational
+    points_to: statement
+    why: Reading the signs of the coordinates as left or right and up or down from the origin is how plotting
+      places a point in a quadrant or on an axis.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The concept needs the convention that a negative first coordinate is left of
+        the y-axis and a negative second coordinate is below the x-axis. Plotting is one place to learn
+        it; reading plotted points is another. | other route: Learn the sign pattern by reading the coordinates
+        of points already plotted in each quadrant (coordinate-plane.four-quadrants.read), with no plotting.'
+    status: disputed
+- clause: critic-route-1
+  note: Learn the sign-to-quadrant pattern by reading the coordinates of points already plotted in each
+    quadrant, with no plotting.
+  all_of:
+  - node: coordinate-plane.axes-origin
+    relation: definitional
+    points_to: statement
+    why: The quadrants are the four regions the axes cut the plane into, and a point with a coordinate
+      0 lies on an axis.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.four-quadrants.read
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Learn the sign-to-quadrant pattern by reading the
+      coordinates of points already plotted in each quadrant, with no plotting.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

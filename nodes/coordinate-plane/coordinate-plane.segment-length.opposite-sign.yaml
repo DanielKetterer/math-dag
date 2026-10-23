@@ -1,0 +1,87 @@
+id: coordinate-plane.segment-length.opposite-sign
+concept: coordinate-plane
+facet: location
+level: 3
+type: procedure
+name: Find a horizontal or vertical length when the differing coordinates have opposite signs
+statement: When two points share one coordinate and their other coordinates have opposite signs, the points
+  are on opposite sides of the axis, and the length of the segment joining them is the sum of the absolute
+  values of those coordinates.
+procedure:
+- Find the coordinate the points do not share.
+- Take the absolute value of each of those two coordinates.
+- Add the two absolute values.
+assess: Without a grid, find the length of the segment joining (4, -3) and (4, 5).
+sources:
+  ccss:
+  - 6.G.A.3
+  - 6.NS.C.8
+  learning_components:
+  - 418d3f5e
+  - 1ba53b4c
+requires:
+- clause: standard
+  all_of:
+  - node: coordinate-plane.segment-length.meaning
+    relation: definitional
+    points_to: statement
+    why: The length is the distance between the two differing coordinates of points on one horizontal
+      or vertical line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: absolute-value.distance.integer
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 takes the absolute value of each differing coordinate, which is its distance from 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.integer.number-line
+    relation: definitional
+    points_to: statement
+    why: Coordinates with opposite signs lie on opposite sides of 0, so the segment crosses the axis.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-10
+    relation: procedural
+    points_to: assess
+    why: The absolute values 3 and 5 are added to give 8.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem''s 3 + 5 needs adding; the idea is the sum of absolute values.'
+    status: proposed
+  - node: addition.within-100
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds the two absolute values, the distances from 0 on each side.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: Step 3 adds two absolute values with no stated range; the test''s 3 + 5 is within
+        10 (e767), so this node is stronger than the test needs but may be too weak for larger coordinates.'
+    status: disputed
+status: proposed

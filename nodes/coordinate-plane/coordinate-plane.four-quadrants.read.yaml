@@ -1,0 +1,76 @@
+id: coordinate-plane.four-quadrants.read
+concept: coordinate-plane
+facet: location
+level: 2
+type: procedure
+name: Read the integer coordinates of a point in any quadrant
+statement: 'Find the integer coordinates of a plotted point in any quadrant: the first coordinate is its
+  signed horizontal position, negative to the left of the y-axis, and the second is its signed vertical
+  position, negative below the x-axis.'
+procedure:
+- From the point, go straight up or down to the x-axis and read the number there; it is negative if the
+  point is left of the y-axis.
+- From the point, go straight left or right to the y-axis and read the number there; it is negative if
+  the point is below the x-axis.
+- Write the two numbers as an ordered pair (first, second).
+assess: Write the ordered pair for each of the four labeled points on this grid, one in each quadrant.
+sources:
+  ccss:
+  - 6.NS.C.6.c
+  learning_components:
+  - 58c3fbf4
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.integer.number-line
+    relation: representational
+    points_to: procedure.1
+    why: Steps 1 and 2 read a number on each axis that is negative left of the y-axis or below the x-axis,
+      which is reading signed integers on a number line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.ordered-pair.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement gives the first coordinate as the horizontal position and the second as the vertical
+      position, which is the meaning of the coordinates.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.axes-origin
+    relation: definitional
+    points_to: procedure.1
+    why: Steps 1 and 2 read numbers on the x-axis and y-axis and use which side of the origin the point
+      is on to decide the sign.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate.ordered-pair.notation
+    relation: representational
+    points_to: procedure.3
+    why: Step 3 writes the two numbers as an ordered pair (first, second).
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

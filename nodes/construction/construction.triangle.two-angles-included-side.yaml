@@ -1,0 +1,103 @@
+id: construction.triangle.two-angles-included-side
+concept: construction
+facet: core
+level: 2
+type: procedure
+name: Draw a triangle from two angles and the side between them
+statement: A triangle with two given angles, whose sum is less than 180 degrees, and a given side between
+  them is drawn with a ruler and protractor.
+procedure:
+- Draw the given side to its length.
+- At each endpoint, draw a ray making the given angle with the side, both rays on the same side of it.
+- Extend the rays until they meet; the meeting point is the third vertex.
+assess: With a ruler and protractor, draw triangle PQR with PQ = 5 cm, angle P = 40 degrees and angle
+  Q = 70 degrees.
+sources:
+  ccss:
+  - 7.G.A.2
+  learning_components:
+  - 52ffb8ee
+requires:
+- clause: standard
+  all_of:
+  - node: measurement.length.ruler
+    relation: procedural
+    points_to: procedure.1
+    why: Drawing the given side to its length uses a ruler to measure that length.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.protractor.sketch
+    relation: procedural
+    points_to: procedure.2
+    why: Each ray is drawn at its given angle to the side by using a protractor.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ray.meaning
+    relation: procedural
+    points_to: procedure.3
+    why: The two rays are extended until they meet, which locates the third vertex.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.meaning
+    relation: definitional
+    points_to: statement
+    why: Each given angle is formed at an endpoint of the side by that side and a ray.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.polygon.name-by-sides
+    relation: definitional
+    points_to: statement
+    why: The figure drawn is a triangle, a closed figure with three sides and three vertices.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: segment.meaning
+    relation: definitional
+    points_to: statement
+    why: The procedure begins by drawing the given side as a segment of a given length; the sibling node
+      with the same first step lists this edge.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: angle.measure.degrees
+    relation: definitional
+    points_to: statement
+    why: The angles are given in degrees and the protractor step reads degrees directly (test-level).
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

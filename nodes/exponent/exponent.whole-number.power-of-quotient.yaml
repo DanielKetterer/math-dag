@@ -1,0 +1,65 @@
+id: exponent.whole-number.power-of-quotient
+concept: exponent
+facet: whole-number-power
+level: 3
+type: concept
+name: 'Power of a quotient: (a/b)^n = a^n/b^n'
+statement: For any number a, nonzero number b, and positive whole number n, (a/b)^n = a^n/b^n.
+assess: 'Without computing any power, decide whether each is true: (2/3)^4 = 2^4/3^4; (2/3)^4 = 2^4/3;
+  (2/3)^4 = 8/12.'
+sources:
+  ccss:
+  - 8.EE.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The rule is stated with letters, each standing for any number or any whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: (a/b)^n is n equal factors of the fraction a/b multiplied together.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.product-rule
+    relation: justificatory
+    points_to: statement
+    why: Multiplying n copies of a/b by the product rule gives numerator a^n and denominator b^n.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.parentheses
+    relation: representational
+    points_to: statement
+    why: The parentheses make the whole fraction a/b the base, so the exponent n applies to a and to b.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

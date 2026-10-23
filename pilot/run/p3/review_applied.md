@@ -1,0 +1,55 @@
+# Review verdicts applied by merge_run
+
+- expressions.variable.meaning: route via-unknown-symbol removed (superset of another route); moved to related: ['equation.unknown-symbol']
+- expressions.variable.meaning: only route left, renamed critic-route-1 -> standard
+- rational-number.compute.mixed-forms: route via-long-division removed (superset of another route); moved to related: nothing
+- equation.two-step.write.px-plus-q: route critic-route-1 removed (superset of another route); moved to related: nothing
+- equation.two-step.write.p-times-sum: route critic-route-1 removed (superset of another route); moved to related: nothing
+- inequality.two-step.write: route critic-route-1 removed (superset of another route); moved to related: nothing
+- inequality.two-step.write: route critic-route-2 removed (superset of another route); moved to related: nothing
+- exponent.power-of-ten.negative: route critic-route-2 removed (superset of another route); moved to related: nothing
+- equations.linear.solve: route critic-route-1 removed (superset of another route); moved to related: nothing
+- equations.linear.solve: route critic-route-2 removed (superset of another route); moved to related: nothing
+- linear-system.application.mathematical: route critic-route-1 removed (superset of another route); moved to related: nothing
+- linear-system.application.mathematical: route critic-route-2 removed (superset of another route); moved to related: nothing
+- linear-system.application.mathematical: route critic-route-3 removed (superset of another route); moved to related: nothing
+- area.polygon.decompose: route via-half-parallelogram removed (superset of another route); moved to related: nothing
+- area.polygon.subtract: route critic-route-2 removed (superset of another route); moved to related: nothing
+- volume.prism.fraction-edges.base-height.apply: route via-multiply removed (superset of another route); moved to related: ['multiplication.array-area.fraction-sides.multiply']
+- volume.prism.fraction-edges.base-height.apply: only route left, renamed critic-route-1 -> standard
+- coordinate-plane.polygon.missing-vertex: route via-plot removed (superset of another route); moved to related: ['coordinate-plane.four-quadrants.plot']
+- coordinate-plane.polygon.missing-vertex: route via-read removed (superset of another route); moved to related: ['coordinate-plane.four-quadrants.read']
+- coordinate-plane.polygon.missing-vertex: only route left, renamed critic-route-1 -> standard
+- surface-area.net.triangle-faces: route critic-route-1 removed (superset of another route); moved to related: nothing
+- triangle.inequality: route via-from-sides removed (superset of another route); moved to related: ['addition.within-100', 'comparing.whole-numbers.magnitude']
+- triangle.inequality: route compass removed (superset of another route); moved to related: nothing
+- triangle.determined.three-sides: route sticks removed (superset of another route); moved to related: ['shapes.compose.from-sides']
+- triangle.determined.three-sides: route compass removed (superset of another route); moved to related: ['construction.triangle.three-sides']
+- triangle.determined.three-sides: route critic-route-1 removed (superset of another route); moved to related: nothing
+- triangle.determined.three-sides: route critic-route-2 removed (superset of another route); moved to related: nothing
+- triangle.ambiguous.two-sides-non-included-angle: route critic-route-1 removed (superset of another route); moved to related: nothing
+- triangle.three-angles: route critic-route-1 removed (superset of another route); moved to related: nothing
+- circle.circumference.meaning: route critic-route-1 removed (superset of another route); moved to related: nothing
+- circle.circumference.formula: route critic-route-1 removed (superset of another route); moved to related: nothing
+- angle.vertical.equal: route critic-route-1 removed (superset of another route); moved to related: nothing
+- angle.vertical.equal: route critic-route-2 removed (superset of another route); moved to related: nothing
+- angle.straight-line.sum-180: route critic-route-1 removed (superset of another route); moved to related: nothing
+- angle.straight-line.sum-180: route critic-route-2 removed (superset of another route); moved to related: nothing
+- transformation.reflection.axis.coordinates.rule: route critic-route-1 removed (superset of another route); moved to related: nothing
+- transformation.reflection.axis.coordinates.rule: route critic-route-2 removed (superset of another route); moved to related: nothing
+- transformation.sequence.with-dilation.coordinates: route via-coordinates removed (superset of another route); moved to related: ['transformation.dilation.origin.coordinates']
+- transformation.sequence.with-dilation.coordinates: only route left, renamed critic-route-1 -> standard
+- geometry.similar-triangles: route critic-route-1 removed (superset of another route); moved to related: nothing
+- geometry.similar-triangles: route critic-route-2 removed (superset of another route); moved to related: nothing
+- angle.application.triangles-parallel-lines: route critic-route-1 removed (superset of another route); moved to related: ['angle.transversal.corresponding', 'angle.vertical.equal']
+- angle.application.triangles-parallel-lines: route critic-route-2 removed (superset of another route); moved to related: ['angle.straight-line.sum-180']
+- angle.application.triangles-parallel-lines: route critic-route-3 removed (superset of another route); moved to related: nothing
+- rational-number.integer.number-line: route via-meaning removed (superset of another route); moved to related: ['rational-number.signed.meaning']
+- rational-number.integer.number-line: only route left, renamed critic-route-1 -> standard
+- rational-number.additive-inverse: route critic-route-1 removed (superset of another route); moved to related: nothing
+- rational-number.additive-inverse: route critic-route-2 removed (superset of another route); moved to related: nothing
+- probability.likelihood.zero-to-one: route via-as-number removed (superset of another route); moved to related: ['fraction.as-number']
+- probability.likelihood.zero-to-one: only route left, renamed critic-route-1 -> standard
+- probability.compound.event-outcomes: route via-list removed (superset of another route); moved to related: ['probability.sample-space.list']
+- probability.compound.event-outcomes: route critic-route-2 removed (superset of another route); moved to related: ['probability.sample-space.tree']
+- probability.compound.event-outcomes: only route left, renamed critic-route-1 -> standard

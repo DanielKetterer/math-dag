@@ -1,0 +1,89 @@
+id: transformation.rigid-motion.preserves-parallel.verify
+concept: transformation
+facet: geometric
+level: 2
+type: justification
+name: Verify experimentally that rigid motions keep parallel lines parallel
+statement: Moving a tracing of two parallel lines by translations, reflections, and rotations, and checking
+  each image, shows experimentally that the image lines are always parallel.
+assess: Draw two parallel lines and trace them on transparent paper. Translate the tracing, then reflect
+  it, then rotate it, checking after each move whether the image lines are parallel. What do you find,
+  and how does the tracing show it?
+sources:
+  ccss:
+  - 8.G.A.1.c
+  learning_components:
+  - d3571b9e
+requires:
+- clause: standard
+  all_of:
+  - node: transformation.translation.meaning
+    relation: justificatory
+    points_to: statement
+    why: The experiment slides a tracing of the two parallel lines, which is performing a translation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.reflection.meaning
+    relation: justificatory
+    points_to: statement
+    why: The experiment flips the tracing over a line, which is performing a reflection.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: transformation.rotation.meaning
+    relation: justificatory
+    points_to: statement
+    why: The experiment turns the tracing about a point, which is performing a rotation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: parallel.meaning
+    relation: justificatory
+    points_to: statement
+    why: After each move the experimenter checks whether the image lines are parallel, meaning they never
+      meet.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: parallel.draw
+    relation: procedural
+    points_to: assess
+    why: The test begins by drawing two parallel lines to trace, which is drawing a line parallel to a
+      given line.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The statement starts from a tracing of two parallel lines; only the test asks
+        the learner to draw them first, and they could be given or taken from ruled paper.'
+    status: proposed
+status: proposed

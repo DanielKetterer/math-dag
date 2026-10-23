@@ -1,0 +1,56 @@
+id: expressions.like-terms.meaning
+concept: expressions
+facet: algebraic
+level: 3
+type: concept
+name: Like terms
+statement: Like terms are terms with the same variable part (the same letters raised to the same powers);
+  they may differ only in their number coefficient. Number terms with no letter are like terms of one
+  another.
+assess: 'Which of these pairs are like terms: 3x and 7x; 3x and 3y; 5 and 9; 4x and 4; 2x^2 and 2x?'
+sources:
+  ccss:
+  - 6.EE.A.3
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.parts.name
+    relation: definitional
+    points_to: statement
+    why: Like terms are defined as terms that differ only in their coefficient, which uses the words term
+      and coefficient.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: The same letters raised to the same powers requires reading x^2 as x times x, which the test
+      pair 2x^2 and 2x uses.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: definitional
+    points_to: statement
+    why: The statement and test read terms such as 3x, 7x, 4x as a number times a letter (the coefficient
+      and the shared variable part); this is otherwise reached only through expressions.parts.name.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

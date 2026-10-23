@@ -1,0 +1,43 @@
+id: sampling.random.meaning
+concept: sampling
+facet: core
+level: 2
+type: concept
+name: A random sample gives every member the same chance
+statement: A random sample is chosen so that every member of the population has the same chance of being
+  selected.
+assess: Which of these ways of choosing 30 students give every student at the school the same chance of
+  being chosen? (a) the first 30 students to arrive in the morning; (b) 30 names drawn from a bag holding
+  one slip for every student; (c) 30 volunteers; (d) the 30 students in the art club.
+sources:
+  ccss:
+  - 7.SP.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: sampling.population-sample.meaning
+    relation: definitional
+    points_to: statement
+    why: A random sample is a sample chosen so that every member of the population has the same chance,
+      so the learner must know sample and population.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: probability.outcomes.equally-likely
+    relation: definitional
+    points_to: statement
+    why: '''Same chance of being selected'' is the defining idea and is used undefined; the nearest indexed
+      node, probability.model.uniform.develop, is stronger than needed.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

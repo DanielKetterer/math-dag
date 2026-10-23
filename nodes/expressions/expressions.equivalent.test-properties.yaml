@@ -1,0 +1,85 @@
+id: expressions.equivalent.test-properties
+concept: expressions
+facet: algebraic
+level: 3
+type: procedure
+name: Decide whether expressions are equivalent using properties
+statement: Decide whether two expressions are equivalent by using properties of operations to rewrite
+  one into the other, or both into the same form.
+procedure:
+- Expand products and combine like terms in each expression.
+- Compare the two resulting forms term by term.
+assess: Use properties of operations to decide whether 3(x + 4) + 2x and 5x + 12 are equivalent.
+sources:
+  ccss:
+  - 6.EE.A.4
+  learning_components:
+  - 52a53073
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.equivalent.meaning
+    relation: definitional
+    points_to: statement
+    why: The decision is whether two expressions have the same value for every number, which is the meaning
+      of equivalent.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.distributive.expand
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 expands products such as 3(x + 4) with the distributive property.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.like-terms.combine
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 combines like terms, as in 3x + 2x = 5x in the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.sum.rearrange-terms
+    relation: procedural
+    points_to: procedure.1
+    why: Combining 3x and 2x in 3x + 12 + 2x requires first reordering the terms so the like terms sit
+      together.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: definitional
+    points_to: statement
+    why: 'Task-only: the test problem writes a number directly next to a letter (2x and 5x); this is otherwise
+      reached only through another prerequisite.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

@@ -1,0 +1,49 @@
+id: probability.sample-space.tree
+concept: probability
+facet: equally-likely
+level: 2
+type: representation
+name: Represent the sample space of a compound event with a tree diagram
+statement: A tree diagram for a compound event branches once for each outcome of the first stage and then,
+  from the end of every branch, once for each outcome of the next stage; each path from the start to the
+  end of a last branch is one outcome in the sample space.
+assess: A coin is tossed three times. Draw a tree diagram that shows every possible outcome.
+sources:
+  ccss:
+  - 7.SP.C.8.b
+  learning_components:
+  - 2ee8400d
+requires:
+- clause: via-list
+  all_of:
+  - node: probability.sample-space.list
+    relation: definitional
+    points_to: statement
+    why: Each path of the tree is one outcome in the sample space, the set of all combinations of stage
+      outcomes defined with the organized list.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The tree uses the idea of all combinations but not the organized-list procedure.
+        | other route: Build the tree directly from the lists of single-stage outcomes, branching from
+        each outcome of the earlier stage.'
+    status: disputed
+- clause: critic-route-1
+  note: Build the tree straight from the lists of single-stage outcomes, branching from each outcome of
+    the earlier stage.
+  all_of:
+  - node: probability.outcomes.list
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Build the tree straight from the lists of single-stage
+      outcomes, branching from each outcome of the earlier stage.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

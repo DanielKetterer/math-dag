@@ -1,0 +1,59 @@
+id: division.by-two-digit.remainder
+concept: division
+facet: base-ten
+level: 3
+type: procedure
+name: Divide by a two-digit number with a remainder
+statement: Find the whole-number quotient and the remainder of a dividend of up to four digits by a two-digit
+  divisor, with the remainder less than the divisor, by any reliable method.
+assess: Find the quotient and remainder of 200 divided by 60, and of 1,000 divided by 24. Use any method.
+sources:
+  ccss:
+  - 5.NBT.B.6
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: division.remainder.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement requires the remainder to be less than the divisor, which is what the remainder
+      means.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: definitional
+    points_to: statement
+    why: Multiples of the two-digit divisor are formed to find the quotient, as for exact division.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: place-value.factor-of-ten
+    relation: definitional
+    points_to: statement
+    why: Quotients of up to three digits need multiples of the divisor times tens and hundreds.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: subtraction.multi-digit
+    relation: definitional
+    points_to: statement
+    why: Multiples of the divisor are subtracted from a dividend of up to four digits and the remainder
+      is what is left; e617 in the sibling node cites this id, which is not in the index.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

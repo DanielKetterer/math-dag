@@ -1,0 +1,52 @@
+id: measurement.length.whole-plus-fraction
+concept: measurement
+facet: length
+level: 2
+type: representation
+name: A length of whole units plus a fraction of a unit
+statement: A length of a whole number of units and a fraction of a unit more, such as 2 1/4 inches, is
+  the point on a ruler or number line that fraction of the way from that whole-number mark to the next;
+  it is written as the whole number followed by the fraction and read two and one fourth.
+assess: On this inch ruler marked in fourths, mark 2 1/4 inches and 3 3/4 inches.
+sources:
+  ccss:
+  - 3.MD.B.4
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: fraction.non-unit.number-line
+    relation: representational
+    points_to: statement
+    why: The fraction of a unit is a point that fraction of the way from one whole-number mark to the
+      next, as in 3/4.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: measurement.length.ruler.from-zero
+    relation: representational
+    points_to: statement
+    why: The whole-number marks on a ruler count whole units from 0, so the mark 2 is two units from the
+      start.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+related:
+- node: fraction.mixed-number.meaning
+  relation: same_idea_different_form
+  note: The target itself introduces the whole-number-followed-by-fraction notation on a ruler. The mixed
+    number as a number (2 + 1/4) is the same idea in numeric form and is not needed to place 2 1/4 on
+    a ruler.
+status: proposed

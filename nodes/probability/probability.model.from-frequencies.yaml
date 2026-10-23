@@ -1,0 +1,75 @@
+id: probability.model.from-frequencies
+concept: probability
+facet: relative-frequency
+level: 2
+type: procedure
+name: Develop a probability model from observed frequencies
+statement: A probability model, which need not be uniform, is developed from data on a chance process
+  by assigning each outcome its observed relative frequency; comparing these values shows whether the
+  outcomes appear equally likely.
+procedure:
+- Record how many times each outcome occurred in many trials.
+- Divide each count by the total number of trials to get each outcome's relative frequency.
+- Assign each outcome its relative frequency as its approximate probability.
+- Compare the probabilities to judge whether the outcomes appear equally likely.
+assess: A paper cup was tossed 100 times. It landed on its side 70 times, open end up 20 times, and open
+  end down 10 times. Give an approximate probability for each outcome. Do the three outcomes appear equally
+  likely?
+sources:
+  ccss:
+  - 7.SP.C.7.b
+  learning_components:
+  - ea0959ab
+requires:
+- clause: standard
+  all_of:
+  - node: probability.relative-frequency.estimate
+    relation: procedural
+    points_to: procedure.2
+    why: Steps 2 and 3 find each outcome's relative frequency by the same count over trials division used
+      to estimate one probability.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: probability.model.uniform.develop
+    relation: definitional
+    points_to: procedure.4
+    why: Step 4 judges whether outcomes appear equally likely, using the meaning of equally likely outcomes
+      that share the same probability.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.categorical.count-each
+    relation: procedural
+    points_to: procedure.1
+    why: Recording how many times each outcome occurred is counting the trials in each category.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.compare
+    relation: definitional
+    points_to: statement
+    why: Step 4 compares the outcomes' probabilities (decimals or fractions) to judge whether they appear
+      equally likely; fraction comparison would serve for fractions.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

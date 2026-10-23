@@ -1,0 +1,100 @@
+id: volume.sphere.compute
+concept: volume
+facet: unit-cubes
+level: 3
+type: procedure
+name: Find the volume of a sphere in terms of pi
+statement: Find the volume of a sphere from its radius or diameter with V = (4/3) x pi x r^3, giving the
+  answer in terms of pi.
+procedure:
+- If the diameter is given, halve it to get the radius r.
+- Compute r^3, multiply by 4, and divide by 3.
+- Write the volume as that number times pi, in cubic units.
+assess: A sphere has radius 3 cm. Find its volume in terms of pi.
+sources:
+  ccss:
+  - 8.G.C.9
+  learning_components:
+  - 8e127d06
+requires:
+- clause: standard
+  all_of:
+  - node: volume.sphere.formula
+    relation: definitional
+    points_to: statement
+    why: The procedure applies V = (4/3) x pi x r^3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.diameter
+    relation: procedural
+    points_to: procedure.1
+    why: Halving a given diameter to get the radius uses the fact that a diameter is twice a radius.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: division.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: The procedure halves the diameter and divides by 3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: procedural
+    points_to: procedure.2
+    why: The second step computes r^3 by using the radius as a factor three times.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: The second step multiplies the whole number r^3 by 4 before dividing by 3.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.unit-cube
+    relation: procedural
+    points_to: procedure.3
+    why: The answer is written in cubic units, the units of volume.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

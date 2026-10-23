@@ -1,0 +1,50 @@
+id: exponent.zero
+concept: exponent
+facet: integer-power
+level: 3
+type: concept
+name: 'The zero exponent: a^0 = 1'
+statement: For any nonzero number a, a^0 = 1.
+assess: 'True or false: 7^0 = 0; 7^0 = 1; 7^0 = 7; (2/5)^0 = 1.'
+sources:
+  ccss:
+  - 8.EE.A.1
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: statement
+    why: The rule is stated with letters, each standing for any number or any whole number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.as-number
+    relation: definitional
+    points_to: assess
+    why: The test problem (2/5)^0 uses a fraction as the nonzero base number a.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test item (2/5)^0 uses a fraction as the base; the statement says any
+        nonzero number.'
+    status: proposed
+  - node: exponent.whole-number-power.meaning
+    relation: definitional
+    points_to: statement
+    why: The statement uses power notation a^0; the exponent notation and its whole-number meaning are
+      used directly, not only through the justification edges.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

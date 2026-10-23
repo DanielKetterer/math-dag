@@ -1,0 +1,60 @@
+id: volume.prism.fraction-edges.lwh.apply
+concept: volume
+facet: multiplicative
+level: 3
+type: procedure
+name: Find the volume of a fraction-edged rectangular prism with V = l x w x h
+statement: The volume of a right rectangular prism with fractional edge lengths is the product of its
+  length, width and height.
+procedure:
+- Identify the length, width and height.
+- Multiply the three lengths.
+- Write the result in cubic units.
+assess: Find the volume of a right rectangular prism that is 1/2 m long, 3/4 m wide and 2 m tall.
+sources:
+  ccss:
+  - 6.G.A.2
+  learning_components:
+  - e270cd96
+  - 2a84aba3
+requires:
+- clause: standard
+  all_of:
+  - node: volume.prism.formula.lwh
+    relation: definitional
+    points_to: statement
+    why: The volume rule l x w x h for a rectangular prism is applied here with fractional edges.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.multiplication.symbolic
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies three lengths, at least one of them a fraction.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: volume.unit-cube
+    relation: representational
+    points_to: procedure.3
+    why: Step 3 writes the result in cubic units, the unit measured by a unit cube.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

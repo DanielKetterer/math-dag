@@ -1,0 +1,93 @@
+id: linear-function.nonlinear.identify
+concept: linear-function
+facet: line
+level: 3
+type: procedure
+name: Show from its values that a function is not linear
+statement: A function is not linear if the rate of change, the change in output divided by the change
+  in input, differs between two pairs of its points; if the rate is the same for every pair of listed
+  points, those points lie on one line.
+procedure:
+- Take pairs of points from the table or rule.
+- Compute the rate of change for each pair.
+- If two rates differ, the function is not linear.
+assess: The area of a square is A = s^2. Use the side lengths s = 1, 2 and 3 to decide whether A is a
+  linear function of s.
+sources:
+  ccss:
+  - 8.F.A.3
+  learning_components:
+  - 469afc42
+requires:
+- clause: standard
+  all_of:
+  - node: linear-function.line.graph-is-line
+    relation: definitional
+    points_to: statement
+    why: The statement says points of a linear function lie on one line, which is the meaning of a linear
+      function.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: slope.constant-on-line
+    relation: justificatory
+    points_to: statement
+    why: Differing rates between pairs show a function is not linear because the rate between any two
+      points of a line is the same.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.evaluate
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 takes pairs of points from a rule by evaluating the rule at chosen inputs.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: linear-function.model.rate.from-two-values
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 computes the change in output over the change in input for each pair of points.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.whole-number-power.evaluate.whole-base
+    relation: procedural
+    points_to: assess
+    why: The test problem evaluates A = s^2 at s = 1, 2 and 3, which needs squares of whole numbers.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test problem evaluates A = s^2; the idea is about differing rates of
+        change.'
+    status: proposed
+status: proposed

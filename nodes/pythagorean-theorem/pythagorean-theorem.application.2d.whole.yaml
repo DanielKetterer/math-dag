@@ -1,0 +1,44 @@
+id: pythagorean-theorem.application.2d.whole
+concept: pythagorean-theorem
+facet: length
+level: 3
+type: application
+name: Solve real-world right-triangle problems with whole-number answers
+statement: Solve real-world problems in which the unknown length is a side of one right triangle in a
+  plane, such as a ladder against a wall or the diagonal of a rectangle, and the answer is a whole number.
+assess: A 13-foot ladder leans against a vertical wall, with its foot on level ground 5 feet from the
+  wall. How high up the wall does the top of the ladder reach?
+sources:
+  ccss:
+  - 8.G.B.7
+  learning_components:
+  - b922397f
+requires:
+- clause: standard
+  all_of:
+  - node: pythagorean-theorem.unknown-side.whole
+    relation: procedural
+    points_to: statement
+    why: The problem reduces to finding an unknown side of one right triangle with a whole-number answer.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.triangle.right.identify
+    relation: definitional
+    points_to: statement
+    why: The unknown length is a side of a right triangle that the solver must see in the wall, ground
+      and ladder.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

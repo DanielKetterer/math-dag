@@ -1,0 +1,52 @@
+id: decimal.multiplication.algorithm
+concept: decimal
+facet: decimal-fraction
+level: 3
+type: procedure
+name: Multiply multi-digit decimals with the standard algorithm
+statement: Multiply two decimals by multiplying them as whole numbers, ignoring the decimal points, and
+  then placing the decimal point so that the product has as many decimal places as the two factors have
+  together.
+procedure:
+- Multiply the factors as whole numbers with the standard algorithm, ignoring the decimal points.
+- Count the digits to the right of the decimal point in both factors together.
+- From the right end of the whole-number product, count that many places to the left and place the decimal
+  point there, writing zeros on the left if the product has too few digits.
+assess: 'Use the standard algorithm: 3.06 x 0.24.'
+sources:
+  ccss:
+  - 6.NS.B.3
+  learning_components:
+  - e14eddf0
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.standard-algorithm
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 multiplies the two factors as whole numbers with the standard algorithm, ignoring the
+      decimal points.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.thousandths.notation
+    relation: representational
+    points_to: procedure.2
+    why: Step 2 counts the digits to the right of the decimal point in each factor, which requires reading
+      decimal places in the notation.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

@@ -1,0 +1,61 @@
+id: data.box-plot.read
+concept: data
+facet: box-plot
+level: 2
+type: representation
+name: Read the five-number summary from a box plot
+statement: On a box plot, the minimum and maximum are read at the ends of the whiskers, the lower and
+  upper quartiles at the ends of the box, and the median at the line inside the box.
+assess: A box plot on a number line from 0 to 20 has whiskers reaching 2 and 18, a box from 6 to 12, and
+  a line inside the box at 9. Give the minimum, lower quartile, median, upper quartile, and maximum.
+sources:
+  ccss:
+  - 6.SP.B.4
+  learning_components:
+  - 8bf02e1b
+requires:
+- clause: standard
+  all_of:
+  - node: number-line.whole-number-lengths
+    relation: representational
+    points_to: statement
+    why: Each summary value is read at its position on the number line under the box plot, so whole numbers
+      must be read from marks on the line.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: center.median.find
+    relation: representational
+    points_to: statement
+    why: The line inside the box is read as the median, so the learner must know what the median of a
+      data set is.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: variability.quartiles.find
+    relation: representational
+    points_to: statement
+    why: The ends of the box are read as the lower and upper quartiles, so the learner must know what
+      those quartiles of a data set are.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

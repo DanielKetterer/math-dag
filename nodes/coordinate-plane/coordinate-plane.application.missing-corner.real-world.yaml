@@ -1,0 +1,46 @@
+id: coordinate-plane.application.missing-corner.real-world
+concept: coordinate-plane
+facet: location
+level: 2
+type: application
+name: Find the missing corner of a rectangular region on a coordinate map
+statement: A real-world problem gives three corners of a rectangular region, with sides parallel to the
+  axes, on a coordinate map in any quadrants; the learner finds the fourth corner.
+assess: A park is a rectangle on a city map with sides along the grid lines. Three of its corners are
+  at (-5, 2), (3, 2) and (3, -4). Where is the fourth corner?
+sources:
+  ccss:
+  - 6.G.A.3
+  learning_components:
+  - 9303ba90
+requires:
+- clause: standard
+  all_of:
+  - node: coordinate-plane.polygon.missing-vertex
+    relation: procedural
+    points_to: statement
+    why: The fourth corner of the rectangular region is found as the missing vertex of an axis-parallel
+      rectangle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.application.real-world.four-quadrants
+    relation: definitional
+    points_to: statement
+    why: The corners are places on a map grid located by signed coordinates.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

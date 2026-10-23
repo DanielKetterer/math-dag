@@ -1,0 +1,49 @@
+id: exponent.whole-number-power.meaning
+concept: exponent
+facet: whole-number-power
+level: 3
+type: concept
+name: a^b as a product of b equal factors
+statement: For a whole number b of at least 1, a^b is the product of b factors, each equal to a; a is
+  the base and b is the exponent.
+assess: 'Which of these equals 4^3: 4 x 3, 4 x 4 x 4, 3 x 3 x 3 x 3, or 4 + 4 + 4?'
+sources:
+  ccss:
+  - 6.EE.A.1
+  learning_components: []
+requires:
+- clause: via-meaning
+  all_of:
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: A power is a product of b equal factors, so reading each multiplication in 4 x 4 x 4 uses a product
+      as a number of equal groups.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The target needs a product to be a result of multiplying, but not specifically
+        the equal-groups reading; a learner who meets products as arrays or as multiplicative comparisons
+        can read 4 x 4 x 4 and a^b equally well. | other route: Product understood as a rectangular array
+        (multiplication.array.rows-columns, multiplication.array-area.whole-number-product.represent)
+        instead of equal groups.'
+    status: disputed
+- clause: critic-route-1
+  note: Meet a product as a rectangular array (rows of equal columns) and read a^b as b equal factors
+    from that meaning of multiplication, instead of equal groups.
+  all_of:
+  - node: multiplication.array-area.whole-number-product.represent
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Meet a product as a rectangular array (rows of equal
+      columns) and read a^b as b equal factors from that meaning of multiplication, instead of equal groups.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

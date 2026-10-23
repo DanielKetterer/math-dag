@@ -1,0 +1,126 @@
+id: angle.application.multi-step
+concept: angle
+facet: measure
+level: 3
+type: application
+name: Find an unknown angle in a figure by using two or more angle relationships in turn
+statement: A figure problem needs two or more angle relationships (vertical, supplementary, complementary,
+  adjacent angles along a line, or parts of a whole angle) used one after another to find an unknown angle.
+assess: Lines AB and CD cross at O. Ray OE lies inside angle BOD. Angle AOC measures 70 degrees and angle
+  EOD measures 25 degrees. Find angle BOE.
+sources:
+  ccss:
+  - 7.G.B.5
+  learning_components:
+  - 779be2f1
+  - 82575afc
+requires:
+- clause: standard
+  all_of:
+  - node: angle.vertical.equal
+    relation: procedural
+    points_to: statement
+    why: One step uses vertical angles being equal to carry a measure across a crossing of two lines.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.straight-line.sum-180
+    relation: procedural
+    points_to: statement
+    why: One step uses adjacent angles along a line adding to 180 to find a neighbouring angle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.supplementary
+    relation: procedural
+    points_to: statement
+    why: One step may use two supplementary angles that are not next to each other.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.complementary
+    relation: procedural
+    points_to: statement
+    why: One step may use two complementary angles that add to 90 degrees.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.unknown-part
+    relation: procedural
+    points_to: statement
+    why: One step finds an unknown part of a whole angle by subtracting the known part.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: angle.additive
+    relation: definitional
+    points_to: statement
+    why: The statement lists parts of a whole angle as one of the relationships used in turn.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: subtraction.within-100
+    relation: definitional
+    points_to: assess
+    why: Finding angle BOE means subtracting 25 from 70.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test subtracts 25 from 70; the relationships named in the statement (straight
+        line, supplementary) subtract from 180.'
+    status: proposed
+  - node: angle.vertical
+    relation: definitional
+    points_to: statement
+    why: The statement and test must pick out vertical pairs (AOC and BOD) before using that they are
+      equal.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: subtraction.within-1000
+    relation: definitional
+    points_to: statement
+    why: The relationships named in the statement subtract from 180, which goes past 100.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

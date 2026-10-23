@@ -1,0 +1,46 @@
+id: scientific-notation.from-decimal.large
+concept: scientific-notation
+facet: core
+level: 3
+type: representation
+name: Write a number of 10 or more in scientific notation
+statement: Write a number of 10 or more as a x 10^n, with a at least 1 and less than 10 and n a positive
+  integer, by placing the decimal point just after the first nonzero digit and taking n as the number
+  of places the point moved left.
+procedure:
+- Place the decimal point just after the first nonzero digit; the number formed is a.
+- Count the places the decimal point moved to the left; that count is n.
+- Write a x 10^n, dropping trailing zeros after the decimal point of a.
+assess: Write 52,000,000 in scientific notation.
+sources:
+  ccss:
+  - 8.EE.A.4
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: scientific-notation.meaning
+    relation: definitional
+    points_to: statement
+    why: The result must have the form a x 10^n with a at least 1 and less than 10.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: exponent.power-of-ten.notation
+    relation: procedural
+    points_to: procedure.3
+    why: step 3 writes the power 10^n with a positive whole-number exponent
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

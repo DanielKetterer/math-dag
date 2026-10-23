@@ -1,0 +1,93 @@
+id: expressions.linear.subtract.rational
+concept: expressions
+facet: algebraic
+level: 3
+type: procedure
+name: Subtract linear expressions with rational coefficients
+statement: Subtract one linear expression with rational coefficients from another by adding the opposite
+  of each term of the expression being subtracted, then combining like terms.
+procedure:
+- Replace subtracting the second expression by adding the opposite of each of its terms.
+- Group the terms with the variable together and the constants together.
+- Add the coefficients of the variable terms, and add the constants.
+assess: 'Subtract: (2.5x + 1) - (4x - 3).'
+sources:
+  ccss:
+  - 7.EE.A.1
+  learning_components:
+  - c2fa886c
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.opposite-of-sum
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 replaces subtracting the second expression by adding the opposite of each of its terms,
+      which is the opposite of a sum.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.sum.rearrange-terms
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 reorders and regroups the terms of the resulting sum so the variable terms and constants
+      are together.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.like-terms.meaning
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 groups the terms with the variable together and the constants together, which requires
+      telling like terms apart.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.like-terms.combine
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 combines the variable terms into one term by adding their coefficients.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.addition.rationals
+    relation: procedural
+    points_to: procedure.3
+    why: Adding the coefficients and constants uses addition of signed decimals, such as 2.5 + (-4) and
+      1 + 3.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.subtraction.add-inverse
+    relation: definitional
+    points_to: statement
+    why: Step 1 itself replaces subtracting by adding the opposite, so the procedure uses this skill directly
+      rather than only through the opposite of a sum.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+status: proposed

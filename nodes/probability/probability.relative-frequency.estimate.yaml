@@ -1,0 +1,114 @@
+id: probability.relative-frequency.estimate
+concept: probability
+facet: relative-frequency
+level: 2
+type: procedure
+name: Estimate a probability by the relative frequency over many trials
+statement: 'The probability of a chance event is approximated by its relative frequency after many trials
+  of the chance process: the number of trials in which the event occurred divided by the number of trials.'
+procedure:
+- Repeat the chance process many times and record whether the event occurs in each trial.
+- Count the trials in which the event occurred.
+- Divide that count by the number of trials.
+assess: A thumbtack was tossed 200 times and landed point up 120 times. Estimate the probability that
+  the thumbtack lands point up.
+sources:
+  ccss:
+  - 7.SP.C.6
+  learning_components: []
+requires:
+- clause: via-symbolic
+  all_of:
+  - node: probability.likelihood.zero-to-one
+    relation: definitional
+    points_to: statement
+    why: The statement approximates a probability, a number from 0 to 1 measuring likelihood, by a relative
+      frequency of trials.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.categorical.count-each
+    relation: procedural
+    points_to: procedure.2
+    why: Counting the trials in which the event occurred means counting the trials in each category, event
+      or not event.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: probability.chance-process.trial-and-event
+    relation: definitional
+    points_to: statement
+    why: The statement and procedure use a trial of a chance process and an event that occurs or not in
+      a trial; no index node introduces repeating a chance process and recording whether an event occurred.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    status: disputed
+  - node: fraction.quotient.symbolic
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 divides the count of trials with the event by the number of trials, which is written as
+      the fraction count over trials.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The count over trials can be read as a fraction by part-whole (''120 of 200 trials''),
+        without the identity a divided by b = a/b. | other route: Write ''count out of trials'' as a fraction
+        using the part-whole meaning (fraction.non-unit.part-whole).'
+    status: disputed
+- clause: critic-route-1
+  note: Write the relative frequency as 'count out of trials' using the part-whole meaning of a fraction
+    instead of dividing.
+  all_of:
+  - node: probability.likelihood.zero-to-one
+    relation: definitional
+    points_to: statement
+    why: The statement approximates a probability, a number from 0 to 1 measuring likelihood, by a relative
+      frequency of trials.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: data.categorical.count-each
+    relation: procedural
+    points_to: procedure.2
+    why: Counting the trials in which the event occurred means counting the trials in each category, event
+      or not event.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: fraction.non-unit.part-whole
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Write the relative frequency as ''count out of trials''
+      using the part-whole meaning of a fraction instead of dividing.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

@@ -1,0 +1,134 @@
+id: triangle.inequality
+concept: triangle
+facet: determination
+level: 2
+type: concept
+name: Three lengths make a triangle only when the two shorter add to more than the longest
+statement: Three lengths are the side lengths of a triangle exactly when the sum of the two shorter lengths
+  is greater than the longest length.
+assess: 'Which of these sets of lengths can be the sides of a triangle: 3, 4, 5; 2, 3, 6; 2, 3, 5?'
+sources:
+  ccss:
+  - 7.G.A.2
+  learning_components:
+  - 9ddaee28
+requires:
+- clause: critic-route-1
+  note: 'Compass model: attempt the arcs and see when they fail to meet.'
+  all_of:
+  - node: shapes.polygon.name-by-sides
+    relation: definitional
+    points_to: statement
+    why: The statement is about when three lengths can be the three sides of a triangle.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-10
+    relation: definitional
+    points_to: assess
+    why: The test sets 3, 4, 5 and 2, 3, 6 and 2, 3, 5 need the sum of the two shorter lengths, within
+      10.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The sums in the test (3 + 4, 2 + 3) are within 10; the idea of the rule is about
+        lengths laid end to end, and the arithmetic range is set only by the test numbers.'
+    status: proposed
+  - node: comparing.whole-numbers.numerals-within-10
+    relation: definitional
+    points_to: assess
+    why: Each set needs that sum compared with the longest length, as in 3 + 4 against 5 or 2 + 3 against
+      6.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Comparing 3 + 4 with 5 and 2 + 3 with 6 is done only in the test problem; the
+        idea is a relation between lengths.'
+    status: proposed
+  - node: construction.triangle.three-sides
+    relation: representational
+    points_to: statement
+    why: Trying to find the third vertex with two arcs shows when the arcs fail to meet.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: The arc construction is one model for seeing when the third vertex cannot be
+        found.'
+    status: disputed
+- clause: critic-route-2
+  note: 'Stick model: try to close sticks of the three lengths into a triangle.'
+  all_of:
+  - node: shapes.polygon.name-by-sides
+    relation: definitional
+    points_to: statement
+    why: The statement is about when three lengths can be the three sides of a triangle.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.within-10
+    relation: definitional
+    points_to: assess
+    why: The test sets 3, 4, 5 and 2, 3, 6 and 2, 3, 5 need the sum of the two shorter lengths, within
+      10.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The sums in the test (3 + 4, 2 + 3) are within 10; the idea of the rule is about
+        lengths laid end to end, and the arithmetic range is set only by the test numbers.'
+    status: proposed
+  - node: comparing.whole-numbers.numerals-within-10
+    relation: definitional
+    points_to: assess
+    why: Each set needs that sum compared with the longest length, as in 3 + 4 against 5 or 2 + 3 against
+      6.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Comparing 3 + 4 with 5 and 2 + 3 with 6 is done only in the test problem; the
+        idea is a relation between lengths.'
+    status: proposed
+  - node: shapes.compose.from-sides
+    relation: representational
+    points_to: statement
+    why: Trying to build a triangle from sticks of the three lengths shows whether the sticks can close
+      up.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Closing sticks of the three lengths is one model for the criterion. | other route:
+        Try to draw the triangle with a ruler and compass using two arcs (construction.triangle.three-sides).'
+    status: disputed
+related:
+- node: addition.within-100
+  relation: common_path
+  note: 'Common path, not required: route ''via-from-sides'' needed everything another route needs and
+    more, so it was removed.'
+- node: comparing.whole-numbers.magnitude
+  relation: common_path
+  note: 'Common path, not required: route ''via-from-sides'' needed everything another route needs and
+    more, so it was removed.'
+status: proposed

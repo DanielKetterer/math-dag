@@ -1,0 +1,79 @@
+id: circle.pi.ratio
+concept: circle
+facet: measure
+level: 2
+type: concept
+name: Pi as the ratio of circumference to diameter
+statement: For every circle, the circumference divided by the diameter is the same number, called pi,
+  which is about 3.14.
+assess: Circles with diameters 2 cm, 5 cm and 10 cm have circumferences of about 6.28 cm, 15.7 cm and
+  31.4 cm. Find circumference divided by diameter for each circle. What is this number called?
+sources:
+  ccss:
+  - 7.G.B.4
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: circle.circumference.meaning
+    relation: definitional
+    points_to: statement
+    why: The ratio divides the circumference, the distance once around the circle, by the diameter.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: circle.diameter
+    relation: definitional
+    points_to: statement
+    why: The ratio divides the circumference by the diameter of the circle.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.hundredths.notation
+    relation: representational
+    points_to: statement
+    why: Pi is stated as about 3.14, a decimal written to hundredths.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: decimal.division.by-whole.algorithm
+    relation: procedural
+    points_to: assess
+    why: Finding each circumference divided by diameter divides decimals such as 6.28 by 2.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test divides decimals such as 6.28 by 2; the idea that the quotient is
+        the same for every circle does not need a decimal division procedure, and any method for these
+        quotients would do.'
+    status: proposed
+related:
+- node: ratio.equivalent
+  relation: same_idea_different_form
+  note: Saying C divided by d is the same for every circle is the same idea as saying the pairs (d, C)
+    are equivalent ratios; the statement is phrased as a quotient, so ratio equivalence is another form
+    of it, not a requirement.
+status: proposed

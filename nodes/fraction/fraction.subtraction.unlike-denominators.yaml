@@ -50,7 +50,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: multiples.common-multiple
+  - node: factors.common-multiple.product
     relation: procedural
     points_to: procedure.1
     why: Step 1 finds a common multiple n of the two denominators b and d.
@@ -67,6 +67,11 @@ requires:
       source: retarget-sonnet
       note: 're-pointed from retired factors-multiples.whole-number: Step 1 needs a common multiple of
         the denominators 9 and 6, which no candidate covers.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired multiples.common-multiple: Step 1 needs some common multiple, and
+        b x d always is one; the least common multiple is an alternative route, not required (Claude,
+        inline retarget).'
     status: disputed
 - clause: via-multi-digit
   all_of:

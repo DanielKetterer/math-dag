@@ -1,0 +1,90 @@
+id: pythagorean-theorem.distance.coordinates
+concept: pythagorean-theorem
+facet: length
+level: 3
+type: procedure
+name: Find the distance between two points in the coordinate plane
+statement: Find the distance between two points in the coordinate plane that are not on the same horizontal
+  or vertical line as the hypotenuse of the right triangle whose legs are the horizontal and vertical
+  distances between the points.
+procedure:
+- Find the horizontal distance between the points from their x-coordinates and the vertical distance from
+  their y-coordinates.
+- Use these distances as the legs of a right triangle whose hypotenuse is the segment joining the two
+  points.
+- Find the length of the hypotenuse with the Pythagorean theorem.
+assess: Find the distance between the points (-2, 1) and (1, 5).
+sources:
+  ccss:
+  - 8.G.B.8
+  learning_components:
+  - 9a823129
+requires:
+- clause: standard
+  all_of:
+  - node: coordinate-plane.segment-length.same-sign
+    relation: procedural
+    points_to: procedure.1
+    why: The horizontal or vertical distance is found from coordinates that can have the same sign, as
+      1 and 5 do.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.segment-length.opposite-sign
+    relation: procedural
+    points_to: procedure.1
+    why: The horizontal or vertical distance is found from coordinates that can have opposite signs, as
+      -2 and 1 do.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: shapes.triangle.right.identify
+    relation: definitional
+    points_to: procedure.2
+    why: The horizontal and vertical distances are the legs of a right triangle whose hypotenuse joins
+      the points.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: pythagorean-theorem.unknown-side.whole
+    relation: procedural
+    points_to: procedure.3
+    why: The last step finds the hypotenuse from the two legs.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: pythagorean-theorem.unknown-side.irrational
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 also covers distances whose squared value is not a perfect square, giving an exact square
+      root.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

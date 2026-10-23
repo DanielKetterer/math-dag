@@ -1,0 +1,48 @@
+id: equation.linear.solution-count.cases
+concept: equation
+facet: linear-one-variable
+level: 3
+type: concept
+name: A linear equation can have one solution, no solution, or infinitely many
+statement: A linear equation in one variable is true for exactly one value of the variable, for no value,
+  or for every value; in the last two cases it has no solution or infinitely many solutions.
+assess: 'Which of these equations is true for every value of x, which for no value, and which for exactly
+  one: x + 3 = 3 + x; x + 3 = x + 4; x + 3 = 2x?'
+sources:
+  ccss:
+  - 8.EE.C.7.a
+  learning_components:
+  - c219ca3a
+requires:
+- clause: standard
+  all_of:
+  - node: equation.solution.meaning
+    relation: definitional
+    points_to: statement
+    why: The three cases count the values of the variable that make the equation true, which is what a
+      solution is.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: equation.solution.check-substitution
+    relation: procedural
+    points_to: assess
+    why: Sorting x + 3 = 3 + x, x + 3 = x + 4 and x + 3 = 2x can be done by trying values in each equation.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: Only the test item can be sorted by trying values; the statement about one, none
+        or every value does not need substitution (and trying values cannot establish ''every value'').'
+    status: proposed
+status: proposed

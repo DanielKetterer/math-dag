@@ -47,7 +47,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: rational-numbers.operations
+  - node: rational-number.multiplication.integers
     relation: procedural
     points_to: assess
     why: The candle problem has a negative rate of -2 cm per hour, so computing b uses signed arithmetic.
@@ -59,6 +59,29 @@ requires:
       source: critic-sonnet
       note: 'task-only: The candle problem''s negative rate of -2 cm per hour needs signed arithmetic
         in the test problem, not in finding an initial value in general.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired rational-numbers.operations: FLAG (task): the test''s numbers (2
+        cm per hour, 3 hours, 18 cm) can be done as 18 + 2 x 3 without signs; kept at the least signed
+        operations for review.'
+    status: proposed
+  - node: rational-number.subtraction.integers
+    relation: procedural
+    points_to: assess
+    why: The candle problem has a negative rate of -2 cm per hour, so computing b uses signed arithmetic.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'task-only: The candle problem''s negative rate of -2 cm per hour needs signed arithmetic
+        in the test problem, not in finding an initial value in general.'
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired rational-numbers.operations: FLAG (task): the test''s numbers (2
+        cm per hour, 3 hours, 18 cm) can be done as 18 + 2 x 3 without signs; kept at the least signed
+        operations for review.'
     status: proposed
 related:
 - node: linear-function.model.initial.from-two-values

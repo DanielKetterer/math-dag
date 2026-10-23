@@ -1,0 +1,72 @@
+id: equation.two-step.px-plus-q.solve
+concept: equation
+facet: open-sentence
+level: 3
+type: procedure
+name: Solve px + q = r
+statement: Solve an equation px + q = r, where p, q and r are rational numbers and p is not 0, by subtracting
+  q from both sides and then dividing both sides by p.
+procedure:
+- Subtract q from both sides, giving px = r - q.
+- Divide both sides by p, giving x = (r - q) divided by p.
+assess: Solve -4x + 7 = -5.
+sources:
+  ccss:
+  - 7.EE.B.4.a
+  learning_components:
+  - 9d36a76f
+requires:
+- clause: standard
+  all_of:
+  - node: equation.equality-preserved.same-operation
+    relation: justificatory
+    points_to: procedure.1
+    why: Subtracting q from both sides, then dividing both sides by p, is valid because the same operation
+      on both sides keeps the solutions.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.subtraction.rationals
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 computes r - q for signed rational numbers, as in -5 - 7 for the test problem.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.division.rationals
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 divides r - q by p, which may be negative or a fraction, as in -12 divided by -4.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: representational
+    points_to: statement
+    why: The equation is written px + q = r, with the number p next to the letter x meaning p times x.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

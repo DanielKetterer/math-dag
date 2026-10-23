@@ -1,0 +1,115 @@
+id: coordinate-plane.application.perimeter
+concept: coordinate-plane
+facet: location
+level: 3
+type: application
+name: Find the perimeter of a polygon with horizontal and vertical sides from its vertices
+statement: A mathematical problem gives the vertices of a polygon whose sides are all horizontal or vertical,
+  in any quadrants; the learner finds its perimeter from the coordinates.
+assess: A polygon has vertices (-3, 4), (2, 4), (2, -2) and (-3, -2). Find its perimeter.
+sources:
+  ccss:
+  - 6.G.A.3
+  learning_components:
+  - fcb8e3dc
+requires:
+- clause: via-same-sign
+  all_of:
+  - node: perimeter.polygon.from-sides
+    relation: procedural
+    points_to: statement
+    why: The perimeter is the sum of the side lengths found from the coordinates.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.segment-length.same-sign
+    relation: procedural
+    points_to: statement
+    why: Sides whose differing coordinates share a sign are measured by the difference of absolute values.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Sides with differing coordinates of one sign are measured by the difference of
+        absolute values, one of two case rules. | other route: Measure every horizontal or vertical side
+        as the absolute value of the difference of the differing coordinates, whatever their signs (absolute-value.distance.between-numbers),
+        with no split into cases.'
+    status: disputed
+- clause: via-opposite-sign
+  all_of:
+  - node: perimeter.polygon.from-sides
+    relation: procedural
+    points_to: statement
+    why: The perimeter is the sum of the side lengths found from the coordinates.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.segment-length.opposite-sign
+    relation: procedural
+    points_to: statement
+    why: Sides whose differing coordinates have opposite signs are measured by the sum of absolute values.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: Sides that cross an axis are measured by the sum of absolute values, one of two
+        case rules. | other route: Measure every horizontal or vertical side as the absolute value of
+        the difference of the differing coordinates, whatever their signs (absolute-value.distance.between-numbers),
+        with no split into cases.'
+    status: disputed
+- clause: critic-route-1
+  note: 'Single-rule route: each side length is the absolute value of the difference of the differing
+    coordinates'
+  all_of:
+  - node: perimeter.polygon.from-sides
+    relation: procedural
+    points_to: statement
+    why: The perimeter is the sum of the side lengths found from the coordinates.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: coordinate-plane.segment-length.meaning
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Single-rule route: each side length is the absolute
+      value of the difference of the differing coordinates'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+  - node: absolute-value.distance.between-numbers
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Single-rule route: each side length is the absolute
+      value of the difference of the differing coordinates'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

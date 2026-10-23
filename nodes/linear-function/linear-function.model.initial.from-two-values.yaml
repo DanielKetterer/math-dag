@@ -67,7 +67,7 @@ requires:
       source: critic-sonnet
       note: necessary
     status: proposed
-  - node: rational-numbers.operations
+  - node: rational-number.multiplication.rationals
     relation: definitional
     points_to: statement
     why: Computing y1 - m x x1 involves negative or fractional m.
@@ -75,6 +75,23 @@ requires:
     - kind: content
       source: critic-sonnet
       note: missing prerequisite
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired rational-numbers.operations: Step 3 computes y1 - m x x1 with m possibly
+        negative or fractional.'
+    status: disputed
+  - node: rational-number.subtraction.rationals
+    relation: definitional
+    points_to: statement
+    why: Computing y1 - m x x1 involves negative or fractional m.
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing prerequisite
+    - kind: content
+      source: retarget-sonnet
+      note: 're-pointed from retired rational-numbers.operations: Step 3 computes y1 - m x x1 with m possibly
+        negative or fractional.'
     status: disputed
 related:
 - node: linear-function.line.y-mx-plus-b.write

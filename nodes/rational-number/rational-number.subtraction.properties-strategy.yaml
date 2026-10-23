@@ -1,0 +1,102 @@
+id: rational-number.subtraction.properties-strategy
+concept: rational-number
+facet: core
+level: 3
+type: procedure
+name: Subtract signed numbers by rewriting as addition and regrouping
+statement: Compute an expression that subtracts rational numbers by rewriting each subtraction as adding
+  the opposite, then reordering and regrouping the addends with the commutative and associative properties
+  of addition.
+procedure:
+- Rewrite each p - q as p + (-q).
+- Use the commutative and associative properties to move opposites, or addends with an easy sum, next
+  to each other and group them.
+- Add each group, then add the results.
+assess: Compute -4.5 - 7 - (-4.5) by rewriting the subtractions as additions and regrouping. Show the
+  rewritten sum.
+sources:
+  ccss:
+  - 7.NS.A.1.d
+  learning_components:
+  - 7aa5ed91
+  - ce4afd4b
+requires:
+- clause: standard
+  all_of:
+  - node: rational-number.subtraction.add-inverse
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 rewrites each p - q as p + (-q), the identity that the add-the-opposite concept states.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.opposite.of-opposite
+    relation: procedural
+    points_to: procedure.1
+    why: Rewriting the subtraction of -4.5 produces -(-4.5), which must be read as 4.5 before the addends
+      are regrouped.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.commutative
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 moves addends next to each other, which uses the commutative property of addition.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: addition.associative.strategy
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 groups chosen addends with parentheses, which uses the associative property to decide
+      which to add first.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.additive-inverse
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 moves opposites next to each other and groups them, and each such group sums to 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.addition.rationals
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 adds each group and then the results, and these sums are of signed fractions or decimals.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

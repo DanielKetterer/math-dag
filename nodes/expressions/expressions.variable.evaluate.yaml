@@ -1,0 +1,63 @@
+id: expressions.variable.evaluate
+concept: expressions
+facet: algebraic
+level: 3
+type: procedure
+name: Evaluate an expression at given values of its variables
+statement: Find the value of an expression at given values of its variables by replacing each letter with
+  its value and evaluating in the conventional order.
+procedure:
+- Replace each letter with its given value, writing out any multiplication the notation hides (4a with
+  a = 5 becomes 4 x 5).
+- Evaluate the resulting numerical expression in the conventional order.
+assess: Evaluate 4a + 3b when a = 5 and b = 2.
+sources:
+  ccss:
+  - 6.EE.A.2.c
+  learning_components:
+  - 5702c4ef
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.variable.meaning
+    relation: definitional
+    points_to: procedure.1
+    why: Step 1 replaces each letter with a given number, which treats the letter as standing for that
+      number.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.notation.implicit-multiplication
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 writes out the multiplication the notation hides, turning 4a with a = 5 into 4 x 5.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.order-of-operations
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 evaluates the resulting numerical expression in the conventional order, as in 4 x 5 +
+      3 x 2.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed

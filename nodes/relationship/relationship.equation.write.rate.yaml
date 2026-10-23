@@ -1,0 +1,102 @@
+id: relationship.equation.write.rate
+concept: relationship
+facet: dependent-independent
+level: 3
+type: representation
+name: Write y = rx for a quantity that changes at a fixed rate
+statement: When a dependent quantity is a fixed amount r for each unit of an independent quantity, write
+  the equation y = rx, with the dependent variable alone on one side.
+assess: A car travels 65 miles each hour. Write an equation for the distance d, in miles, that it travels
+  in t hours.
+sources:
+  ccss:
+  - 6.EE.C.9
+  learning_components:
+  - cc56ee36
+requires:
+- clause: via-language
+  all_of:
+  - node: relationship.dependent-independent.meaning
+    relation: definitional
+    points_to: statement
+    why: The equation puts the dependent variable alone on one side, so the learner must tell which quantity
+      is determined by the other.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.write-for-situation
+    relation: representational
+    points_to: statement
+    why: Writing the side rx is writing an expression with a letter for a quantity, such as 65t for the
+      distance in t hours.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: ratio.unit-rate.language
+    relation: definitional
+    points_to: statement
+    why: A fixed amount r for each unit is rate language, as in 65 miles each hour, and the writer must
+      read it.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'route-only: ''r for each unit'' can be read as an equal-groups multiplication (65 in each
+        of t hours) without ratio rate language. | other route: Read ''r each unit'' as t equal groups
+        of r (multiplication.equal-groups.meaning) and write y = rx.'
+    status: disputed
+- clause: critic-route-1
+  note: Read 'r for each unit' as t equal groups of r and write y = rx, without ratio rate language.
+  all_of:
+  - node: relationship.dependent-independent.meaning
+    relation: definitional
+    points_to: statement
+    why: The equation puts the dependent variable alone on one side, so the learner must tell which quantity
+      is determined by the other.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.variable.write-for-situation
+    relation: representational
+    points_to: statement
+    why: Writing the side rx is writing an expression with a letter for a quantity, such as 65t for the
+      distance in t hours.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.equal-groups.meaning
+    relation: definitional
+    points_to: statement
+    why: 'Alternative route proposed by the critic: Read ''r for each unit'' as t equal groups of r and
+      write y = rx, without ratio rate language.'
+    evidence:
+    - kind: content
+      source: critic-sonnet
+      note: missing route
+    status: disputed
+status: proposed

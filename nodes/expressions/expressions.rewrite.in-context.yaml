@@ -1,0 +1,62 @@
+id: expressions.rewrite.in-context
+concept: expressions
+facet: algebraic
+level: 3
+type: representation
+name: Rewrite an expression for a quantity in a problem in a requested form
+statement: Rewrite an expression that stands for a quantity in a problem as an equivalent expression of
+  a requested form, such as a single term or a product, using properties of operations.
+assess: After a 5% increase, a price of a dollars becomes a + 0.05a dollars. Write the new price as a
+  single number times a.
+sources:
+  ccss:
+  - 7.EE.A.2
+  learning_components:
+  - 41261db0
+requires:
+- clause: standard
+  all_of:
+  - node: expressions.equivalent.meaning
+    relation: definitional
+    points_to: statement
+    why: The rewritten expression must be equivalent to the original, giving the same value for every
+      value of the letter.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.like-terms.combine
+    relation: procedural
+    points_to: assess
+    why: Writing a + 0.05a as a single number times a combines the two terms in a, whose coefficients
+      are 1 and 0.05.
+    scope: task
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: expressions.linear.factor.rational
+    relation: procedural
+    points_to: statement
+    why: A requested product form, such as a(1 + 0.05), comes from factoring a common factor out of the
+      terms.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: 'undecided: The source factors a given numeric factor out of bx + c; the test''s product form
+        a(1 + 0.05) factors the variable a out of like terms, which this node does not cover, and the
+        single-term form needs only combining.'
+    status: disputed
+status: proposed

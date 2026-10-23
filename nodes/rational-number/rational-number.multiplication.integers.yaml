@@ -1,0 +1,73 @@
+id: rational-number.multiplication.integers
+concept: rational-number
+facet: core
+level: 3
+type: procedure
+name: Multiply two integers
+statement: Multiply two integers by multiplying their absolute values and giving the product the sign
+  from the sign rule.
+procedure:
+- If either factor is 0, the product is 0.
+- Multiply the absolute values of the factors.
+- Make the product positive if the factors have the same sign and negative if they have opposite signs.
+assess: Compute -6 x 7, -4 x (-9), and 0 x (-3).
+sources:
+  ccss:
+  - 7.NS.A.2
+  learning_components: []
+requires:
+- clause: standard
+  all_of:
+  - node: multiplication.by-zero
+    relation: procedural
+    points_to: procedure.1
+    why: Step 1 says the product is 0 if either factor is 0, as in 0 x (-3).
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: absolute-value.distance.integer
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies the absolute values of the factors, so each integer must be read as its distance
+      from 0.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: rational-number.multiplication.sign-rule
+    relation: procedural
+    points_to: procedure.3
+    why: Step 3 gives the product its sign by the rule for same signs and opposite signs.
+    evidence:
+    - kind: content
+      source: pass-P
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+  - node: multiplication.by-one-digit
+    relation: procedural
+    points_to: procedure.2
+    why: Step 2 multiplies two whole numbers, the absolute values, and any method for the product will
+      do.
+    evidence:
+    - kind: content
+      source: pass-Q
+    - kind: content
+      source: critic-sonnet
+      note: necessary
+    status: proposed
+status: proposed
